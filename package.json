@@ -1,0 +1,48 @@
+{
+  "name": "endpass-core",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./dist/endpass-core.js",
+  "module": "./dist/endpass-core.umd.js",
+  "repository": "git@github.com:lamartire/endpass-core.git",
+  "author": "lamartire <lamartire@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "./node_modules/rollup/bin/rollup -c -w",
+    "build": "./node_modules/rollup/bin/rollup -c --silent"
+  },
+  "lint-staged": {
+    "./dist/*.js": [
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build && lint-staged"
+    }
+  },
+  "resolutions": {
+    "babel-core": "7.0.0-bridge.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3",
+    "rollup": "^0.67.4",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-json": "^3.1.0",
+    "rollup-plugin-node-resolve": "^3.4.0"
+  },
+  "dependencies": {}
+}
