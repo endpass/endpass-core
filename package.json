@@ -1,0 +1,17 @@
+{
+  "name": "endpass-core",
+  "version": "1.0.0",
+  "description": "Shared codebase",
+  "homepage": "http://endpass.com",
+  "author": "Endpass, Inc",
+  "license": "MIT",
+  "scripts": {
+    "test": "npm run unit",
+    "unit": "jest --config jest.conf.js"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "lerna": "^3.6.0"
+  },
+  "dependencies": {}
+}
