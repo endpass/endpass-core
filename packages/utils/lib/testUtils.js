@@ -1,5 +1,5 @@
-const getFrom = require('./objects');
-const kebabCase = require('lodash.kebabCase');
+const objects = require('./objects');
+const kebabCase = require('lodash/kebabCase');
 
 function convertDirectivesToAttrs(directives) {
   const attrs = {};
@@ -20,7 +20,7 @@ function convertListenersToAttrs(listeners) {
     Object.keys(listeners).forEach(key => {
       const handlers = [].concat(listeners[key]);
       const handler = handlers.find(h => {
-        const name = getFrom(h, 'fns.name', 'name') || '';
+        const name = objects.getFrom(h, 'fns.name', 'name') || '';
 
         return name.includes('bound ');
       });

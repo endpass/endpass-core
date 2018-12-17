@@ -1,5 +1,5 @@
-const get = require('lodash.get');
-const identity = require('lodash.identity');
+const get = require('lodash/get');
+const identity = require('lodash/identity');
 
 module.exports.asyncCheckProperty = (
   object,

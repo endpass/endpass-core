@@ -1,4 +1,4 @@
-const get = require('lodash.get');
+const get = require('lodash/get');
 
 module.exports.merge = (...obj) =>
   obj.reduce((acc, item) => Object.assign(acc, item), {});
