@@ -1,7 +1,7 @@
-export const uniq = arr =>
+module.exports.uniq = arr =>
   arr.reduce((acc, item) => (acc.includes(item) ? acc : acc.concat(item)), []);
 
-export const mapArrayByProp = (arr, prop) =>
+module.exports.mapArrayByProp = (arr, prop) =>
   arr.reduce((acc, item) => {
     const target = item[prop];
 
@@ -13,8 +13,3 @@ export const mapArrayByProp = (arr, prop) =>
 
     return acc;
   }, {});
-
-export default {
-  uniq,
-  mapArrayByProp,
-};

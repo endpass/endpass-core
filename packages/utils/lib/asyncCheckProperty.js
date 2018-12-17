@@ -1,7 +1,7 @@
 const get = require('lodash.get');
 const identity = require('lodash.identity');
 
-export const asyncCheckProperty = (
+module.exports.asyncCheckProperty = (
   object,
   path,
   predicate = identity,

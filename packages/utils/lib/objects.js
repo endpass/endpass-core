@@ -1,9 +1,9 @@
 const get = require('lodash.get');
 
-export const merge = (...obj) =>
+module.exports.merge = (...obj) =>
   obj.reduce((acc, item) => Object.assign(acc, item), {});
 
-export const getFrom = (target, ...paths) => {
+module.exports.getFrom = (target, ...paths) => {
   const existPath = paths.find(path => get(target, path));
 
   if (!existPath) {
@@ -11,9 +11,4 @@ export const getFrom = (target, ...paths) => {
   }
 
   return get(target, existPath);
-};
-
-export default {
-  merge,
-  getFrom
 };

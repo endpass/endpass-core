@@ -1,5 +1,1 @@
-export const isNumeric = n => !isNaN(parseFloat(n)) && isFinite(n);
-
-export default {
-  isNumeric,
-};
+module.exports.isNumeric = n => !isNaN(parseFloat(n)) && isFinite(n);

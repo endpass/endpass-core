@@ -12,7 +12,7 @@ keythereum.privateKeyToAddress = function(pk) {
   return '';
 };
 
-export default {
+module.exports = {
   // Encrypts a private key Buffer into a V3 keystore object
   // The exported keystore does NOT include an address
   encrypt(password, privateKey) {

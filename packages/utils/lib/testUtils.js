@@ -108,7 +108,7 @@ function generateElementFromHTML(createElement, vnode) {
   );
 }
 
-export const generateStubs = (Component) => {
+module.exports.generateStubs = (Component) => {
   return Object.values(Component.components).reduce((stubs, stubComponent) => {
     let elementName;
 
@@ -125,7 +125,3 @@ export const generateStubs = (Component) => {
     });
   }, {});
 }
-
-export default {
-  generateStubs,
-};
