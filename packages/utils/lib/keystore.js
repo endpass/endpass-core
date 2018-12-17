@@ -1,7 +1,7 @@
-import keythereum from 'keythereum';
-import bs58check from 'bs58check';
-import EthWallet from 'ethereumjs-wallet';
-import HDKey from 'ethereumjs-wallet/hdkey';
+const keythereum = require('keythereum');
+const bs58check = require('bs58check');
+const EthWallet = require('ethereumjs-wallet');
+const HDKey = require('ethereumjs-wallet/hdkey');
 
 // Monkey patch keythereum to skip generating address for private keys
 // This allows us to encrypt private keys of arbitrary length, and

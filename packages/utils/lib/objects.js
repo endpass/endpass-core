@@ -1,4 +1,4 @@
-import { get } from 'lodash';
+const get = require('lodash.get');
 
 export const merge = (...obj) =>
   obj.reduce((acc, item) => Object.assign(acc, item), {});

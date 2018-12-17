@@ -16,7 +16,7 @@
   "env": {
     "test": {
       "presets": ["env", "stage-2"],
-      "plugins": []
+      "plugins": ["transform-es2015-modules-commonjs"]
     }
   }
 }

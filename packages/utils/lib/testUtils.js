@@ -1,5 +1,5 @@
-import { kebabCase } from 'lodash';
-import { getFrom } from './objects';
+const getFrom = require('./objects');
+const kebabCase = require('lodash.kebabCase');
 
 function convertDirectivesToAttrs(directives) {
   const attrs = {};

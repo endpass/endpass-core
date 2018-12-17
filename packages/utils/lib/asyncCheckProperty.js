@@ -1,4 +1,5 @@
-import { get, identity } from 'lodash';
+const get = require('lodash.get');
+const identity = require('lodash.identity');
 
 export const asyncCheckProperty = (
   object,

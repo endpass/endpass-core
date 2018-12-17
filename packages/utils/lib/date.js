@@ -1,5 +1,5 @@
-import dayjs from 'dayjs';
-import relativeTime from 'dayjs/plugin/relativeTime';
+const dayjs = require('dayjs');
+const relativeTime = require('dayjs/plugin/relativeTime');
 
 /**
  * Setting up dayjs globally
