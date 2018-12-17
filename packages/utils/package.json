@@ -1,6 +1,6 @@
 {
   "name": "@endpass/utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Utilis and helper functions",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -39,7 +39,7 @@
     "jest": "^23.6.0"
   },
   "publishConfig": {
-   "access": "public"
- },
+    "access": "public"
+  },
   "gitHead": "4ba7205a3f3a7738788154327ecb44a86552aa24"
 }
