@@ -1,6 +1,5 @@
 import keystore from '../lib/keystore';
-import EthWallet from 'ethereumjs-wallet';
-import HDKey from 'ethereumjs-wallet/hdkey';
+
 
 describe('keystore', () => {
   // Extended keys
@@ -13,6 +12,13 @@ describe('keystore', () => {
   const address = '0xB14Ab53E38DA1C172f877DBC6d65e4a1B0474C3c';
 
   const password = 'password123';
+
+  const wallet = {
+    getPrivateKey: () => privateKey,
+    privateExtendedKey: () => xPrvString,
+    getChecksumAddressString: () => address,
+    publicExtendedKey: () => xPubString,
+  };
 
   it('encrypts and decrypts an extended key', () => {
     let xPrv = keystore.decodeBase58(xPrvString);
@@ -30,7 +36,6 @@ describe('keystore', () => {
   });
 
   it('encrypts and decrypts a regular wallet', () => {
-    let wallet = EthWallet.fromPrivateKey(Buffer.from(privateKey, 'hex'));
     let json = keystore.encryptWallet(password, wallet);
     expect(json.crypto).toBeTruthy();
     expect(json.address).toBe(address);
@@ -40,7 +45,6 @@ describe('keystore', () => {
   });
 
   it('encrypts and decrypts an HD wallet', () => {
-    let wallet = HDKey.fromExtendedKey(xPrvString);
     let json = keystore.encryptHDWallet(password, wallet);
     expect(json.crypto).toBeTruthy();
     expect(json.address).toBe(xPubString);

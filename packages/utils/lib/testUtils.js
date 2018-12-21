@@ -1,4 +1,4 @@
-const objects = require('./objects');
+const objects = require(__dirname + '/objects');
 const kebabCase = require('lodash/kebabCase');
 
 function convertDirectivesToAttrs(directives) {
@@ -54,25 +54,30 @@ function getChildrenElements(createElement, children) {
     : undefined;
 }
 
+function createCommonData(directives, listeners, model) {
+  return Object.assign(
+    {},
+    convertDirectivesToAttrs(directives),
+    convertListenersToAttrs(listeners),
+    convertModelToAttrs(model),
+  );
+}
+
 function generateElementFromComponent(
   createElement,
   { data, componentOptions },
 ) {
   const { attrs, directives, model } = data;
   const { tag, listeners, children } = componentOptions;
-  const componentData = {
-    ...data,
-    attrs: {
-      ...attrs,
-      ...convertDirectivesToAttrs(directives),
-      ...convertListenersToAttrs(listeners),
-      ...convertModelToAttrs(model),
-      class: data.staticClass,
-    },
-    hook: undefined,
-    staticClass: undefined,
-  };
-
+  const componentData = Object.assign({}, data);
+  componentData.hook = undefined
+  componentData.staticClass = undefined;
+  componentData.attrs = Object.assign(
+    {},
+    attrs,
+    createCommonData(directives, listeners, model),
+    { class: data.staticClass }
+  );
   if (listeners) {
     componentData.on = Object.assign({}, listeners);
   }
@@ -91,19 +96,16 @@ function generateElementFromHTML(createElement, vnode) {
 
   const { tag, data, children } = vnode;
   const { directives, on, model, attrs = {}, slot } = data;
-
+  const componentData = Object.assign({}, data)
+  componentData.attrs = Object.assign(
+    {},
+    createCommonData(directives, on, model),
+    convertSlotToAttrs(slot),
+    attrs,
+  );
   return createElement(
     tag,
-    {
-      ...data,
-      attrs: {
-        ...attrs,
-        ...convertDirectivesToAttrs(directives),
-        ...convertListenersToAttrs(on),
-        ...convertModelToAttrs(model),
-        ...convertSlotToAttrs(slot),
-      },
-    },
+    componentData,
     getChildrenElements(createElement, children),
   );
 }
