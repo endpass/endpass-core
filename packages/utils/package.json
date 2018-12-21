@@ -1,0 +1,47 @@
+{
+  "name": "@endpass/utils",
+  "version": "1.0.7",
+  "description": "Utilis and helper functions",
+  "author": "Endpass, Inc",
+  "homepage": "http://endpass.com/",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib",
+    "lib/index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/endpass/endpass-core.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/endpass/endpass-core/issues"
+  },
+  "dependencies": {
+    "bs58check": "^2.1.2",
+    "dayjs": "^1.7.8",
+    "ethereumjs-wallet": "^0.6.2",
+    "export-files": "^2.1.1",
+    "keythereum": "^1.0.4",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "jest": "^23.6.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "26f833b90b38c8fbc33b7dd0d81f6de10af8147c"
+}
