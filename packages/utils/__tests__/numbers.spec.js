@@ -1,4 +1,4 @@
-import { isNumeric } from '../lib/numbers';
+import { isNumeric } from '../numbers';
 
 describe('numbers utils', () => {
   describe('isNumeric', () => {

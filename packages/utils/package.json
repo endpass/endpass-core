@@ -5,15 +5,7 @@
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
   "license": "MIT",
-  "main": "lib/index.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib",
-    "lib/index.js"
-  ],
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/endpass/endpass-core.git"
