@@ -1,4 +1,4 @@
-import keystore from '../lib/keystore';
+import keystore from '../keystore';
 
 
 describe('keystore', () => {

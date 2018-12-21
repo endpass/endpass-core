@@ -1,4 +1,4 @@
-import { stripHexPrefix } from '../lib/hex';
+import { stripHexPrefix } from '../hex';
 
 describe('stripHexPrefix', () => {
   it('should returns hex without 0x', () => {

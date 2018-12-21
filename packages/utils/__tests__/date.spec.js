@@ -1,4 +1,4 @@
-import { formateDate, fromNow } from '../lib/date';
+import { formateDate, fromNow } from '../date';
 
 describe('arrays utils', () => {
   describe('formateDate', () => {

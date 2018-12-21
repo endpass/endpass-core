@@ -1,4 +1,4 @@
-import { merge, getFrom } from '../lib/objects';
+import { merge, getFrom } from '../objects';
 
 describe('objects utils', () => {
   describe('merge', () => {

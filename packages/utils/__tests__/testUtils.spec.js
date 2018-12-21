@@ -1,4 +1,4 @@
-import * as testUtils from '../lib/testUtils';
+import * as testUtils from '../testUtils';
 
 describe('generateStubs', () => {
   const component1 = {

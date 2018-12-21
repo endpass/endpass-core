@@ -1,4 +1,4 @@
-import asyncCheckProperty from '../lib/asyncCheckProperty';
+import asyncCheckProperty from '../asyncCheckProperty';
 
 describe('utils', () => {
   describe('asyncCheckProperty', () => {
