@@ -5,13 +5,11 @@
   "homepage": "http://endpass.com",
   "author": "Endpass, Inc",
   "license": "MIT",
-  "scripts": {
-    "test": "npm run unit",
-    "unit": "jest --config jest.conf.js"
-  },
+  "scripts": {},
   "devDependencies": {
-    "jest": "^23.6.0",
-    "lerna": "^3.6.0"
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1"
   },
   "dependencies": {}
 }
