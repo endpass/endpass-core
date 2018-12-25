@@ -11,7 +11,8 @@
     "url": "git+https://github.com/endpass/endpass-core.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "npm run unit",
+    "unit": "jest --config jest.conf.js"
   },
   "bugs": {
     "url": "https://github.com/endpass/endpass-core/issues"
@@ -25,11 +26,6 @@
     "lodash": "^4.17.11"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-jest": "^23.6.0",
-    "babel-loader": "^8.0.4",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-2": "^6.24.1",
     "jest": "^23.6.0"
   },
   "publishConfig": {
