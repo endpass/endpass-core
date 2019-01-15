@@ -20,7 +20,7 @@
     "dist"
   ],
   "dependencies": {
-    "@endpass/utils": "^1.0.9",
+    "@endpass/utils": "^1.0.10",
     "vue": "^2.5.21"
   },
   "devDependencies": {
