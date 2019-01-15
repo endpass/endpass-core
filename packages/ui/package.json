@@ -16,6 +16,9 @@
   "bugs": {
     "url": "https://github.com/endpass/endpass-core/issues"
   },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@endpass/utils": "^1.0.9",
     "vue": "^2.5.21"
