@@ -49,18 +49,15 @@
     methods: {
       sendData() {
         this.loading = true;
-        // cli3 -> rollup
         axios({
           method: 'GET',
           url: `${this.faucetApi}/${this.address}`,
         }).then(result => {
           this.$emit('donate', result.data);
           this.loading = false;
-          console.log(result.data);
         }).catch(error => {
-          // this.$emit('donate', error);
+          this.$emit('donate-error', error);
           this.loading = false;
-          console.error(error);
         });
       }
     }
