@@ -12,10 +12,9 @@
 </template>
 
 <script>
-  import Vue from 'vue';
   import axios from 'axios';
 
-  const VFaucetButton = {
+  export default {
     name: 'VFaucetButton',
     inheritAttrs: false,
     props: {
@@ -67,8 +66,6 @@
     }
   };
 
-  Vue.component(VFaucetButton.name, VFaucetButton);
-  export default VFaucetButton;
 </script>
 
 <style lang="scss">

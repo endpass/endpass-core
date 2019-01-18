@@ -1,9 +1,9 @@
 import * as components from './components';
 
-export {
-  components,
-};
+export * from './components';
 
-export default {
-  ...components,
+export default Vue => {
+  Object.values(components).forEach(component =>
+    Vue.component(component.name, component),
+  );
 };
