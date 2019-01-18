@@ -1,23 +1,20 @@
 <template>
-  <div class="field">
-    <div class="control">
-      <button
-        v-bind="$attrs"
-        :disabled="disabled"
-        :class="[...classes, {'is-loading' : loading }]"
-        class="button"
-        v-on:click="sendData()"
-      >
-        <slot/>
-      </button>
-    </div>
-  </div>
+  <button
+    v-bind="$attrs"
+    :disabled="disabled"
+    :class="[...classes, {'is-loading' : loading }]"
+    class="button"
+    v-on:click="sendData()"
+  >
+    <slot/>
+  </button>
 </template>
 
 <script>
+  import Vue from 'vue';
   import axios from 'axios';
 
-  export default {
+  const FaucetButton = {
     name: 'FaucetButton',
     inheritAttrs: false,
     props: {
@@ -55,10 +52,10 @@
         axios({
           method: 'GET',
           url: `${this.faucetApi}/${this.address}`,
-          headers: {'content-type': 'application/json'}
         }).then(result => {
+          this.$emit('onLoad', result);
           this.loading = false;
-          this.response = result.data;
+          console.log(result);
         }).catch(error => {
           this.loading = false;
           console.error(error);
@@ -66,6 +63,9 @@
       }
     }
   };
+
+  Vue.component('vfaucet-button', FaucetButton);
+  export default FaucetButton;
 </script>
 
 <style lang="scss">

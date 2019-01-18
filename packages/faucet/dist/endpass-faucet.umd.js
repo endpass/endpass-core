@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
+		module.exports = factory(require("vue"));
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["endpass-faucet"] = factory();
+		exports["endpass-faucet"] = factory(require("vue"));
 	else
-		root["endpass-faucet"] = factory();
-})((typeof self !== 'undefined' ? self : this), function() {
+		root["endpass-faucet"] = factory(root["Vue"]);
+})((typeof self !== 'undefined' ? self : this), function(__WEBPACK_EXTERNAL_MODULE__8bbf__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -2338,6 +2338,13 @@ module.exports = __webpack_require__("584a").Object.keys;
 
 /***/ }),
 
+/***/ "8bbf":
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE__8bbf__;
+
+/***/ }),
+
 /***/ "8df4":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4043,7 +4050,7 @@ module.exports = function (it) {
 __webpack_require__.r(__webpack_exports__);
 var components_namespaceObject = {};
 __webpack_require__.r(components_namespaceObject);
-__webpack_require__.d(components_namespaceObject, "FaucetButton", function() { return FaucetButton; });
+__webpack_require__.d(components_namespaceObject, "FaucetButton", function() { return components_FaucetButton; });
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
 // This file is imported into lib/wc client bundles.
@@ -4114,15 +4121,19 @@ function _objectSpread(target) {
 
   return target;
 }
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"47e7cd5a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/FaucetButton.vue?vue&type=template&id=181b6490&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"field"},[_c('div',{staticClass:"control"},[_c('button',_vm._b({staticClass:"button",class:_vm.classes.concat( [{'is-loading' : _vm.loading }]),attrs:{"disabled":_vm.disabled},on:{"click":function($event){_vm.sendData()}}},'button',_vm.$attrs,false),[_vm._t("default")],2)])])}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"47e7cd5a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/FaucetButton.vue?vue&type=template&id=3d8578d8&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',_vm._b({staticClass:"button",class:_vm.classes.concat( [{'is-loading' : _vm.loading }]),attrs:{"disabled":_vm.disabled},on:{"click":function($event){_vm.sendData()}}},'button',_vm.$attrs,false),[_vm._t("default")],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/FaucetButton.vue?vue&type=template&id=181b6490&
+// CONCATENATED MODULE: ./src/components/FaucetButton.vue?vue&type=template&id=3d8578d8&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.split.js
 var es6_regexp_split = __webpack_require__("28a5");
+
+// EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
+var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
+var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_);
 
 // EXTERNAL MODULE: ./node_modules/axios/index.js
 var axios = __webpack_require__("bc3a");
@@ -4142,12 +4153,9 @@ var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
 //
 //
 //
-//
-//
-//
-//
 
-/* harmony default export */ var FaucetButtonvue_type_script_lang_js_ = ({
+
+var FaucetButton = {
   name: 'FaucetButton',
   inheritAttrs: false,
   props: {
@@ -4186,20 +4194,21 @@ var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
       this.loading = true;
       axios_default()({
         method: 'GET',
-        url: "".concat(this.faucetApi, "/").concat(this.address),
-        headers: {
-          'content-type': 'application/json'
-        }
+        url: "".concat(this.faucetApi, "/").concat(this.address)
       }).then(function (result) {
+        _this.$emit('onLoad', result);
+
         _this.loading = false;
-        _this.response = result.data;
+        console.log(result);
       }).catch(function (error) {
         _this.loading = false;
         console.error(error);
       });
     }
   }
-});
+};
+external_commonjs_vue_commonjs2_vue_root_Vue_default.a.component('vfaucet-button', FaucetButton);
+/* harmony default export */ var FaucetButtonvue_type_script_lang_js_ = (FaucetButton);
 // CONCATENATED MODULE: ./src/components/FaucetButton.vue?vue&type=script&lang=js&
  /* harmony default export */ var components_FaucetButtonvue_type_script_lang_js_ = (FaucetButtonvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
@@ -4317,7 +4326,7 @@ var component = normalizeComponent(
 )
 
 component.options.__file = "FaucetButton.vue"
-/* harmony default export */ var FaucetButton = (component.exports);
+/* harmony default export */ var components_FaucetButton = (component.exports);
 // CONCATENATED MODULE: ./src/components/index.js
 
 // CONCATENATED MODULE: ./src/main.js
