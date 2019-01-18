@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 
-import VRadio from '@/form/VRadio';
+import VRadio from '@/components/VRadio';
 
 describe('VRadio', () => {
   let wrapper;

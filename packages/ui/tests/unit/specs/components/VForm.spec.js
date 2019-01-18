@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 
-import VForm from '@/form/VForm';
+import VForm from '@/components/VForm';
 
 describe('VForm page', () => {
   let wrapper;

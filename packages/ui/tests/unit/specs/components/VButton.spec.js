@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 
-import VButton from '@/form/VButton';
+import VButton from '@/components/VButton';
 
 const attrs = {
   id: 'some-id',

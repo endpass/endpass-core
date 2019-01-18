@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 
-import VSelect from '@/form/VSelect';
+import VSelect from '@/components/VSelect';
 
 describe('VSelect', () => {
   let wrapper;

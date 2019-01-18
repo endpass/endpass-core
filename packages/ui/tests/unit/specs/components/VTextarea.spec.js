@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 
-import VTextarea from '@/form/VTextarea';
+import VTextarea from '@/components/VTextarea';
 
 describe('VTextarea', () => {
   const attrs = {
