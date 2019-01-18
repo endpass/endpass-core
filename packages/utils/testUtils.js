@@ -111,6 +111,8 @@ function generateElementFromHTML(createElement, vnode) {
 }
 
 module.exports.generateStubs = (Component) => {
+  console.warn('generateStubs is deprecated utility. Don\'t use it in new code.');
+
   return Object.values(Component.components).reduce((stubs, stubComponent) => {
     let elementName;
 
