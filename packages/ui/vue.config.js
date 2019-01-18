@@ -7,9 +7,6 @@ module.exports = {
     },
   },
   configureWebpack: {
-    output: {
-      libraryExport: '',
-    },
     module: {
       rules: [
         {

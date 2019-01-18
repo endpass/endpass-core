@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 
-import VCheckbox from '@/form/VCheckbox';
+import VCheckbox from '@/components/VCheckbox';
 
 describe('VCheckbox', () => {
   describe('render', () => {

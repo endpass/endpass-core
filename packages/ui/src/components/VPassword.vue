@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import VInput from '@/form/VInput';
+import VInput from '@/components/VInput';
 
 // Wrap a VInput component to turn it into a toggleable password input
 export default {
