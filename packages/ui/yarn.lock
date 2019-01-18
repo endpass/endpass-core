@@ -649,10 +649,10 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@endpass/utils@^1.0.9":
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/@endpass/utils/-/utils-1.0.9.tgz#c85321ceaf575acdd926c7d039bd2d4986171908"
-  integrity sha512-7jqupemS6VRxNJ7SCtSBddwWkoP8ikucOHaErX+2ohDUiL/mZyRPPsSWuXkWNMp12x/LZJAHs8YsbE+XQ2AXXA==
+"@endpass/utils@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@endpass/utils/-/utils-1.0.10.tgz#9f338ff9160f757b67f7d5504fcd646675d5368c"
+  integrity sha512-+yntssNyhy4f1u4gWU7O10d7yQsAQxAO9ZsU6dgZr6dtQNOri19oZM2G7wtNFCJ/ERDBTlNVW7jkbRz/XzYrRw==
   dependencies:
     bs58check "^2.1.2"
     dayjs "^1.7.8"
