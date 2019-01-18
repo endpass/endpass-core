@@ -1,9 +1,11 @@
-# `Endpass UI components`
+# `Endpass Faucet`
+
+Faucet for getting test ETH in one click
 
 ## Usage
 
 ```sh
-import Components from '@endpass/ui';
+import {} from '@endpass/faucet';
 
 Object.values(Components).forEach(component => Vue.component(component.name, component));
 ```

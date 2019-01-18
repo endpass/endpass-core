@@ -1,1 +1,1 @@
-export { default as VFaucetButton } from './VFaucetButton';
+export { default as VFaucetButton } from './VFaucetButton.vue';

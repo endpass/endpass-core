@@ -67,7 +67,7 @@
     }
   };
 
-  Vue.component('v-faucet-button', VFaucetButton);
+  Vue.component(VFaucetButton.name, VFaucetButton);
   export default VFaucetButton;
 </script>
 
