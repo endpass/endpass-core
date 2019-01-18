@@ -1,6 +1,6 @@
-import Vue from 'vue';
+// import Vue from 'vue';
 
-Vue.config.productionTip = false;
+// Vue.config.productionTip = false;
 
 // console.error and console.warn throws errors and fails tests
 global.console.error = jest.fn(e => {

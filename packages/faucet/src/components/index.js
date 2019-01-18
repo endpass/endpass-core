@@ -1,1 +1,1 @@
-export { default as FaucetButton } from './FaucetButton';
+export { default as VFaucetButton } from './VFaucetButton';

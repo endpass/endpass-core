@@ -4,7 +4,8 @@
     :disabled="disabled"
     :class="[...classes, {'is-loading' : loading }]"
     class="button"
-    v-on:click="sendData()"
+    @click="sendData()"
+    v-on="$listeners"
   >
     <slot/>
   </button>
@@ -14,8 +15,8 @@
   import Vue from 'vue';
   import axios from 'axios';
 
-  const FaucetButton = {
-    name: 'FaucetButton',
+  const VFaucetButton = {
+    name: 'VFaucetButton',
     inheritAttrs: false,
     props: {
       className: {
@@ -49,14 +50,16 @@
     methods: {
       sendData() {
         this.loading = true;
+        // cli3 -> rollup
         axios({
           method: 'GET',
           url: `${this.faucetApi}/${this.address}`,
         }).then(result => {
-          this.$emit('onLoad', result);
+          this.$emit('donate', result.data);
           this.loading = false;
-          console.log(result);
+          console.log(result.data);
         }).catch(error => {
+          // this.$emit('donate', error);
           this.loading = false;
           console.error(error);
         });
@@ -64,8 +67,8 @@
     }
   };
 
-  Vue.component('vfaucet-button', FaucetButton);
-  export default FaucetButton;
+  Vue.component('v-faucet-button', VFaucetButton);
+  export default VFaucetButton;
 </script>
 
 <style lang="scss">
