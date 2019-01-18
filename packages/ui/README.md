@@ -3,21 +3,17 @@
 ## Usage
 
 ```sh
-import Components from '@endpass/ui';
+import UIComponents from '@endpass/ui';
 
-Object.values(Components).forEach(component => Vue.component(component.name, component));
+Vue.use(UIComponents);
 ```
 
 or
 
 ```sh
-import { form, components } from '@endpass/ui';
-
-const { VButton } = form;
-const { VModal } = components;
+import VButton from '@endpass/ui/dist/components/VButton';
 
 Vue.component(VButton.name, VButton);
-Vue.component(VModal.name, VModal);
 ```
 
 or
@@ -28,12 +24,12 @@ or
 </template>
 
 <script>
-import { components } from '@endpass/ui';
+import VModal from '@endpass/ui/dist/components/VModal';
 
 export default {
   name: 'YourComponentName'
   components: {
-    components.VModal,
+    VModal,
   },
 };
 </script>
