@@ -5,83 +5,23 @@ Faucet for getting test ETH in one click
 ## Usage
 
 ```sh
-import {} from '@endpass/faucet';
+import FaucetComponents from '@endpass/faucet';
 
-Object.values(Components).forEach(component => Vue.component(component.name, component));
-```
+...
 
-or
+Vue.use(FaucetComponents);
 
-```sh
-import { form, components } from '@endpass/ui';
-
-const { VButton } = form;
-const { VModal } = components;
-
-Vue.component(VButton.name, VButton);
-Vue.component(VModal.name, VModal);
-```
-
-or
-
-```sh
-<template>
-  <v-modal/>
-</template>
-
-<script>
-import { components } from '@endpass/ui';
-
-export default {
-  name: 'YourComponentName'
-  components: {
-    components.VModal,
-  },
-};
-</script>
 ```
 
 ## Available Components
-
-### Form
-
-* VButton
-* VCheckbox
-* VForm
-* VInput
-* VPassword
-* VRadio
-* VSelect
-* VTextarea
-
 ### Components
 
-* VList
-* VModal
-* VPageLoader
-* VPagination
-* VSpinner
-
-## Customization
-
-Use the following SASS variables for customization in your app:
-
-```sh
-$medium-grey: hsl(0, 0%, 50%);
-$dark-grey: hsl(0, 0%, 30%);
-$purple: #4b0472;
-$white: #fff;
-
-$primary: $purple;
-$danger: #ff3860;
-
-$heading-font-family: 'Proxima Nova', 'Open Sans', 'Helvetica Neue', sans-serif;
-```
+* VFaucetButton
 
 ## Install
 
 ```sh
-yarn add @endpass/ui
+yarn add @endpass/faucet
 ```
 
 ## Contribute
@@ -107,5 +47,5 @@ yarn build-watch
 ### Running Tests
 
 ```sh
-yarn test
+yarn unit
 ```
