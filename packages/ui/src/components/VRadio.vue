@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="field is-horizontal has-addons v-radio">
     <label
       v-if="label"
