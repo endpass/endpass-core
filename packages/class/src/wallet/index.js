@@ -1,0 +1,1 @@
+export { createWalletClass } from './Wallet';

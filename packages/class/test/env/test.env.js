@@ -1,0 +1,24 @@
+const prodEnv = require('./prod.env');
+
+const identityAPIUrl = 'https://identity-dev.endpass.com/api/v1.1';
+const tokenImageUrl = 'https://tokeninfo-dev.endpass.com';
+const tokenInfoAPIUrl = 'https://tokeninfo-dev.endpass.com/api/v1';
+const cryptoDataAPIUrl = 'https://cryptodata-dev.endpass.com/api/v1';
+const wildproxyUrl = 'https://wildproxy-dev.endpass.com/';
+const kdfParams = {
+  ...prodEnv.kdfParams,
+  kdf: 'scrypt',
+  n: 4,
+};
+const isProduction = false;
+
+module.exports = {
+  ...prodEnv,
+  identityAPIUrl,
+  tokenImageUrl,
+  tokenInfoAPIUrl,
+  cryptoDataAPIUrl,
+  kdfParams,
+  wildproxyUrl,
+  isProduction,
+};
