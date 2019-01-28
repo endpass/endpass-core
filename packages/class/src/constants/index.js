@@ -1,0 +1,26 @@
+const SETTINGS = 'INPAGE_PROVIDER_SETTINGS_EVENT';
+const RESPONSE = 'INPAGE_PROVIDER_RESPONSE_EVENT';
+const REQUEST = 'INPAGE_PROVIDER_REQUEST_EVENT';
+
+export const INPAGE_EVENT = Object.freeze({
+  SETTINGS,
+  RESPONSE,
+  REQUEST,
+});
+
+export const INPAGE_ID_PREFIX = 'ep_';
+
+export const STORAGE_USER_META_KEY = 'endpass-user-meta';
+
+export const AVAILABLE_USER_META_PROPS = ['activeAccount'];
+
+export const PROXY_REQUEST_PREFIX = 'endpass-identity';
+
+export const HARDWARE_DERIVIATION_PATH = `m/44'/60'/0'/0/`;
+
+export default {
+  STORAGE_USER_META_KEY,
+  AVAILABLE_USER_META_PROPS,
+  PROXY_REQUEST_PREFIX,
+  HARDWARE_DERIVIATION_PATH,
+};
