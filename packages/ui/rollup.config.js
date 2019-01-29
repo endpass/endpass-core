@@ -80,7 +80,7 @@ export default [{
   output: [
     {
       ...outputConfig,
-      format: 'esm',
+      format: 'cjs',
       dir: resolveDir('./dist/components'),
       entryFileNames: '[name].js',
     }

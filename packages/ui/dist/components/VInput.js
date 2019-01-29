@@ -1,6 +1,10 @@
-import { a as normalizeComponent } from './chunk-80d3703e.js';
-import { a as _objectSpread, b as _toConsumableArray } from './chunk-2844ecbc.js';
-import { a as createInjector } from './chunk-ca9f6b08.js';
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+var __chunk_1 = require('./chunk-373f7571.js');
+var __chunk_2 = require('./chunk-9b9bf453.js');
+var __chunk_3 = require('./chunk-114c8aa6.js');
 
 //
 //
@@ -89,7 +93,7 @@ var script = {
     listeners: function listeners() {
       var _this = this;
 
-      return _objectSpread({}, this.$listeners, {
+      return __chunk_2._objectSpread({}, this.$listeners, {
         input: function input(event) {
           return _this.$emit('input', event.target.value);
         }
@@ -97,7 +101,7 @@ var script = {
     },
     classes: function classes() {
       var classes = this.className.split(' ');
-      return [].concat(_toConsumableArray(classes), [{
+      return [].concat(__chunk_2._toConsumableArray(classes), [{
         'is-danger': this.error
       }]);
     }
@@ -129,15 +133,15 @@ var __vue_staticRenderFns__ = [];
   
 
   
-  var VInput = normalizeComponent(
+  var VInput = __chunk_1.normalizeComponent(
     { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
     __vue_inject_styles__,
     __vue_script__,
     __vue_scope_id__,
     __vue_is_functional_template__,
     __vue_module_identifier__,
-    createInjector,
+    __chunk_3.createInjector,
     undefined
   );
 
-export default VInput;
+exports.default = VInput;

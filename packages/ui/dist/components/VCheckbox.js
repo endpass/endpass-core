@@ -1,4 +1,8 @@
-import { a as normalizeComponent } from './chunk-80d3703e.js';
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+var __chunk_1 = require('./chunk-373f7571.js');
 
 //
 //
@@ -72,7 +76,7 @@ var __vue_staticRenderFns__ = [];
   
 
   
-  var VCheckbox = normalizeComponent(
+  var VCheckbox = __chunk_1.normalizeComponent(
     { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
     __vue_inject_styles__,
     __vue_script__,
@@ -83,4 +87,4 @@ var __vue_staticRenderFns__ = [];
     undefined
   );
 
-export default VCheckbox;
+exports.default = VCheckbox;

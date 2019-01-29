@@ -1,3 +1,5 @@
+'use strict';
+
 function _defineProperty(obj, key, value) {
   if (key in obj) {
     Object.defineProperty(obj, key, {
@@ -52,4 +54,5 @@ function _nonIterableSpread() {
   throw new TypeError("Invalid attempt to spread non-iterable instance");
 }
 
-export { _objectSpread as a, _toConsumableArray as b };
+exports._objectSpread = _objectSpread;
+exports._toConsumableArray = _toConsumableArray;

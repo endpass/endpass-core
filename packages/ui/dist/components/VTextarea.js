@@ -1,5 +1,9 @@
-import { a as normalizeComponent } from './chunk-80d3703e.js';
-import { a as _objectSpread } from './chunk-2844ecbc.js';
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+var __chunk_1 = require('./chunk-373f7571.js');
+var __chunk_2 = require('./chunk-9b9bf453.js');
 
 //
 //
@@ -45,7 +49,7 @@ var script = {
     listeners: function listeners() {
       var _this = this;
 
-      return _objectSpread({}, this.$listeners, {
+      return __chunk_2._objectSpread({}, this.$listeners, {
         input: function input(event) {
           return _this.$emit('input', event.target.value);
         }
@@ -77,7 +81,7 @@ var __vue_staticRenderFns__ = [];
   
 
   
-  var VTextarea = normalizeComponent(
+  var VTextarea = __chunk_1.normalizeComponent(
     { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
     __vue_inject_styles__,
     __vue_script__,
@@ -88,4 +92,4 @@ var __vue_staticRenderFns__ = [];
     undefined
   );
 
-export default VTextarea;
+exports.default = VTextarea;
