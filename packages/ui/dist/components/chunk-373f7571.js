@@ -1,3 +1,5 @@
+'use strict';
+
 function normalizeComponent(compiledTemplate, injectStyle, defaultExport, scopeId, isFunctionalTemplate, moduleIdentifier /* server only */, isShadowMode, createInjector, createInjectorSSR, createInjectorShadow) {
     if (typeof isShadowMode === 'function') {
         createInjectorSSR = createInjector;
@@ -73,4 +75,4 @@ function normalizeComponent(compiledTemplate, injectStyle, defaultExport, scopeI
     return defaultExport;
 }
 
-export { normalizeComponent as a };
+exports.normalizeComponent = normalizeComponent;

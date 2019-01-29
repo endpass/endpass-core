@@ -1,3 +1,5 @@
+'use strict';
+
 const isOldIE = typeof navigator !== 'undefined' &&
     /msie [6-9]\\b/.test(navigator.userAgent.toLowerCase());
 function createInjector(context) {
@@ -48,4 +50,4 @@ function addStyle(id, css) {
     }
 }
 
-export { createInjector as a };
+exports.createInjector = createInjector;
