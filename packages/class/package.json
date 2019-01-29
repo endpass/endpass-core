@@ -1,15 +1,13 @@
 {
   "name": "@endpass/class",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Class modules",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
   "license": "MIT",
   "main": "dist/index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/endpass/endpass-core.git"
-  },
+  "module": "dist/index.js",
+  "repository": "https://github.com/endpass/endpass-core/tree/master/packages/class",
   "scripts": {
     "build": "rimraf ./dist && npm run build:dist",
     "build:dist": "NODE_ENV=production rollup -c",
@@ -24,6 +22,9 @@
       "pre-commit": "npm run format && npm run build"
     }
   },
+  "files": [
+    "dist"
+  ],
   "bugs": {
     "url": "https://github.com/endpass/endpass-core/issues"
   },
@@ -81,6 +82,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "gitHead": "26f833b90b38c8fbc33b7dd0d81f6de10af8147c"
+  }
 }
