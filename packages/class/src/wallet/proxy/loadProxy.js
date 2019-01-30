@@ -1,17 +1,17 @@
-export const proxies = {
+export const proxyTypes = {
   TrezorProxy: 'TrezorProxy',
   LedgerProxy: 'LedgerProxy',
   HDProxy: 'HDProxy',
 };
 
 const loaders = {
-  [proxies.TrezorProxy]() {
+  [proxyTypes.TrezorProxy]() {
     return import('./hardware/TrezorProxy');
   },
-  [proxies.LedgerProxy]() {
+  [proxyTypes.LedgerProxy]() {
     return import('./hardware/LedgerProxy');
   },
-  [proxies.HDProxy]() {
+  [proxyTypes.HDProxy]() {
     return import('./HDProxy');
   },
 };

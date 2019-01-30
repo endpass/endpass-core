@@ -1,9 +1,10 @@
 import { SettingsStorage, LocalStorage } from '@/storage';
-import { STORAGE_USER_META_KEY } from '@/constants';
+
+const checkKey = 'checkKey';
 
 describe('SettingsStorage', () => {
   const key = 'foo';
-  const storageKey = `${key}:${STORAGE_USER_META_KEY}`;
+  const storageKey = `${key}:${checkKey}`;
 
   describe('creating instance', () => {
     it('should throw error if storage is not passed to constructor', () => {
@@ -18,6 +19,7 @@ describe('SettingsStorage', () => {
     it('should call passed storage save method with generated key', () => {
       const settingsStorage = new SettingsStorage({
         storage: LocalStorage,
+        storageKey: checkKey
       });
 
       settingsStorage.save(key, { activeAccount: 'bar' });
@@ -40,6 +42,7 @@ describe('SettingsStorage', () => {
     it('should call passed storage load method with generated key', () => {
       const settingsStorage = new SettingsStorage({
         storage: LocalStorage,
+        storageKey: checkKey
       });
 
       settingsStorage.load(key);
@@ -60,6 +63,7 @@ describe('SettingsStorage', () => {
     it('should call passed storage remove method with generated key', () => {
       const settingsStorage = new SettingsStorage({
         storage: LocalStorage,
+        storageKey: checkKey
       });
 
       settingsStorage.clear(key);

@@ -6,7 +6,7 @@ import HDKey from 'ethereumjs-wallet/hdkey';
 import { isAddress, bytesToHex, toChecksumAddress, toWei, numberToHex, hexToNumber, fromWei, hexToNumberString } from 'web3-utils';
 import { keystore } from '@endpass/utils';
 import { BigNumber } from 'bignumber.js';
-import { a as PROXY_REQUEST_PREFIX, b as INPAGE_EVENT, c as INPAGE_ID_PREFIX, d as STORAGE_USER_META_KEY, e as AVAILABLE_USER_META_PROPS } from './chunk-b6fd9bce.js';
+import { a as PROXY_REQUEST_PREFIX, b as INPAGE_EVENT, c as INPAGE_ID_PREFIX, d as AVAILABLE_USER_META_PROPS } from './chunk-b4810d43.js';
 import { a as NotificationError, b as iterableToArray, c as _toConsumableArray } from './chunk-25f6a05b.js';
 export { a as NotificationError } from './chunk-25f6a05b.js';
 import Web3 from 'web3';
@@ -247,16 +247,16 @@ var WALLET_TYPE = Object.freeze(_objectSpread({
 
 var _loaders;
 
-var proxies = {
+var proxyTypes = {
   TrezorProxy: 'TrezorProxy',
   LedgerProxy: 'LedgerProxy',
   HDProxy: 'HDProxy'
 };
-var loaders = (_loaders = {}, _defineProperty(_loaders, proxies.TrezorProxy, function () {
-  return import('./chunk-6f4773e1.js');
-}), _defineProperty(_loaders, proxies.LedgerProxy, function () {
-  return import('./chunk-d8de0a3b.js');
-}), _defineProperty(_loaders, proxies.HDProxy, function () {
+var loaders = (_loaders = {}, _defineProperty(_loaders, proxyTypes.TrezorProxy, function () {
+  return import('./chunk-f6e67ce9.js');
+}), _defineProperty(_loaders, proxyTypes.LedgerProxy, function () {
+  return import('./chunk-6f4cf830.js');
+}), _defineProperty(_loaders, proxyTypes.HDProxy, function () {
   return import('./chunk-6e210929.js');
 }), _loaders);
 var cache = {};
@@ -300,7 +300,7 @@ function _loadProxy() {
 }
 
 var _strategies;
-var strategies = (_strategies = {}, _defineProperty(_strategies, WALLET_TYPE.TREZOR, proxies.TrezorProxy), _defineProperty(_strategies, WALLET_TYPE.LEDGER, proxies.LedgerProxy), _strategies);
+var strategies = (_strategies = {}, _defineProperty(_strategies, WALLET_TYPE.TREZOR, proxyTypes.TrezorProxy), _defineProperty(_strategies, WALLET_TYPE.LEDGER, proxyTypes.LedgerProxy), _strategies);
 var web3$1;
 /**
  * A Wallet represents a single Ethereum account that can send transactions
@@ -830,6 +830,21 @@ function () {
     key: "getTypes",
     value: function getTypes() {
       return WALLET_TYPE;
+    }
+  }, {
+    key: "getProxyTypes",
+    value: function getProxyTypes() {
+      return proxyTypes;
+    }
+  }, {
+    key: "loadProxy",
+
+    /**
+     * Asynchronous load and return Wallet Proxy class
+     * @return {Promise<Proxy>} proxy class
+     */
+    value: function loadProxy$$1(name) {
+      return loadProxy(name);
     }
   }]);
 
@@ -7388,7 +7403,9 @@ function () {
   function SettingsStorage(_ref) {
     var _this = this;
 
-    var storage = _ref.storage;
+    var storage = _ref.storage,
+        _ref$storageKey = _ref.storageKey,
+        storageKey = _ref$storageKey === void 0 ? '' : _ref$storageKey;
 
     _classCallCheck(this, SettingsStorage);
 
@@ -7422,6 +7439,7 @@ function () {
       throw new Error('Settings storage can not be created without storage!');
     }
 
+    this.storageKey = storageKey;
     this.storage = storage;
   }
   /* eslint-disable-next-line */
@@ -7430,7 +7448,7 @@ function () {
   _createClass(SettingsStorage, [{
     key: "getStorageKey",
     value: function getStorageKey(key) {
-      return "".concat(key, ":").concat(STORAGE_USER_META_KEY);
+      return "".concat(key, ":").concat(this.storageKey);
     }
   }]);
 
@@ -7497,4 +7515,4 @@ function () {
 
 // classes WITH web3 instance inject dependency
 
-export { createENSClass, createWalletClass, createTransactionClass, createERC20TokenClass, ProxyRequest, EventEmitter, Web3Factory, ProviderFactory, InpageProvider, DappBridge$1 as DappBridge, LocalStorage, SettingsStorage, TransactionFactory, Token, loadProxy, proxies };
+export { createENSClass, createWalletClass, createTransactionClass, createERC20TokenClass, ProxyRequest, EventEmitter, Web3Factory, ProviderFactory, InpageProvider, DappBridge$1 as DappBridge, LocalStorage, SettingsStorage, TransactionFactory, Token };

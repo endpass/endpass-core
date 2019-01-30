@@ -19,4 +19,3 @@ export {
 } from './transaction/TransactionFactory';
 export { NotificationError } from './error';
 export { default as Token } from './Token';
-export { loadProxy, proxies } from './wallet/proxy';
