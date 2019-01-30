@@ -12,6 +12,9 @@ describe('date utils', () => {
       expect(formateDate(new Date('16:05 06 12 2017'))).toBe(
         '2017-06-12 16:05',
       );
+      expect(formateDate(new Date('16:05 06 12 2017'), 'H:mm')).toBe(
+        '16:05',
+      );
     });
   });
 
