@@ -336,7 +336,8 @@ function () {
         index = info.index;
 
     if (accountType && !Object.values(WALLET_TYPE).includes(accountType)) {
-      throw new Error("".concat(accountType, " is not valid Wallet type!"));
+      console.warn("".concat(accountType, " is not valid Wallet type!")); // TODO: Check `HDAccount` type
+      // throw new Error(`${accountType} is not valid Wallet type!`);
     }
 
     var isPublic = !keystore.isV3(v3Keystore);
