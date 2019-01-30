@@ -33,7 +33,9 @@ export default class Wallet {
     const { type: accountType, index } = info;
 
     if (accountType && !Object.values(WALLET_TYPE).includes(accountType)) {
-      throw new Error(`${accountType} is not valid Wallet type!`);
+      console.warn(`${accountType} is not valid Wallet type!`);
+      // TODO: Check `HDAccount` type
+      // throw new Error(`${accountType} is not valid Wallet type!`);
     }
 
     const isPublic = !keystore.isV3(v3Keystore);
