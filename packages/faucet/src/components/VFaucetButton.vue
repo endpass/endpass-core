@@ -3,6 +3,7 @@
     v-bind="$attrs"
     :disabled="disabled"
     :class="[...classes, {'is-loading' : loading }]"
+    type="button"
     class="button"
     @click="sendData()"
     v-on="$listeners"
@@ -50,6 +51,7 @@
       async sendData() {
         this.loading = true;
         try {
+          this.$emit('before-send');
           const {data} = await axios({
             method: 'GET',
             url: `${this.faucetApi}/${this.address}`,

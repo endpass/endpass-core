@@ -826,35 +826,36 @@ var script = {
               case 0:
                 this.loading = true;
                 _context.prev = 1;
-                _context.next = 4;
+                this.$emit('before-send');
+                _context.next = 5;
                 return axios({
                   method: 'GET',
                   url: "".concat(this.faucetApi, "/").concat(this.address)
                 });
 
-              case 4:
+              case 5:
                 _ref = _context.sent;
                 data = _ref.data;
                 this.$emit('donate', data);
-                _context.next = 12;
+                _context.next = 13;
                 break;
 
-              case 9:
-                _context.prev = 9;
+              case 10:
+                _context.prev = 10;
                 _context.t0 = _context["catch"](1);
                 this.$emit('donate-error', _context.t0);
 
-              case 12:
-                _context.prev = 12;
+              case 13:
+                _context.prev = 13;
                 this.loading = false;
-                return _context.finish(12);
+                return _context.finish(13);
 
-              case 15:
+              case 16:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[1, 9, 12, 15]]);
+        }, _callee, this, [[1, 10, 13, 16]]);
       }));
 
       function sendData() {
@@ -955,7 +956,7 @@ const __vue_script__ = script;
 script.__file = "VFaucetButton.vue";
 
 /* template */
-var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',_vm._g(_vm._b({staticClass:"button",class:_vm.classes.concat( [{'is-loading' : _vm.loading }]),attrs:{"disabled":_vm.disabled},on:{"click":function($event){_vm.sendData();}}},'button',_vm.$attrs,false),_vm.$listeners),[_vm._t("default")],2)};
+var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',_vm._g(_vm._b({staticClass:"button",class:_vm.classes.concat( [{'is-loading' : _vm.loading }]),attrs:{"disabled":_vm.disabled,"type":"button"},on:{"click":function($event){_vm.sendData();}}},'button',_vm.$attrs,false),_vm.$listeners),[_vm._t("default")],2)};
 var __vue_staticRenderFns__ = [];
 
   /* style */

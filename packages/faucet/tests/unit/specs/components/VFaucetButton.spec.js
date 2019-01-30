@@ -11,6 +11,7 @@ const attrs = {
 
 const listeners = {
   click: jest.fn(),
+  'before-send': jest.fn(),
   donate: jest.fn(),
   'donate-error': jest.fn(),
 };
@@ -43,6 +44,7 @@ describe('VFaucetButton', () => {
 
     expect(wrapper.attributes().name).toBe('name');
     expect(button.attributes().id).toBe('some-id');
+    expect(button.attributes().type).toBe('button');
     expect(button.classes()).not.toContain('is-loading');
     expect(wrapper.contains('button.some-class.some-class-1')).toBeTruthy();
   });
@@ -58,7 +60,7 @@ describe('VFaucetButton', () => {
     });
 
     it('should send donate request by api prop', async () => {
-      expect.assertions(3);
+      expect.assertions(5);
 
       const button = wrapper.find('button');
 
@@ -69,9 +71,12 @@ describe('VFaucetButton', () => {
         return [200, { passData: true }];
       });
 
+      expect(wrapper.emitted()['before-send']).toBeUndefined();
+
       button.trigger('click');
 
       await flushPromises();
+      expect(wrapper.emitted()['before-send']).not.toBeUndefined();
 
       expect(wrapper.emitted().donate[0][0]).toMatchObject({
         passData: true,
