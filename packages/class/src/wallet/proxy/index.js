@@ -1,1 +1,1 @@
-export { default as loadProxy, proxies } from './loadProxy';
+export { default as loadProxy, proxyTypes } from './loadProxy';

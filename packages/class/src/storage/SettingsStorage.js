@@ -1,18 +1,19 @@
 import pick from 'lodash/pick';
-import { STORAGE_USER_META_KEY, AVAILABLE_USER_META_PROPS } from '@/constants';
+import { AVAILABLE_USER_META_PROPS } from '@/constants';
 
 class SettingsStorage {
-  constructor({ storage }) {
+  constructor({ storage, storageKey = '' }) {
     if (!storage) {
       throw new Error('Settings storage can not be created without storage!');
     }
 
+    this.storageKey = storageKey;
     this.storage = storage;
   }
 
   /* eslint-disable-next-line */
   getStorageKey(key) {
-    return `${key}:${STORAGE_USER_META_KEY}`;
+    return `${key}:${this.storageKey}`;
   }
 
   save = (key, meta) => {

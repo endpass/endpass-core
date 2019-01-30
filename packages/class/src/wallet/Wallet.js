@@ -3,12 +3,12 @@ import HDKey from 'ethereumjs-wallet/hdkey';
 import { isAddress, bytesToHex, toChecksumAddress } from 'web3-utils';
 import { keystore } from '@endpass/utils';
 import { WALLET_TYPE, HARDWARE_WALLET_TYPE } from './types';
-import { loadProxy, proxies } from './proxy';
+import { loadProxy, proxyTypes } from './proxy';
 import injectWeb3 from '@/injectWeb3';
 
 const strategies = {
-  [WALLET_TYPE.TREZOR]: proxies.TrezorProxy,
-  [WALLET_TYPE.LEDGER]: proxies.LedgerProxy,
+  [WALLET_TYPE.TREZOR]: proxyTypes.TrezorProxy,
+  [WALLET_TYPE.LEDGER]: proxyTypes.LedgerProxy,
 };
 
 let web3;
@@ -240,6 +240,18 @@ export default class Wallet {
    */
   static getTypes() {
     return WALLET_TYPE;
+  }
+
+  static getProxyTypes() {
+    return proxyTypes;
+  };
+
+  /**
+   * Asynchronous load and return Wallet Proxy class
+   * @return {Promise<Proxy>} proxy class
+   */
+  static loadProxy(name) {
+    return loadProxy(name);
   }
 }
 
