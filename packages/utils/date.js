@@ -1,21 +1,29 @@
-const dayjs = require('dayjs');
-const relativeTime = require('dayjs/plugin/relativeTime');
+'use strict';
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var dayjs = _interopDefault(require('dayjs'));
+var relativeTime = _interopDefault(require('dayjs/plugin/relativeTime'));
 
 /**
  * Setting up dayjs globally
  */
-dayjs.extend(relativeTime);
 
+dayjs.extend(relativeTime);
 module.exports = {
-  formateDate: (date, template = 'YYYY-MM-DD H:mm') => dayjs(date).format(template),
-  fromNow: date => dayjs(date).fromNow(),
-  fromTo: (fromDate, toDate) => {
-    const start = dayjs(fromDate);
+  formateDate: function formateDate(date) {
+    var template = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'YYYY-MM-DD H:mm';
+    return dayjs(date).format(template);
+  },
+  fromNow: function fromNow(date) {
+    return dayjs(date).fromNow();
+  },
+  fromTo: function fromTo(fromDate, toDate) {
+    var start = dayjs(fromDate);
     return start.to(dayjs(toDate));
   },
-  addToDate: (date, value, unit = 's') => {
-    return dayjs(date)
-      .add(value, unit)
-      .toDate();
-  },
+  addToDate: function addToDate(date, value) {
+    var unit = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 's';
+    return dayjs(date).add(value, unit).toDate();
+  }
 };

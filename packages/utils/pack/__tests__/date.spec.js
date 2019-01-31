@@ -1,4 +1,4 @@
-import { formateDate, fromNow, fromTo, addToDate } from '../date';
+import { formateDate, fromNow, fromTo, addToDate } from '@/date';
 
 describe('date utils', () => {
   describe('formateDate', () => {

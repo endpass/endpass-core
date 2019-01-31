@@ -1,4 +1,4 @@
-import { uniq, mapArrayByProp } from '../arrays';
+import { uniq, mapArrayByProp } from '@/arrays';
 
 describe('arrays utils', () => {
   describe('uniq', () => {

@@ -1,14 +1,32 @@
-const get = require('lodash/get');
+'use strict';
 
-module.exports.merge = (...obj) =>
-  obj.reduce((acc, item) => Object.assign(acc, item), {});
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
-module.exports.getFrom = (target, ...paths) => {
-  const existPath = paths.find(path => get(target, path));
+var get = _interopDefault(require('lodash/get'));
 
-  if (!existPath) {
-    return null;
+module.exports = {
+  merge: function merge() {
+    for (var _len = arguments.length, obj = new Array(_len), _key = 0; _key < _len; _key++) {
+      obj[_key] = arguments[_key];
+    }
+
+    return obj.reduce(function (acc, item) {
+      return Object.assign(acc, item);
+    }, {});
+  },
+  getFrom: function getFrom(target) {
+    for (var _len2 = arguments.length, paths = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+      paths[_key2 - 1] = arguments[_key2];
+    }
+
+    var existPath = paths.find(function (path) {
+      return get(target, path);
+    });
+
+    if (!existPath) {
+      return null;
+    }
+
+    return get(target, existPath);
   }
-
-  return get(target, existPath);
 };

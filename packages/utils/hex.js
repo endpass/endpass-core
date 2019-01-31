@@ -1,1 +1,5 @@
-module.exports.stripHexPrefix = hex => hex.replace(/^0x/, '');
+'use strict';
+
+module.exports.stripHexPrefix = function (hex) {
+  return hex.replace(/^0x/, '');
+};

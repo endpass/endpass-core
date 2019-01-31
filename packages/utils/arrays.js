@@ -1,15 +1,20 @@
-module.exports.uniq = arr =>
-  arr.reduce((acc, item) => (acc.includes(item) ? acc : acc.concat(item)), []);
+'use strict';
 
-module.exports.mapArrayByProp = (arr, prop) =>
-  arr.reduce((acc, item) => {
-    const target = item[prop];
+module.exports.uniq = function (arr) {
+  return arr.reduce(function (acc, item) {
+    return acc.includes(item) ? acc : acc.concat(item);
+  }, []);
+};
+
+module.exports.mapArrayByProp = function (arr, prop) {
+  return arr.reduce(function (acc, item) {
+    var target = item[prop];
 
     if (target) {
-      return Object.assign(acc, {
-        [target]: item,
-      });
+      acc[target] = item;
+      return acc;
     }
 
     return acc;
   }, {});
+};

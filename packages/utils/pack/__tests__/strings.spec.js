@@ -1,4 +1,4 @@
-import { getShortStringWithEllipsis, matchString } from '../strings';
+import { getShortStringWithEllipsis, matchString } from '@/strings';
 
 describe('getShortStringWithEllipsis', () => {
   it('should returns first and last 4 symbols divided by ellipsis by default', () => {
