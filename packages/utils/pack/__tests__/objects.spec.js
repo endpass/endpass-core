@@ -1,4 +1,4 @@
-import { merge, getFrom } from '../objects';
+import { merge, getFrom } from '@/objects';
 
 describe('objects utils', () => {
   describe('merge', () => {

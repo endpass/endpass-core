@@ -1,37 +1,42 @@
-'use strict';
+import keythereum from 'keythereum';
+import bs58check from 'bs58check';
+import EthWallet from 'ethereumjs-wallet';
+import HDKey from 'ethereumjs-wallet/hdkey';
 
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
-
-var keythereum = _interopDefault(require('keythereum'));
-var bs58check = _interopDefault(require('bs58check'));
-var EthWallet = _interopDefault(require('ethereumjs-wallet'));
-var HDKey = _interopDefault(require('ethereumjs-wallet/hdkey'));
-
+// Monkey patch keythereum to skip generating address for private keys
 // This allows us to encrypt private keys of arbitrary length, and
 // conforms better to the Ethereum keystore V3 spec, which does not include
 // the address for privacy reasons.
 // See https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition#alterations-from-version-1
-
-keythereum.privateKeyToAddress = function (pk) {
+keythereum.privateKeyToAddress = function(pk) {
   return '';
 };
 
 module.exports = {
   // Encrypts a private key Buffer into a V3 keystore object
   // The exported keystore does NOT include an address
-  encrypt: function encrypt(password, privateKey) {
+  encrypt(password, privateKey) {
     // Generate random salt and iv for each encryption
-    var dk = keythereum.create();
-    var options = {
+    const dk = keythereum.create();
+    const options = {
       kdf: ENV.kdfParams.kdf,
-      kdfparams: ENV.kdfParams
+      kdfparams: ENV.kdfParams,
     };
-    var encrypted = keythereum.dump(password, privateKey, dk.salt, dk.iv, options);
+    const encrypted = keythereum.dump(
+      password,
+      privateKey,
+      dk.salt,
+      dk.iv,
+      options,
+    );
+
     delete encrypted.address;
+
     return encrypted;
   },
+
   // Decrypts a V3 keystore object into a private key Buffer
-  decrypt: function decrypt(password, json) {
+  decrypt(password, json) {
     if (!password) {
       throw new Error('Password is empty');
     }
@@ -42,62 +47,78 @@ module.exports = {
 
     return keythereum.recover(password, json);
   },
+
   // Encrypts an ethereumjs Wallet
-  encryptWallet: function encryptWallet(password, wallet) {
-    var json = this.encrypt(password, wallet.getPrivateKey());
+  encryptWallet(password, wallet) {
+    const json = this.encrypt(password, wallet.getPrivateKey());
+
     json.address = wallet.getChecksumAddressString();
+
     return json;
   },
+
   // Decrypts a keystore into an ethereumjs Wallet
-  decryptWallet: function decryptWallet(password, json) {
-    var privateKey = this.decrypt(password, json);
+  decryptWallet(password, json) {
+    const privateKey = this.decrypt(password, json);
+
     return EthWallet.fromPrivateKey(privateKey);
   },
+
   // Encrypts an ethereumjs Wallet
-  encryptHDWallet: function encryptHDWallet(password, wallet) {
-    var xPrv = this.decodeBase58(wallet.privateExtendedKey());
-    var json = this.encrypt(password, xPrv);
+  encryptHDWallet(password, wallet) {
+    const xPrv = this.decodeBase58(wallet.privateExtendedKey());
+    const json = this.encrypt(password, xPrv);
+
     json.address = wallet.publicExtendedKey();
+
     return json;
   },
+
   // Decrypts a keystore into an ethereumjs Wallet
-  decryptHDWallet: function decryptHDWallet(password, json) {
-    var xPrv = this.decrypt(password, json);
-    var xPrvString = this.encodeBase58(xPrv);
+  decryptHDWallet(password, json) {
+    const xPrv = this.decrypt(password, json);
+    const xPrvString = this.encodeBase58(xPrv);
+
     return HDKey.fromExtendedKey(xPrvString);
   },
+
   // Encode a buffer to Base58Check
   // If already a string, silently return it
-  encodeBase58: function encodeBase58(key) {
+  encodeBase58(key) {
     if (typeof key === 'string') {
       return key;
     }
-
     return bs58check.encode(key);
   },
+
   // Decode from Base58Check string
   // If not a string, silently return it
-  decodeBase58: function decodeBase58(key) {
+  decodeBase58(key) {
     if (typeof key !== 'string') {
       return key;
     }
 
     return bs58check.decode(key);
   },
+
   // Returns true if the key is an extended public key (xpub)
   // Accepts string or buffer
-  isExtendedPublicKey: function isExtendedPublicKey(key) {
-    var keyString = this.encodeBase58(key);
+  isExtendedPublicKey(key) {
+    const keyString = this.encodeBase58(key);
+
     return keyString.slice(0, 4) === 'xpub';
   },
+
   // Returns true if the key is an extended private key (xprv)
   // Accepts string or buffer
-  isExtendedPrivateKey: function isExtendedPrivateKey(key) {
-    var keyString = this.encodeBase58(key);
+  isExtendedPrivateKey(key) {
+    const keyString = this.encodeBase58(key);
+
     return keyString.slice(0, 4) === 'xprv';
   },
+
   // Simple sanity check to ensure a valid V3 keystore
-  isV3: function isV3(json) {
+  isV3(json) {
     return json && json.crypto && json.crypto.ciphertext;
-  }
+  },
 };
