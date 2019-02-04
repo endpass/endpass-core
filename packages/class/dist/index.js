@@ -3858,7 +3858,9 @@ function get(object, path, defaultValue) {
 
 var get_1 = get;
 
-var isNumeric = n => !isNaN(parseFloat(n)) && isFinite(n);
+var isNumeric = function (n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+};
 
 var erc20ABI = [
   {
@@ -6667,7 +6669,30 @@ var InpageProvider =
 /*#__PURE__*/
 function () {
   function InpageProvider(eventEmitter) {
+    var _this = this;
+
     _classCallCheck(this, InpageProvider);
+
+    _defineProperty(this, "enable",
+    /*#__PURE__*/
+    _asyncToGenerator(
+    /*#__PURE__*/
+    _regeneratorRuntime.mark(function _callee() {
+      return _regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              return _context.abrupt("return", _this.processPayload({
+                method: 'eth_accounts'
+              }).result);
+
+            case 1:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee, this);
+    })));
 
     if (!(eventEmitter instanceof EventEmitter)) {
       throw new Error('Event emitter is not provided');
@@ -6675,14 +6700,15 @@ function () {
 
     this.eventEmitter = eventEmitter;
     this.pendingRequestsHandlers = {};
-    this.settings = {};
-    this.isMetaMask = true;
+    this.settings = {
+      activeAccount: null,
+      activeNet: null
+    };
 
     this.isConnected = function () {
       return true;
     };
 
-    this.enable = this.enable.bind(this);
     this.setupEventsHandlers();
   }
 
@@ -6694,11 +6720,11 @@ function () {
     }
   }, {
     key: "handleResponse",
-    value: function handleResponse(_ref) {
-      var error = _ref.error,
-          id = _ref.id,
-          result = _ref.result,
-          jsonrpc = _ref.jsonrpc;
+    value: function handleResponse(_ref2) {
+      var error = _ref2.error,
+          id = _ref2.id,
+          result = _ref2.result,
+          jsonrpc = _ref2.jsonrpc;
       var requestId = InpageProvider.restoreRequestIdFromInpageId(id);
       var requestHandler = get_1(this.pendingRequestsHandlers, requestId);
 
@@ -6714,15 +6740,15 @@ function () {
   }, {
     key: "handleSettings",
     value: function handleSettings(payload) {
-      var selectedAddress = payload.selectedAddress,
-          networkVersion = payload.networkVersion;
+      var activeAccount = payload.activeAccount,
+          activeNet = payload.activeNet;
 
-      if (selectedAddress) {
-        this.settings.selectedAddress = selectedAddress;
+      if (activeAccount) {
+        this.settings.activeAccount = activeAccount;
       }
 
-      if (networkVersion) {
-        this.settings.networkVersion = networkVersion;
+      if (activeNet) {
+        this.settings.activeNet = activeNet;
       }
     }
   }, {
@@ -6732,11 +6758,11 @@ function () {
 
       switch (payload.method) {
         case 'eth_accounts':
-          result = this.settings.selectedAddress ? [this.settings.selectedAddress] : [];
+          result = this.settings.activeAccount ? [this.settings.activeAccount] : [];
           break;
 
         case 'eth_coinbase':
-          result = this.settings.selectedAddress || null;
+          result = this.settings.activeAccount || null;
           break;
 
         case 'eth_uninstallFilter':
@@ -6745,7 +6771,7 @@ function () {
           break;
 
         case 'net_version':
-          result = this.settings.networkVersion || null;
+          result = this.settings.activeNet || null;
           break;
 
         default:
@@ -6777,34 +6803,6 @@ function () {
     value: function send(payload) {
       return this.processPayload(payload);
     }
-  }, {
-    key: "enable",
-    value: function () {
-      var _enable = _asyncToGenerator(
-      /*#__PURE__*/
-      _regeneratorRuntime.mark(function _callee() {
-        return _regeneratorRuntime.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                return _context.abrupt("return", this.processPayload({
-                  method: 'eth_accounts'
-                }).result);
-
-              case 1:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, this);
-      }));
-
-      function enable() {
-        return _enable.apply(this, arguments);
-      }
-
-      return enable;
-    }()
   }], [{
     key: "createInpageIdFromRequestId",
     value: function createInpageIdFromRequestId(id) {
