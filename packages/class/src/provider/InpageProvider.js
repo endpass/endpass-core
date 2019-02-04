@@ -10,10 +10,12 @@ export default class InpageProvider {
 
     this.eventEmitter = eventEmitter;
     this.pendingRequestsHandlers = {};
-    this.settings = {};
-    this.isMetaMask = true;
+    this.settings = {
+      activeAccount: null,
+      activeNet: null,
+    };
+    this.isMetaMask = true; // emulate metamask provider
     this.isConnected = () => true;
-    this.enable = this.enable.bind(this);
     this.setupEventsHandlers();
   }
 
@@ -46,14 +48,14 @@ export default class InpageProvider {
   }
 
   handleSettings(payload) {
-    const { selectedAddress, networkVersion } = payload;
+    const { activeAccount, activeNet } = payload;
 
-    if (selectedAddress) {
-      this.settings.selectedAddress = selectedAddress;
+    if (activeAccount) {
+      this.settings.activeAccount = activeAccount;
     }
 
-    if (networkVersion) {
-      this.settings.networkVersion = networkVersion;
+    if (activeNet) {
+      this.settings.activeNet = activeNet;
     }
   }
 
@@ -62,19 +64,19 @@ export default class InpageProvider {
 
     switch (payload.method) {
       case 'eth_accounts':
-        result = this.settings.selectedAddress
-          ? [this.settings.selectedAddress]
+        result = this.settings.activeAccount
+          ? [this.settings.activeAccount]
           : [];
         break;
       case 'eth_coinbase':
-        result = this.settings.selectedAddress || null;
+        result = this.settings.activeAccount || null;
         break;
       case 'eth_uninstallFilter':
         this.sendAsync(payload, () => {});
         result = true;
         break;
       case 'net_version':
-        result = this.settings.networkVersion || null;
+        result = this.settings.activeNet || null;
         break;
       default:
         break;
@@ -105,7 +107,7 @@ export default class InpageProvider {
     return this.processPayload(payload);
   }
 
-  async enable() {
+  enable = async () => {
     return this.processPayload({ method: 'eth_accounts' }).result;
   }
 }

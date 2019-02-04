@@ -94,33 +94,33 @@ describe('InpageProvider', () => {
     });
 
     describe('handleSettings', () => {
-      it('should set selectedAddress and networkVersion', () => {
+      it('should set activeAccount and activeNet', () => {
         const settings = {
-          selectedAddress: '2',
-          networkVersion: '1',
+          activeAccount: '2',
+          activeNet: '1',
         };
 
         provider.handleSettings(settings);
 
-        expect(provider.settings.selectedAddress).toBe(
-          settings.selectedAddress,
+        expect(provider.settings.activeAccount).toBe(
+          settings.activeAccount,
         );
-        expect(provider.settings.networkVersion).toBe(settings.networkVersion);
+        expect(provider.settings.activeNet).toBe(settings.activeNet);
       });
 
-      it('should set selectedAddress and networkVersion as undefined', () => {
+      it('should set activeAccount and activeNet as undefined', () => {
         const settings = {
-          selectedAddress: '2',
-          networkVersion: '1',
+          activeAccount: '2',
+          activeNet: '1',
         };
 
         provider.handleSettings(settings);
         provider.handleSettings({});
 
-        expect(provider.settings.selectedAddress).toBe(
-          settings.selectedAddress,
+        expect(provider.settings.activeAccount).toBe(
+          settings.activeAccount,
         );
-        expect(provider.settings.networkVersion).toBe(settings.networkVersion);
+        expect(provider.settings.activeNet).toBe(settings.activeNet);
       });
     });
 
@@ -190,18 +190,18 @@ describe('InpageProvider', () => {
         expect(provider.send({ method: 'net_version' }).result).toBe(null);
 
         provider.settings = {
-          selectedAddress: 'eke',
-          networkVersion: '1',
+          activeAccount: 'eke',
+          activeNet: '1',
         };
 
         expect(provider.send({ method: 'eth_accounts' }).result).toEqual([
-          provider.settings.selectedAddress,
+          provider.settings.activeAccount,
         ]);
         expect(provider.send({ method: 'eth_coinbase' }).result).toBe(
-          provider.settings.selectedAddress,
+          provider.settings.activeAccount,
         );
         expect(provider.send({ method: 'net_version' }).result).toBe(
-          provider.settings.networkVersion,
+          provider.settings.activeNet,
         );
       });
     });
