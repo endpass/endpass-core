@@ -246,7 +246,7 @@ export default class Wallet {
 
   static getProxyTypes() {
     return proxyTypes;
-  };
+  }
 
   /**
    * Asynchronous load and return Wallet Proxy class

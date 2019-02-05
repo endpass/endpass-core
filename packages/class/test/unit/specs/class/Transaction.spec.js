@@ -98,6 +98,50 @@ describe('Transaction Class', () => {
       });
     });
 
+    describe('isEqual', () => {
+      it('should return true for default fields checking', () => {
+        const res = Transaction.isEqual(
+          { networkId: 1, hash: 2 },
+          { networkId: 1, hash: 2 });
+        expect(res).toBe(true);
+      });
+
+      it('should return false for default fields checking', () => {
+        expect(Transaction.isEqual(
+          { networkId: 1, hash: 3 },
+          { networkId: 1, hash: 2 }),
+        ).toBe(false);
+
+        expect(Transaction.isEqual(
+          { networkId: 2, hash: 2 },
+          { networkId: 1, hash: 2 }),
+        ).toBe(false);
+      });
+
+      it('should return true for defined fields', () => {
+        expect(Transaction.isEqual(
+          { networkId: 2, hash: 3, block: 10, part: 12 },
+          { networkId: 1, hash: 2, block: 10, part: 12 },
+          ['block', 'part'],
+          ),
+        ).toBe(true);
+
+        expect(Transaction.isEqual(
+          { networkId: 1, hash: 2, block: 10, part: 12 },
+          { networkId: 1, hash: 2, block: 10, part: 11 },
+          ['block', 'part'],
+          ),
+        ).toBe(false);
+
+        expect(Transaction.isEqual(
+          { networkId: 1, hash: 2, block: 11, part: 12 },
+          { networkId: 1, hash: 2, block: 10, part: 12 },
+          ['block', 'part'],
+          ),
+        ).toBe(false);
+      });
+    });
+
     describe('isToContract', () => {
       it('should returns true if resolved code not equals to 0x', async () => {
         expect.assertions(2);

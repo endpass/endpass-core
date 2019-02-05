@@ -837,13 +837,13 @@ function () {
     value: function getProxyTypes() {
       return proxyTypes;
     }
-  }, {
-    key: "loadProxy",
-
     /**
      * Asynchronous load and return Wallet Proxy class
      * @return {Promise<Proxy>} proxy class
      */
+
+  }, {
+    key: "loadProxy",
     value: function loadProxy$$1(name) {
       return loadProxy(name);
     }
@@ -4496,7 +4496,10 @@ function () {
   }, {
     key: "isEqual",
     value: function isEqual(trx1, trx2) {
-      return "".concat(trx1.networkId, "-").concat(trx1.hash) === "".concat(trx2.networkId, "-").concat(trx2.hash);
+      var fields = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : ['networkId', 'hash'];
+      return fields.every(function (field) {
+        return trx1[field] === trx2[field];
+      });
     }
   }, {
     key: "isToContract",
@@ -6704,6 +6707,7 @@ function () {
       activeAccount: null,
       activeNet: null
     };
+    this.isMetaMask = true; // emulate metamask provider
 
     this.isConnected = function () {
       return true;
