@@ -77,10 +77,8 @@ export default class Transaction {
     return cloneDeep(trx);
   }
 
-  static isEqual(trx1, trx2) {
-    return (
-      `${trx1.networkId}-${trx1.hash}` === `${trx2.networkId}-${trx2.hash}`
-    );
+  static isEqual(trx1, trx2, fields = ['networkId', 'hash']) {
+    return fields.every(field => trx1[field] === trx2[field]);
   }
 
   static async isToContract(transaction) {

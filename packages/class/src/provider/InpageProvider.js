@@ -109,5 +109,5 @@ export default class InpageProvider {
 
   enable = async () => {
     return this.processPayload({ method: 'eth_accounts' }).result;
-  }
+  };
 }
