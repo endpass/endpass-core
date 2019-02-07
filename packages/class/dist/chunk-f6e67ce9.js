@@ -241,3 +241,4 @@ function () {
 }();
 
 export default TrezorProxy;
+//# sourceMappingURL=chunk-f6e67ce9.js.map

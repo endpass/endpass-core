@@ -1,17 +1,24 @@
 import { toChecksumAddress } from 'web3-utils';
 
 export default class Token {
-  static asObject({ address, decimals, logo, name, symbol, balance }) {
+  static asObject({
+    address,
+    logo,
+    name,
+    symbol,
+    decimals = 18,
+    balance = '0',
+  }) {
     if (!address) {
       throw new Error("Token can't be created without address!");
     }
     return {
-      decimals: parseInt(decimals, 10) || 18,
+      decimals: parseInt(decimals, 10),
       logo,
       name,
       symbol: symbol && symbol.toUpperCase(),
       address: toChecksumAddress(address),
-      balance: balance || '0',
+      balance,
     };
   }
 

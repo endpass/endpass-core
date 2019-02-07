@@ -12,3 +12,4 @@ var PROXY_REQUEST_PREFIX = 'endpass-identity';
 var HARDWARE_DERIVIATION_PATH = "m/44'/60'/0'/0/";
 
 export { PROXY_REQUEST_PREFIX as a, INPAGE_EVENT as b, INPAGE_ID_PREFIX as c, AVAILABLE_USER_META_PROPS as d, HARDWARE_DERIVIATION_PATH as e };
+//# sourceMappingURL=chunk-b4810d43.js.map

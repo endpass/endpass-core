@@ -22,7 +22,7 @@ const apiTokenResponse = {
   from: '0x4bd5c3e7e4d6b3df23e9da5b42e5e4daa3d2579b',
   timestamp: 1525898092,
   to: '0x7c59542b20002ed255598172cab48b86d865dfbb',
-  tokenInfo: {
+  token: {
     address: '0xe41d2489571d322189246dafa5ebde1f4699f498',
     name: '0x Protocol Token',
     decimals: 18,
@@ -204,7 +204,7 @@ describe('Transaction Class', () => {
         expect(
           Transaction.getValueInWei({
             value: 10,
-            tokenInfo: { decimals: 2 },
+            token: { decimals: 2 },
           }),
         ).toBe('1000');
       });
@@ -213,7 +213,7 @@ describe('Transaction Class', () => {
         expect(
           Transaction.getValueInWei({
             value: 10,
-            tokenInfo: { decimals: null },
+            token: { decimals: null },
           }),
         ).toBe('10');
       });
@@ -282,7 +282,7 @@ describe('Transaction Class', () => {
       expect(trx).toEqual({
         value: '0.01',
         date: expect.anything(),
-        tokenInfo: undefined,
+        token: undefined,
         from: metamaskTransaction.from,
         to: metamaskTransaction.to,
         networkId: 3,

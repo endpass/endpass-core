@@ -29,14 +29,14 @@ export default class Transaction {
     timestamp,
     to = '',
     networkId = 1,
-    tokenInfo = undefined,
+    token = undefined,
     transactionHash,
     value = DEFAULT_ZERO,
     success,
   }) {
     // prepare external structure
     const trx = {
-      tokenInfo,
+      token,
       from,
       to,
       networkId,
@@ -86,25 +86,26 @@ export default class Transaction {
     return res !== '0x';
   }
 
-  static getMultiplier(tokenInfo) {
-    const decimals = tokenInfo ? tokenInfo.decimals || 0 : 18;
+  static getMultiplier(token) {
+    const decimals = token ? token.decimals || 0 : 18;
+
     return BigNumber('10').pow(decimals);
   }
 
   static getTokenSymbol(trx) {
-    const { tokenInfo } = trx;
-    return get(tokenInfo, 'symbol', 'ETH');
+    const { token } = trx;
+    return get(token, 'symbol', 'ETH');
   }
 
   static getGasCost({ gasLimit, gasPrice }) {
     const gasPriceWei = Transaction.getGasPriceWei(gasPrice);
+
     return BigNumber(gasPriceWei).times(gasLimit);
   }
 
   static getUpGasCost(trx) {
     const { token } = trx;
     const gasCost = Transaction.getGasCost(trx);
-
     const tnxValue =
       token === 'ETH' ? Transaction.getValueInWei(trx) : DEFAULT_ZERO;
 
@@ -119,7 +120,8 @@ export default class Transaction {
 
   static getGasPriceWei(price) {
     const value = price && price.toString();
-    return !isNumeric(value) ? DEFAULT_ZERO : toWei(value, 'Gwei');
+
+    return !isNumeric(value) ? DEFAULT_ZERO : toWei(value, 'gwei');
   }
 
   static getValidTo(transaction) {
@@ -137,13 +139,14 @@ export default class Transaction {
   }
 
   static getValidData(transaction) {
-    const { data, tokenInfo } = transaction;
-    if (!tokenInfo) {
+    const { data, token } = transaction;
+
+    if (!token) {
       return data;
     }
 
     const validTo = Transaction.getValidTo(transaction);
-    const erc20 = new ERC20Token(tokenInfo.address);
+    const erc20 = new ERC20Token(token.address);
     const contract = erc20.getContract();
     const transactionValueInWei = Transaction.getValueInWei(transaction);
     return contract.methods
@@ -166,14 +169,15 @@ export default class Transaction {
   }
 
   static getValueInWei(transaction) {
-    const multiplier = Transaction.getMultiplier(transaction.tokenInfo);
+    const multiplier = Transaction.getMultiplier(transaction.token);
+
     return Transaction.getValueBN(transaction)
       .times(multiplier)
       .toFixed(0);
   }
 
   static getValueFromWei(transaction) {
-    const multiplier = Transaction.getMultiplier(transaction.tokenInfo);
+    const multiplier = Transaction.getMultiplier(transaction.token);
     return Transaction.getValueBN(transaction)
       .div(multiplier)
       .toFixed();
@@ -181,8 +185,8 @@ export default class Transaction {
 
   static async getGasFullPrice(transaction) {
     const estimatedGas = await web3.eth.estimateGas({
-      data: Transaction.getValidData(transaction),
       to: Transaction.getValidTo(transaction),
+      data: Transaction.getValidData(transaction),
     });
     const gasPriceWei = Transaction.getPriceWei(transaction);
 
@@ -196,11 +200,11 @@ export default class Transaction {
     const validTo = Transaction.getValidTo(trx);
     const gasPriceWei = Transaction.getPriceWei(trx);
     const valueWei = Transaction.getValueInWei(trx);
-    const { tokenInfo } = trx;
+    const { token } = trx;
 
-    const tokenPassData = tokenInfo
+    const tokenPassData = token
       ? {
-          to: tokenInfo.address,
+          to: token.address,
           value: '0x0',
         }
       : {};
