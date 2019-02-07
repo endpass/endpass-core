@@ -3858,9 +3858,7 @@ function get(object, path, defaultValue) {
 
 var get_1 = get;
 
-var isNumeric = function (n) {
-  return !isNaN(parseFloat(n)) && isFinite(n);
-};
+var isNumeric = n => !isNaN(parseFloat(n)) && isFinite(n);
 
 var erc20ABI = [
   {
@@ -4395,12 +4393,12 @@ function setProp(trx, key, value) {
 
 function applyProps(trx, newProps) {
   // apply first props if they defined, then call others
-  var nextProps = _objectSpread({}, newProps); // must set before other props. Other props have dependency from tokenInfo value
+  var nextProps = _objectSpread({}, newProps); // must set before other props. Other props have dependency from token value
 
 
-  if (nextProps.hasOwnProperty('tokenInfo')) {
-    trx.tokenInfo = nextProps.tokenInfo && Token.asObject(nextProps.tokenInfo);
-    delete nextProps.tokenInfo;
+  if (nextProps.hasOwnProperty('token')) {
+    trx.token = nextProps.token && Token.asObject(nextProps.token);
+    delete nextProps.token;
   }
 
   for (var key in nextProps) {
@@ -7519,3 +7517,4 @@ function () {
 // classes WITH web3 instance inject dependency
 
 export { createENSClass, createWalletClass, createTransactionClass, createERC20TokenClass, ProxyRequest, EventEmitter, Web3Factory, ProviderFactory, InpageProvider, DappBridge$1 as DappBridge, LocalStorage, SettingsStorage, TransactionFactory, Token };
+//# sourceMappingURL=index.js.map

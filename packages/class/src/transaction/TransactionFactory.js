@@ -4,7 +4,7 @@ import Transaction from './Transaction';
 
 export default class TransactionFactory {
   static fromSendForm(trx) {
-    const value = trx.tokenInfo ? Transaction.getValueFromWei(trx) : trx.value;
+    const value = trx.token ? Transaction.getValueFromWei(trx) : trx.value;
     return Transaction.create({ ...trx, value });
   }
 

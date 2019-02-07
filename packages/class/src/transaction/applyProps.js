@@ -23,10 +23,10 @@ export default function applyProps(trx, newProps) {
   // apply first props if they defined, then call others
   const nextProps = { ...newProps };
 
-  // must set before other props. Other props have dependency from tokenInfo value
-  if (nextProps.hasOwnProperty('tokenInfo')) {
-    trx.tokenInfo = nextProps.tokenInfo && Token.asObject(nextProps.tokenInfo);
-    delete nextProps.tokenInfo;
+  // must set before other props. Other props have dependency from token value
+  if (nextProps.hasOwnProperty('token')) {
+    trx.token = nextProps.token && Token.asObject(nextProps.token);
+    delete nextProps.token;
   }
 
   for (const key in nextProps) {
