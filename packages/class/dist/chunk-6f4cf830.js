@@ -324,4 +324,3 @@ function () {
 }();
 
 export default LedgerProxy;
-//# sourceMappingURL=chunk-6f4cf830.js.map
