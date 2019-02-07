@@ -4107,23 +4107,25 @@ function () {
     key: "asObject",
     value: function asObject(_ref) {
       var address = _ref.address,
-          decimals = _ref.decimals,
           logo = _ref.logo,
           name = _ref.name,
           symbol = _ref.symbol,
-          balance = _ref.balance;
+          _ref$decimals = _ref.decimals,
+          decimals = _ref$decimals === void 0 ? 18 : _ref$decimals,
+          _ref$balance = _ref.balance,
+          balance = _ref$balance === void 0 ? '0' : _ref$balance;
 
       if (!address) {
         throw new Error("Token can't be created without address!");
       }
 
       return {
-        decimals: parseInt(decimals, 10) || 18,
+        decimals: parseInt(decimals, 10),
         logo: logo,
         name: name,
         symbol: symbol && symbol.toUpperCase(),
         address: toChecksumAddress(address),
-        balance: balance || '0'
+        balance: balance
       };
     }
   }, {
@@ -4438,15 +4440,15 @@ function () {
           to = _ref$to === void 0 ? '' : _ref$to,
           _ref$networkId = _ref.networkId,
           networkId = _ref$networkId === void 0 ? 1 : _ref$networkId,
-          _ref$tokenInfo = _ref.tokenInfo,
-          tokenInfo = _ref$tokenInfo === void 0 ? undefined : _ref$tokenInfo,
+          _ref$token = _ref.token,
+          token = _ref$token === void 0 ? undefined : _ref$token,
           transactionHash = _ref.transactionHash,
           _ref$value = _ref.value,
           value = _ref$value === void 0 ? DEFAULT_ZERO : _ref$value,
           success = _ref.success;
       // prepare external structure
       var trx = {
-        tokenInfo: tokenInfo,
+        token: token,
         from: from,
         to: to,
         networkId: networkId,
@@ -4533,15 +4535,15 @@ function () {
     }()
   }, {
     key: "getMultiplier",
-    value: function getMultiplier(tokenInfo) {
-      var decimals = tokenInfo ? tokenInfo.decimals || 0 : 18;
+    value: function getMultiplier(token) {
+      var decimals = token ? token.decimals || 0 : 18;
       return BigNumber('10').pow(decimals);
     }
   }, {
     key: "getTokenSymbol",
     value: function getTokenSymbol(trx) {
-      var tokenInfo = trx.tokenInfo;
-      return get_1(tokenInfo, 'symbol', 'ETH');
+      var token = trx.token;
+      return get_1(token, 'symbol', 'ETH');
     }
   }, {
     key: "getGasCost",
@@ -4569,7 +4571,7 @@ function () {
     key: "getGasPriceWei",
     value: function getGasPriceWei(price) {
       var value = price && price.toString();
-      return !isNumeric(value) ? DEFAULT_ZERO : toWei(value, 'Gwei');
+      return !isNumeric(value) ? DEFAULT_ZERO : toWei(value, 'gwei');
     }
   }, {
     key: "getValidTo",
@@ -4590,14 +4592,14 @@ function () {
     key: "getValidData",
     value: function getValidData(transaction) {
       var data = transaction.data,
-          tokenInfo = transaction.tokenInfo;
+          token = transaction.token;
 
-      if (!tokenInfo) {
+      if (!token) {
         return data;
       }
 
       var validTo = Transaction.getValidTo(transaction);
-      var erc20 = new ERC20Token(tokenInfo.address);
+      var erc20 = new ERC20Token(token.address);
       var contract = erc20.getContract();
       var transactionValueInWei = Transaction.getValueInWei(transaction);
       return contract.methods.transfer(validTo, transactionValueInWei).encodeABI();
@@ -4621,13 +4623,13 @@ function () {
   }, {
     key: "getValueInWei",
     value: function getValueInWei(transaction) {
-      var multiplier = Transaction.getMultiplier(transaction.tokenInfo);
+      var multiplier = Transaction.getMultiplier(transaction.token);
       return Transaction.getValueBN(transaction).times(multiplier).toFixed(0);
     }
   }, {
     key: "getValueFromWei",
     value: function getValueFromWei(transaction) {
-      var multiplier = Transaction.getMultiplier(transaction.tokenInfo);
+      var multiplier = Transaction.getMultiplier(transaction.token);
       return Transaction.getValueBN(transaction).div(multiplier).toFixed();
     }
   }, {
@@ -4643,8 +4645,8 @@ function () {
               case 0:
                 _context2.next = 2;
                 return web3$3.eth.estimateGas({
-                  data: Transaction.getValidData(transaction),
-                  to: Transaction.getValidTo(transaction)
+                  to: Transaction.getValidTo(transaction),
+                  data: Transaction.getValidData(transaction)
                 });
 
               case 2:
@@ -4673,9 +4675,9 @@ function () {
       var validTo = Transaction.getValidTo(trx);
       var gasPriceWei = Transaction.getPriceWei(trx);
       var valueWei = Transaction.getValueInWei(trx);
-      var tokenInfo = trx.tokenInfo;
-      var tokenPassData = tokenInfo ? {
-        to: tokenInfo.address,
+      var token = trx.token;
+      var tokenPassData = token ? {
+        to: token.address,
         value: '0x0'
       } : {};
       return _objectSpread({
@@ -7466,7 +7468,7 @@ function () {
   _createClass(TransactionFactory, null, [{
     key: "fromSendForm",
     value: function fromSendForm(trx) {
-      var value = trx.tokenInfo ? Transaction.getValueFromWei(trx) : trx.value;
+      var value = trx.token ? Transaction.getValueFromWei(trx) : trx.value;
       return Transaction.create(_objectSpread({}, trx, {
         value: value
       }));
@@ -7517,4 +7519,3 @@ function () {
 // classes WITH web3 instance inject dependency
 
 export { createENSClass, createWalletClass, createTransactionClass, createERC20TokenClass, ProxyRequest, EventEmitter, Web3Factory, ProviderFactory, InpageProvider, DappBridge$1 as DappBridge, LocalStorage, SettingsStorage, TransactionFactory, Token };
-//# sourceMappingURL=index.js.map

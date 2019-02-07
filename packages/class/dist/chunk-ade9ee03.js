@@ -7,4 +7,3 @@ function getChildrenAddress (hdWallet, offset, limit) {
 }
 
 export { getChildrenAddress as a };
-//# sourceMappingURL=chunk-ade9ee03.js.map

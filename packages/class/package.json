@@ -1,6 +1,6 @@
 {
   "name": "@endpass/class",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Class modules",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -17,9 +17,19 @@
     "format": "prettier --write \"src/**/*.{js,json}\"",
     "lint": "eslint --fix \"./src/**/*.js\""
   },
+  "lint-staged": {
+    "./src/**/*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "./dist/*": [
+      "git add"
+    ]
+  },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run format && npm run build"
+      "pre-commit": "npm run build && lint-staged"
     }
   },
   "files": [
