@@ -3858,7 +3858,9 @@ function get(object, path, defaultValue) {
 
 var get_1 = get;
 
-var isNumeric = n => !isNaN(parseFloat(n)) && isFinite(n);
+var isNumeric = function (n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+};
 
 var erc20ABI = [
   {
