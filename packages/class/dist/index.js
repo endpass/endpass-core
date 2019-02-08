@@ -3858,9 +3858,7 @@ function get(object, path, defaultValue) {
 
 var get_1 = get;
 
-var isNumeric = function (n) {
-  return !isNaN(parseFloat(n)) && isFinite(n);
-};
+var isNumeric = n => !isNaN(parseFloat(n)) && isFinite(n);
 
 var erc20ABI = [
   {
@@ -7512,6 +7510,18 @@ function () {
       }
 
       return Transaction.create(_objectSpread({}, trx, adaptData));
+    }
+  }, {
+    key: "fromCryptoData",
+    value: function fromCryptoData(trx) {
+      return Transaction.create(_objectSpread({}, trx, {
+        value: fromWei(trx.value),
+        nonce: hexToNumberString(trx.nonce),
+        gasPrice: fromWei(trx.gasPrice, 'Gwei'),
+        gasLimit: hexToNumberString(trx.gas),
+        networkId: hexToNumber(trx.chainId),
+        timestamp: hexToNumber(trx.timestamp)
+      }));
     }
   }]);
 
