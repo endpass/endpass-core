@@ -1,5 +1,5 @@
-import 'mocks/class/singleton/proxyRequest/provider/database';
-import LocalProvider from '@/singleton/proxyRequest/provider/LocalProvider';
+import 'mocks/class/proxyRequest/provider/database';
+import LocalProvider from '@/proxyRequest/provider/LocalProvider';
 
 describe('LocalProvider', () => {
   const apiUrl = '/test/url/';

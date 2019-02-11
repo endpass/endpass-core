@@ -1,4 +1,4 @@
-import { INPAGE_EVENT } from '../constants';
+import { INPAGE_EVENT } from './constants';
 import EventEmitter from '@/EventEmitter';
 
 class DappBridge extends EventEmitter {

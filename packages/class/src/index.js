@@ -5,13 +5,13 @@ export { createTransactionClass } from './transaction/Transaction';
 export { createERC20TokenClass } from './erc20';
 
 // classes WITHOUT web3 instance usage
-export { ProxyRequest } from './singleton/proxyRequest';
+export { ProxyRequest } from './proxyRequest';
 export { default as EventEmitter } from './EventEmitter';
 export { default as Web3Factory } from './Web3Factory';
 export { ProviderFactory } from './provider';
 export { default as InpageProvider } from './provider/InpageProvider';
 
-export { default as DappBridge } from './singleton/DappBridge';
+export { default as DappBridge } from './DappBridge';
 export { LocalStorage, SettingsStorage } from './storage';
 
 export {
