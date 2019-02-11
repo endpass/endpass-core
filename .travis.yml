@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- '10'
+
+cache:
+  directories:
+  - "~/.cache"
+  
+before_install:
+- npm install --global lerna
+install:
+- lerna bootstrap
+script:
+- lerna run test
