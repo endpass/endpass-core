@@ -9,7 +9,7 @@ import 'mocks/class/ens';
 import 'mocks/class/erc20';
 import 'mocks/class/storage/LocalStorage';
 import 'mocks/class/provider/InpageProvider';
-import 'mocks/class/singleton/DappBridge';
+import 'mocks/class/DappBridge';
 import 'mocks/class/wallet/proxy/HDProxy';
 import 'mocks/class/wallet/proxy/hardware/LedgerProxy';
 import 'mocks/class/wallet/proxy/hardware/TrezorProxy';

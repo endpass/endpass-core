@@ -1,9 +1,6 @@
 import { NotificationError } from '@/error';
 import { PROXY_REQUEST_PREFIX } from '@/constants';
-import {
-  Decorator,
-  PrefixUrlDecorator,
-} from '@/singleton/proxyRequest/decorator/index';
+import { Decorator, PrefixUrlDecorator } from '@/proxyRequest/decorator/index';
 
 async function setDatabase(url) {
   const mod = await import(`./Database`);
