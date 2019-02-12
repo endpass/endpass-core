@@ -1,3 +1,5 @@
+import isPlainObject from 'lodash/isPlainObject';
+
 const resolveFunction = value => () =>
   new Promise(resolve => {
     setTimeout(() => resolve(value));
@@ -8,17 +10,42 @@ const rejectFunction = value => () =>
     setTimeout(() => reject(value));
   });
 
+const compareEntriesFunction = (a, b) => {
+  const keyA = a[0].toLowerCase();
+  const keyB = b[0].toLowerCase();
+
+  return keyA > keyB ? -1 : 1;
+};
+
+const replacer = (key, value) => {
+  if (!key || !isPlainObject(value)) {
+    return value;
+  }
+
+  const newValue = Object.entries(value)
+    .filter(item => item[1] !== undefined)
+    .sort(compareEntriesFunction);
+
+  return JSON.stringify(newValue, replacer);
+};
+
 export default ParentProvider => {
   class MockProvider extends ParentProvider {
-    mockValues = {};
-    mockValuesOnce = {};
+    constructor(...args) {
+      super(...args);
+
+      this.mockValues = {};
+      this.mockValuesOnce = {};
+    }
 
     _mockValue({ method, params = [] }, value, mockFunction) {
-      this.mockValues[JSON.stringify({ method, params })] = mockFunction(value);
+      this.mockValues[
+        JSON.stringify({ method, params }, replacer)
+      ] = mockFunction(value);
     }
 
     _mockValueOnce({ method, params = [] }, value, mockFunction) {
-      const key = JSON.stringify({ method, params });
+      const key = JSON.stringify({ method, params }, replacer);
       const mockValueArray = this.mockValuesOnce[key] || [];
 
       if (mockValueArray.length === 0) {
@@ -51,10 +78,13 @@ export default ParentProvider => {
     }
 
     sendAsync(payload, callback) {
-      const key = JSON.stringify({
-        method: payload.method,
-        params: payload.params,
-      });
+      const key = JSON.stringify(
+        {
+          method: payload.method,
+          params: payload.params,
+        },
+        replacer,
+      );
       const mockValuesOnceArray = this.mockValuesOnce[key];
       const mockValueFunctionOnce =
         mockValuesOnceArray && mockValuesOnceArray.shift();

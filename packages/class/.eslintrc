@@ -38,6 +38,7 @@
       {
         "ignore": ["@", "fixtures", "mocks"]
       }
-    ]
+    ],
+    "no-underscore-dangle": 0
   }
 }
