@@ -16,8 +16,9 @@ describe('MockMixin', () => {
 
   describe('methods', () => {
     const method = 'rpc method';
-    const params = ['parameter', {}];
+    const params = ['parameter', { foo: undefined}];
     const value = 'value';
+    const key = `{"method":"${method}","params":["${params[0]}","[]"]}`;
 
     describe('mockResolvedValue', () => {
       it('should mock resolved value for given method and params', async () => {
@@ -26,7 +27,7 @@ describe('MockMixin', () => {
         provider.mockResolvedValue({ method, params }, value);
 
         const mockValue =
-          provider.mockValues[JSON.stringify({ method, params })];
+          provider.mockValues[key];
 
         await expect(mockValue()).resolves.toBe(value);
       });
@@ -43,7 +44,7 @@ describe('MockMixin', () => {
         provider.mockResolvedValueOnce({ method, params }, expectedValue2);
 
         const mockValuesOnceArray =
-          provider.mockValuesOnce[JSON.stringify({ method, params })];
+          provider.mockValuesOnce[key];
 
         expect(mockValuesOnceArray.length).toBe(2);
         await expect(mockValuesOnceArray[0]()).resolves.toBe(expectedValue1);
@@ -58,7 +59,7 @@ describe('MockMixin', () => {
         provider.mockRejectedValue({ method, params }, value);
 
         const mockValue =
-          provider.mockValues[JSON.stringify({ method, params })];
+          provider.mockValues[key];
 
         await expect(mockValue()).rejects.toBe(value);
       });
@@ -75,7 +76,7 @@ describe('MockMixin', () => {
         provider.mockRejectedValueOnce({ method, params }, expectedValue2);
 
         const mockValuesOnceArray =
-          provider.mockValuesOnce[JSON.stringify({ method, params })];
+          provider.mockValuesOnce[key];
 
         expect(mockValuesOnceArray.length).toBe(2);
         await expect(mockValuesOnceArray[0]()).rejects.toBe(expectedValue1);

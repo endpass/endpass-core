@@ -6438,6 +6438,69 @@ var SubscriptionMixin = (function (ParentProvider) {
   return SubscriptionProvider;
 });
 
+/** `Object#toString` result references. */
+
+
+var objectTag$3 = '[object Object]';
+/** Used for built-in method references. */
+
+var funcProto$2 = Function.prototype,
+    objectProto$e = Object.prototype;
+/** Used to resolve the decompiled source of functions. */
+
+var funcToString$2 = funcProto$2.toString;
+/** Used to check objects for own properties. */
+
+var hasOwnProperty$b = objectProto$e.hasOwnProperty;
+/** Used to infer the `Object` constructor. */
+
+var objectCtorString = funcToString$2.call(Object);
+/**
+ * Checks if `value` is a plain object, that is, an object created by the
+ * `Object` constructor or one with a `[[Prototype]]` of `null`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.8.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ * }
+ *
+ * _.isPlainObject(new Foo);
+ * // => false
+ *
+ * _.isPlainObject([1, 2, 3]);
+ * // => false
+ *
+ * _.isPlainObject({ 'x': 0, 'y': 0 });
+ * // => true
+ *
+ * _.isPlainObject(Object.create(null));
+ * // => true
+ */
+
+function isPlainObject(value) {
+  if (!isObjectLike_1(value) || _baseGetTag(value) != objectTag$3) {
+    return false;
+  }
+
+  var proto = _getPrototype(value);
+
+  if (proto === null) {
+    return true;
+  }
+
+  var Ctor = hasOwnProperty$b.call(proto, 'constructor') && proto.constructor;
+  return typeof Ctor == 'function' && Ctor instanceof Ctor && funcToString$2.call(Ctor) == objectCtorString;
+}
+
+var isPlainObject_1 = isPlainObject;
+
 var resolveFunction = function resolveFunction(value) {
   return function () {
     return new Promise(function (resolve) {
@@ -6458,6 +6521,23 @@ var rejectFunction = function rejectFunction(value) {
   };
 };
 
+var compareEntriesFunction = function compareEntriesFunction(a, b) {
+  var keyA = a[0].toLowerCase();
+  var keyB = b[0].toLowerCase();
+  return keyA > keyB ? -1 : 1;
+};
+
+var replacer = function replacer(key, value) {
+  if (!key || !isPlainObject_1(value)) {
+    return value;
+  }
+
+  var newValue = Object.entries(value).filter(function (item) {
+    return item[1] !== undefined;
+  }).sort(compareEntriesFunction);
+  return JSON.stringify(newValue, replacer);
+};
+
 var MockMixin = (function (ParentProvider) {
   var MockProvider =
   /*#__PURE__*/
@@ -6476,11 +6556,8 @@ var MockMixin = (function (ParentProvider) {
       }
 
       _this = possibleConstructorReturn(this, (_getPrototypeOf2 = getPrototypeOf(MockProvider)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-      _defineProperty(assertThisInitialized(assertThisInitialized(_this)), "mockValues", {});
-
-      _defineProperty(assertThisInitialized(assertThisInitialized(_this)), "mockValuesOnce", {});
-
+      _this.mockValues = {};
+      _this.mockValuesOnce = {};
       return _this;
     }
 
@@ -6493,7 +6570,7 @@ var MockMixin = (function (ParentProvider) {
         this.mockValues[JSON.stringify({
           method: method,
           params: params
-        })] = mockFunction(value);
+        }, replacer)] = mockFunction(value);
       }
     }, {
       key: "_mockValueOnce",
@@ -6504,7 +6581,7 @@ var MockMixin = (function (ParentProvider) {
         var key = JSON.stringify({
           method: method,
           params: params
-        });
+        }, replacer);
         var mockValueArray = this.mockValuesOnce[key] || [];
 
         if (mockValueArray.length === 0) {
@@ -6545,7 +6622,7 @@ var MockMixin = (function (ParentProvider) {
         var key = JSON.stringify({
           method: payload.method,
           params: payload.params
-        });
+        }, replacer);
         var mockValuesOnceArray = this.mockValuesOnce[key];
         var mockValueFunctionOnce = mockValuesOnceArray && mockValuesOnceArray.shift();
         var mockValueFunction = mockValueFunctionOnce || this.mockValues[key];
