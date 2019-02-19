@@ -1,9 +1,1 @@
-import { c as _toConsumableArray } from './chunk-25f6a05b.js';
-
-function getChildrenAddress (hdWallet, offset, limit) {
-  return _toConsumableArray(Array(limit)).map(function (_, i) {
-    return hdWallet.deriveChild(offset + i).getWallet().getChecksumAddressString();
-  });
-}
-
-export { getChildrenAddress as a };
+import{c as r}from"./chunk-25f6a05b.js";function e(e,t,n){return r(Array(n)).map(function(r,n){return e.deriveChild(t+n).getWallet().getChecksumAddressString()})}export{e as a};

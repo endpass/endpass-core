@@ -106,8 +106,7 @@ export default class Transaction {
   static getUpGasCost(trx) {
     const { token } = trx;
     const gasCost = Transaction.getGasCost(trx);
-    const tnxValue =
-      token === 'ETH' ? Transaction.getValueInWei(trx) : DEFAULT_ZERO;
+    const tnxValue = !token ? Transaction.getValueInWei(trx) : DEFAULT_ZERO;
 
     return BigNumber(gasCost).plus(tnxValue);
   }
