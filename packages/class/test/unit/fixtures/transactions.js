@@ -7,7 +7,7 @@ export const signedTransactionHash =
   '0xd8d5809a2223a1ced2cb76064a5e1d3b08053dbad88dbbb09096d090364c5bbb64d3536e80c5f4bab16528fcb8020705ea5d53ff893621bce81635684dc3a6511c';
 
 export const transaction = {
-  tokenInfo: null,
+  token: null,
   gasPrice: '40',
   gasLimit: '22000',
   nonce: 0,

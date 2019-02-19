@@ -245,6 +245,26 @@ describe('Transaction Class', () => {
         expect(fullPrice).toBe('210000000000000');
       });
     });
+
+    describe('getUpGasCost', () => {
+      it('should return correct cost without token', () => {
+        const cost = Transaction.getUpGasCost({
+          ...transaction,
+          token: null,
+          value: '2',
+        }).toFixed();
+        expect(cost).toBe('2000880000000000000');
+      });
+      it('', () => {
+        const cost = Transaction.getUpGasCost({
+          ...transaction,
+          token: {symbol: 'ETH'},
+          value: '2',
+        }).toFixed();
+
+        expect(cost).toBe('880000000000000');
+      });
+    });
   });
 
   describe('instance methods', () => {
