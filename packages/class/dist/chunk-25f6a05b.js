@@ -1,1 +1,68 @@
-import{d as t}from"./chunk-350af72f.js";var r=function r(e){var o=e.title,a=e.message,i=e.text,n=e.type,s=void 0===n?"is-info":n,c=e.log,f=void 0!==c&&c;if(t(this,r),!o)throw new Error("Notification error needs a title");if(!i&&!a)throw new Error("Notification error needs a text or message");this.name=this.constructor.name,this.title=o,this.message=a||i,this.text=i||a,this.type=s,this.log=f,"function"==typeof Error.captureStackTrace?Error.captureStackTrace(this,this.constructor):this.stack=new Error(this.message).stack};(r.prototype=Object.create(Error.prototype)).constructor=r;var e=function(t){if(Symbol.iterator in Object(t)||"[object Arguments]"===Object.prototype.toString.call(t))return Array.from(t)};var o=function(t){if(Array.isArray(t)){for(var r=0,e=new Array(t.length);r<t.length;r++)e[r]=t[r];return e}};var a=function(){throw new TypeError("Invalid attempt to spread non-iterable instance")};var i=function(t){return o(t)||e(t)||a()};export{r as a,e as b,i as c};
+import { d as _classCallCheck } from './chunk-350af72f.js';
+
+var NotificationError = function NotificationError(_ref) {
+  var title = _ref.title,
+      message = _ref.message,
+      text = _ref.text,
+      _ref$type = _ref.type,
+      type = _ref$type === void 0 ? 'is-info' : _ref$type,
+      _ref$log = _ref.log,
+      log = _ref$log === void 0 ? false : _ref$log;
+
+  _classCallCheck(this, NotificationError);
+
+  if (!title) {
+    throw new Error('Notification error needs a title');
+  }
+
+  if (!text && !message) {
+    throw new Error('Notification error needs a text or message');
+  }
+
+  this.name = this.constructor.name;
+  this.title = title;
+  this.message = message || text;
+  this.text = text || message;
+  this.type = type;
+  this.log = log;
+
+  if (typeof Error.captureStackTrace === 'function') {
+    Error.captureStackTrace(this, this.constructor);
+  } else {
+    this.stack = new Error(this.message).stack;
+  }
+};
+NotificationError.prototype = Object.create(Error.prototype);
+NotificationError.prototype.constructor = NotificationError;
+
+function _iterableToArray(iter) {
+  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+}
+
+var iterableToArray = _iterableToArray;
+
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
+      arr2[i] = arr[i];
+    }
+
+    return arr2;
+  }
+}
+
+var arrayWithoutHoles = _arrayWithoutHoles;
+
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance");
+}
+
+var nonIterableSpread = _nonIterableSpread;
+
+function _toConsumableArray(arr) {
+  return arrayWithoutHoles(arr) || iterableToArray(arr) || nonIterableSpread();
+}
+
+var toConsumableArray = _toConsumableArray;
+
+export { NotificationError as a, iterableToArray as b, toConsumableArray as c };

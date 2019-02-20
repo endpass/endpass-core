@@ -1,1 +1,461 @@
-import{b as t,c as e,a as r,d as n}from"./chunk-350af72f.js";import{a}from"./chunk-96639b88.js";import{c as u}from"./chunk-9a880e46.js";import i from"path-to-regexp";import o from"dexie";var c=function(t,e){return Object.keys(t).find(function(r){return t[r].test(e)})},s=function(t,e){var r=e.split(t).pop()||"";return"/"===r[0]?r.substring(1):r},d=function(t,e,r){var n=i.parse(e),a=t[e];a.lastIndex=0;var u=a.exec(r);return n.reduce(function(t,e,r){return e&&e.name&&(t[e.name]=u[r]),t},{})},f={getItemData:function(t){return t.map(function(t){return t.data})},itemsRead:function(t){return t.toArray(function(t){return f.getItemData(t)})},itemRead:function(t,e){return new Promise(function(r,n){t.where(e).first(function(t){return t&&t.data?r(t.data):n("Data is empty")}).catch(n)})},itemRemove:function(t,e){return t.where(e).delete()},itemWrite:function(t,e,r){return t.put({id:e,data:r})},itemAdd:function(){var r=t(e.mark(function t(r,n,u){var i,o,c;return e.wrap(function(t){for(;;)switch(t.prev=t.next){case 0:return i={},t.prev=1,t.next=4,f.itemRead(r,{id:n});case 4:o=t.sent,Object.assign(i,o||{}),t.next=10;break;case 8:t.prev=8,t.t0=t.catch(1);case 10:return c={id:n,data:a({},i,u)},t.abrupt("return",r.put(c));case 12:case"end":return t.stop()}},t,this,[[1,8]])}));return function(t,e,n){return r.apply(this,arguments)}}()};function p(t,e){var r=t.id;return"function"==typeof r?r(e):e[r]}var l={read:function(t,e){if(!t.id)return f.itemsRead(t.table);var r=p(t,e);return f.itemRead(t.table,{id:r})},add:function(t,e,r){var n=p(t,e);return f.itemAdd(t.table,n,r.payload)},write:function(t,e,r){var n=p(t,e);return f.itemWrite(t.table,n,r.payload)},remove:function(t,e,r){var n=p(t,e);return f.itemRemove(t.table,{id:n},r.payload)}},m=new o("LocalProvider");function v(t){return t.split("/")[0]}m.version(1.1).stores({accounts:"id,data",accountsInfo:"id,data",settings:"id,data",tokens:"id,data",networks:"id,data"});var k={"account/:addressId/info":{table:m.accountsInfo,id:"addressId"},"account/:addressId":{table:m.accounts,id:"addressId"},"networks/:networkPath(.*)":{table:m.networks,id:"networkPath"},"tokens/:networkId":{table:m.tokens,read:function(t,e){return t.table.filter(function(t){return v(t.id)===e.networkId}).toArray(function(t){return f.getItemData(t)})}},"tokens/:networkId/:addressId":{table:m.tokens,id:function(t){return"".concat(t.networkId,"/").concat(t.addressId)}},accounts:{table:m.accounts,read:function(){var r=t(e.mark(function t(r){var n,a;return e.wrap(function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,f.itemsRead(r.table);case 2:return n=t.sent,a=n.map(function(t){return t.address}),t.abrupt("return",a);case 5:case"end":return t.stop()}},t,this)}));return function(t){return r.apply(this,arguments)}}()},settings:{table:m.settings,id:function(){return"userSettings"},init:function(){var r=t(e.mark(function t(r){var n,u,i;return e.wrap(function(t){for(;;)switch(t.prev=t.next){case 0:return n={email:ENV.isProduction?"":"default@email.com",otp_enabled:!1},t.prev=1,t.next=4,l.read(r);case 4:u=t.sent,t.next=10;break;case 7:t.prev=7,t.t0=t.catch(1),u={};case 10:return(i=a({},n,u)).email||(i.email=n.email),t.abrupt("return",l.add(r,{},{payload:i}));case 13:case"end":return t.stop()}},t,this,[[1,7]])}));return function(t){return r.apply(this,arguments)}}(),read:function(){var r=t(e.mark(function t(r,n){var i,o,c,s,d;return e.wrap(function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,Promise.all([m.tokens.toArray(function(t){return t.reduce(function(t,e){var r=v(e.id);return(t[r]=t[r]||[]).push(e.data),t},{})}),m.networks.toArray(function(t){return f.getItemData(t)}),l.read(r,n)]);case 2:return i=t.sent,o=u(i,3),c=o[0],s=o[1],d=o[2],t.abrupt("return",a({tokens:c,networks:s},d));case 8:case"end":return t.stop()}},t,this)}));return function(t,e){return r.apply(this,arguments)}}()},"settings/otp":{table:m.settings,id:function(){return"otp"}}},b=Object.keys(k).reduce(function(t,e){return t[e]=i(e),t},{});export default(function(){function a(t){n(this,a),this.serverUrl=t}return r(a,[{key:"initRoutes",value:function(){var r=t(e.mark(function t(){var r;return e.wrap(function(t){for(;;)switch(t.prev=t.next){case 0:return r=Object.keys(k).filter(function(t){return!!k[t].init}),t.next=3,Promise.all(r.map(function(t){var e=k[t];return e.init(e)}));case 3:case"end":return t.stop()}},t,this)}));return function(){return r.apply(this,arguments)}}()},{key:"request",value:function(){var r=t(e.mark(function t(r){var n,a,u,i,o,f,p;return e.wrap(function(t){for(;;)switch(t.prev=t.next){case 0:if(n=r.url,"clear"!==(a=r.method)){t.next=3;break}return t.abrupt("return",this.clear());case 3:if(u=s(this.serverUrl,n),i=c(b,u)){t.next=7;break}throw new Error("not defined route key in ".concat(u));case 7:return o=k[i],f=d(b,i,u),p=o[a]||l[a],t.abrupt("return",p(o,f,r));case 11:case"end":return t.stop()}},t,this)}));return function(t){return r.apply(this,arguments)}}()},{key:"clear",value:function(){var t={},e=Object.keys(k).filter(function(e){var r=k[e].table,n=!t[r.name];return t[r.name]=!0,n}).map(function(t){return k[t].table});return Promise.all(e.map(function(t){return t.clear()}))}}]),a}());
+import { b as _asyncToGenerator, c as _regeneratorRuntime, a as _createClass, d as _classCallCheck } from './chunk-350af72f.js';
+import { a as _objectSpread } from './chunk-96639b88.js';
+import { c as _slicedToArray } from './chunk-9a880e46.js';
+import regPath from 'path-to-regexp';
+import Dexie from 'dexie';
+
+var utils = {
+  getRouteKey: function getRouteKey(routesRegexp, routePath) {
+    return Object.keys(routesRegexp).find(function (key) {
+      var re = routesRegexp[key];
+      return re.test(routePath);
+    });
+  },
+  getPath: function getPath(serverUrl, url) {
+    var levels = url.split(serverUrl);
+    var keysPath = levels.pop() || '';
+    var ret = keysPath[0] === '/' ? keysPath.substring(1) : keysPath;
+    return ret;
+  },
+  getPathArgs: function getPathArgs(routesRegexp, key, routePath) {
+    var keys = regPath.parse(key);
+    var re = routesRegexp[key];
+    re.lastIndex = 0; // drop exec position
+
+    var values = re.exec(routePath);
+    return keys.reduce(function (map, item, index) {
+      if (item && item.name) {
+        map[item.name] = values[index];
+      }
+
+      return map;
+    }, {});
+  }
+};
+
+var itemsRequest = {
+  getItemData: function getItemData(list) {
+    return list.map(function (node) {
+      return node.data;
+    });
+  },
+  itemsRead: function itemsRead(table) {
+    return table.toArray(function (list) {
+      return itemsRequest.getItemData(list);
+    });
+  },
+  itemRead: function itemRead(table, whereExp) {
+    return new Promise(function (resolve, reject) {
+      table.where(whereExp).first(function (node) {
+        return node && node.data ? resolve(node.data) : reject('Data is empty');
+      }).catch(reject);
+    });
+  },
+  itemRemove: function itemRemove(table, whereExp) {
+    return table.where(whereExp).delete();
+  },
+  itemWrite: function itemWrite(table, id, payload) {
+    // scheme default for all tables
+    return table.put({
+      id: id,
+      data: payload
+    });
+  },
+  itemAdd: function () {
+    var _itemAdd = _asyncToGenerator(
+    /*#__PURE__*/
+    _regeneratorRuntime.mark(function _callee(table, id, payload) {
+      var stored, res, pushData;
+      return _regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              stored = {};
+              _context.prev = 1;
+              _context.next = 4;
+              return itemsRequest.itemRead(table, {
+                id: id
+              });
+
+            case 4:
+              res = _context.sent;
+              Object.assign(stored, res || {});
+              _context.next = 10;
+              break;
+
+            case 8:
+              _context.prev = 8;
+              _context.t0 = _context["catch"](1);
+
+            case 10:
+              pushData = {
+                id: id,
+                data: _objectSpread({}, stored, payload)
+              };
+              return _context.abrupt("return", table.put(pushData));
+
+            case 12:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee, this, [[1, 8]]);
+    }));
+
+    function itemAdd(_x, _x2, _x3) {
+      return _itemAdd.apply(this, arguments);
+    }
+
+    return itemAdd;
+  }()
+};
+
+function getId(route, args) {
+  var id = route.id;
+  var res = typeof id === 'function' ? id(args) : args[id];
+  return res;
+}
+
+var routeMethods = {
+  read: function read(route, args) {
+    if (!route.id) {
+      return itemsRequest.itemsRead(route.table);
+    }
+
+    var id = getId(route, args);
+    return itemsRequest.itemRead(route.table, {
+      id: id
+    });
+  },
+  add: function add(route, args, params) {
+    var id = getId(route, args);
+    return itemsRequest.itemAdd(route.table, id, params.payload);
+  },
+  write: function write(route, args, params) {
+    var id = getId(route, args);
+    return itemsRequest.itemWrite(route.table, id, params.payload);
+  },
+  remove: function remove(route, args, params) {
+    var id = getId(route, args);
+    return itemsRequest.itemRemove(route.table, {
+      id: id
+    }, params.payload);
+  }
+};
+
+var db = new Dexie('LocalProvider');
+db.version(1.1).stores({
+  accounts: 'id,data',
+  accountsInfo: 'id,data',
+  settings: 'id,data',
+  tokens: 'id,data',
+  networks: 'id,data'
+});
+
+function getNetworkId(id) {
+  return id.split('/')[0];
+}
+
+var routes = {
+  'account/:addressId/info': {
+    table: db.accountsInfo,
+    id: 'addressId'
+  },
+  'account/:addressId': {
+    table: db.accounts,
+    id: 'addressId'
+  },
+  'networks/:networkPath(.*)': {
+    table: db.networks,
+    id: 'networkPath'
+  },
+  'tokens/:networkId': {
+    // only read
+    table: db.tokens,
+    read: function read(route, args) {
+      return route.table.filter(function (item) {
+        return getNetworkId(item.id) === args.networkId;
+      }).toArray(function (list) {
+        return itemsRequest.getItemData(list);
+      });
+    }
+  },
+  'tokens/:networkId/:addressId': {
+    table: db.tokens,
+    id: function id(args) {
+      return "".concat(args.networkId, "/").concat(args.addressId);
+    }
+  },
+  accounts: {
+    table: db.accounts,
+    read: function () {
+      var _read = _asyncToGenerator(
+      /*#__PURE__*/
+      _regeneratorRuntime.mark(function _callee(route) {
+        var list, ret;
+        return _regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return itemsRequest.itemsRead(route.table);
+
+              case 2:
+                list = _context.sent;
+                ret = list.map(function (item) {
+                  return item.address;
+                });
+                return _context.abrupt("return", ret);
+
+              case 5:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function read(_x) {
+        return _read.apply(this, arguments);
+      }
+
+      return read;
+    }()
+  },
+  settings: {
+    table: db.settings,
+    id: function id() {
+      return 'userSettings';
+    },
+    init: function () {
+      var _init = _asyncToGenerator(
+      /*#__PURE__*/
+      _regeneratorRuntime.mark(function _callee2(route) {
+        var initialData, data, payload;
+        return _regeneratorRuntime.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                initialData = {
+                  email: ENV.isProduction ? '' : 'default@email.com',
+                  otp_enabled: false
+                };
+                _context2.prev = 1;
+                _context2.next = 4;
+                return routeMethods.read(route);
+
+              case 4:
+                data = _context2.sent;
+                _context2.next = 10;
+                break;
+
+              case 7:
+                _context2.prev = 7;
+                _context2.t0 = _context2["catch"](1);
+                data = {};
+
+              case 10:
+                payload = _objectSpread({}, initialData, data);
+
+                if (!payload.email) {
+                  payload.email = initialData.email;
+                }
+
+                return _context2.abrupt("return", routeMethods.add(route, {}, {
+                  payload: payload
+                }));
+
+              case 13:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2, this, [[1, 7]]);
+      }));
+
+      function init(_x2) {
+        return _init.apply(this, arguments);
+      }
+
+      return init;
+    }(),
+    read: function () {
+      var _read2 = _asyncToGenerator(
+      /*#__PURE__*/
+      _regeneratorRuntime.mark(function _callee3(route, args) {
+        var _ref, _ref2, tokens, networks, settings;
+
+        return _regeneratorRuntime.wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+                _context3.next = 2;
+                return Promise.all([db.tokens.toArray(function (list) {
+                  return (// create list of tokens in network id map. { netId:[token1, token2, ], }
+                    list.reduce(function (map, item) {
+                      var netId = getNetworkId(item.id);
+                      var tokenList = map[netId] = map[netId] || [];
+                      tokenList.push(item.data);
+                      return map;
+                    }, {})
+                  );
+                }), db.networks.toArray(function (list) {
+                  return itemsRequest.getItemData(list);
+                }), routeMethods.read(route, args)]);
+
+              case 2:
+                _ref = _context3.sent;
+                _ref2 = _slicedToArray(_ref, 3);
+                tokens = _ref2[0];
+                networks = _ref2[1];
+                settings = _ref2[2];
+                return _context3.abrupt("return", _objectSpread({
+                  tokens: tokens,
+                  networks: networks
+                }, settings));
+
+              case 8:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3, this);
+      }));
+
+      function read(_x3, _x4) {
+        return _read2.apply(this, arguments);
+      }
+
+      return read;
+    }()
+  },
+  'settings/otp': {
+    table: db.settings,
+    id: function id() {
+      return 'otp';
+    }
+  }
+};
+
+var routesRegexp = Object.keys(routes).reduce(function (res, key) {
+  res[key] = regPath(key);
+  return res;
+}, {});
+
+var Database =
+/*#__PURE__*/
+function () {
+  function Database(url) {
+    _classCallCheck(this, Database);
+
+    this.serverUrl = url;
+  }
+
+  _createClass(Database, [{
+    key: "initRoutes",
+    value: function () {
+      var _initRoutes = _asyncToGenerator(
+      /*#__PURE__*/
+      _regeneratorRuntime.mark(function _callee() {
+        var list;
+        return _regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                list = Object.keys(routes).filter(function (key) {
+                  return !!routes[key].init;
+                });
+                _context.next = 3;
+                return Promise.all(list.map(function (key) {
+                  var route = routes[key];
+                  return route.init(route);
+                }));
+
+              case 3:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function initRoutes() {
+        return _initRoutes.apply(this, arguments);
+      }
+
+      return initRoutes;
+    }()
+  }, {
+    key: "request",
+    value: function () {
+      var _request = _asyncToGenerator(
+      /*#__PURE__*/
+      _regeneratorRuntime.mark(function _callee2(params) {
+        var url, method, path, routeKey, route, args, routeMethod;
+        return _regeneratorRuntime.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                url = params.url, method = params.method;
+
+                if (!(method === 'clear')) {
+                  _context2.next = 3;
+                  break;
+                }
+
+                return _context2.abrupt("return", this.clear());
+
+              case 3:
+                path = utils.getPath(this.serverUrl, url);
+                routeKey = utils.getRouteKey(routesRegexp, path);
+
+                if (routeKey) {
+                  _context2.next = 7;
+                  break;
+                }
+
+                throw new Error("not defined route key in ".concat(path));
+
+              case 7:
+                route = routes[routeKey];
+                args = utils.getPathArgs(routesRegexp, routeKey, path);
+                routeMethod = route[method] || routeMethods[method];
+                return _context2.abrupt("return", routeMethod(route, args, params));
+
+              case 11:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2, this);
+      }));
+
+      function request(_x) {
+        return _request.apply(this, arguments);
+      }
+
+      return request;
+    }()
+  }, {
+    key: "clear",
+    value: function clear() {
+      var map = {};
+      var list = Object.keys(routes).filter(function (key) {
+        var table = routes[key].table;
+        var filtered = !map[table.name];
+        map[table.name] = true;
+        return filtered;
+      });
+      var tables = list.map(function (key) {
+        return routes[key].table;
+      });
+      return Promise.all(tables.map(function (table) {
+        return table.clear();
+      }));
+    }
+  }]);
+
+  return Database;
+}();
+
+export default Database;
