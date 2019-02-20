@@ -103,7 +103,7 @@ export default class Transaction {
     return BigNumber(gasPriceWei).times(gasLimit);
   }
 
-  static getUpGasCost(trx) {
+  static getFullCost(trx) {
     const { token } = trx;
     const gasCost = Transaction.getGasCost(trx);
     const tnxValue = !token ? Transaction.getValueInWei(trx) : DEFAULT_ZERO;

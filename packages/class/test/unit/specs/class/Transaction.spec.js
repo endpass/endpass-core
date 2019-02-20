@@ -246,9 +246,9 @@ describe('Transaction Class', () => {
       });
     });
 
-    describe('getUpGasCost', () => {
+    describe('getFullCost', () => {
       it('should return correct cost without token', () => {
-        const cost = Transaction.getUpGasCost({
+        const cost = Transaction.getFullCost({
           ...transaction,
           token: null,
           value: '2',
@@ -256,7 +256,7 @@ describe('Transaction Class', () => {
         expect(cost).toBe('2000880000000000000');
       });
       it('', () => {
-        const cost = Transaction.getUpGasCost({
+        const cost = Transaction.getFullCost({
           ...transaction,
           token: {symbol: 'ETH'},
           value: '2',
