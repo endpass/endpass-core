@@ -3,7 +3,7 @@ import { a as _objectSpread } from './chunk-96639b88.js';
 import Tx from 'ethereumjs-tx';
 import HDKey from 'ethereumjs-wallet/hdkey';
 import { sha3, toDecimal, toHex } from 'web3-utils';
-import { e as HARDWARE_DERIVIATION_PATH } from './chunk-b4810d43.js';
+import { f as HD_KEY_MNEMONIC_PATH, g as HARDWARE_DERIVIATION_PATH } from './chunk-675060eb.js';
 import { a as NotificationError } from './chunk-25f6a05b.js';
 import TrezorConnect from 'trezor-connect';
 import { a as getChildrenAddress } from './chunk-ade9ee03.js';
@@ -80,26 +80,25 @@ function () {
       var _getPublicExtendedKey = _asyncToGenerator(
       /*#__PURE__*/
       _regeneratorRuntime.mark(function _callee2() {
-        var path, _ref2, xpub;
+        var _ref2, xpub;
 
         return _regeneratorRuntime.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
                 _context2.prev = 0;
-                path = ENV.hdKeyMnemonic.path;
-                _context2.next = 4;
+                _context2.next = 3;
                 return TrezorConnect.getPublicKey({
-                  path: path
+                  path: HD_KEY_MNEMONIC_PATH
                 });
 
-              case 4:
+              case 3:
                 _ref2 = _context2.sent;
                 xpub = _ref2.payload.xpub;
                 return _context2.abrupt("return", xpub);
 
-              case 9:
-                _context2.prev = 9;
+              case 8:
+                _context2.prev = 8;
                 _context2.t0 = _context2["catch"](0);
                 throw new NotificationError({
                   title: 'Access error',
@@ -107,12 +106,12 @@ function () {
                   type: 'is-danger'
                 });
 
-              case 12:
+              case 11:
               case "end":
                 return _context2.stop();
             }
           }
-        }, _callee2, this, [[0, 9]]);
+        }, _callee2, this, [[0, 8]]);
       }));
 
       function getPublicExtendedKey() {

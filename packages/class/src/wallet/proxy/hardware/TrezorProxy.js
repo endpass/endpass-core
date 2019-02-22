@@ -3,7 +3,7 @@ import Tx from 'ethereumjs-tx';
 import HDKey from 'ethereumjs-wallet/hdkey';
 import { sha3, toHex, toDecimal } from 'web3-utils';
 import { NotificationError } from '@/error';
-import { HARDWARE_DERIVIATION_PATH } from '@/constants';
+import { HARDWARE_DERIVIATION_PATH, HD_KEY_MNEMONIC_PATH } from '@/constants';
 import getChildrenAddress from '../utils/getChildrenAddress';
 
 export default class TrezorProxy {
@@ -26,10 +26,9 @@ export default class TrezorProxy {
 
   static async getPublicExtendedKey() {
     try {
-      const { path } = ENV.hdKeyMnemonic;
       const {
         payload: { xpub },
-      } = await TrezorConnect.getPublicKey({ path });
+      } = await TrezorConnect.getPublicKey({ path: HD_KEY_MNEMONIC_PATH });
 
       return xpub;
     } catch (error) {

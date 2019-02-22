@@ -2,6 +2,7 @@
 
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
+var constants = require('./constants.js');
 var keythereum = _interopDefault(require('keythereum'));
 var bs58check = _interopDefault(require('bs58check'));
 var EthWallet = _interopDefault(require('ethereumjs-wallet'));
@@ -20,13 +21,17 @@ module.exports = {
   // Encrypts a private key Buffer into a V3 keystore object
   // The exported keystore does NOT include an address
   encrypt: function encrypt(password, privateKey) {
+    var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : constants.KDF_ENCRYPT_OPTIONS;
     // Generate random salt and iv for each encryption
     var dk = keythereum.create();
-    var options = {
-      kdf: ENV.kdfParams.kdf,
-      kdfparams: ENV.kdfParams
+    var dumpOptions = {
+      kdf: options.kdf,
+      kdfparams: {
+        kdf: options.kdf,
+        n: options.n
+      }
     };
-    var encrypted = keythereum.dump(password, privateKey, dk.salt, dk.iv, options);
+    var encrypted = keythereum.dump(password, privateKey, dk.salt, dk.iv, dumpOptions);
     delete encrypted.address;
     return encrypted;
   },
@@ -43,8 +48,8 @@ module.exports = {
     return keythereum.recover(password, json);
   },
   // Encrypts an ethereumjs Wallet
-  encryptWallet: function encryptWallet(password, wallet) {
-    var json = this.encrypt(password, wallet.getPrivateKey());
+  encryptWallet: function encryptWallet(password, wallet, encryptOptions) {
+    var json = this.encrypt(password, wallet.getPrivateKey(), encryptOptions);
     json.address = wallet.getChecksumAddressString();
     return json;
   },
@@ -54,9 +59,9 @@ module.exports = {
     return EthWallet.fromPrivateKey(privateKey);
   },
   // Encrypts an ethereumjs Wallet
-  encryptHDWallet: function encryptHDWallet(password, wallet) {
+  encryptHDWallet: function encryptHDWallet(password, wallet, encryptOptions) {
     var xPrv = this.decodeBase58(wallet.privateExtendedKey());
-    var json = this.encrypt(password, xPrv);
+    var json = this.encrypt(password, xPrv, encryptOptions);
     json.address = wallet.publicExtendedKey();
     return json;
   },

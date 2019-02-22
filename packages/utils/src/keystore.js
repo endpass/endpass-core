@@ -2,6 +2,7 @@ import keythereum from 'keythereum';
 import bs58check from 'bs58check';
 import EthWallet from 'ethereumjs-wallet';
 import HDKey from 'ethereumjs-wallet/hdkey';
+import { KDF_ENCRYPT_OPTIONS } from './constants';
 
 // Monkey patch keythereum to skip generating address for private keys
 // This allows us to encrypt private keys of arbitrary length, and
@@ -15,19 +16,24 @@ keythereum.privateKeyToAddress = function(pk) {
 module.exports = {
   // Encrypts a private key Buffer into a V3 keystore object
   // The exported keystore does NOT include an address
-  encrypt(password, privateKey) {
+  encrypt(password, privateKey, options = KDF_ENCRYPT_OPTIONS) {
     // Generate random salt and iv for each encryption
     const dk = keythereum.create();
-    const options = {
-      kdf: ENV.kdfParams.kdf,
-      kdfparams: ENV.kdfParams,
+
+    const dumpOptions = {
+      kdf: options.kdf,
+      kdfparams: {
+        kdf: options.kdf,
+        n: options.n,
+      },
     };
+
     const encrypted = keythereum.dump(
       password,
       privateKey,
       dk.salt,
       dk.iv,
-      options,
+      dumpOptions,
     );
 
     delete encrypted.address;
@@ -49,8 +55,8 @@ module.exports = {
   },
 
   // Encrypts an ethereumjs Wallet
-  encryptWallet(password, wallet) {
-    const json = this.encrypt(password, wallet.getPrivateKey());
+  encryptWallet(password, wallet, encryptOptions) {
+    const json = this.encrypt(password, wallet.getPrivateKey(), encryptOptions);
 
     json.address = wallet.getChecksumAddressString();
 
@@ -65,9 +71,9 @@ module.exports = {
   },
 
   // Encrypts an ethereumjs Wallet
-  encryptHDWallet(password, wallet) {
+  encryptHDWallet(password, wallet, encryptOptions) {
     const xPrv = this.decodeBase58(wallet.privateExtendedKey());
-    const json = this.encrypt(password, xPrv);
+    const json = this.encrypt(password, xPrv, encryptOptions);
 
     json.address = wallet.publicExtendedKey();
 

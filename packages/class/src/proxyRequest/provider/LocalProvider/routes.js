@@ -45,7 +45,7 @@ const routes = {
     id: () => 'userSettings',
     async init(route) {
       const initialData = {
-        email: ENV.isProduction ? '' : 'default@email.com',
+        email: '',
         otp_enabled: false,
       };
 
@@ -68,6 +68,7 @@ const routes = {
           // create list of tokens in network id map. { netId:[token1, token2, ], }
           list.reduce((map, item) => {
             const netId = getNetworkId(item.id);
+            /* eslint-disable-next-line */
             const tokenList = (map[netId] = map[netId] || []);
             tokenList.push(item.data);
             return map;

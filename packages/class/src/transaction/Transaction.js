@@ -6,17 +6,10 @@ import { toWei, numberToHex, isAddress } from 'web3-utils';
 import ERC20Token from '@/erc20';
 
 import applyProps from './applyProps';
-import injectWeb3 from '@/injectWeb3';
-
-let web3;
 
 const DEFAULT_ZERO = '0';
 
 export default class Transaction {
-  static set web3(val) {
-    web3 = val;
-  }
-
   static create({
     data,
     from,
@@ -79,11 +72,6 @@ export default class Transaction {
 
   static isEqual(trx1, trx2, fields = ['networkId', 'hash']) {
     return fields.every(field => trx1[field] === trx2[field]);
-  }
-
-  static async isToContract(transaction) {
-    const res = await web3.eth.getCode(transaction.to);
-    return res !== '0x';
   }
 
   static getMultiplier(token) {
@@ -182,18 +170,6 @@ export default class Transaction {
       .toFixed();
   }
 
-  static async getGasFullPrice(transaction) {
-    const estimatedGas = await web3.eth.estimateGas({
-      to: Transaction.getValidTo(transaction),
-      data: Transaction.getValidData(transaction),
-    });
-    const gasPriceWei = Transaction.getPriceWei(transaction);
-
-    return BigNumber(gasPriceWei)
-      .times(estimatedGas)
-      .toFixed();
-  }
-
   static getApiObject(trx) {
     const data = Transaction.getValidData(trx);
     const validTo = Transaction.getValidTo(trx);
@@ -220,7 +196,3 @@ export default class Transaction {
     };
   }
 }
-
-const createTransactionClass = injectWeb3(Transaction);
-
-export { createTransactionClass };

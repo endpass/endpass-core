@@ -237,7 +237,7 @@ var routes = {
             switch (_context2.prev = _context2.next) {
               case 0:
                 initialData = {
-                  email: ENV.isProduction ? '' : 'default@email.com',
+                  email: '',
                   otp_enabled: false
                 };
                 _context2.prev = 1;
@@ -294,6 +294,8 @@ var routes = {
                   return (// create list of tokens in network id map. { netId:[token1, token2, ], }
                     list.reduce(function (map, item) {
                       var netId = getNetworkId(item.id);
+                      /* eslint-disable-next-line */
+
                       var tokenList = map[netId] = map[netId] || [];
                       tokenList.push(item.data);
                       return map;

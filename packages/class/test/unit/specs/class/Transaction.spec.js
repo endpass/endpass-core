@@ -1,5 +1,5 @@
 import web3 from 'fixtures/web3Instance';
-import { createTransactionClass, TransactionFactory } from '@/index';
+import { Transaction, TransactionFactory } from '@/index';
 import { TRANSACTION_STATUS } from '@/constants';
 import { BigNumber } from 'bignumber.js';
 // import web3 from 'web3';
@@ -53,28 +53,6 @@ const apiTokenResponse = {
 };
 
 describe('Transaction Class', () => {
-  let Transaction;
-
-
-  beforeEach(() => {
-    Transaction = createTransactionClass(web3);
-  });
-
-  it('should set web3 instance', async () => {
-    expect.assertions(2);
-
-    Transaction = createTransactionClass({
-      eth: {
-        getCode: (to) => to,
-      },
-    });
-
-    const zeroResult = await Transaction.isToContract({ to: '0x' });
-    expect(zeroResult).toBe(false);
-    const etcResult = await Transaction.isToContract({ to: 'etc' });
-    expect(etcResult).toBe(true);
-  });
-
   describe('static methods', () => {
     describe('unfreeze', () => {
       it('should return new object if passed object is frozen', async () => {
@@ -142,28 +120,6 @@ describe('Transaction Class', () => {
       });
     });
 
-    describe('isToContract', () => {
-      it('should returns true if resolved code not equals to 0x', async () => {
-        expect.assertions(2);
-
-        const res = await Transaction.isToContract(transaction);
-
-        expect(web3.eth.getCode).toBeCalledWith(transaction.to);
-        expect(res).toBe(true);
-      });
-
-      it('should returns false if resolved code equals to 0x', async () => {
-        expect.assertions(2);
-
-        web3.eth.getCode.mockResolvedValueOnce('0x');
-
-        const res = await Transaction.isToContract(transaction);
-
-        expect(web3.eth.getCode).toBeCalledWith(transaction.to);
-        expect(res).toBe(false);
-      });
-    });
-
     describe('getValidTo', () => {
       it('should returns correct data in all cases', () => {
         expect(Transaction.getValidTo({ to: null })).toBe(undefined);
@@ -222,27 +178,6 @@ describe('Transaction Class', () => {
     describe('getValidData', () => {
       it('should return transaction data if token is not present', () => {
         expect(Transaction.getValidData({ data: 'foo' })).toBe('foo');
-      });
-    });
-
-    describe('getGasFullPrice', () => {
-      it('should estimate gas and returns fixed fee', async () => {
-        expect.assertions(2);
-
-        web3.eth.estimateGas.mockResolvedValueOnce('21000');
-
-        const transactionData = {
-          ...transaction,
-          gasPrice: '10',
-          to: validAddress,
-        };
-        const fullPrice = await Transaction.getGasFullPrice(transactionData);
-
-        expect(web3.eth.estimateGas).toBeCalledWith({
-          data: '0x',
-          to: validAddress,
-        });
-        expect(fullPrice).toBe('210000000000000');
       });
     });
 

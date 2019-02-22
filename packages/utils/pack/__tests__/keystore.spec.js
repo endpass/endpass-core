@@ -1,5 +1,10 @@
 import keystore from '@/keystore';
+import { KDF_ENCRYPT_OPTIONS } from '@/constants';
 
+const encryptOptions = {
+  kdf: 'scrypt',
+  n: 4,
+};
 
 describe('keystore', () => {
   // Extended keys
@@ -24,10 +29,25 @@ describe('keystore', () => {
     let xPrv = keystore.decodeBase58(xPrvString);
     expect(xPrv.length).toBe(78);
 
+    let json = keystore.encrypt(password, xPrv, encryptOptions);
+    expect(json.address).toBeUndefined();
+    expect(json.crypto.ciphertext).toBeTruthy();
+    expect(json.crypto.kdfparams.n).toBe(encryptOptions.n);
+    let xPrvOut = keystore.decrypt(password, json);
+    expect(xPrvOut.length).toBe(78);
+
+    let xPrvOutString = keystore.encodeBase58(xPrv);
+    expect(xPrvOutString).toBe(xPrvString);
+  });
+
+  it('encrypts with default options', () => {
+    let xPrv = keystore.decodeBase58(xPrvString);
+    expect(xPrv.length).toBe(78);
+
     let json = keystore.encrypt(password, xPrv);
     expect(json.address).toBeUndefined();
     expect(json.crypto.ciphertext).toBeTruthy();
-    expect(json.crypto.kdfparams.n).toBe(ENV.kdfParams.n);
+    expect(json.crypto.kdfparams.n).toBe(KDF_ENCRYPT_OPTIONS.n);
     let xPrvOut = keystore.decrypt(password, json);
     expect(xPrvOut.length).toBe(78);
 
@@ -36,7 +56,7 @@ describe('keystore', () => {
   });
 
   it('encrypts and decrypts a regular wallet', () => {
-    let json = keystore.encryptWallet(password, wallet);
+    let json = keystore.encryptWallet(password, wallet, encryptOptions);
     expect(json.crypto).toBeTruthy();
     expect(json.address).toBe(address);
 
@@ -45,7 +65,7 @@ describe('keystore', () => {
   });
 
   it('encrypts and decrypts an HD wallet', () => {
-    let json = keystore.encryptHDWallet(password, wallet);
+    let json = keystore.encryptHDWallet(password, wallet, encryptOptions);
     expect(json.crypto).toBeTruthy();
     expect(json.address).toBe(xPubString);
 
