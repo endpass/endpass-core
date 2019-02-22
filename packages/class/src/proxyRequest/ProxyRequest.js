@@ -4,13 +4,14 @@ import { IDENTITY_MODE } from './provider/identityModes';
 import { createProvider } from './provider';
 
 export default class ProxyRequest {
-  constructor(connection) {
+  constructor(connection, defaultIdentityApiUrl) {
     this.decorator = new Decorator();
     this.connection = connection;
+    this.defaultIdentityApiUrl = defaultIdentityApiUrl;
     this.setMode();
   }
 
-  setMode(type = IDENTITY_MODE.DEFAULT, url = ENV.identityAPIUrl) {
+  setMode(type = IDENTITY_MODE.DEFAULT, url = this.defaultIdentityApiUrl) {
     this.provider = createProvider(type, url, this.connection);
 
     const decorators = [new ProviderUrlDecorator(url)];

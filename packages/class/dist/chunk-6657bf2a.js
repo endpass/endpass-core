@@ -3,7 +3,7 @@ import { a as _objectSpread } from './chunk-96639b88.js';
 import Tx from 'ethereumjs-tx';
 import HDKey from 'ethereumjs-wallet/hdkey';
 import { sha3, toHex } from 'web3-utils';
-import { e as HARDWARE_DERIVIATION_PATH } from './chunk-b4810d43.js';
+import { f as HD_KEY_MNEMONIC_PATH, g as HARDWARE_DERIVIATION_PATH } from './chunk-675060eb.js';
 import { a as NotificationError } from './chunk-25f6a05b.js';
 import { a as getChildrenAddress } from './chunk-ade9ee03.js';
 import LedgerTransport from '@ledgerhq/hw-transport-u2f';
@@ -104,7 +104,7 @@ function () {
                 transport = _context2.sent;
                 eth = new Eth(transport);
                 _context2.next = 7;
-                return eth.getAddress(ENV.hdKeyMnemonic.path);
+                return eth.getAddress(HD_KEY_MNEMONIC_PATH);
 
               case 7:
                 _ref2 = _context2.sent;

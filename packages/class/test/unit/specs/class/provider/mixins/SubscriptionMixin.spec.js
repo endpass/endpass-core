@@ -1,5 +1,6 @@
 import SubscriptionMixin from '@/provider/mixins/SubscriptionMixin';
 import BaseProvider from 'fixtures/BaseProvider';
+import { BLOCK_UPDATE_INTERVAL_MSEC } from '@/constants';
 
 jest.useFakeTimers();
 
@@ -240,7 +241,7 @@ describe('SubscriptionProvider class', () => {
       expect(setInterval).toHaveBeenCalledTimes(1);
       expect(setInterval).toHaveBeenCalledWith(
         expect.any(Function),
-        ENV.blockUpdateInterval,
+        BLOCK_UPDATE_INTERVAL_MSEC,
       );
     });
 

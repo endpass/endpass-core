@@ -4,7 +4,7 @@ import LedgerTransport from '@ledgerhq/hw-transport-u2f'; // for browser
 import Eth from '@ledgerhq/hw-app-eth';
 import { sha3, toHex } from 'web3-utils';
 import { NotificationError } from '@/error';
-import { HARDWARE_DERIVIATION_PATH } from '@/constants';
+import { HARDWARE_DERIVIATION_PATH, HD_KEY_MNEMONIC_PATH } from '@/constants';
 import getChildrenAddress from '../utils/getChildrenAddress';
 
 export default class LedgerProxy {
@@ -35,7 +35,7 @@ export default class LedgerProxy {
     try {
       transport = await LedgerTransport.create();
       const eth = new Eth(transport);
-      const { publicKey } = await eth.getAddress(ENV.hdKeyMnemonic.path);
+      const { publicKey } = await eth.getAddress(HD_KEY_MNEMONIC_PATH);
 
       return publicKey;
     } catch (error) {

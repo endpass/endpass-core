@@ -11,7 +11,6 @@ class SettingsStorage {
     this.storage = storage;
   }
 
-  /* eslint-disable-next-line */
   getStorageKey(key) {
     return `${key}:${this.storageKey}`;
   }

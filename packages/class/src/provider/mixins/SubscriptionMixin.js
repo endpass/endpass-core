@@ -1,3 +1,5 @@
+import { BLOCK_UPDATE_INTERVAL_MSEC } from '@/constants';
+
 const EVENT_TYPES = {
   DATA: 'data',
   ERROR: 'error',
@@ -15,7 +17,9 @@ export default ParentProvider => {
       [EVENT_TYPES.DATA]: [],
       [EVENT_TYPES.ERROR]: () => {},
     };
+
     subsrciptionIds = {};
+
     newBlocksIntervalId = null;
 
     on(type, callback) {
@@ -116,7 +120,7 @@ export default ParentProvider => {
           console.error(error);
           this.notificationCallbacks[EVENT_TYPES.ERROR](error);
         }
-      }, ENV.blockUpdateInterval);
+      }, BLOCK_UPDATE_INTERVAL_MSEC);
     }
 
     stopPollingNewBlockHeaders() {
