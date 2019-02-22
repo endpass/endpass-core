@@ -7127,7 +7127,9 @@ function cloneDeep(value) {
 
 var cloneDeep_1 = cloneDeep;
 
-var isNumeric = n => !isNaN(parseFloat(n)) && isFinite(n);
+var isNumeric = function (n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+};
 
 var DEFAULT_STRING_INT = '0';
 var basicMatches = {
