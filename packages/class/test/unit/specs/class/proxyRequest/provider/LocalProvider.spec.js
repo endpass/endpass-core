@@ -229,7 +229,9 @@ describe('LocalProvider', () => {
       expect(readCheck.testField).toBe(checkValue);
 
       // step 2. do clear database
-      await instance.clear();
+      await instance.request({
+        method: 'clear',
+      });
       await expect(readData(url)).rejects.toEqual(isEmptyData);
     });
   });

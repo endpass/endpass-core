@@ -8,26 +8,21 @@ const error = new NotificationError({
   type: 'is-warning',
 });
 
-export default class CustomProvider {
+class CustomApi {
   constructor(serverUrl, connection) {
     this.url = serverUrl;
     this.localProvider = new LocalProvider(serverUrl);
     this.serverProvider = new ServerProvider(serverUrl, connection);
   }
 
-  request(params) {
-    const { method } = params;
-    return this[method](params);
-  }
-
   localProviderRequest(params) {
-    const { method, url } = params;
+    const { url } = params;
 
     if (url.includes('/account')) {
       throw error;
     }
 
-    return this.localProvider[method](params);
+    return this.localProvider.request(params);
   }
 
   add(params) {
@@ -38,10 +33,10 @@ export default class CustomProvider {
     const { url } = params;
 
     if (url.includes('/account')) {
-      return this.serverProvider.read(params);
+      return this.serverProvider.request(params);
     }
 
-    return this.localProvider.read(params);
+    return this.localProviderRequest(params);
   }
 
   write(params) {
@@ -49,8 +44,19 @@ export default class CustomProvider {
   }
 
   remove(params) {
-    return this.localProvider.remove(params);
+    return this.localProviderRequest(params);
   }
 
   clear = async () => ({ success: true });
+}
+
+export default class CustomProvider {
+  constructor(serverUrl, connection) {
+    this.api = new CustomApi(serverUrl, connection);
+  }
+
+  request(params) {
+    const { method } = params;
+    return this.api[method](params);
+  }
 }
