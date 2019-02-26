@@ -1,15 +1,15 @@
-import { a as _createClass, b as _asyncToGenerator, c as _regeneratorRuntime, d as _classCallCheck, e as createCommonjsModule, f as commonjsGlobal } from './chunk-350af72f.js';
+import { a as _createClass, b as _classCallCheck, c as _asyncToGenerator, d as _regeneratorRuntime, e as createCommonjsModule, f as commonjsGlobal } from './chunk-38bdd081.js';
 import namehash from 'eth-ens-namehash';
-import { a as _objectSpread, b as _defineProperty } from './chunk-96639b88.js';
+import { a as _objectSpread, b as _defineProperty$1 } from './chunk-6ea54473.js';
 import Tx from 'ethereumjs-tx';
 import HDKey from 'ethereumjs-wallet/hdkey';
-import { isAddress, bytesToHex, toChecksumAddress, toWei, numberToHex, hexToNumber, fromWei, hexToNumberString } from 'web3-utils';
+import { isAddress, toChecksumAddress, bytesToHex, toWei, numberToHex, hexToNumber, fromWei, hexToNumberString } from 'web3-utils';
 import { keystore } from '@endpass/utils';
-import { a as PROXY_REQUEST_PREFIX, b as BLOCK_UPDATE_INTERVAL_MSEC, c as INPAGE_EVENT, d as INPAGE_ID_PREFIX, e as AVAILABLE_USER_META_PROPS } from './chunk-675060eb.js';
-import { a as NotificationError, b as iterableToArray, c as _toConsumableArray } from './chunk-25f6a05b.js';
-export { a as NotificationError } from './chunk-25f6a05b.js';
+import { a as PROXY_REQUEST_PREFIX, b as BLOCK_UPDATE_INTERVAL_MSEC, c as INPAGE_EVENT, d as INPAGE_ID_PREFIX, e as AVAILABLE_USER_META_PROPS } from './chunk-a7ddc0ba.js';
+import { a as NotificationError, b as iterableToArray, c as _toConsumableArray } from './chunk-3552dc45.js';
+export { a as NotificationError } from './chunk-3552dc45.js';
 import Web3 from 'web3';
-import { a as arrayWithHoles, b as nonIterableRest, c as _slicedToArray } from './chunk-9a880e46.js';
+import { a as arrayWithHoles, b as nonIterableRest, c as _slicedToArray } from './chunk-e9a09dc5.js';
 import HttpProvider from 'web3-providers-http';
 import IpcProvider from 'web3-providers-ipc';
 import WebsocketProvider from 'web3-providers-ws';
@@ -176,7 +176,7 @@ function () {
                 return _context.stop();
             }
           }
-        }, _callee, this);
+        }, _callee);
       }));
 
       function getAddress(_x) {
@@ -252,12 +252,12 @@ var proxyTypes = {
   LedgerProxy: 'LedgerProxy',
   HDProxy: 'HDProxy'
 };
-var loaders = (_loaders = {}, _defineProperty(_loaders, proxyTypes.TrezorProxy, function () {
-  return import('./chunk-b1677c28.js');
-}), _defineProperty(_loaders, proxyTypes.LedgerProxy, function () {
-  return import('./chunk-6657bf2a.js');
-}), _defineProperty(_loaders, proxyTypes.HDProxy, function () {
-  return import('./chunk-6e210929.js');
+var loaders = (_loaders = {}, _defineProperty$1(_loaders, proxyTypes.TrezorProxy, function () {
+  return import('./chunk-ad75a11b.js');
+}), _defineProperty$1(_loaders, proxyTypes.LedgerProxy, function () {
+  return import('./chunk-85860cb9.js');
+}), _defineProperty$1(_loaders, proxyTypes.HDProxy, function () {
+  return import('./chunk-b23d0e3f.js');
 }), _loaders);
 var cache = {};
 function loadProxy(_x) {
@@ -294,13 +294,13 @@ function _loadProxy() {
             return _context.stop();
         }
       }
-    }, _callee, this);
+    }, _callee);
   }));
   return _loadProxy.apply(this, arguments);
 }
 
 var _strategies;
-var strategies = (_strategies = {}, _defineProperty(_strategies, WALLET_TYPE.TREZOR, proxyTypes.TrezorProxy), _defineProperty(_strategies, WALLET_TYPE.LEDGER, proxyTypes.LedgerProxy), _strategies);
+var strategies = (_strategies = {}, _defineProperty$1(_strategies, WALLET_TYPE.TREZOR, proxyTypes.TrezorProxy), _defineProperty$1(_strategies, WALLET_TYPE.LEDGER, proxyTypes.LedgerProxy), _strategies);
 var web3$1;
 /**
  * A Wallet represents a single Ethereum account that can send transactions
@@ -648,7 +648,7 @@ function () {
                 return _context7.stop();
             }
           }
-        }, _callee7, this);
+        }, _callee7);
       }));
 
       function recover(_x6, _x7) {
@@ -844,7 +844,7 @@ function () {
 
   }, {
     key: "loadProxy",
-    value: function loadProxy$$1(name) {
+    value: function loadProxy$1(name) {
       return loadProxy(name);
     }
   }]);
@@ -1200,7 +1200,7 @@ function () {
                             return _context.stop();
                         }
                       }
-                    }, _callee, this, [[0, 6]]);
+                    }, _callee, null, [[0, 6]]);
                   }));
 
                   return function (_x) {
@@ -1371,6 +1371,14 @@ var IDENTITY_MODE = Object.freeze({
   LOCAL: 'local'
 });
 
+var privateMethods = {
+  add: Symbol('add'),
+  read: Symbol('read'),
+  write: Symbol('write'),
+  remove: Symbol('remove'),
+  clear: Symbol('clear')
+};
+
 function setDatabase(_x) {
   return _setDatabase.apply(this, arguments);
 }
@@ -1378,53 +1386,53 @@ function setDatabase(_x) {
 function _setDatabase() {
   _setDatabase = _asyncToGenerator(
   /*#__PURE__*/
-  _regeneratorRuntime.mark(function _callee8(url) {
+  _regeneratorRuntime.mark(function _callee7(url) {
     var mod, Database, instance;
-    return _regeneratorRuntime.wrap(function _callee8$(_context8) {
+    return _regeneratorRuntime.wrap(function _callee7$(_context7) {
       while (1) {
-        switch (_context8.prev = _context8.next) {
+        switch (_context7.prev = _context7.next) {
           case 0:
-            _context8.next = 2;
-            return import('./chunk-1db5d55d.js');
+            _context7.next = 2;
+            return import('./chunk-e56a04dd.js');
 
           case 2:
-            mod = _context8.sent;
+            mod = _context7.sent;
             Database = mod.default;
             instance = new Database(url);
-            _context8.next = 7;
+            _context7.next = 7;
             return instance.initRoutes();
 
           case 7:
-            return _context8.abrupt("return", instance);
+            return _context7.abrupt("return", instance);
 
           case 8:
           case "end":
-            return _context8.stop();
+            return _context7.stop();
         }
       }
-    }, _callee8, this);
+    }, _callee7);
   }));
   return _setDatabase.apply(this, arguments);
 }
 
-var LocalApi =
+var LocalProvider =
 /*#__PURE__*/
 function () {
-  function LocalApi(serverUrl) {
-    _classCallCheck(this, LocalApi);
+  function LocalProvider(serverUrl) {
+    _classCallCheck(this, LocalProvider);
 
     var decorators = [new PrefixUrlDecorator(PROXY_REQUEST_PREFIX)];
     this.decorator = new Decorator(decorators);
     this.url = serverUrl;
   }
 
-  _createClass(LocalApi, [{
+  _createClass(LocalProvider, [{
     key: "request",
     value: function () {
       var _request = _asyncToGenerator(
       /*#__PURE__*/
       _regeneratorRuntime.mark(function _callee(params) {
-        var method, newParams;
+        var method, newParams, methodName;
         return _regeneratorRuntime.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -1444,9 +1452,10 @@ function () {
                 this.database = _context.sent;
 
               case 6:
-                return _context.abrupt("return", this[method](newParams));
+                methodName = privateMethods[method];
+                return _context.abrupt("return", this[methodName](newParams));
 
-              case 7:
+              case 8:
               case "end":
                 return _context.stop();
             }
@@ -1461,9 +1470,9 @@ function () {
       return request;
     }()
   }, {
-    key: "add",
+    key: privateMethods.add,
     value: function () {
-      var _add = _asyncToGenerator(
+      var _value = _asyncToGenerator(
       /*#__PURE__*/
       _regeneratorRuntime.mark(function _callee2(params) {
         return _regeneratorRuntime.wrap(function _callee2$(_context2) {
@@ -1484,7 +1493,7 @@ function () {
                 _context2.t0 = _context2["catch"](0);
                 throw new NotificationError({
                   title: 'Error in local database',
-                  text: "Can't save data to local database, maybe it is not available",
+                  text: 'Can\'t save data to local database, maybe it is not available',
                   type: 'is-warning'
                 });
 
@@ -1496,16 +1505,16 @@ function () {
         }, _callee2, this, [[0, 6]]);
       }));
 
-      function add(_x3) {
-        return _add.apply(this, arguments);
+      function value(_x3) {
+        return _value.apply(this, arguments);
       }
 
-      return add;
+      return value;
     }()
   }, {
-    key: "read",
+    key: privateMethods.read,
     value: function () {
-      var _read = _asyncToGenerator(
+      var _value2 = _asyncToGenerator(
       /*#__PURE__*/
       _regeneratorRuntime.mark(function _callee3(params) {
         return _regeneratorRuntime.wrap(function _callee3$(_context3) {
@@ -1520,7 +1529,7 @@ function () {
                 _context3.t0 = _context3["catch"](0);
                 throw new NotificationError({
                   title: 'Error in local database',
-                  text: "Can't read data from local database, maybe it is not available",
+                  text: 'Can\'t read data from local database, maybe it is not available',
                   type: 'is-warning'
                 });
 
@@ -1532,16 +1541,16 @@ function () {
         }, _callee3, this, [[0, 4]]);
       }));
 
-      function read(_x4) {
-        return _read.apply(this, arguments);
+      function value(_x4) {
+        return _value2.apply(this, arguments);
       }
 
-      return read;
+      return value;
     }()
   }, {
-    key: "write",
+    key: privateMethods.write,
     value: function () {
-      var _write = _asyncToGenerator(
+      var _value3 = _asyncToGenerator(
       /*#__PURE__*/
       _regeneratorRuntime.mark(function _callee4(params) {
         return _regeneratorRuntime.wrap(function _callee4$(_context4) {
@@ -1562,7 +1571,7 @@ function () {
                 _context4.t0 = _context4["catch"](0);
                 throw new NotificationError({
                   title: 'Error in local database',
-                  text: "Can't save data to local database, maybe it is not available",
+                  text: 'Can\'t save data to local database, maybe it is not available',
                   type: 'is-warning'
                 });
 
@@ -1574,16 +1583,16 @@ function () {
         }, _callee4, this, [[0, 6]]);
       }));
 
-      function write(_x5) {
-        return _write.apply(this, arguments);
+      function value(_x5) {
+        return _value3.apply(this, arguments);
       }
 
-      return write;
+      return value;
     }()
   }, {
-    key: "remove",
+    key: privateMethods.remove,
     value: function () {
-      var _remove = _asyncToGenerator(
+      var _value4 = _asyncToGenerator(
       /*#__PURE__*/
       _regeneratorRuntime.mark(function _callee5(params) {
         return _regeneratorRuntime.wrap(function _callee5$(_context5) {
@@ -1604,7 +1613,7 @@ function () {
                 _context5.t0 = _context5["catch"](0);
                 throw new NotificationError({
                   title: 'Error in local database',
-                  text: "Can't remove data from local database, maybe it is not available",
+                  text: 'Can\'t remove data from local database, maybe it is not available',
                   type: 'is-warning'
                 });
 
@@ -1616,16 +1625,16 @@ function () {
         }, _callee5, this, [[0, 6]]);
       }));
 
-      function remove(_x6) {
-        return _remove.apply(this, arguments);
+      function value(_x6) {
+        return _value4.apply(this, arguments);
       }
 
-      return remove;
+      return value;
     }()
   }, {
-    key: "clear",
+    key: privateMethods.clear,
     value: function () {
-      var _clear = _asyncToGenerator(
+      var _value5 = _asyncToGenerator(
       /*#__PURE__*/
       _regeneratorRuntime.mark(function _callee6() {
         return _regeneratorRuntime.wrap(function _callee6$(_context6) {
@@ -1646,7 +1655,7 @@ function () {
                 _context6.t0 = _context6["catch"](0);
                 throw new NotificationError({
                   title: 'Error in local database',
-                  text: "Can't clear data in the local database, maybe it is not available",
+                  text: 'Can\'t clear data in the local database, maybe it is not available',
                   type: 'is-warning'
                 });
 
@@ -1658,66 +1667,32 @@ function () {
         }, _callee6, this, [[0, 6]]);
       }));
 
-      function clear() {
-        return _clear.apply(this, arguments);
+      function value() {
+        return _value5.apply(this, arguments);
       }
 
-      return clear;
-    }()
-  }]);
-
-  return LocalApi;
-}();
-
-var LocalProvider =
-/*#__PURE__*/
-function () {
-  function LocalProvider(serverUrl) {
-    _classCallCheck(this, LocalProvider);
-
-    this.api = new LocalApi(serverUrl);
-  }
-
-  _createClass(LocalProvider, [{
-    key: "request",
-    value: function () {
-      var _request2 = _asyncToGenerator(
-      /*#__PURE__*/
-      _regeneratorRuntime.mark(function _callee7(params) {
-        return _regeneratorRuntime.wrap(function _callee7$(_context7) {
-          while (1) {
-            switch (_context7.prev = _context7.next) {
-              case 0:
-                return _context7.abrupt("return", this.api.request(params));
-
-              case 1:
-              case "end":
-                return _context7.stop();
-            }
-          }
-        }, _callee7, this);
-      }));
-
-      function request(_x7) {
-        return _request2.apply(this, arguments);
-      }
-
-      return request;
+      return value;
     }()
   }]);
 
   return LocalProvider;
 }();
 
-var ServerApi =
+var _privateMethods$add = privateMethods.add;
+var _privateMethods$read = privateMethods.read;
+var _privateMethods$write = privateMethods.write;
+var _privateMethods$remov = privateMethods.remove;
+var _privateMethods$clear = privateMethods.clear;
+
+var ServerProvider =
 /*#__PURE__*/
 function () {
-  function ServerApi(serverUrl, connection) {
+  function ServerProvider(serverUrl, connection) {
     var _this = this;
 
-    _classCallCheck(this, ServerApi);
+    _classCallCheck(this, ServerProvider);
 
-    _defineProperty(this, "read",
+    _defineProperty$1(this, _privateMethods$read,
     /*#__PURE__*/
     function () {
       var _ref = _asyncToGenerator(
@@ -1752,7 +1727,7 @@ function () {
                 return _context.stop();
             }
           }
-        }, _callee, this, [[0, 9]]);
+        }, _callee, null, [[0, 9]]);
       }));
 
       return function (_x) {
@@ -1760,7 +1735,7 @@ function () {
       };
     }());
 
-    _defineProperty(this, "write",
+    _defineProperty$1(this, _privateMethods$write,
     /*#__PURE__*/
     function () {
       var _ref3 = _asyncToGenerator(
@@ -1795,7 +1770,7 @@ function () {
                 return _context2.stop();
             }
           }
-        }, _callee2, this, [[0, 9]]);
+        }, _callee2, null, [[0, 9]]);
       }));
 
       return function (_x2) {
@@ -1803,7 +1778,7 @@ function () {
       };
     }());
 
-    _defineProperty(this, "remove",
+    _defineProperty$1(this, _privateMethods$remov,
     /*#__PURE__*/
     function () {
       var _ref5 = _asyncToGenerator(
@@ -1838,7 +1813,7 @@ function () {
                 return _context3.stop();
             }
           }
-        }, _callee3, this, [[0, 9]]);
+        }, _callee3, null, [[0, 9]]);
       }));
 
       return function (_x3) {
@@ -1846,7 +1821,7 @@ function () {
       };
     }());
 
-    _defineProperty(this, "clear",
+    _defineProperty$1(this, _privateMethods$clear,
     /*#__PURE__*/
     _asyncToGenerator(
     /*#__PURE__*/
@@ -1864,37 +1839,24 @@ function () {
               return _context4.stop();
           }
         }
-      }, _callee4, this);
+      }, _callee4);
     })));
 
     this.url = serverUrl;
     this.connection = connection;
   }
 
-  _createClass(ServerApi, [{
-    key: "add",
-    value: function add(params) {
-      return this.write(params);
-    }
-  }]);
-
-  return ServerApi;
-}();
-
-var ServerProvider =
-/*#__PURE__*/
-function () {
-  function ServerProvider(serverUrl, connection) {
-    _classCallCheck(this, ServerProvider);
-
-    this.api = new ServerApi(serverUrl, connection);
-  }
-
   _createClass(ServerProvider, [{
     key: "request",
     value: function request(params) {
       var method = params.method;
-      return this.api[method](params);
+      var methodName = privateMethods[method];
+      return this[methodName](params);
+    }
+  }, {
+    key: _privateMethods$add,
+    value: function value(params) {
+      return this[privateMethods.write](params);
     }
   }]);
 
@@ -1906,14 +1868,23 @@ var error = new NotificationError({
   text: 'Not allowed to save account in current mode',
   type: 'is-warning'
 });
+var privateLocal = {
+  localProviderRequest: Symbol('localProviderRequest')
+};
+var _privateLocal$localPr = privateLocal.localProviderRequest;
+var _privateMethods$add$1 = privateMethods.add;
+var _privateMethods$read$1 = privateMethods.read;
+var _privateMethods$write$1 = privateMethods.write;
+var _privateMethods$remov$1 = privateMethods.remove;
+var _privateMethods$clear$1 = privateMethods.clear;
 
-var CustomApi =
+var CustomProvider =
 /*#__PURE__*/
 function () {
-  function CustomApi(serverUrl, connection) {
-    _classCallCheck(this, CustomApi);
+  function CustomProvider(serverUrl, connection) {
+    _classCallCheck(this, CustomProvider);
 
-    _defineProperty(this, "clear",
+    _defineProperty$1(this, _privateMethods$clear$1,
     /*#__PURE__*/
     _asyncToGenerator(
     /*#__PURE__*/
@@ -1931,7 +1902,7 @@ function () {
               return _context.stop();
           }
         }
-      }, _callee, this);
+      }, _callee);
     })));
 
     this.url = serverUrl;
@@ -1939,9 +1910,16 @@ function () {
     this.serverProvider = new ServerProvider(serverUrl, connection);
   }
 
-  _createClass(CustomApi, [{
-    key: "localProviderRequest",
-    value: function localProviderRequest(params) {
+  _createClass(CustomProvider, [{
+    key: "request",
+    value: function request(params) {
+      var method = params.method;
+      var methodName = privateMethods[method];
+      return this[methodName](params);
+    }
+  }, {
+    key: _privateLocal$localPr,
+    value: function value(params) {
       var url = params.url;
 
       if (url.includes('/account')) {
@@ -1951,14 +1929,14 @@ function () {
       return this.localProvider.request(params);
     }
   }, {
-    key: "add",
-    value: function add(params) {
-      return this.localProviderRequest(params);
+    key: _privateMethods$add$1,
+    value: function value(params) {
+      return this[privateLocal.localProviderRequest](params);
     }
   }, {
-    key: "read",
+    key: _privateMethods$read$1,
     value: function () {
-      var _read = _asyncToGenerator(
+      var _value = _asyncToGenerator(
       /*#__PURE__*/
       _regeneratorRuntime.mark(function _callee2(params) {
         var url;
@@ -1976,7 +1954,7 @@ function () {
                 return _context2.abrupt("return", this.serverProvider.request(params));
 
               case 3:
-                return _context2.abrupt("return", this.localProviderRequest(params));
+                return _context2.abrupt("return", this[privateLocal.localProviderRequest](params));
 
               case 4:
               case "end":
@@ -1986,41 +1964,21 @@ function () {
         }, _callee2, this);
       }));
 
-      function read(_x) {
-        return _read.apply(this, arguments);
+      function value(_x) {
+        return _value.apply(this, arguments);
       }
 
-      return read;
+      return value;
     }()
   }, {
-    key: "write",
-    value: function write(params) {
-      return this.localProviderRequest(params);
+    key: _privateMethods$write$1,
+    value: function value(params) {
+      return this[privateLocal.localProviderRequest](params);
     }
   }, {
-    key: "remove",
-    value: function remove(params) {
-      return this.localProviderRequest(params);
-    }
-  }]);
-
-  return CustomApi;
-}();
-
-var CustomProvider =
-/*#__PURE__*/
-function () {
-  function CustomProvider(serverUrl, connection) {
-    _classCallCheck(this, CustomProvider);
-
-    this.api = new CustomApi(serverUrl, connection);
-  }
-
-  _createClass(CustomProvider, [{
-    key: "request",
-    value: function request(params) {
-      var method = params.method;
-      return this.api[method](params);
+    key: _privateMethods$remov$1,
+    value: function value(params) {
+      return this[privateLocal.localProviderRequest](params);
     }
   }]);
 
@@ -2028,11 +1986,11 @@ function () {
 }();
 
 var _map;
-var map = (_map = {}, _defineProperty(_map, IDENTITY_MODE.CUSTOM, function (url, connection) {
+var map = (_map = {}, _defineProperty$1(_map, IDENTITY_MODE.CUSTOM, function (url, connection) {
   return new CustomProvider(url, connection);
-}), _defineProperty(_map, IDENTITY_MODE.LOCAL, function (url, connection) {
+}), _defineProperty$1(_map, IDENTITY_MODE.LOCAL, function (url, connection) {
   return new LocalProvider(url, connection);
-}), _defineProperty(_map, IDENTITY_MODE.DEFAULT, function (url, connection) {
+}), _defineProperty$1(_map, IDENTITY_MODE.DEFAULT, function (url, connection) {
   return new ServerProvider(url, connection);
 }), _map);
 var createProvider = (function (type, url, connection) {
@@ -4653,11 +4611,11 @@ var SubscriptionMixin = (function (ParentProvider) {
 
       _this = possibleConstructorReturn(this, (_getPrototypeOf2 = getPrototypeOf(SubscriptionProvider)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-      _defineProperty(assertThisInitialized(assertThisInitialized(_this)), "notificationCallbacks", (_defineProperty2 = {}, _defineProperty(_defineProperty2, EVENT_TYPES.DATA, []), _defineProperty(_defineProperty2, EVENT_TYPES.ERROR, function () {}), _defineProperty2));
+      _defineProperty$1(assertThisInitialized(_this), "notificationCallbacks", (_defineProperty2 = {}, _defineProperty$1(_defineProperty2, EVENT_TYPES.DATA, []), _defineProperty$1(_defineProperty2, EVENT_TYPES.ERROR, function () {}), _defineProperty2));
 
-      _defineProperty(assertThisInitialized(assertThisInitialized(_this)), "subsrciptionIds", {});
+      _defineProperty$1(assertThisInitialized(_this), "subsrciptionIds", {});
 
-      _defineProperty(assertThisInitialized(assertThisInitialized(_this)), "newBlocksIntervalId", null);
+      _defineProperty$1(assertThisInitialized(_this), "newBlocksIntervalId", null);
 
       return _this;
     }
@@ -4803,7 +4761,7 @@ var SubscriptionMixin = (function (ParentProvider) {
                   return _context.stop();
               }
             }
-          }, _callee, this, [[0, 14]]);
+          }, _callee, null, [[0, 14]]);
         })), BLOCK_UPDATE_INTERVAL_MSEC);
       }
     }, {
@@ -5141,7 +5099,7 @@ function () {
 
     _classCallCheck(this, InpageProvider);
 
-    _defineProperty(this, "enable",
+    _defineProperty$1(this, "enable",
     /*#__PURE__*/
     _asyncToGenerator(
     /*#__PURE__*/
@@ -5159,7 +5117,7 @@ function () {
               return _context.stop();
           }
         }
-      }, _callee, this);
+      }, _callee);
     })));
 
     if (!(eventEmitter instanceof EventEmitter)) {
@@ -5385,7 +5343,7 @@ var defineProperty = function () {
   } catch (e) {}
 }();
 
-var _defineProperty$1 = defineProperty;
+var _defineProperty = defineProperty;
 
 /**
  * The base implementation of `assignValue` and `assignMergeValue` without
@@ -5399,8 +5357,8 @@ var _defineProperty$1 = defineProperty;
 
 
 function baseAssignValue(object, key, value) {
-  if (key == '__proto__' && _defineProperty$1) {
-    _defineProperty$1(object, key, {
+  if (key == '__proto__' && _defineProperty) {
+    _defineProperty(object, key, {
       'configurable': true,
       'enumerable': true,
       'value': value,
@@ -5873,8 +5831,8 @@ var identity_1 = identity;
  */
 
 
-var baseSetToString = !_defineProperty$1 ? identity_1 : function (func, string) {
-  return _defineProperty$1(func, 'toString', {
+var baseSetToString = !_defineProperty ? identity_1 : function (func, string) {
+  return _defineProperty(func, 'toString', {
     'configurable': true,
     'enumerable': false,
     'value': constant_1(string),
@@ -5985,7 +5943,7 @@ function () {
 
     _classCallCheck(this, SettingsStorage);
 
-    _defineProperty(this, "save", function (key, meta) {
+    _defineProperty$1(this, "save", function (key, meta) {
       if (!_this.storage.save) {
         throw new Error('Provided storage does not implements save method!');
       }
@@ -5995,7 +5953,7 @@ function () {
       _this.storage.save(_this.getStorageKey(key), pickedMeta);
     });
 
-    _defineProperty(this, "load", function (key) {
+    _defineProperty$1(this, "load", function (key) {
       if (!_this.storage.load) {
         throw new Error('Provided storage does not implements load method!');
       }
@@ -6003,7 +5961,7 @@ function () {
       return _this.storage.load(_this.getStorageKey(key));
     });
 
-    _defineProperty(this, "clear", function (key) {
+    _defineProperty$1(this, "clear", function (key) {
       if (!_this.storage.remove) {
         throw new Error('Provided storage does not implements remove method!');
       }
@@ -7377,7 +7335,7 @@ function () {
     }
   }, {
     key: "applyProps",
-    value: function applyProps$$1(trx, newProps) {
+    value: function applyProps$1(trx, newProps) {
       var res = Transaction.unfreeze(trx);
 
       applyProps(res, newProps);

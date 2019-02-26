@@ -1,6 +1,7 @@
 import LocalProvider from './LocalProvider';
 import ServerProvider from './ServerProvider';
 import { NotificationError } from '@/error';
+import privateMethods from './privateMethods';
 
 const error = new NotificationError({
   title: 'Error saving account',
@@ -8,14 +9,24 @@ const error = new NotificationError({
   type: 'is-warning',
 });
 
-class CustomApi {
+const privateLocal = {
+  localProviderRequest: Symbol('localProviderRequest'),
+};
+
+export default class CustomProvider {
   constructor(serverUrl, connection) {
     this.url = serverUrl;
     this.localProvider = new LocalProvider(serverUrl);
     this.serverProvider = new ServerProvider(serverUrl, connection);
   }
 
-  localProviderRequest(params) {
+  request(params) {
+    const { method } = params;
+    const methodName = privateMethods[method];
+    return this[methodName](params);
+  }
+
+  [privateLocal.localProviderRequest](params) {
     const { url } = params;
 
     if (url.includes('/account')) {
@@ -25,38 +36,27 @@ class CustomApi {
     return this.localProvider.request(params);
   }
 
-  add(params) {
-    return this.localProviderRequest(params);
+  [privateMethods.add](params) {
+    return this[privateLocal.localProviderRequest](params);
   }
 
-  async read(params) {
+  async [privateMethods.read](params) {
     const { url } = params;
 
     if (url.includes('/account')) {
       return this.serverProvider.request(params);
     }
 
-    return this.localProviderRequest(params);
+    return this[privateLocal.localProviderRequest](params);
   }
 
-  write(params) {
-    return this.localProviderRequest(params);
+  [privateMethods.write](params) {
+    return this[privateLocal.localProviderRequest](params);
   }
 
-  remove(params) {
-    return this.localProviderRequest(params);
+  [privateMethods.remove](params) {
+    return this[privateLocal.localProviderRequest](params);
   }
 
-  clear = async () => ({ success: true });
-}
-
-export default class CustomProvider {
-  constructor(serverUrl, connection) {
-    this.api = new CustomApi(serverUrl, connection);
-  }
-
-  request(params) {
-    const { method } = params;
-    return this.api[method](params);
-  }
+  [privateMethods.clear] = async () => ({ success: true });
 }

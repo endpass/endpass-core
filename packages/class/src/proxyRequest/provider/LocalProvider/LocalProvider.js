@@ -1,6 +1,7 @@
 import { NotificationError } from '@/error';
 import { PROXY_REQUEST_PREFIX } from '@/constants';
 import { Decorator, PrefixUrlDecorator } from '@/proxyRequest/decorator/index';
+import privateMethods from '../privateMethods';
 
 async function setDatabase(url) {
   const mod = await import(`./Database`);
@@ -10,7 +11,7 @@ async function setDatabase(url) {
   return instance;
 }
 
-class LocalApi {
+export default class LocalProvider {
   constructor(serverUrl) {
     const decorators = [new PrefixUrlDecorator(PROXY_REQUEST_PREFIX)];
     this.decorator = new Decorator(decorators);
@@ -25,10 +26,11 @@ class LocalApi {
       this.database = await setDatabase(this.url);
     }
 
-    return this[method](newParams);
+    const methodName = privateMethods[method];
+    return this[methodName](newParams);
   }
 
-  async add(params) {
+  async [privateMethods.add](params) {
     try {
       await this.database.request(params);
 
@@ -42,7 +44,7 @@ class LocalApi {
     }
   }
 
-  async read(params) {
+  async [privateMethods.read](params) {
     try {
       return this.database.request(params);
     } catch (e) {
@@ -54,7 +56,7 @@ class LocalApi {
     }
   }
 
-  async write(params) {
+  async [privateMethods.write](params) {
     try {
       await this.database.request(params);
 
@@ -68,7 +70,7 @@ class LocalApi {
     }
   }
 
-  async remove(params) {
+  async [privateMethods.remove](params) {
     try {
       await this.database.request(params);
 
@@ -83,7 +85,7 @@ class LocalApi {
     }
   }
 
-  async clear() {
+  async [privateMethods.clear]() {
     try {
       await this.database.clear();
 
@@ -96,15 +98,5 @@ class LocalApi {
         type: 'is-warning',
       });
     }
-  }
-}
-
-export default class LocalProvider {
-  constructor(serverUrl) {
-    this.api = new LocalApi(serverUrl);
-  }
-
-  async request(params) {
-    return this.api.request(params);
   }
 }
