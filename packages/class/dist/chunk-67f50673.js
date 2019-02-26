@@ -237,7 +237,7 @@ var routes = {
             switch (_context2.prev = _context2.next) {
               case 0:
                 initialData = {
-                  email: '',
+                  email: 'default@email.com',
                   otpEnabled: false
                 };
                 _context2.prev = 1;
