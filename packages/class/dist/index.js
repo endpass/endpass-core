@@ -1393,7 +1393,7 @@ function _setDatabase() {
         switch (_context7.prev = _context7.next) {
           case 0:
             _context7.next = 2;
-            return import('./chunk-e56a04dd.js');
+            return import('./chunk-371817f8.js');
 
           case 2:
             mod = _context7.sent;
@@ -1493,7 +1493,7 @@ function () {
                 _context2.t0 = _context2["catch"](0);
                 throw new NotificationError({
                   title: 'Error in local database',
-                  text: 'Can\'t save data to local database, maybe it is not available',
+                  text: "Can't save data to local database, maybe it is not available",
                   type: 'is-warning'
                 });
 
@@ -1529,7 +1529,7 @@ function () {
                 _context3.t0 = _context3["catch"](0);
                 throw new NotificationError({
                   title: 'Error in local database',
-                  text: 'Can\'t read data from local database, maybe it is not available',
+                  text: "Can't read data from local database, maybe it is not available",
                   type: 'is-warning'
                 });
 
@@ -1571,7 +1571,7 @@ function () {
                 _context4.t0 = _context4["catch"](0);
                 throw new NotificationError({
                   title: 'Error in local database',
-                  text: 'Can\'t save data to local database, maybe it is not available',
+                  text: "Can't save data to local database, maybe it is not available",
                   type: 'is-warning'
                 });
 
@@ -1613,7 +1613,7 @@ function () {
                 _context5.t0 = _context5["catch"](0);
                 throw new NotificationError({
                   title: 'Error in local database',
-                  text: 'Can\'t remove data from local database, maybe it is not available',
+                  text: "Can't remove data from local database, maybe it is not available",
                   type: 'is-warning'
                 });
 
@@ -1655,7 +1655,7 @@ function () {
                 _context6.t0 = _context6["catch"](0);
                 throw new NotificationError({
                   title: 'Error in local database',
-                  text: 'Can\'t clear data in the local database, maybe it is not available',
+                  text: "Can't clear data in the local database, maybe it is not available",
                   type: 'is-warning'
                 });
 
@@ -1718,7 +1718,7 @@ function () {
                 _context.prev = 9;
                 _context.t0 = _context["catch"](0);
                 _context.t0.title = 'Error in server storage';
-                _context.t0.text = 'Can\'t read data from server storage, maybe it is not available';
+                _context.t0.text = "Can't read data from server storage, maybe it is not available";
                 _context.t0.type = 'is-warning';
                 throw _context.t0;
 
@@ -1761,7 +1761,7 @@ function () {
                 _context2.prev = 9;
                 _context2.t0 = _context2["catch"](0);
                 _context2.t0.title = 'Error in server storage';
-                _context2.t0.text = 'Can\'t save data to server storage, maybe it is not available';
+                _context2.t0.text = "Can't save data to server storage, maybe it is not available";
                 _context2.t0.type = 'is-warning';
                 throw _context2.t0;
 
@@ -1804,7 +1804,7 @@ function () {
                 _context3.prev = 9;
                 _context3.t0 = _context3["catch"](0);
                 _context3.t0.title = 'Error in server storage';
-                _context3.t0.text = 'Can\'t remove data from server storage, maybe it is not available';
+                _context3.t0.text = "Can't remove data from server storage, maybe it is not available";
                 _context3.t0.type = 'is-warning';
                 throw _context3.t0;
 

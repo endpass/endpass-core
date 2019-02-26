@@ -46,7 +46,7 @@ const routes = {
     async init(route) {
       const initialData = {
         email: '',
-        otp_enabled: false,
+        otpEnabled: false,
       };
 
       let data;
