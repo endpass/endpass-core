@@ -1378,47 +1378,47 @@ function setDatabase(_x) {
 function _setDatabase() {
   _setDatabase = _asyncToGenerator(
   /*#__PURE__*/
-  _regeneratorRuntime.mark(function _callee7(url) {
+  _regeneratorRuntime.mark(function _callee8(url) {
     var mod, Database, instance;
-    return _regeneratorRuntime.wrap(function _callee7$(_context7) {
+    return _regeneratorRuntime.wrap(function _callee8$(_context8) {
       while (1) {
-        switch (_context7.prev = _context7.next) {
+        switch (_context8.prev = _context8.next) {
           case 0:
-            _context7.next = 2;
+            _context8.next = 2;
             return import('./chunk-1db5d55d.js');
 
           case 2:
-            mod = _context7.sent;
+            mod = _context8.sent;
             Database = mod.default;
             instance = new Database(url);
-            _context7.next = 7;
+            _context8.next = 7;
             return instance.initRoutes();
 
           case 7:
-            return _context7.abrupt("return", instance);
+            return _context8.abrupt("return", instance);
 
           case 8:
           case "end":
-            return _context7.stop();
+            return _context8.stop();
         }
       }
-    }, _callee7, this);
+    }, _callee8, this);
   }));
   return _setDatabase.apply(this, arguments);
 }
 
-var LocalProvider =
+var LocalApi =
 /*#__PURE__*/
 function () {
-  function LocalProvider(serverUrl) {
-    _classCallCheck(this, LocalProvider);
+  function LocalApi(serverUrl) {
+    _classCallCheck(this, LocalApi);
 
     var decorators = [new PrefixUrlDecorator(PROXY_REQUEST_PREFIX)];
     this.decorator = new Decorator(decorators);
     this.url = serverUrl;
   }
 
-  _createClass(LocalProvider, [{
+  _createClass(LocalApi, [{
     key: "request",
     value: function () {
       var _request = _asyncToGenerator(
@@ -1666,16 +1666,56 @@ function () {
     }()
   }]);
 
+  return LocalApi;
+}();
+
+var LocalProvider =
+/*#__PURE__*/
+function () {
+  function LocalProvider(serverUrl) {
+    _classCallCheck(this, LocalProvider);
+
+    this.api = new LocalApi(serverUrl);
+  }
+
+  _createClass(LocalProvider, [{
+    key: "request",
+    value: function () {
+      var _request2 = _asyncToGenerator(
+      /*#__PURE__*/
+      _regeneratorRuntime.mark(function _callee7(params) {
+        return _regeneratorRuntime.wrap(function _callee7$(_context7) {
+          while (1) {
+            switch (_context7.prev = _context7.next) {
+              case 0:
+                return _context7.abrupt("return", this.api.request(params));
+
+              case 1:
+              case "end":
+                return _context7.stop();
+            }
+          }
+        }, _callee7, this);
+      }));
+
+      function request(_x7) {
+        return _request2.apply(this, arguments);
+      }
+
+      return request;
+    }()
+  }]);
+
   return LocalProvider;
 }();
 
-var ServerProvider =
+var ServerApi =
 /*#__PURE__*/
 function () {
-  function ServerProvider(serverUrl, connection) {
+  function ServerApi(serverUrl, connection) {
     var _this = this;
 
-    _classCallCheck(this, ServerProvider);
+    _classCallCheck(this, ServerApi);
 
     _defineProperty(this, "read",
     /*#__PURE__*/
@@ -1703,7 +1743,7 @@ function () {
                 _context.prev = 9;
                 _context.t0 = _context["catch"](0);
                 _context.t0.title = 'Error in server storage';
-                _context.t0.text = "Can't read data from server storage, maybe it is not available";
+                _context.t0.text = 'Can\'t read data from server storage, maybe it is not available';
                 _context.t0.type = 'is-warning';
                 throw _context.t0;
 
@@ -1746,7 +1786,7 @@ function () {
                 _context2.prev = 9;
                 _context2.t0 = _context2["catch"](0);
                 _context2.t0.title = 'Error in server storage';
-                _context2.t0.text = "Can't save data to server storage, maybe it is not available";
+                _context2.t0.text = 'Can\'t save data to server storage, maybe it is not available';
                 _context2.t0.type = 'is-warning';
                 throw _context2.t0;
 
@@ -1789,7 +1829,7 @@ function () {
                 _context3.prev = 9;
                 _context3.t0 = _context3["catch"](0);
                 _context3.t0.title = 'Error in server storage';
-                _context3.t0.text = "Can't remove data from server storage, maybe it is not available";
+                _context3.t0.text = 'Can\'t remove data from server storage, maybe it is not available';
                 _context3.t0.type = 'is-warning';
                 throw _context3.t0;
 
@@ -1831,16 +1871,30 @@ function () {
     this.connection = connection;
   }
 
+  _createClass(ServerApi, [{
+    key: "add",
+    value: function add(params) {
+      return this.write(params);
+    }
+  }]);
+
+  return ServerApi;
+}();
+
+var ServerProvider =
+/*#__PURE__*/
+function () {
+  function ServerProvider(serverUrl, connection) {
+    _classCallCheck(this, ServerProvider);
+
+    this.api = new ServerApi(serverUrl, connection);
+  }
+
   _createClass(ServerProvider, [{
     key: "request",
     value: function request(params) {
       var method = params.method;
-      return this[method](params);
-    }
-  }, {
-    key: "add",
-    value: function add(params) {
-      return this.write(params);
+      return this.api[method](params);
     }
   }]);
 
@@ -1853,11 +1907,11 @@ var error = new NotificationError({
   type: 'is-warning'
 });
 
-var CustomProvider =
+var CustomApi =
 /*#__PURE__*/
 function () {
-  function CustomProvider(serverUrl, connection) {
-    _classCallCheck(this, CustomProvider);
+  function CustomApi(serverUrl, connection) {
+    _classCallCheck(this, CustomApi);
 
     _defineProperty(this, "clear",
     /*#__PURE__*/
@@ -1885,23 +1939,16 @@ function () {
     this.serverProvider = new ServerProvider(serverUrl, connection);
   }
 
-  _createClass(CustomProvider, [{
-    key: "request",
-    value: function request(params) {
-      var method = params.method;
-      return this[method](params);
-    }
-  }, {
+  _createClass(CustomApi, [{
     key: "localProviderRequest",
     value: function localProviderRequest(params) {
-      var method = params.method,
-          url = params.url;
+      var url = params.url;
 
       if (url.includes('/account')) {
         throw error;
       }
 
-      return this.localProvider[method](params);
+      return this.localProvider.request(params);
     }
   }, {
     key: "add",
@@ -1926,10 +1973,10 @@ function () {
                   break;
                 }
 
-                return _context2.abrupt("return", this.serverProvider.read(params));
+                return _context2.abrupt("return", this.serverProvider.request(params));
 
               case 3:
-                return _context2.abrupt("return", this.localProvider.read(params));
+                return _context2.abrupt("return", this.localProviderRequest(params));
 
               case 4:
               case "end":
@@ -1953,7 +2000,27 @@ function () {
   }, {
     key: "remove",
     value: function remove(params) {
-      return this.localProvider.remove(params);
+      return this.localProviderRequest(params);
+    }
+  }]);
+
+  return CustomApi;
+}();
+
+var CustomProvider =
+/*#__PURE__*/
+function () {
+  function CustomProvider(serverUrl, connection) {
+    _classCallCheck(this, CustomProvider);
+
+    this.api = new CustomApi(serverUrl, connection);
+  }
+
+  _createClass(CustomProvider, [{
+    key: "request",
+    value: function request(params) {
+      var method = params.method;
+      return this.api[method](params);
     }
   }]);
 

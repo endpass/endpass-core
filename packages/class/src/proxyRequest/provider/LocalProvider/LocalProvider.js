@@ -10,7 +10,7 @@ async function setDatabase(url) {
   return instance;
 }
 
-export default class LocalProvider {
+class LocalApi {
   constructor(serverUrl) {
     const decorators = [new PrefixUrlDecorator(PROXY_REQUEST_PREFIX)];
     this.decorator = new Decorator(decorators);
@@ -96,5 +96,15 @@ export default class LocalProvider {
         type: 'is-warning',
       });
     }
+  }
+}
+
+export default class LocalProvider {
+  constructor(serverUrl) {
+    this.api = new LocalApi(serverUrl);
+  }
+
+  async request(params) {
+    return this.api.request(params);
   }
 }

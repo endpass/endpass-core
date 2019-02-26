@@ -1,12 +1,7 @@
-export default class ServerProvider {
+class ServerApi {
   constructor(serverUrl, connection) {
     this.url = serverUrl;
     this.connection = connection;
-  }
-
-  request(params) {
-    const { method } = params;
-    return this[method](params);
   }
 
   add(params) {
@@ -60,4 +55,15 @@ export default class ServerProvider {
   };
 
   clear = async () => ({ success: true });
+}
+
+export default class ServerProvider {
+  constructor(serverUrl, connection) {
+    this.api = new ServerApi(serverUrl, connection);
+  }
+
+  request(params) {
+    const { method } = params;
+    return this.api[method](params);
+  }
 }
