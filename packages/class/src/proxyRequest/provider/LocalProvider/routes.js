@@ -45,7 +45,7 @@ const routes = {
     id: () => 'userSettings',
     async init(route) {
       const initialData = {
-        email: '',
+        email: 'default@email.com',
         otpEnabled: false,
       };
 
