@@ -9,3 +9,4 @@ module.exports.keystore = require('./keystore');
 module.exports.numbers = require('./numbers');
 module.exports.objects = require('./objects');
 module.exports.strings = require('./strings');
+module.exports.build = require('./build');
