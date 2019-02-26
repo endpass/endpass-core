@@ -15,7 +15,7 @@ var runtime = createCommonjsModule(function (module) {
 
   var Op = Object.prototype;
   var hasOwn = Op.hasOwnProperty;
-  var undefined; // More compressible than void 0.
+  var undefined$1; // More compressible than void 0.
 
   var $Symbol = typeof Symbol === "function" ? Symbol : {};
   var iteratorSymbol = $Symbol.iterator || "@@iterator";
@@ -317,7 +317,7 @@ var runtime = createCommonjsModule(function (module) {
   function maybeInvokeDelegate(delegate, context) {
     var method = delegate.iterator[context.method];
 
-    if (method === undefined) {
+    if (method === undefined$1) {
       // A .throw or .return when the delegate iterator has no .throw
       // method always terminates the yield* loop.
       context.delegate = null;
@@ -327,7 +327,7 @@ var runtime = createCommonjsModule(function (module) {
           // If the delegate iterator has a return method, give it a
           // chance to clean up.
           context.method = "return";
-          context.arg = undefined;
+          context.arg = undefined$1;
           maybeInvokeDelegate(delegate, context);
 
           if (context.method === "throw") {
@@ -376,7 +376,7 @@ var runtime = createCommonjsModule(function (module) {
 
       if (context.method !== "return") {
         context.method = "next";
-        context.arg = undefined;
+        context.arg = undefined$1;
       }
     } else {
       // Re-yield the result returned by the delegate method.
@@ -493,7 +493,7 @@ var runtime = createCommonjsModule(function (module) {
             }
           }
 
-          next.value = undefined;
+          next.value = undefined$1;
           next.done = true;
           return next;
         };
@@ -512,7 +512,7 @@ var runtime = createCommonjsModule(function (module) {
 
   function doneResult() {
     return {
-      value: undefined,
+      value: undefined$1,
       done: true
     };
   }
@@ -524,18 +524,18 @@ var runtime = createCommonjsModule(function (module) {
       this.next = 0; // Resetting context._sent for legacy support of Babel's
       // function.sent implementation.
 
-      this.sent = this._sent = undefined;
+      this.sent = this._sent = undefined$1;
       this.done = false;
       this.delegate = null;
       this.method = "next";
-      this.arg = undefined;
+      this.arg = undefined$1;
       this.tryEntries.forEach(resetTryEntry);
 
       if (!skipTempReset) {
         for (var name in this) {
           // Not sure about the optimal order of these conditions:
           if (name.charAt(0) === "t" && hasOwn.call(this, name) && !isNaN(+name.slice(1))) {
-            this[name] = undefined;
+            this[name] = undefined$1;
           }
         }
       }
@@ -567,7 +567,7 @@ var runtime = createCommonjsModule(function (module) {
           // If the dispatched exception was caught by a catch block,
           // then let that catch block handle the exception normally.
           context.method = "next";
-          context.arg = undefined;
+          context.arg = undefined$1;
         }
 
         return !!caught;
@@ -694,7 +694,7 @@ var runtime = createCommonjsModule(function (module) {
       if (this.method === "next") {
         // Deliberately forget the last sent value so that we don't
         // accidentally pass it on to the delegate.
-        this.arg = undefined;
+        this.arg = undefined$1;
       }
 
       return ContinueSentinel;
@@ -807,4 +807,4 @@ function _createClass(Constructor, protoProps, staticProps) {
 
 var createClass = _createClass;
 
-export { createClass as a, asyncToGenerator as b, regenerator as c, classCallCheck as d, createCommonjsModule as e, commonjsGlobal as f };
+export { createClass as a, classCallCheck as b, asyncToGenerator as c, regenerator as d, createCommonjsModule as e, commonjsGlobal as f };

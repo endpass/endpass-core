@@ -1,6 +1,6 @@
-import { b as _asyncToGenerator, c as _regeneratorRuntime, a as _createClass, d as _classCallCheck } from './chunk-350af72f.js';
-import { a as _objectSpread } from './chunk-96639b88.js';
-import { c as _slicedToArray } from './chunk-9a880e46.js';
+import { c as _asyncToGenerator, d as _regeneratorRuntime, a as _createClass, b as _classCallCheck } from './chunk-38bdd081.js';
+import { a as _objectSpread } from './chunk-6ea54473.js';
+import { c as _slicedToArray } from './chunk-e9a09dc5.js';
 import regPath from 'path-to-regexp';
 import Dexie from 'dexie';
 
@@ -99,7 +99,7 @@ var itemsRequest = {
               return _context.stop();
           }
         }
-      }, _callee, this, [[1, 8]]);
+      }, _callee, null, [[1, 8]]);
     }));
 
     function itemAdd(_x, _x2, _x3) {
@@ -212,7 +212,7 @@ var routes = {
                 return _context.stop();
             }
           }
-        }, _callee, this);
+        }, _callee);
       }));
 
       function read(_x) {
@@ -270,7 +270,7 @@ var routes = {
                 return _context2.stop();
             }
           }
-        }, _callee2, this, [[1, 7]]);
+        }, _callee2, null, [[1, 7]]);
       }));
 
       function init(_x2) {
@@ -321,7 +321,7 @@ var routes = {
                 return _context3.stop();
             }
           }
-        }, _callee3, this);
+        }, _callee3);
       }));
 
       function read(_x3, _x4) {
@@ -378,7 +378,7 @@ function () {
                 return _context.stop();
             }
           }
-        }, _callee, this);
+        }, _callee);
       }));
 
       function initRoutes() {

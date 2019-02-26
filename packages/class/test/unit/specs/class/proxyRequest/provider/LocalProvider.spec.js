@@ -1,4 +1,3 @@
-import 'mocks/class/proxyRequest/provider/database';
 import LocalProvider from '@/proxyRequest/provider/LocalProvider';
 
 describe('LocalProvider', () => {

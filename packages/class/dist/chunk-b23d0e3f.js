@@ -1,7 +1,7 @@
-import { a as _createClass, b as _asyncToGenerator, c as _regeneratorRuntime, d as _classCallCheck } from './chunk-350af72f.js';
+import { a as _createClass, b as _classCallCheck, c as _asyncToGenerator, d as _regeneratorRuntime } from './chunk-38bdd081.js';
 import HDKey from 'ethereumjs-wallet/hdkey';
-import { a as NotificationError } from './chunk-25f6a05b.js';
-import { a as getChildrenAddress } from './chunk-ade9ee03.js';
+import { a as NotificationError } from './chunk-3552dc45.js';
+import { a as getChildrenAddress } from './chunk-95a07fc6.js';
 
 var HDProxy =
 /*#__PURE__*/
@@ -45,7 +45,7 @@ function () {
                 return _context.stop();
             }
           }
-        }, _callee, this, [[1, 7]]);
+        }, _callee, null, [[1, 7]]);
       }));
 
       function getNextWallets(_x) {

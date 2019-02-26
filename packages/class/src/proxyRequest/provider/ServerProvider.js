@@ -1,14 +1,22 @@
-class ServerApi {
+import privateMethods from './privateMethods';
+
+export default class ServerProvider {
   constructor(serverUrl, connection) {
     this.url = serverUrl;
     this.connection = connection;
   }
 
-  add(params) {
-    return this.write(params);
+  request(params) {
+    const { method } = params;
+    const methodName = privateMethods[method];
+    return this[methodName](params);
   }
 
-  read = async params => {
+  [privateMethods.add](params) {
+    return this[privateMethods.write](params);
+  }
+
+  [privateMethods.read] = async params => {
     try {
       const { url } = params;
       const { data } = await this.connection.get(url);
@@ -23,7 +31,7 @@ class ServerApi {
     }
   };
 
-  write = async params => {
+  [privateMethods.write] = async params => {
     try {
       const { url, payload } = params;
       const { data } = await this.connection.post(url, payload);
@@ -38,7 +46,7 @@ class ServerApi {
     }
   };
 
-  remove = async params => {
+  [privateMethods.remove] = async params => {
     try {
       const { url, payload } = params;
       const { data } = await this.connection.delete(url, payload);
@@ -54,16 +62,5 @@ class ServerApi {
     }
   };
 
-  clear = async () => ({ success: true });
-}
-
-export default class ServerProvider {
-  constructor(serverUrl, connection) {
-    this.api = new ServerApi(serverUrl, connection);
-  }
-
-  request(params) {
-    const { method } = params;
-    return this.api[method](params);
-  }
+  [privateMethods.clear] = async () => ({ success: true });
 }
