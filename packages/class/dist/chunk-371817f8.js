@@ -238,7 +238,7 @@ var routes = {
               case 0:
                 initialData = {
                   email: '',
-                  otp_enabled: false
+                  otpEnabled: false
                 };
                 _context2.prev = 1;
                 _context2.next = 4;
