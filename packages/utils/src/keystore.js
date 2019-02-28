@@ -9,6 +9,7 @@ import { KDF_ENCRYPT_OPTIONS } from './constants';
 // conforms better to the Ethereum keystore V3 spec, which does not include
 // the address for privacy reasons.
 // See https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition#alterations-from-version-1
+// eslint-disable-next-line
 keythereum.privateKeyToAddress = function(pk) {
   return '';
 };

@@ -6,6 +6,7 @@ module.exports.mapArrayByProp = (arr, prop) =>
     const target = item[prop];
 
     if (target) {
+      // eslint-disable-next-line no-param-reassign
       acc[target] = item;
       return acc;
     }

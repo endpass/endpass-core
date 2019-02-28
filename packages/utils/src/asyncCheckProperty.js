@@ -2,7 +2,7 @@ const get = require('lodash/get');
 const identity = require('lodash/identity');
 
 module.exports = (
-  object,
+  object, //
   path,
   predicate = identity,
   timer = 250,

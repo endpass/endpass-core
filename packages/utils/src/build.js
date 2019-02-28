@@ -1,8 +1,9 @@
-'use strict';
 const path = require('path');
+const cp = require('child_process');
+const notifier = require('node-notifier');
 
 function exec(cmd) {
-  return require('child_process')
+  return cp
     .execSync(cmd)
     .toString()
     .trim();
@@ -17,9 +18,7 @@ exports.assetsPath = function(_path, config) {
   return path.posix.join(assetsSubDirectory, _path);
 };
 
-exports.createNotifierCallback = (packageConfig) => {
-  const notifier = require('node-notifier');
-
+exports.createNotifierCallback = packageConfig => {
   return (severity, errors) => {
     if (severity !== 'error') return;
 
@@ -28,7 +27,7 @@ exports.createNotifierCallback = (packageConfig) => {
 
     notifier.notify({
       title: packageConfig.name,
-      message: severity + ': ' + error.name,
+      message: `${severity}: ${error.name}`,
       subtitle: filename || '',
       icon: path.join(__dirname, 'logo.png'),
     });

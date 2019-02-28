@@ -11,4 +11,5 @@
 .DS_Store
 pack
 babel.config.js
+.eslint
 yarn.lock
