@@ -6,4 +6,4 @@ export const KDF_ENCRYPT_OPTIONS = {
 
 export default {
   KDF_ENCRYPT_OPTIONS,
-}
+};

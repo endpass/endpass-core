@@ -4,7 +4,8 @@ var get = require('lodash/get');
 
 var identity = require('lodash/identity');
 
-module.exports = function (object, path) {
+module.exports = function (object, //
+path) {
   var predicate = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : identity;
   var timer = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 250;
   return new Promise(function (resolve) {
