@@ -49,4 +49,9 @@ export default class TransactionFactory {
       timestamp: hexToNumber(trx.timestamp),
     });
   }
+
+  static fromCryptoDataHistory(trx) {
+    const value = Transaction.getValueFromWei(trx);
+    return Transaction.create({ ...trx, value });
+  }
 }
