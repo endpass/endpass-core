@@ -18,6 +18,29 @@ const apiResponse = {
   value: 0.00000915,
 };
 
+const cryptoDataResponse = {
+  from: '0x4bd5c3e7e4d6b3df23e9da5b42e5e4daa3d2579b',
+  hash: '0x902aa048c9fee4cc01f0533457009cdce6a172ea9eee5005617ae4ca3fc5fd04',
+  input: '0x',
+  success: true,
+  timestamp: 1525898092,
+  to: '0x7c59542b20002ed255598172cab48b86d865dfbb',
+  value: '99160000000000000',
+};
+
+const cryptoDataTokenResponse = {
+  from: '0x4bd5c3e7e4d6b3df23e9da5b42e5e4daa3d2579b',
+  hash: '0x902aa048c9fee4cc01f0533457009cdce6a172ea9eee5005617ae4ca3fc5fd04',
+  input: '0x',
+  success: true,
+  timestamp: 1525898092,
+  to: '0x7c59542b20002ed255598172cab48b86d865dfbb',
+  token: {
+    decimals: 8
+  },
+  value: '99160000000000000',
+};
+
 const apiTokenResponse = {
   from: '0x4bd5c3e7e4d6b3df23e9da5b42e5e4daa3d2579b',
   timestamp: 1525898092,
@@ -228,6 +251,24 @@ describe('Transaction Class', () => {
       expect(tx.to).toBe(toChecksumAddress(apiTokenResponse.to));
       expect(tx.data).toBe(apiTokenResponse.input);
       expect(tx.date.getFullYear()).toBe(2018);
+      expect(tx.state).toBe('success');
+    });
+
+    it('creates transaction with CryptoData history format', () => {
+      const tx = TransactionFactory.fromCryptoDataHistory(cryptoDataResponse);
+
+      const _valueBN = new BigNumber(cryptoDataResponse.value);
+      const valueBN = _valueBN.div(new BigNumber('10').pow(18));
+      expect(tx.value).toBe(valueBN.toString());
+      expect(tx.state).toBe('success');
+    });
+
+    it('creates transaction with token history format', () => {
+      const tx = TransactionFactory.fromCryptoDataHistory(cryptoDataTokenResponse);
+
+      const _valueBN = new BigNumber(cryptoDataTokenResponse.value);
+      const valueBN = _valueBN.div(new BigNumber('10').pow(cryptoDataTokenResponse.token.decimals));
+      expect(tx.value).toBe(valueBN.toString());
       expect(tx.state).toBe('success');
     });
 

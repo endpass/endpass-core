@@ -7551,6 +7551,14 @@ function () {
         timestamp: hexToNumber(trx.timestamp)
       }));
     }
+  }, {
+    key: "fromCryptoDataHistory",
+    value: function fromCryptoDataHistory(trx) {
+      var value = Transaction.getValueFromWei(trx);
+      return Transaction.create(_objectSpread({}, trx, {
+        value: value
+      }));
+    }
   }]);
 
   return TransactionFactory;
