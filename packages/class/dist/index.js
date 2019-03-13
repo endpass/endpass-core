@@ -5,7 +5,7 @@ import Tx from 'ethereumjs-tx';
 import HDKey from 'ethereumjs-wallet/hdkey';
 import { isAddress, toChecksumAddress, bytesToHex, toWei, numberToHex, hexToNumber, fromWei, hexToNumberString } from 'web3-utils';
 import { keystore } from '@endpass/utils';
-import { a as PROXY_REQUEST_PREFIX, b as BLOCK_UPDATE_INTERVAL_MSEC, c as INPAGE_EVENT, d as INPAGE_ID_PREFIX, e as AVAILABLE_USER_META_PROPS } from './chunk-a7ddc0ba.js';
+import { a as PROXY_REQUEST_PREFIX, b as BLOCK_UPDATE_INTERVAL_MSEC, c as INFURA_KEY, d as INPAGE_EVENT, e as INPAGE_ID_PREFIX, f as AVAILABLE_USER_META_PROPS } from './chunk-3464819d.js';
 import { a as NotificationError, b as iterableToArray, c as _toConsumableArray } from './chunk-3552dc45.js';
 export { a as NotificationError } from './chunk-3552dc45.js';
 import Web3 from 'web3';
@@ -253,9 +253,9 @@ var proxyTypes = {
   HDProxy: 'HDProxy'
 };
 var loaders = (_loaders = {}, _defineProperty$1(_loaders, proxyTypes.TrezorProxy, function () {
-  return import('./chunk-ad75a11b.js');
+  return import('./chunk-26fb0337.js');
 }), _defineProperty$1(_loaders, proxyTypes.LedgerProxy, function () {
-  return import('./chunk-85860cb9.js');
+  return import('./chunk-9a1cfdab.js');
 }), _defineProperty$1(_loaders, proxyTypes.HDProxy, function () {
   return import('./chunk-b23d0e3f.js');
 }), _loaders);
@@ -5091,6 +5091,55 @@ function () {
   return ProviderFactory;
 }();
 
+var _Object$freeze, _Object$freeze2, _Object$freeze3;
+
+var Network = function Network() {
+  _classCallCheck(this, Network);
+};
+Network.NET_ID = Object.freeze({
+  MAIN: 1,
+  ROPSTEN: 3,
+  RINKEBY: 4,
+  ETHEREUM_CLASSIC: 61
+});
+Network.NETWORK_URL_HTTP = Object.freeze((_Object$freeze = {}, _defineProperty$1(_Object$freeze, Network.NET_ID.MAIN, ['https://eth-mainnet.endpass.com:2083', "https://mainnet.infura.io/".concat(INFURA_KEY)]), _defineProperty$1(_Object$freeze, Network.NET_ID.ROPSTEN, ['https://eth-ropsten.endpass.com:2083', "https://ropsten.infura.io/".concat(INFURA_KEY)]), _defineProperty$1(_Object$freeze, Network.NET_ID.RINKEBY, ["https://rinkeby.infura.io/".concat(INFURA_KEY)]), _defineProperty$1(_Object$freeze, Network.NET_ID.ETHEREUM_CLASSIC, ['https://etc-mainnet.endpass.com:2083', 'https://etc-geth.0xinfra.com']), _Object$freeze));
+Network.NETWORK_URL = Object.freeze((_Object$freeze2 = {}, _defineProperty$1(_Object$freeze2, Network.NET_ID.MAIN, ['wss://eth-mainnet.endpass.com:2084'].concat(Network.NETWORK_URL_HTTP[Network.NET_ID.MAIN])), _defineProperty$1(_Object$freeze2, Network.NET_ID.ROPSTEN, ['wss://eth-ropsten.endpass.com:2084'].concat(Network.NETWORK_URL_HTTP[Network.NET_ID.ROPSTEN])), _defineProperty$1(_Object$freeze2, Network.NET_ID.RINKEBY, Network.NETWORK_URL_HTTP[Network.NET_ID.RINKEBY]), _defineProperty$1(_Object$freeze2, Network.NET_ID.ETHEREUM_CLASSIC, ['wss://etc-mainnet.endpass.com:2084'].concat(Network.NETWORK_URL_HTTP[Network.NET_ID.ETHEREUM_CLASSIC])), _Object$freeze2));
+Network.CURRENCIES = Object.freeze([{
+  name: 'ETH',
+  id: 1
+}, {
+  name: 'ETH-TEST',
+  id: 2
+}, {
+  name: 'ETC',
+  id: 3
+}]);
+Network.DEFAULT_NETWORKS = Object.freeze((_Object$freeze3 = {}, _defineProperty$1(_Object$freeze3, Network.NET_ID.MAIN, {
+  id: Network.NET_ID.MAIN,
+  networkType: 'main',
+  currency: 1,
+  name: 'Main',
+  url: Network.NETWORK_URL[Network.NET_ID.MAIN]
+}), _defineProperty$1(_Object$freeze3, Network.NET_ID.ROPSTEN, {
+  id: Network.NET_ID.ROPSTEN,
+  name: 'Ropsten',
+  networkType: 'ropsten',
+  currency: 2,
+  url: Network.NETWORK_URL[Network.NET_ID.ROPSTEN]
+}), _defineProperty$1(_Object$freeze3, Network.NET_ID.RINKEBY, {
+  id: Network.NET_ID.RINKEBY,
+  name: 'Rinkeby',
+  networkType: 'rinkeby',
+  currency: 2,
+  url: Network.NETWORK_URL[Network.NET_ID.RINKEBY]
+}), _defineProperty$1(_Object$freeze3, Network.NET_ID.ETHEREUM_CLASSIC, {
+  id: Network.NET_ID.ETHEREUM_CLASSIC,
+  name: 'Ethereum classic',
+  networkType: 'ethClassic',
+  currency: 3,
+  url: Network.NETWORK_URL[Network.NET_ID.ETHEREUM_CLASSIC]
+}), _Object$freeze3));
+
 var InpageProvider =
 /*#__PURE__*/
 function () {
@@ -7566,4 +7615,4 @@ function () {
 
 // classes WITH web3 instance inject dependency
 
-export { createENSClass, createWalletClass, createERC20TokenClass, ProxyRequest, EventEmitter, Web3Factory, ProviderFactory, InpageProvider, DappBridge$1 as DappBridge, LocalStorage, SettingsStorage, Transaction, TransactionFactory, Token };
+export { createENSClass, createWalletClass, createERC20TokenClass, ProxyRequest, EventEmitter, Web3Factory, ProviderFactory, Network, InpageProvider, DappBridge$1 as DappBridge, LocalStorage, SettingsStorage, Transaction, TransactionFactory, Token };

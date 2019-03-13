@@ -3,7 +3,7 @@ import { a as _objectSpread } from './chunk-6ea54473.js';
 import Tx from 'ethereumjs-tx';
 import HDKey from 'ethereumjs-wallet/hdkey';
 import { sha3, toDecimal, toHex } from 'web3-utils';
-import { f as HD_KEY_MNEMONIC_PATH, g as HARDWARE_DERIVIATION_PATH } from './chunk-a7ddc0ba.js';
+import { g as HD_KEY_MNEMONIC_PATH, h as HARDWARE_DERIVIATION_PATH } from './chunk-3464819d.js';
 import { a as NotificationError } from './chunk-3552dc45.js';
 import TrezorConnect from 'trezor-connect';
 import { a as getChildrenAddress } from './chunk-95a07fc6.js';
