@@ -8,6 +8,8 @@ export const INPAGE_EVENT = Object.freeze({
   REQUEST,
 });
 
+export const INFURA_KEY = 'zU4GTAQ0LjJNKddbyztc';
+
 export const INPAGE_ID_PREFIX = 'ep_';
 
 export const AVAILABLE_USER_META_PROPS = ['activeAccount'];
@@ -22,6 +24,8 @@ export const BLOCK_UPDATE_INTERVAL_MSEC = 15 * 1000;
 
 export default {
   HD_KEY_MNEMONIC_PATH,
+  INPAGE_EVENT,
+  INFURA_KEY,
   BLOCK_UPDATE_INTERVAL_MSEC,
   INPAGE_ID_PREFIX,
   AVAILABLE_USER_META_PROPS,
