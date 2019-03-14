@@ -7613,6 +7613,284 @@ function () {
   return TransactionFactory;
 }();
 
+var MESSAGE_TYPE = 'endpass-cw-msgr';
+var privateMethods$1 = {
+  onReceiveMessage: Symbol('onReceiveMessage'),
+  sendOutside: Symbol('sendOutside'),
+  onAction: Symbol('onAction'),
+  offAction: Symbol('offAction')
+};
+
+var CrossWindowMessenger =
+/*#__PURE__*/
+function () {
+  /**
+   * @param {String} props.to To direction of send messages
+   * @param {String} props.from From direction of receive messages
+   * @param {Window} [props.target] target object for messages
+   * @param {String} [props.name] name of current messenger
+   * @param {Object} [props.bus] bus for events
+   */
+  function CrossWindowMessenger() {
+    var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    _classCallCheck(this, CrossWindowMessenger);
+
+    if (!props.to || !props.from) {
+      throw new Error('You must provide direction property');
+    }
+
+    if (props.to === props.from) {
+      throw new Error('Directions must be not equal');
+    }
+
+    this.name = props.name;
+    this.target = props.target;
+    this.directionFrom = "".concat(MESSAGE_TYPE, "-").concat(props.from);
+    this.directionTo = "".concat(MESSAGE_TYPE, "-").concat(props.to);
+    this.showLogs = props.showLogs;
+    this.actions = [];
+    this[privateMethods$1.onReceiveMessage] = this[privateMethods$1.onReceiveMessage].bind(this);
+    this.bus = props.bus || window;
+    this.bus.addEventListener('message', this[privateMethods$1.onReceiveMessage]);
+  }
+  /**
+   * Receive event from other window and prepare answer
+   * @param ev Event from window.postMessage emitter
+   */
+
+
+  _createClass(CrossWindowMessenger, [{
+    key: privateMethods$1.onReceiveMessage,
+    value: function value(ev) {
+      var _this = this;
+
+      var source = ev.source,
+          _ev$data = ev.data,
+          data = _ev$data === void 0 ? {} : _ev$data;
+
+      if (data.messageType !== MESSAGE_TYPE || data.to !== this.directionFrom) {
+        return;
+      }
+
+      this.showLogs && console.log('-- CrossWindowMessenger.onReceiveMessage()', this.name, data);
+      var payload = data.payload,
+          from = data.from,
+          to = data.to,
+          method = data.method;
+      var req = {
+        source: source,
+        answer: function answer(result) {
+          _this[privateMethods$1.sendOutside]({
+            target: source,
+            method: method,
+            to: from,
+            from: to,
+            payload: result
+          });
+        }
+      };
+      this.actions.forEach(function (action) {
+        var actionMethod = action.method,
+            cb = action.cb;
+
+        if (method === actionMethod) {
+          cb(payload, req);
+        }
+      });
+    }
+    /**
+     * Send message to target
+     * @param {String} props.to To direction of send messages
+     * @param {String} props.from From direction of receive messages
+     * @param {Window} props.target target object for messages
+     * @param {String} props.method method what method need to be call
+     * @param {Object} [props.payload] payload send data
+     */
+
+  }, {
+    key: privateMethods$1.sendOutside,
+    value: function value(props) {
+      this.showLogs && console.log('-- CrossWindowMessenger().sendOutside', this.name, props);
+
+      if (!props.target) {
+        throw new Error('You must provide message target!');
+      }
+
+      if (!props.to) {
+        throw new Error('You must provide "to" destination');
+      }
+
+      if (!props.from) {
+        throw new Error('You must provide "from" destination');
+      }
+
+      if (!props.method) {
+        throw new Error('You must provide "method"');
+      }
+
+      props.target.postMessage({
+        messageType: MESSAGE_TYPE,
+        to: props.to,
+        from: props.from,
+        method: props.method,
+        payload: props.payload
+      }, '*');
+    }
+    /**
+     * Bind actions for process messages from outside
+     * @param {String} method for bind actions
+     * @param {Function} cb callback
+     */
+
+  }, {
+    key: privateMethods$1.onAction,
+    value: function value(method, cb) {
+      this.actions.push({
+        method: method,
+        cb: cb
+      });
+    }
+    /**
+     * Off action by callback link
+     * @param {Function} cb callback
+     */
+
+  }, {
+    key: privateMethods$1.offAction,
+    value: function value(cb) {
+      this.actions = this.actions.filter(function (action) {
+        return action.cb !== cb;
+      });
+    }
+    /**
+     * Define target for send messages
+     * @param {Object} target
+     */
+
+  }, {
+    key: "setTarget",
+    value: function setTarget(target) {
+      this.target = target;
+    }
+    /**
+     * Wait answer for special method
+     *
+     * @param {String} method method for await process
+     * @param {any} [payload] send payload data
+     * @returns {Promise<any>}
+     */
+
+  }, {
+    key: "sendAndWaitResponse",
+    value: function () {
+      var _sendAndWaitResponse = _asyncToGenerator(
+      /*#__PURE__*/
+      _regeneratorRuntime.mark(function _callee(method, payload) {
+        var _this2 = this;
+
+        var result;
+        return _regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                if (this.target) {
+                  _context.next = 2;
+                  break;
+                }
+
+                throw new Error('Target is not defined to send message!');
+
+              case 2:
+                result = new Promise(function (resolve) {
+                  // TODO: add timeout here ?
+                  var handler = function handler(data, req) {
+                    _this2.showLogs && console.log('-- CrossWindowMessenger.sendAndWaitResponse() -> handler callback', _this2.name, data, req);
+
+                    _this2[privateMethods$1.offAction](handler);
+
+                    resolve(data);
+                  };
+
+                  _this2[privateMethods$1.onAction](method, handler);
+                });
+                this.send(method, payload);
+                return _context.abrupt("return", result);
+
+              case 5:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function sendAndWaitResponse(_x, _x2) {
+        return _sendAndWaitResponse.apply(this, arguments);
+      }
+
+      return sendAndWaitResponse;
+    }()
+    /**
+     * Subscribe to special method for answer
+     * @param {String} method
+     * @param {Function} cb callback
+     * @return {Function} disposer
+     */
+
+  }, {
+    key: "subscribe",
+    value: function subscribe(method, cb) {
+      var _this3 = this;
+
+      this[privateMethods$1.onAction](method, cb);
+      return function () {
+        return _this3.unsubscribe(cb);
+      };
+    }
+    /**
+     * Remove callback from method subscription
+     * @param {Function} cb callback
+     */
+
+  }, {
+    key: "unsubscribe",
+    value: function unsubscribe(cb) {
+      this[privateMethods$1.offAction](cb);
+    }
+    /**
+     * Send data to target
+     * @param {String} method
+     * @param {any} payload
+     */
+
+  }, {
+    key: "send",
+    value: function send(method, payload) {
+      this[privateMethods$1.sendOutside]({
+        target: this.target,
+        to: this.directionTo,
+        from: this.directionFrom,
+        method: method,
+        payload: payload
+      });
+    }
+    /**
+     * Destroy and clean state of messenger
+     */
+
+  }, {
+    key: "destroy",
+    value: function destroy() {
+      this.bus.removeEventListener('message', this[privateMethods$1.onReceiveMessage]);
+      this.actions.length = 0;
+      this.target = null;
+    }
+  }]);
+
+  return CrossWindowMessenger;
+}();
+
 // classes WITH web3 instance inject dependency
 
-export { createENSClass, createWalletClass, createERC20TokenClass, ProxyRequest, EventEmitter, Web3Factory, ProviderFactory, Network, InpageProvider, DappBridge$1 as DappBridge, LocalStorage, SettingsStorage, Transaction, TransactionFactory, Token };
+export { createENSClass, createWalletClass, createERC20TokenClass, ProxyRequest, EventEmitter, Web3Factory, ProviderFactory, Network, InpageProvider, DappBridge$1 as DappBridge, LocalStorage, SettingsStorage, Transaction, TransactionFactory, Token, CrossWindowMessenger };
