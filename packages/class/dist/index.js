@@ -7861,7 +7861,7 @@ function () {
     /**
      * Send data to target
      * @param {String} method
-     * @param {any} payload
+     * @param {{}} payload
      */
 
   }, {
