@@ -7630,6 +7630,7 @@ function () {
    * @param {String} props.from From direction of receive messages
    * @param {Window} [props.target] target object for messages
    * @param {String} [props.name] name of current messenger
+   * @param {Boolean} [props.showLogs] show logs for debug
    * @param {Object} [props.bus] bus for events
    */
   function CrossWindowMessenger() {
@@ -7670,11 +7671,14 @@ function () {
           _ev$data = ev.data,
           data = _ev$data === void 0 ? {} : _ev$data;
 
-      if (data.messageType !== MESSAGE_TYPE || data.to !== this.directionFrom) {
+      if (data.messageType !== MESSAGE_TYPE || data.to !== this.directionFrom || this.target !== source) {
         return;
       }
 
-      this.showLogs && console.log('-- CrossWindowMessenger.onReceiveMessage()', this.name, data);
+      if (this.showLogs) {
+        console.log('-- CrossWindowMessenger.onReceiveMessage()', this.name, data);
+      }
+
       var payload = data.payload,
           from = data.from,
           to = data.to,
@@ -7712,7 +7716,9 @@ function () {
   }, {
     key: privateMethods$1.sendOutside,
     value: function value(props) {
-      this.showLogs && console.log('-- CrossWindowMessenger().sendOutside', this.name, props);
+      if (this.showLogs) {
+        console.log('-- CrossWindowMessenger().sendOutside', this.name, props);
+      }
 
       if (!props.target) {
         throw new Error('You must provide message target!');
@@ -7806,7 +7812,9 @@ function () {
                 result = new Promise(function (resolve) {
                   // TODO: add timeout here ?
                   var handler = function handler(data, req) {
-                    _this2.showLogs && console.log('-- CrossWindowMessenger.sendAndWaitResponse() -> handler callback', _this2.name, data, req);
+                    if (_this2.showLogs) {
+                      console.log('-- CrossWindowMessenger.sendAndWaitResponse() -> handler callback', _this2.name, data, req);
+                    }
 
                     _this2[privateMethods$1.offAction](handler);
 
