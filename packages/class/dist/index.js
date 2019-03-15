@@ -349,6 +349,7 @@ function () {
     this.signStrategyName = null;
     this.isPublic = isPublic;
     this.isHardware = isHardware;
+    this.type = accountType;
 
     if (isHardware) {
       this.isPublic = false;
