@@ -13,6 +13,7 @@ export default class CrossWindowMessenger {
    * @param {String} props.from From direction of receive messages
    * @param {Window} [props.target] target object for messages
    * @param {String} [props.name] name of current messenger
+   * @param {Boolean} [props.showLogs] show logs for debug
    * @param {Object} [props.bus] bus for events
    */
   constructor(props = {}) {
@@ -44,10 +45,20 @@ export default class CrossWindowMessenger {
    */
   [privateMethods.onReceiveMessage](ev) {
     const { source, data = {} } = ev;
-    if (data.messageType !== MESSAGE_TYPE || data.to !== this.directionFrom) {
+    if (
+      data.messageType !== MESSAGE_TYPE ||
+      data.to !== this.directionFrom ||
+      this.target !== source
+    ) {
       return;
     }
-    this.showLogs && console.log('-- CrossWindowMessenger.onReceiveMessage()', this.name, data);
+    if (this.showLogs) {
+      console.log(
+        '-- CrossWindowMessenger.onReceiveMessage()',
+        this.name,
+        data,
+      );
+    }
     const { payload, from, to, method } = data;
 
     const req = {
@@ -80,7 +91,10 @@ export default class CrossWindowMessenger {
    * @param {Object} [props.payload] payload send data
    */
   [privateMethods.sendOutside](props) {
-    this.showLogs && console.log('-- CrossWindowMessenger().sendOutside', this.name, props);
+    if (this.showLogs) {
+      console.log('-- CrossWindowMessenger().sendOutside', this.name, props);
+    }
+
     if (!props.target) {
       throw new Error('You must provide message target!');
     }
@@ -153,7 +167,14 @@ export default class CrossWindowMessenger {
       // TODO: add timeout here ?
 
       const handler = (data, req) => {
-        this.showLogs && console.log('-- CrossWindowMessenger.sendAndWaitResponse() -> handler callback', this.name, data, req);
+        if (this.showLogs) {
+          console.log(
+            '-- CrossWindowMessenger.sendAndWaitResponse() -> handler callback',
+            this.name,
+            data,
+            req,
+          );
+        }
         this[privateMethods.offAction](handler);
         resolve(data);
       };
