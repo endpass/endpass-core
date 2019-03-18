@@ -7615,6 +7615,7 @@ function () {
 }();
 
 var MESSAGE_TYPE = 'endpass-cw-msgr';
+var ALL_METHODS = "-".concat(MESSAGE_TYPE, "-all-methods");
 var privateMethods$1 = {
   onReceiveMessage: Symbol('onReceiveMessage'),
   sendOutside: Symbol('sendOutside'),
@@ -7699,7 +7700,7 @@ function () {
         var actionMethod = action.method,
             cb = action.cb;
 
-        if (method === actionMethod) {
+        if (actionMethod === method || actionMethod === ALL_METHODS) {
           cb(payload, req);
         }
       });
@@ -7746,16 +7747,21 @@ function () {
     }
     /**
      * Bind actions for process messages from outside
-     * @param {String} method for bind actions
+     * @param {String|Array} method for bind actions
      * @param {Function} cb callback
      */
 
   }, {
     key: privateMethods$1.onAction,
     value: function value(method, cb) {
-      this.actions.push({
-        method: method,
-        cb: cb
+      var _this2 = this;
+
+      var methodList = [].concat(method);
+      methodList.forEach(function (item) {
+        _this2.actions.push({
+          method: item,
+          cb: cb
+        });
       });
     }
     /**
@@ -7794,7 +7800,7 @@ function () {
       var _sendAndWaitResponse = _asyncToGenerator(
       /*#__PURE__*/
       _regeneratorRuntime.mark(function _callee(method, payload) {
-        var _this2 = this;
+        var _this3 = this;
 
         var result;
         return _regeneratorRuntime.wrap(function _callee$(_context) {
@@ -7812,16 +7818,16 @@ function () {
                 result = new Promise(function (resolve) {
                   // TODO: add timeout here ?
                   var handler = function handler(data, req) {
-                    if (_this2.showLogs) {
-                      console.log('-- CrossWindowMessenger.sendAndWaitResponse() -> handler callback', _this2.name, data, req);
+                    if (_this3.showLogs) {
+                      console.log('-- CrossWindowMessenger.sendAndWaitResponse() -> handler callback', _this3.name, data, req);
                     }
 
-                    _this2[privateMethods$1.offAction](handler);
+                    _this3[privateMethods$1.offAction](handler);
 
                     resolve(data);
                   };
 
-                  _this2[privateMethods$1.onAction](method, handler);
+                  _this3[privateMethods$1.onAction](method, handler);
                 });
                 this.send(method, payload);
                 return _context.abrupt("return", result);
@@ -7842,7 +7848,7 @@ function () {
     }()
     /**
      * Subscribe to special method for answer
-     * @param {String} method
+     * @param {String | Function} method
      * @param {Function} cb callback
      * @return {Function} disposer
      */
@@ -7850,11 +7856,16 @@ function () {
   }, {
     key: "subscribe",
     value: function subscribe(method, cb) {
-      var _this3 = this;
+      var _this4 = this;
+
+      if (typeof method === "function") {
+        cb = method;
+        method = ALL_METHODS;
+      }
 
       this[privateMethods$1.onAction](method, cb);
       return function () {
-        return _this3.unsubscribe(cb);
+        return _this4.unsubscribe(cb);
       };
     }
     /**
