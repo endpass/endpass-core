@@ -93,7 +93,7 @@ describe('CrossWindowMessenger class', () => {
       expect(handler).not.toBeCalled();
     });
 
-    it('should subscribe and clearSubscribe correctly', () => {
+    it('should subscribe and unsubscribe correctly', () => {
       const handler = jest.fn();
       const method = 'checkSubscribe';
 
@@ -105,6 +105,39 @@ describe('CrossWindowMessenger class', () => {
       messengerTwo.unsubscribe(handler);
 
       messengerOne.send(method, {});
+
+      expect(handler).toBeCalledTimes(2);
+    });
+
+    it('should subscribe to all methods', () => {
+      const handler = jest.fn();
+
+      messengerTwo.subscribe(handler);
+
+      messengerOne.send('one');
+      messengerOne.send('two');
+
+      messengerTwo.unsubscribe(handler);
+
+      messengerOne.send('one', {});
+
+      expect(handler).toBeCalledTimes(2);
+    });
+
+
+
+    it('should subscribe to array of methods', () => {
+      const handler = jest.fn();
+
+      messengerTwo.subscribe(['one', 'two'], handler);
+
+      messengerOne.send('one');
+      messengerOne.send('two');
+      messengerOne.send('three');
+
+      messengerTwo.unsubscribe(handler);
+
+      messengerOne.send('one');
 
       expect(handler).toBeCalledTimes(2);
     });

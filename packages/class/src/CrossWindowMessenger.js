@@ -1,4 +1,5 @@
 const MESSAGE_TYPE = 'endpass-cw-msgr';
+const ALL_METHODS = `-${MESSAGE_TYPE}-all-methods`;
 
 const privateMethods = {
   onReceiveMessage: Symbol('onReceiveMessage'),
@@ -76,7 +77,7 @@ export default class CrossWindowMessenger {
 
     this.actions.forEach(action => {
       const { method: actionMethod, cb } = action;
-      if (method === actionMethod) {
+      if (actionMethod === method || actionMethod === ALL_METHODS) {
         cb(payload, req);
       }
     });
@@ -125,13 +126,17 @@ export default class CrossWindowMessenger {
 
   /**
    * Bind actions for process messages from outside
-   * @param {String} method for bind actions
+   * @param {String|Array} method for bind actions
    * @param {Function} cb callback
    */
   [privateMethods.onAction](method, cb) {
-    this.actions.push({
-      method,
-      cb,
+    const methodList = [].concat(method);
+
+    methodList.forEach((item) => {
+      this.actions.push({
+        method: item,
+        cb,
+      });
     });
   }
 
@@ -188,11 +193,15 @@ export default class CrossWindowMessenger {
 
   /**
    * Subscribe to special method for answer
-   * @param {String} method
+   * @param {String | Function} method
    * @param {Function} cb callback
    * @return {Function} disposer
    */
   subscribe(method, cb) {
+    if (typeof method === "function") {
+      cb = method;
+      method = ALL_METHODS;
+    }
     this[privateMethods.onAction](method, cb);
     return () => this.unsubscribe(cb);
   }
