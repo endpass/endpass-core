@@ -1,6 +1,6 @@
 {
   "name": "@endpass/class",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "Class modules",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -35,7 +35,8 @@
   },
   "files": [
     "dist",
-    "src"
+    "src",
+    "index.d.ts"
   ],
   "types": "./index.d.ts",
   "bugs": {
