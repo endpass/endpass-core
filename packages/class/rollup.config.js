@@ -15,11 +15,19 @@ function resolveFile(file) {
   return path.resolve(__dirname, file);
 }
 
-const withSourceMaps = (process.env.NODE_ENV !== 'production');
+const withSourceMaps = process.env.NODE_ENV !== 'production';
+
+const inputFiles = pkg.separatedModules
+  .concat('index.js')
+  .map(item => resolveFile(`./src/${item}`));
 
 export default {
-  input: resolveFile('./src/index.js'),
-  external: [...Object.keys(pkg.dependencies), 'websocket', 'ethereumjs-wallet/hdkey'],
+  input: inputFiles,
+  external: [
+    ...Object.keys(pkg.dependencies),
+    'websocket',
+    'ethereumjs-wallet/hdkey',
+  ],
   plugins: [
     json(),
     resolve({

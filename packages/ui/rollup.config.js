@@ -8,6 +8,8 @@ import find from 'find';
 
 import pkg from './package.json';
 
+const DEST_DIR = './dist';
+
 function resolveDir(dir) {
   return path.join(__dirname, '', dir);
 }
@@ -52,7 +54,7 @@ const commonConfig = {
     }),
     string({
       include: '**/*.svg',
-    }),
+    })
   ],
   watch: {
     exclude: excludePaths,
@@ -65,12 +67,12 @@ export default [{
   output: [
     {
       ...outputConfig,
-      file: resolveFile(pkg.module),
+      file: resolveFile(`${DEST_DIR}/${pkg.module}`),
       format: 'esm',
     }, {
       ...outputConfig,
       name: pkg.name,
-      file: resolveFile(pkg.main),
+      file: resolveFile(`${DEST_DIR}/${pkg.main}`),
       format: 'umd',
     }
   ],
@@ -81,7 +83,7 @@ export default [{
     {
       ...outputConfig,
       format: 'cjs',
-      dir: resolveDir('./dist/components'),
+      dir: resolveDir(`${DEST_DIR}/components`),
       entryFileNames: '[name].js',
     }
   ],

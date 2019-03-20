@@ -9,6 +9,7 @@
   "module": "dist/endpass-faucet.esm.js",
   "repository": "https://github.com/endpass/endpass-core/tree/master/packages/faucet",
   "scripts": {
+    "update": "yarn build && npm publish ./",
     "build": "rimraf ./dist && npm run build:dist",
     "build:dist": "NODE_ENV=production rollup -c",
     "watch": "rollup -c -w",

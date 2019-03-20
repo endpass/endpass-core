@@ -10,7 +10,7 @@ You'll need to have `lerna` installed globally
 Install all packages
 
 ```sh
-lerna bootstrap
+lerna exec -- yarn
 ```
 
 ### Tests
@@ -19,4 +19,16 @@ Run tests of all packages
 
 ```sh
 lerna run test
+```
+
+### Publish
+
+In each module run
+```sh
+yarn update
+```
+
+or if need update all modules
+```sh
+lerna run update
 ```
