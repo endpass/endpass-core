@@ -11,7 +11,7 @@ Vue.use(UIComponents);
 or
 
 ```sh
-import VButton from '@endpass/ui/dist/components/VButton';
+import VButton from '@endpass/ui/components/VButton';
 
 Vue.component(VButton.name, VButton);
 ```
@@ -24,7 +24,7 @@ or
 </template>
 
 <script>
-import VModal from '@endpass/ui/dist/components/VModal';
+import VModal from '@endpass/ui/components/VModal';
 
 export default {
   name: 'YourComponentName'
