@@ -19,6 +19,6 @@ export {
   default as TransactionFactory,
 } from './transaction/TransactionFactory';
 
-export { NotificationError } from './error';
 export { default as Token } from './Token';
+export { NotificationError } from './error';
 export { default as CrossWindowMessenger } from './CrossWindowMessenger';
