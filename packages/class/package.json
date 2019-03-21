@@ -1,6 +1,6 @@
 {
   "name": "@endpass/class",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "description": "Class modules",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -31,7 +31,7 @@
       "pre-commit": "lint-staged"
     }
   },
-  "types": "./types/index.d.ts",
+  "typings": "./types",
   "copyToDist": [
     "src",
     "types",
@@ -40,7 +40,10 @@
   ],
   "separatedModules": [
     "CrossWindowMessenger.js",
-    "EventEmitter.js"
+    "EventEmitter.js",
+    "Network.js",
+    "Web3Factory.js",
+    "Token.js"
   ],
   "bugs": {
     "url": "https://github.com/endpass/endpass-core/issues"

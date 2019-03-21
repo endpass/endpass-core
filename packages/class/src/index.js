@@ -8,7 +8,7 @@ export { ProxyRequest } from './proxyRequest';
 export { default as EventEmitter } from './EventEmitter';
 export { default as Web3Factory } from './Web3Factory';
 export { ProviderFactory } from './provider';
-export { default as Network } from './network/Network';
+export { default as Network } from './Network';
 export { default as InpageProvider } from './provider/InpageProvider';
 
 export { default as DappBridge } from './DappBridge';

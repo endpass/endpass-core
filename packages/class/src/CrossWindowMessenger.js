@@ -33,7 +33,7 @@ export default class CrossWindowMessenger {
 
     this[privateMethods.onReceiveMessage] = this[
       privateMethods.onReceiveMessage
-      ].bind(this);
+    ].bind(this);
 
     this.bus = props.bus || window;
 
@@ -54,6 +54,7 @@ export default class CrossWindowMessenger {
       return;
     }
     if (this.showLogs) {
+      // eslint-disable-next-line
       console.log(
         '-- CrossWindowMessenger.onReceiveMessage()',
         this.name,
@@ -64,6 +65,7 @@ export default class CrossWindowMessenger {
 
     const req = {
       source,
+      method,
       answer: result => {
         this[privateMethods.sendOutside]({
           target: source,
@@ -93,6 +95,7 @@ export default class CrossWindowMessenger {
    */
   [privateMethods.sendOutside](props) {
     if (this.showLogs) {
+      // eslint-disable-next-line
       console.log('-- CrossWindowMessenger().sendOutside', this.name, props);
     }
 
@@ -132,7 +135,7 @@ export default class CrossWindowMessenger {
   [privateMethods.onAction](method, cb) {
     const methodList = [].concat(method);
 
-    methodList.forEach((item) => {
+    methodList.forEach(item => {
       this.actions.push({
         method: item,
         cb,
@@ -173,6 +176,7 @@ export default class CrossWindowMessenger {
 
       const handler = (data, req) => {
         if (this.showLogs) {
+          // eslint-disable-next-line
           console.log(
             '-- CrossWindowMessenger.sendAndWaitResponse() -> handler callback',
             this.name,
@@ -198,8 +202,10 @@ export default class CrossWindowMessenger {
    * @return {Function} disposer
    */
   subscribe(method, cb) {
-    if (typeof method === "function") {
+    if (typeof method === 'function') {
+      // eslint-disable-next-line
       cb = method;
+      // eslint-disable-next-line
       method = ALL_METHODS;
     }
     this[privateMethods.onAction](method, cb);
