@@ -66,15 +66,17 @@ describe('CrossWindowMessenger class', () => {
     });
 
     it('should handle data by subscribe', (done) => {
+      const methodName = 'checkMethod';
 
-      messengerTwo.subscribe('check', (payload) => {
+      messengerTwo.subscribe(methodName, (payload, req) => {
+        expect(req.method).toBe(methodName);
         expect(payload).toEqual({
           field: 'field',
         });
         done();
       });
 
-      messengerOne.send('check', {
+      messengerOne.send(methodName, {
         field: 'field',
       });
     });
