@@ -7,7 +7,7 @@
     <div class="modal-content">
       <div class="page-loader-logo">
         <img
-          src="/static/logo-dark.png"
+          src="/logo-dark.png"
           alt="Endpass"
         >
       </div>
