@@ -18,8 +18,8 @@ function resolveFile(file) {
 const withSourceMaps = process.env.NODE_ENV !== 'production';
 
 const inputFiles = pkg.separatedModules
-  .concat('index.js')
-  .map(item => resolveFile(`./src/${item}`));
+  .concat('index')
+  .map(item => resolveFile(`./src/${item}.js`));
 
 export default {
   input: inputFiles,

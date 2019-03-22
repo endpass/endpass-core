@@ -1,6 +1,6 @@
 {
   "name": "@endpass/class",
-  "version": "0.9.6",
+  "version": "0.10.0",
   "description": "Class modules",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -39,11 +39,13 @@
     "package.json"
   ],
   "separatedModules": [
-    "CrossWindowMessenger.js",
-    "EventEmitter.js",
-    "Network.js",
-    "Web3Factory.js",
-    "Token.js"
+    "CrossWindowMessenger",
+    "QueueArray",
+    "QueueAsync",
+    "EventEmitter",
+    "Network",
+    "Web3Factory",
+    "Token"
   ],
   "bugs": {
     "url": "https://github.com/endpass/endpass-core/issues"
