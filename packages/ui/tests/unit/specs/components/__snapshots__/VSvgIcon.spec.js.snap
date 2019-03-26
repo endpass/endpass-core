@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VSvgIcon render should render component 1`] = `
+<svg width="20px" height="20px" fill="" xmlns="http://www.w3.org/2000/svg" class="v-svg-icon">
+  <use xlink:href="TestUrl" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+`;
