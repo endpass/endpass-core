@@ -11,3 +11,4 @@ export { default as VRadio } from '@/components/VRadio';
 export { default as VSelect } from '@/components/VSelect';
 export { default as VSpinner } from '@/components/VSpinner';
 export { default as VTextarea } from '@/components/VTextarea';
+export { default as VSvgIcon } from '@/components/VSvgIcon';
