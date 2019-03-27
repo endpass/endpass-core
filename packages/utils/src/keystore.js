@@ -3,6 +3,7 @@ import bs58check from 'bs58check';
 import EthWallet from 'ethereumjs-wallet';
 import HDKey from 'ethereumjs-wallet/hdkey';
 import { KDF_ENCRYPT_OPTIONS } from './constants';
+import isV3 from './isV3';
 
 // Monkey patch keythereum to skip generating address for private keys
 // This allows us to encrypt private keys of arbitrary length, and
@@ -125,7 +126,5 @@ module.exports = {
   },
 
   // Simple sanity check to ensure a valid V3 keystore
-  isV3(json) {
-    return json && json.crypto && json.crypto.ciphertext;
-  },
+  isV3,
 };

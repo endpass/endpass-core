@@ -1,6 +1,6 @@
 {
   "name": "@endpass/utils",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Utils and helper functions",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -47,8 +47,8 @@
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@babel/plugin-transform-runtime": "^7.4.0",
-    "@babel/preset-env": "^7.4.1",
-    "@babel/runtime": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/runtime": "^7.4.2",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.15.3",
@@ -62,7 +62,7 @@
     "lint-staged": "^8.1.5",
     "prettier": "^1.16.4",
     "rimraf": "^2.6.3",
-    "rollup": "^1.7.0",
+    "rollup": "^1.7.3",
     "rollup-plugin-alias": "^1.5.1",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-copy": "^0.2.3"
