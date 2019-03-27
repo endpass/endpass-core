@@ -725,10 +725,10 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@endpass/utils@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@endpass/utils/-/utils-1.2.1.tgz#3f25df77fad9967b8bfdcbd185cdb1ebdaa78ddb"
-  integrity sha512-RbLONPn+2yfT4O3Y9ilNRbFyxHL1bD3NX5zuiSOYFgaffzJwVU7zDWq4vrvw0hXQG6GP4fNRlaEBOQ+ZGQAX1A==
+"@endpass/utils@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@endpass/utils/-/utils-1.2.2.tgz#49ac020c48abb628f60ee1779140ef2e8e50a558"
+  integrity sha512-L2xCYgVtDjrI6US0XL6cIykkUw4RDZLHX2nFFYypMw5V7bKtnETTIY/l6pVY4XTCsyFYnY2xDUvL9ZIDKrrxTA==
   dependencies:
     bs58check "^2.1.2"
     dayjs "^1.7.8"

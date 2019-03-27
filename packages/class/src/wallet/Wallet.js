@@ -1,6 +1,11 @@
 import Tx from 'ethereumjs-tx';
 import HDKey from 'ethereumjs-wallet/hdkey';
-import { isAddress, bytesToHex, toChecksumAddress } from 'web3-utils';
+import {
+  isAddress,
+  bytesToHex,
+  toChecksumAddress,
+  numberToHex,
+} from 'web3-utils';
 import { keystore } from '@endpass/utils';
 import { WALLET_TYPE, HARDWARE_WALLET_TYPE } from './types';
 import { loadProxy, proxyTypes } from './proxy';
@@ -210,10 +215,11 @@ export default class Wallet {
    */
   async sendSignedTransaction(transaction, password) {
     const nonce = await this.getNextNonce();
+
     const signedTx = await this.signTransaction(
       {
         ...transaction,
-        nonce,
+        nonce: numberToHex(nonce),
       },
       password,
     );
@@ -221,9 +227,15 @@ export default class Wallet {
     return new Promise((resolve, reject) => {
       const sendEvent = web3.eth.sendSignedTransaction(signedTx);
 
-      sendEvent.then(receipt => resolve(receipt.transactionHash));
-      sendEvent.on('error', error => reject(error));
-      sendEvent.catch(error => reject(error));
+      sendEvent.once('transactionHash', trxHash => {
+        resolve(trxHash);
+      });
+      sendEvent.on('error', error => {
+        reject(error);
+      });
+      sendEvent.catch(error => {
+        reject(error);
+      });
     });
   }
 
