@@ -14,7 +14,13 @@
     "build:dist": "rollup -c --environment BUILD:production",
     "build:watch": "yarn build:dist -w",
     "clear": "rimraf ./dist",
-    "test": "jest"
+    "test": "jest",
+    "pre-commit": "lint-staged",
+    "lint": "eslint '**/*.{js,vue,json}' --quiet",
+    "format:prettier:vue": "prettier --write '**/*.vue'",
+    "format:eslint": "eslint --ext .json,.js,.vue src/ --fix --quiet",
+    "format:prettier": "prettier --write '**/*.{js,json}'",
+    "format": "yarn format:prettier:vue && yarn format:eslint && yarn format:prettier"
   },
   "bugs": {
     "url": "https://github.com/endpass/endpass-core/issues"
@@ -24,6 +30,15 @@
     "README.md",
     "package.json"
   ],
+  "pre-commit": [
+    "pre-commit"
+  ],
+  "lint-staged": {
+    "*.{js,json,vue}": [
+      "yarn format",
+      "git add"
+    ]
+  },
   "dependencies": {
     "@endpass/utils": "^1.2.1",
     "vue": "^2.5.21"
@@ -34,14 +49,23 @@
     "@babel/runtime": "^7.4.0",
     "@vue/test-utils": "^1.0.0-beta.28",
     "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "babel-plugin-dynamic-import-node": "^2.2.0",
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-json": "^1.4.0",
+    "eslint-plugin-vue": "^5.2.2",
     "find": "^0.3.0",
     "fs-extra": "^7.0.1",
     "jest": "^23.6.0",
     "jest-serializer-vue": "^2.0.2",
     "jest-transform-stub": "^1.0.0",
+    "lint-staged": "^8.1.5",
     "node-sass": "^4.11.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.16.4",
     "rimraf": "^2.6.3",
     "rollup": "^1.7.0",
     "rollup-plugin-alias": "^1.5.1",
