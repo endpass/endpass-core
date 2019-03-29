@@ -12,7 +12,9 @@
       class="control"
     >
       <label
-        :class="{'is-info is-selected': getOptionParameter(option, 'val') === value}"
+        :class="{
+          'is-info is-selected': getOptionParameter(option, 'val') === value,
+        }"
         :for="id + getKeyString(option)"
         class="button is-multiline"
       >
@@ -30,7 +32,7 @@
         :name="name"
         :value="getOptionParameter(option, 'val')"
         type="radio"
-      >
+      />
     </div>
     <p
       v-if="error"

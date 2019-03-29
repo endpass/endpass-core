@@ -1,6 +1,9 @@
 <template>
   <div class="field">
-    <label v-if="label" class="label">{{ label }}</label>
+    <label
+      v-if="label"
+      class="label"
+    >{{ label }}</label>
     <div class="control select">
       <select
         v-model="selected"

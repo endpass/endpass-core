@@ -4,7 +4,7 @@
       <button
         v-bind="$attrs"
         :disabled="disabled"
-        :class="[...classes, {'is-loading' : loading }]"
+        :class="[...classes, { 'is-loading': loading }]"
         class="button"
         v-on="$listeners"
       >
@@ -40,5 +40,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

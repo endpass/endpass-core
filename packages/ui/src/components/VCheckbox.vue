@@ -3,10 +3,10 @@
     <label class="checkbox">
       <input
         :name="name"
-        :class="{'is-danger': error }"
+        :class="{ 'is-danger': error }"
         v-model="innerValue"
         type="checkbox"
-      >
+      />
       <slot />
     </label>
   </div>

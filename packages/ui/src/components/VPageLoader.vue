@@ -9,7 +9,7 @@
         <img
           src="/logo-dark.png"
           alt="Endpass"
-        >
+        />
       </div>
       <div class="spinner">
         <div class="spinner-dot spinner-dot-1" />
