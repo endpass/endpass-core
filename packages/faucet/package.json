@@ -15,8 +15,10 @@
     "watch": "rollup -c -w",
     "unit": "jest --config tests/unit/jest.conf.js",
     "unit:watch": "jest --config tests/unit/jest.conf.js --watch",
-    "format": "prettier --write 'src/**/*.{js,json}'",
-    "lint": "eslint --fix './src/**/*.js'"
+    "format:prettier:vue": "prettier --write '**/*.vue'",
+    "format:eslint": "eslint --ext .json,.js,.vue src/ --fix --quiet",
+    "format:prettier": "prettier --write '**/*.{js,json}'",
+    "format": "yarn format:prettier:vue && yarn format:eslint && yarn format:prettier"
   },
   "bugs": {
     "url": "https://github.com/endpass/endpass-core/issues"
@@ -24,6 +26,15 @@
   "files": [
     "dist"
   ],
+  "pre-commit": [
+    "pre-commit"
+  ],
+  "lint-staged": {
+    "*.{js,json,vue}": [
+      "yarn format",
+      "git add"
+    ]
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "vue": "^2.5.22"
@@ -44,12 +55,14 @@
     "babel-plugin-dynamic-import-node": "^2.2.0",
     "eslint": "^5.12.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^3.4.0",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-json": "^1.4.0",
+    "eslint-plugin-vue": "^5.2.2",
     "jest": "^23.6.0",
     "jest-serializer-vue": "^2.0.2",
     "jest-transform-stub": "^1.0.0",
+    "lint-staged": "^8.1.5",
+    "pre-commit": "^1.2.2",
     "prettier": "^1.15.3",
     "rimraf": "^2.6.3",
     "rollup": "^1.1.0",

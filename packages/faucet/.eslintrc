@@ -6,24 +6,34 @@
     "jest": true
   },
   "globals": {
+    "Cypress": true,
+    "cy": true,
     "ENV": true
   },
+  "plugins": [
+    "json"
+  ],
   "parserOptions": {
     "parser": "babel-eslint"
   },
   "extends": [
     "airbnb-base",
-    "plugin:prettier/recommended"
+    "plugin:vue/recommended"
   ],
   "rules": {
-    "prettier/prettier": [
-      "error",
+    "func-names": 0,
+    "max-len": [
+      "warn",
+      80,
+      2,
       {
-        "singleQuote": true,
-        "trailingComma": "all"
+        "ignoreUrls": true,
+        "ignoreComments": false,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": false,
+        "ignoreTemplateLiterals": false,
       }
     ],
-    "func-names": 0,
     "no-param-reassign": [
       "error",
       {
@@ -31,11 +41,71 @@
         "ignorePropertyModificationsFor": ["state"]
       }
     ],
+    "import/extensions": ["error", {
+      "js": "never"
+    }],
     "import/no-unresolved": [
       "error",
       {
         "ignore": ["@", "fixtures", "mocks"]
       }
-    ]
+    ],
+    "vue/order-in-components": [
+      "error",
+      {
+        "order": [
+          "el",
+          "name",
+          "inheritAttrs",
+          "inject",
+          "provide",
+          ["props", "propsData"],
+          "data",
+          "computed",
+          "watch",
+          "methods",
+          "LIFECYCLE_HOOKS",
+          "mixins",
+          "components",
+          [
+            "functional",
+            "delimiters",
+            "comments",
+            "directives",
+            "filters",
+            "parent",
+            "extends",
+            "model",
+            "template",
+            "render",
+            "renderError"
+          ]
+        ]
+      }
+    ],
+    "vue/max-attributes-per-line": [
+      "error",
+      {
+        "singleline": 1,
+        "multiline": {
+          "max": 1,
+          "allowFirstLine": false
+        }
+      }
+    ],
+    "vue/html-closing-bracket-newline": [
+      "error",
+      {
+        "singleline": "never",
+        "multiline": "always"
+      }
+    ],
+    "vue/html-indent": ["error", 2, {
+      "attribute": 1,
+      "baseIndent": 1,
+      "closeBracket": 0,
+      "alignAttributesVertically": true,
+      "ignores": []
+    }]
   }
 }
