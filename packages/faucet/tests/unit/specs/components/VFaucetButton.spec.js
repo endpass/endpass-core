@@ -64,7 +64,7 @@ describe('VFaucetButton', () => {
 
       const button = wrapper.find('button');
 
-      axiosMock.onGet(url).reply((config) => {
+      axiosMock.onGet(url).reply(config => {
         expect(config.method).toBe('get');
         expect(config.url).toBe(url);
 
@@ -88,7 +88,7 @@ describe('VFaucetButton', () => {
 
       const button = wrapper.find('button');
 
-      axiosMock.onGet(url).reply((config) => {
+      axiosMock.onGet(url).reply(config => {
         expect(config.method).toBe('get');
         expect(config.url).toBe(url);
 
@@ -100,9 +100,7 @@ describe('VFaucetButton', () => {
       await flushPromises();
 
       const err = new Error('Request failed with status code 404');
-      expect(wrapper.emitted()['donate-error'][0][0])
-        .toMatchObject(err);
-
+      expect(wrapper.emitted()['donate-error'][0][0]).toMatchObject(err);
     });
   });
 
