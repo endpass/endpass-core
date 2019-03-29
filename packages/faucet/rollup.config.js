@@ -4,7 +4,7 @@ import pluginResolve from 'rollup-plugin-node-resolve';
 import pluginCommonjs from 'rollup-plugin-commonjs';
 import pluginAlias from 'rollup-plugin-alias';
 import pluginBabel from 'rollup-plugin-babel';
-import pluginVue from 'rollup-plugin-vue'
+import pluginVue from 'rollup-plugin-vue';
 
 import pkg from './package.json';
 
@@ -16,7 +16,7 @@ function resolveFile(file) {
   return path.resolve(__dirname, file);
 }
 
-const withSourceMaps = (process.env.NODE_ENV !== 'production');
+const withSourceMaps = process.env.NODE_ENV !== 'production';
 
 export default {
   input: resolveFile('./src/main.js'),
@@ -44,14 +44,15 @@ export default {
       file: resolveFile(pkg.module),
       format: 'esm',
       sourcemap: withSourceMaps,
-    }, {
+    },
+    {
       name: pkg.name,
       file: resolveFile(pkg.main),
       globals: {
-        'axios': 'axios',
+        axios: 'axios',
       },
       format: 'umd',
       sourcemap: withSourceMaps,
-    }
+    },
   ],
 };
