@@ -7,7 +7,10 @@
     :fill="fill"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use :xlink:href="iconUrl" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <use
+      :xlink:href="iconUrl"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    />
   </svg>
 </template>
 
@@ -45,7 +48,7 @@ export default {
 };
 </script>
 <style lang="postcss">
-  .v-svg-icon {
-    margin: 0 auto;
-  }
+.v-svg-icon {
+  margin: 0 auto;
+}
 </style>

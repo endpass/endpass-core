@@ -27,7 +27,10 @@ const outputConfig = {
 const excludePaths = ['./node_modules/**'];
 const sourceDir = resolveDir('./src');
 const commonConfig = {
-  external: [...Object.keys(pkg.dependencies), '@endpass/utils/getOptionParameter'],
+  external: [
+    ...Object.keys(pkg.dependencies),
+    '@endpass/utils/getOptionParameter',
+  ],
   plugins: [
     alias({
       '@': sourceDir,
@@ -54,37 +57,41 @@ const commonConfig = {
     }),
     string({
       include: '**/*.svg',
-    })
+    }),
   ],
   watch: {
     exclude: excludePaths,
   },
 };
 
-export default [{
-  ...commonConfig,
-  input: resolveFile('./src/main.js'),
-  output: [
-    {
-      ...outputConfig,
-      file: resolveFile(`${DEST_DIR}/${pkg.module}`),
-      format: 'esm',
-    }, {
-      ...outputConfig,
-      name: pkg.name,
-      file: resolveFile(`${DEST_DIR}/${pkg.main}`),
-      format: 'umd',
-    }
-  ],
-}, {
-  ...commonConfig,
-  input: find.fileSync(/\.vue$/, resolveDir('./src/components')),
-  output: [
-    {
-      ...outputConfig,
-      format: 'cjs',
-      dir: resolveDir(`${DEST_DIR}/components`),
-      entryFileNames: '[name].js',
-    }
-  ],
-}];
+export default [
+  {
+    ...commonConfig,
+    input: resolveFile('./src/main.js'),
+    output: [
+      {
+        ...outputConfig,
+        file: resolveFile(`${DEST_DIR}/${pkg.module}`),
+        format: 'esm',
+      },
+      {
+        ...outputConfig,
+        name: pkg.name,
+        file: resolveFile(`${DEST_DIR}/${pkg.main}`),
+        format: 'umd',
+      },
+    ],
+  },
+  {
+    ...commonConfig,
+    input: find.fileSync(/\.vue$/, resolveDir('./src/components')),
+    output: [
+      {
+        ...outputConfig,
+        format: 'cjs',
+        dir: resolveDir(`${DEST_DIR}/components`),
+        entryFileNames: '[name].js',
+      },
+    ],
+  },
+];

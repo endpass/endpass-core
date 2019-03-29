@@ -15,7 +15,7 @@
         :key="key"
       >
         <a
-          :class="{'is-active': active === key}"
+          :class="{ 'is-active': active === key }"
           @click.prevent="active = key"
         >
           {{ value }}
@@ -68,5 +68,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

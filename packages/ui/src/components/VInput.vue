@@ -2,16 +2,18 @@
   <div class="field">
     <label
       v-if="label"
-      :class="{'has-text-danger': error }"
+      :class="{ 'has-text-danger': error }"
       :for="$attrs.id"
       class="label"
-    >{{ label }}</label>
+    >
+      {{ label }}
+    </label>
     <div
-      :class="{'has-addons': $slots.addon }"
+      :class="{ 'has-addons': $slots.addon }"
       class="field"
     >
       <div
-        :class="{'is-expanded': $slots.addon, 'has-icons-right': $slots.icon }"
+        :class="{ 'is-expanded': $slots.addon, 'has-icons-right': $slots.icon }"
         class="control"
       >
         <input
@@ -22,14 +24,14 @@
           class="input"
           @blur="$emit('blur', $event.target.value)"
           v-on="listeners"
-        >
-        <slot name="icon"/>
+        />
+        <slot name="icon" />
       </div>
       <div
         v-if="$slots.addon"
         class="control"
       >
-        <slot name="addon"/>
+        <slot name="addon" />
       </div>
     </div>
     <p
