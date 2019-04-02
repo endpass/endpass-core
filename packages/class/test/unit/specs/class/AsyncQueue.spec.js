@@ -53,7 +53,7 @@ describe('QueueAsync class', () => {
     it('should be iterable', () => {
       const result = queue[Symbol.asyncIterator]();
 
-      expect(result).toEqual(queue);
+      expect(result).toBe(queue);
     });
   });
 
