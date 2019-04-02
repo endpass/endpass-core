@@ -14,6 +14,11 @@ class QueueAsync {
     return this;
   }
 
+  // hack solution for browsers, where not support Symbol.asyncIterator
+  [Symbol.iterator]() {
+    return this;
+  }
+
   get isEmpty() {
     const allQueue = [...this.values, ...this.forcedValues];
     return !allQueue.length;
