@@ -1,6 +1,6 @@
 {
   "name": "@endpass/class",
-  "version": "0.10.2",
+  "version": "0.10.3",
   "description": "Class modules",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -35,8 +35,9 @@
   "copyToDist": [
     "src",
     "types",
-    "README.MD",
-    "package.json"
+    "README.md",
+    "package.json",
+    "yarn.lock"
   ],
   "separatedModules": [
     "CrossWindowMessenger",
