@@ -13,12 +13,16 @@ module.exports = {
   },
   parseObjectProperties: (obj, prefix) => {
     return Object.keys(obj)
-    .filter(key => {
-      return prefix ? key.indexOf(prefix) === 0 : true;
-    })
-    .reduce((parsedObj, key) => {
-      parsedObj[key] = JSON.parse(obj[key]);
-  	  return parsedObj
-    }, {});
+      .filter(key => {
+        return prefix ? key.indexOf(prefix) === 0 : true;
+      })
+      .reduce((parsedObj, key) => {
+        try {
+          parsedObj[key] = JSON.parse(obj[key]);
+        } catch (e) {
+          parsedObj[key] = obj[key];
+        }
+        return parsedObj;
+      }, {});
   },
 };
