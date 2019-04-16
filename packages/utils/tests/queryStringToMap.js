@@ -12,7 +12,22 @@ describe('get query params', () => {
       mode: 'test',
       param: '1',
       notDefined: undefined,
-      last: 'last'
+      last: 'last',
+    });
+
+    expect(queryStringToMap('')).toEqual({});
+    expect(queryStringToMap('?')).toEqual({});
+    expect(queryStringToMap('foo=bar&bar=baz')).toEqual({
+      foo: 'bar',
+      bar: 'baz',
+    });
+    expect(queryStringToMap('?foo=bar&bar=baz')).toEqual({
+      foo: 'bar',
+      bar: 'baz',
+    });
+    expect(queryStringToMap('?camel-case=foo&camel_case_too=bar')).toEqual({
+      'camel-case': 'foo',
+      camel_case_too: 'bar',
     });
   });
 });

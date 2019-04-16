@@ -1,5 +1,6 @@
 export default function(path = '') {
-  const lines = path.split('&');
+  const lines = path.replace(/^\?/, '').split('&');
+
   const query = lines.reduce((map, line) => {
     const values = line.split('=');
     const key = values[0];
