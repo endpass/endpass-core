@@ -26,6 +26,7 @@ export default {
   external: [
     ...Object.keys(pkg.dependencies),
     'websocket',
+    '@endpass/utils/keystore',
     'ethereumjs-wallet/hdkey',
   ],
   plugins: [
