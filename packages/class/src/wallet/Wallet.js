@@ -6,7 +6,7 @@ import {
   toChecksumAddress,
   numberToHex,
 } from 'web3-utils';
-import { keystore } from '@endpass/utils';
+import keystore from '@endpass/utils/keystore';
 import { WALLET_TYPE, HARDWARE_WALLET_TYPE } from './types';
 import { loadProxy, proxyTypes } from './proxy';
 import injectWeb3 from '@/injectWeb3';
