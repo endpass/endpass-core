@@ -11,12 +11,14 @@ const toPayload = (id, result) => ({
   jsonrpc: '2.0',
 });
 
+const createCallbacks = () => ({
+  [EVENT_TYPES.DATA]: [],
+  [EVENT_TYPES.ERROR]: () => {},
+});
+
 export default ParentProvider => {
   class SubscriptionProvider extends ParentProvider {
-    notificationCallbacks = {
-      [EVENT_TYPES.DATA]: [],
-      [EVENT_TYPES.ERROR]: () => {},
-    };
+    notificationCallbacks = createCallbacks();
 
     subsrciptionIds = {};
 
@@ -54,7 +56,7 @@ export default ParentProvider => {
     }
 
     reset() {
-      this.notificationCallbacks = {};
+      this.notificationCallbacks = createCallbacks();
 
       this.stopPollingNewBlockHeaders();
     }
