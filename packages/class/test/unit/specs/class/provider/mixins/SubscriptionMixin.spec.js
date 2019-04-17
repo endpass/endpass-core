@@ -130,11 +130,16 @@ describe('SubscriptionProvider class', () => {
     it('should reset provider', () => {
       jest.spyOn(provider, 'stopPollingNewBlockHeaders');
 
-      provider.notificationCallbacks = [callback];
+      provider.notificationCallbacks = {
+        data: [1, 2, 3],
+        error: callback,
+      };
 
       provider.reset();
 
-      expect(provider.notificationCallbacks).toEqual({});
+      expect(provider.notificationCallbacks.data).toEqual([]);
+      expect(provider.notificationCallbacks.error).not.toEqual(callback);
+      expect(provider.notificationCallbacks.error).toBeInstanceOf(Function);
       expect(provider.stopPollingNewBlockHeaders).toHaveBeenCalledTimes(1);
     });
   });
