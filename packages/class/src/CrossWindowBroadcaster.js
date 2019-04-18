@@ -26,7 +26,10 @@ export default class CrossWindowBroadcaster {
    * Sets up bus message event listener
    */
   [privateMethods.setupMessagesListener]() {
-    this.bus.addEventListener('message', this[privateMethods.onReceiveMessage]);
+    this.bus.addEventListener(
+      'message',
+      this[privateMethods.onReceiveMessage].bind(this),
+    );
   }
 
   /**
@@ -50,7 +53,7 @@ export default class CrossWindowBroadcaster {
     if (this.messengers.length === 0) return;
 
     this.messengers.forEach(messenger => {
-      if (!messenger.send) return;
+      if (!messenger.send && !(messenger.send instanceof Function)) return;
 
       messenger.send(data.method, data);
     });
