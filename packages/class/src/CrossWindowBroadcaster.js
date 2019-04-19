@@ -42,14 +42,14 @@ export default class CrossWindowBroadcaster {
     if (messageType !== MESSAGE_TYPE || !this.broadcastMethods.includes(method))
       return;
 
-    this[privateMethods.sendBroadcastMessage](msg.data);
+    this.send(msg.data);
   }
 
   /**
    * Makes broadcasting of given message to all messengers in context
    * @param {Object} data Message Event payload
    */
-  [privateMethods.sendBroadcastMessage](data) {
+  send(data) {
     if (this.messengers.length === 0) return;
 
     this.messengers.forEach(messenger => {
