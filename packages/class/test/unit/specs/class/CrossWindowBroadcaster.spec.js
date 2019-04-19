@@ -47,10 +47,10 @@ describe('CrossWindowBroadcaster class', () => {
           }
         }
 
-        broadcaster[privateMethods.sendBroadcastMessage] = jest.fn()
+        broadcaster.send = jest.fn()
         broadcaster[privateMethods.onReceiveMessage](message)
 
-        expect(broadcaster[privateMethods.sendBroadcastMessage]).toBeCalledWith(message.data)
+        expect(broadcaster.send).toBeCalledWith(message.data)
       })
 
       it('should not handle messages without defined type', () => {
@@ -61,10 +61,10 @@ describe('CrossWindowBroadcaster class', () => {
           }
         }
 
-        broadcaster[privateMethods.sendBroadcastMessage] = jest.fn()
+        broadcaster.send = jest.fn()
         broadcaster[privateMethods.onReceiveMessage](message)
 
-        expect(broadcaster[privateMethods.sendBroadcastMessage]).not.toBeCalled()
+        expect(broadcaster.send).not.toBeCalled()
       })
 
       it('should not handle messages without passed method', () => {
@@ -75,14 +75,46 @@ describe('CrossWindowBroadcaster class', () => {
           }
         }
 
-        broadcaster[privateMethods.sendBroadcastMessage] = jest.fn()
+        broadcaster.send = jest.fn()
         broadcaster[privateMethods.onReceiveMessage](message)
 
-        expect(broadcaster[privateMethods.sendBroadcastMessage]).not.toBeCalled()
+        expect(broadcaster.send).not.toBeCalled()
+      })
+    })
+  })
+
+  describe('public methods', () => {
+    let broadcaster
+    let messengerA
+    let messengerB
+
+    beforeEach(() => {
+      broadcaster = new CrossWindowBroadcaster({
+        method: 'foo',
+        bus
+      })
+      messengerA = {
+        send: jest.fn()
+      }
+      messengerB = {
+        send: jest.fn()
+      }
+    })
+
+    describe('pushMessengers', () => {
+      it('should push given messenger to the broadcaster context', () => {
+        const broadcaster = new CrossWindowBroadcaster({
+          method: 'foo'
+        })
+
+        broadcaster.pushMessengers(messengerA)
+        broadcaster.pushMessengers([messengerB])
+
+        expect(broadcaster.messengers).toEqual([messengerA, messengerB])
       })
     })
 
-    describe('sendBroadcastMessage', () => {
+    describe('send', () => {
       const message = {
         data: {
           messageType: 'endpass-cw-msgr',
@@ -104,44 +136,17 @@ describe('CrossWindowBroadcaster class', () => {
       it('should send passed message data to all messengers', () => {
         broadcaster.messengers = [messengerA, messengerB]
 
-        broadcaster[privateMethods.sendBroadcastMessage](message.data)
+        broadcaster.send(message.data)
 
         expect(messengerA.send).toBeCalledWith(message.data.method, message.data)
         expect(messengerB.send).toBeCalledWith(message.data.method, message.data)
       })
 
       it('should not do anything if messengers are empty', () => {
-        broadcaster[privateMethods.sendBroadcastMessage](message)
+        broadcaster.send(message)
 
         expect(messengerA.send).not.toBeCalled()
         expect(messengerB.send).not.toBeCalled()
-      })
-    })
-  })
-
-  describe('public methods', () => {
-    let messengerA
-    let messengerB
-
-    beforeEach(() => {
-      messengerA = {
-        send: jest.fn()
-      }
-      messengerB = {
-        send: jest.fn()
-      }
-    })
-
-    describe('pushMessengers', () => {
-      it('should push given messenger to the broadcaster context', () => {
-        const broadcaster = new CrossWindowBroadcaster({
-          method: 'foo'
-        })
-
-        broadcaster.pushMessengers(messengerA)
-        broadcaster.pushMessengers([messengerB])
-
-        expect(broadcaster.messengers).toEqual([messengerA, messengerB])
       })
     })
   })
