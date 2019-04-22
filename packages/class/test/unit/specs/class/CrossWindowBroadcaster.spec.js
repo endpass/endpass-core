@@ -43,14 +43,15 @@ describe('CrossWindowBroadcaster class', () => {
         const message = {
           data: {
             messageType: 'endpass-cw-msgr',
-            method: 'foo'
+            method: 'foo',
+            payload: 'bar'
           }
         }
 
         broadcaster.send = jest.fn()
         broadcaster[privateMethods.onReceiveMessage](message)
 
-        expect(broadcaster.send).toBeCalledWith(message.data)
+        expect(broadcaster.send).toBeCalledWith(message.data.method, message.data.payload)
       })
 
       it('should not handle messages without defined type', () => {
@@ -103,7 +104,7 @@ describe('CrossWindowBroadcaster class', () => {
 
     describe('pushMessengers', () => {
       it('should push given messenger to the broadcaster context', () => {
-        const broadcaster = new CrossWindowBroadcaster({
+        broadcaster = new CrossWindowBroadcaster({
           method: 'foo'
         })
 
@@ -115,11 +116,9 @@ describe('CrossWindowBroadcaster class', () => {
     })
 
     describe('send', () => {
+      const method = 'bar'
       const message = {
-        data: {
-          messageType: 'endpass-cw-msgr',
-          method: 'bar'
-        }
+        messageType: 'endpass-cw-msgr',
       }
       let messengerA
       let messengerB
@@ -136,14 +135,14 @@ describe('CrossWindowBroadcaster class', () => {
       it('should send passed message data to all messengers', () => {
         broadcaster.messengers = [messengerA, messengerB]
 
-        broadcaster.send(message.data)
+        broadcaster.send(method, message)
 
-        expect(messengerA.send).toBeCalledWith(message.data.method, message.data)
-        expect(messengerB.send).toBeCalledWith(message.data.method, message.data)
+        expect(messengerA.send).toBeCalledWith(method, message)
+        expect(messengerB.send).toBeCalledWith(method, message)
       })
 
       it('should not do anything if messengers are empty', () => {
-        broadcaster.send(message)
+        broadcaster.send(method, message)
 
         expect(messengerA.send).not.toBeCalled()
         expect(messengerB.send).not.toBeCalled()
