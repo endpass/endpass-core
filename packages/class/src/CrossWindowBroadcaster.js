@@ -37,25 +37,30 @@ export default class CrossWindowBroadcaster {
    * @param {Event} msg Message event object
    */
   [privateMethods.onReceiveMessage](msg) {
-    const { messageType, method } = msg.data;
+    const { messageType, method, payload } = msg.data;
 
-    if (messageType !== MESSAGE_TYPE || !this.broadcastMethods.includes(method))
+    if (
+      messageType !== MESSAGE_TYPE ||
+      !this.broadcastMethods.includes(method)
+    ) {
       return;
+    }
 
-    this.send(msg.data);
+    this.send(method, payload);
   }
 
   /**
    * Makes broadcasting of given message to all messengers in context
-   * @param {Object} data Message Event payload
+   * @param {String} method Message method
+   * @param {Object} data Message payload
    */
-  send(data) {
+  send(method, payload) {
     if (this.messengers.length === 0) return;
 
     this.messengers.forEach(messenger => {
       if (!messenger.send && !(messenger.send instanceof Function)) return;
 
-      messenger.send(data.method, data);
+      messenger.send(method, payload);
     });
   }
 
