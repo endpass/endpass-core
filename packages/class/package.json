@@ -22,9 +22,9 @@
     "test": "yarn unit"
   },
   "lint-staged": {
-    "./src/**/*.js": [
-      "prettier --write",
+    "*.{js,json}": [
       "eslint --fix",
+      "prettier --write",
       "git add"
     ]
   },
