@@ -15,7 +15,9 @@
     "dev": "rollup -c -w",
     "unit": "jest --config test/unit/jest.conf.js",
     "unit:watch": "yarn unit --watch",
-    "format": "prettier --write \"src/**/*.{js,json}\"",
+    "format:eslint": "eslint --ext .json,.js src/ --fix",
+    "format:prettier": "prettier --write '**/*.{js,json}'",
+    "format": "yarn format:eslint && yarn format:prettier",
     "lint": "eslint --fix \"./src/**/*.js\"",
     "test": "yarn unit"
   },
@@ -88,6 +90,7 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-json": "^1.4.0",
     "eslint-plugin-prettier": "^3.0.1",
     "fake-indexeddb": "^2.1.0",
     "fs-extra": "^7.0.1",
