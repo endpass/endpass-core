@@ -16,7 +16,7 @@ export default class Database {
   async initRoutes() {
     const list = Object.keys(routes).filter(key => !!routes[key].init);
     await Promise.all(
-      list.map(key => {
+      list.map((key) => {
         const route = routes[key];
         return route.init(route);
       }),
@@ -43,7 +43,7 @@ export default class Database {
 
   clear() {
     const map = {};
-    const list = Object.keys(routes).filter(key => {
+    const list = Object.keys(routes).filter((key) => {
       const { table } = routes[key];
       const filtered = !map[table.name];
       map[table.name] = true;

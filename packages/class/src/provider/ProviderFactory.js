@@ -55,7 +55,7 @@ export default class ProviderFactory {
         fallbackUrls.map(urlItem => ProviderFactory.getInstance(urlItem));
     }
 
-    provider.setErrorHandler = handler => {
+    provider.setErrorHandler = (handler) => {
       if (provider.on) {
         provider.on('error', e => handler(e));
       }

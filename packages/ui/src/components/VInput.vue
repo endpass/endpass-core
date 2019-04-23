@@ -24,7 +24,7 @@
           class="input"
           @blur="$emit('blur', $event.target.value)"
           v-on="listeners"
-        />
+        >
         <slot name="icon" />
       </div>
       <div
@@ -43,7 +43,9 @@
     <p
       v-else-if="help"
       class="help"
-    >{{ help }}</p>
+    >
+      {{ help }}
+    </p>
   </div>
 </template>
 

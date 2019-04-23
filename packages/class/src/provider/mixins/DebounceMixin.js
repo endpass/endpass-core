@@ -1,7 +1,7 @@
 import get from 'lodash/get';
 import debounce from 'lodash/debounce';
 
-export default ParentProvider => {
+export default (ParentProvider) => {
   class DebounceProvider extends ParentProvider {
     constructor(...args) {
       super(...args);
@@ -82,7 +82,7 @@ export default ParentProvider => {
 
       const now = new Date();
 
-      Object.keys(this.cache).forEach(cacheItem => {
+      Object.keys(this.cache).forEach((cacheItem) => {
         const { date } = this.cache[cacheItem];
         const expirationTime = new Date(date.getTime() + intervalTime);
 

@@ -1,5 +1,7 @@
 export class NotificationError {
-  constructor({ title, message, text, type = 'is-info', log = false }) {
+  constructor({
+    title, message, text, type = 'is-info', log = false,
+  }) {
     if (!title) {
       throw new Error('Notification error needs a title');
     }

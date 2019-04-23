@@ -40,8 +40,8 @@ export default class CrossWindowBroadcaster {
     const { messageType, method, payload } = msg.data;
 
     if (
-      messageType !== MESSAGE_TYPE ||
-      !this.broadcastMethods.includes(method)
+      messageType !== MESSAGE_TYPE
+      || !this.broadcastMethods.includes(method)
     ) {
       return;
     }
@@ -57,7 +57,7 @@ export default class CrossWindowBroadcaster {
   send(method, payload) {
     if (this.messengers.length === 0) return;
 
-    this.messengers.forEach(messenger => {
+    this.messengers.forEach((messenger) => {
       if (!messenger.send && !(messenger.send instanceof Function)) return;
 
       messenger.send(method, payload);

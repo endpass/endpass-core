@@ -2,7 +2,7 @@ import regPath from 'path-to-regexp';
 
 const utils = {
   getRouteKey(routesRegexp, routePath) {
-    return Object.keys(routesRegexp).find(key => {
+    return Object.keys(routesRegexp).find((key) => {
       const re = routesRegexp[key];
       return re.test(routePath);
     });

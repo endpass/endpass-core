@@ -16,8 +16,8 @@ export const AVAILABLE_USER_META_PROPS = ['activeAccount'];
 
 export const PROXY_REQUEST_PREFIX = 'endpass-identity';
 
-export const HD_KEY_MNEMONIC_PATH = `m/44'/60'/0'/0`;
-export const HARDWARE_DERIVIATION_PATH = `m/44'/60'/0'/0/`;
+export const HD_KEY_MNEMONIC_PATH = "m/44'/60'/0'/0";
+export const HARDWARE_DERIVIATION_PATH = "m/44'/60'/0'/0/";
 
 // Polling interval for web3
 export const BLOCK_UPDATE_INTERVAL_MSEC = 15 * 1000;

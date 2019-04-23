@@ -32,7 +32,9 @@ export default class InpageProvider {
     this.eventEmitter.on(INPAGE_EVENT.RESPONSE, this.handleResponse.bind(this));
   }
 
-  handleResponse({ error, id, result, jsonrpc }) {
+  handleResponse({
+    error, id, result, jsonrpc,
+  }) {
     const requestId = InpageProvider.restoreRequestIdFromInpageId(id);
     const requestHandler = get(this.pendingRequestsHandlers, requestId);
 
@@ -107,7 +109,5 @@ export default class InpageProvider {
     return this.processPayload(payload);
   }
 
-  enable = async () => {
-    return this.processPayload({ method: 'eth_accounts' }).result;
-  };
+  enable = async () => this.processPayload({ method: 'eth_accounts' }).result;
 }

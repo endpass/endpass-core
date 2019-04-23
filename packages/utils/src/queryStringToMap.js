@@ -1,4 +1,4 @@
-export default function(path = '') {
+export default function (path = '') {
   const lines = path.replace(/^\?/, '').split('&');
 
   const query = lines.reduce((map, line) => {

@@ -10,8 +10,7 @@ const itemsRequest = {
       table
         .where(whereExp)
         .first(node =>
-          node && node.data ? resolve(node.data) : reject('Data is empty'),
-        )
+          (node && node.data ? resolve(node.data) : reject('Data is empty')))
         .catch(reject);
     });
   },

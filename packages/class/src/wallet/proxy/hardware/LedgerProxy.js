@@ -23,7 +23,8 @@ export default class LedgerProxy {
 
       throw new NotificationError({
         title: 'Access error',
-        text: `An error occurred while getting access to hardware device. Please, try again.`,
+        text:
+          'An error occurred while getting access to hardware device. Please, try again.',
         type: 'is-danger',
       });
     }
@@ -40,8 +41,7 @@ export default class LedgerProxy {
       return publicKey;
     } catch (error) {
       console.log(error);
-      let text =
-        'An error occurred while getting access to hardware device. Please, try again.';
+      let text = 'An error occurred while getting access to hardware device. Please, try again.';
 
       if (error.message.includes('U2F')) {
         text = error.message;
@@ -98,7 +98,8 @@ export default class LedgerProxy {
       console.log(error);
       throw new NotificationError({
         title: 'Access error',
-        text: `An error occurred while getting access to hardware device. Please, try again.`,
+        text:
+          'An error occurred while getting access to hardware device. Please, try again.',
         type: 'is-danger',
       });
     } finally {
@@ -137,7 +138,8 @@ export default class LedgerProxy {
       console.log(error);
       throw new NotificationError({
         title: 'Access error',
-        text: `An error occurred while getting access to hardware device. Please, try again.`,
+        text:
+          'An error occurred while getting access to hardware device. Please, try again.',
         type: 'is-danger',
       });
     } finally {

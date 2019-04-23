@@ -1,3 +1,1 @@
-module.exports = (item, value) => {
-  return item instanceof Object ? item[value] : item;
-};
+module.exports = (item, value) => (item instanceof Object ? item[value] : item);

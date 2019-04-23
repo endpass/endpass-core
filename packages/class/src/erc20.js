@@ -38,7 +38,7 @@ export default class ERC20Token {
     const tokenInfo = {};
     const contract = this.getContract();
     const methods = ['name', 'decimals', 'symbol', 'totalSupply'].map(
-      async item => {
+      async (item) => {
         try {
           tokenInfo[item] = await contract.methods[item]().call();
         } catch (e) {

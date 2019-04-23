@@ -25,7 +25,7 @@ class SettingsStorage {
     this.storage.save(this.getStorageKey(key), pickedMeta);
   };
 
-  load = key => {
+  load = (key) => {
     if (!this.storage.load) {
       throw new Error('Provided storage does not implements load method!');
     }
@@ -33,7 +33,7 @@ class SettingsStorage {
     return this.storage.load(this.getStorageKey(key));
   };
 
-  clear = key => {
+  clear = (key) => {
     if (!this.storage.remove) {
       throw new Error('Provided storage does not implements remove method!');
     }

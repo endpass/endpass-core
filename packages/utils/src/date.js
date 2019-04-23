@@ -14,9 +14,8 @@ module.exports = {
     const start = dayjs(fromDate);
     return start.to(dayjs(toDate));
   },
-  addToDate: (date, value, unit = 's') => {
-    return dayjs(date)
+  addToDate: (date, value, unit = 's') =>
+    dayjs(date)
       .add(value, unit)
-      .toDate();
-  },
+      .toDate(),
 };
