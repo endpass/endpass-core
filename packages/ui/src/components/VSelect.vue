@@ -14,7 +14,9 @@
           v-for="item in options"
           :key="item.key || item.val || item"
           :value="getOptionParameter(item, 'val')"
-        >{{ getOptionParameter(item, 'text') }}</option>
+        >
+          {{ getOptionParameter(item, 'text') }}
+        </option>
       </select>
     </div>
     <p

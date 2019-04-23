@@ -179,9 +179,9 @@ export default class Transaction {
 
     const tokenPassData = token
       ? {
-          to: token.address,
-          value: '0x0',
-        }
+        to: token.address,
+        value: '0x0',
+      }
       : {};
 
     return {

@@ -27,12 +27,12 @@
         </span>
       </label>
       <input
-        v-model="selected"
         :id="id + getKeyString(option)"
+        v-model="selected"
         :name="name"
         :value="getOptionParameter(option, 'val')"
         type="radio"
-      />
+      >
     </div>
     <p
       v-if="error"

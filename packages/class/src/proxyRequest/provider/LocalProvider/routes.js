@@ -72,8 +72,7 @@ const routes = {
             const tokenList = (map[netId] = map[netId] || []);
             tokenList.push(item.data);
             return map;
-          }, {}),
-        ),
+          }, {})),
         db.networks.toArray(list => itemsRequest.getItemData(list)),
         routeMethods.read(route, args),
       ]);

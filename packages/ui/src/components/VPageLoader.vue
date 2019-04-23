@@ -9,14 +9,16 @@
         <img
           src="/logo-dark.png"
           alt="Endpass"
-        />
+        >
       </div>
       <div class="spinner">
         <div class="spinner-dot spinner-dot-1" />
         <div class="spinner-dot spinner-dot-2" />
         <div class="spinner-dot spinner-dot-3" />
       </div>
-      <p class="spinner-caption">Loading...</p>
+      <p class="spinner-caption">
+        Loading...
+      </p>
     </div>
   </div>
 </template>

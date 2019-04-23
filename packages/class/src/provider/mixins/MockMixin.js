@@ -1,7 +1,7 @@
 import isPlainObject from 'lodash/isPlainObject';
 
 const resolveFunction = value => () =>
-  new Promise(resolve => {
+  new Promise((resolve) => {
     setTimeout(() => resolve(value));
   });
 
@@ -29,7 +29,7 @@ const replacer = (key, value) => {
   return JSON.stringify(newValue, replacer);
 };
 
-export default ParentProvider => {
+export default (ParentProvider) => {
   class MockProvider extends ParentProvider {
     constructor(...args) {
       super(...args);
@@ -86,8 +86,7 @@ export default ParentProvider => {
         replacer,
       );
       const mockValuesOnceArray = this.mockValuesOnce[key];
-      const mockValueFunctionOnce =
-        mockValuesOnceArray && mockValuesOnceArray.shift();
+      const mockValueFunctionOnce = mockValuesOnceArray && mockValuesOnceArray.shift();
       const mockValueFunction = mockValueFunctionOnce || this.mockValues[key];
 
       if (mockValueFunctionOnce && mockValuesOnceArray.length === 0) {
@@ -96,14 +95,14 @@ export default ParentProvider => {
 
       if (mockValueFunction) {
         mockValueFunction()
-          .then(value => {
+          .then((value) => {
             callback(null, {
               id: payload.id,
               jsonrpc: payload.jsonrpc,
               result: value,
             });
           })
-          .catch(error => {
+          .catch((error) => {
             callback(error);
           });
       } else {

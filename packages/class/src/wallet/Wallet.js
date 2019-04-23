@@ -227,13 +227,13 @@ export default class Wallet {
     return new Promise((resolve, reject) => {
       const sendEvent = web3.eth.sendSignedTransaction(signedTx);
 
-      sendEvent.once('transactionHash', trxHash => {
+      sendEvent.once('transactionHash', (trxHash) => {
         resolve(trxHash);
       });
-      sendEvent.on('error', error => {
+      sendEvent.on('error', (error) => {
         reject(error);
       });
-      sendEvent.catch(error => {
+      sendEvent.catch((error) => {
         reject(error);
       });
     });

@@ -4,7 +4,7 @@ import { Decorator, PrefixUrlDecorator } from '@/proxyRequest/decorator/index';
 import privateMethods from '../privateMethods';
 
 async function setDatabase(url) {
-  const mod = await import(`./Database`);
+  const mod = await import('./Database');
   const Database = mod.default;
   const instance = new Database(url);
   await instance.initRoutes();

@@ -1,4 +1,4 @@
-export default function(url, params) {
+export default function (url, params) {
   const stringedParams = Object.keys(params)
     .map(key => `${key}=${params[key]}`)
     .join('&');

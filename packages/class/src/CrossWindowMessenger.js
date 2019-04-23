@@ -47,9 +47,9 @@ export default class CrossWindowMessenger {
   [privateMethods.onReceiveMessage](ev) {
     const { source, data = {} } = ev;
     if (
-      data.messageType !== MESSAGE_TYPE ||
-      data.to !== this.directionFrom ||
-      this.target !== source
+      data.messageType !== MESSAGE_TYPE
+      || data.to !== this.directionFrom
+      || this.target !== source
     ) {
       return;
     }
@@ -61,12 +61,14 @@ export default class CrossWindowMessenger {
         data,
       );
     }
-    const { payload, from, to, method } = data;
+    const {
+      payload, from, to, method,
+    } = data;
 
     const req = {
       source,
       method,
-      answer: result => {
+      answer: (result) => {
         this[privateMethods.sendOutside]({
           target: source,
           method,
@@ -77,7 +79,7 @@ export default class CrossWindowMessenger {
       },
     };
 
-    this.actions.forEach(action => {
+    this.actions.forEach((action) => {
       const { method: actionMethod, cb } = action;
       if (actionMethod === method || actionMethod === ALL_METHODS) {
         cb(payload, req);
@@ -135,7 +137,7 @@ export default class CrossWindowMessenger {
   [privateMethods.onAction](method, cb) {
     const methodList = [].concat(method);
 
-    methodList.forEach(item => {
+    methodList.forEach((item) => {
       this.actions.push({
         method: item,
         cb,
@@ -171,7 +173,7 @@ export default class CrossWindowMessenger {
       throw new Error('Target is not defined to send message!');
     }
 
-    const result = new Promise(resolve => {
+    const result = new Promise((resolve) => {
       // TODO: add timeout here ?
 
       const handler = (data, req) => {

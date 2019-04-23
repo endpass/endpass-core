@@ -2,11 +2,11 @@
   <div class="field">
     <label class="checkbox">
       <input
+        v-model="innerValue"
         :name="name"
         :class="{ 'is-danger': error }"
-        v-model="innerValue"
         type="checkbox"
-      />
+      >
       <slot />
     </label>
   </div>

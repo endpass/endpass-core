@@ -18,7 +18,8 @@ export default class TrezorProxy {
     } catch (error) {
       throw new NotificationError({
         title: 'Access error',
-        text: `An error occurred while getting access to hardware device. Please, try again.`,
+        text:
+          'An error occurred while getting access to hardware device. Please, try again.',
         type: 'is-danger',
       });
     }
@@ -34,7 +35,8 @@ export default class TrezorProxy {
     } catch (error) {
       throw new NotificationError({
         title: 'Access error',
-        text: `An error occurred while getting access to hardware device. Please, try again.`,
+        text:
+          'An error occurred while getting access to hardware device. Please, try again.',
         type: 'is-danger',
       });
     }
