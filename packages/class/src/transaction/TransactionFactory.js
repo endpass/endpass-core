@@ -43,9 +43,9 @@ export default class TransactionFactory {
   static fromCryptoData(trx) {
     return Transaction.create({
       ...trx,
-      value: fromWei(trx.value),
+      value: fromWei(hexToNumberString(trx.value)),
       nonce: hexToNumberString(trx.nonce),
-      gasPrice: fromWei(trx.gasPrice, 'Gwei'),
+      gasPrice: fromWei(hexToNumberString(trx.gasPrice), 'Gwei'),
       gasLimit: hexToNumberString(trx.gas),
       networkId: hexToNumber(trx.chainId),
       timestamp: hexToNumber(trx.timestamp),
