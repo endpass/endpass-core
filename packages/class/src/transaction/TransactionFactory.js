@@ -39,13 +39,20 @@ export default class TransactionFactory {
   }
 
   static fromCryptoData(trx) {
+    let { networkId } = trx;
+
+    if (!networkId && trx.chainId) {
+      // if chainId 0 -> networkId undefined
+      networkId = hexToNumber(trx.chainId) || undefined;
+    }
+
     return Transaction.create({
       ...trx,
       value: fromWei(hexToNumberString(trx.value)),
       nonce: hexToNumberString(trx.nonce),
       gasPrice: fromWei(hexToNumberString(trx.gasPrice), 'Gwei'),
       gasLimit: hexToNumberString(trx.gas),
-      networkId: hexToNumber(trx.chainId),
+      networkId,
       timestamp: hexToNumber(trx.timestamp),
     });
   }
