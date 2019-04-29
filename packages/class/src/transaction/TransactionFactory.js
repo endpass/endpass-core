@@ -9,9 +9,7 @@ export default class TransactionFactory {
   }
 
   static fromBlock(trx) {
-    const {
-      gasPrice, nonce, chainId, networkId,
-    } = trx;
+    const { gasPrice, nonce, chainId, networkId } = trx;
 
     const adaptData = {
       networkId: chainId ? hexToNumber(chainId) : networkId,
@@ -54,6 +52,7 @@ export default class TransactionFactory {
 
   static fromCryptoDataHistory(trx) {
     const value = Transaction.getValueFromWei(trx);
-    return Transaction.create({ ...trx, value });
+    const timestamp = hexToNumber(trx.timestamp);
+    return Transaction.create({ ...trx, value, timestamp });
   }
 }
