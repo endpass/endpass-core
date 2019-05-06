@@ -8,14 +8,10 @@ export const privateMethods = {
 
 export default class CrossWindowBroadcaster {
   /**
-   * @param {String} props.method Broadcase message method
+   * @param {Object} [props]
+   * @returns {Window} [props.bus]
    */
   constructor(props = {}) {
-    if (!props.method) {
-      throw new Error('You must provide broadcast method!');
-    }
-
-    this.broadcastMethods = [].concat(props.method);
     this.bus = props.bus || window;
     this.messengers = [];
 
@@ -39,12 +35,7 @@ export default class CrossWindowBroadcaster {
   [privateMethods.onReceiveMessage](msg) {
     const { messageType, method, payload } = msg.data;
 
-    if (
-      messageType !== MESSAGE_TYPE
-      || !this.broadcastMethods.includes(method)
-    ) {
-      return;
-    }
+    if (messageType !== MESSAGE_TYPE || !method) return;
 
     this.send(method, payload);
   }
@@ -58,7 +49,9 @@ export default class CrossWindowBroadcaster {
     if (this.messengers.length === 0) return;
 
     this.messengers.forEach((messenger) => {
-      if (!messenger.send && !(messenger.send instanceof Function)) return;
+      const isSendNotAllowed = !messenger.send && !(messenger.send instanceof Function);
+
+      if (!messenger.target || isSendNotAllowed) return;
 
       messenger.send(method, payload);
     });

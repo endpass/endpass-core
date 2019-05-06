@@ -1,42 +1,32 @@
 import CrossWindowBroadcaster, { privateMethods } from '@/CrossWindowBroadcaster';
 
 describe('CrossWindowBroadcaster class', () => {
-  let bus
+  let bus;
 
   beforeEach(() => {
     bus = {
-      addEventListener: jest.fn()
-    }
-  })
+      addEventListener: jest.fn(),
+    };
+  });
 
   afterEach(() => {
-    jest.clearAllMocks()
-  })
-
-  describe('instance', () => {
-    it('should throw error if broadcast method is not provided', () => {
-      expect(() => {
-        /* eslint-disable-next-line */
-        new CrossWindowBroadcaster()
-      }).toThrow()
-    })
-  })
+    jest.clearAllMocks();
+  });
 
   describe('private methods', () => {
-    let broadcaster
+    let broadcaster;
 
     beforeEach(() => {
       broadcaster = new CrossWindowBroadcaster({
-        method: 'foo',
-        bus
-      })
-    })
+        bus,
+      });
+    });
 
     describe('setupMessagesListener', () => {
       it('should add event listener to given bus', () => {
-        expect(bus.addEventListener).toBeCalledWith('message', expect.any(Function))
-      })
-    })
+        expect(bus.addEventListener).toBeCalledWith('message', expect.any(Function));
+      });
+    });
 
     describe('onReceiveMessage', () => {
       it('should handle messages with defined type and passed method', () => {
@@ -44,109 +34,121 @@ describe('CrossWindowBroadcaster class', () => {
           data: {
             messageType: 'endpass-cw-msgr',
             method: 'foo',
-            payload: 'bar'
-          }
-        }
+            payload: 'bar',
+          },
+        };
 
-        broadcaster.send = jest.fn()
-        broadcaster[privateMethods.onReceiveMessage](message)
+        broadcaster.send = jest.fn();
+        broadcaster[privateMethods.onReceiveMessage](message);
 
-        expect(broadcaster.send).toBeCalledWith(message.data.method, message.data.payload)
-      })
+        expect(broadcaster.send).toBeCalledWith(message.data.method, message.data.payload);
+      });
 
       it('should not handle messages without defined type', () => {
         const message = {
           data: {
             messageType: 'blabla',
-            method: 'foo'
-          }
-        }
+            method: 'foo',
+          },
+        };
 
-        broadcaster.send = jest.fn()
-        broadcaster[privateMethods.onReceiveMessage](message)
+        broadcaster.send = jest.fn();
+        broadcaster[privateMethods.onReceiveMessage](message);
 
-        expect(broadcaster.send).not.toBeCalled()
-      })
+        expect(broadcaster.send).not.toBeCalled();
+      });
 
-      it('should not handle messages without passed method', () => {
+      it('should not handle messages without method', () => {
         const message = {
           data: {
             messageType: 'endpass-cw-msgr',
-            method: 'bar'
-          }
-        }
+          },
+        };
 
-        broadcaster.send = jest.fn()
-        broadcaster[privateMethods.onReceiveMessage](message)
+        broadcaster.send = jest.fn();
+        broadcaster[privateMethods.onReceiveMessage](message);
 
-        expect(broadcaster.send).not.toBeCalled()
-      })
-    })
-  })
+        expect(broadcaster.send).not.toBeCalled();
+      });
+    });
+  });
 
   describe('public methods', () => {
-    let broadcaster
-    let messengerA
-    let messengerB
+    let broadcaster;
+    let messengerA;
+    let messengerB;
 
     beforeEach(() => {
       broadcaster = new CrossWindowBroadcaster({
         method: 'foo',
-        bus
-      })
+        bus,
+      });
       messengerA = {
-        send: jest.fn()
-      }
+        send: jest.fn(),
+      };
       messengerB = {
-        send: jest.fn()
-      }
-    })
+        send: jest.fn(),
+      };
+    });
 
     describe('pushMessengers', () => {
       it('should push given messenger to the broadcaster context', () => {
         broadcaster = new CrossWindowBroadcaster({
-          method: 'foo'
-        })
+          method: 'foo',
+        });
 
-        broadcaster.pushMessengers(messengerA)
-        broadcaster.pushMessengers([messengerB])
+        broadcaster.pushMessengers(messengerA);
+        broadcaster.pushMessengers([messengerB]);
 
-        expect(broadcaster.messengers).toEqual([messengerA, messengerB])
-      })
-    })
+        expect(broadcaster.messengers).toEqual([messengerA, messengerB]);
+      });
+    });
 
     describe('send', () => {
-      const method = 'bar'
+      const method = 'bar';
       const message = {
         messageType: 'endpass-cw-msgr',
-      }
-      let messengerA
-      let messengerB
+      };
+      let messengerA;
+      let messengerB;
 
       beforeEach(() => {
         messengerA = {
-          send: jest.fn()
-        }
+          send: jest.fn(),
+          target: {},
+        };
         messengerB = {
-          send: jest.fn()
-        }
-      })
+          send: jest.fn(),
+          target: {},
+        };
+      });
 
       it('should send passed message data to all messengers', () => {
-        broadcaster.messengers = [messengerA, messengerB]
+        broadcaster.messengers = [messengerA, messengerB];
 
-        broadcaster.send(method, message)
+        broadcaster.send(method, message);
 
-        expect(messengerA.send).toBeCalledWith(method, message)
-        expect(messengerB.send).toBeCalledWith(method, message)
-      })
+        expect(messengerA.send).toBeCalledWith(method, message);
+        expect(messengerB.send).toBeCalledWith(method, message);
+      });
 
       it('should not do anything if messengers are empty', () => {
-        broadcaster.send(method, message)
+        broadcaster.send(method, message);
 
-        expect(messengerA.send).not.toBeCalled()
-        expect(messengerB.send).not.toBeCalled()
-      })
-    })
-  })
+        expect(messengerA.send).not.toBeCalled();
+        expect(messengerB.send).not.toBeCalled();
+      });
+
+      it('should not send message if messenger\'s target is not defined', () => {
+        const messengerC = {
+          send: jest.fn(),
+        };
+
+        broadcaster.pushMessengers(messengerC);
+        broadcaster.send(method, message);
+
+        expect(messengerC.send).not.toBeCalled();
+      });
+    });
+  });
 });

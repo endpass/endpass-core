@@ -40,7 +40,7 @@ module.exports = {
         ignoreUrls: true,
         ignoreComments: false,
         ignoreRegExpLiterals: true,
-        ignoreStrings: false,
+        ignoreStrings: true,
         ignoreTemplateLiterals: false,
       },
     ],

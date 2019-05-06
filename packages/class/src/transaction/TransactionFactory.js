@@ -9,7 +9,9 @@ export default class TransactionFactory {
   }
 
   static fromBlock(trx) {
-    const { gasPrice, nonce, chainId, networkId } = trx;
+    const {
+      gasPrice, nonce, chainId, networkId,
+    } = trx;
 
     const adaptData = {
       networkId: chainId ? hexToNumber(chainId) : networkId,
