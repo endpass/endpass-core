@@ -1,7 +1,12 @@
 import Tx from 'ethereumjs-tx';
 import web3 from 'fixtures/web3Instance';
 import { createWalletClass } from '@/wallet';
-import { v3, v3password, privateKey } from 'fixtures/accounts';
+import {
+  v3,
+  v3password,
+  privateKey,
+  messageToEncrypt,
+} from 'fixtures/accounts';
 
 describe('Wallet Class', () => {
   let wallet;
@@ -18,8 +23,8 @@ describe('Wallet Class', () => {
       eth: {
         accounts: {
           recover: (msg, singnature) => `${msg}-${singnature}`,
-        }
-      }
+        },
+      },
     });
     wallet = new Wallet(v3);
 
@@ -47,6 +52,35 @@ describe('Wallet Class', () => {
         expect(transaction.sign).toBeCalledWith(privateKey);
         expect(signedTx).toEqual(expect.any(String));
         expect(/^0x\S+/.test(signedTx)).toBeTruthy();
+      });
+
+      describe('encryptMessageWithPublicKey / decryptMessageWithPrivateKey', () => {
+        beforeEach(() => {
+          const Wallet = createWalletClass(web3);
+          wallet = new Wallet(v3);
+        });
+
+        it('should throw error if message is not a string', () => {
+          expect(
+            wallet.encryptMessageWithPublicKey(
+              Buffer.from('hello world'),
+              v3password,
+            ),
+          ).rejects.toThrow();
+        });
+
+        it('should encrypt and decrypt message', async () => {
+          expect.assertions(1);
+          const encrypted = await wallet.encryptMessageWithPublicKey(
+            messageToEncrypt,
+            v3password,
+          );
+          const decrypted = await wallet.decryptMessageWithPrivateKey(
+            encrypted,
+            v3password,
+          );
+          expect(decrypted).toBe(messageToEncrypt);
+        });
       });
     });
 

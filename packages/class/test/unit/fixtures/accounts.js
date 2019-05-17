@@ -62,7 +62,7 @@ export const hdv3 = {
 
 // Private key buffer for v3
 // prettier-ignore
-export const privateKey = {"data": [239, 202, 76, 221, 49, 146, 59, 80, 244, 33, 74, 245, 210, 174, 16, 231, 172, 69, 165, 1, 158, 148, 49, 204, 25, 84, 130, 215, 7, 72, 83, 120], "type": "Buffer"};
+export const privateKey = { data: [239, 202, 76, 221, 49, 146, 59, 80, 244, 33, 74, 245, 210, 174, 16, 231, 172, 69, 165, 1, 158, 148, 49, 204, 25, 84, 130, 215, 7, 72, 83, 120], type: 'Buffer' };
 
 export const privateKeyString =
   '0xefca4cdd31923b50f4214af5d2ae10e7ac45a5019e9431cc195482d707485378';
@@ -82,7 +82,7 @@ export const settings = {
     },
   ],
   tokens: {
-    '3': [
+    3: [
       {
         address: '0xE41d2489571d322189246DaFA5ebDe1F4699F498',
         decimals: 18,
@@ -98,3 +98,5 @@ export const settings = {
 export const otpSettings = {
   otp: true,
 };
+
+export const messageToEncrypt = 'hello world';
