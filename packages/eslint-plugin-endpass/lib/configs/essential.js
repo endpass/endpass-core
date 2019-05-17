@@ -7,6 +7,14 @@ module.exports = {
     rules: {
       'prettier/prettier': ['error'],
     },
+    'arrow-parens': ['error', 'as-needed'],
+    'no-shadow': ['warn'],
+    'consistent-return': 'error',
+    'operator-linebreak': 'off',
+    'space-before-function-paren': 'off',
+    'function-paren-newline': 'off',
+    'object-curly-newline': 'off',
+
     'implicit-arrow-linebreak': 'off',
     'no-empty': 'warn',
     'class-methods-use-this': 'off',

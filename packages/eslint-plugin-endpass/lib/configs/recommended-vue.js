@@ -15,18 +15,6 @@ module.exports = {
   },
   rules: {
     ...recommended.rules,
-    'max-len': [
-      'warn',
-      80,
-      2,
-      {
-        ignoreUrls: true,
-        ignoreComments: false,
-        ignoreRegExpLiterals: true,
-        ignoreStrings: false,
-        ignoreTemplateLiterals: false,
-      },
-    ],
     'vue/max-attributes-per-line': [
       'error',
       {

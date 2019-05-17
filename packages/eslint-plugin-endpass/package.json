@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-endpass",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Endpass eslint plugin",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/m-ark22/endpass-core/issues"
   },
-  "devDependencies": {
+  "dependencies": {
     "babel-eslint": "^10.0.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.17.2",
