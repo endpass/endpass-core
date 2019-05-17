@@ -1,4 +1,6 @@
 import Tx from 'ethereumjs-tx';
+import secp256k1 from 'secp256k1';
+import { encrypt, decrypt } from 'eth-ecies';
 import HDKey from 'ethereumjs-wallet/hdkey';
 import {
   isAddress,
@@ -227,13 +229,13 @@ export default class Wallet {
     return new Promise((resolve, reject) => {
       const sendEvent = web3.eth.sendSignedTransaction(signedTx);
 
-      sendEvent.once('transactionHash', (trxHash) => {
+      sendEvent.once('transactionHash', trxHash => {
         resolve(trxHash);
       });
-      sendEvent.on('error', (error) => {
+      sendEvent.on('error', error => {
         reject(error);
       });
-      sendEvent.catch((error) => {
+      sendEvent.catch(error => {
         reject(error);
       });
     });
@@ -267,6 +269,34 @@ export default class Wallet {
    */
   static loadProxy(name) {
     return loadProxy(name);
+  }
+
+  /**
+   * Ecnrypts message with wallet public key
+   * @param {String} message Message to encrypt in utf8
+   * @throws {Error} Message type mismatch
+   * @returns {String} Enctypted message in hex string
+   */
+  async encryptMessageWithPublicKey(message, password) {
+    if (typeof message !== 'string') {
+      throw new Error('Wallet: message must be a string!');
+    }
+
+    const privateKey = await this.getPrivateKey(password);
+    const publicKey = secp256k1.publicKeyCreate(privateKey, false).slice(1);
+
+    return encrypt(publicKey, Buffer.from(message, 'utf8')).toString('hex');
+  }
+
+  /**
+   * Decrypts message in hex-string with wallet private key
+   * @param {String} message hex string to decrypt
+   * @returns {String} Decrypted message
+   */
+  async decryptMessageWithPrivateKey(message, password) {
+    const privateKey = await this.getPrivateKey(password);
+
+    return decrypt(privateKey, Buffer.from(message, 'hex')).toString('utf8');
   }
 }
 
