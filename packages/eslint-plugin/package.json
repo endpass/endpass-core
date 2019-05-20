@@ -1,5 +1,5 @@
 {
-  "name": "@endpass/eslint-plugin",
+  "name": "@endpass/eslint-plugin-endpass",
   "version": "0.1.0",
   "description": "Endpass eslint plugin",
   "author": "Endpass, Inc",
