@@ -1,6 +1,6 @@
 {
-  "name": "eslint-plugin-endpass",
-  "version": "0.0.2",
+  "name": "@endpass/eslint-plugin",
+  "version": "0.1.0",
   "description": "Endpass eslint plugin",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -19,7 +19,7 @@
   },
   "scripts": {},
   "bugs": {
-    "url": "https://github.com/m-ark22/endpass-core/issues"
+    "url": "https://github.com/endpass/endpass-core/issues"
   },
   "dependencies": {
     "babel-eslint": "^10.0.1",
