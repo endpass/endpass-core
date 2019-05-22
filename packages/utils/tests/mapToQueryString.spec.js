@@ -8,10 +8,15 @@ describe('appendQueryParametersToUrl', () => {
         bar: 'baz',
       }),
     ).toBe('https://foo.bar?foo=bar&bar=baz');
+
     expect(
       mapToQueryString('https://foo.bar?foo=bar', {
         bar: 'baz',
       }),
     ).toBe('https://foo.bar?foo=bar&bar=baz');
+
+    expect(mapToQueryString('https://foo.bar', {})).toBe('https://foo.bar');
+
+    expect(mapToQueryString('https://foo.bar')).toBe('https://foo.bar');
   });
 });
