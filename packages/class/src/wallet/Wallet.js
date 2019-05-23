@@ -172,7 +172,8 @@ export default class Wallet {
    */
   async sign(data, password) {
     if (this.isHardware) {
-      return this.getStrategy().sign(data, this.index);
+      const strategy = await this.getStrategy();
+      return strategy.sign(data, this.index);
     }
 
     const privateKey = await this.getPrivateKeyString(password);
@@ -199,7 +200,8 @@ export default class Wallet {
    */
   async signTransaction(transaction, password) {
     if (this.isHardware) {
-      return this.getStrategy().signTransaction(transaction, this.index);
+      const strategy = await this.getStrategy();
+      return strategy.signTransaction(transaction, this.index);
     }
 
     const privateKey = await this.getPrivateKey(password);
