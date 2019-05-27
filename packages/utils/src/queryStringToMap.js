@@ -1,7 +1,12 @@
-export default function (path = '') {
+/**
+ * Convert query string to map object
+ * @param path
+ * @return {object}
+ */
+export default function(path = '') {
   const lines = path.replace(/^\?/, '').split('&');
 
-  const query = lines.reduce((map, line) => {
+  const mapResult = lines.reduce((map, line) => {
     const values = line.split('=');
     const key = values[0];
     if (key) {
@@ -10,5 +15,5 @@ export default function (path = '') {
     }
     return map;
   }, {});
-  return query;
+  return mapResult;
 }

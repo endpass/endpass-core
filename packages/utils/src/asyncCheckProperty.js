@@ -7,13 +7,13 @@ module.exports = (
   predicate = identity,
   timer = 250,
 ) =>
-  new Promise((resolve) => {
+  new Promise(resolve => {
     /* eslint-disable-next-line */
-    const interval = setInterval(() => {
+    const timerId = setInterval(() => {
       const value = get(object, path);
 
       if (predicate(value)) {
-        clearInterval(interval);
+        clearTimeout(timerId);
 
         return resolve(value);
       }
