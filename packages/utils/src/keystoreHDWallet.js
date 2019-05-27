@@ -1,5 +1,5 @@
 import HDKey from 'ethereumjs-wallet/hdkey';
-import Bip39 from 'bip39';
+import bipSeed from './bipSeed';
 import keystoreCrypto from './keystoreCrypto';
 
 import { HD_KEY_MNEMONIC_PATH } from './constants';
@@ -13,7 +13,7 @@ const keystoreHDWallet = {
    * @returns {EthereumHDKey}
    */
   createHDWalletBySeed(seedPhrase) {
-    const seed = Bip39.mnemonicToSeed(seedPhrase);
+    const seed = bipSeed.mnemonicToSeedSync(seedPhrase);
     const hdKey = HDKey.fromMasterSeed(seed);
 
     return hdKey.derivePath(HD_KEY_MNEMONIC_PATH);
