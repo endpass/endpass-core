@@ -1,17 +1,9 @@
 import keystoreCrypto from '@/keystoreCrypto';
 import bs58 from '@/bs58';
 import { KDF_ENCRYPT_OPTIONS } from '@/constants';
+import { encryptOptions, xPrvString, password } from 'fixtures/keystore';
 
 describe('keystoreCrypto', () => {
-  const encryptOptions = {
-    kdf: 'scrypt',
-    n: 4,
-  };
-  const xPrvString =
-    'xprv9s21ZrQH143K3DAahVuXkkfZxprW7emgvd19zzSEb2zBxR9mWnMFtzGCwmYCq8YQh21ZqFAcPWtWJXz9sbEXaN9LUSe2cjsw9LkAtwmoWsc';
-
-  const password = 'password123';
-
   it('encrypts and decrypts an extended key', () => {
     const xPrv = bs58.decodeBase58(xPrvString);
     expect(xPrv.length).toBe(78);

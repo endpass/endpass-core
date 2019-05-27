@@ -4,7 +4,7 @@ import keystoreKeyGen from './keystoreKeyGen';
 import crypto from './crypto';
 import bipSeed from './bipSeed';
 
-module.exports = {
+const walletGen = {
   /**
    * Create new wallet
    *
@@ -16,6 +16,34 @@ module.exports = {
     // create hd wallet
     const seedKey = bipSeed.generateSeedKey();
 
+    const {
+      v3KeystoreHdWallet,
+      v3KeystoreChildWallet,
+    } = walletGen.createHDWithChild(seedKey, password, encryptOptions);
+
+    // create seed
+    const publicKey = keystoreKeyGen.getPublicKey(
+      password,
+      v3KeystoreChildWallet,
+    );
+    const encryptedSeed = await crypto.encrypt(seedKey, publicKey);
+
+    return {
+      seedKey,
+      encryptedSeed,
+      v3KeystoreHdWallet,
+      v3KeystoreChildWallet,
+    };
+  },
+
+  /**
+   * Create HD wallet and child wallet v3Keystore
+   * @param seedKey
+   * @param password
+   * @param encryptOptions
+   * @return {{v3KeystoreHdWallet: v3Keystore, v3KeystoreChildWallet: v3Keystore}}
+   */
+  createHDWithChild(seedKey, password, encryptOptions) {
     const hdWallet = keystoreHDWallet.createHDWalletBySeed(seedKey);
 
     const v3KeystoreHdWallet = keystoreHDWallet.encryptHDWallet(
@@ -38,18 +66,11 @@ module.exports = {
       encryptOptions,
     );
 
-    // create seed
-    const publicKey = keystoreKeyGen.getPublicKey(
-      password,
-      v3KeystoreChildWallet,
-    );
-    const encryptedSeed = await crypto.encrypt(seedKey, publicKey);
-
     return {
-      seedKey,
-      encryptedSeed,
       v3KeystoreHdWallet,
       v3KeystoreChildWallet,
     };
   },
 };
+
+module.exports = walletGen;
