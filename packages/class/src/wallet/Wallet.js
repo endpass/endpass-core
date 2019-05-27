@@ -1,6 +1,4 @@
 import Tx from 'ethereumjs-tx';
-import secp256k1 from 'secp256k1';
-import { encrypt, decrypt } from 'eth-ecies';
 import HDKey from 'ethereumjs-wallet/hdkey';
 import {
   isAddress,
@@ -8,7 +6,9 @@ import {
   toChecksumAddress,
   numberToHex,
 } from 'web3-utils';
-import keystore from '@endpass/utils/keystore';
+import isV3 from '@endpass/utils/isV3';
+import keystoreKeyGen from '@endpass/utils/keystoreKeyGen';
+import crypto from '@endpass/utils/crypto';
 import { WALLET_TYPE, HARDWARE_WALLET_TYPE } from './types';
 import { loadProxy, proxyTypes } from './proxy';
 import injectWeb3 from '@/injectWeb3';
@@ -45,7 +45,7 @@ export default class Wallet {
       // throw new Error(`${accountType} is not valid Wallet type!`);
     }
 
-    const isPublic = !keystore.isV3(v3Keystore);
+    const isPublic = !isV3(v3Keystore);
     const isHardware = Object.values(HARDWARE_WALLET_TYPE).includes(
       accountType,
     );
@@ -118,7 +118,7 @@ export default class Wallet {
    * @returns {Promise<Buffer>} Private key buffer
    */
   async getPrivateKey(password) {
-    return keystore.decrypt(password, this.v3);
+    return keystoreKeyGen.getPrivateKey(password, this.v3);
   }
 
   /**
@@ -284,10 +284,9 @@ export default class Wallet {
       throw new Error('Wallet: message must be a string!');
     }
 
-    const privateKey = await this.getPrivateKey(password);
-    const publicKey = secp256k1.publicKeyCreate(privateKey, false).slice(1);
+    const publicKey = keystoreKeyGen.getPublicKey(password, this.v3);
 
-    return encrypt(publicKey, Buffer.from(message, 'utf8')).toString('hex');
+    return crypto.encrypt(message, publicKey);
   }
 
   /**
@@ -297,8 +296,7 @@ export default class Wallet {
    */
   async decryptMessageWithPrivateKey(message, password) {
     const privateKey = await this.getPrivateKey(password);
-
-    return decrypt(privateKey, Buffer.from(message, 'hex')).toString('utf8');
+    return crypto.decrypt(message, privateKey);
   }
 }
 
