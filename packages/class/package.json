@@ -1,6 +1,6 @@
 {
   "name": "@endpass/class",
-  "version": "0.14.3",
+  "version": "0.14.4",
   "description": "Class modules",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -56,7 +56,7 @@
     "url": "https://github.com/endpass/endpass-core/issues"
   },
   "dependencies": {
-    "@endpass/utils": "^1.4.1",
+    "@endpass/utils": "^1.4.2",
     "@ledgerhq/hw-app-eth": "^4.24.0",
     "@ledgerhq/hw-transport-u2f": "^4.24.0",
     "bignumber.js": "^7.2.1",
