@@ -18,34 +18,10 @@ export default {
    * Generate private key
    *
    * @param password
-   * @param v3Keystor1e
+   * @param v3Keystore
    * @returns {string}
    */
   getPrivateKey(password, v3Keystore) {
     return keystoreCrypto.decrypt(password, v3Keystore);
-  },
-
-  /**
-   * Verify public key
-   *
-   * @param value
-   * @returns {boolean}
-   */
-  verifyPublicKey(value) {
-    return secp256k1.publicKeyVerify(
-      Buffer.from(value.replace(/^0x/, ''), 'hex'),
-    );
-  },
-
-  /**
-   * Verify private key
-   *
-   * @param value
-   * @returns {*}
-   */
-  verifyPrivateKey(value) {
-    return secp256k1.privateKeyVerify(
-      Buffer.from(value.replace(/^0x/, ''), 'hex'),
-    );
   },
 };

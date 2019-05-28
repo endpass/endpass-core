@@ -8,6 +8,8 @@ import {
   xPubString,
   xPrvString,
   password,
+  pubAddress,
+  privateAddress,
 } from 'fixtures/keystore';
 
 describe('keystoreHDWallet', () => {
@@ -34,11 +36,7 @@ describe('keystoreHDWallet', () => {
   it('should create hd wallet', () => {
     const returnedWallet = keystoreHDWallet.createHDWalletBySeed(mnemonic);
 
-    expect(returnedWallet.privateExtendedKey()).toBe(
-      'xprv9zpP9a8JJEt3DTXfyMifdLGmvQbKDa1b9Dg6TvptgyApaRPA8tcKWnSfuoQy8yhhPNwrYBXxyW7cs1Auf7yj7XxnCD316XpagBUKx5eHdpY',
-    );
-    expect(returnedWallet.publicExtendedKey()).toBe(
-      'xpub6DojZ5fC8cSLRwc95PFfzUDWUSRod2jSWSbhGKEWFJhoTDiJgRva4am9m7ex1Fm1Ege8MDQ7PNEFqkzdgsRS6UooRfDZpgHkD8vNHiMP3zq',
-    );
+    expect(returnedWallet.privateExtendedKey()).toBe(privateAddress);
+    expect(returnedWallet.publicExtendedKey()).toBe(pubAddress);
   });
 });

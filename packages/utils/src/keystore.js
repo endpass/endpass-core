@@ -3,7 +3,7 @@ import bs58 from './bs58';
 import keystoreHDWallet from './keystoreHDWallet';
 import keystoreWallet from './keystoreWallet';
 import keystoreCrypto from './keystoreCrypto';
-import keystoreExtended from './keystoreExtended';
+import keystoreHDKeyVerify from './keystoreHDKeyVerify';
 
 module.exports = {
   // Encrypts a private key Buffer into a V3 keystore object
@@ -35,11 +35,11 @@ module.exports = {
 
   // Returns true if the key is an extended public key (xpub)
   // Accepts string or buffer
-  isExtendedPublicKey: keystoreExtended.isExtendedPublicKey,
+  isExtendedPublicKey: keystoreHDKeyVerify.isExtendedPublicKey,
 
   // Returns true if the key is an extended private key (xprv)
   // Accepts string or buffer
-  isExtendedPrivateKey: keystoreExtended.isExtendedPrivateKey,
+  isExtendedPrivateKey: keystoreHDKeyVerify.isExtendedPrivateKey,
 
   // Simple sanity check to ensure a valid V3 keystore
   isV3,
