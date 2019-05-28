@@ -1,4 +1,3 @@
-import isV3 from './isV3';
 import bs58 from './bs58';
 
 export default {
@@ -25,7 +24,4 @@ export default {
     const keyString = bs58.encodeBase58(key);
     return keyString.indexOf('xprv') === 0;
   },
-
-  // Simple sanity check to ensure a valid V3 keystore
-  isV3,
 };
