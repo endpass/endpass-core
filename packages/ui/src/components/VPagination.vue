@@ -1,21 +1,61 @@
 <template>
-  <div class="card-header">
-    <a
-      v-if="hasPrev"
-      class="card-header-icon"
-      data-test="pagination-prev"
-      @click.prevent="changePage(-1)"
-    >
-      &lt; Back
-    </a>
-    <a
-      v-if="hasNext"
-      class="card-header-icon"
-      data-test="pagination-next"
-      @click.prevent="changePage(1)"
-    >
-      Next &gt;
-    </a>
+  <div class="v-pagination">
+    <div class="v-pagination-navigation">
+      <span class="v-pagination-node">Page {{ currentPage }}</span>
+      <a
+        :disabled="!hasBack"
+        class="v-pagination-node"
+        data-test="pagination-prev"
+        @click.prevent="goToPrev()"
+      >
+        <span class="v-pagination-triangle-left"/>
+      </a>
+      <a
+        data-test="first-btn"
+        v-if="showFirstPage"
+        class="v-pagination-node"
+        @click.prevent="goToFirst()"
+      >
+        1
+      </a>
+      <a
+        v-if="isShowFirstPageDots"
+        class="v-pagination-node"
+        @click.prevent="goToFirst()"
+      >...</a>
+
+      <a
+        class="v-pagination-node"
+        v-for="num in allVisiblePages"
+        @click.prevent="goToPage(num)"
+      >
+        {{ num }}
+        <span :class="{ 'v-pagination-active-foot': currentPage === num }"
+              />
+      </a>
+
+      <a
+        v-if="showLatestPageDots"
+        class="v-pagination-node"
+        @click.prevent="goToEnd()"
+      >...</a>
+      <a
+        data-test="latest-btn"
+        v-if="showLatestPage"
+        class="v-pagination-node"
+        @click.prevent="goToEnd()"
+      >
+        {{ totalPages }}
+      </a>
+      <a
+        :disabled="!hasForward"
+        class="v-pagination-node"
+        data-test="pagination-next"
+        @click.prevent="goToNext()"
+      >
+        <span class="v-pagination-triangle-left"/>
+      </a>
+    </div>
   </div>
 </template>
 
@@ -25,39 +65,177 @@ export default {
   props: {
     offset: {
       type: Number,
-      default: 0,
+      required: true,
     },
     limit: {
-      type: Number,
-      default: 0,
+      required: true,
+      validator: (value) => {
+        return !!value && Number(value) > 0; // 1+
+      }
     },
     total: {
       type: Number,
       default: 0,
     },
+    pagesVisible: {
+      default: 0,
+      validator: (value) => {
+        return value === 0 || ((value % 2) === 1); // 0, 1, 3, 5 ...
+      },
+      // TODO: add validator for even number only
+    },
   },
   computed: {
-    hasPrev() {
-      return this.offset > 0;
+    currentPage() {
+      return Math.floor(this.offset / this.limit) + 1;
     },
-    hasNext() {
-      if (!this.total) {
+    halfPagesVisible() {
+      return Math.floor(this.pagesVisible / 2);
+    },
+    totalPages() {
+      return Math.ceil(this.total / this.limit);
+    },
+
+    allVisiblePages() {
+      // left side
+      // visible = 3
+      // [[1], 2, 3] = []
+      // [1, [2], 3] = [1]
+      // [6, 7, [8]] = [6, 7]
+
+      const startPointBefore = Math.max(1, this.currentPage - this.halfPagesVisible);
+
+      const maxPages = this.totalPages
+        ? this.totalPages + 1
+        : this.currentPage + this.pagesVisible;
+
+      const startPoint = Math.min(startPointBefore, maxPages - this.pagesVisible);
+      const endPoint = Math.min(maxPages, startPoint + this.pagesVisible);
+
+      const countTotalPages = endPoint - startPoint;
+
+      const numbers = Array.from(Array(countTotalPages), (d, i) => {
+        return startPoint + i;
+      });
+      return numbers;
+    },
+
+    isInfinityPages() {
+      return this.total === 0;
+    },
+    hasVisiblePages() {
+      return !!this.pagesVisible;
+    },
+    hasBack() {
+      return this.currentPage !== 1;
+    },
+    hasForward() {
+      if (this.isInfinityPages) {
         return true; // infinity next
       }
 
-      return this.total > this.offset + this.limit;
+      return this.totalPages > this.currentPage;
     },
+    showFirstPage() {
+      return this.hasVisiblePages && !this.allVisiblePages.includes(1);
+    },
+    isShowFirstPageDots(){
+      return this.hasVisiblePages && !this.allVisiblePages.includes(2);
+    },
+    showLatestPage() {
+      return this.hasVisiblePages && this.total && !this.allVisiblePages.includes(this.totalPages);
+    },
+    showLatestPageDots() {
+      return this.hasVisiblePages &&
+        (
+          (!this.isInfinityPages && !this.allVisiblePages.includes(this.totalPages - 1)) ||
+          this.isInfinityPages
+        );
+    }
   },
   methods: {
-    changePage(diff) {
-      const nextOffset = Math.max(this.offset + this.limit * diff, 0);
+    goToFirst() {
+      this.goToPage(1);
+    },
 
-      if (this.offset !== nextOffset) {
-        this.$emit('offset', nextOffset);
+    goToEnd() {
+      this.goToPage(this.totalPages);
+    },
+
+    goToPrev() {
+      this.goToPage(this.currentPage - 1);
+    },
+
+    goToNext() {
+      this.goToPage(this.currentPage + 1);
+    },
+
+    goToPage(pageNumber) {
+      if (pageNumber > 0 && this.currentPage === pageNumber) {
+        return;
       }
+
+      const nextOffset = (pageNumber - 1) * this.limit;
+
+      this.$emit('offset', nextOffset);
     },
   },
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+  .v-pagination {
+    display: flex;
+  }
+
+  .v-pagination-navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+
+  .v-pagination-node {
+    position: relative;
+    height: 48px;
+    width: 48px;
+    white-space: nowrap;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    padding: 12px;
+
+    &[disabled="disabled"] {
+      pointer-events: none;
+      cursor: default;
+      opacity: 0.3;
+    }
+  }
+
+  .v-pagination-triangle-left {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 7px 5px 0;
+    border-color: transparent #000000 transparent transparent;
+  }
+
+  .v-pagination-triangle-left {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 7px;
+    border-color: transparent transparent transparent #000000;
+  }
+
+  .v-pagination-active-foot {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -8px;
+    height: 4px;
+    background-color: #6E32C9;
+    width: 16px;
+  }
+</style>
