@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Akkurat Pro';
+  src: url('/fonts/Akkurat/AkkuratPro-Regular.eot');
+  src: url('/fonts/Akkurat/AkkuratPro-Regular.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/Akkurat/AkkuratPro-Regular.woff2') format('woff2'),
+       url('/fonts/Akkurat/AkkuratPro-Regular.woff') format('woff'),
+       url('/fonts/Akkurat/AkkuratPro-Regular.ttf') format('truetype'),
+       url('/fonts/Akkurat/AkkuratPro-Regular.svg') format('svg');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Akkurat Pro';
+  src: url('/fonts/Akkurat/AkkuratLightPro-Regular.eot');
+  src: url('/fonts/Akkurat/AkkuratLightPro-Regular.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/Akkurat/AkkuratLightPro-Regular.woff2') format('woff2'),
+       url('/fonts/Akkurat/AkkuratLightPro-Regular.woff') format('woff'),
+       url('/fonts/Akkurat/AkkuratLightPro-Regular.ttf') format('truetype'),
+       url('/fonts/Akkurat/AkkuratLightPro-Regular.svg') format('svg');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Akkurat Pro';
+  src: url('/fonts/Akkurat/AkkuratPro-Bold.eot');
+  src: url('/fonts/Akkurat/AkkuratPro-Bold.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/Akkurat/AkkuratPro-Bold.woff2') format('woff2'),
+       url('/fonts/Akkurat/AkkuratPro-Bold.woff') format('woff'),
+       url('/fonts/Akkurat/AkkuratPro-Bold.ttf') format('truetype'),
+       url('/fonts/Akkurat/AkkuratPro-Bold.svg') format('svg');
+  font-style: normal;
+  font-weight: 700;
+}
+
+html,
+body {
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  font-family: $primary-font;
+  color: #13171a;
+  line-height: normal;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -0.75px;
+}
+
+h2 {
+  font-size: 40px;
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  font-size: 24px;
+  letter-spacing: -0.3px;
+}
+
+h4 {
+  font-size: 20px;
+  letter-spacing: -0.25px;
+}
+
+small {
+  font-size: 12px;
+  letter-spacing: -0.15px;
+}

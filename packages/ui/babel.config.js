@@ -10,10 +10,11 @@ module.exports = {
       },
     ],
   ],
+  plugins: ['@babel/plugin-proposal-class-properties'],
   env: {
     test: {
       presets: ['@babel/preset-env'],
-      plugins: [['dynamic-import-node']],
+      plugins: ['dynamic-import-node', 'require-context-hook'],
     },
   },
 };

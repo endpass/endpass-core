@@ -5,22 +5,24 @@ module.exports = async ({ config }) => {
   config.module.rules.push({
     test: /\.(postcss|scss)$/,
     use: [
-      'vue-style-loader',
-      'css-loader',
+      'style-loader',
       {
-        loader: 'sass-loader',
+        loader: 'css-loader',
         options: {
           sourceMap: true,
-          data: '@import "@/scss/variables.scss";',
         },
       },
       {
         loader: 'postcss-loader',
         options: {
           sourceMap: true,
-          config: {
-            path: './.storybook/',
-          },
+        },
+      },
+      {
+        loader: 'sass-loader',
+        options: {
+          sourceMap: true,
+          data: '@import "@/scss/variables.scss";',
         },
       },
     ],

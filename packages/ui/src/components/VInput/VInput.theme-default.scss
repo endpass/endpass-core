@@ -1,0 +1,42 @@
+.v-input-atom.theme-default:hover {
+  border-color: $grey-2;
+
+  .v-input-atom-control::placeholder {
+    color: $grey-6;
+  }
+}
+
+.v-input-atom.theme-default.is-focus {
+  border-color: $primary;
+  background-color: $white;
+
+  .v-input-atom-control::placeholder {
+    opacity: 0;
+  }
+}
+
+.v-input-atom.theme-default.is-error {
+  border-color: $error;
+}
+
+.v-input-atom.theme-default.is-disabled {
+  border-color: $grey-1;
+
+  .v-input-atom-control::placeholder {
+    color: $grey-4;
+  }
+}
+
+.v-input-atom.theme-default .v-input-atom-error.theme-default {
+  color: $white;
+  background-color: $error;
+  font-size: 12px;
+  width: 14px;
+  min-width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  text-align: center;
+  font-style: normal;
+  margin-right: 17px;
+  letter-spacing: 0;
+}
