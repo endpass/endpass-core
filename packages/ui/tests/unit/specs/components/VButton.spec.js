@@ -50,7 +50,7 @@ describe('VButton', () => {
 
     button.trigger('click');
 
-    expect(listeners.click.fns).toHaveBeenCalledTimes(1);
+    expect(listeners.click).toHaveBeenCalledTimes(1);
 
     wrapper.setProps({ disabled: true });
     // button.trigger('click');
@@ -62,6 +62,6 @@ describe('VButton', () => {
 
     button.trigger('click');
 
-    expect(listeners.click.fns).toHaveBeenCalledTimes(2);
+    expect(listeners.click).toHaveBeenCalledTimes(2);
   });
 });

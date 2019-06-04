@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots VInput/desktop disabled 1`] = `
+<div>
+  <div
+    class="v-field-atom theme-default"
+    style="width: 288px;"
+  >
+    <label
+      class="v-label-atom theme-default is-muted"
+    >
+      
+  Label
+
+    </label>
+     
+    <div
+      class="v-description-atom theme-default is-muted"
+    >
+      
+  Helper text goes here
+
+    </div>
+     
+    <div
+      class="v-input-atom theme-default is-disabled"
+    >
+      <input
+        class="v-input-atom-control"
+        disabled="disabled"
+        placeholder="Placeholder text"
+      />
+       
+    </div>
+     
+    <!---->
+  </div>
+</div>
+`;
+
+exports[`Storyshots VInput/desktop enabled 1`] = `
+<div>
+  <div
+    class="v-field-atom theme-default"
+    style="width: 288px;"
+  >
+    <label
+      class="v-label-atom theme-default"
+    >
+      
+  Label
+
+    </label>
+     
+    <div
+      class="v-description-atom theme-default"
+    >
+      
+  Helper text goes here
+
+    </div>
+     
+    <div
+      class="v-input-atom theme-default"
+    >
+      <input
+        class="v-input-atom-control"
+        placeholder="Placeholder text"
+      />
+       
+    </div>
+     
+    <!---->
+  </div>
+</div>
+`;
+
+exports[`Storyshots VInput/desktop error 1`] = `
+<div>
+  <div
+    class="v-field-atom theme-default"
+    style="width: 288px;"
+  >
+    <label
+      class="v-label-atom theme-default"
+    >
+      
+  Label
+
+    </label>
+     
+    <div
+      class="v-description-atom theme-default"
+    >
+      
+  Helper text goes here
+
+    </div>
+     
+    <div
+      class="v-input-atom theme-default is-error"
+    >
+      <input
+        class="v-input-atom-control"
+        placeholder="Placeholder text"
+      />
+       
+      <div
+        class="v-input-atom-error theme-default"
+      >
+        
+      !
+    
+      </div>
+    </div>
+     
+    <div
+      class="v-error-atom theme-default"
+    >
+      
+  Error message here
+
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,10 @@
+.v-label-atom.theme-default {
+  font-size: 12px;
+  letter-spacing: -0.15px;
+  margin-bottom: 5px;
+  color: $black;
+}
+
+.v-label-atom.theme-default.is-muted {
+  color: $grey-4;
+}
