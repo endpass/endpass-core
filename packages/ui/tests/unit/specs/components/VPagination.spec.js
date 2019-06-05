@@ -102,8 +102,8 @@ describe('VPagination', () => {
         offset: 50,
       });
 
-      expect(wrapper.find('[data-test=first-btn]').exists()).toBeFalsy();
-      expect(wrapper.find('[data-test=latest-btn]').exists()).toBeFalsy();
+      expect(wrapper.find('[data-test=btn-goto-first]').exists()).toBeFalsy();
+      expect(wrapper.find('[data-test=btn-goto-last]').exists()).toBeFalsy();
     });
 
     it('should not show latest button', () => {
@@ -111,8 +111,8 @@ describe('VPagination', () => {
         offset: 0,
       });
 
-      expect(wrapper.find('[data-test=first-btn]').exists()).toBeFalsy();
-      expect(wrapper.find('[data-test=latest-btn]').exists()).toBeFalsy();
+      expect(wrapper.find('[data-test=btn-goto-first]').exists()).toBeFalsy();
+      expect(wrapper.find('[data-test=btn-goto-last]').exists()).toBeFalsy();
     });
 
     it('should show only latest button', () => {
@@ -121,8 +121,8 @@ describe('VPagination', () => {
         pagesVisible: 3,
       });
 
-      expect(wrapper.find('[data-test=first-btn]').exists()).toBeFalsy();
-      expect(wrapper.find('[data-test=latest-btn]').exists()).toBeTruthy();
+      expect(wrapper.find('[data-test=btn-goto-first]').exists()).toBeFalsy();
+      expect(wrapper.find('[data-test=btn-goto-last]').exists()).toBeTruthy();
     });
 
     it('should show first and latest button', () => {
@@ -131,8 +131,8 @@ describe('VPagination', () => {
         pagesVisible: 3,
       });
 
-      expect(wrapper.find('[data-test=first-btn]').exists()).toBeTruthy();
-      expect(wrapper.find('[data-test=latest-btn]').exists()).toBeTruthy();
+      expect(wrapper.find('[data-test=btn-goto-first]').exists()).toBeTruthy();
+      expect(wrapper.find('[data-test=btn-goto-last]').exists()).toBeTruthy();
     });
 
     it('should show only first button', () => {
@@ -141,8 +141,58 @@ describe('VPagination', () => {
         pagesVisible: 3,
       });
 
-      expect(wrapper.find('[data-test=first-btn]').exists()).toBeTruthy();
-      expect(wrapper.find('[data-test=latest-btn]').exists()).toBeFalsy();
+      expect(wrapper.find('[data-test=btn-goto-first]').exists()).toBeTruthy();
+      expect(wrapper.find('[data-test=btn-goto-last]').exists()).toBeFalsy();
+    });
+  });
+
+  describe('goto pages navigation', () => {
+    it('should show only one page', () => {
+      wrapper.setProps({
+        offset: 0,
+        pagesVisible: 5,
+        total: 1,
+      });
+
+      expect(wrapper.findAll('[data-test=btn-goto-page]')).toHaveLength(1);
+      expect(wrapper.find('[data-test=btn-goto-first]').exists()).toBeFalsy();
+      expect(wrapper.find('[data-test=btn-goto-last]').exists()).toBeFalsy();
+    });
+
+    it('should show only 3 page', () => {
+      wrapper.setProps({
+        offset: 0,
+        pagesVisible: 5,
+        total: 30,
+      });
+
+      expect(wrapper.findAll('[data-test=btn-goto-page]')).toHaveLength(3);
+      expect(wrapper.find('[data-test=btn-goto-first]').exists()).toBeFalsy();
+      expect(wrapper.find('[data-test=btn-goto-last]').exists()).toBeFalsy();
+    });
+
+    it('should show only all 5 page', () => {
+      wrapper.setProps({
+        offset: 0,
+        pagesVisible: 5,
+        total: 300,
+      });
+
+      expect(wrapper.findAll('[data-test=btn-goto-page]')).toHaveLength(5);
+      expect(wrapper.find('[data-test=btn-goto-first]').exists()).toBeFalsy();
+      expect(wrapper.find('[data-test=btn-goto-last]').exists()).toBeTruthy();
+    });
+
+    it('should show only all 5 page', () => {
+      wrapper.setProps({
+        offset: 100,
+        pagesVisible: 5,
+        total: 300,
+      });
+
+      expect(wrapper.findAll('[data-test=btn-goto-page]')).toHaveLength(5);
+      expect(wrapper.find('[data-test=btn-goto-first]').exists()).toBeTruthy();
+      expect(wrapper.find('[data-test=btn-goto-last]').exists()).toBeTruthy();
     });
   });
 
