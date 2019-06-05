@@ -196,6 +196,74 @@ describe('VPagination', () => {
     });
   });
 
+  describe('dots', () => {
+    it('should not show dots', () => {
+      wrapper.setProps({
+        offset: 0,
+        pagesVisible: 0,
+        total: 1,
+      });
+
+      expect(wrapper.find('[data-test=dots-left]').exists()).toBeFalsy();
+      expect(wrapper.find('[data-test=dots-right]').exists()).toBeFalsy();
+    });
+
+    it('should not show dots with one page', () => {
+      wrapper.setProps({
+        offset: 0,
+        pagesVisible: 3,
+        total: 1,
+      });
+
+      expect(wrapper.find('[data-test=dots-left]').exists()).toBeFalsy();
+      expect(wrapper.find('[data-test=dots-right]').exists()).toBeFalsy();
+    });
+
+    it('should show only right dots', () => {
+      wrapper.setProps({
+        offset: 0,
+        pagesVisible: 3,
+        total: 100,
+      });
+
+      expect(wrapper.find('[data-test=dots-left]').exists()).toBeFalsy();
+      expect(wrapper.find('[data-test=dots-right]').exists()).toBeTruthy();
+    });
+
+    it('should show only left dots', () => {
+      wrapper.setProps({
+        offset: 90,
+        pagesVisible: 3,
+        total: 100,
+      });
+
+      expect(wrapper.find('[data-test=dots-left]').exists()).toBeTruthy();
+      expect(wrapper.find('[data-test=dots-right]').exists()).toBeFalsy();
+    });
+
+    it('should show all dots', () => {
+      wrapper.setProps({
+        offset: 30,
+        pagesVisible: 3,
+        total: 100,
+      });
+
+      expect(wrapper.find('[data-test=dots-left]').exists()).toBeTruthy();
+      expect(wrapper.find('[data-test=dots-right]').exists()).toBeTruthy();
+    });
+
+    it('should show all dots without total', () => {
+      wrapper.setProps({
+        offset: 30,
+        pagesVisible: 3,
+        total: 0,
+      });
+
+      expect(wrapper.find('[data-test=dots-left]').exists()).toBeTruthy();
+      expect(wrapper.find('[data-test=dots-right]').exists()).toBeTruthy();
+    });
+  });
+
   describe('events', () => {
     it('should emit correct next offset', () => {
       wrapper.setProps({
