@@ -139,20 +139,45 @@ export default {
       return this.totalPages > this.currentPage;
     },
     showFirstPage() {
-      return this.hasVisiblePages && !this.allVisiblePages.includes(1);
+      if (!this.hasVisiblePages) {
+        return false;
+      }
+
+      return !this.allVisiblePages.includes(1);
     },
     isShowFirstPageDots(){
-      return this.hasVisiblePages && !this.allVisiblePages.includes(2);
+      if (!this.hasVisiblePages) {
+        return false;
+      }
+
+      if (this.allVisiblePages.includes(2)) {
+        return false;
+      }
+
+      return this.currentPage > 2;
     },
     showLastPage() {
-      return this.hasVisiblePages && this.total && !this.allVisiblePages.includes(this.totalPages);
+      if (!this.hasVisiblePages) {
+        return false;
+      }
+
+      return !this.isInfinityPages && !this.allVisiblePages.includes(this.totalPages);
     },
     showLastPageDots() {
-      return this.hasVisiblePages &&
-        (
-          (!this.isInfinityPages && !this.allVisiblePages.includes(this.totalPages - 1)) ||
-          this.isInfinityPages
-        );
+      if (!this.hasVisiblePages) {
+        return false;
+      }
+
+      const nearPageNumber = this.totalPages - 1;
+      if (this.allVisiblePages.includes(nearPageNumber)) {
+        return false;
+      }
+
+      if (this.isInfinityPages) {
+        return true;
+      }
+
+      return this.totalPages > 2;
     }
   },
   methods: {
