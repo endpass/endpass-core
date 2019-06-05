@@ -53,7 +53,7 @@
         data-test="pagination-next"
         @click.prevent="goToNext()"
       >
-        <span class="v-pagination-triangle-left"/>
+        <span class="v-pagination-triangle-right"/>
       </a>
     </div>
   </div>
@@ -221,7 +221,7 @@ export default {
     border-color: transparent #000000 transparent transparent;
   }
 
-  .v-pagination-triangle-left {
+  .v-pagination-triangle-right {
     width: 0;
     height: 0;
     border-style: solid;

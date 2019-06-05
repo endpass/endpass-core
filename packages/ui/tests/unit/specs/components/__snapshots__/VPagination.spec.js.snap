@@ -6,7 +6,7 @@ exports[`VPagination render should be with default state 1`] = `
     <!---->
     <!---->
     <!---->
-    <!----> <a data-test="pagination-next" class="v-pagination-node"><span class="v-pagination-triangle-left"></span></a></div>
+    <!----> <a data-test="pagination-next" class="v-pagination-node"><span class="v-pagination-triangle-right"></span></a></div>
 </div>
 `;
 
@@ -22,7 +22,7 @@ exports[`VPagination render should be with defined total 1`] = `
       7
       <span class=""></span></a> <a class="v-pagination-node">...</a> <a data-test="latest-btn" class="v-pagination-node">
       10
-    </a> <a data-test="pagination-next" class="v-pagination-node"><span class="v-pagination-triangle-left"></span></a></div>
+    </a> <a data-test="pagination-next" class="v-pagination-node"><span class="v-pagination-triangle-right"></span></a></div>
 </div>
 `;
 
@@ -38,7 +38,7 @@ exports[`VPagination render should be with defined total in end 1`] = `
       10
       <span class=""></span></a>
     <!---->
-    <!----> <a data-test="pagination-next" class="v-pagination-node" disabled="disabled"><span class="v-pagination-triangle-left"></span></a></div>
+    <!----> <a data-test="pagination-next" class="v-pagination-node" disabled="disabled"><span class="v-pagination-triangle-right"></span></a></div>
 </div>
 `;
 
@@ -53,6 +53,6 @@ exports[`VPagination render should be with pagesVisible 1`] = `
       <span class="v-pagination-active-foot"></span></a><a class="v-pagination-node">
       6
       <span class=""></span></a> <a class="v-pagination-node">...</a>
-    <!----> <a data-test="pagination-next" class="v-pagination-node"><span class="v-pagination-triangle-left"></span></a></div>
+    <!----> <a data-test="pagination-next" class="v-pagination-node"><span class="v-pagination-triangle-right"></span></a></div>
 </div>
 `;
