@@ -11,9 +11,9 @@
         <span class="v-pagination-triangle-left"/>
       </a>
       <a
-        data-test="first-btn"
         v-if="showFirstPage"
         class="v-pagination-node"
+        data-test="btn-goto-first"
         @click.prevent="goToFirst()"
       >
         1
@@ -21,29 +21,33 @@
       <a
         v-if="isShowFirstPageDots"
         class="v-pagination-node"
+        data-test="dots-left"
         @click.prevent="goToFirst()"
       >...</a>
 
       <a
         class="v-pagination-node"
         v-for="num in allVisiblePages"
+        data-test="btn-goto-page"
         @click.prevent="goToPage(num)"
       >
         {{ num }}
-        <span :class="{ 'v-pagination-active-foot': currentPage === num }"
-              />
+        <span 
+          :class="{ 'v-pagination-active-foot': currentPage === num }" 
+        />
       </a>
 
       <a
-        v-if="showLatestPageDots"
+        v-if="showLastPageDots"
         class="v-pagination-node"
-        @click.prevent="goToEnd()"
+        data-test="dots-right"
+        @click.prevent="goToLast()"
       >...</a>
       <a
-        data-test="latest-btn"
-        v-if="showLatestPage"
+        data-test="btn-goto-last"
+        v-if="showLastPage"
         class="v-pagination-node"
-        @click.prevent="goToEnd()"
+        @click.prevent="goToLast()"
       >
         {{ totalPages }}
       </a>
@@ -53,7 +57,7 @@
         data-test="pagination-next"
         @click.prevent="goToNext()"
       >
-        <span class="v-pagination-triangle-left"/>
+        <span class="v-pagination-triangle-right"/>
       </a>
     </div>
   </div>
@@ -82,7 +86,6 @@ export default {
       validator: (value) => {
         return value === 0 || ((value % 2) === 1); // 0, 1, 3, 5 ...
       },
-      // TODO: add validator for even number only
     },
   },
   computed: {
@@ -97,7 +100,6 @@ export default {
     },
 
     allVisiblePages() {
-      // left side
       // visible = 3
       // [[1], 2, 3] = []
       // [1, [2], 3] = [1]
@@ -109,15 +111,15 @@ export default {
         ? this.totalPages + 1
         : this.currentPage + this.pagesVisible;
 
-      const startPoint = Math.min(startPointBefore, maxPages - this.pagesVisible);
+      const startPointByVisiblePages = Math.max(1, maxPages - this.pagesVisible);
+      const startPoint = Math.min(startPointBefore, startPointByVisiblePages);
       const endPoint = Math.min(maxPages, startPoint + this.pagesVisible);
 
       const countTotalPages = endPoint - startPoint;
 
-      const numbers = Array.from(Array(countTotalPages), (d, i) => {
+      return Array.from(Array(countTotalPages), (d, i) => {
         return startPoint + i;
       });
-      return numbers;
     },
 
     isInfinityPages() {
@@ -142,10 +144,10 @@ export default {
     isShowFirstPageDots(){
       return this.hasVisiblePages && !this.allVisiblePages.includes(2);
     },
-    showLatestPage() {
+    showLastPage() {
       return this.hasVisiblePages && this.total && !this.allVisiblePages.includes(this.totalPages);
     },
-    showLatestPageDots() {
+    showLastPageDots() {
       return this.hasVisiblePages &&
         (
           (!this.isInfinityPages && !this.allVisiblePages.includes(this.totalPages - 1)) ||
@@ -158,7 +160,7 @@ export default {
       this.goToPage(1);
     },
 
-    goToEnd() {
+    goToLast() {
       this.goToPage(this.totalPages);
     },
 
@@ -221,7 +223,7 @@ export default {
     border-color: transparent #000000 transparent transparent;
   }
 
-  .v-pagination-triangle-left {
+  .v-pagination-triangle-right {
     width: 0;
     height: 0;
     border-style: solid;
