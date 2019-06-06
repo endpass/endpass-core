@@ -1,6 +1,6 @@
 {
   "name": "@endpass/class",
-  "version": "0.14.4",
+  "version": "0.14.5",
   "description": "Class modules",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -50,7 +50,8 @@
     "Network",
     "Web3Factory",
     "Token",
-    "wallet/Wallet"
+    "wallet/Wallet",
+    "storage/LocalStorage"
   ],
   "bugs": {
     "url": "https://github.com/endpass/endpass-core/issues"
