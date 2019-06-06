@@ -1,0 +1,181 @@
+.v-button.theme-default {
+  border: 0;
+  background: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background .3s, box-shadow .3s, border-color .3s;
+  outline: 0;
+  box-shadow: 0 2px 4px rgba(36, 42, 46, 0.1), 0 1px 1px rgba(36, 42, 46, 0.1);
+}
+
+.v-button.theme-default .v-button-label {
+  text-transform: uppercase;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 1.1px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: color .3s;
+}
+
+.v-button.theme-default .v-button-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.v-button.theme-default.skin-primary {
+  background: $primary;
+}
+
+.v-button.theme-default.skin-primary:hover {
+  background: $primary-light;
+}
+
+.v-button.theme-default.skin-primary:focus {
+  box-shadow: none;
+}
+
+.v-button.theme-default.skin-primary:active {
+  background: $primary-dark;
+  box-shadow: 0 2px 4px rgba(36, 42, 46, 0.1), 0 1px 1px rgba(36, 42, 46, 0.1);
+}
+
+.v-button.theme-default.skin-secondary {
+  background: $grey-9;
+}
+
+.v-button.theme-default.skin-secondary:hover {
+  background: $grey-6;
+}
+
+.v-button.theme-default.skin-secondary:focus {
+  box-shadow: none;
+}
+
+.v-button.theme-default.skin-secondary:active {
+  background: $black;
+  box-shadow: 0 2px 4px rgba(36, 42, 46, 0.1), 0 1px 1px rgba(36, 42, 46, 0.1);
+}
+
+.v-button.theme-default.skin-tertiary {
+  background: $white;
+}
+
+.v-button.theme-default.skin-tertiary:focus {
+  box-shadow: none;
+}
+
+.v-button.theme-default.skin-tertiary:active {
+  background: $primary-6;
+  box-shadow: 0 2px 4px rgba(36, 42, 46, 0.1), 0 1px 1px rgba(36, 42, 46, 0.1);
+}
+
+.v-button.theme-default[disabled] .v-button-label {
+  color: $grey-4 !important;
+}
+
+.v-button.theme-default.skin-tertiary .v-button-label,
+.v-button.theme-default.skin-quaternary .v-button-label,
+  .v-button.theme-default.skin-ghost .v-button-label {
+  color: $primary;
+}
+
+.v-button.theme-default.skin-primary .v-button-label,
+.v-button.theme-default.skin-secondary .v-button-label,
+.v-button.theme-default.skin-quaternary:hover .v-button-label,
+.v-button.theme-default.skin-quaternary:focus .v-button-label,
+.v-button.theme-default.skin-ghost:active .v-button-label {
+  color: $white;
+}
+
+.v-button.theme-default.skin-tertiary:hover .v-button-label {
+  color: $primary-light;
+}
+
+.v-button.theme-default.skin-quaternary {
+  box-sizing: border-box;
+  box-shadow: none;
+  border: 1px solid $primary;
+}
+
+.v-button.theme-default.skin-quaternary:hover {
+  background: $primary;
+  box-shadow: 0 2px 4px rgba(36, 42, 46, 0.1), 0 1px 1px rgba(36, 42, 46, 0.1);
+}
+
+.v-button.theme-default.skin-quaternary:focus {
+  background: $primary;
+}
+
+.v-button.theme-default.skin-quaternary:active {
+  background: $primary-dark;
+  box-shadow: 0 2px 4px rgba(36, 42, 46, 0.1), 0 1px 1px rgba(36, 42, 46, 0.1);
+}
+
+.v-button.theme-default.skin-ghost {
+  box-shadow: none;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+}
+
+.v-button.theme-default.skin-ghost:hover {
+  background: $grey-2;
+}
+
+.v-button.theme-default.skin-ghost:focus {
+  border-color: $primary;
+}
+
+.v-button.theme-default.skin-ghost:active {
+  border-color: transparent;
+  background: $grey-3;
+}
+
+.v-button.theme-default.size-normal {
+  padding: 12px 24px 10px;
+}
+
+.v-button.theme-default.size-big {
+  padding: 18px 24px 16px;
+}
+
+.v-button.theme-default[disabled] {
+  border: 0 !important;
+  box-shadow: none !important;
+  background: $grey-2 !important;
+}
+
+.v-button.theme-default .v-svg-icon {
+  transition: fill .3s;
+  width: 20px;
+  height: 20px;
+}
+
+.v-button.theme-default.skin-tertiary .v-svg-icon,
+.v-button.theme-default.skin-quaternary .v-svg-icon,
+.v-button.theme-default.skin-ghost .v-svg-icon {
+  fill: $primary;
+}
+
+.v-button.theme-default.skin-primary .v-svg-icon,
+.v-button.theme-default.skin-secondary .v-svg-icon,
+.v-button.theme-default.skin-quaternary:hover .v-svg-icon,
+.v-button.theme-default.skin-quaternary:focus .v-svg-icon,
+.v-button.theme-default.skin-ghost:active .v-svg-icon {
+  fill: $white;
+}
+
+.v-button.theme-default.skin-tertiary:hover .v-svg-icon {
+  fill: $primary-light;
+}
+
+.v-button.skin-success {
+  background-color: $success;
+  color: $white;
+}
+
+.v-button.skin-error {
+  background-color: $error;
+  color: $white;
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <symbol id="icon-action" viewBox="0 0 32 32">
+      <path d="M22 4l6 6-6 6-1.41-1.41 3.58-3.59h-20.17v-2h20.17l-3.58-3.59 1.41-1.41zM7.83 23l3.58 3.59-1.41 1.41-6-6 6-6 1.41 1.41-3.58 3.59h20.17v2h-20.17z" />
+    </symbol>
+  </defs>
+</svg>

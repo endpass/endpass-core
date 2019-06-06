@@ -22,7 +22,6 @@ module.exports = async ({ config }) => {
         loader: 'sass-loader',
         options: {
           sourceMap: true,
-          data: '@import "@/scss/variables.scss";',
         },
       },
     ],

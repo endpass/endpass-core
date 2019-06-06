@@ -1,7 +1,7 @@
 <template>
-  <div :class="themeCssClass">
+  <i :class="themeCssClass">
     <slot />
-  </div>
+  </i>
 </template>
 
 <script>

@@ -1,5 +1,779 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots VButton/desktop disabled 1`] = `
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th />
+         
+        <th>
+          Primary
+        </th>
+         
+        <th>
+          Secondary
+        </th>
+         
+        <th>
+          Tertiary
+        </th>
+         
+        <th>
+          Quaternary
+        </th>
+         
+        <th>
+          Ghost
+        </th>
+      </tr>
+    </thead>
+     
+    <tbody>
+      <tr>
+        <th
+          scope="row"
+        >
+          Normal
+        </th>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-primary size-normal"
+            disabled="disabled"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-secondary size-normal"
+            disabled="disabled"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-tertiary size-normal"
+            disabled="disabled"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-quaternary size-normal"
+            disabled="disabled"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-ghost size-normal"
+            disabled="disabled"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+      </tr>
+       
+      <tr>
+        <th
+          scope="row"
+        >
+          Big
+        </th>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-primary size-big"
+            disabled="disabled"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-secondary size-big"
+            disabled="disabled"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-tertiary size-big"
+            disabled="disabled"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-quaternary size-big"
+            disabled="disabled"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-ghost size-big"
+            disabled="disabled"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Storyshots VButton/desktop enabled 1`] = `
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th />
+         
+        <th>
+          Primary
+        </th>
+         
+        <th>
+          Secondary
+        </th>
+         
+        <th>
+          Tertiary
+        </th>
+         
+        <th>
+          Quaternary
+        </th>
+         
+        <th>
+          Ghost
+        </th>
+      </tr>
+    </thead>
+     
+    <tbody>
+      <tr>
+        <th
+          scope="row"
+        >
+          Normal
+        </th>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-primary size-normal"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-secondary size-normal"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-tertiary size-normal"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-quaternary size-normal"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-ghost size-normal"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+      </tr>
+       
+      <tr>
+        <th
+          scope="row"
+        >
+          Big
+        </th>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-primary size-big"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-secondary size-big"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-tertiary size-big"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-quaternary size-big"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-ghost size-big"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Storyshots VButton/desktop icon 1`] = `
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th />
+         
+        <th>
+          Primary
+        </th>
+         
+        <th>
+          Secondary
+        </th>
+         
+        <th>
+          Tertiary
+        </th>
+         
+        <th>
+          Quaternary
+        </th>
+         
+        <th>
+          Ghost
+        </th>
+      </tr>
+    </thead>
+     
+    <tbody>
+      <tr>
+        <th
+          scope="row"
+        >
+          Normal
+        </th>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-primary size-normal"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label 
+            </span>
+             
+            <i
+              class="v-button-icon theme-default"
+            >
+              <svg
+                class="v-svg-icon"
+              >
+                <use
+                  xlink:href="img/icons.svg#icon-action"
+                />
+              </svg>
+            </i>
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-secondary size-normal"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label 
+            </span>
+             
+            <i
+              class="v-button-icon theme-default"
+            >
+              <svg
+                class="v-svg-icon"
+              >
+                <use
+                  xlink:href="img/icons.svg#icon-action"
+                />
+              </svg>
+            </i>
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-tertiary size-normal"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label 
+            </span>
+             
+            <i
+              class="v-button-icon theme-default"
+            >
+              <svg
+                class="v-svg-icon"
+              >
+                <use
+                  xlink:href="img/icons.svg#icon-action"
+                />
+              </svg>
+            </i>
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-quaternary size-normal"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label 
+            </span>
+             
+            <i
+              class="v-button-icon theme-default"
+            >
+              <svg
+                class="v-svg-icon"
+              >
+                <use
+                  xlink:href="img/icons.svg#icon-action"
+                />
+              </svg>
+            </i>
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-ghost size-normal"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label 
+            </span>
+             
+            <i
+              class="v-button-icon theme-default"
+            >
+              <svg
+                class="v-svg-icon"
+              >
+                <use
+                  xlink:href="img/icons.svg#icon-action"
+                />
+              </svg>
+            </i>
+          </button>
+        </td>
+      </tr>
+       
+      <tr>
+        <th
+          scope="row"
+        >
+          Big
+        </th>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-primary size-big"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label 
+            </span>
+             
+            <i
+              class="v-button-icon theme-default"
+            >
+              <svg
+                class="v-svg-icon"
+              >
+                <use
+                  xlink:href="img/icons.svg#icon-action"
+                />
+              </svg>
+            </i>
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-secondary size-big"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label 
+            </span>
+             
+            <i
+              class="v-button-icon theme-default"
+            >
+              <svg
+                class="v-svg-icon"
+              >
+                <use
+                  xlink:href="img/icons.svg#icon-action"
+                />
+              </svg>
+            </i>
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-tertiary size-big"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label 
+            </span>
+             
+            <i
+              class="v-button-icon theme-default"
+            >
+              <svg
+                class="v-svg-icon"
+              >
+                <use
+                  xlink:href="img/icons.svg#icon-action"
+                />
+              </svg>
+            </i>
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-quaternary size-big"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label 
+            </span>
+             
+            <i
+              class="v-button-icon theme-default"
+            >
+              <svg
+                class="v-svg-icon"
+              >
+                <use
+                  xlink:href="img/icons.svg#icon-action"
+                />
+              </svg>
+            </i>
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-ghost size-big"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label 
+            </span>
+             
+            <i
+              class="v-button-icon theme-default"
+            >
+              <svg
+                class="v-svg-icon"
+              >
+                <use
+                  xlink:href="img/icons.svg#icon-action"
+                />
+              </svg>
+            </i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Storyshots VButton/desktop state 1`] = `
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th />
+         
+        <th>
+          Success
+        </th>
+         
+        <th>
+          Error
+        </th>
+      </tr>
+    </thead>
+     
+    <tbody>
+      <tr>
+        <th
+          scope="row"
+        >
+          Normal
+        </th>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-success size-normal"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-error size-normal"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+      </tr>
+       
+      <tr>
+        <th
+          scope="row"
+        >
+          Big
+        </th>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-success size-big"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-error size-big"
+          >
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
 exports[`Storyshots VInput/desktop disabled 1`] = `
 <div>
   <div
@@ -105,13 +879,13 @@ exports[`Storyshots VInput/desktop error 1`] = `
         placeholder="Placeholder text"
       />
        
-      <div
+      <i
         class="v-input-atom-error theme-default"
       >
         
       !
     
-      </div>
+      </i>
     </div>
      
     <div
