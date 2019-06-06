@@ -33,7 +33,6 @@
 </template>
 
 <script>
-import ThemeMixin from '@/mixins/ThemeMixin';
 import LabelAtom from '@/atom/label-atom/label-atom';
 import IconAtom from '@/atom/icon-atom/icon-atom';
 import InputAtom from '@/atom/input-atom/input-atom';
@@ -82,7 +81,6 @@ export default {
       };
     },
   },
-  mixins: [ThemeMixin],
   components: {
     IconAtom,
     LabelAtom,
