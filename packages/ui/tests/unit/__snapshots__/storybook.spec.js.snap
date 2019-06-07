@@ -774,6 +774,231 @@ exports[`Storyshots VButton/desktop state 1`] = `
 </div>
 `;
 
+exports[`Storyshots VCheckbox/desktop array 1`] = `
+<div>
+  <label
+    class="v-checkbox theme-default"
+  >
+    <i
+      class="v-checkbox-icon theme-default"
+    />
+     
+    <input
+      class="v-checkbox-control"
+      name="Name"
+      type="checkbox"
+      value="Crypto!"
+    />
+     
+    <span
+      class="v-checkbox-label"
+    >
+      
+          with Crypto!
+        
+    </span>
+  </label>
+   
+  <br />
+  
+        persons: Bob, Alice
+      
+</div>
+`;
+
+exports[`Storyshots VCheckbox/desktop default state 1`] = `
+<div>
+  <label
+    class="v-checkbox theme-default"
+  >
+    <i
+      class="v-checkbox-icon theme-default"
+    />
+     
+    <input
+      class="v-checkbox-control"
+      name="Name"
+      type="checkbox"
+      value="false"
+    />
+     
+    <span
+      class="v-checkbox-label"
+    >
+      
+          state: 
+        
+    </span>
+  </label>
+</div>
+`;
+
+exports[`Storyshots VCheckbox/desktop default state false 1`] = `
+<div>
+  <label
+    class="v-checkbox theme-default"
+  >
+    <i
+      class="v-checkbox-icon theme-default"
+    />
+     
+    <input
+      class="v-checkbox-control"
+      name="checkbox"
+      type="checkbox"
+      value="false"
+    />
+     
+    <span
+      class="v-checkbox-label"
+    >
+      
+          Checkbox item
+        
+    </span>
+  </label>
+   
+  <div>
+    state: false
+  </div>
+</div>
+`;
+
+exports[`Storyshots VCheckbox/desktop default state true 1`] = `
+<div>
+  <label
+    class="v-checkbox theme-default"
+  >
+    <i
+      class="v-checkbox-icon theme-default"
+    />
+     
+    <input
+      class="v-checkbox-control"
+      name="checkbox"
+      type="checkbox"
+      value="true"
+    />
+     
+    <span
+      class="v-checkbox-label"
+    >
+      
+          state: true
+        
+    </span>
+  </label>
+</div>
+`;
+
+exports[`Storyshots VCheckbox/desktop disabled 1`] = `
+<div>
+  <label
+    class="v-checkbox theme-default is-disabled"
+  >
+    <i
+      class="v-checkbox-icon theme-default"
+    />
+     
+    <input
+      class="v-checkbox-control"
+      disabled="disabled"
+      name="checkbox"
+      type="checkbox"
+      value="false"
+    />
+     
+    <span
+      class="v-checkbox-label"
+    >
+      
+          disabled
+        
+    </span>
+  </label>
+   
+  <div />
+   
+  <label
+    class="v-checkbox theme-default is-checked is-disabled"
+  >
+    <i
+      class="v-checkbox-icon theme-default"
+    />
+     
+    <input
+      class="v-checkbox-control"
+      disabled="disabled"
+      name="checkbox"
+      type="checkbox"
+      value="false"
+    />
+     
+    <span
+      class="v-checkbox-label"
+    >
+      
+          disabled
+        
+    </span>
+  </label>
+</div>
+`;
+
+exports[`Storyshots VCheckbox/desktop error 1`] = `
+<div>
+  <label
+    class="v-checkbox theme-default is-error"
+  >
+    <i
+      class="v-checkbox-icon theme-default"
+    />
+     
+    <input
+      class="v-checkbox-control is-danger"
+      name="checkbox"
+      type="checkbox"
+      value="false"
+    />
+     
+    <span
+      class="v-checkbox-label"
+    >
+      
+          is-error
+        
+    </span>
+  </label>
+</div>
+`;
+
+exports[`Storyshots VCheckbox/desktop true/false attr 1`] = `
+<div>
+  <label
+    class="v-checkbox theme-default"
+  >
+    <i
+      class="v-checkbox-icon theme-default"
+    />
+     
+    <input
+      class="v-checkbox-control"
+      name="Name"
+      type="checkbox"
+      value="false"
+    />
+     
+    <span
+      class="v-checkbox-label"
+    >
+      
+          state: 
+        
+    </span>
+  </label>
+</div>
+`;
+
 exports[`Storyshots VInput/desktop disabled 1`] = `
 <div>
   <div
@@ -781,7 +1006,7 @@ exports[`Storyshots VInput/desktop disabled 1`] = `
     style="width: 288px;"
   >
     <label
-      class="v-label-atom theme-default is-muted"
+      class="v-input-label-atom theme-default is-muted"
     >
       
   Label
@@ -796,7 +1021,7 @@ exports[`Storyshots VInput/desktop disabled 1`] = `
 
     </div>
      
-    <div
+    <span
       class="v-input-atom theme-default is-disabled"
     >
       <input
@@ -805,7 +1030,7 @@ exports[`Storyshots VInput/desktop disabled 1`] = `
         placeholder="Placeholder text"
       />
        
-    </div>
+    </span>
      
     <!---->
   </div>
@@ -819,7 +1044,7 @@ exports[`Storyshots VInput/desktop enabled 1`] = `
     style="width: 288px;"
   >
     <label
-      class="v-label-atom theme-default"
+      class="v-input-label-atom theme-default"
     >
       
   Label
@@ -834,7 +1059,7 @@ exports[`Storyshots VInput/desktop enabled 1`] = `
 
     </div>
      
-    <div
+    <span
       class="v-input-atom theme-default"
     >
       <input
@@ -842,10 +1067,13 @@ exports[`Storyshots VInput/desktop enabled 1`] = `
         placeholder="Placeholder text"
       />
        
-    </div>
+    </span>
      
     <!---->
   </div>
+  
+        
+      
 </div>
 `;
 
@@ -856,7 +1084,7 @@ exports[`Storyshots VInput/desktop error 1`] = `
     style="width: 288px;"
   >
     <label
-      class="v-label-atom theme-default"
+      class="v-input-label-atom theme-default"
     >
       
   Label
@@ -871,7 +1099,7 @@ exports[`Storyshots VInput/desktop error 1`] = `
 
     </div>
      
-    <div
+    <span
       class="v-input-atom theme-default is-error"
     >
       <input
@@ -886,7 +1114,7 @@ exports[`Storyshots VInput/desktop error 1`] = `
       !
     
       </i>
-    </div>
+    </span>
      
     <div
       class="v-error-atom theme-default"
