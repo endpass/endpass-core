@@ -4,14 +4,20 @@
     class="v-button"
     v-on="$listeners"
   >
+    <icon-atom
+      v-if="$slots.iconBefore"
+      class="v-button-icon icon-before"
+    >
+      <slot name="iconBefore" />
+    </icon-atom>
     <span class="v-button-label">
       <slot />
     </span>
     <icon-atom
-      v-if="$slots.icon"
-      class="v-button-icon"
+      v-if="$slots.iconAfter"
+      class="v-button-icon icon-after"
     >
-      <slot name="icon" />
+      <slot name="iconAfter" />
     </icon-atom>
   </button>
 </template>

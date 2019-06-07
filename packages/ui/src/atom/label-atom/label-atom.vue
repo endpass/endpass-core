@@ -1,8 +1,5 @@
 <template>
-  <label
-    :class="themeCssClass"
-    class="v-label-atom"
-  >
+  <label :class="themeCssClass">
     {{ label }}
   </label>
 </template>

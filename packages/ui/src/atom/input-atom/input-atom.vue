@@ -1,8 +1,5 @@
 <template>
-  <div
-    :class="inputAtomCssClass"
-    class="v-input-atom"
-  >
+  <span :class="inputAtomCssClass">
     <input
       class="v-input-atom-control"
       :value="value"
@@ -10,7 +7,7 @@
       v-on="listeners"
     >
     <slot />
-  </div>
+  </span>
 </template>
 
 <script>
@@ -21,7 +18,7 @@ export default {
   inheritAttrs: false,
   props: {
     value: {
-      type: String,
+      type: [String, Number],
       default: null,
     },
   },

@@ -1,5 +1,8 @@
 .v-button.theme-default {
   border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: none;
   border-radius: 4px;
   cursor: pointer;
@@ -13,23 +16,32 @@
   font-family: $primary-font;
   font-size: 14px;
   line-height: 14px;
+  font-weight: bold;
   letter-spacing: 1.1px;
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
+  white-space: nowrap;
   transition: color .3s;
 }
 
 .v-button.theme-default .v-button-icon {
-  display: inline-block;
-  vertical-align: middle;
+  display: flex;
+  margin-top: -3px;
+}
+
+.v-button.theme-default .v-button-icon.icon-before {
+  margin-right: 5px;
+}
+
+.v-button.theme-default .v-button-icon.icon-after {
+  margin-left: 5px;
 }
 
 .v-button.theme-default.skin-primary {
-  background: $primary;
+  background: $primary-7;
 }
 
 .v-button.theme-default.skin-primary:hover {
-  background: $primary-light;
+  background: $primary-6;
 }
 
 .v-button.theme-default.skin-primary:focus {
@@ -37,7 +49,7 @@
 }
 
 .v-button.theme-default.skin-primary:active {
-  background: $primary-dark;
+  background: $primary-8;
   box-shadow: 0 2px 4px rgba(36, 42, 46, 0.1), 0 1px 1px rgba(36, 42, 46, 0.1);
 }
 
@@ -67,7 +79,7 @@
 }
 
 .v-button.theme-default.skin-tertiary:active {
-  background: $primary-6;
+  background: $primary-1;
   box-shadow: 0 2px 4px rgba(36, 42, 46, 0.1), 0 1px 1px rgba(36, 42, 46, 0.1);
 }
 
@@ -78,7 +90,7 @@
 .v-button.theme-default.skin-tertiary .v-button-label,
 .v-button.theme-default.skin-quaternary .v-button-label,
   .v-button.theme-default.skin-ghost .v-button-label {
-  color: $primary;
+  color: $primary-7;
 }
 
 .v-button.theme-default.skin-primary .v-button-label,
@@ -90,26 +102,25 @@
 }
 
 .v-button.theme-default.skin-tertiary:hover .v-button-label {
-  color: $primary-light;
+  color: $primary-6;
 }
 
 .v-button.theme-default.skin-quaternary {
-  box-sizing: border-box;
   box-shadow: none;
-  border: 1px solid $primary;
+  border: 1px solid $primary-7;
 }
 
 .v-button.theme-default.skin-quaternary:hover {
-  background: $primary;
+  background: $primary-7;
   box-shadow: 0 2px 4px rgba(36, 42, 46, 0.1), 0 1px 1px rgba(36, 42, 46, 0.1);
 }
 
 .v-button.theme-default.skin-quaternary:focus {
-  background: $primary;
+  background: $primary-7;
 }
 
 .v-button.theme-default.skin-quaternary:active {
-  background: $primary-dark;
+  background: $primary-8;
   box-shadow: 0 2px 4px rgba(36, 42, 46, 0.1), 0 1px 1px rgba(36, 42, 46, 0.1);
 }
 
@@ -124,7 +135,7 @@
 }
 
 .v-button.theme-default.skin-ghost:focus {
-  border-color: $primary;
+  border-color: $primary-7;
 }
 
 .v-button.theme-default.skin-ghost:active {
@@ -136,8 +147,20 @@
   padding: 12px 24px 10px;
 }
 
+.v-button.theme-default.skin-quaternary.size-normal,
+.v-button.theme-default.skin-ghost.size-normal,
+.v-button.theme-default.skin-social.size-normal {
+  padding: 11px 23px 9px;
+}
+
 .v-button.theme-default.size-big {
   padding: 18px 24px 16px;
+}
+
+.v-button.theme-default.skin-quaternary.size-big,
+.v-button.theme-default.skin-ghost.size-big,
+.v-button.theme-default.skin-social.size-big {
+  padding: 17px 23px 15px;
 }
 
 .v-button.theme-default[disabled] {
@@ -148,14 +171,14 @@
 
 .v-button.theme-default .v-svg-icon {
   transition: fill .3s;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }
 
 .v-button.theme-default.skin-tertiary .v-svg-icon,
 .v-button.theme-default.skin-quaternary .v-svg-icon,
 .v-button.theme-default.skin-ghost .v-svg-icon {
-  fill: $primary;
+  fill: $primary-7;
 }
 
 .v-button.theme-default.skin-primary .v-svg-icon,
@@ -167,7 +190,7 @@
 }
 
 .v-button.theme-default.skin-tertiary:hover .v-svg-icon {
-  fill: $primary-light;
+  fill: $primary-6;
 }
 
 .v-button.skin-success {
@@ -178,4 +201,11 @@
 .v-button.skin-error {
   background-color: $error;
   color: $white;
+}
+
+.v-button.skin-social {
+  box-shadow: none;
+  box-sizing: border-box;
+  border: 1px solid $grey-8;
+  color: $grey-8;
 }

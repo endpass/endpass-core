@@ -30,6 +30,7 @@ storiesOf('VInput/desktop', module)
           :label="label"
           :description="description"
         />
+        {{ model }}
       </theme-provider>
     `,
   }))
