@@ -1,3 +1,4 @@
+<script>
 export default {
   name: 'ThemeProvider',
   provide() {
@@ -15,3 +16,4 @@ export default {
     return createElement('div', this.$slots.default);
   },
 };
+</script>
