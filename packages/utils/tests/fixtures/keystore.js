@@ -20,6 +20,9 @@ export const childAddress = '0x31ea8795EE32D782C8ff41a5C68Dcbf0F5B27f6d';
 
 export const password = 'password123';
 
+export const seed =
+  'witch collapse practice feed shame open despair creek road again ice least';
+
 export const encryptOptions = {
   kdf: 'scrypt',
   n: 4,
