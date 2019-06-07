@@ -3,6 +3,7 @@
     <label-atom
       v-if="label"
       :class="{ 'is-muted': $attrs.disabled }"
+      class="v-input-label-atom"
       :label="label"
     />
     <description-atom
@@ -13,6 +14,7 @@
     <input-atom
       :value="value"
       :class="inputAtomCssClass"
+      class="v-input-atom"
       v-bind="$attrs"
       v-on="listeners"
       @focus="isFocus = true"
@@ -49,7 +51,7 @@ export default {
       default: null,
     },
     value: {
-      type: String,
+      type: [String, Number],
       default: null,
     },
     error: {
