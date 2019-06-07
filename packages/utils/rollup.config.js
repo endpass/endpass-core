@@ -1,8 +1,8 @@
+import path from 'path';
+import glob from 'fast-glob';
 import alias from 'rollup-plugin-alias';
 import babel from 'rollup-plugin-babel';
 import copy from 'rollup-plugin-copy';
-import path from 'path';
-import find from 'find';
 
 import pkg from './package.json';
 
@@ -10,36 +10,40 @@ function resolveDir(dir) {
   return path.join(__dirname, '', dir);
 }
 
-const excludePaths = ['./node_modules/**'];
-const sourceDir = resolveDir('./src');
+const SOURCE_PATH = path.join(__dirname, './src');
+const INPUT_PATH = path.join(SOURCE_PATH, './**/*.js');
+const IGNORE_PATHS = ['./node_modules/**'];
 
 const commonConfig = {
   external: [...Object.keys(pkg.dependencies)],
   plugins: [
     alias({
-      '@': sourceDir,
+      '@': SOURCE_PATH,
       resolve: ['.js', './src/index.js'],
     }),
     babel({
-      exclude: excludePaths,
+      exclude: IGNORE_PATHS.concat('./src/test/e2eInterceptorWorker.js'),
       runtimeHelpers: true,
     }),
     // commonjs(),
     copy({
-      'package.json': 'dist/package.json',
-      'README.md': 'dist/README.md',
-      'yarn.lock': 'dist/yarn.lock',
+      targets: {
+        'package.json': 'dist/package.json',
+        'README.md': 'dist/README.md',
+        'yarn.lock': 'dist/yarn.lock',
+        'src/test/e2eInterceptorWorker.js': 'dist/e2eInterceptorWorker.js',
+      },
     }),
   ],
   watch: {
-    exclude: excludePaths,
+    exclude: IGNORE_PATHS,
   },
 };
 
 export default [
   {
     ...commonConfig,
-    input: find.fileSync(/\.js$/, sourceDir),
+    input: glob.sync([INPUT_PATH, '!**/*/e2eInterceptorWorker.js']),
     output: [
       {
         exports: 'named',
