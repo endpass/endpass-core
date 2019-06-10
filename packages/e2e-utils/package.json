@@ -1,7 +1,7 @@
 {
   "name": "@endpass/e2e-utils",
   "version": "0.1.0",
-  "description": "Class modules",
+  "description": "Utilities for e2e testing",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
   "license": "MIT",
@@ -14,10 +14,10 @@
     "build:dist": "rollup -c ./rollup.config.js",
     "clear": "rimraf ./dist",
     "unit": "jest --config ./jest.conf.js",
-    "format:eslint": "eslint --ext .json,.js src/ --fix",
     "format:prettier": "prettier --write '**/*.{js,json}'",
+    "format:eslint": "vue-cli-service lint --ext .json,.js, src/ --fix --quiet || exit 0",
     "format": "yarn format:eslint && yarn format:prettier",
-    "lint": "eslint --fix \"./src/**/*.js\""
+    "lint": "eslint --fix './src/**/*.js'"
   },
   "lint-staged": {
     "*.{js,json}": [
