@@ -6,7 +6,7 @@
  */
 export function getServiceWorkerWithActivation(url) {
   /* eslint-disable-next-line consistent-return */
-  return new Promise(async (resolve) => {
+  return new Promise(async resolve => {
     if (!navigator.serviceWorker) return resolve();
 
     try {
@@ -39,5 +39,4 @@ export function getServiceWorkerWithActivation(url) {
 
 export default {
   getServiceWorkerWithActivation,
-  SWE2EController,
 };
