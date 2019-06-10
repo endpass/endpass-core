@@ -18,12 +18,7 @@ export class SWE2EController {
    * @param {string} [options.method]
    * @param {*} [options.response]
    */
-  mockRoute({
-    url,
-    method = 'GET',
-    response = {},
-    headers = {},
-  }) {
+  mockRoute({ url, method = 'GET', response = {}, headers = {} }) {
     this.sendMessage({
       method: method.toUpperCase(),
       headers,
@@ -37,12 +32,7 @@ export class SWE2EController {
    * @param {string} [options.method]
    * @param {*} [options.response]
    */
-  mockRouteOnce({
-    url,
-    method = 'GET',
-    response = {},
-    headers = {},
-  }) {
+  mockRouteOnce({ url, method = 'GET', response = {}, headers = {} }) {
     this.sendMessage({
       once: true,
       method: method.toUpperCase(),

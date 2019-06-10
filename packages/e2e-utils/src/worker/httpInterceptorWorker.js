@@ -4,7 +4,7 @@ const worker = new this.ServiceWorkerWare();
 const staticMocks = [];
 const oneTimeMocks = [];
 
-const createResponse = (mockData) => {
+const createResponse = mockData => {
   const isString = typeof mockData.response === 'string';
 
   if (isString) {
