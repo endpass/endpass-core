@@ -1,10 +1,3 @@
-// Test utilities
-const e2e = require('./test/e2e');
-
-module.exports.test = {
-  e2e,
-};
-
 // Plain utilities
 module.exports.arrays = require('./arrays');
 module.exports.asyncCheckProperty = require('./asyncCheckProperty');

@@ -1,0 +1,54 @@
+{
+  "name": "@endpass/e2e-utils",
+  "version": "0.1.0",
+  "description": "Class modules",
+  "author": "Endpass, Inc",
+  "homepage": "http://endpass.com/",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/endpass/endpass-core/issues"
+  },
+  "scripts": {
+    "update": "yarn build && npm publish ./dist",
+    "build": "yarn clear && yarn build:dist",
+    "build:dist": "rollup -c ./rollup.config.js",
+    "clear": "rimraf ./dist",
+    "unit": "jest --config ./jest.conf.js",
+    "format:eslint": "eslint --ext .json,.js src/ --fix",
+    "format:prettier": "prettier --write '**/*.{js,json}'",
+    "format": "yarn format:eslint && yarn format:prettier",
+    "lint": "eslint --fix \"./src/**/*.js\""
+  },
+  "lint-staged": {
+    "*.{js,json}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@endpass/eslint-plugin-endpass": "^0.1.0",
+    "eslint": "^5.16.0",
+    "fast-glob": "^2.2.7",
+    "husky": "^2.4.0",
+    "lint-staged": "^8.2.0",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.14.6",
+    "rollup-plugin-alias": "^1.5.2",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-copy": "^2.0.1",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.0.1"
+  }
+}
