@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue'; // eslint-disable-line
 import { action } from '@storybook/addon-actions'; // eslint-disable-line
-import VContentSwitcher from '@/components/VContentSwitcher/VContentSwitcher';
+import VContentSwitcher from '@/kit/VContentSwitcher/VContentSwitcher';
 
 const methods = {
   onChange: action('onChange'),

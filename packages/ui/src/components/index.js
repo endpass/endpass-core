@@ -13,4 +13,3 @@ export { default as VSpinner } from '@/components/VSpinner';
 export { default as VTextarea } from '@/components/VTextarea';
 export { default as VSvgIcon } from '@/components/VSvgIcon';
 export { default as VBadge } from '@/components/VBadge';
-export { default as ThemeProvider } from '@/components/ThemeProvider';

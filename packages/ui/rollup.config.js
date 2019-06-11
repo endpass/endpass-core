@@ -89,9 +89,10 @@ const commonConfig = {
 };
 
 export default [
+  // old components
   {
     ...commonConfig,
-    input: resolveFile('./src/main.js'),
+    input: resolveFile('./src/components-legacy.js'),
     output: [
       {
         ...outputConfig,
@@ -114,6 +115,20 @@ export default [
         ...outputConfig,
         format: 'cjs',
         dir: resolveDir(`${DEST_DIR}/components`),
+        entryFileNames: '[name].js',
+      },
+    ],
+  },
+
+  // new ui-kit
+  {
+    ...commonConfig,
+    input: find.fileSync(/\.vue$/, resolveDir('./src/kit')),
+    output: [
+      {
+        ...outputConfig,
+        format: 'cjs',
+        dir: resolveDir(`${DEST_DIR}/kit`),
         entryFileNames: '[name].js',
       },
     ],

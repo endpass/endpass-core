@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import { configure } from '@storybook/vue';
-import '@/scss/main.theme-default.scss';
-import ThemeProvider from '@/components/ThemeProvider';
+import '@/components-kit';
+import ThemeProvider from '@/kit/ThemeProvider';
 
 Vue.component('theme-provider', ThemeProvider);
 

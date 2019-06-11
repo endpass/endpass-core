@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue'; // eslint-disable-line
 import { action } from '@storybook/addon-actions'; // eslint-disable-line
-import VButton from '@/components/VButton/VButton.vue';
+import VButton from '@/kit/VButton/VButton.vue';
 
 const methods = {
   onClick: action('onClick'),
