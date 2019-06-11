@@ -1,7 +1,7 @@
-import * as components from '@/components';
-import './scss/main.theme-default.scss';
+import * as components from '@/kit';
+import './scss/kit.theme-default.scss';
 
-export * from '@/components';
+export * from '@/kit';
 
 export default Vue => {
   Object.values(components).forEach(component =>
