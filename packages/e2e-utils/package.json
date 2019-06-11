@@ -5,6 +5,11 @@
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
   "license": "MIT",
+  "main": "index.js",
+  "module": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "bugs": {
     "url": "https://github.com/endpass/endpass-core/issues"
   },
