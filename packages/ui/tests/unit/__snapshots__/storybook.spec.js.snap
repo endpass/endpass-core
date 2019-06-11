@@ -1217,6 +1217,144 @@ exports[`Storyshots VCheckbox/desktop true/false attr 1`] = `
 </div>
 `;
 
+exports[`Storyshots VContentSwitcher/desktop array objects 1`] = `
+<div>
+  <ul
+    class="v-content-switcher theme-default"
+  >
+    <li
+      class="v-content-switcher-item is-checked"
+    >
+      <label
+        class="v-content-switcher-label"
+      >
+        
+      Left section
+      
+        <input
+          class="v-content-switcher-control"
+          type="radio"
+          value="0"
+        />
+      </label>
+    </li>
+    <li
+      class="v-content-switcher-item"
+    >
+      <label
+        class="v-content-switcher-label"
+      >
+        
+      Middle section
+      
+        <input
+          class="v-content-switcher-control"
+          type="radio"
+          value="1"
+        />
+      </label>
+    </li>
+    <li
+      class="v-content-switcher-item"
+    >
+      <label
+        class="v-content-switcher-label"
+      >
+        
+      Middle section
+      
+        <input
+          class="v-content-switcher-control"
+          type="radio"
+          value="2"
+        />
+      </label>
+    </li>
+    <li
+      class="v-content-switcher-item"
+    >
+      <label
+        class="v-content-switcher-label"
+      >
+        
+      Right section
+      
+        <input
+          class="v-content-switcher-control"
+          type="radio"
+          value="3"
+        />
+      </label>
+    </li>
+  </ul>
+   
+  <div>
+    state: 0
+  </div>
+</div>
+`;
+
+exports[`Storyshots VContentSwitcher/desktop simple array strings 1`] = `
+<div>
+  <ul
+    class="v-content-switcher theme-default"
+  >
+    <li
+      class="v-content-switcher-item"
+    >
+      <label
+        class="v-content-switcher-label"
+      >
+        
+      Left section
+      
+        <input
+          class="v-content-switcher-control"
+          type="radio"
+          value="Left section"
+        />
+      </label>
+    </li>
+    <li
+      class="v-content-switcher-item"
+    >
+      <label
+        class="v-content-switcher-label"
+      >
+        
+      Middle section
+      
+        <input
+          class="v-content-switcher-control"
+          type="radio"
+          value="Middle section"
+        />
+      </label>
+    </li>
+    <li
+      class="v-content-switcher-item"
+    >
+      <label
+        class="v-content-switcher-label"
+      >
+        
+      Right section
+      
+        <input
+          class="v-content-switcher-control"
+          type="radio"
+          value="Right section"
+        />
+      </label>
+    </li>
+  </ul>
+   
+  <div>
+    state: 
+  </div>
+</div>
+`;
+
 exports[`Storyshots VInput/desktop disabled 1`] = `
 <div>
   <div

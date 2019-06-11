@@ -1,0 +1,80 @@
+.v-content-switcher.theme-default {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.v-content-switcher.theme-default .v-content-switcher-item {
+  position: relative;
+}
+
+.v-content-switcher.theme-default .v-content-switcher-item:not(:first-child):before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 20px;
+  background-color: $grey-2;
+  top: 50%;
+  left: 0;
+  margin-top: -10px;
+  transition: opacity .3s;
+}
+
+.v-content-switcher.theme-default .v-content-switcher-item.is-focused:before,
+.v-content-switcher.theme-default .v-content-switcher-item.is-checked:before,
+.v-content-switcher.theme-default .v-content-switcher-item:hover + .v-content-switcher-item:before,
+.v-content-switcher.theme-default .v-content-switcher-item.is-focused + .v-content-switcher-item:before {
+  opacity: 0;
+}
+
+.v-content-switcher-control {
+  margin: 0;
+  width: 0;
+  height: 0;
+  border: 0;
+  outline: 0;
+}
+
+.v-content-switcher.theme-default .v-content-switcher-label {
+  display: block;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.2px;
+  text-align: center;
+  padding: 11px 25px;
+  border: 1px solid $grey-1;
+  cursor: pointer;
+  background-color: $grey-1;
+  user-select: none;
+  transition: background-color .3s, color .3s, border-color .3s, font-weight .3s;
+}
+
+.v-content-switcher.theme-default .v-content-switcher-label:hover {
+  background-color: $grey-2;
+  border-color: $grey-2;
+}
+
+.v-content-switcher.theme-default .v-content-switcher-item.is-focused .v-content-switcher-label {
+  background-color: $primary-2;
+  border-color: $primary-7;
+}
+
+.v-content-switcher.theme-default .v-content-switcher-item.is-checked .v-content-switcher-label {
+  background-color: $black;
+  border-color: $black;
+  color: $white;
+}
+
+.v-content-switcher.theme-default .v-content-switcher-item:first-child .v-content-switcher-label {
+  border-radius: 4px 0 0 4px;
+}
+
+.v-content-switcher.theme-default .v-content-switcher-item:last-child .v-content-switcher-label {
+  border-radius: 0 4px 4px 0;
+}
+
+.v-content-switcher.theme-default .v-content-switcher-item.is-checked.is-focused .v-content-switcher-label {
+  border-color: $primary-7;
+}
