@@ -21,9 +21,11 @@ export default class CrossWindowMessenger {
     if (!props.to || !props.from) {
       throw new Error('You must provide direction property');
     }
+
     if (props.to === props.from) {
       throw new Error('Directions must be not equal');
     }
+
     this.name = props.name;
     this.target = props.target;
     this.directionFrom = `${MESSAGE_TYPE}-${props.from}`;
