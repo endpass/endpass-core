@@ -1,5 +1,5 @@
 this.importScripts(
-  'https://unpkg.com/@endpass/e2e-utils@0.2.0/SWMessagesMethods.js',
+  'https://unpkg.com/@endpass/e2e-utils@0.2.2/SWMessagesMethods.js',
 );
 this.importScripts('https://unpkg.com/dexie@2.0.4/dist/dexie.min.js');
 this.importScripts('https://unpkg.com/serviceworkers-ware@0.3.2/dist/sww.js');
