@@ -1,6 +1,6 @@
 {
   "name": "@endpass/e2e-utils",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Utilities for e2e testing",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -37,7 +37,9 @@
     }
   },
   "dependencies": {
-    "@endpass/class": "^0.14.5"
+    "@babel/runtime": "^7.4.5",
+    "@endpass/class": "^0.14.5",
+    "nanoid": "^2.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",

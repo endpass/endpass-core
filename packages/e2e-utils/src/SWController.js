@@ -1,3 +1,6 @@
+import nanoid from 'nanoid';
+import METHODS from './static/SWMessagesMethods';
+
 export class SWE2EController {
   /**
    * @param {ServiceWorker} sw
@@ -20,10 +23,14 @@ export class SWE2EController {
    */
   mockRoute({ url, method = 'GET', response = {}, headers = {} }) {
     this.sendMessage({
-      method: method.toUpperCase(),
-      headers,
-      url,
-      response,
+      method: METHODS.MOCK,
+      mock: {
+        id: nanoid(),
+        method: method.toUpperCase(),
+        headers,
+        url,
+        response,
+      },
     });
   }
 
@@ -34,11 +41,20 @@ export class SWE2EController {
    */
   mockRouteOnce({ url, method = 'GET', response = {}, headers = {} }) {
     this.sendMessage({
-      once: true,
-      method: method.toUpperCase(),
-      headers,
-      url,
-      response,
+      method: METHODS.MOCK_ONCE,
+      mock: {
+        id: nanoid(),
+        method: method.toUpperCase(),
+        headers,
+        url,
+        response,
+      },
+    });
+  }
+
+  clearMocks() {
+    this.sendMessage({
+      method: METHODS.CLEAR_ALL_MOCKS,
     });
   }
 }
