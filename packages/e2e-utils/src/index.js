@@ -1,3 +1,2 @@
-module.exports.SWController = require('./SWController');
-module.exports.SWControllerDuplexBridge = require('./SWControllerDuplexBridge');
-module.exports.SWMessagesMethods = require('./SWMessagesMethods');
+module.exports.SWController = require('./SWController').default;
+module.exports.SWControllerDuplexBridge = require('./SWControllerDuplexBridge').default;

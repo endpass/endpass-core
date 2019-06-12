@@ -1,7 +1,7 @@
 import nanoid from 'nanoid';
 import METHODS from './static/SWMessagesMethods';
 
-export class SWE2EController {
+class SWController {
   /**
    * @param {ServiceWorker} sw
    */
@@ -59,16 +59,4 @@ export class SWE2EController {
   }
 }
 
-export function injectE2EResolver(target = window) {
-  /* eslint-disable-next-line */
-  return new Promise(resolve => {
-    Object.assign(target, {
-      e2eResolver: resolve,
-    });
-  });
-}
-
-export default {
-  SWE2EController,
-  injectE2EResolver,
-};
+export default SWController;
