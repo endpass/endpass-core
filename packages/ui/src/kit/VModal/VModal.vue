@@ -21,76 +21,29 @@
             class="v-modal-back"
             @click="$emit('return')"
           >
-            <svg
+            <svg-atom
               width="23"
               height="17"
-              viewBox="0 0 23 17"
+              view-box="0 0 23 17"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M21.5 8.5H1.5"
-                stroke="#111111"
-                stroke-width="1.5"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M8.5 15.5L1.5 8.5L8.5 1.5"
-                stroke="#111111"
-                stroke-width="1.5"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+              :url="'img/icons.svg#icon-arrow-left'"
+            />
           </button>
           <button
             v-if="isClosable"
             class="v-modal-close"
             @click="$emit('close')"
           >
-            <svg
+            <svg-atom
               width="17"
               height="17"
-              viewBox="0 0 17 17"
+              view-box="0 0 17 17"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15.5 1.5L1.5 15.5"
-                stroke="#242A2E"
-                stroke-width="1.5"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M15.5 15.5L1.5 1.5"
-                stroke="#242A2E"
-                stroke-width="1.5"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+              :url="'img/icons.svg#icon-close'"
+            />
           </button>
         </div>
-        <header
-          v-if="$slots.title"
-          class="v-modal-header"
-        >
-          <h3 class="v-modal-title">
-            <slot name="title" />
-          </h3>
-        </header>
-        <main class="v-modal-body">
-          <slot />
-        </main>
-        <footer v-if="$slots.footer">
-          <slot name="footer" />
-        </footer>
+        <slot />
       </div>
     </div>
   </transition>
@@ -98,6 +51,7 @@
 
 <script>
 import ThemeMixin from '@/mixins/ThemeMixin';
+import SvgAtom from '@/atom/svg-atom/svg-atom';
 
 export default {
   name: 'VModal',
@@ -112,5 +66,6 @@ export default {
     },
   },
   mixins: [ThemeMixin],
+  components: { SvgAtom },
 };
 </script>
