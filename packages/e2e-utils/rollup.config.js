@@ -68,7 +68,8 @@ export default [
     input: filePath,
     output: [
       {
-        exports: 'named',
+        esModule: false,
+        exports: 'auto',
         format: 'umd',
         dir: DIST_PATH,
         name: path.basename(filePath, path.extname(filePath)),
