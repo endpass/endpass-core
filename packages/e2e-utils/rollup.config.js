@@ -71,7 +71,7 @@ export default [
         exports: 'named',
         format: 'umd',
         dir: DIST_PATH,
-        name: path.basename(filePath),
+        name: path.basename(filePath, path.extname(filePath)),
       },
     ],
   })),
