@@ -1,5 +1,5 @@
 this.importScripts(
-  'https://unpkg.com/@endpass/e2e-utils@0.2.3/SWMessagesMethods.js',
+  'https://unpkg.com/@endpass/e2e-utils@<%= PACKAGE_VERSION %>/SWMessagesMethods.js',
 );
 this.importScripts('https://unpkg.com/dexie@2.0.4/dist/dexie.min.js');
 this.importScripts('https://unpkg.com/serviceworkers-ware@0.3.2/dist/sww.js');
@@ -56,10 +56,10 @@ const createResponse = mockData => {
 const handleIncomingWorkerMessage = async ({ data }) => {
   switch (data.method) {
     case this.SWMessagesMethods.MOCK_ONCE:
-      await onceRouteTable.save(data);
+      await onceRouteTable.save(data.mock);
       break;
     case this.SWMessagesMethods.MOCK:
-      await staticRouteTable.save(data);
+      await staticRouteTable.save(data.mock);
       break;
     case this.SWMessagesMethods.CLEAR_ALL_MOCKS:
       await staticRouteTable.clear();
