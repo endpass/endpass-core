@@ -1,7 +1,10 @@
 <template>
-  <span :class="inputAtomCssClass">
+  <span
+    class="input-atom"
+    :class="inputAtomCssClass"
+  >
     <input
-      class="v-input-atom-control"
+      class="input-atom-control"
       :value="value"
       v-bind="$attrs"
       v-on="listeners"

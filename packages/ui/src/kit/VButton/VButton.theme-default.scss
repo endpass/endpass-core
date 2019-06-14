@@ -169,27 +169,33 @@
   background: $grey-2 !important;
 }
 
-.v-button.theme-default .v-svg-icon {
+.v-button.theme-default .svg-atom {
   transition: fill .3s;
   width: 15px;
   height: 15px;
+  stroke-width: 0;
 }
 
-.v-button.theme-default.skin-tertiary .v-svg-icon,
-.v-button.theme-default.skin-quaternary .v-svg-icon,
-.v-button.theme-default.skin-ghost .v-svg-icon {
+.v-button.theme-default.skin-tertiary .svg-atom,
+.v-button.theme-default.skin-quaternary .svg-atom,
+.v-button.theme-default.skin-ghost .svg-atom {
   fill: $primary-7;
 }
 
-.v-button.theme-default.skin-primary .v-svg-icon,
-.v-button.theme-default.skin-secondary .v-svg-icon,
-.v-button.theme-default.skin-quaternary:hover .v-svg-icon,
-.v-button.theme-default.skin-quaternary:focus .v-svg-icon,
-.v-button.theme-default.skin-ghost:active .v-svg-icon {
+.v-button.theme-default.skin-social .svg-atom {
+  width: 18px;
+  height: 18px;
+}
+
+.v-button.theme-default.skin-primary .svg-atom,
+.v-button.theme-default.skin-secondary .svg-atom,
+.v-button.theme-default.skin-quaternary:hover .svg-atom,
+.v-button.theme-default.skin-quaternary:focus .svg-atom,
+.v-button.theme-default.skin-ghost:active .svg-atom {
   fill: $white;
 }
 
-.v-button.theme-default.skin-tertiary:hover .v-svg-icon {
+.v-button.theme-default.skin-tertiary:hover .svg-atom {
   fill: $primary-6;
 }
 
@@ -203,7 +209,7 @@
   color: $white;
 }
 
-.v-button.skin-social {
+.v-button.theme-default.skin-social {
   box-shadow: none;
   box-sizing: border-box;
   border: 1px solid $grey-8;

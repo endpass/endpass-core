@@ -1,7 +1,7 @@
 <template>
   <div
+    class="field-atom"
     :class="themeCssClass"
-    class="v-field-atom"
   >
     <slot />
   </div>

@@ -1,5 +1,4 @@
 import * as components from '@/components';
-import './scss/legacy.scss';
 
 export * from '@/components';
 

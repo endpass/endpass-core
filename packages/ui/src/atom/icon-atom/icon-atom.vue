@@ -1,5 +1,8 @@
 <template>
-  <i :class="themeCssClass">
+  <i
+    class="icon-atom"
+    :class="themeCssClass"
+  >
     <slot />
   </i>
 </template>

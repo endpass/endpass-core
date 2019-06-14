@@ -1,6 +1,7 @@
 import { storiesOf } from '@storybook/vue'; // eslint-disable-line
 import { action } from '@storybook/addon-actions'; // eslint-disable-line
-import VButton from '@/kit/VButton/VButton.vue';
+import VButton from '@/kit/VButton/VButton';
+import SvgAtom from '@/atom/svg-atom/svg-atom';
 
 const methods = {
   onClick: action('onClick'),
@@ -51,7 +52,7 @@ storiesOf('VButton/desktop', module)
   }))
   .add('icon', () => ({
     methods,
-    components: { VButton },
+    components: { SvgAtom, VButton },
     template: `
       <theme-provider>
         <table>
@@ -71,31 +72,31 @@ storiesOf('VButton/desktop', module)
               <td>
                 <v-button @click="onClick">
                   <template slot="default">Button Label</template>
-                  <svg class="v-svg-icon" slot="iconAfter"><use xlink:href="img/icons.svg#icon-action"></use></svg>
+                  <svg-atom :href="'img/icons.svg#icon-action'" slot="iconAfter" />
                 </v-button>
               </td>
               <td>
                 <v-button @mouseenter="onEnter" :skin="'secondary'">
                   <template slot="default">Button Label</template>
-                  <svg class="v-svg-icon" slot="iconAfter"><use xlink:href="img/icons.svg#icon-action"></use></svg>
+                  <svg-atom :href="'img/icons.svg#icon-action'" slot="iconAfter" />
                 </v-button>
               </td>
               <td>
                 <v-button @focus="onFocus" :skin="'tertiary'">
                   <template slot="default">Button Label</template>
-                  <svg class="v-svg-icon" slot="iconAfter"><use xlink:href="img/icons.svg#icon-action"></use></svg>
+                  <svg-atom :href="'img/icons.svg#icon-action'" slot="iconAfter" />
                 </v-button>
               </td>
               <td>
                 <v-button @blur="onBlur" :skin="'quaternary'">
                   <template slot="default">Button Label</template>
-                  <svg class="v-svg-icon" slot="iconAfter"><use xlink:href="img/icons.svg#icon-action"></use></svg>
+                  <svg-atom :href="'img/icons.svg#icon-action'" slot="iconAfter" />
                 </v-button>
               </td>
               <td>
                 <v-button @mouseleave="onLeave" :skin="'ghost'">
                   <template slot="default">Button Label</template>
-                  <svg class="v-svg-icon" slot="iconAfter"><use xlink:href="img/icons.svg#icon-action"></use></svg>
+                  <svg-atom :href="'img/icons.svg#icon-action'" slot="iconAfter" />
                 </v-button>
               </td>
             </tr>
@@ -104,31 +105,31 @@ storiesOf('VButton/desktop', module)
               <td>
                 <v-button @click="onClick" :size="'big'">
                   <template slot="default">Button Label</template>
-                  <svg class="v-svg-icon" slot="iconAfter"><use xlink:href="img/icons.svg#icon-action"></use></svg>
+                  <svg-atom :href="'img/icons.svg#icon-action'" slot="iconAfter" />
                 </v-button>
               </td>
               <td>
                 <v-button @mouseenter="onEnter" :skin="'secondary'" :size="'big'">
                   <template slot="default">Button Label</template>
-                  <svg class="v-svg-icon" slot="iconAfter"><use xlink:href="img/icons.svg#icon-action"></use></svg>
+                  <svg-atom :href="'img/icons.svg#icon-action'" slot="iconAfter" />
                 </v-button>
               </td>
               <td>
                 <v-button @focus="onFocus" :skin="'tertiary'" :size="'big'">
                   <template slot="default">Button Label</template>
-                  <svg class="v-svg-icon" slot="iconAfter"><use xlink:href="img/icons.svg#icon-action"></use></svg>
+                  <svg-atom :href="'img/icons.svg#icon-action'" slot="iconAfter" />
                 </v-button>
               </td>
               <td>
                 <v-button @blur="onBlur" :skin="'quaternary'" :size="'big'">
                   <template slot="default">Button Label</template>
-                  <svg class="v-svg-icon" slot="iconAfter"><use xlink:href="img/icons.svg#icon-action"></use></svg>
+                  <svg-atom :href="'img/icons.svg#icon-action'" slot="iconAfter" />
                 </v-button>
               </td>
               <td>
                 <v-button @mouseleave="onLeave" :skin="'ghost'" :size="'big'">
                   <template slot="default">Button Label</template>
-                  <svg class="v-svg-icon" slot="iconAfter"><use xlink:href="img/icons.svg#icon-action"></use></svg>
+                  <svg-atom :href="'img/icons.svg#icon-action'" slot="iconAfter" />
                 </v-button>
               </td>
             </tr>
@@ -168,7 +169,7 @@ storiesOf('VButton/desktop', module)
   }))
   .add('social', () => ({
     methods,
-    components: { VButton },
+    components: { SvgAtom, VButton },
     template: `
       <theme-provider>
         <table>
@@ -184,13 +185,13 @@ storiesOf('VButton/desktop', module)
               <th scope="row">Normal</th>
               <td>
                 <v-button @click="onClick" :skin="'social'" style="width: 181px;">
-                  <svg style="margin-right: 5px;" class="v-svg-icon" slot="iconBefore"><use xlink:href="img/icons.svg#icon-google"></use></svg>
+                  <svg-atom :href="'img/icons.svg#icon-google'" style="margin-right: 5px;" slot="iconBefore" />
                   <template slot="default">Google</template>
                 </v-button>
               </td>
               <td>
                 <v-button @click="onClick" :skin="'social'" style="width: 181px;">
-                  <svg style="margin-right: 5px;" class="v-svg-icon" slot="iconBefore"><use xlink:href="img/icons.svg#icon-github"></use></svg>
+                  <svg-atom :href="'img/icons.svg#icon-github'" style="margin-right: 5px;" slot="iconBefore" />
                   <template slot="default">GitHub</template>
                 </v-button>
               </td>
@@ -199,13 +200,13 @@ storiesOf('VButton/desktop', module)
               <th scope="row">Big</th>
               <td>
                 <v-button @click="onClick" :skin="'social'" :size="'big'" style="width: 181px;">
-                  <svg style="margin-right: 5px;" class="v-svg-icon" slot="iconBefore"><use xlink:href="img/icons.svg#icon-google"></use></svg>
+                  <svg-atom :href="'img/icons.svg#icon-google'" style="margin-right: 5px;" slot="iconBefore" />
                   <template slot="default">Google</template>
                 </v-button>
                 </td>
               <td>
                 <v-button @click="onClick" :skin="'social'" :size="'big'" style="width: 181px;">
-                  <svg style="margin-right: 5px;" class="v-svg-icon" slot="iconBefore"><use xlink:href="img/icons.svg#icon-github"></use></svg>
+                  <svg-atom :href="'img/icons.svg#icon-github'" style="margin-right: 5px;" slot="iconBefore" />
                   <template slot="default">GitHub</template>
                 </v-button>
               </td>

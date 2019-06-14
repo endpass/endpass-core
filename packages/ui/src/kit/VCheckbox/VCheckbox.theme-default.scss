@@ -23,24 +23,27 @@
   margin-left: 10px;
 }
 
-.v-checkbox.theme-default .v-checkbox-icon {
+.v-checkbox.theme-default .v-checkbox-frame {
   width: 13px;
   height: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 2px;
   border: 1px solid $black;
   transition: border-color .3s, background-color .3s;
 }
 
-.v-checkbox.theme-default:hover .v-checkbox-icon,
-.v-checkbox.theme-default.is-focused .v-checkbox-icon {
+.v-checkbox.theme-default:hover .v-checkbox-frame,
+.v-checkbox.theme-default.is-focused .v-checkbox-frame {
   border-color: $primary-7;
 }
 
-.v-checkbox.theme-default.is-checked .v-checkbox-icon {
-  background: $black url("/img/checkbox.svg") center center no-repeat;
+.v-checkbox.theme-default.is-checked .v-checkbox-frame {
+  background-color: $black;
 }
 
-.v-checkbox.theme-default.is-disabled .v-checkbox-icon {
+.v-checkbox.theme-default.is-disabled .v-checkbox-frame {
   border-color: $grey-4;
 }
 
@@ -48,10 +51,10 @@
   color: $grey-4;
 }
 
-.v-checkbox.theme-default.is-error .v-checkbox-icon {
+.v-checkbox.theme-default.is-error .v-checkbox-frame {
   border-color: $error;
 }
 
-.v-checkbox.theme-default.is-checked.is-disabled .v-checkbox-icon {
+.v-checkbox.theme-default.is-checked.is-disabled .v-checkbox-frame {
   background-color: $grey-4;
 }

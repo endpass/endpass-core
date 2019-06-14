@@ -3,7 +3,6 @@
     <label-atom
       v-if="label"
       :class="{ 'is-muted': $attrs.disabled }"
-      class="v-input-label-atom"
       :label="label"
     />
     <description-atom
@@ -14,7 +13,6 @@
     <input-atom
       :value="value"
       :class="inputAtomCssClass"
-      class="v-input-atom"
       v-bind="$attrs"
       v-on="listeners"
       @focus="isFocus = true"
@@ -22,7 +20,7 @@
     >
       <icon-atom
         v-if="error"
-        class="v-input-atom-error"
+        class="icon-atom-error"
       >
         !
       </icon-atom>
