@@ -1,9 +1,14 @@
 <template>
   <div
+    class="mask-atom"
     :class="themeCssClass"
-    class="error-atom"
   >
-    {{ error }}
+    <div
+      class="mask-atom-centered"
+      @click.self="$emit('click', $event)"
+    >
+      <slot />
+    </div>
   </div>
 </template>
 
@@ -11,13 +16,7 @@
 import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
-  name: 'ErrorAtom',
-  props: {
-    error: {
-      type: String,
-      required: true,
-    },
-  },
+  name: 'MaskAtom',
   mixins: [ThemeMixin],
 };
 </script>

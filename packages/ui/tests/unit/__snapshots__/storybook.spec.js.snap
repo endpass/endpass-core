@@ -480,10 +480,11 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             </span>
              
             <i
-              class="v-button-icon icon-after theme-default"
+              class="icon-atom v-button-icon icon-after theme-default"
             >
               <svg
-                class="v-svg-icon"
+                class="svg-atom theme-default"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <use
                   xlink:href="img/icons.svg#icon-action"
@@ -506,10 +507,11 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             </span>
              
             <i
-              class="v-button-icon icon-after theme-default"
+              class="icon-atom v-button-icon icon-after theme-default"
             >
               <svg
-                class="v-svg-icon"
+                class="svg-atom theme-default"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <use
                   xlink:href="img/icons.svg#icon-action"
@@ -532,10 +534,11 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             </span>
              
             <i
-              class="v-button-icon icon-after theme-default"
+              class="icon-atom v-button-icon icon-after theme-default"
             >
               <svg
-                class="v-svg-icon"
+                class="svg-atom theme-default"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <use
                   xlink:href="img/icons.svg#icon-action"
@@ -558,10 +561,11 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             </span>
              
             <i
-              class="v-button-icon icon-after theme-default"
+              class="icon-atom v-button-icon icon-after theme-default"
             >
               <svg
-                class="v-svg-icon"
+                class="svg-atom theme-default"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <use
                   xlink:href="img/icons.svg#icon-action"
@@ -584,10 +588,11 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             </span>
              
             <i
-              class="v-button-icon icon-after theme-default"
+              class="icon-atom v-button-icon icon-after theme-default"
             >
               <svg
-                class="v-svg-icon"
+                class="svg-atom theme-default"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <use
                   xlink:href="img/icons.svg#icon-action"
@@ -618,10 +623,11 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             </span>
              
             <i
-              class="v-button-icon icon-after theme-default"
+              class="icon-atom v-button-icon icon-after theme-default"
             >
               <svg
-                class="v-svg-icon"
+                class="svg-atom theme-default"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <use
                   xlink:href="img/icons.svg#icon-action"
@@ -644,10 +650,11 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             </span>
              
             <i
-              class="v-button-icon icon-after theme-default"
+              class="icon-atom v-button-icon icon-after theme-default"
             >
               <svg
-                class="v-svg-icon"
+                class="svg-atom theme-default"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <use
                   xlink:href="img/icons.svg#icon-action"
@@ -670,10 +677,11 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             </span>
              
             <i
-              class="v-button-icon icon-after theme-default"
+              class="icon-atom v-button-icon icon-after theme-default"
             >
               <svg
-                class="v-svg-icon"
+                class="svg-atom theme-default"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <use
                   xlink:href="img/icons.svg#icon-action"
@@ -696,10 +704,11 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             </span>
              
             <i
-              class="v-button-icon icon-after theme-default"
+              class="icon-atom v-button-icon icon-after theme-default"
             >
               <svg
-                class="v-svg-icon"
+                class="svg-atom theme-default"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <use
                   xlink:href="img/icons.svg#icon-action"
@@ -722,10 +731,11 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             </span>
              
             <i
-              class="v-button-icon icon-after theme-default"
+              class="icon-atom v-button-icon icon-after theme-default"
             >
               <svg
-                class="v-svg-icon"
+                class="svg-atom theme-default"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <use
                   xlink:href="img/icons.svg#icon-action"
@@ -771,11 +781,12 @@ exports[`Storyshots VButton/desktop social 1`] = `
             style="width: 181px;"
           >
             <i
-              class="v-button-icon icon-before theme-default"
+              class="icon-atom v-button-icon icon-before theme-default"
             >
               <svg
-                class="v-svg-icon"
+                class="svg-atom theme-default"
                 style="margin-right: 5px;"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <use
                   xlink:href="img/icons.svg#icon-google"
@@ -799,11 +810,12 @@ exports[`Storyshots VButton/desktop social 1`] = `
             style="width: 181px;"
           >
             <i
-              class="v-button-icon icon-before theme-default"
+              class="icon-atom v-button-icon icon-before theme-default"
             >
               <svg
-                class="v-svg-icon"
+                class="svg-atom theme-default"
                 style="margin-right: 5px;"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <use
                   xlink:href="img/icons.svg#icon-github"
@@ -835,11 +847,12 @@ exports[`Storyshots VButton/desktop social 1`] = `
             style="width: 181px;"
           >
             <i
-              class="v-button-icon icon-before theme-default"
+              class="icon-atom v-button-icon icon-before theme-default"
             >
               <svg
-                class="v-svg-icon"
+                class="svg-atom theme-default"
                 style="margin-right: 5px;"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <use
                   xlink:href="img/icons.svg#icon-google"
@@ -863,11 +876,12 @@ exports[`Storyshots VButton/desktop social 1`] = `
             style="width: 181px;"
           >
             <i
-              class="v-button-icon icon-before theme-default"
+              class="icon-atom v-button-icon icon-before theme-default"
             >
               <svg
-                class="v-svg-icon"
+                class="svg-atom theme-default"
                 style="margin-right: 5px;"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <use
                   xlink:href="img/icons.svg#icon-github"
@@ -998,7 +1012,7 @@ exports[`Storyshots VCheckbox/desktop array 1`] = `
     class="v-checkbox theme-default"
   >
     <i
-      class="v-checkbox-icon theme-default"
+      class="icon-atom v-checkbox-frame theme-default"
     />
      
     <input
@@ -1030,7 +1044,7 @@ exports[`Storyshots VCheckbox/desktop default state 1`] = `
     class="v-checkbox theme-default"
   >
     <i
-      class="v-checkbox-icon theme-default"
+      class="icon-atom v-checkbox-frame theme-default"
     />
      
     <input
@@ -1057,7 +1071,7 @@ exports[`Storyshots VCheckbox/desktop default state false 1`] = `
     class="v-checkbox theme-default"
   >
     <i
-      class="v-checkbox-icon theme-default"
+      class="icon-atom v-checkbox-frame theme-default"
     />
      
     <input
@@ -1088,7 +1102,7 @@ exports[`Storyshots VCheckbox/desktop default state true 1`] = `
     class="v-checkbox theme-default"
   >
     <i
-      class="v-checkbox-icon theme-default"
+      class="icon-atom v-checkbox-frame theme-default"
     />
      
     <input
@@ -1115,7 +1129,7 @@ exports[`Storyshots VCheckbox/desktop disabled 1`] = `
     class="v-checkbox theme-default is-disabled"
   >
     <i
-      class="v-checkbox-icon theme-default"
+      class="icon-atom v-checkbox-frame theme-default"
     />
      
     <input
@@ -1141,8 +1155,20 @@ exports[`Storyshots VCheckbox/desktop disabled 1`] = `
     class="v-checkbox theme-default is-checked is-disabled"
   >
     <i
-      class="v-checkbox-icon theme-default"
-    />
+      class="icon-atom v-checkbox-frame theme-default"
+    >
+      <svg
+        class="svg-atom theme-default"
+        height="8"
+        stroke-width="0"
+        width="10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="img/icons.svg#icon-check"
+        />
+      </svg>
+    </i>
      
     <input
       class="v-checkbox-control"
@@ -1169,7 +1195,7 @@ exports[`Storyshots VCheckbox/desktop error 1`] = `
     class="v-checkbox theme-default is-error"
   >
     <i
-      class="v-checkbox-icon theme-default"
+      class="icon-atom v-checkbox-frame theme-default"
     />
      
     <input
@@ -1196,7 +1222,7 @@ exports[`Storyshots VCheckbox/desktop true/false attr 1`] = `
     class="v-checkbox theme-default"
   >
     <i
-      class="v-checkbox-icon theme-default"
+      class="icon-atom v-checkbox-frame theme-default"
     />
      
     <input
@@ -1358,11 +1384,11 @@ exports[`Storyshots VContentSwitcher/desktop simple array strings 1`] = `
 exports[`Storyshots VInput/desktop disabled 1`] = `
 <div>
   <div
-    class="v-field-atom theme-default"
+    class="field-atom theme-default"
     style="width: 288px;"
   >
     <label
-      class="v-input-label-atom theme-default is-muted"
+      class="label-atom theme-default is-muted"
     >
       
   Label
@@ -1370,7 +1396,7 @@ exports[`Storyshots VInput/desktop disabled 1`] = `
     </label>
      
     <div
-      class="v-description-atom theme-default is-muted"
+      class="description-atom theme-default is-muted"
     >
       
   Helper text goes here
@@ -1378,10 +1404,10 @@ exports[`Storyshots VInput/desktop disabled 1`] = `
     </div>
      
     <span
-      class="v-input-atom theme-default is-disabled"
+      class="input-atom theme-default is-disabled"
     >
       <input
-        class="v-input-atom-control"
+        class="input-atom-control"
         disabled="disabled"
         placeholder="Placeholder text"
       />
@@ -1396,11 +1422,11 @@ exports[`Storyshots VInput/desktop disabled 1`] = `
 exports[`Storyshots VInput/desktop enabled 1`] = `
 <div>
   <div
-    class="v-field-atom theme-default"
+    class="field-atom theme-default"
     style="width: 288px;"
   >
     <label
-      class="v-input-label-atom theme-default"
+      class="label-atom theme-default"
     >
       
   Label
@@ -1408,7 +1434,7 @@ exports[`Storyshots VInput/desktop enabled 1`] = `
     </label>
      
     <div
-      class="v-description-atom theme-default"
+      class="description-atom theme-default"
     >
       
   Helper text goes here
@@ -1416,10 +1442,10 @@ exports[`Storyshots VInput/desktop enabled 1`] = `
     </div>
      
     <span
-      class="v-input-atom theme-default"
+      class="input-atom theme-default"
     >
       <input
-        class="v-input-atom-control"
+        class="input-atom-control"
         placeholder="Placeholder text"
       />
        
@@ -1436,11 +1462,11 @@ exports[`Storyshots VInput/desktop enabled 1`] = `
 exports[`Storyshots VInput/desktop error 1`] = `
 <div>
   <div
-    class="v-field-atom theme-default"
+    class="field-atom theme-default"
     style="width: 288px;"
   >
     <label
-      class="v-input-label-atom theme-default"
+      class="label-atom theme-default"
     >
       
   Label
@@ -1448,7 +1474,7 @@ exports[`Storyshots VInput/desktop error 1`] = `
     </label>
      
     <div
-      class="v-description-atom theme-default"
+      class="description-atom theme-default"
     >
       
   Helper text goes here
@@ -1456,15 +1482,15 @@ exports[`Storyshots VInput/desktop error 1`] = `
     </div>
      
     <span
-      class="v-input-atom theme-default is-error"
+      class="input-atom theme-default is-error"
     >
       <input
-        class="v-input-atom-control"
+        class="input-atom-control"
         placeholder="Placeholder text"
       />
        
       <i
-        class="v-input-atom-error theme-default"
+        class="icon-atom icon-atom-error theme-default"
       >
         
       !
@@ -1473,11 +1499,511 @@ exports[`Storyshots VInput/desktop error 1`] = `
     </span>
      
     <div
-      class="v-error-atom theme-default"
+      class="error-atom theme-default"
     >
       
   Error message here
 
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VModal/VModalCard both 1`] = `
+<div>
+  <div
+    class="mask-atom theme-default"
+  >
+    <div
+      class="mask-atom-centered"
+    >
+      <div
+        class="v-modal-card theme-default"
+      >
+        <div
+          class="v-modal-card-controls"
+        >
+          <button
+            class="v-modal-card-back"
+          >
+            <svg
+              class="svg-atom theme-default"
+              fill="none"
+              height="17"
+              view-box="0 0 23 17"
+              width="23"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="img/icons.svg#icon-arrow-left"
+              />
+            </svg>
+          </button>
+           
+          <button
+            class="v-modal-card-close"
+          >
+            <svg
+              class="svg-atom theme-default"
+              fill="none"
+              height="17"
+              view-box="0 0 17 17"
+              width="17"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="img/icons.svg#icon-close"
+              />
+            </svg>
+          </button>
+        </div>
+         
+        <header
+          class="v-modal-card-header"
+        >
+          <h3
+            class="v-modal-card-title"
+          >
+            Modal title
+          </h3>
+        </header>
+         
+        <div
+          class="v-modal-card-body"
+        >
+          
+            Modal body
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VModal/VModalCard closable 1`] = `
+<div>
+  <div
+    class="mask-atom theme-default"
+  >
+    <div
+      class="mask-atom-centered"
+    >
+      <div
+        class="v-modal-card theme-default"
+      >
+        <div
+          class="v-modal-card-controls"
+        >
+          <!---->
+           
+          <button
+            class="v-modal-card-close"
+          >
+            <svg
+              class="svg-atom theme-default"
+              fill="none"
+              height="17"
+              view-box="0 0 17 17"
+              width="17"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="img/icons.svg#icon-close"
+              />
+            </svg>
+          </button>
+        </div>
+         
+        <header
+          class="v-modal-card-header"
+        >
+          <h3
+            class="v-modal-card-title"
+          >
+            Modal title
+          </h3>
+        </header>
+         
+        <div
+          class="v-modal-card-body"
+        >
+          
+            Modal body
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VModal/VModalCard default 1`] = `
+<div>
+  <div
+    class="mask-atom theme-default"
+  >
+    <div
+      class="mask-atom-centered"
+    >
+      <div
+        class="v-modal-card theme-default"
+      >
+        <div
+          class="v-modal-card-controls"
+        >
+          <!---->
+           
+          <!---->
+        </div>
+         
+        <header
+          class="v-modal-card-header"
+        >
+          <h3
+            class="v-modal-card-title"
+          >
+            Modal title
+          </h3>
+        </header>
+         
+        <div
+          class="v-modal-card-body"
+        >
+          
+            Modal body
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VModal/VModalCard returnable 1`] = `
+<div>
+  <div
+    class="mask-atom theme-default"
+  >
+    <div
+      class="mask-atom-centered"
+    >
+      <div
+        class="v-modal-card theme-default"
+      >
+        <div
+          class="v-modal-card-controls"
+        >
+          <button
+            class="v-modal-card-back"
+          >
+            <svg
+              class="svg-atom theme-default"
+              fill="none"
+              height="17"
+              view-box="0 0 23 17"
+              width="23"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="img/icons.svg#icon-arrow-left"
+              />
+            </svg>
+          </button>
+           
+          <!---->
+        </div>
+         
+        <header
+          class="v-modal-card-header"
+        >
+          <h3
+            class="v-modal-card-title"
+          >
+            Modal title
+          </h3>
+        </header>
+         
+        <div
+          class="v-modal-card-body"
+        >
+          
+            Modal body
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VModal/VModalInfoCard both 1`] = `
+<div>
+  <div
+    class="mask-atom theme-default"
+  >
+    <div
+      class="mask-atom-centered"
+    >
+      <div
+        class="v-modal-info-card theme-default"
+      >
+        <aside
+          class="v-modal-info-card-aside"
+          style="background-image: url(img/info_bg.png);"
+        >
+          Some additional information about Endpass
+        </aside>
+         
+        <div
+          class="v-modal-card theme-default"
+        >
+          <div
+            class="v-modal-card-controls"
+          >
+            <button
+              class="v-modal-card-back"
+            >
+              <svg
+                class="svg-atom theme-default"
+                fill="none"
+                height="17"
+                view-box="0 0 23 17"
+                width="23"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="img/icons.svg#icon-arrow-left"
+                />
+              </svg>
+            </button>
+             
+            <button
+              class="v-modal-card-close"
+            >
+              <svg
+                class="svg-atom theme-default"
+                fill="none"
+                height="17"
+                view-box="0 0 17 17"
+                width="17"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="img/icons.svg#icon-close"
+                />
+              </svg>
+            </button>
+          </div>
+           
+          <header
+            class="v-modal-card-header"
+          >
+            <h3
+              class="v-modal-card-title"
+            >
+              Modal title
+            </h3>
+          </header>
+           
+          <div
+            class="v-modal-card-body"
+          >
+              
+            Modal body
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VModal/VModalInfoCard closable 1`] = `
+<div>
+  <div
+    class="mask-atom theme-default"
+  >
+    <div
+      class="mask-atom-centered"
+    >
+      <div
+        class="v-modal-info-card theme-default"
+      >
+        <aside
+          class="v-modal-info-card-aside"
+          style="background-image: url(img/info_bg.png);"
+        >
+          Some additional information about Endpass
+        </aside>
+         
+        <div
+          class="v-modal-card theme-default"
+        >
+          <div
+            class="v-modal-card-controls"
+          >
+            <!---->
+             
+            <button
+              class="v-modal-card-close"
+            >
+              <svg
+                class="svg-atom theme-default"
+                fill="none"
+                height="17"
+                view-box="0 0 17 17"
+                width="17"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="img/icons.svg#icon-close"
+                />
+              </svg>
+            </button>
+          </div>
+           
+          <header
+            class="v-modal-card-header"
+          >
+            <h3
+              class="v-modal-card-title"
+            >
+              Modal title
+            </h3>
+          </header>
+           
+          <div
+            class="v-modal-card-body"
+          >
+              
+            Modal body
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VModal/VModalInfoCard default 1`] = `
+<div>
+  <div
+    class="mask-atom theme-default"
+  >
+    <div
+      class="mask-atom-centered"
+    >
+      <div
+        class="v-modal-info-card theme-default"
+      >
+        <aside
+          class="v-modal-info-card-aside"
+          style="background-image: url(img/info_bg.png);"
+        >
+          Some additional information about Endpass
+        </aside>
+         
+        <div
+          class="v-modal-card theme-default"
+        >
+          <div
+            class="v-modal-card-controls"
+          >
+            <!---->
+             
+            <!---->
+          </div>
+           
+          <header
+            class="v-modal-card-header"
+          >
+            <h3
+              class="v-modal-card-title"
+            >
+              Modal title
+            </h3>
+          </header>
+           
+          <div
+            class="v-modal-card-body"
+          >
+              
+            Modal body
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VModal/VModalInfoCard returnable 1`] = `
+<div>
+  <div
+    class="mask-atom theme-default"
+  >
+    <div
+      class="mask-atom-centered"
+    >
+      <div
+        class="v-modal-info-card theme-default"
+      >
+        <aside
+          class="v-modal-info-card-aside"
+          style="background-image: url(img/info_bg.png);"
+        >
+          Some additional information about Endpass
+        </aside>
+         
+        <div
+          class="v-modal-card theme-default"
+        >
+          <div
+            class="v-modal-card-controls"
+          >
+            <button
+              class="v-modal-card-back"
+            >
+              <svg
+                class="svg-atom theme-default"
+                fill="none"
+                height="17"
+                view-box="0 0 23 17"
+                width="23"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="img/icons.svg#icon-arrow-left"
+                />
+              </svg>
+            </button>
+             
+            <!---->
+          </div>
+           
+          <header
+            class="v-modal-card-header"
+          >
+            <h3
+              class="v-modal-card-title"
+            >
+              Modal title
+            </h3>
+          </header>
+           
+          <div
+            class="v-modal-card-body"
+          >
+              
+            Modal body
+          
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,7 +1,7 @@
 <template>
   <div
     :class="themeCssClass"
-    class="v-description-atom"
+    class="description-atom"
   >
     {{ description }}
   </div>

@@ -1,0 +1,19 @@
+.mask-atom.theme-default {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .5);
+  padding: 15px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.mask-atom.theme-default .mask-atom-centered {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

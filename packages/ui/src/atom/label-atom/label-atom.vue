@@ -1,5 +1,8 @@
 <template>
-  <label :class="themeCssClass">
+  <label
+    class="label-atom"
+    :class="themeCssClass"
+  >
     {{ label }}
   </label>
 </template>

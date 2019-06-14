@@ -1,0 +1,8 @@
+.v-modal-fade-enter-active,
+.v-modal-fade-leave-active {
+  transition: opacity .5s;
+}
+.v-modal-fade-enter,
+.v-modal-fade-leave-to {
+  opacity: 0;
+}

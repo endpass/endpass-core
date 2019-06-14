@@ -1,0 +1,23 @@
+.v-modal-info-card.theme-default {
+  width: 100%;
+  max-width: 810px;
+  display: flex;
+  justify-content: center;
+}
+
+.v-modal-info-card.theme-default .v-modal-info-card-aside {
+  padding: 40px 36px 24px;
+  text-align: center;
+  background-size: cover;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.25px;
+  color: $white;
+  font-family: $primary-font;
+}
+
+@media (max-width: $lt-small-breakpoint) {
+  .v-modal-info-card.theme-default .aside-atom {
+    display: none;
+  }
+}
