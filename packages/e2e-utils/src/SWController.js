@@ -20,14 +20,23 @@ class SWController {
    * @param {string} options.url
    * @param {string} [options.method]
    * @param {*} [options.response]
+   * @param {object} [options.headers]
+   * @param {number} [options.status]
    */
-  mockRoute({ url, method = 'GET', response = {}, headers = {} }) {
+  mockRoute({
+    url,
+    method = 'GET',
+    response = {},
+    headers = {},
+    status = 200,
+  }) {
     this.sendMessage({
       method: METHODS.MOCK,
       mock: {
         id: nanoid(),
         method: method.toUpperCase(),
         headers,
+        status,
         url,
         response,
       },
@@ -38,14 +47,23 @@ class SWController {
    * @param {string} options.url
    * @param {string} [options.method]
    * @param {*} [options.response]
+   * @param {object} [options.headers]
+   * @param {number} [options.status]
    */
-  mockRouteOnce({ url, method = 'GET', response = {}, headers = {} }) {
+  mockRouteOnce({
+    url,
+    method = 'GET',
+    response = {},
+    headers = {},
+    status = 200,
+  }) {
     this.sendMessage({
       method: METHODS.MOCK_ONCE,
       mock: {
         id: nanoid(),
         method: method.toUpperCase(),
         headers,
+        status,
         url,
         response,
       },

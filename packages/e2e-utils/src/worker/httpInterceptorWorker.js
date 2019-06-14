@@ -10,8 +10,8 @@ this.importScripts('https://unpkg.com/serviceworkers-ware@0.3.2/dist/sww.js');
 const db = new this.Dexie('routes_mocks_db');
 
 db.version(1).stores({
-  static: 'id,url,method,headers,response',
-  once: 'id,url,method,headers,response',
+  static: 'id,url,method,status,headers,response',
+  once: 'id,url,method,status,headers,response',
 });
 
 const wrapRoutesDBTable = table => ({
