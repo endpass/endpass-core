@@ -1,5 +1,4 @@
 import * as components from '@/kit';
-import './scss/kit.theme-default.scss';
 
 export * from '@/kit';
 
