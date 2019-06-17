@@ -1381,6 +1381,48 @@ exports[`Storyshots VContentSwitcher/desktop simple array strings 1`] = `
 </div>
 `;
 
+exports[`Storyshots VDivider/desktop default 1`] = `
+<div>
+  <div
+    class="v-divider theme-default"
+    style="width: 378px;"
+  >
+    <hr
+      class="v-divider-before"
+    />
+     
+    <!---->
+     
+    <hr
+      class="v-divider-after"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots VDivider/desktop with text 1`] = `
+<div>
+  <div
+    class="v-divider theme-default"
+    style="width: 378px;"
+  >
+    <hr
+      class="v-divider-before"
+    />
+     
+    <span
+      class="v-divider-text"
+    >
+      or register in with
+    </span>
+     
+    <hr
+      class="v-divider-after"
+    />
+  </div>
+</div>
+`;
+
 exports[`Storyshots VInput/desktop disabled 1`] = `
 <div>
   <div
