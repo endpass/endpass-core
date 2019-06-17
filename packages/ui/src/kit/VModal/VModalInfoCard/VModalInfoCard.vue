@@ -27,7 +27,7 @@
 
 <script>
 import ThemeMixin from '@/mixins/ThemeMixin';
-import VModalCard from '@/kit/VModal/VModalCard';
+import VModalCard from '@/kit/VModal/VModalCard/VModalCard';
 
 export default {
   name: 'VModalInfoCard',

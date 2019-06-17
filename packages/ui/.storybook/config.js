@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import { configure } from '@storybook/vue';
-import '@/components-kit';
+import '@/kit.theme-default';
 import ThemeProvider from '@/kit/ThemeProvider';
 
 Vue.component('theme-provider', ThemeProvider);

@@ -7,7 +7,6 @@ import sass from 'rollup-plugin-sass';
 import path from 'path';
 import find from 'find';
 import postcss from 'postcss';
-import fs from 'fs';
 
 import pkg from './package.json';
 
@@ -62,13 +61,7 @@ const commonConfig = {
       include: '**/*.svg',
     }),
     sass({
-      output(styles) {
-        const resolvedDir = resolveDir(DEST_DIR);
-        if (!fs.existsSync(resolvedDir)) {
-          fs.mkdirSync(resolvedDir);
-        }
-        fs.writeFileSync(resolveFile(`${DEST_DIR}/${pkg.styles}`), styles);
-      },
+      output: true,
       processor: css =>
         postcss(require('./postcss.config').plugins) // eslint-disable-line
           .process(css, { from: undefined })
@@ -130,6 +123,17 @@ export default [
         format: 'cjs',
         dir: resolveDir(`${DEST_DIR}/kit`),
         entryFileNames: '[name].js',
+      },
+    ],
+  },
+  {
+    ...commonConfig,
+    input: resolveFile('./src/kit.theme-default.js'),
+    output: [
+      {
+        ...outputConfig,
+        format: 'cjs',
+        file: resolveFile(`${DEST_DIR}/kit/kit.theme-default.js`),
       },
     ],
   },
