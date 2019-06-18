@@ -1,7 +1,12 @@
 const path = require('path');
 
 module.exports = async ({ config }) => {
-  config.resolve.alias['@'] = path.resolve(__dirname, '../src');
+  const srcPath = path.resolve(__dirname, '../src');
+  const fileLoaderRule = config.module.rules.find(rule => rule.test.test('.svg'));
+  fileLoaderRule.exclude = srcPath;
+
+  config.resolve.alias['@'] = srcPath;
+
   config.module.rules.push({
     test: /\.(postcss|scss)$/,
     use: [
@@ -25,7 +30,14 @@ module.exports = async ({ config }) => {
         },
       },
     ],
-    include: path.resolve(__dirname, '../src'),
+    include: srcPath,
   });
+
+  config.module.rules.push({
+    test: /\.svg$/,
+    loader: 'raw-loader',
+    include: srcPath,
+  });
+
   return config;
 };

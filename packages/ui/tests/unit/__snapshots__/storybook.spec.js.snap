@@ -1013,7 +1013,9 @@ exports[`Storyshots VCheckbox/desktop array 1`] = `
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    />
+    >
+      [object Object]
+    </i>
      
     <input
       class="v-checkbox-control"
@@ -1045,7 +1047,9 @@ exports[`Storyshots VCheckbox/desktop default state 1`] = `
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    />
+    >
+      [object Object]
+    </i>
      
     <input
       class="v-checkbox-control"
@@ -1072,7 +1076,9 @@ exports[`Storyshots VCheckbox/desktop default state false 1`] = `
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    />
+    >
+      [object Object]
+    </i>
      
     <input
       class="v-checkbox-control"
@@ -1103,7 +1109,9 @@ exports[`Storyshots VCheckbox/desktop default state true 1`] = `
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    />
+    >
+      [object Object]
+    </i>
      
     <input
       class="v-checkbox-control"
@@ -1130,7 +1138,9 @@ exports[`Storyshots VCheckbox/desktop disabled 1`] = `
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    />
+    >
+      [object Object]
+    </i>
      
     <input
       class="v-checkbox-control"
@@ -1157,10 +1167,7 @@ exports[`Storyshots VCheckbox/desktop disabled 1`] = `
     <i
       class="icon-atom v-checkbox-frame theme-default"
     >
-      <img
-        alt="Check icon"
-        src="[object Object]"
-      />
+      [object Object]
     </i>
      
     <input
@@ -1189,7 +1196,9 @@ exports[`Storyshots VCheckbox/desktop error 1`] = `
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    />
+    >
+      [object Object]
+    </i>
      
     <input
       class="v-checkbox-control is-danger"
@@ -1216,7 +1225,9 @@ exports[`Storyshots VCheckbox/desktop true/false attr 1`] = `
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    />
+    >
+      [object Object]
+    </i>
      
     <input
       class="v-checkbox-control"

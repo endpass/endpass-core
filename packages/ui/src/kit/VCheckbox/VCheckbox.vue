@@ -3,13 +3,10 @@
     class="v-checkbox"
     :class="checkboxCssClass"
   >
-    <icon-atom class="v-checkbox-frame">
-      <img
-        v-if="isChecked"
-        alt="Check icon"
-        :src="require('@/img/check.svg')"
-      >
-    </icon-atom>
+    <icon-atom
+      class="v-checkbox-frame"
+      v-html="checkSvgIcon"
+    />
     <input
       type="checkbox"
       :disabled="disabled"
@@ -31,6 +28,7 @@
 <script>
 import ThemeMixin from '@/mixins/ThemeMixin';
 import IconAtom from '@/atom/icon-atom/icon-atom';
+import checkSvgIcon from '@/img/check.svg';
 
 export default {
   name: 'VCheckbox',
@@ -67,6 +65,7 @@ export default {
   data() {
     return {
       isFocused: false,
+      checkSvgIcon,
     };
   },
   computed: {
