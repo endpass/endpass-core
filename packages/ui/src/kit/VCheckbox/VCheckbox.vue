@@ -4,13 +4,11 @@
     :class="checkboxCssClass"
   >
     <icon-atom class="v-checkbox-frame">
-      <svg-atom
+      <img
         v-if="isChecked"
-        width="10"
-        height="8"
-        stroke-width="0"
-        :href="checkIconHref"
-      />
+        alt="Check icon"
+        :src="require('@/img/check.svg')"
+      >
     </icon-atom>
     <input
       type="checkbox"
@@ -33,7 +31,6 @@
 <script>
 import ThemeMixin from '@/mixins/ThemeMixin';
 import IconAtom from '@/atom/icon-atom/icon-atom';
-import SvgAtom from '@/atom/svg-atom/svg-atom';
 
 export default {
   name: 'VCheckbox',
@@ -41,10 +38,6 @@ export default {
     name: {
       type: String,
       default: 'checkbox',
-    },
-    checkIconHref: {
-      type: String,
-      default: 'img/icons.svg#icon-check',
     },
     value: {
       type: [String, Boolean],
@@ -109,10 +102,7 @@ export default {
     },
   },
   mixins: [ThemeMixin],
-  components: {
-    IconAtom,
-    SvgAtom,
-  },
+  components: { IconAtom },
   model: {
     prop: 'modelValue',
     event: 'change',

@@ -1157,17 +1157,10 @@ exports[`Storyshots VCheckbox/desktop disabled 1`] = `
     <i
       class="icon-atom v-checkbox-frame theme-default"
     >
-      <svg
-        class="svg-atom theme-default"
-        height="8"
-        stroke-width="0"
-        width="10"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="img/icons.svg#icon-check"
-        />
-      </svg>
+      <img
+        alt="Check icon"
+        src="[object Object]"
+      />
     </i>
      
     <input
