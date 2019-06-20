@@ -1,2 +1,3 @@
 import '@/scss/kit.theme-default.scss';
-import '@/components-kit';
+
+export { default } from './components-kit';
