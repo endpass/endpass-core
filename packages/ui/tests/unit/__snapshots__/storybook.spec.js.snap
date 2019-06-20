@@ -778,7 +778,6 @@ exports[`Storyshots VButton/desktop social 1`] = `
         <td>
           <button
             class="v-button theme-default skin-social size-normal"
-            style="width: 181px;"
           >
             <i
               class="icon-atom v-button-icon icon-before theme-default"
@@ -807,7 +806,6 @@ exports[`Storyshots VButton/desktop social 1`] = `
         <td>
           <button
             class="v-button theme-default skin-social size-normal"
-            style="width: 181px;"
           >
             <i
               class="icon-atom v-button-icon icon-before theme-default"
@@ -844,7 +842,6 @@ exports[`Storyshots VButton/desktop social 1`] = `
         <td>
           <button
             class="v-button theme-default skin-social size-big"
-            style="width: 181px;"
           >
             <i
               class="icon-atom v-button-icon icon-before theme-default"
@@ -873,7 +870,6 @@ exports[`Storyshots VButton/desktop social 1`] = `
         <td>
           <button
             class="v-button theme-default skin-social size-big"
-            style="width: 181px;"
           >
             <i
               class="icon-atom v-button-icon icon-before theme-default"
