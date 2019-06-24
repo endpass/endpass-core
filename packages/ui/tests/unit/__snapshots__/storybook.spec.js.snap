@@ -1058,7 +1058,7 @@ exports[`Storyshots VCheckbox/desktop default state 1`] = `
       class="v-checkbox-label"
     >
       
-          state: 
+          state: false
         
     </span>
   </label>
@@ -1087,21 +1087,17 @@ exports[`Storyshots VCheckbox/desktop default state false 1`] = `
       class="v-checkbox-label"
     >
       
-          Checkbox item
+          state: false
         
     </span>
   </label>
-   
-  <div>
-    state: false
-  </div>
 </div>
 `;
 
 exports[`Storyshots VCheckbox/desktop default state true 1`] = `
 <div>
   <label
-    class="v-checkbox theme-default"
+    class="v-checkbox theme-default is-checked"
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
@@ -1113,7 +1109,7 @@ exports[`Storyshots VCheckbox/desktop default state true 1`] = `
       class="v-checkbox-control"
       name="checkbox"
       type="checkbox"
-      value="true"
+      value="false"
     />
      
     <span
@@ -1155,7 +1151,7 @@ exports[`Storyshots VCheckbox/desktop disabled 1`] = `
     </span>
   </label>
    
-  <div />
+  <br />
    
   <label
     class="v-checkbox theme-default is-checked is-disabled"
@@ -1236,7 +1232,7 @@ exports[`Storyshots VCheckbox/desktop true/false attr 1`] = `
       class="v-checkbox-label"
     >
       
-          state: 
+          state: no
         
     </span>
   </label>
