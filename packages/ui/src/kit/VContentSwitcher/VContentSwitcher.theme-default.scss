@@ -7,6 +7,7 @@
 
 .v-content-switcher.theme-default .v-content-switcher-item {
   position: relative;
+  height: 100%;
 }
 
 .v-content-switcher.theme-default .v-content-switcher-item:not(:first-child):before {
@@ -25,6 +26,7 @@
 .v-content-switcher.theme-default .v-content-switcher-item.is-focused:before,
 .v-content-switcher.theme-default .v-content-switcher-item.is-checked:before,
 .v-content-switcher.theme-default .v-content-switcher-item:hover + .v-content-switcher-item:before,
+.v-content-switcher.theme-default .v-content-switcher-item.is-checked + .v-content-switcher-item:before,
 .v-content-switcher.theme-default .v-content-switcher-item.is-focused + .v-content-switcher-item:before {
   opacity: 0;
 }
@@ -44,7 +46,9 @@
 }
 
 .v-content-switcher.theme-default .v-content-switcher-label {
-  display: block;
+  display: flex;
+  height: 100%;
+  align-items: center;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: -0.2px;
