@@ -18,12 +18,11 @@ storiesOf('VCheckbox/desktop', module)
     template: `
       <theme-provider>
         <v-checkbox
-          :value="value"
+          v-model="value"
           @change="onInput"
         >
-          Checkbox item
+          state: {{ value }}
         </v-checkbox>
-        <div>state: {{ value }}</div>
       </theme-provider>
     `,
   }))
@@ -39,7 +38,7 @@ storiesOf('VCheckbox/desktop', module)
     template: `
       <theme-provider>
         <v-checkbox
-          :value="value"
+          v-model="value"
           @change="onInput"
         >
           state: {{ value }}
@@ -53,7 +52,7 @@ storiesOf('VCheckbox/desktop', module)
     components: { VCheckbox },
     data() {
       return {
-        model: null,
+        model: false,
       };
     },
     template: `
@@ -78,7 +77,7 @@ storiesOf('VCheckbox/desktop', module)
     },
     template: `
       <theme-provider>
-        <v-checkbox          
+        <v-checkbox
           v-model="model"
           value="Crypto!"
           name="Name"
@@ -95,7 +94,7 @@ storiesOf('VCheckbox/desktop', module)
     components: { VCheckbox },
     data() {
       return {
-        model: null,
+        model: 'no',
       };
     },
     template: `
@@ -115,6 +114,7 @@ storiesOf('VCheckbox/desktop', module)
   .add('error', () => ({
     data() {
       return {
+        value: false,
         error: 'is-error',
       };
     },
@@ -123,11 +123,12 @@ storiesOf('VCheckbox/desktop', module)
     template: `
       <theme-provider>
         <v-checkbox
+          v-model="value"
           :error="error"
           @input="onInput"
         >
           {{ error }}
-        </v-checkbox>        
+        </v-checkbox>
       </theme-provider>
     `,
   }))
@@ -148,7 +149,7 @@ storiesOf('VCheckbox/desktop', module)
         >
           disabled
         </v-checkbox>
-        <div></div>
+        <br/>
         <v-checkbox
           v-model="model"
           disabled
