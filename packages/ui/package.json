@@ -22,7 +22,8 @@
     "format:eslint": "eslint --ext .json,.js,.vue src/ --fix --quiet || exit 0",
     "format:prettier": "prettier --write '**/*.{js,json}'",
     "format": "yarn format:prettier:vue && yarn format:eslint && yarn format:prettier",
-    "storybook": "start-storybook -s public"
+    "storybook": "start-storybook -s public",
+    "storybook:build": "build-storybook"
   },
   "bugs": {
     "url": "https://github.com/endpass/endpass-core/issues"
