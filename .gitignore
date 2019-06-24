@@ -19,3 +19,4 @@ coverage/
 *.sln
 *.log
 .tern-port
+storybook-static
