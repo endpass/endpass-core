@@ -1564,35 +1564,13 @@ exports[`Storyshots VModal/VModalCard both 1`] = `
           <button
             class="v-modal-card-back"
           >
-            <svg
-              class="svg-atom theme-default"
-              fill="none"
-              height="17"
-              view-box="0 0 23 17"
-              width="23"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <use
-                xlink:href="img/icons.svg#icon-arrow-left"
-              />
-            </svg>
+            [object Object]
           </button>
            
           <button
             class="v-modal-card-close"
           >
-            <svg
-              class="svg-atom theme-default"
-              fill="none"
-              height="17"
-              view-box="0 0 17 17"
-              width="17"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <use
-                xlink:href="img/icons.svg#icon-close"
-              />
-            </svg>
+            [object Object]
           </button>
         </div>
          
@@ -1638,18 +1616,7 @@ exports[`Storyshots VModal/VModalCard closable 1`] = `
           <button
             class="v-modal-card-close"
           >
-            <svg
-              class="svg-atom theme-default"
-              fill="none"
-              height="17"
-              view-box="0 0 17 17"
-              width="17"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <use
-                xlink:href="img/icons.svg#icon-close"
-              />
-            </svg>
+            [object Object]
           </button>
         </div>
          
@@ -1735,18 +1702,7 @@ exports[`Storyshots VModal/VModalCard returnable 1`] = `
           <button
             class="v-modal-card-back"
           >
-            <svg
-              class="svg-atom theme-default"
-              fill="none"
-              height="17"
-              view-box="0 0 23 17"
-              width="23"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <use
-                xlink:href="img/icons.svg#icon-arrow-left"
-              />
-            </svg>
+            [object Object]
           </button>
            
           <!---->
@@ -1794,7 +1750,9 @@ exports[`Storyshots VModal/VModalInfoCard both 1`] = `
         </aside>
          
         <div
+          back-svg-href="img/icons.svg#icon-arrow-left"
           class="v-modal-card theme-default"
+          close-svg-href="img/icons.svg#icon-close"
         >
           <div
             class="v-modal-card-controls"
@@ -1802,35 +1760,13 @@ exports[`Storyshots VModal/VModalInfoCard both 1`] = `
             <button
               class="v-modal-card-back"
             >
-              <svg
-                class="svg-atom theme-default"
-                fill="none"
-                height="17"
-                view-box="0 0 23 17"
-                width="23"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <use
-                  xlink:href="img/icons.svg#icon-arrow-left"
-                />
-              </svg>
+              [object Object]
             </button>
              
             <button
               class="v-modal-card-close"
             >
-              <svg
-                class="svg-atom theme-default"
-                fill="none"
-                height="17"
-                view-box="0 0 17 17"
-                width="17"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <use
-                  xlink:href="img/icons.svg#icon-close"
-                />
-              </svg>
+              [object Object]
             </button>
           </div>
            
@@ -1877,7 +1813,9 @@ exports[`Storyshots VModal/VModalInfoCard closable 1`] = `
         </aside>
          
         <div
+          back-svg-href="img/icons.svg#icon-arrow-left"
           class="v-modal-card theme-default"
+          close-svg-href="img/icons.svg#icon-close"
         >
           <div
             class="v-modal-card-controls"
@@ -1887,18 +1825,7 @@ exports[`Storyshots VModal/VModalInfoCard closable 1`] = `
             <button
               class="v-modal-card-close"
             >
-              <svg
-                class="svg-atom theme-default"
-                fill="none"
-                height="17"
-                view-box="0 0 17 17"
-                width="17"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <use
-                  xlink:href="img/icons.svg#icon-close"
-                />
-              </svg>
+              [object Object]
             </button>
           </div>
            
@@ -1945,7 +1872,9 @@ exports[`Storyshots VModal/VModalInfoCard default 1`] = `
         </aside>
          
         <div
+          back-svg-href="img/icons.svg#icon-arrow-left"
           class="v-modal-card theme-default"
+          close-svg-href="img/icons.svg#icon-close"
         >
           <div
             class="v-modal-card-controls"
@@ -1998,7 +1927,9 @@ exports[`Storyshots VModal/VModalInfoCard returnable 1`] = `
         </aside>
          
         <div
+          back-svg-href="img/icons.svg#icon-arrow-left"
           class="v-modal-card theme-default"
+          close-svg-href="img/icons.svg#icon-close"
         >
           <div
             class="v-modal-card-controls"
@@ -2006,18 +1937,7 @@ exports[`Storyshots VModal/VModalInfoCard returnable 1`] = `
             <button
               class="v-modal-card-back"
             >
-              <svg
-                class="svg-atom theme-default"
-                fill="none"
-                height="17"
-                view-box="0 0 23 17"
-                width="23"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <use
-                  xlink:href="img/icons.svg#icon-arrow-left"
-                />
-              </svg>
+              [object Object]
             </button>
              
             <!---->
