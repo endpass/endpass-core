@@ -8,28 +8,14 @@
         v-if="isReturnable"
         class="v-modal-card-back"
         @click="$emit('return', $event)"
-      >
-        <svg-atom
-          width="23"
-          height="17"
-          view-box="0 0 23 17"
-          fill="none"
-          :href="backSvgHref"
-        />
-      </button>
+        v-html="backSvgIcon"
+      />
       <button
         v-if="isClosable"
         class="v-modal-card-close"
         @click="$emit('close', $event)"
-      >
-        <svg-atom
-          width="17"
-          height="17"
-          view-box="0 0 17 17"
-          fill="none"
-          :href="closeSvgHref"
-        />
-      </button>
+        v-html="closeSvgIcon"
+      />
     </div>
     <header
       v-if="$slots.title"
@@ -47,7 +33,8 @@
 
 <script>
 import ThemeMixin from '@/mixins/ThemeMixin';
-import SvgAtom from '@/atom/svg-atom/svg-atom';
+import closeSvgIcon from '@/img/close.svg';
+import backSvgIcon from '@/img/arrowLeft.svg';
 
 export default {
   name: 'VModalCard',
@@ -60,16 +47,13 @@ export default {
       type: Boolean,
       default: false,
     },
-    closeSvgHref: {
-      type: String,
-      default: 'img/icons.svg#icon-close',
-    },
-    backSvgHref: {
-      type: String,
-      default: 'img/icons.svg#icon-arrow-left',
-    },
+  },
+  data() {
+    return {
+      closeSvgIcon,
+      backSvgIcon,
+    };
   },
   mixins: [ThemeMixin],
-  components: { SvgAtom },
 };
 </script>
