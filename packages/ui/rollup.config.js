@@ -7,10 +7,8 @@ import sass from 'rollup-plugin-sass';
 import path from 'path';
 import find from 'find';
 import postcss from 'postcss';
-
+import copy from 'rollup-plugin-copy';
 import pkg from './package.json';
-
-const DEST_DIR = './dist';
 
 function resolveDir(dir) {
   return path.join(__dirname, '', dir);
@@ -20,6 +18,10 @@ function resolveFile(file) {
   return path.resolve(__dirname, file);
 }
 
+const DIST_DIR = './dist';
+const SOURCE_DIR = resolveDir('./src');
+const PUBLIC_DIR = resolveDir('./public');
+
 const outputConfig = {
   exports: 'named',
   globals: {
@@ -27,7 +29,6 @@ const outputConfig = {
   },
 };
 const excludePaths = ['./node_modules/**'];
-const sourceDir = resolveDir('./src');
 const commonConfig = {
   external: [
     ...Object.keys(pkg.dependencies),
@@ -35,7 +36,7 @@ const commonConfig = {
   ],
   plugins: [
     alias({
-      '@': sourceDir,
+      '@': SOURCE_DIR,
       resolve: ['.vue', '.js', '/index.js', '.svg', '.scss'],
     }),
     babel({
@@ -50,7 +51,7 @@ const commonConfig = {
             data: '@import "@/scss/variables.scss";',
             importer: [
               url => ({
-                file: url.replace(/^@/, sourceDir),
+                file: url.replace(/^@/, SOURCE_DIR),
               }),
             ],
           },
@@ -70,10 +71,30 @@ const commonConfig = {
         outputStyle: 'compressed',
         importer: [
           url => ({
-            file: url.replace(/^@/, sourceDir),
+            file: url.replace(/^@/, SOURCE_DIR),
           }),
         ],
       },
+    }),
+    copy({
+      targets: [
+        {
+          src: [
+            resolveFile('package.json'),
+            resolveFile('README.md'),
+            resolveFile('yarn.lock'),
+          ],
+          dest: DIST_DIR,
+        },
+        {
+          src: [SOURCE_DIR, PUBLIC_DIR],
+          dest: DIST_DIR,
+        },
+        {
+          src: [path.join(SOURCE_DIR, './scss/typography/fonts')],
+          dest: path.join(DIST_DIR, './kit'),
+        },
+      ],
     }),
   ],
   watch: {
@@ -89,13 +110,13 @@ export default [
     output: [
       {
         ...outputConfig,
-        file: resolveFile(`${DEST_DIR}/${pkg.module}`),
+        file: resolveFile(`${DIST_DIR}/${pkg.module}`),
         format: 'esm',
       },
       {
         ...outputConfig,
         name: pkg.name,
-        file: resolveFile(`${DEST_DIR}/${pkg.main}`),
+        file: resolveFile(`${DIST_DIR}/${pkg.main}`),
         format: 'umd',
       },
     ],
@@ -107,7 +128,7 @@ export default [
       {
         ...outputConfig,
         format: 'cjs',
-        dir: resolveDir(`${DEST_DIR}/components`),
+        dir: resolveDir(`${DIST_DIR}/components`),
         entryFileNames: '[name].js',
       },
     ],
@@ -121,7 +142,7 @@ export default [
       {
         ...outputConfig,
         format: 'cjs',
-        dir: resolveDir(`${DEST_DIR}/kit`),
+        dir: resolveDir(`${DIST_DIR}/kit`),
         entryFileNames: '[name].js',
       },
     ],
@@ -133,7 +154,7 @@ export default [
       {
         ...outputConfig,
         format: 'cjs',
-        file: resolveFile(`${DEST_DIR}/kit/kit.theme-default.js`),
+        file: resolveFile(`${DIST_DIR}/kit/kit.theme-default.js`),
       },
     ],
   },
