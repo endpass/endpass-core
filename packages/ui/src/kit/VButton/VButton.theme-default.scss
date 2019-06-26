@@ -25,6 +25,8 @@
 
 .v-button.theme-default .v-button-icon {
   display: flex;
+  height: 14px;
+  align-items: flex-end;
 }
 
 .v-button.theme-default .v-button-icon.icon-before {
