@@ -3,6 +3,7 @@
   max-width: 378px;
   padding: 24px 32px 24px;
   background-color: $white;
+  box-sizing: content-box;
 }
 
 .v-modal-card.theme-default .v-modal-card-title {
