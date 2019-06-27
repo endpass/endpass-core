@@ -6,29 +6,29 @@ exports[`Storyshots VButton/desktop disabled 1`] = `
     <thead>
       <tr>
         <th />
-
+         
         <th>
           Primary
         </th>
-
+         
         <th>
           Secondary
         </th>
-
+         
         <th>
           Tertiary
         </th>
-
+         
         <th>
           Quaternary
         </th>
-
+         
         <th>
           Ghost
         </th>
       </tr>
     </thead>
-
+     
     <tbody>
       <tr>
         <th
@@ -36,181 +36,181 @@ exports[`Storyshots VButton/desktop disabled 1`] = `
         >
           Normal
         </th>
-
+         
         <td>
           <button
             class="v-button theme-default skin-primary size-normal"
             disabled="disabled"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-secondary size-normal"
             disabled="disabled"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-tertiary size-normal"
             disabled="disabled"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-quaternary size-normal"
             disabled="disabled"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-ghost size-normal"
             disabled="disabled"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
       </tr>
-
+       
       <tr>
         <th
           scope="row"
         >
           Big
         </th>
-
+         
         <td>
           <button
             class="v-button theme-default skin-primary size-big"
             disabled="disabled"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-secondary size-big"
             disabled="disabled"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-tertiary size-big"
             disabled="disabled"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-quaternary size-big"
             disabled="disabled"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-ghost size-big"
             disabled="disabled"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
@@ -226,29 +226,29 @@ exports[`Storyshots VButton/desktop enabled 1`] = `
     <thead>
       <tr>
         <th />
-
+         
         <th>
           Primary
         </th>
-
+         
         <th>
           Secondary
         </th>
-
+         
         <th>
           Tertiary
         </th>
-
+         
         <th>
           Quaternary
         </th>
-
+         
         <th>
           Ghost
         </th>
       </tr>
     </thead>
-
+     
     <tbody>
       <tr>
         <th
@@ -256,171 +256,171 @@ exports[`Storyshots VButton/desktop enabled 1`] = `
         >
           Normal
         </th>
-
+         
         <td>
           <button
             class="v-button theme-default skin-primary size-normal"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-secondary size-normal"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-tertiary size-normal"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-quaternary size-normal"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-ghost size-normal"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
       </tr>
-
+       
       <tr>
         <th
           scope="row"
         >
           Big
         </th>
-
+         
         <td>
           <button
             class="v-button theme-default skin-primary size-big"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-secondary size-big"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-tertiary size-big"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-quaternary size-big"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-ghost size-big"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
@@ -436,29 +436,29 @@ exports[`Storyshots VButton/desktop icon 1`] = `
     <thead>
       <tr>
         <th />
-
+         
         <th>
           Primary
         </th>
-
+         
         <th>
           Secondary
         </th>
-
+         
         <th>
           Tertiary
         </th>
-
+         
         <th>
           Quaternary
         </th>
-
+         
         <th>
           Ghost
         </th>
       </tr>
     </thead>
-
+     
     <tbody>
       <tr>
         <th
@@ -466,19 +466,19 @@ exports[`Storyshots VButton/desktop icon 1`] = `
         >
           Normal
         </th>
-
+         
         <td>
           <button
             class="v-button theme-default skin-primary size-normal"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
-              Button Label
+              Button Label 
             </span>
-
+             
             <i
               class="icon-atom v-button-icon icon-after theme-default"
             >
@@ -493,19 +493,19 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             </i>
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-secondary size-normal"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
-              Button Label
+              Button Label 
             </span>
-
+             
             <i
               class="icon-atom v-button-icon icon-after theme-default"
             >
@@ -520,19 +520,19 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             </i>
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-tertiary size-normal"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
-              Button Label
+              Button Label 
             </span>
-
+             
             <i
               class="icon-atom v-button-icon icon-after theme-default"
             >
@@ -547,19 +547,19 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             </i>
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-quaternary size-normal"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
-              Button Label
+              Button Label 
             </span>
-
+             
             <i
               class="icon-atom v-button-icon icon-after theme-default"
             >
@@ -574,19 +574,19 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             </i>
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-ghost size-normal"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
-              Button Label
+              Button Label 
             </span>
-
+             
             <i
               class="icon-atom v-button-icon icon-after theme-default"
             >
@@ -602,26 +602,26 @@ exports[`Storyshots VButton/desktop icon 1`] = `
           </button>
         </td>
       </tr>
-
+       
       <tr>
         <th
           scope="row"
         >
           Big
         </th>
-
+         
         <td>
           <button
             class="v-button theme-default skin-primary size-big"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
-              Button Label
+              Button Label 
             </span>
-
+             
             <i
               class="icon-atom v-button-icon icon-after theme-default"
             >
@@ -636,19 +636,19 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             </i>
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-secondary size-big"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
-              Button Label
+              Button Label 
             </span>
-
+             
             <i
               class="icon-atom v-button-icon icon-after theme-default"
             >
@@ -663,19 +663,19 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             </i>
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-tertiary size-big"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
-              Button Label
+              Button Label 
             </span>
-
+             
             <i
               class="icon-atom v-button-icon icon-after theme-default"
             >
@@ -690,19 +690,19 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             </i>
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-quaternary size-big"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
-              Button Label
+              Button Label 
             </span>
-
+             
             <i
               class="icon-atom v-button-icon icon-after theme-default"
             >
@@ -717,19 +717,19 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             </i>
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-ghost size-big"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
-              Button Label
+              Button Label 
             </span>
-
+             
             <i
               class="icon-atom v-button-icon icon-after theme-default"
             >
@@ -756,17 +756,17 @@ exports[`Storyshots VButton/desktop social 1`] = `
     <thead>
       <tr>
         <th />
-
+         
         <th>
           Google
         </th>
-
+         
         <th>
           GitHub
         </th>
       </tr>
     </thead>
-
+     
     <tbody>
       <tr>
         <th
@@ -774,7 +774,7 @@ exports[`Storyshots VButton/desktop social 1`] = `
         >
           Normal
         </th>
-
+         
         <td>
           <button
             class="v-button theme-default skin-social size-normal"
@@ -792,17 +792,17 @@ exports[`Storyshots VButton/desktop social 1`] = `
                 />
               </svg>
             </i>
-
+             
             <span
               class="v-button-label"
             >
                Google
             </span>
-
+             
             <!---->
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-social size-normal"
@@ -820,25 +820,25 @@ exports[`Storyshots VButton/desktop social 1`] = `
                 />
               </svg>
             </i>
-
+             
             <span
               class="v-button-label"
             >
                GitHub
             </span>
-
+             
             <!---->
           </button>
         </td>
       </tr>
-
+       
       <tr>
         <th
           scope="row"
         >
           Big
         </th>
-
+         
         <td>
           <button
             class="v-button theme-default skin-social size-big"
@@ -856,17 +856,17 @@ exports[`Storyshots VButton/desktop social 1`] = `
                 />
               </svg>
             </i>
-
+             
             <span
               class="v-button-label"
             >
                Google
             </span>
-
+             
             <!---->
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-social size-big"
@@ -884,13 +884,13 @@ exports[`Storyshots VButton/desktop social 1`] = `
                 />
               </svg>
             </i>
-
+             
             <span
               class="v-button-label"
             >
                GitHub
             </span>
-
+             
             <!---->
           </button>
         </td>
@@ -906,17 +906,17 @@ exports[`Storyshots VButton/desktop state 1`] = `
     <thead>
       <tr>
         <th />
-
+         
         <th>
           Success
         </th>
-
+         
         <th>
           Error
         </th>
       </tr>
     </thead>
-
+     
     <tbody>
       <tr>
         <th
@@ -924,75 +924,75 @@ exports[`Storyshots VButton/desktop state 1`] = `
         >
           Normal
         </th>
-
+         
         <td>
           <button
             class="v-button theme-default skin-success size-normal"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-error size-normal"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
       </tr>
-
+       
       <tr>
         <th
           scope="row"
         >
           Big
         </th>
-
+         
         <td>
           <button
             class="v-button theme-default skin-success size-big"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
-
+         
         <td>
           <button
             class="v-button theme-default skin-error size-big"
           >
             <!---->
-
+             
             <span
               class="v-button-label"
             >
               Button Label
             </span>
-
+             
             <!---->
           </button>
         </td>
@@ -1012,27 +1012,27 @@ exports[`Storyshots VCheckbox/desktop array 1`] = `
     >
       [object Object]
     </i>
-
+     
     <input
       class="v-checkbox-control"
       name="Name"
       type="checkbox"
       value="Crypto!"
     />
-
+     
     <span
       class="v-checkbox-label"
     >
-
+      
           with Crypto!
-
+        
     </span>
   </label>
-
+   
   <br />
-
+  
         persons: Bob, Alice
-
+      
 </div>
 `;
 
@@ -1046,20 +1046,20 @@ exports[`Storyshots VCheckbox/desktop default state 1`] = `
     >
       [object Object]
     </i>
-
+     
     <input
       class="v-checkbox-control"
       name="Name"
       type="checkbox"
       value="false"
     />
-
+     
     <span
       class="v-checkbox-label"
     >
-
+      
           state: false
-
+        
     </span>
   </label>
 </div>
@@ -1075,20 +1075,20 @@ exports[`Storyshots VCheckbox/desktop default state false 1`] = `
     >
       [object Object]
     </i>
-
+     
     <input
       class="v-checkbox-control"
       name="checkbox"
       type="checkbox"
       value="false"
     />
-
+     
     <span
       class="v-checkbox-label"
     >
-
+      
           state: false
-
+        
     </span>
   </label>
 </div>
@@ -1104,20 +1104,20 @@ exports[`Storyshots VCheckbox/desktop default state true 1`] = `
     >
       [object Object]
     </i>
-
+     
     <input
       class="v-checkbox-control"
       name="checkbox"
       type="checkbox"
       value="false"
     />
-
+     
     <span
       class="v-checkbox-label"
     >
-
+      
           state: true
-
+        
     </span>
   </label>
 </div>
@@ -1133,7 +1133,7 @@ exports[`Storyshots VCheckbox/desktop disabled 1`] = `
     >
       [object Object]
     </i>
-
+     
     <input
       class="v-checkbox-control"
       disabled="disabled"
@@ -1141,18 +1141,18 @@ exports[`Storyshots VCheckbox/desktop disabled 1`] = `
       type="checkbox"
       value="false"
     />
-
+     
     <span
       class="v-checkbox-label"
     >
-
+      
           disabled
-
+        
     </span>
   </label>
-
+   
   <br />
-
+   
   <label
     class="v-checkbox theme-default is-checked is-disabled"
   >
@@ -1161,7 +1161,7 @@ exports[`Storyshots VCheckbox/desktop disabled 1`] = `
     >
       [object Object]
     </i>
-
+     
     <input
       class="v-checkbox-control"
       disabled="disabled"
@@ -1169,13 +1169,13 @@ exports[`Storyshots VCheckbox/desktop disabled 1`] = `
       type="checkbox"
       value="false"
     />
-
+     
     <span
       class="v-checkbox-label"
     >
-
+      
           disabled
-
+        
     </span>
   </label>
 </div>
@@ -1191,20 +1191,20 @@ exports[`Storyshots VCheckbox/desktop error 1`] = `
     >
       [object Object]
     </i>
-
+     
     <input
       class="v-checkbox-control is-danger"
       name="checkbox"
       type="checkbox"
       value="false"
     />
-
+     
     <span
       class="v-checkbox-label"
     >
-
+      
           is-error
-
+        
     </span>
   </label>
 </div>
@@ -1220,20 +1220,20 @@ exports[`Storyshots VCheckbox/desktop true/false attr 1`] = `
     >
       [object Object]
     </i>
-
+     
     <input
       class="v-checkbox-control"
       name="Name"
       type="checkbox"
       value="false"
     />
-
+     
     <span
       class="v-checkbox-label"
     >
-
+      
           state: no
-
+        
     </span>
   </label>
 </div>
@@ -1250,9 +1250,9 @@ exports[`Storyshots VContentSwitcher/desktop array objects 1`] = `
       <label
         class="v-content-switcher-label"
       >
-
+        
       Left section
-
+      
         <input
           class="v-content-switcher-control"
           type="radio"
@@ -1266,9 +1266,9 @@ exports[`Storyshots VContentSwitcher/desktop array objects 1`] = `
       <label
         class="v-content-switcher-label"
       >
-
+        
       Middle section
-
+      
         <input
           class="v-content-switcher-control"
           type="radio"
@@ -1282,9 +1282,9 @@ exports[`Storyshots VContentSwitcher/desktop array objects 1`] = `
       <label
         class="v-content-switcher-label"
       >
-
+        
       Middle section
-
+      
         <input
           class="v-content-switcher-control"
           type="radio"
@@ -1298,9 +1298,9 @@ exports[`Storyshots VContentSwitcher/desktop array objects 1`] = `
       <label
         class="v-content-switcher-label"
       >
-
+        
       Right section
-
+      
         <input
           class="v-content-switcher-control"
           type="radio"
@@ -1309,7 +1309,7 @@ exports[`Storyshots VContentSwitcher/desktop array objects 1`] = `
       </label>
     </li>
   </ul>
-
+   
   <div>
     state: 0
   </div>
@@ -1327,9 +1327,9 @@ exports[`Storyshots VContentSwitcher/desktop simple array strings 1`] = `
       <label
         class="v-content-switcher-label"
       >
-
+        
       Left section
-
+      
         <input
           class="v-content-switcher-control"
           type="radio"
@@ -1343,9 +1343,9 @@ exports[`Storyshots VContentSwitcher/desktop simple array strings 1`] = `
       <label
         class="v-content-switcher-label"
       >
-
+        
       Middle section
-
+      
         <input
           class="v-content-switcher-control"
           type="radio"
@@ -1359,9 +1359,9 @@ exports[`Storyshots VContentSwitcher/desktop simple array strings 1`] = `
       <label
         class="v-content-switcher-label"
       >
-
+        
       Right section
-
+      
         <input
           class="v-content-switcher-control"
           type="radio"
@@ -1370,9 +1370,9 @@ exports[`Storyshots VContentSwitcher/desktop simple array strings 1`] = `
       </label>
     </li>
   </ul>
-
+   
   <div>
-    state:
+    state: 
   </div>
 </div>
 `;
@@ -1386,9 +1386,9 @@ exports[`Storyshots VDivider/desktop default 1`] = `
     <hr
       class="v-divider-before"
     />
-
+     
     <!---->
-
+     
     <hr
       class="v-divider-after"
     />
@@ -1405,13 +1405,13 @@ exports[`Storyshots VDivider/desktop with text 1`] = `
     <hr
       class="v-divider-before"
     />
-
+     
     <span
       class="v-divider-text"
     >
       or register in with
     </span>
-
+     
     <hr
       class="v-divider-after"
     />
@@ -1426,32 +1426,36 @@ exports[`Storyshots VInput/desktop disabled 1`] = `
     style="width: 288px;"
   >
     <label
-      class="label-atom theme-default is-disabled"
+      class="label-atom theme-default"
+      disabled="disabled"
+      placeholder="Placeholder text"
     >
-
+      
   Label
 
     </label>
-
+     
     <div
-      class="description-atom theme-default is-disabled"
+      class="description-atom theme-default"
+      disabled="disabled"
+      placeholder="Placeholder text"
     >
-
+      
   Helper text goes here
 
     </div>
-
+     
     <span
-      class="input-atom theme-default is-disabled"
+      class="input-atom theme-default"
     >
       <input
         class="input-atom-control"
         disabled="disabled"
         placeholder="Placeholder text"
       />
-
+       
     </span>
-
+     
     <!---->
   </div>
 </div>
@@ -1465,20 +1469,22 @@ exports[`Storyshots VInput/desktop enabled 1`] = `
   >
     <label
       class="label-atom theme-default"
+      placeholder="Placeholder text"
     >
-
+      
   Label
 
     </label>
-
+     
     <div
       class="description-atom theme-default"
+      placeholder="Placeholder text"
     >
-
+      
   Helper text goes here
 
     </div>
-
+     
     <span
       class="input-atom theme-default"
     >
@@ -1486,14 +1492,14 @@ exports[`Storyshots VInput/desktop enabled 1`] = `
         class="input-atom-control"
         placeholder="Placeholder text"
       />
-
+       
     </span>
-
+     
     <!---->
   </div>
-
-
-
+  
+        
+      
 </div>
 `;
 
@@ -1505,41 +1511,45 @@ exports[`Storyshots VInput/desktop error 1`] = `
   >
     <label
       class="label-atom theme-default"
+      placeholder="Placeholder text"
     >
-
+      
   Label
 
     </label>
-
+     
     <div
       class="description-atom theme-default"
+      placeholder="Placeholder text"
     >
-
+      
   Helper text goes here
 
     </div>
-
+     
     <span
       class="input-atom theme-default is-error"
     >
       <input
         class="input-atom-control"
+        is-error="true"
         placeholder="Placeholder text"
       />
-
+       
       <i
-        class="icon-atom icon-atom-error theme-default"
+        class="icon-atom theme-default is-error"
+        is-error="true"
       >
-
+        
       !
-
+    
       </i>
     </span>
-
+     
     <div
       class="error-atom theme-default"
     >
-
+      
   Error message here
 
     </div>
@@ -1566,14 +1576,14 @@ exports[`Storyshots VModal/VModalCard both 1`] = `
           >
             [object Object]
           </button>
-
+           
           <button
             class="v-modal-card-close"
           >
             [object Object]
           </button>
         </div>
-
+         
         <header
           class="v-modal-card-header"
         >
@@ -1583,13 +1593,13 @@ exports[`Storyshots VModal/VModalCard both 1`] = `
             Modal title
           </h3>
         </header>
-
+         
         <div
           class="v-modal-card-body"
         >
-
+          
             Modal body
-
+          
         </div>
       </div>
     </div>
@@ -1612,14 +1622,14 @@ exports[`Storyshots VModal/VModalCard closable 1`] = `
           class="v-modal-card-controls"
         >
           <!---->
-
+           
           <button
             class="v-modal-card-close"
           >
             [object Object]
           </button>
         </div>
-
+         
         <header
           class="v-modal-card-header"
         >
@@ -1629,13 +1639,13 @@ exports[`Storyshots VModal/VModalCard closable 1`] = `
             Modal title
           </h3>
         </header>
-
+         
         <div
           class="v-modal-card-body"
         >
-
+          
             Modal body
-
+          
         </div>
       </div>
     </div>
@@ -1658,10 +1668,10 @@ exports[`Storyshots VModal/VModalCard default 1`] = `
           class="v-modal-card-controls"
         >
           <!---->
-
+           
           <!---->
         </div>
-
+         
         <header
           class="v-modal-card-header"
         >
@@ -1671,13 +1681,13 @@ exports[`Storyshots VModal/VModalCard default 1`] = `
             Modal title
           </h3>
         </header>
-
+         
         <div
           class="v-modal-card-body"
         >
-
+          
             Modal body
-
+          
         </div>
       </div>
     </div>
@@ -1704,10 +1714,10 @@ exports[`Storyshots VModal/VModalCard returnable 1`] = `
           >
             [object Object]
           </button>
-
+           
           <!---->
         </div>
-
+         
         <header
           class="v-modal-card-header"
         >
@@ -1717,13 +1727,13 @@ exports[`Storyshots VModal/VModalCard returnable 1`] = `
             Modal title
           </h3>
         </header>
-
+         
         <div
           class="v-modal-card-body"
         >
-
+          
             Modal body
-
+          
         </div>
       </div>
     </div>
@@ -1748,7 +1758,7 @@ exports[`Storyshots VModal/VModalInfoCard both 1`] = `
         >
           Some additional information about Endpass
         </aside>
-
+         
         <div
           back-svg-href="img/icons.svg#icon-arrow-left"
           class="v-modal-card theme-default"
@@ -1762,14 +1772,14 @@ exports[`Storyshots VModal/VModalInfoCard both 1`] = `
             >
               [object Object]
             </button>
-
+             
             <button
               class="v-modal-card-close"
             >
               [object Object]
             </button>
           </div>
-
+           
           <header
             class="v-modal-card-header"
           >
@@ -1779,13 +1789,13 @@ exports[`Storyshots VModal/VModalInfoCard both 1`] = `
               Modal title
             </h3>
           </header>
-
+           
           <div
             class="v-modal-card-body"
           >
-
+              
             Modal body
-
+          
           </div>
         </div>
       </div>
@@ -1811,7 +1821,7 @@ exports[`Storyshots VModal/VModalInfoCard closable 1`] = `
         >
           Some additional information about Endpass
         </aside>
-
+         
         <div
           back-svg-href="img/icons.svg#icon-arrow-left"
           class="v-modal-card theme-default"
@@ -1821,14 +1831,14 @@ exports[`Storyshots VModal/VModalInfoCard closable 1`] = `
             class="v-modal-card-controls"
           >
             <!---->
-
+             
             <button
               class="v-modal-card-close"
             >
               [object Object]
             </button>
           </div>
-
+           
           <header
             class="v-modal-card-header"
           >
@@ -1838,13 +1848,13 @@ exports[`Storyshots VModal/VModalInfoCard closable 1`] = `
               Modal title
             </h3>
           </header>
-
+           
           <div
             class="v-modal-card-body"
           >
-
+              
             Modal body
-
+          
           </div>
         </div>
       </div>
@@ -1870,7 +1880,7 @@ exports[`Storyshots VModal/VModalInfoCard default 1`] = `
         >
           Some additional information about Endpass
         </aside>
-
+         
         <div
           back-svg-href="img/icons.svg#icon-arrow-left"
           class="v-modal-card theme-default"
@@ -1880,10 +1890,10 @@ exports[`Storyshots VModal/VModalInfoCard default 1`] = `
             class="v-modal-card-controls"
           >
             <!---->
-
+             
             <!---->
           </div>
-
+           
           <header
             class="v-modal-card-header"
           >
@@ -1893,13 +1903,13 @@ exports[`Storyshots VModal/VModalInfoCard default 1`] = `
               Modal title
             </h3>
           </header>
-
+           
           <div
             class="v-modal-card-body"
           >
-
+              
             Modal body
-
+          
           </div>
         </div>
       </div>
@@ -1925,7 +1935,7 @@ exports[`Storyshots VModal/VModalInfoCard returnable 1`] = `
         >
           Some additional information about Endpass
         </aside>
-
+         
         <div
           back-svg-href="img/icons.svg#icon-arrow-left"
           class="v-modal-card theme-default"
@@ -1939,10 +1949,10 @@ exports[`Storyshots VModal/VModalInfoCard returnable 1`] = `
             >
               [object Object]
             </button>
-
+             
             <!---->
           </div>
-
+           
           <header
             class="v-modal-card-header"
           >
@@ -1952,17 +1962,279 @@ exports[`Storyshots VModal/VModalInfoCard returnable 1`] = `
               Modal title
             </h3>
           </header>
-
+           
           <div
             class="v-modal-card-body"
           >
-
+              
             Modal body
-
+          
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+`;
+
+exports[`Storyshots VSelect/desktop disabled 1`] = `
+<div>
+  <div
+    class="field-atom v-select theme-default"
+    style="width: 288px;"
+  >
+    <label
+      class="label-atom theme-default"
+      disabled="disabled"
+      placeholder="Placeholder text"
+    >
+      
+  Label
+
+    </label>
+     
+    <div
+      class="description-atom theme-default"
+      disabled="disabled"
+      placeholder="Placeholder text"
+    >
+      
+  Helper text goes here
+
+    </div>
+     
+    <span
+      class="select-atom theme-default"
+    >
+      <select
+        class="select-atom-control"
+        disabled="disabled"
+        placeholder="Placeholder text"
+      >
+        <option
+          value="value"
+        >
+          
+      text option 1
+    
+        </option>
+        <option
+          value="next value"
+        >
+          
+      next option
+    
+        </option>
+      </select>
+       
+    </span>
+     
+    <!---->
+  </div>
+</div>
+`;
+
+exports[`Storyshots VSelect/desktop enabled 1`] = `
+<div>
+  <div
+    class="field-atom v-select theme-default"
+    style="width: 288px;"
+  >
+    <label
+      class="label-atom theme-default"
+      placeholder="Placeholder text"
+    >
+      
+  Label
+
+    </label>
+     
+    <div
+      class="description-atom theme-default"
+      placeholder="Placeholder text"
+    >
+      
+  Helper text goes here
+
+    </div>
+     
+    <span
+      class="select-atom theme-default"
+    >
+      <select
+        class="select-atom-control"
+        placeholder="Placeholder text"
+      >
+        <option
+          value="value"
+        >
+          
+      text option 1
+    
+        </option>
+        <option
+          value="next value"
+        >
+          
+      next option
+    
+        </option>
+      </select>
+       
+    </span>
+     
+    <!---->
+  </div>
+   
+  <p>
+    model: value
+  </p>
+   
+  <p>
+    options: [
+  {
+    "val": "value",
+    "text": "text option 1"
+  },
+  {
+    "val": "next value",
+    "text": "next option"
+  }
+]
+  </p>
+</div>
+`;
+
+exports[`Storyshots VSelect/desktop error 1`] = `
+<div>
+  <div
+    class="field-atom v-select theme-default"
+    style="width: 288px;"
+  >
+    <label
+      class="label-atom theme-default"
+      placeholder="Placeholder text"
+    >
+      
+  Label
+
+    </label>
+     
+    <div
+      class="description-atom theme-default"
+      placeholder="Placeholder text"
+    >
+      
+  Helper text goes here
+
+    </div>
+     
+    <span
+      class="select-atom theme-default is-error"
+    >
+      <select
+        class="select-atom-control"
+        is-error="true"
+        placeholder="Placeholder text"
+      >
+        <option
+          value="value"
+        >
+          
+      text option 1
+    
+        </option>
+        <option
+          value="next value"
+        >
+          
+      next option
+    
+        </option>
+      </select>
+       
+      <i
+        class="icon-atom theme-default is-error"
+        is-error="true"
+      >
+        
+      !
+    
+      </i>
+    </span>
+     
+    <div
+      class="error-atom theme-default"
+    >
+      
+  Error message here
+
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VSelect/desktop flat array 1`] = `
+<div>
+  <div
+    class="field-atom v-select theme-default"
+    style="width: 288px;"
+  >
+    <label
+      class="label-atom theme-default"
+      placeholder="Placeholder text"
+    >
+      
+  Label
+
+    </label>
+     
+    <div
+      class="description-atom theme-default"
+      placeholder="Placeholder text"
+    >
+      
+  Helper text goes here
+
+    </div>
+     
+    <span
+      class="select-atom theme-default"
+    >
+      <select
+        class="select-atom-control"
+        placeholder="Placeholder text"
+      >
+        <option
+          value="option 1"
+        >
+          
+      option 1
+    
+        </option>
+        <option
+          value="option 2"
+        >
+          
+      option 2
+    
+        </option>
+      </select>
+       
+    </span>
+     
+    <!---->
+  </div>
+   
+  <p>
+    model: option 1
+  </p>
+   
+  <p>
+    options: [
+  "option 1",
+  "option 2"
+]
+  </p>
 </div>
 `;

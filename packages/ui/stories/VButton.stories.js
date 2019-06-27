@@ -1,6 +1,6 @@
-import { storiesOf } from '@storybook/vue'; // eslint-disable-line
-import { action } from '@storybook/addon-actions'; // eslint-disable-line
-import VButton from '@/kit/VButton/VButton';
+import { storiesOf } from '@storybook/vue';
+import { action } from '@storybook/addon-actions';
+import VButton from '@/kit/VButton';
 import SvgAtom from '@/atom/svg-atom/svg-atom';
 
 const methods = {

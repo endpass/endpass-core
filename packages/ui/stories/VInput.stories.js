@@ -1,6 +1,6 @@
-import { storiesOf } from '@storybook/vue'; // eslint-disable-line
-import { action } from '@storybook/addon-actions'; // eslint-disable-line
-import VInput from '@/kit/VInput/VInput.vue';
+import { storiesOf } from '@storybook/vue';
+import { action } from '@storybook/addon-actions';
+import VInput from '@/kit/VInput';
 
 const methods = {
   onInput: action('onInput'),

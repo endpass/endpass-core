@@ -1,6 +1,6 @@
-import { storiesOf } from '@storybook/vue'; // eslint-disable-line
-import { action } from '@storybook/addon-actions'; // eslint-disable-line
-import VModal from '@/kit/VModal/VModal';
+import { storiesOf } from '@storybook/vue';
+import { action } from '@storybook/addon-actions';
+import VModal from '@/kit/VModal';
 import VModalCard from '@/kit/VModal/VModalCard';
 import VModalInfoCard from '@/kit/VModal/VModalInfoCard';
 
