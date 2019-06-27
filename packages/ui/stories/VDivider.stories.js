@@ -1,4 +1,4 @@
-import { storiesOf } from '@storybook/vue'; // eslint-disable-line
+import { storiesOf } from '@storybook/vue';
 import VDivider from '@/kit/VDivider';
 
 storiesOf('VDivider/desktop', module)

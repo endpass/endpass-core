@@ -1,6 +1,6 @@
-import { storiesOf } from '@storybook/vue'; // eslint-disable-line
-import { action } from '@storybook/addon-actions'; // eslint-disable-line
-import VCheckbox from '@/kit/VCheckbox/VCheckbox';
+import { storiesOf } from '@storybook/vue';
+import { action } from '@storybook/addon-actions';
+import VCheckbox from '@/kit/VCheckbox';
 
 const methods = {
   onInput: action('onInput'),

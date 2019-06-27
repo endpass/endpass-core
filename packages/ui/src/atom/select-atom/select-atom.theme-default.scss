@@ -1,0 +1,59 @@
+.select-atom.theme-default {
+  background-color: $grey-1;
+  border: 1px solid $grey-1;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: background-color .3s, border-color .3s;
+  border-radius: 4px;
+  position: relative;
+}
+
+.select-atom.theme-default .select-atom-control {
+  color: $grey-8;
+  font-size: 14px;
+  letter-spacing: -0.175px;
+  padding: 0 16px;
+  height: 38px;
+  border: 0;
+  background: none;
+  outline: 0;
+  font-family: $primary-font;
+  width: 100%;
+  display: flex;
+}
+
+.select-atom.theme-default .select-atom-control::placeholder {
+  color: $grey-5;
+  transition: opacity .3s, color .3s;
+}
+
+.select-atom.theme-default.is-error {
+  border-color: $error;
+}
+
+.select-atom.theme-default:hover {
+  border-color: $grey-2;
+
+  .select-atom-control::placeholder {
+    color: $grey-6;
+  }
+}
+
+.select-atom.theme-default:focus {
+  border-color: $primary-7;
+  background-color: $white;
+
+  .select-atom-control::placeholder {
+    opacity: 0;
+  }
+}
+
+.select-atom.theme-default[disabled=disabled] {
+  border-color: $grey-1;
+
+  .select-atom-control::placeholder {
+    color: $grey-4;
+  }
+}

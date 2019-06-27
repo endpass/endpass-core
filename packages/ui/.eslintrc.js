@@ -116,5 +116,11 @@ module.exports = {
         'global-require': 'off',
       },
     },
+    {
+      files: ['stories/*.stories.js'],
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+      },
+    },
   ],
 };
