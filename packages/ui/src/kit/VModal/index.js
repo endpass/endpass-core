@@ -1,1 +1,1 @@
-export { default } from './VModal';
+export { default } from './VModal.vue';

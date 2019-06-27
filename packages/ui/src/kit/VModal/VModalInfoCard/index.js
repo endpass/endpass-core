@@ -1,1 +1,1 @@
-export { default } from './VModalInfoCard';
+export { default } from './VModalInfoCard.vue';
