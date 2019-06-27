@@ -9,6 +9,7 @@
   "module": "endpass-ui.esm.js",
   "repository": "https://github.com/endpass/endpass-core/tree/master/packages/ui",
   "scripts": {
+    "dev": "yarn storybook",
     "update": "yarn build && npm publish ./dist",
     "build": "yarn clear && yarn build:dist && node ./copy",
     "build:dist": "rollup -c --environment BUILD:production",

@@ -27,3 +27,32 @@
   color: $grey-5;
   transition: opacity .3s, color .3s;
 }
+
+.input-atom.theme-default.is-error {
+  border-color: $error;
+}
+
+.input-atom.theme-default:hover {
+  border-color: $grey-2;
+
+  .input-atom-control::placeholder {
+    color: $grey-6;
+  }
+}
+
+.input-atom.theme-default:focus {
+  border-color: $primary-7;
+  background-color: $white;
+
+  .input-atom-control::placeholder {
+    opacity: 0;
+  }
+}
+
+.input-atom.theme-default[disabled=disabled] {
+  border-color: $grey-1;
+
+  .input-atom-control::placeholder {
+    color: $grey-4;
+  }
+}

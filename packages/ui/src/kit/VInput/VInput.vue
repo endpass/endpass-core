@@ -2,31 +2,29 @@
   <field-atom>
     <label-atom
       v-if="label"
-      :class="{ 'is-muted': $attrs.disabled }"
+      v-bind="$attrs"
       :label="label"
     />
     <description-atom
       v-if="description"
-      :class="{ 'is-muted': $attrs.disabled }"
+      v-bind="$attrs"
       :description="description"
     />
     <input-atom
       :value="value"
-      :class="inputAtomCssClass"
+      :is-error="isError"
       v-bind="$attrs"
       v-on="listeners"
-      @focus="isFocus = true"
-      @blur="isFocus = false"
     >
       <icon-atom
-        v-if="error"
-        class="icon-atom-error"
+        v-if="isError"
+        :is-error="isError"
       >
         !
       </icon-atom>
     </input-atom>
     <error-atom
-      v-if="error"
+      v-if="isError"
       :error="error"
     />
   </field-atom>
@@ -74,11 +72,8 @@ export default {
         },
       });
     },
-    inputAtomCssClass() {
-      return {
-        'is-focus': this.isFocus,
-        'is-error': this.error,
-      };
+    isError() {
+      return !!this.error;
     },
   },
   components: {

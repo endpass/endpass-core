@@ -33,9 +33,10 @@ export default {
         },
       });
     },
+
     inputAtomCssClass() {
       return Object.assign(this.themeCssClass, {
-        'is-disabled': this.$attrs.disabled,
+        'is-error': this.$attrs['is-error'],
       });
     },
   },

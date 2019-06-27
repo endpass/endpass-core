@@ -5,3 +5,7 @@
   margin-bottom: 8px;
   color: $black;
 }
+
+.label-atom.theme-default[disabled=disabled] {
+  color: $grey-4;
+}
