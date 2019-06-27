@@ -1,1 +1,1 @@
-export { default } from './VSelect';
+export { default } from './VSelect.vue';

@@ -1,1 +1,1 @@
-export { default } from './VContentSwitcher';
+export { default } from './VContentSwitcher.vue';
