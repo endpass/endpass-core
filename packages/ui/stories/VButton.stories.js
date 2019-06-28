@@ -17,7 +17,7 @@ storiesOf('VButton/desktop', module)
     components: { VButton },
     template: `
       <theme-provider>
-        <table>
+        <table width="100%">
           <thead>
             <tr>
               <th></th>
@@ -55,7 +55,7 @@ storiesOf('VButton/desktop', module)
     components: { SvgAtom, VButton },
     template: `
       <theme-provider>
-        <table>
+        <table width="100%">
           <thead>
             <tr>
               <th></th>
@@ -143,7 +143,7 @@ storiesOf('VButton/desktop', module)
     components: { VButton },
     template: `
       <theme-provider>
-        <table>
+        <table width="100%">
           <thead>
             <tr>
               <th></th>
@@ -172,7 +172,7 @@ storiesOf('VButton/desktop', module)
     components: { SvgAtom, VButton },
     template: `
       <theme-provider>
-        <table>
+        <table width="100%">
           <thead>
             <tr>
               <th></th>
@@ -221,7 +221,7 @@ storiesOf('VButton/desktop', module)
     components: { VButton },
     template: `
       <theme-provider>
-        <table>
+        <table width="100%">
           <thead>
             <tr>
               <th></th>

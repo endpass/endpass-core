@@ -2,7 +2,9 @@
 
 exports[`Storyshots VButton/desktop disabled 1`] = `
 <div>
-  <table>
+  <table
+    width="100%"
+  >
     <thead>
       <tr>
         <th />
@@ -222,7 +224,9 @@ exports[`Storyshots VButton/desktop disabled 1`] = `
 
 exports[`Storyshots VButton/desktop enabled 1`] = `
 <div>
-  <table>
+  <table
+    width="100%"
+  >
     <thead>
       <tr>
         <th />
@@ -432,7 +436,9 @@ exports[`Storyshots VButton/desktop enabled 1`] = `
 
 exports[`Storyshots VButton/desktop icon 1`] = `
 <div>
-  <table>
+  <table
+    width="100%"
+  >
     <thead>
       <tr>
         <th />
@@ -752,7 +758,9 @@ exports[`Storyshots VButton/desktop icon 1`] = `
 
 exports[`Storyshots VButton/desktop social 1`] = `
 <div>
-  <table>
+  <table
+    width="100%"
+  >
     <thead>
       <tr>
         <th />
@@ -902,7 +910,9 @@ exports[`Storyshots VButton/desktop social 1`] = `
 
 exports[`Storyshots VButton/desktop state 1`] = `
 <div>
-  <table>
+  <table
+    width="100%"
+  >
     <thead>
       <tr>
         <th />
