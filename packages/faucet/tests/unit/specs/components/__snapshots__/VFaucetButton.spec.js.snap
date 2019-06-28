@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VFaucetButton should render props 1`] = `
+<div>
+  <div data-test="action"></div>
+</div>
+`;

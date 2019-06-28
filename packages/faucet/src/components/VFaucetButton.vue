@@ -1,15 +1,10 @@
 <template>
-  <button
-    v-bind="$attrs"
-    :disabled="disabled"
-    :class="[...classes, { 'is-loading': loading }]"
-    type="button"
-    class="button"
-    @click="sendData()"
-    v-on="$listeners"
-  >
-    <slot />
-  </button>
+  <div>
+    <slot
+      :sendRequest="sendRequest"
+      :isLoading="isLoading"
+    />
+  </div>
 </template>
 
 <script>
@@ -19,17 +14,9 @@ export default {
   name: 'VFaucetButton',
   inheritAttrs: false,
   props: {
-    className: {
-      type: String,
-      default: '',
-    },
     faucetApi: {
       type: String,
       default: 'https://faucet.ropsten.be/donate',
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
     },
     address: {
       type: String,
@@ -39,17 +26,12 @@ export default {
   },
   data() {
     return {
-      loading: false,
+      isLoading: false,
     };
   },
-  computed: {
-    classes() {
-      return this.className.split(' ');
-    },
-  },
   methods: {
-    async sendData() {
-      this.loading = true;
+    async sendRequest() {
+      this.isLoading = true;
       try {
         this.$emit('before-send');
         const { data } = await axios({
@@ -60,7 +42,7 @@ export default {
       } catch (error) {
         this.$emit('donate-error', error);
       } finally {
-        this.loading = false;
+        this.isLoading = false;
       }
     },
   },
