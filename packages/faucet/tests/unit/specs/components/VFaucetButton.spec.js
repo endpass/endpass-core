@@ -4,11 +4,6 @@ import { shallowMount } from '@vue/test-utils';
 
 import VFaucetButton from '@/components/VFaucetButton';
 
-const attrs = {
-  id: 'some-id',
-  name: 'name',
-};
-
 const listeners = {
   click: jest.fn(),
   'before-send': jest.fn(),
@@ -22,48 +17,30 @@ describe('VFaucetButton', () => {
 
   beforeEach(() => {
     axiosMock = new MockAdapter(axios);
-
     wrapper = shallowMount(VFaucetButton, {
-      attrs,
+      scopedSlots: {
+        default:
+          '<div data-test="action" @click="props.sendRequest" :disabled="props.isLoading"></div>',
+      },
       listeners,
       propsData: {
-        address: 'initial-address',
+        faucetApi: 'test/api',
+        address: 'testAddr',
       },
     });
   });
 
   it('should render props', () => {
-    const button = wrapper.find('button');
-
-    expect(button.classes()).not.toContain('is-loading');
-    expect(wrapper.contains('a.some-class.some-class-1')).toBeFalsy();
-
-    wrapper.setProps({
-      className: 'some-class some-class-1',
-    });
-
-    expect(wrapper.attributes().name).toBe('name');
-    expect(button.attributes().id).toBe('some-id');
-    expect(button.attributes().type).toBe('button');
-    expect(button.classes()).not.toContain('is-loading');
-    expect(wrapper.contains('button.some-class.some-class-1')).toBeTruthy();
+    expect(wrapper.html()).toMatchSnapshot();
   });
 
-  describe('requests', () => {
+  describe('events', () => {
     const url = 'test/api/testAddr';
 
-    beforeEach(() => {
-      wrapper.setProps({
-        faucetApi: 'test/api',
-        address: 'testAddr',
-      });
-    });
-
     it('should send donate request by api prop', async () => {
-      expect.assertions(5);
+      expect.assertions(8);
 
-      const button = wrapper.find('button');
-
+      const button = wrapper.find('[data-test=action]');
       axiosMock.onGet(url).reply(config => {
         expect(config.method).toBe('get');
         expect(config.url).toBe(url);
@@ -72,21 +49,25 @@ describe('VFaucetButton', () => {
       });
 
       expect(wrapper.emitted()['before-send']).toBeUndefined();
+      expect(button.attributes().disabled).toBeUndefined();
 
       button.trigger('click');
 
-      await flushPromises();
-      expect(wrapper.emitted()['before-send']).not.toBeUndefined();
+      expect(button.attributes().disabled).toBeTruthy();
 
+      await global.flushPromises();
+
+      expect(wrapper.emitted()['before-send']).not.toBeUndefined();
       expect(wrapper.emitted().donate[0][0]).toMatchObject({
         passData: true,
       });
+      expect(button.attributes().disabled).toBeUndefined();
     });
 
     it('should emit donate-error event', async () => {
-      expect.assertions(3);
+      expect.assertions(6);
 
-      const button = wrapper.find('button');
+      const button = wrapper.find('[data-test=action]');
 
       axiosMock.onGet(url).reply(config => {
         expect(config.method).toBe('get');
@@ -95,40 +76,17 @@ describe('VFaucetButton', () => {
         return [404, { passData: true }];
       });
 
+      expect(button.attributes().disabled).toBeUndefined();
+
       button.trigger('click');
 
-      await flushPromises();
+      expect(button.attributes().disabled).toBeTruthy();
+
+      await global.flushPromises();
 
       const err = new Error('Request failed with status code 404');
       expect(wrapper.emitted()['donate-error'][0][0]).toMatchObject(err);
+      expect(button.attributes().disabled).toBeUndefined();
     });
-  });
-
-  it('should emit event if not disabled', async () => {
-    expect.assertions(5);
-
-    listeners.click.fns = jest.fn();
-    wrapper.setProps({
-      faucetApi: 'test/api',
-    });
-
-    const button = wrapper.find('button');
-
-    expect(button.attributes().disabled).toBeFalsy();
-
-    button.trigger('click');
-
-    expect(listeners.click.fns).toHaveBeenCalledTimes(1);
-
-    wrapper.setProps({ disabled: true });
-
-    expect(button.attributes().disabled).toBeTruthy();
-
-    wrapper.setProps({ disabled: false });
-    expect(button.attributes().disabled).toBeFalsy();
-
-    button.trigger('click');
-
-    expect(listeners.click.fns).toHaveBeenCalledTimes(2);
   });
 });
