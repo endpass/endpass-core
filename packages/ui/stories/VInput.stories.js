@@ -30,6 +30,14 @@ storiesOf('VInput/desktop', module)
           :label="label"
           :description="description"
         />
+        <v-input
+          style="width: 288px;"
+          v-model="model"
+          placeholder="Placeholder text"
+          @input="onInput"
+          :label="label"
+          :description="description"
+        />
         {{ model }}
       </theme-provider>
     `,
