@@ -8,6 +8,7 @@
 .v-content-switcher.theme-default .v-content-switcher-item {
   position: relative;
   display: flex;
+  width: 100%;
 }
 
 .v-content-switcher.theme-default .v-content-switcher-item:not(:first-child):before {
@@ -47,12 +48,13 @@
 
 .v-content-switcher.theme-default .v-content-switcher-label {
   display: flex;
+  width: 100%;
   align-items: center;
+  justify-content: center;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: -0.2px;
-  text-align: center;
-  padding: 11px 25px;
+  padding: 11px 5px;
   border: 1px solid $grey-1;
   background-color: $grey-1;
   user-select: none;
