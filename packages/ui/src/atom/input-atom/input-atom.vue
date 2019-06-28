@@ -2,6 +2,7 @@
   <span
     class="input-atom"
     :class="inputAtomCssClass"
+    :disabled="$attrs.disabled"
   >
     <input
       class="input-atom-control"

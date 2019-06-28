@@ -1447,6 +1447,7 @@ exports[`Storyshots VInput/desktop disabled 1`] = `
      
     <span
       class="input-atom theme-default"
+      disabled="disabled"
     >
       <input
         class="input-atom-control"
@@ -1463,6 +1464,41 @@ exports[`Storyshots VInput/desktop disabled 1`] = `
 
 exports[`Storyshots VInput/desktop enabled 1`] = `
 <div>
+  <div
+    class="field-atom theme-default"
+    style="width: 288px;"
+  >
+    <label
+      class="label-atom theme-default"
+      placeholder="Placeholder text"
+    >
+      
+  Label
+
+    </label>
+     
+    <div
+      class="description-atom theme-default"
+      placeholder="Placeholder text"
+    >
+      
+  Helper text goes here
+
+    </div>
+     
+    <span
+      class="input-atom theme-default"
+    >
+      <input
+        class="input-atom-control"
+        placeholder="Placeholder text"
+      />
+       
+    </span>
+     
+    <!---->
+  </div>
+   
   <div
     class="field-atom theme-default"
     style="width: 288px;"

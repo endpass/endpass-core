@@ -28,9 +28,6 @@
   transition: opacity .3s, color .3s;
 }
 
-.input-atom.theme-default.is-error {
-  border-color: $error;
-}
 
 .input-atom.theme-default:hover {
   border-color: $grey-2;
@@ -40,7 +37,11 @@
   }
 }
 
-.input-atom.theme-default:focus {
+.input-atom.theme-default.is-error {
+  border-color: $error;
+}
+
+.input-atom.theme-default:focus-within {
   border-color: $primary-7;
   background-color: $white;
 
