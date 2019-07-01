@@ -1,7 +1,7 @@
 .v-modal-card.theme-default {
   width: 100%;
   max-width: 442px;
-  padding: 24px 32px 24px;
+  padding: 22px 32px;
   background-color: $white;
   box-sizing: border-box;
 }
@@ -13,7 +13,8 @@
   letter-spacing: -0.25px;
   color: $black;
   font-weight: bold;
-  margin: 0 0 28px;
+  margin: 2px 0 27px;
+  padding: 0 5px;
 }
 
 .v-modal-card.theme-default .v-modal-card-controls {

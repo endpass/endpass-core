@@ -2,13 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px auto;
+  margin: 15px auto;
 }
 
 .v-divider.theme-default .v-divider-before,
 .v-divider.theme-default .v-divider-after {
   border: 0;
-  margin: 14px 0;
+  margin: 9px 0 10px;
   height: 1px;
   width: 100%;
   background-color: $grey-2;
@@ -17,7 +17,7 @@
 .v-divider.theme-default .v-divider-text {
   width: 100%;
   text-align: center;
-  margin: 5px 10px;
+  margin: 0 10px;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: -0.175px;

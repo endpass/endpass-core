@@ -37,10 +37,6 @@
   }
 }
 
-.input-atom.theme-default.is-error {
-  border-color: $error;
-}
-
 .input-atom.theme-default:focus-within {
   border-color: $primary-7;
   background-color: $white;
@@ -48,6 +44,10 @@
   .input-atom-control::placeholder {
     opacity: 0;
   }
+}
+
+.input-atom.theme-default.is-error {
+  border-color: $error;
 }
 
 .input-atom.theme-default[disabled=disabled] {
