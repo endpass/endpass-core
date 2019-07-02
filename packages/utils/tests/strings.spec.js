@@ -1,4 +1,4 @@
-import { getShortStringWithEllipsis, matchString } from '@/strings';
+import { getShortStringWithEllipsis, matchString, fromHexToUtf8 } from '@/strings';
 
 describe('getShortStringWithEllipsis', () => {
   it('should returns first and last 4 symbols divided by ellipsis by default', () => {
@@ -20,5 +20,14 @@ describe('matchString', () => {
     expect(matchString('hello world', 'WORLD')).toBe(true);
     expect(matchString('HELLO world', 'goodbye')).toBe(false);
     expect(matchString('HELLO world', 'ell')).toBe(true);
+  });
+});
+
+describe('fromHexToUtf8', () => {
+  it('should correctly transform hex strings to utf8', () => {
+    expect(fromHexToUtf8('0x68656c6c6f')).toBe('hello');
+    expect(fromHexToUtf8('776f726c64')).toBe('world');
+    expect(fromHexToUtf8('0x68656c6c6f20776f726c64')).toBe('hello world');
+    expect(fromHexToUtf8('776f726c642068656c6c6f')).toBe('world hello');
   });
 });
