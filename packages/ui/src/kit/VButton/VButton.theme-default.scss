@@ -55,6 +55,7 @@
 
 .v-button.theme-default.skin-secondary {
   background: $grey-9;
+  color: $white;
 }
 
 .v-button.theme-default.skin-secondary:hover {
@@ -72,6 +73,7 @@
 
 .v-button.theme-default.skin-tertiary {
   background: $white;
+  color: $primary-7;
 }
 
 .v-button.theme-default.skin-tertiary:focus {
@@ -108,6 +110,7 @@
 .v-button.theme-default.skin-quaternary {
   box-shadow: none;
   border: 1px solid $primary-7;
+  color: $primary-7;
 }
 
 .v-button.theme-default.skin-quaternary:hover {
@@ -128,6 +131,7 @@
   box-shadow: none;
   box-sizing: border-box;
   border: 1px solid transparent;
+  color: $primary-7;
 }
 
 .v-button.theme-default.skin-ghost:hover {
