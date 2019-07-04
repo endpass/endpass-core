@@ -1,6 +1,5 @@
-import web3 from 'fixtures/web3Instance';
+/* eslint-disable no-restricted-properties */
 import { Transaction, TransactionFactory } from '@/index';
-import { TRANSACTION_STATUS } from '@/constants';
 import { BigNumber } from 'bignumber.js';
 // import web3 from 'web3';
 import { toChecksumAddress } from 'web3-utils';
@@ -36,7 +35,7 @@ const cryptoDataTokenResponse = {
   timestamp: 1525898092,
   to: '0x7c59542b20002ed255598172cab48b86d865dfbb',
   token: {
-    decimals: 8
+    decimals: 8,
   },
   value: '99160000000000000',
 };
@@ -103,41 +102,79 @@ describe('Transaction Class', () => {
       it('should return true for default fields checking', () => {
         const res = Transaction.isEqual(
           { networkId: 1, hash: 2 },
-          { networkId: 1, hash: 2 });
+          { networkId: 1, hash: 2 },
+        );
         expect(res).toBe(true);
       });
 
       it('should return false for default fields checking', () => {
-        expect(Transaction.isEqual(
-          { networkId: 1, hash: 3 },
-          { networkId: 1, hash: 2 }),
+        expect(
+          Transaction.isEqual(
+            { networkId: 1, hash: 3 },
+            { networkId: 1, hash: 2 },
+          ),
         ).toBe(false);
 
-        expect(Transaction.isEqual(
-          { networkId: 2, hash: 2 },
-          { networkId: 1, hash: 2 }),
+        expect(
+          Transaction.isEqual(
+            { networkId: 2, hash: 2 },
+            { networkId: 1, hash: 2 },
+          ),
         ).toBe(false);
       });
 
       it('should return true for defined fields', () => {
-        expect(Transaction.isEqual(
-          { networkId: 2, hash: 3, block: 10, part: 12 },
-          { networkId: 1, hash: 2, block: 10, part: 12 },
-          ['block', 'part'],
+        expect(
+          Transaction.isEqual(
+            {
+              networkId: 2,
+              hash: 3,
+              block: 10,
+              part: 12,
+            },
+            {
+              networkId: 1,
+              hash: 2,
+              block: 10,
+              part: 12,
+            },
+            ['block', 'part'],
           ),
         ).toBe(true);
 
-        expect(Transaction.isEqual(
-          { networkId: 1, hash: 2, block: 10, part: 12 },
-          { networkId: 1, hash: 2, block: 10, part: 11 },
-          ['block', 'part'],
+        expect(
+          Transaction.isEqual(
+            {
+              networkId: 1,
+              hash: 2,
+              block: 10,
+              part: 12,
+            },
+            {
+              networkId: 1,
+              hash: 2,
+              block: 10,
+              part: 11,
+            },
+            ['block', 'part'],
           ),
         ).toBe(false);
 
-        expect(Transaction.isEqual(
-          { networkId: 1, hash: 2, block: 11, part: 12 },
-          { networkId: 1, hash: 2, block: 10, part: 12 },
-          ['block', 'part'],
+        expect(
+          Transaction.isEqual(
+            {
+              networkId: 1,
+              hash: 2,
+              block: 11,
+              part: 12,
+            },
+            {
+              networkId: 1,
+              hash: 2,
+              block: 10,
+              part: 12,
+            },
+            ['block', 'part'],
           ),
         ).toBe(false);
       });
@@ -216,7 +253,7 @@ describe('Transaction Class', () => {
       it('', () => {
         const cost = Transaction.getFullCost({
           ...transaction,
-          token: {symbol: 'ETH'},
+          token: { symbol: 'ETH' },
           value: '2',
         }).toFixed();
 
@@ -264,10 +301,14 @@ describe('Transaction Class', () => {
     });
 
     it('creates transaction with token history format', () => {
-      const tx = TransactionFactory.fromCryptoDataHistory(cryptoDataTokenResponse);
+      const tx = TransactionFactory.fromCryptoDataHistory(
+        cryptoDataTokenResponse,
+      );
 
       const _valueBN = new BigNumber(cryptoDataTokenResponse.value);
-      const valueBN = _valueBN.div(new BigNumber('10').pow(cryptoDataTokenResponse.token.decimals));
+      const valueBN = _valueBN.div(
+        new BigNumber('10').pow(cryptoDataTokenResponse.token.decimals),
+      );
       expect(tx.value).toBe(valueBN.toString());
       expect(tx.state).toBe('success');
     });
@@ -290,6 +331,34 @@ describe('Transaction Class', () => {
         state: 'success',
       });
       expect(trx.hash).not.toBeNull();
+    });
+  });
+
+  describe('getApiObject', () => {
+    it('should transform all numberic values to hex format', () => {
+      const trx = {
+        value: '0.01',
+        token: undefined,
+        from: metamaskTransaction.from,
+        to: metamaskTransaction.to,
+        networkId: 3,
+        gasPrice: '20',
+        gasLimit: '22000',
+        nonce: '13',
+        data: '0x',
+        hash: metamaskTransaction.hash,
+        state: 'success',
+      };
+
+      expect(Transaction.getApiObject(trx)).toMatchObject({
+        data: '0x',
+        from: '0x56232EdcC87984206eEAB89b4C204cE02fdD7CC7',
+        gasLimit: '0x55f0',
+        gasPrice: '0x4a817c800',
+        nonce: '0xd',
+        to: '0xaEF74e25181b0879d293396Dd9949Cf25b339407',
+        value: '0x2386f26fc10000',
+      });
     });
   });
 });
