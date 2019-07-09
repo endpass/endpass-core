@@ -13,13 +13,14 @@
   letter-spacing: -0.25px;
   color: $black;
   font-weight: bold;
-  margin: 2px 0 27px;
+  margin: 0 0 27px;
   padding: 0 5px;
 }
 
 .v-modal-card.theme-default .v-modal-card-controls {
   display: flex;
   min-height: 17px;
+  padding-bottom: 2px;
 }
 
 .v-modal-card.theme-default .v-modal-card-back,
