@@ -129,7 +129,7 @@ export default class Transaction {
     const { data, token } = transaction;
 
     if (!token) {
-      return data;
+      return data || '0x';
     }
 
     const validTo = Transaction.getValidTo(transaction);
