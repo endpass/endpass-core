@@ -1,10 +1,15 @@
 <template>
   <svg
+    :class="svgAtomCssClass"
+    :width="width"
+    :height="height"
     class="svg-atom"
-    :class="themeCssClass"
-    xmlns="http://www.w3.org/2000/svg"
   >
-    <use :xlink:href="href" />
+    <use
+      x="0"
+      y="0"
+      :xlink:href="iconId"
+    />
   </svg>
 </template>
 
@@ -13,12 +18,34 @@ import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
   name: 'SvgAtom',
+
   props: {
-    href: {
+    width: {
+      type: String,
+      default: '100%',
+    },
+
+    height: {
+      type: String,
+      default: '100%',
+    },
+
+    name: {
       type: String,
       required: true,
     },
   },
+
+  computed: {
+    svgAtomCssClass() {
+      return Object.assign(this.themeCssClass, {});
+    },
+
+    iconId() {
+      return `#endpass-ui-icon-${this.name}`;
+    },
+  },
+
   mixins: [ThemeMixin],
 };
 </script>

@@ -1,9 +1,9 @@
 ---
-to: src/kit/<%= name %>/<%=name%>.vue
+to: src/atom/<%= name %>/<%=name%>.vue
 ---
 <template>
   <div :class="<%= h.changeCase.camelCase(name) %>CssClass">
-    Component <%= name %> template
+    Atom <%= name %> template
   </div>
 </template>
 
@@ -11,7 +11,7 @@ to: src/kit/<%= name %>/<%=name%>.vue
 import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
-  name: '<%= name %>',
+  name: '<%= h.changeCase.pascalCase(name) %>',
 
   computed: {
     <%= h.changeCase.camelCase(name) %>CssClass() {

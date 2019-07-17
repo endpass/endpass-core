@@ -1,0 +1,31 @@
+.storybook-table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.storybook-table td {
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  border: 1px solid #dadada;
+}
+
+.storybook-table td span {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.storybook-table td div {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.storybook-table.icons td {
+  position: relative;
+  color: #000;
+}
