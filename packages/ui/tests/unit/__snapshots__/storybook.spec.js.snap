@@ -2,6 +2,12 @@
 
 exports[`Storyshots VButton/desktop disabled 1`] = `
 <div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
   <table
     width="100%"
   >
@@ -224,6 +230,12 @@ exports[`Storyshots VButton/desktop disabled 1`] = `
 
 exports[`Storyshots VButton/desktop enabled 1`] = `
 <div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
   <table
     width="100%"
   >
@@ -436,6 +448,12 @@ exports[`Storyshots VButton/desktop enabled 1`] = `
 
 exports[`Storyshots VButton/desktop icon 1`] = `
 <div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
   <table
     width="100%"
   >
@@ -490,10 +508,13 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             >
               <svg
                 class="svg-atom theme-default"
-                xmlns="http://www.w3.org/2000/svg"
+                height="100%"
+                width="100%"
               >
                 <use
-                  xlink:href="img/icons.svg#icon-action"
+                  x="0"
+                  xlink:href="#endpass-ui-icon-action"
+                  y="0"
                 />
               </svg>
             </i>
@@ -517,10 +538,13 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             >
               <svg
                 class="svg-atom theme-default"
-                xmlns="http://www.w3.org/2000/svg"
+                height="100%"
+                width="100%"
               >
                 <use
-                  xlink:href="img/icons.svg#icon-action"
+                  x="0"
+                  xlink:href="#endpass-ui-icon-action"
+                  y="0"
                 />
               </svg>
             </i>
@@ -544,10 +568,13 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             >
               <svg
                 class="svg-atom theme-default"
-                xmlns="http://www.w3.org/2000/svg"
+                height="100%"
+                width="100%"
               >
                 <use
-                  xlink:href="img/icons.svg#icon-action"
+                  x="0"
+                  xlink:href="#endpass-ui-icon-action"
+                  y="0"
                 />
               </svg>
             </i>
@@ -571,10 +598,13 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             >
               <svg
                 class="svg-atom theme-default"
-                xmlns="http://www.w3.org/2000/svg"
+                height="100%"
+                width="100%"
               >
                 <use
-                  xlink:href="img/icons.svg#icon-action"
+                  x="0"
+                  xlink:href="#endpass-ui-icon-action"
+                  y="0"
                 />
               </svg>
             </i>
@@ -598,10 +628,13 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             >
               <svg
                 class="svg-atom theme-default"
-                xmlns="http://www.w3.org/2000/svg"
+                height="100%"
+                width="100%"
               >
                 <use
-                  xlink:href="img/icons.svg#icon-action"
+                  x="0"
+                  xlink:href="#endpass-ui-icon-action"
+                  y="0"
                 />
               </svg>
             </i>
@@ -633,10 +666,13 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             >
               <svg
                 class="svg-atom theme-default"
-                xmlns="http://www.w3.org/2000/svg"
+                height="100%"
+                width="100%"
               >
                 <use
-                  xlink:href="img/icons.svg#icon-action"
+                  x="0"
+                  xlink:href="#endpass-ui-icon-action"
+                  y="0"
                 />
               </svg>
             </i>
@@ -660,10 +696,13 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             >
               <svg
                 class="svg-atom theme-default"
-                xmlns="http://www.w3.org/2000/svg"
+                height="100%"
+                width="100%"
               >
                 <use
-                  xlink:href="img/icons.svg#icon-action"
+                  x="0"
+                  xlink:href="#endpass-ui-icon-action"
+                  y="0"
                 />
               </svg>
             </i>
@@ -687,10 +726,13 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             >
               <svg
                 class="svg-atom theme-default"
-                xmlns="http://www.w3.org/2000/svg"
+                height="100%"
+                width="100%"
               >
                 <use
-                  xlink:href="img/icons.svg#icon-action"
+                  x="0"
+                  xlink:href="#endpass-ui-icon-action"
+                  y="0"
                 />
               </svg>
             </i>
@@ -714,10 +756,13 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             >
               <svg
                 class="svg-atom theme-default"
-                xmlns="http://www.w3.org/2000/svg"
+                height="100%"
+                width="100%"
               >
                 <use
-                  xlink:href="img/icons.svg#icon-action"
+                  x="0"
+                  xlink:href="#endpass-ui-icon-action"
+                  y="0"
                 />
               </svg>
             </i>
@@ -741,10 +786,13 @@ exports[`Storyshots VButton/desktop icon 1`] = `
             >
               <svg
                 class="svg-atom theme-default"
-                xmlns="http://www.w3.org/2000/svg"
+                height="100%"
+                width="100%"
               >
                 <use
-                  xlink:href="img/icons.svg#icon-action"
+                  x="0"
+                  xlink:href="#endpass-ui-icon-action"
+                  y="0"
                 />
               </svg>
             </i>
@@ -758,6 +806,12 @@ exports[`Storyshots VButton/desktop icon 1`] = `
 
 exports[`Storyshots VButton/desktop social 1`] = `
 <div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
   <table
     width="100%"
   >
@@ -792,11 +846,14 @@ exports[`Storyshots VButton/desktop social 1`] = `
             >
               <svg
                 class="svg-atom theme-default"
+                height="100%"
                 style="margin-right: 5px;"
-                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
               >
                 <use
-                  xlink:href="img/icons.svg#icon-google"
+                  x="0"
+                  xlink:href="#endpass-ui-icon-google"
+                  y="0"
                 />
               </svg>
             </i>
@@ -820,11 +877,14 @@ exports[`Storyshots VButton/desktop social 1`] = `
             >
               <svg
                 class="svg-atom theme-default"
+                height="100%"
                 style="margin-right: 5px;"
-                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
               >
                 <use
-                  xlink:href="img/icons.svg#icon-github"
+                  x="0"
+                  xlink:href="#endpass-ui-icon-github"
+                  y="0"
                 />
               </svg>
             </i>
@@ -856,11 +916,14 @@ exports[`Storyshots VButton/desktop social 1`] = `
             >
               <svg
                 class="svg-atom theme-default"
+                height="100%"
                 style="margin-right: 5px;"
-                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
               >
                 <use
-                  xlink:href="img/icons.svg#icon-google"
+                  x="0"
+                  xlink:href="#endpass-ui-icon-google"
+                  y="0"
                 />
               </svg>
             </i>
@@ -884,11 +947,14 @@ exports[`Storyshots VButton/desktop social 1`] = `
             >
               <svg
                 class="svg-atom theme-default"
+                height="100%"
                 style="margin-right: 5px;"
-                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
               >
                 <use
-                  xlink:href="img/icons.svg#icon-github"
+                  x="0"
+                  xlink:href="#endpass-ui-icon-github"
+                  y="0"
                 />
               </svg>
             </i>
@@ -910,6 +976,12 @@ exports[`Storyshots VButton/desktop social 1`] = `
 
 exports[`Storyshots VButton/desktop state 1`] = `
 <div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
   <table
     width="100%"
   >
@@ -1014,6 +1086,12 @@ exports[`Storyshots VButton/desktop state 1`] = `
 
 exports[`Storyshots VCheckbox/desktop array 1`] = `
 <div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
   <label
     class="v-checkbox theme-default"
   >
@@ -1048,6 +1126,12 @@ exports[`Storyshots VCheckbox/desktop array 1`] = `
 
 exports[`Storyshots VCheckbox/desktop default state 1`] = `
 <div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
   <label
     class="v-checkbox theme-default"
   >
@@ -1077,6 +1161,12 @@ exports[`Storyshots VCheckbox/desktop default state 1`] = `
 
 exports[`Storyshots VCheckbox/desktop default state false 1`] = `
 <div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
   <label
     class="v-checkbox theme-default"
   >
@@ -1106,6 +1196,12 @@ exports[`Storyshots VCheckbox/desktop default state false 1`] = `
 
 exports[`Storyshots VCheckbox/desktop default state true 1`] = `
 <div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
   <label
     class="v-checkbox theme-default is-checked"
   >
@@ -1135,6 +1231,12 @@ exports[`Storyshots VCheckbox/desktop default state true 1`] = `
 
 exports[`Storyshots VCheckbox/desktop disabled 1`] = `
 <div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
   <label
     class="v-checkbox theme-default is-disabled"
   >
@@ -1193,6 +1295,12 @@ exports[`Storyshots VCheckbox/desktop disabled 1`] = `
 
 exports[`Storyshots VCheckbox/desktop error 1`] = `
 <div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
   <label
     class="v-checkbox theme-default is-error"
   >
@@ -1222,6 +1330,12 @@ exports[`Storyshots VCheckbox/desktop error 1`] = `
 
 exports[`Storyshots VCheckbox/desktop true/false attr 1`] = `
 <div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
   <label
     class="v-checkbox theme-default"
   >
@@ -1251,6 +1365,12 @@ exports[`Storyshots VCheckbox/desktop true/false attr 1`] = `
 
 exports[`Storyshots VContentSwitcher/desktop array objects 1`] = `
 <div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
   <ul
     class="v-content-switcher theme-default"
   >
@@ -1328,6 +1448,12 @@ exports[`Storyshots VContentSwitcher/desktop array objects 1`] = `
 
 exports[`Storyshots VContentSwitcher/desktop simple array strings 1`] = `
 <div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
   <ul
     class="v-content-switcher theme-default"
   >
@@ -1390,6 +1516,12 @@ exports[`Storyshots VContentSwitcher/desktop simple array strings 1`] = `
 exports[`Storyshots VDivider/desktop default 1`] = `
 <div>
   <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <div
     class="v-divider theme-default"
     style="width: 378px;"
   >
@@ -1408,6 +1540,12 @@ exports[`Storyshots VDivider/desktop default 1`] = `
 
 exports[`Storyshots VDivider/desktop with text 1`] = `
 <div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
   <div
     class="v-divider theme-default"
     style="width: 378px;"
@@ -1429,8 +1567,123 @@ exports[`Storyshots VDivider/desktop with text 1`] = `
 </div>
 `;
 
+exports[`Storyshots VHeader/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <header
+    class="v-header theme-default"
+  >
+    <button
+      class="theme-default navigation-icon-button"
+    >
+       
+      <svg
+        class="svg-atom theme-default"
+        height="100%"
+        width="100%"
+      >
+        <use
+          x="0"
+          xlink:href="#endpass-ui-icon-menu"
+          y="0"
+        />
+      </svg>
+    </button>
+     
+    <div
+      class="v-nav-divider theme-default"
+    />
+     
+    <a
+      class="theme-default navigation-control"
+      role="button"
+    >
+      Item one
+    </a>
+     
+    <a
+      class="theme-default navigation-control"
+      role="button"
+    >
+      Item two
+    </a>
+     
+    <a
+      class="theme-default navigation-control"
+      role="button"
+    >
+      Item three
+    </a>
+     
+    <section
+      class="v-nav-sub-menu theme-default"
+    >
+      <a
+        class="theme-default navigation-control"
+        role="button"
+      >
+        
+    Sub-menu
+    
+        <i
+          class="v-nav-sub-menu-icon"
+        >
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-chevron-down"
+              y="0"
+            />
+          </svg>
+        </i>
+      </a>
+       
+      <section
+        class="v-nav-sub-menu-content"
+      >
+        <a
+          class="theme-default navigation-control"
+          role="button"
+        >
+          Item four
+        </a>
+         
+        <a
+          class="theme-default navigation-control"
+          role="button"
+        >
+          Item five
+        </a>
+         
+        <a
+          class="theme-default navigation-control"
+          role="button"
+        >
+          Item six
+        </a>
+      </section>
+    </section>
+  </header>
+</div>
+`;
+
 exports[`Storyshots VInput/desktop disabled 1`] = `
 <div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
   <div
     class="field-atom theme-default"
     style="width: 288px;"
@@ -1474,6 +1727,12 @@ exports[`Storyshots VInput/desktop disabled 1`] = `
 
 exports[`Storyshots VInput/desktop enabled 1`] = `
 <div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
   <div
     class="field-atom theme-default"
     style="width: 288px;"
@@ -1552,6 +1811,12 @@ exports[`Storyshots VInput/desktop enabled 1`] = `
 exports[`Storyshots VInput/desktop error 1`] = `
 <div>
   <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <div
     class="field-atom theme-default"
     style="width: 288px;"
   >
@@ -1606,6 +1871,12 @@ exports[`Storyshots VInput/desktop error 1`] = `
 exports[`Storyshots VModal/VModalCard both 1`] = `
 <div>
   <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <div
     class="mask-atom theme-default"
   >
     <div
@@ -1656,6 +1927,12 @@ exports[`Storyshots VModal/VModalCard both 1`] = `
 exports[`Storyshots VModal/VModalCard closable 1`] = `
 <div>
   <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <div
     class="mask-atom theme-default"
   >
     <div
@@ -1702,6 +1979,12 @@ exports[`Storyshots VModal/VModalCard closable 1`] = `
 exports[`Storyshots VModal/VModalCard default 1`] = `
 <div>
   <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <div
     class="mask-atom theme-default"
   >
     <div
@@ -1743,6 +2026,12 @@ exports[`Storyshots VModal/VModalCard default 1`] = `
 
 exports[`Storyshots VModal/VModalCard returnable 1`] = `
 <div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
   <div
     class="mask-atom theme-default"
   >
@@ -1789,6 +2078,12 @@ exports[`Storyshots VModal/VModalCard returnable 1`] = `
 
 exports[`Storyshots VModal/VModalInfoCard both 1`] = `
 <div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
   <div
     class="mask-atom theme-default"
   >
@@ -1853,6 +2148,12 @@ exports[`Storyshots VModal/VModalInfoCard both 1`] = `
 exports[`Storyshots VModal/VModalInfoCard closable 1`] = `
 <div>
   <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <div
     class="mask-atom theme-default"
   >
     <div
@@ -1912,6 +2213,12 @@ exports[`Storyshots VModal/VModalInfoCard closable 1`] = `
 exports[`Storyshots VModal/VModalInfoCard default 1`] = `
 <div>
   <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <div
     class="mask-atom theme-default"
   >
     <div
@@ -1966,6 +2273,12 @@ exports[`Storyshots VModal/VModalInfoCard default 1`] = `
 
 exports[`Storyshots VModal/VModalInfoCard returnable 1`] = `
 <div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
   <div
     class="mask-atom theme-default"
   >
@@ -2023,8 +2336,775 @@ exports[`Storyshots VModal/VModalInfoCard returnable 1`] = `
 </div>
 `;
 
+exports[`Storyshots VNavControl/desktop active 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <a
+    class="theme-default navigation-control is-active"
+    href="#"
+  >
+    Active link
+  </a>
+</div>
+`;
+
+exports[`Storyshots VNavControl/desktop as button 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <a
+    class="theme-default navigation-control"
+    role="button"
+  >
+    Nav button
+  </a>
+</div>
+`;
+
+exports[`Storyshots VNavControl/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <a
+    class="theme-default navigation-control"
+    href="#"
+  >
+    Link
+  </a>
+</div>
+`;
+
+exports[`Storyshots VNavDivider/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <header
+    class="v-header theme-default"
+  >
+    
+          Some
+          
+    <div
+      class="v-nav-divider theme-default"
+    />
+    
+          divided
+          
+    <div
+      class="v-nav-divider theme-default"
+    />
+    
+          content
+          
+    <div
+      class="v-nav-divider theme-default"
+    />
+    
+          in
+          
+    <div
+      class="v-nav-divider theme-default"
+    />
+    
+          header
+        
+  </header>
+</div>
+`;
+
+exports[`Storyshots VNavIconButton/desktop active 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <button
+    class="theme-default navigation-icon-button is-active"
+  >
+    <svg
+      class="svg-atom theme-default"
+      height="100%"
+      width="100%"
+    >
+      <use
+        x="0"
+        xlink:href="#endpass-ui-icon-check"
+        y="0"
+      />
+    </svg>
+     
+    <!---->
+  </button>
+</div>
+`;
+
+exports[`Storyshots VNavIconButton/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <button
+    class="theme-default navigation-icon-button"
+  >
+    <svg
+      class="svg-atom theme-default"
+      height="100%"
+      width="100%"
+    >
+      <use
+        x="0"
+        xlink:href="#endpass-ui-icon-check"
+        y="0"
+      />
+    </svg>
+     
+    <!---->
+  </button>
+</div>
+`;
+
+exports[`Storyshots VNavIconButton/desktop with icon as prop 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <button
+    class="theme-default navigation-icon-button"
+  >
+     
+    <svg
+      class="svg-atom theme-default"
+      height="100%"
+      width="100%"
+    >
+      <use
+        x="0"
+        xlink:href="#endpass-ui-icon-check"
+        y="0"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Storyshots VNavSidebar/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <div
+    style="position: relative; height: 100vh;"
+  >
+    <header
+      class="v-header theme-default"
+    >
+      <button
+        class="theme-default navigation-icon-button"
+      >
+         
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-menu"
+            y="0"
+          />
+        </svg>
+      </button>
+       
+      <div
+        class="v-nav-divider theme-default"
+      />
+       
+      <a
+        class="theme-default navigation-control"
+        role="button"
+      >
+        Item one
+      </a>
+       
+      <a
+        class="theme-default navigation-control"
+        role="button"
+      >
+        Item two
+      </a>
+       
+      <a
+        class="theme-default navigation-control"
+        role="button"
+      >
+        Item three
+      </a>
+       
+      <section
+        class="v-nav-sub-menu theme-default"
+      >
+        <a
+          class="theme-default navigation-control"
+          role="button"
+        >
+          
+    Sub-menu
+    
+          <i
+            class="v-nav-sub-menu-icon"
+          >
+            <svg
+              class="svg-atom theme-default"
+              height="100%"
+              width="100%"
+            >
+              <use
+                x="0"
+                xlink:href="#endpass-ui-icon-chevron-down"
+                y="0"
+              />
+            </svg>
+          </i>
+        </a>
+         
+        <section
+          class="v-nav-sub-menu-content"
+        >
+          <a
+            class="theme-default navigation-control"
+            role="button"
+          >
+            Item four
+          </a>
+           
+          <a
+            class="theme-default navigation-control"
+            role="button"
+          >
+            Item five
+          </a>
+           
+          <a
+            class="theme-default navigation-control"
+            role="button"
+          >
+            Item six
+          </a>
+        </section>
+      </section>
+    </header>
+     
+    <!---->
+  </div>
+</div>
+`;
+
+exports[`Storyshots VNavSidebarControl/desktop active 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <a
+    class="theme-default navigation-sidebar-control is-active"
+    href="#"
+  >
+    
+          Active link
+        
+  </a>
+</div>
+`;
+
+exports[`Storyshots VNavSidebarControl/desktop as button 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <a
+    class="theme-default navigation-sidebar-control"
+    role="button"
+  >
+    
+          Button
+        
+  </a>
+</div>
+`;
+
+exports[`Storyshots VNavSidebarControl/desktop as disabled button 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <a
+    class="theme-default navigation-sidebar-control is-disabled"
+    role="button"
+  >
+    
+          Disabled button
+        
+  </a>
+</div>
+`;
+
+exports[`Storyshots VNavSidebarControl/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <a
+    class="theme-default navigation-sidebar-control"
+    href="#"
+  >
+    
+          Link
+        
+  </a>
+</div>
+`;
+
+exports[`Storyshots VNavSidebarControl/desktop disabled 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <a
+    class="theme-default navigation-sidebar-control is-disabled"
+    href="#"
+  >
+    
+          Disabled link
+        
+  </a>
+</div>
+`;
+
+exports[`Storyshots VNavSidebarSubMenu/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <section
+    class="theme-default v-nav-sidebar-sub-menu"
+  >
+    <a
+      class="theme-default navigation-sidebar-control"
+      role="button"
+    >
+      <!---->
+      
+    Submenu
+    
+      <i
+        class="v-nav-sidebar-sub-menu-icon chevron"
+      >
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-chevron-down"
+            y="0"
+          />
+        </svg>
+      </i>
+    </a>
+     
+    <section
+      class="v-nav-sidebar-sub-menu-content"
+    >
+      <a
+        class="theme-default navigation-sidebar-control"
+        role="button"
+      >
+        
+            Link one
+          
+      </a>
+       
+      <a
+        class="theme-default navigation-sidebar-control is-disabled"
+        role="button"
+      >
+        
+            Link two
+          
+      </a>
+       
+      <a
+        class="theme-default navigation-sidebar-control is-active"
+        role="button"
+      >
+        
+            Link three
+          
+      </a>
+    </section>
+  </section>
+</div>
+`;
+
+exports[`Storyshots VNavSidebarSubMenu/desktop disabled 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <section
+    class="theme-default v-nav-sidebar-sub-menu"
+  >
+    <a
+      class="theme-default navigation-sidebar-control is-disabled"
+      role="button"
+    >
+      <!---->
+      
+    Submenu
+    
+      <i
+        class="v-nav-sidebar-sub-menu-icon chevron"
+      >
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-chevron-down"
+            y="0"
+          />
+        </svg>
+      </i>
+    </a>
+     
+    <section
+      class="v-nav-sidebar-sub-menu-content"
+    >
+      <a
+        class="theme-default navigation-sidebar-control"
+        role="button"
+      >
+        
+            Link one
+          
+      </a>
+       
+      <a
+        class="theme-default navigation-sidebar-control is-disabled"
+        role="button"
+      >
+        
+            Link two
+          
+      </a>
+       
+      <a
+        class="theme-default navigation-sidebar-control is-active"
+        role="button"
+      >
+        
+            Link three
+          
+      </a>
+    </section>
+  </section>
+</div>
+`;
+
+exports[`Storyshots VNavSidebarSubMenu/desktop with icon as prop 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <section
+    class="theme-default v-nav-sidebar-sub-menu is-iconed"
+  >
+    <a
+      class="theme-default navigation-sidebar-control"
+      role="button"
+    >
+      <i
+        class="v-nav-sidebar-sub-menu-icon additional"
+      >
+         
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-check"
+            y="0"
+          />
+        </svg>
+      </i>
+      
+    Submenu
+    
+      <i
+        class="v-nav-sidebar-sub-menu-icon chevron"
+      >
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-chevron-down"
+            y="0"
+          />
+        </svg>
+      </i>
+    </a>
+     
+    <section
+      class="v-nav-sidebar-sub-menu-content"
+    >
+      <a
+        class="theme-default navigation-sidebar-control"
+        role="button"
+      >
+        
+            Link one
+          
+      </a>
+       
+      <a
+        class="theme-default navigation-sidebar-control is-disabled"
+        role="button"
+      >
+        
+            Link two
+          
+      </a>
+       
+      <a
+        class="theme-default navigation-sidebar-control is-active"
+        role="button"
+      >
+        
+            Link three
+          
+      </a>
+    </section>
+  </section>
+</div>
+`;
+
+exports[`Storyshots VNavSidebarSubMenu/desktop with icon as slot 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <section
+    class="theme-default v-nav-sidebar-sub-menu is-iconed"
+  >
+    <a
+      class="theme-default navigation-sidebar-control"
+      role="button"
+    >
+      <i
+        class="v-nav-sidebar-sub-menu-icon additional"
+      >
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-check"
+            y="0"
+          />
+        </svg>
+         
+        <!---->
+      </i>
+      
+    Submenu
+    
+      <i
+        class="v-nav-sidebar-sub-menu-icon chevron"
+      >
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-chevron-down"
+            y="0"
+          />
+        </svg>
+      </i>
+    </a>
+     
+    <section
+      class="v-nav-sidebar-sub-menu-content"
+    >
+       
+      <a
+        class="theme-default navigation-sidebar-control"
+        role="button"
+      >
+        
+            Link one
+          
+      </a>
+       
+      <a
+        class="theme-default navigation-sidebar-control is-disabled"
+        role="button"
+      >
+        
+            Link two
+          
+      </a>
+       
+      <a
+        class="theme-default navigation-sidebar-control is-active"
+        role="button"
+      >
+        
+            Link three
+          
+      </a>
+    </section>
+  </section>
+</div>
+`;
+
+exports[`Storyshots VNavSubMenu/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <section
+    class="v-nav-sub-menu theme-default"
+  >
+    <a
+      class="theme-default navigation-control"
+      role="button"
+    >
+      
+    Submenu
+    
+      <i
+        class="v-nav-sub-menu-icon"
+      >
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-chevron-down"
+            y="0"
+          />
+        </svg>
+      </i>
+    </a>
+     
+    <section
+      class="v-nav-sub-menu-content"
+    >
+      <a
+        class="theme-default navigation-control"
+        role="button"
+      >
+        Item one
+      </a>
+       
+      <a
+        class="theme-default navigation-control"
+        role="button"
+      >
+        Item two
+      </a>
+       
+      <a
+        class="theme-default navigation-control"
+        role="button"
+      >
+        Item three
+      </a>
+    </section>
+  </section>
+</div>
+`;
+
 exports[`Storyshots VSelect/desktop disabled 1`] = `
 <div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
   <div
     class="field-atom v-select theme-default"
     style="width: 288px;"
@@ -2082,6 +3162,12 @@ exports[`Storyshots VSelect/desktop disabled 1`] = `
 
 exports[`Storyshots VSelect/desktop enabled 1`] = `
 <div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
   <div
     class="field-atom v-select theme-default"
     style="width: 288px;"
@@ -2154,6 +3240,12 @@ exports[`Storyshots VSelect/desktop enabled 1`] = `
 exports[`Storyshots VSelect/desktop error 1`] = `
 <div>
   <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <div
     class="field-atom v-select theme-default"
     style="width: 288px;"
   >
@@ -2223,6 +3315,12 @@ exports[`Storyshots VSelect/desktop error 1`] = `
 exports[`Storyshots VSelect/desktop flat array 1`] = `
 <div>
   <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <div
     class="field-atom v-select theme-default"
     style="width: 288px;"
   >
@@ -2282,5 +3380,227 @@ exports[`Storyshots VSelect/desktop flat array 1`] = `
   "option 2"
 ]
   </p>
+</div>
+`;
+
+exports[`Storyshots VSvgIcon/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <table
+    class="storybook-table icons"
+  >
+    <tr>
+      <td>
+        <div>
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-arrow-left"
+              y="0"
+            />
+          </svg>
+        </div>
+         
+        <span>
+          arrow-left
+        </span>
+      </td>
+       
+      <td>
+        <div>
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-check"
+              y="0"
+            />
+          </svg>
+        </div>
+         
+        <span>
+          check
+        </span>
+      </td>
+       
+      <td>
+        <div>
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-chevron-down"
+              y="0"
+            />
+          </svg>
+        </div>
+         
+        <span>
+          chevron-down
+        </span>
+      </td>
+       
+      <td>
+        <div>
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-chevron-up"
+              y="0"
+            />
+          </svg>
+        </div>
+         
+        <span>
+          chevron-up
+        </span>
+      </td>
+       
+      <td>
+        <div>
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-close"
+              y="0"
+            />
+          </svg>
+        </div>
+         
+        <span>
+          close
+        </span>
+      </td>
+       
+      <td>
+        <div>
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-eye"
+              y="0"
+            />
+          </svg>
+        </div>
+         
+        <span>
+          eye
+        </span>
+      </td>
+    </tr>
+     
+    <tr>
+      <td>
+        <div>
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-menu"
+              y="0"
+            />
+          </svg>
+        </div>
+         
+        <span>
+          menu
+        </span>
+      </td>
+       
+      <td>
+        <div>
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-action"
+              y="0"
+            />
+          </svg>
+        </div>
+         
+        <span>
+          action
+        </span>
+      </td>
+       
+      <td>
+        <div>
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-google"
+              y="0"
+            />
+          </svg>
+        </div>
+         
+        <span>
+          google
+        </span>
+      </td>
+       
+      <td>
+        <div>
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-github"
+              y="0"
+            />
+          </svg>
+        </div>
+         
+        <span>
+          github
+        </span>
+      </td>
+       
+      <td />
+       
+      <td />
+    </tr>
+  </table>
 </div>
 `;

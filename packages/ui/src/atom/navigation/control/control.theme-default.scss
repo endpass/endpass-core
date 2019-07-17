@@ -1,0 +1,27 @@
+.navigation-control.theme-default {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  height: 48px;
+  padding: 16px 16px 13px;
+  margin: 0;
+  border: none;
+  border-bottom: 3px solid $primary-7;
+  background: $primary-7;
+  transition: color 0.3s, background 0.3s, border-bottom 0.3s;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navigation-control.theme-default:active,
+.navigation-control.theme-default:hover,
+.navigation-control.theme-default:focus {
+  color: $white;
+}
+
+.navigation-control.theme-default.is-active {
+  border-bottom: 3px solid $primary-5;
+  color: $white;
+}

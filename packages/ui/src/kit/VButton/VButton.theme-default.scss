@@ -6,7 +6,7 @@
   background: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background .3s, box-shadow .3s, border-color .3s;
+  transition: background 0.3s, box-shadow 0.3s, border-color 0.3s;
   outline: 0;
   box-shadow: 0 2px 4px rgba(36, 42, 46, 0.1), 0 1px 1px rgba(36, 42, 46, 0.1);
 }
@@ -19,7 +19,7 @@
   letter-spacing: 1.1px;
   display: block;
   white-space: nowrap;
-  transition: color .3s;
+  transition: color 0.3s;
 }
 
 .v-button.theme-default .v-button-icon {
@@ -91,13 +91,14 @@
 
 .v-button.theme-default.skin-tertiary .v-button-label,
 .v-button.theme-default.skin-quaternary .v-button-label,
-  .v-button.theme-default.skin-ghost .v-button-label {
+.v-button.theme-default.skin-ghost .v-button-label {
   color: $primary-7;
 }
 
 .v-button.theme-default.skin-primary .v-button-label,
 .v-button.theme-default.skin-secondary .v-button-label,
 .v-button.theme-default.skin-quaternary:hover .v-button-label,
+.v-button.theme-default.skin-quaternary:hover .v-button-icon,
 .v-button.theme-default.skin-quaternary:focus .v-button-label,
 .v-button.theme-default.skin-ghost:active .v-button-label {
   color: $white;
@@ -174,7 +175,7 @@
 }
 
 .v-button.theme-default .svg-atom {
-  transition: fill .3s;
+  transition: fill 0.3s;
   width: 15px;
   height: 15px;
   stroke-width: 0;
