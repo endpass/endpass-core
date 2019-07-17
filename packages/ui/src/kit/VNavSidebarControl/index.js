@@ -1,3 +1,1 @@
-export {
-  default,
-} from '@/atom/navigation/sidebar-control-atom/sidebar-control-atom.vue';
+export { default } from './VNavSidebarControl.vue';

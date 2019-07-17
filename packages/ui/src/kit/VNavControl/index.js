@@ -1,1 +1,1 @@
-export { default } from '@/atom/navigation/control-atom/control-atom.vue';
+export { default } from './VNavControl.vue';
