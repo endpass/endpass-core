@@ -1,1 +1,1 @@
-export { default } from '@/atom/svg-atom/svg-atom.vue';
+export { default } from './VSvgIcon.vue';
