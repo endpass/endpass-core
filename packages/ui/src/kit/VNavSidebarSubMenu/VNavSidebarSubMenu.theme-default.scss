@@ -2,7 +2,7 @@
   display: block;
 }
 
-.v-nav-sidebar-sub-menu.theme-default > .navigation-sidebar-control {
+.v-nav-sidebar-sub-menu.theme-default > .navigation-sidebar-control-atom {
   display: flex;
   align-items: center;
 }
@@ -13,13 +13,13 @@
 
 .v-nav-sidebar-sub-menu.theme-default
   .v-nav-sidebar-sub-menu-content
-  > .navigation-sidebar-control {
+  > .navigation-sidebar-control-atom {
   padding-left: 32px;
 }
 
 .v-nav-sidebar-sub-menu.theme-default.is-iconed
   .v-nav-sidebar-sub-menu-content
-  > .navigation-sidebar-control {
+  > .navigation-sidebar-control-atom {
   padding-left: 72px;
 }
 

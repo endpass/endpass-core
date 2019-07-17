@@ -16,7 +16,7 @@ import SvgAtom from '@/atom/svg-atom/svg-atom';
 import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
-  name: 'NavigationIconButton',
+  name: 'NavigationIconButtonAtom',
 
   props: {
     icon: {
@@ -33,7 +33,7 @@ export default {
   computed: {
     iconButtonCssClass() {
       return Object.assign(this.themeCssClass, {
-        'navigation-icon-button': true,
+        'navigation-icon-button-atom': true,
         'is-active': this.isActive,
       });
     },

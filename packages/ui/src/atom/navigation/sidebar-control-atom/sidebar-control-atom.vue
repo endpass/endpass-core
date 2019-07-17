@@ -13,7 +13,7 @@
 import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
-  name: 'NavigationSidebarControl',
+  name: 'NavigationSidebarControlAtom',
 
   props: {
     disabled: {
@@ -35,7 +35,7 @@ export default {
   computed: {
     sidebarControlCssClass() {
       return Object.assign(this.themeCssClass, {
-        'navigation-sidebar-control': true,
+        'navigation-sidebar-control-atom': true,
         'is-disabled': this.disabled,
         'is-active': this.isActive,
       });

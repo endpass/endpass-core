@@ -1,4 +1,4 @@
-.navigation-sidebar-control.theme-default {
+.navigation-sidebar-control-atom.theme-default {
   box-sizing: border-box;
   position: relative;
   display: block;
@@ -24,12 +24,12 @@
   }
 }
 
-.navigation-sidebar-control.theme-default.is-disabled {
+.navigation-sidebar-control-atom.theme-default.is-disabled {
   color: $grey-3;
   cursor: default;
 }
 
-.navigation-sidebar-control.theme-default.is-active:before {
+.navigation-sidebar-control-atom.theme-default.is-active:before {
   content: '';
   position: absolute;
   left: 0;

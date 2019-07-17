@@ -23,6 +23,10 @@ storiesOf('VNavSidebar/desktop', module).add('default', () => ({
     toggleSidebar() {
       this.isSidebarVisible = !this.isSidebarVisible;
     },
+
+    closeSidebar() {
+      this.isSidebarVisible = false;
+    },
   },
   components: {
     VDivider,
@@ -51,7 +55,7 @@ storiesOf('VNavSidebar/desktop', module).add('default', () => ({
               <v-nav-control>Item six</v-nav-control>
             </v-nav-sub-menu>
           </v-header>
-          <v-nav-sidebar v-if="isSidebarVisible">
+          <v-nav-sidebar v-if="isSidebarVisible" @close="closeSidebar">
             <v-nav-sidebar-sub-menu label="Submenu">
               <v-nav-sidebar-control>
                 Link one

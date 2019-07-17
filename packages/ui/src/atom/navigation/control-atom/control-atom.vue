@@ -13,7 +13,7 @@
 import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
-  name: 'NavigationControl',
+  name: 'NavigationControlAtom',
 
   props: {
     href: {
@@ -30,7 +30,7 @@ export default {
   computed: {
     controlCssClass() {
       return Object.assign(this.themeCssClass, {
-        'navigation-control': true,
+        'navigation-control-atom': true,
         'is-active': this.isActive,
       });
     },
