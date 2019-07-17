@@ -29,7 +29,7 @@
 import ThemeMixin from '@/mixins/ThemeMixin';
 import SvgAtom from '@/atom/svg-atom/svg-atom';
 /* eslint-disable-next-line */
-import NavigationSidebarControl from '@/atom/navigation/sidebar-control/sidebar-control';
+import NavigationSidebarControl from '@/atom/navigation/sidebar-control-atom/sidebar-control-atom';
 
 export default {
   name: 'VNavSidebarSubMenu',

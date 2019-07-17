@@ -39,12 +39,12 @@
   color: $white;
 }
 
-.v-nav-sub-menu.theme-default .v-nav-sub-menu-content .navigation-control {
+.v-nav-sub-menu.theme-default .v-nav-sub-menu-content .navigation-control-atom {
   width: 100%;
 }
 
 .v-nav-sub-menu.theme-default
   .v-nav-sub-menu-content
-  .navigation-control:hover {
+  .navigation-control-atom:hover {
   background: $primary-8;
 }

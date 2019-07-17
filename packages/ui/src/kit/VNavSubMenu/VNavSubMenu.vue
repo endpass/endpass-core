@@ -20,7 +20,7 @@
 
 <script>
 import ThemeMixin from '@/mixins/ThemeMixin';
-import NavigationControlAtom from '@/atom/navigation/control/control';
+import NavigationControlAtom from '@/atom/navigation/control-atom/control-atom';
 import SvgAtom from '@/atom/svg-atom/svg-atom';
 
 export default {
@@ -84,7 +84,7 @@ export default {
 
     addCloseHandlers() {
       document.body.addEventListener('click', this.handleClickOutsideOnce);
-      window.removeEventListener('keydown', this.handleClickOutsideOnce);
+      window.addEventListener('keydown', this.handleClickOutsideOnce);
     },
 
     removeCloseHandlers() {

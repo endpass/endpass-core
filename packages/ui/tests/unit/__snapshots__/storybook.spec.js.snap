@@ -1579,7 +1579,7 @@ exports[`Storyshots VHeader/desktop default 1`] = `
     class="v-header theme-default"
   >
     <button
-      class="theme-default navigation-icon-button"
+      class="theme-default navigation-icon-button-atom"
     >
        
       <svg
@@ -1600,21 +1600,21 @@ exports[`Storyshots VHeader/desktop default 1`] = `
     />
      
     <a
-      class="theme-default navigation-control"
+      class="theme-default navigation-control-atom"
       role="button"
     >
       Item one
     </a>
      
     <a
-      class="theme-default navigation-control"
+      class="theme-default navigation-control-atom"
       role="button"
     >
       Item two
     </a>
      
     <a
-      class="theme-default navigation-control"
+      class="theme-default navigation-control-atom"
       role="button"
     >
       Item three
@@ -1624,7 +1624,7 @@ exports[`Storyshots VHeader/desktop default 1`] = `
       class="v-nav-sub-menu theme-default"
     >
       <a
-        class="theme-default navigation-control"
+        class="theme-default navigation-control-atom"
         role="button"
       >
         
@@ -1651,21 +1651,21 @@ exports[`Storyshots VHeader/desktop default 1`] = `
         class="v-nav-sub-menu-content"
       >
         <a
-          class="theme-default navigation-control"
+          class="theme-default navigation-control-atom"
           role="button"
         >
           Item four
         </a>
          
         <a
-          class="theme-default navigation-control"
+          class="theme-default navigation-control-atom"
           role="button"
         >
           Item five
         </a>
          
         <a
-          class="theme-default navigation-control"
+          class="theme-default navigation-control-atom"
           role="button"
         >
           Item six
@@ -2345,7 +2345,7 @@ exports[`Storyshots VNavControl/desktop active 1`] = `
   </div>
    
   <a
-    class="theme-default navigation-control is-active"
+    class="theme-default navigation-control-atom is-active"
     href="#"
   >
     Active link
@@ -2362,7 +2362,7 @@ exports[`Storyshots VNavControl/desktop as button 1`] = `
   </div>
    
   <a
-    class="theme-default navigation-control"
+    class="theme-default navigation-control-atom"
     role="button"
   >
     Nav button
@@ -2379,7 +2379,7 @@ exports[`Storyshots VNavControl/desktop default 1`] = `
   </div>
    
   <a
-    class="theme-default navigation-control"
+    class="theme-default navigation-control-atom"
     href="#"
   >
     Link
@@ -2438,7 +2438,7 @@ exports[`Storyshots VNavIconButton/desktop active 1`] = `
   </div>
    
   <button
-    class="theme-default navigation-icon-button is-active"
+    class="theme-default navigation-icon-button-atom is-active"
   >
     <svg
       class="svg-atom theme-default"
@@ -2466,7 +2466,7 @@ exports[`Storyshots VNavIconButton/desktop default 1`] = `
   </div>
    
   <button
-    class="theme-default navigation-icon-button"
+    class="theme-default navigation-icon-button-atom"
   >
     <svg
       class="svg-atom theme-default"
@@ -2494,7 +2494,7 @@ exports[`Storyshots VNavIconButton/desktop with icon as prop 1`] = `
   </div>
    
   <button
-    class="theme-default navigation-icon-button"
+    class="theme-default navigation-icon-button-atom"
   >
      
     <svg
@@ -2527,7 +2527,7 @@ exports[`Storyshots VNavSidebar/desktop default 1`] = `
       class="v-header theme-default"
     >
       <button
-        class="theme-default navigation-icon-button"
+        class="theme-default navigation-icon-button-atom"
       >
          
         <svg
@@ -2548,21 +2548,21 @@ exports[`Storyshots VNavSidebar/desktop default 1`] = `
       />
        
       <a
-        class="theme-default navigation-control"
+        class="theme-default navigation-control-atom"
         role="button"
       >
         Item one
       </a>
        
       <a
-        class="theme-default navigation-control"
+        class="theme-default navigation-control-atom"
         role="button"
       >
         Item two
       </a>
        
       <a
-        class="theme-default navigation-control"
+        class="theme-default navigation-control-atom"
         role="button"
       >
         Item three
@@ -2572,7 +2572,7 @@ exports[`Storyshots VNavSidebar/desktop default 1`] = `
         class="v-nav-sub-menu theme-default"
       >
         <a
-          class="theme-default navigation-control"
+          class="theme-default navigation-control-atom"
           role="button"
         >
           
@@ -2599,21 +2599,21 @@ exports[`Storyshots VNavSidebar/desktop default 1`] = `
           class="v-nav-sub-menu-content"
         >
           <a
-            class="theme-default navigation-control"
+            class="theme-default navigation-control-atom"
             role="button"
           >
             Item four
           </a>
            
           <a
-            class="theme-default navigation-control"
+            class="theme-default navigation-control-atom"
             role="button"
           >
             Item five
           </a>
            
           <a
-            class="theme-default navigation-control"
+            class="theme-default navigation-control-atom"
             role="button"
           >
             Item six
@@ -2636,7 +2636,7 @@ exports[`Storyshots VNavSidebarControl/desktop active 1`] = `
   </div>
    
   <a
-    class="theme-default navigation-sidebar-control is-active"
+    class="theme-default navigation-sidebar-control-atom is-active"
     href="#"
   >
     
@@ -2655,7 +2655,7 @@ exports[`Storyshots VNavSidebarControl/desktop as button 1`] = `
   </div>
    
   <a
-    class="theme-default navigation-sidebar-control"
+    class="theme-default navigation-sidebar-control-atom"
     role="button"
   >
     
@@ -2674,7 +2674,7 @@ exports[`Storyshots VNavSidebarControl/desktop as disabled button 1`] = `
   </div>
    
   <a
-    class="theme-default navigation-sidebar-control is-disabled"
+    class="theme-default navigation-sidebar-control-atom is-disabled"
     role="button"
   >
     
@@ -2693,7 +2693,7 @@ exports[`Storyshots VNavSidebarControl/desktop default 1`] = `
   </div>
    
   <a
-    class="theme-default navigation-sidebar-control"
+    class="theme-default navigation-sidebar-control-atom"
     href="#"
   >
     
@@ -2712,7 +2712,7 @@ exports[`Storyshots VNavSidebarControl/desktop disabled 1`] = `
   </div>
    
   <a
-    class="theme-default navigation-sidebar-control is-disabled"
+    class="theme-default navigation-sidebar-control-atom is-disabled"
     href="#"
   >
     
@@ -2734,7 +2734,7 @@ exports[`Storyshots VNavSidebarSubMenu/desktop default 1`] = `
     class="theme-default v-nav-sidebar-sub-menu"
   >
     <a
-      class="theme-default navigation-sidebar-control"
+      class="theme-default navigation-sidebar-control-atom"
       role="button"
     >
       <!---->
@@ -2762,7 +2762,7 @@ exports[`Storyshots VNavSidebarSubMenu/desktop default 1`] = `
       class="v-nav-sidebar-sub-menu-content"
     >
       <a
-        class="theme-default navigation-sidebar-control"
+        class="theme-default navigation-sidebar-control-atom"
         role="button"
       >
         
@@ -2771,7 +2771,7 @@ exports[`Storyshots VNavSidebarSubMenu/desktop default 1`] = `
       </a>
        
       <a
-        class="theme-default navigation-sidebar-control is-disabled"
+        class="theme-default navigation-sidebar-control-atom is-disabled"
         role="button"
       >
         
@@ -2780,7 +2780,7 @@ exports[`Storyshots VNavSidebarSubMenu/desktop default 1`] = `
       </a>
        
       <a
-        class="theme-default navigation-sidebar-control is-active"
+        class="theme-default navigation-sidebar-control-atom is-active"
         role="button"
       >
         
@@ -2804,7 +2804,7 @@ exports[`Storyshots VNavSidebarSubMenu/desktop disabled 1`] = `
     class="theme-default v-nav-sidebar-sub-menu"
   >
     <a
-      class="theme-default navigation-sidebar-control is-disabled"
+      class="theme-default navigation-sidebar-control-atom is-disabled"
       role="button"
     >
       <!---->
@@ -2832,7 +2832,7 @@ exports[`Storyshots VNavSidebarSubMenu/desktop disabled 1`] = `
       class="v-nav-sidebar-sub-menu-content"
     >
       <a
-        class="theme-default navigation-sidebar-control"
+        class="theme-default navigation-sidebar-control-atom"
         role="button"
       >
         
@@ -2841,7 +2841,7 @@ exports[`Storyshots VNavSidebarSubMenu/desktop disabled 1`] = `
       </a>
        
       <a
-        class="theme-default navigation-sidebar-control is-disabled"
+        class="theme-default navigation-sidebar-control-atom is-disabled"
         role="button"
       >
         
@@ -2850,7 +2850,7 @@ exports[`Storyshots VNavSidebarSubMenu/desktop disabled 1`] = `
       </a>
        
       <a
-        class="theme-default navigation-sidebar-control is-active"
+        class="theme-default navigation-sidebar-control-atom is-active"
         role="button"
       >
         
@@ -2874,7 +2874,7 @@ exports[`Storyshots VNavSidebarSubMenu/desktop with icon as prop 1`] = `
     class="theme-default v-nav-sidebar-sub-menu is-iconed"
   >
     <a
-      class="theme-default navigation-sidebar-control"
+      class="theme-default navigation-sidebar-control-atom"
       role="button"
     >
       <i
@@ -2917,7 +2917,7 @@ exports[`Storyshots VNavSidebarSubMenu/desktop with icon as prop 1`] = `
       class="v-nav-sidebar-sub-menu-content"
     >
       <a
-        class="theme-default navigation-sidebar-control"
+        class="theme-default navigation-sidebar-control-atom"
         role="button"
       >
         
@@ -2926,7 +2926,7 @@ exports[`Storyshots VNavSidebarSubMenu/desktop with icon as prop 1`] = `
       </a>
        
       <a
-        class="theme-default navigation-sidebar-control is-disabled"
+        class="theme-default navigation-sidebar-control-atom is-disabled"
         role="button"
       >
         
@@ -2935,7 +2935,7 @@ exports[`Storyshots VNavSidebarSubMenu/desktop with icon as prop 1`] = `
       </a>
        
       <a
-        class="theme-default navigation-sidebar-control is-active"
+        class="theme-default navigation-sidebar-control-atom is-active"
         role="button"
       >
         
@@ -2959,7 +2959,7 @@ exports[`Storyshots VNavSidebarSubMenu/desktop with icon as slot 1`] = `
     class="theme-default v-nav-sidebar-sub-menu is-iconed"
   >
     <a
-      class="theme-default navigation-sidebar-control"
+      class="theme-default navigation-sidebar-control-atom"
       role="button"
     >
       <i
@@ -3004,7 +3004,7 @@ exports[`Storyshots VNavSidebarSubMenu/desktop with icon as slot 1`] = `
     >
        
       <a
-        class="theme-default navigation-sidebar-control"
+        class="theme-default navigation-sidebar-control-atom"
         role="button"
       >
         
@@ -3013,7 +3013,7 @@ exports[`Storyshots VNavSidebarSubMenu/desktop with icon as slot 1`] = `
       </a>
        
       <a
-        class="theme-default navigation-sidebar-control is-disabled"
+        class="theme-default navigation-sidebar-control-atom is-disabled"
         role="button"
       >
         
@@ -3022,7 +3022,7 @@ exports[`Storyshots VNavSidebarSubMenu/desktop with icon as slot 1`] = `
       </a>
        
       <a
-        class="theme-default navigation-sidebar-control is-active"
+        class="theme-default navigation-sidebar-control-atom is-active"
         role="button"
       >
         
@@ -3046,7 +3046,7 @@ exports[`Storyshots VNavSubMenu/desktop default 1`] = `
     class="v-nav-sub-menu theme-default"
   >
     <a
-      class="theme-default navigation-control"
+      class="theme-default navigation-control-atom"
       role="button"
     >
       
@@ -3073,21 +3073,21 @@ exports[`Storyshots VNavSubMenu/desktop default 1`] = `
       class="v-nav-sub-menu-content"
     >
       <a
-        class="theme-default navigation-control"
+        class="theme-default navigation-control-atom"
         role="button"
       >
         Item one
       </a>
        
       <a
-        class="theme-default navigation-control"
+        class="theme-default navigation-control-atom"
         role="button"
       >
         Item two
       </a>
        
       <a
-        class="theme-default navigation-control"
+        class="theme-default navigation-control-atom"
         role="button"
       >
         Item three

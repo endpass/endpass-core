@@ -3,7 +3,11 @@
     <aside class="v-nav-sidebar-aside">
       <slot />
     </aside>
-    <div class="v-nav-sidebar-overlay" />
+    <div
+      class="v-nav-sidebar-overlay"
+      role="button"
+      @click="emitClose"
+    />
   </div>
 </template>
 
@@ -18,6 +22,12 @@ export default {
       return Object.assign(this.themeCssClass, {
         'v-nav-sidebar': true,
       });
+    },
+  },
+
+  methods: {
+    emitClose() {
+      this.$emit('close');
     },
   },
 

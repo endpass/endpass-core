@@ -14,3 +14,6 @@ function svgSpriteTask(cb) {
 }
 
 gulp.task('svg', svgSpriteTask);
+gulp.task('svg:dev', () => {
+  gulp.watch('src/assets/svg/icons/*.svg', svgSpriteTask);
+});
