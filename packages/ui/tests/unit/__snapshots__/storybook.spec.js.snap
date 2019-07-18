@@ -3371,6 +3371,248 @@ exports[`Storyshots VNavSubMenu/desktop default 1`] = `
 </div>
 `;
 
+exports[`Storyshots VPagination/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <div
+    class="v-pagination theme-default"
+  >
+    <div
+      class="v-pagination-navigation"
+    >
+      <span
+        class="v-pagination-node"
+      >
+        Page 1
+      </span>
+       
+      <a
+        class="v-pagination-node"
+        data-test="pagination-prev"
+        disabled="disabled"
+      >
+        <span
+          class="v-pagination-triangle-left"
+        />
+      </a>
+       
+      <!---->
+       
+      <!---->
+        
+      <!---->
+       
+      <!---->
+       
+      <a
+        class="v-pagination-node"
+        data-test="pagination-next"
+      >
+        <span
+          class="v-pagination-triangle-right"
+        />
+      </a>
+    </div>
+  </div>
+   
+  <p>
+    offset: 0
+  </p>
+</div>
+`;
+
+exports[`Storyshots VPagination/desktop fullProps 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <div
+    class="v-pagination theme-default"
+  >
+    <div
+      class="v-pagination-navigation"
+    >
+      <!---->
+       
+      <a
+        class="v-pagination-node"
+        data-test="pagination-prev"
+        disabled="disabled"
+      >
+        <span
+          class="v-pagination-triangle-left"
+        />
+      </a>
+       
+      <!---->
+       
+      <!---->
+       
+      <a
+        class="v-pagination-node"
+        data-test="btn-goto-page"
+      >
+        
+      1
+      
+        <span
+          class="v-pagination-active-foot"
+        />
+      </a>
+      <a
+        class="v-pagination-node"
+        data-test="btn-goto-page"
+      >
+        
+      2
+      
+        <span
+          class=""
+        />
+      </a>
+      <a
+        class="v-pagination-node"
+        data-test="btn-goto-page"
+      >
+        
+      3
+      
+        <span
+          class=""
+        />
+      </a>
+       
+      <span
+        class="v-pagination-node"
+        data-test="dots-right"
+      >
+        ...
+      </span>
+       
+      <a
+        class="v-pagination-node"
+        data-test="btn-goto-last"
+      >
+        
+      10
+    
+      </a>
+       
+      <a
+        class="v-pagination-node"
+        data-test="pagination-next"
+      >
+        <span
+          class="v-pagination-triangle-right"
+        />
+      </a>
+    </div>
+  </div>
+   
+  <p>
+    offset: 0
+  </p>
+</div>
+`;
+
+exports[`Storyshots VPagination/desktop withoutTotal 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <div
+    class="v-pagination theme-default"
+  >
+    <div
+      class="v-pagination-navigation"
+    >
+      <!---->
+       
+      <a
+        class="v-pagination-node"
+        data-test="pagination-prev"
+        disabled="disabled"
+      >
+        <span
+          class="v-pagination-triangle-left"
+        />
+      </a>
+       
+      <!---->
+       
+      <!---->
+       
+      <a
+        class="v-pagination-node"
+        data-test="btn-goto-page"
+      >
+        
+      1
+      
+        <span
+          class="v-pagination-active-foot"
+        />
+      </a>
+      <a
+        class="v-pagination-node"
+        data-test="btn-goto-page"
+      >
+        
+      2
+      
+        <span
+          class=""
+        />
+      </a>
+      <a
+        class="v-pagination-node"
+        data-test="btn-goto-page"
+      >
+        
+      3
+      
+        <span
+          class=""
+        />
+      </a>
+       
+      <span
+        class="v-pagination-node"
+        data-test="dots-right"
+      >
+        ...
+      </span>
+       
+      <!---->
+       
+      <a
+        class="v-pagination-node"
+        data-test="pagination-next"
+      >
+        <span
+          class="v-pagination-triangle-right"
+        />
+      </a>
+    </div>
+  </div>
+   
+  <p>
+    offset: 0
+  </p>
+</div>
+`;
+
 exports[`Storyshots VSelect/desktop disabled 1`] = `
 <div>
   <div
