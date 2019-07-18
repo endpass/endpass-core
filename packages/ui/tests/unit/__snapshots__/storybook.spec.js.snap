@@ -3643,3 +3643,456 @@ exports[`Storyshots VSvgIcon/desktop default 1`] = `
   </table>
 </div>
 `;
+
+exports[`Storyshots VTable/desktop basic 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <table
+    class="theme-default v-table"
+  >
+    <thead
+      class="theme-default v-table-head"
+    >
+      <tr
+        class="theme-default v-table-row"
+      >
+        <th
+          class="theme-default v-table-head-cell"
+        >
+          Column header
+        </th>
+         
+        <th
+          class="theme-default v-table-head-cell"
+        >
+          Column header
+        </th>
+         
+        <th
+          class="theme-default v-table-head-cell"
+        >
+          Column header
+        </th>
+         
+        <th
+          class="theme-default v-table-head-cell"
+        >
+          Column header
+        </th>
+         
+        <th
+          class="theme-default v-table-head-cell"
+        >
+          Column header
+        </th>
+         
+        <th
+          class="theme-default v-table-head-cell"
+        >
+          Column header
+        </th>
+      </tr>
+    </thead>
+     
+    <tbody
+      class="theme-default v-table-body"
+    >
+      <tr
+        class="theme-default v-table-row"
+      >
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+      </tr>
+      <tr
+        class="theme-default v-table-row"
+      >
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+      </tr>
+      <tr
+        class="theme-default v-table-row"
+      >
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+      </tr>
+      <tr
+        class="theme-default v-table-row"
+      >
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+      </tr>
+      <tr
+        class="theme-default v-table-row"
+      >
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+      </tr>
+      <tr
+        class="theme-default v-table-row"
+      >
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+      </tr>
+      <tr
+        class="theme-default v-table-row"
+      >
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+      </tr>
+      <tr
+        class="theme-default v-table-row"
+      >
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+      </tr>
+      <tr
+        class="theme-default v-table-row"
+      >
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+      </tr>
+      <tr
+        class="theme-default v-table-row"
+      >
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+         
+        <td
+          class="theme-default v-table-cell"
+        >
+          cell text
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

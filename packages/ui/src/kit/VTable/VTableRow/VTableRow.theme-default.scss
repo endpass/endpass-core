@@ -1,0 +1,8 @@
+.v-table-row.theme-default td {
+  transition: background-color .3s;
+}
+
+.v-table-row.theme-default:hover td {
+  background-color: $grey-1;
+  cursor: pointer;
+}
