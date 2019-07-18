@@ -3,8 +3,8 @@ import VTable, {
   VTableRow,
   VTableCell,
   VTableHead,
-  VTableThead,
-  VTableTbody,
+  VTableBody,
+  VTableHeadCell,
 } from '@/kit/VTable';
 
 storiesOf('VTable/desktop', module)
@@ -14,8 +14,8 @@ storiesOf('VTable/desktop', module)
       VTableRow,
       VTableCell,
       VTableHead,
-      VTableThead,
-      VTableTbody,
+      VTableBody,
+      VTableHeadCell,
     },
     data() {
       return {
@@ -25,17 +25,17 @@ storiesOf('VTable/desktop', module)
     template: `
       <theme-provider>
         <v-table>
-          <v-table-thead>
+          <v-table-head>
             <v-table-row>
-              <v-table-head>Column header</v-table-head>
-              <v-table-head>Column header</v-table-head>
-              <v-table-head>Column header</v-table-head>
-              <v-table-head>Column header</v-table-head>
-              <v-table-head>Column header</v-table-head>
-              <v-table-head>Column header</v-table-head>
+              <v-table-head-cell>Column header</v-table-head-cell>
+              <v-table-head-cell>Column header</v-table-head-cell>
+              <v-table-head-cell>Column header</v-table-head-cell>
+              <v-table-head-cell>Column header</v-table-head-cell>
+              <v-table-head-cell>Column header</v-table-head-cell>
+              <v-table-head-cell>Column header</v-table-head-cell>
             </v-table-row>
-          </v-table-thead>
-          <v-table-tbody>
+          </v-table-head>
+          <v-table-body>
             <v-table-row
               v-for="(row, index) in rows"
               :key="index"
@@ -47,7 +47,7 @@ storiesOf('VTable/desktop', module)
               <v-table-cell>cell text</v-table-cell>
               <v-table-cell>cell text</v-table-cell>
             </v-table-row>
-          </v-table-tbody>
+          </v-table-body>
         </v-table>
       </theme-provider>
     `,

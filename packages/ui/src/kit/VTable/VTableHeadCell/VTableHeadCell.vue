@@ -1,18 +1,18 @@
 <template>
-  <tbody :class="vTableTbodyCssClass">
+  <th :class="vTableHeadCellCssClass">
     <slot />
-  </tbody>
+  </th>
 </template>
 
 <script>
 import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
-  name: 'VTableTbody',
+  name: 'VTableHeadCell',
   computed: {
-    vTableTbodyCssClass() {
+    vTableHeadCellCssClass() {
       return Object.assign(this.themeCssClass, {
-        'v-table-tbody': true,
+        'v-table-head-cell': true,
       });
     },
   },

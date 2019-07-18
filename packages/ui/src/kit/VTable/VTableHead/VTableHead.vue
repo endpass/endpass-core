@@ -1,7 +1,7 @@
 <template>
-  <th :class="vTableHeadCssClass">
+  <thead :class="vTableHeadCssClass">
     <slot />
-  </th>
+  </thead>
 </template>
 
 <script>

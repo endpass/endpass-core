@@ -3656,43 +3656,43 @@ exports[`Storyshots VTable/desktop basic 1`] = `
     class="theme-default v-table"
   >
     <thead
-      class="theme-default v-table-thead"
+      class="theme-default v-table-head"
     >
       <tr
         class="theme-default v-table-row"
       >
         <th
-          class="theme-default v-table-head"
+          class="theme-default v-table-head-cell"
         >
           Column header
         </th>
          
         <th
-          class="theme-default v-table-head"
+          class="theme-default v-table-head-cell"
         >
           Column header
         </th>
          
         <th
-          class="theme-default v-table-head"
+          class="theme-default v-table-head-cell"
         >
           Column header
         </th>
          
         <th
-          class="theme-default v-table-head"
+          class="theme-default v-table-head-cell"
         >
           Column header
         </th>
          
         <th
-          class="theme-default v-table-head"
+          class="theme-default v-table-head-cell"
         >
           Column header
         </th>
          
         <th
-          class="theme-default v-table-head"
+          class="theme-default v-table-head-cell"
         >
           Column header
         </th>
@@ -3700,7 +3700,7 @@ exports[`Storyshots VTable/desktop basic 1`] = `
     </thead>
      
     <tbody
-      class="theme-default v-table-tbody"
+      class="theme-default v-table-body"
     >
       <tr
         class="theme-default v-table-row"
