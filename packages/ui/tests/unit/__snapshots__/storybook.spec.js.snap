@@ -1868,6 +1868,27 @@ exports[`Storyshots VInput/desktop error 1`] = `
 </div>
 `;
 
+exports[`Storyshots VLabel/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <label
+    class="label-atom theme-default"
+  >
+    
+  Label text
+
+  </label>
+  
+        Following content
+      
+</div>
+`;
+
 exports[`Storyshots VModal/VModalCard both 1`] = `
 <div>
   <div
