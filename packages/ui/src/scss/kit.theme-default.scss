@@ -19,8 +19,12 @@
 @import '@/atom/label-atom/label-atom.theme-default.scss';
 @import '@/atom/icon-atom/icon-atom.theme-default.scss';
 @import '@/atom/select-atom/select-atom.theme-default.scss';
+@import '@/atom/overlay-atom/overlay-atom.theme-default.scss';
 
 // kit
+@import '@/kit/VSidebar/VSidebar.theme-default.scss';
+@import '@/kit/VSidebarHeader/VSidebarHeader.theme-default.scss';
+@import '@/kit/VSidebarPanel/VSidebarPanel.theme-default.scss';
 @import '@/kit/VNavSidebarSubMenu/VNavSidebarSubMenu.theme-default.scss';
 @import '@/kit/VNavSidebar/VNavSidebar.theme-default.scss';
 @import '@/kit/VNavSubMenu/VNavSubMenu.theme-default.scss';

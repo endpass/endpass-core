@@ -20,6 +20,6 @@ deploy:
   github_token: $GITHUB_TOKEN
   keep_history: true
   target_branch: gh-pages
-  local_dir: ./packages/ui/.storybook-static
+  local_dir: ./packages/ui/storybook-static
   on:
     branch: master

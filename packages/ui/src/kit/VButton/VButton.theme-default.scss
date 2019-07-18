@@ -1,5 +1,7 @@
 .v-button.theme-default {
-  border: 0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -110,7 +112,7 @@
 
 .v-button.theme-default.skin-quaternary {
   box-shadow: none;
-  border: 1px solid $primary-7;
+  border-color: $primary-7;
   color: $primary-7;
 }
 
@@ -130,8 +132,7 @@
 
 .v-button.theme-default.skin-ghost {
   box-shadow: none;
-  box-sizing: border-box;
-  border: 1px solid transparent;
+  border-color: transparent;
   color: $primary-7;
 }
 
@@ -169,7 +170,7 @@
 }
 
 .v-button.theme-default[disabled] {
-  border: 0 !important;
+  border-color: transparent !important;
   box-shadow: none !important;
   background: $grey-2 !important;
 }
@@ -214,9 +215,14 @@
   color: $white;
 }
 
+.v-button.skin-quaternary-error {
+  color: $error;
+  border-color: $error;
+  box-shadow: none;
+}
+
 .v-button.theme-default.skin-social {
   box-shadow: none;
-  box-sizing: border-box;
   border: 1px solid $grey-8;
   color: $grey-8;
 }

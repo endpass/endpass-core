@@ -1,0 +1,28 @@
+.v-sidebar-header.theme-default .v-sidebar-close {
+  top: 0;
+  right: 0;
+  position: absolute;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.v-sidebar-header.theme-default .v-sidebar-close .svg-atom{
+  width: 10px;
+  height: 10px;
+}
+
+.v-sidebar-header.theme-default .v-sidebar-header-content {
+  padding: 0 24px;
+}
+
+.v-sidebar-header.theme-default .v-sidebar-header-content h3 {
+  margin: 10px 0 6px;
+  font-size: 14px;
+}
+
+.v-sidebar-header.theme-default .v-sidebar-header-subtitle {
+  font-size: 12px;
+  color: $grey-6;
+}
