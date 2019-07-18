@@ -2,6 +2,7 @@
 export { default as ThemeProvider } from '@/kit/ThemeProvider';
 
 // Components
+export { default as VLabel } from '@/kit/VLabel';
 export { default as VSvgIcon } from '@/kit/VSvgIcon';
 export { default as VNavSidebarSubMenu } from '@/kit/VNavSidebarSubMenu';
 export { default as VNavSidebarControl } from '@/kit/VNavSidebarControl';
