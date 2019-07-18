@@ -1,0 +1,57 @@
+.v-pagination.theme-default {
+  display: flex;
+}
+
+.v-pagination.theme-default .v-pagination-navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.v-pagination.theme-default .v-pagination-node {
+  position: relative;
+  height: 48px;
+  width: 48px;
+  white-space: nowrap;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  padding: 12px;
+
+  &[disabled="disabled"] {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.3;
+  }
+}
+
+a.v-pagination-node{
+  cursor: pointer;
+}
+
+.v-pagination.theme-default .v-pagination-triangle-left {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 7px 5px 0;
+  border-color: transparent #000000 transparent transparent;
+}
+
+.v-pagination.theme-default .v-pagination-triangle-right {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 7px;
+  border-color: transparent transparent transparent #000000;
+}
+
+.v-pagination.theme-default .v-pagination-active-foot {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -8px;
+  height: 4px;
+  background-color: $primary-7;
+  width: 16px;
+}
