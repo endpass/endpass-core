@@ -1821,7 +1821,7 @@ exports[`Storyshots VInput/desktop error 1`] = `
     style="width: 288px;"
   >
     <label
-      class="label-atom theme-default"
+      class="label-atom theme-default is-error"
       placeholder="Placeholder text"
     >
       
@@ -1878,6 +1878,27 @@ exports[`Storyshots VLabel/desktop default 1`] = `
    
   <label
     class="label-atom theme-default"
+  >
+    
+  Label text
+
+  </label>
+  
+        Following content
+      
+</div>
+`;
+
+exports[`Storyshots VLabel/desktop error 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <label
+    class="label-atom theme-default is-error"
   >
     
   Label text
@@ -3289,7 +3310,7 @@ exports[`Storyshots VSelect/desktop error 1`] = `
     style="width: 288px;"
   >
     <label
-      class="label-atom theme-default"
+      class="label-atom theme-default is-error"
       placeholder="Placeholder text"
     >
       

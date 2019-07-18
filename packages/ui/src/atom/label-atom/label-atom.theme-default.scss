@@ -6,6 +6,10 @@
   color: $black;
 }
 
-.label-atom.theme-default[disabled=disabled] {
+.label-atom.theme-default[disabled='disabled'] {
   color: $grey-4;
+}
+
+.label-atom.theme-default.is-error {
+  color: $error;
 }

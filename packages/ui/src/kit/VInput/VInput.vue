@@ -3,6 +3,7 @@
     <label-atom
       v-if="label"
       v-bind="$attrs"
+      :is-error="isError"
       :label="label"
     />
     <description-atom
