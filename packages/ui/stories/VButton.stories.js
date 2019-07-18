@@ -149,6 +149,7 @@ storiesOf('VButton/desktop', module)
               <th></th>
               <th>Success</th>
               <th>Error</th>
+              <th>Quaternary Error</th>
             </tr>
           </thead>
           <tbody>
@@ -156,11 +157,13 @@ storiesOf('VButton/desktop', module)
               <th scope="row">Normal</th>
               <td><v-button @click="onClick" skin="success">Button Label</v-button></td>
               <td><v-button @click="onClick" skin="error">Button Label</v-button></td>
+              <td><v-button @click="onClick" skin="quaternary-error">Button Label</v-button></td>
             </tr>
             <tr>
               <th scope="row">Big</th>
               <td><v-button @click="onClick" skin="success" size="big">Button Label</v-button></td>
               <td><v-button @click="onClick" skin="error" size="big">Button Label</v-button></td>
+              <td><v-button @click="onClick" skin="quaternary-error" size="big">Button Label</v-button></td>
             </tr>
           </tbody>
         </table>

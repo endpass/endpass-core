@@ -1,8 +1,8 @@
-.v-nav-sidebar.theme-default .v-nav-sidebar-overlay {
+.overlay-atom.theme-default {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 0;
   width: 100%;
   height: 100%;
   background: rgba(19, 23, 26, 0.85);

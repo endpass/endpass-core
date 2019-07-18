@@ -1,22 +1,32 @@
 <template>
   <div :class="vNavSidebarCssClass">
-    <aside class="v-nav-sidebar-aside">
+    <v-sidebar
+      :is-open="isOpen"
+      direction="left"
+    >
+      <overlay-atom
+        v-if="isOpen"
+        slot="overlay"
+        @click="emitClose"
+      />
       <slot />
-    </aside>
-    <div
-      class="v-nav-sidebar-overlay"
-      role="button"
-      @click="emitClose"
-    />
+    </v-sidebar>
   </div>
 </template>
 
 <script>
 import ThemeMixin from '@/mixins/ThemeMixin';
+import VSidebar from '@/kit/VSidebar';
+import OverlayAtom from '@/atom/overlay-atom/overlay-atom';
 
 export default {
   name: 'VNavSidebar',
-
+  props: {
+    isOpen: {
+      type: Boolean,
+      default: false,
+    },
+  },
   computed: {
     vNavSidebarCssClass() {
       return Object.assign(this.themeCssClass, {
@@ -32,5 +42,6 @@ export default {
   },
 
   mixins: [ThemeMixin],
+  components: { OverlayAtom, VSidebar },
 };
 </script>
