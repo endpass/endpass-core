@@ -1,8 +1,12 @@
 .v-table-row.theme-default .v-table-cell {
-  transition: background-color .3s;
+  transition: background-color 0.3s;
 }
 
 .v-table-row.theme-default:hover .v-table-cell {
-  background-color: $grey-1;
+  background-color: rgba($grey-1, 0.5);
   cursor: pointer;
+}
+
+.v-table-row.theme-default.is-active .v-table-cell {
+  background-color: $grey-1;
 }
