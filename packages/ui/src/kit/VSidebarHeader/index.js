@@ -1,1 +1,1 @@
-export { default } from './VSidebarHeader';
+export { default } from './VSidebarHeader.vue';
