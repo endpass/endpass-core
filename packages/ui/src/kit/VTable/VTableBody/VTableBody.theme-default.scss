@@ -1,0 +1,4 @@
+.v-table-body.theme-default:first-child .v-table-row:first-child .v-table-cell {
+  // selecting all cells in first row, when NO header
+  border-top-color: transparent;
+}
