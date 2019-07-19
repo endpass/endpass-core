@@ -1,3 +1,23 @@
-.v-table-head.theme-default {
+.v-table-head.theme-default.skin-none {
+  background-color: transparent;
+}
+
+.v-table-head.theme-default.skin-grey {
   background-color: $grey-1;
+}
+
+// select first row
+.v-table-head.theme-default:first-child .v-table-head-cell:first-child {
+  border-top-left-radius: 4px;
+}
+.v-table-head.theme-default:first-child .v-table-head-cell:last-child {
+  border-top-right-radius: 4px;
+}
+
+// select last row
+.v-table-head.theme-default:last-child .v-table-head-cell:first-child {
+  border-bottom-left-radius: 4px;
+}
+.v-table-head.theme-default:last-child .v-table-head-cell:last-child {
+  border-bottom-right-radius: 4px;
 }

@@ -1,1 +1,1 @@
-export { default } from './VTableHead';
+export { default } from './VTableHead.vue';

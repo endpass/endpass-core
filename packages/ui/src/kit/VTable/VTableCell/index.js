@@ -1,1 +1,1 @@
-export { default } from './VTableCell';
+export { default } from './VTableCell.vue';
