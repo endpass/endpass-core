@@ -4173,6 +4173,108 @@ exports[`Storyshots VSidebar/desktop right 1`] = `
 </div>
 `;
 
+exports[`Storyshots VSuperMenuControl/desktop active 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <a
+    class="theme-default v-super-menu-control is-active"
+    role="button"
+  >
+    <i
+      class="v-super-menu-control-icon"
+    >
+      <svg
+        class="svg-atom theme-default"
+        height="100%"
+        width="100%"
+      >
+        <use
+          x="0"
+          xlink:href="#endpass-ui-icon-admin"
+          y="0"
+        />
+      </svg>
+    </i>
+     
+          Active super sidebar control
+        
+  </a>
+</div>
+`;
+
+exports[`Storyshots VSuperMenuControl/desktop as button 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <a
+    class="theme-default v-super-menu-control"
+    role="button"
+  >
+    <i
+      class="v-super-menu-control-icon"
+    >
+      <svg
+        class="svg-atom theme-default"
+        height="100%"
+        width="100%"
+      >
+        <use
+          x="0"
+          xlink:href="#endpass-ui-icon-admin"
+          y="0"
+        />
+      </svg>
+    </i>
+     
+          Active super sidebar control
+        
+  </a>
+</div>
+`;
+
+exports[`Storyshots VSuperMenuControl/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <a
+    class="theme-default v-super-menu-control"
+    role="button"
+  >
+    <i
+      class="v-super-menu-control-icon"
+    >
+      <svg
+        class="svg-atom theme-default"
+        height="100%"
+        width="100%"
+      >
+        <use
+          x="0"
+          xlink:href="#endpass-ui-icon-admin"
+          y="0"
+        />
+      </svg>
+    </i>
+     
+          Super sidebar control
+        
+  </a>
+</div>
+`;
+
 exports[`Storyshots VSvgIcon/desktop default 1`] = `
 <div>
   <div
@@ -4386,6 +4488,110 @@ exports[`Storyshots VSvgIcon/desktop default 1`] = `
           github
         </span>
       </td>
+       
+      <td>
+        <div>
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-admin"
+              y="0"
+            />
+          </svg>
+        </div>
+         
+        <span>
+          admin
+        </span>
+      </td>
+       
+      <td>
+        <div>
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-apps-list"
+              y="0"
+            />
+          </svg>
+        </div>
+         
+        <span>
+          apps-list
+        </span>
+      </td>
+    </tr>
+     
+    <tr>
+      <td>
+        <div>
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-home"
+              y="0"
+            />
+          </svg>
+        </div>
+         
+        <span>
+          home
+        </span>
+      </td>
+       
+      <td>
+        <div>
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-permission"
+              y="0"
+            />
+          </svg>
+        </div>
+         
+        <span>
+          permission
+        </span>
+      </td>
+       
+      <td>
+        <div>
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-docs"
+              y="0"
+            />
+          </svg>
+        </div>
+         
+        <span>
+          docs
+        </span>
+      </td>
+       
+      <td />
        
       <td />
        

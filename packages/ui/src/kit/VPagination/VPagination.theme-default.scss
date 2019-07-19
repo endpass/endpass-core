@@ -18,15 +18,16 @@
   justify-content: center;
   flex-flow: column nowrap;
   padding: 12px;
+  font-size: 14px;
 
-  &[disabled="disabled"] {
+  &[disabled='disabled'] {
     pointer-events: none;
     cursor: default;
     opacity: 0.3;
   }
 }
 
-a.v-pagination-node{
+a.v-pagination-node {
   cursor: pointer;
   color: $black;
 }
@@ -52,7 +53,7 @@ a.v-pagination-node{
   bottom: 0;
   left: 50%;
   margin-left: -8px;
-  height: 4px;
+  height: 2px;
   background-color: $primary-7;
   width: 16px;
 }
