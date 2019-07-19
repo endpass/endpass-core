@@ -70,6 +70,41 @@ storiesOf('VSvgIcon/desktop', module).add('default', () => ({
               <span>github</span>
             </td>
             <td>
+              <div>
+                <v-svg-icon name="admin" height="100%" width="100%" />
+              </div>
+              <span>admin</span>
+            </td>
+            <td>
+              <div>
+                <v-svg-icon name="apps-list" height="100%" width="100%" />
+              </div>
+              <span>apps-list</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                <v-svg-icon name="home" height="100%" width="100%" />
+              </div>
+              <span>home</span>
+            </td>
+            <td>
+              <div>
+                <v-svg-icon name="permission" height="100%" width="100%" />
+              </div>
+              <span>permission</span>
+            </td>
+            <td>
+              <div>
+                <v-svg-icon name="docs" height="100%" width="100%" />
+              </div>
+              <span>docs</span>
+            </td>
+            <td>
+
+            </td>
+            <td>
 
             </td>
             <td>
