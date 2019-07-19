@@ -1,5 +1,9 @@
 <template>
-  <tr :class="vTableRowCssClass">
+  <tr
+    :class="vTableRowCssClass"
+    class="v-table-row"
+    v-on="$listeners"
+  >
     <slot />
   </tr>
 </template>
@@ -9,10 +13,16 @@ import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
   name: 'VTableRow',
+  props: {
+    isActive: {
+      type: Boolean,
+      default: false,
+    },
+  },
   computed: {
     vTableRowCssClass() {
       return Object.assign(this.themeCssClass, {
-        'v-table-row': true,
+        'is-active': this.isActive,
       });
     },
   },
