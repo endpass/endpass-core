@@ -7,7 +7,7 @@
   "license": "MIT",
   "main": "endpass-ui.umd.js",
   "module": "endpass-ui.esm.js",
-  "repository": "https://github.com/endpass/<e> </e>ndpass-core/tree/master/packages/ui",
+  "repository": "https://github.com/endpass/endpass-core/tree/master/packages/ui",
   "scripts": {
     "dev": "yarn dev:svg & yarn storybook",
     "dev:svg": "gulp svg:dev",
