@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VInput render should correctly render component 1`] = `
+<field-atom-stub>
+  <!---->
+   
+  <!---->
+   
+  <input-atom-stub
+    disabled="disabled"
+    id="id"
+    placeholder="placeholder"
+  >
+    <!---->
+  </input-atom-stub>
+   
+  <!---->
+</field-atom-stub>
+`;
