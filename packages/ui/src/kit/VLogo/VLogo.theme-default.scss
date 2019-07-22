@@ -1,0 +1,22 @@
+.v-logo.theme-default {
+  display: flex;
+  align-items: center;
+  color: #000;
+}
+
+.v-logo.theme-default.is-white {
+  color: $white;
+}
+
+.v-logo.theme-default .v-logo-image {
+  width: 16px;
+  height: 22px;
+  margin-right: 8px;
+}
+
+.v-logo.theme-default .v-logo-label {
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 700;
+}

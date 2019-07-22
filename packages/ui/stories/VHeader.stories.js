@@ -4,6 +4,7 @@ import VNavDivider from '@/kit/VNavDivider';
 import VNavIconButton from '@/kit/VNavIconButton';
 import VNavSubMenu from '@/kit/VNavSubMenu';
 import VNavControl from '@/kit/VNavControl';
+import VLogo from '@/kit/VLogo';
 import VSvgIcon from '@/kit/VSvgIcon';
 
 storiesOf('VHeader/desktop', module).add('default', () => ({
@@ -14,11 +15,14 @@ storiesOf('VHeader/desktop', module).add('default', () => ({
     VNavSubMenu,
     VNavControl,
     VSvgIcon,
+    VLogo,
   },
   template: `
       <theme-provider>
         <v-header>
           <v-nav-icon-button icon="menu" />
+          <v-nav-divider />
+          <v-logo />
           <v-nav-divider />
           <v-nav-control>Item one</v-nav-control>
           <v-nav-control>Item two</v-nav-control>

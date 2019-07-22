@@ -2,6 +2,7 @@
 export { default as ThemeProvider } from '@/kit/ThemeProvider';
 
 // Components
+export { default as VLogo } from '@/kit/VLogo';
 export { default as VSuperMenuControl } from '@/kit/VSuperMenuControl';
 export { default as VLabel } from '@/kit/VLabel';
 export { default as VSvgIcon } from '@/kit/VSvgIcon';
