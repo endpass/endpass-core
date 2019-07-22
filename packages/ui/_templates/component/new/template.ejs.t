@@ -15,7 +15,7 @@ export default {
 
   computed: {
     <%= h.changeCase.camelCase(name) %>CssClass() {
-      return Object.assign(this.themeCssClass, {
+      return Object.assign({}, this.themeCssClass, {
         '<%= h.changeCase.paramCase(name) %>': true,
       });
     },

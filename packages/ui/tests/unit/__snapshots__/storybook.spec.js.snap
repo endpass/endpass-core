@@ -64,6 +64,34 @@ exports[`Storyshots Typography default 1`] = `
 </div>
 `;
 
+exports[`Storyshots VButton/desktop change-skin 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <button
+    class="v-button theme-default skin-primary size-normal"
+    style="width: 300px;"
+  >
+    <!---->
+     
+    <span
+      class="v-button-label"
+    >
+      Click to change skin
+    </span>
+     
+    <!---->
+  </button>
+  
+        skin:primary
+      
+</div>
+`;
+
 exports[`Storyshots VButton/desktop disabled 1`] = `
 <div>
   <div
