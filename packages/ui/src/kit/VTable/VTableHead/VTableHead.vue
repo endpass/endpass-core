@@ -17,7 +17,7 @@ export default {
   },
   computed: {
     vTableHeadCssClass() {
-      return Object.assign(this.themeCssClass, {
+      return Object.assign({}, this.themeCssClass, {
         'v-table-head': true,
         [`skin-${this.skin}`]: true,
       });

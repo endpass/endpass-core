@@ -50,6 +50,35 @@ storiesOf('VButton/desktop', module)
       </theme-provider>
     `,
   }))
+  .add('change-skin', () => ({
+    data() {
+      return {
+        skins: [
+          'primary',
+          'secondary',
+          'tertiary',
+          'quaternary',
+          'quaternary-error',
+          'ghost',
+        ],
+        skin: 'primary',
+      };
+    },
+    methods: {
+      ...methods,
+      onSkinChange() {
+        const index = this.skins.indexOf(this.skin);
+        this.skin = this.skins[index + 1] || this.skins[0];
+      },
+    },
+    components: { VButton },
+    template: `
+      <theme-provider>      
+        <v-button @click="onSkinChange" :skin="skin" style="width: 300px;">Click to change skin</v-button>
+        skin:{{ this.skin }}
+      </theme-provider>
+    `,
+  }))
   .add('icon', () => ({
     methods,
     components: { VSvgIcon, VButton },

@@ -40,7 +40,7 @@ export default {
   },
   computed: {
     vButtonCssClass() {
-      return Object.assign(this.themeCssClass, {
+      return Object.assign({}, this.themeCssClass, {
         [`skin-${this.skin}`]: true,
         [`size-${this.size}`]: true,
       });
