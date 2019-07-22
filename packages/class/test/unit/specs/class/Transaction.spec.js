@@ -1,7 +1,6 @@
 /* eslint-disable no-restricted-properties */
 import { Transaction, TransactionFactory } from '@/index';
 import { BigNumber } from 'bignumber.js';
-// import web3 from 'web3';
 import { toChecksumAddress } from 'web3-utils';
 import { transaction, metamaskTransaction } from 'fixtures/transactions';
 

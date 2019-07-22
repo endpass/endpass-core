@@ -1,5 +1,4 @@
 import Tx from 'ethereumjs-tx';
-import web3 from 'fixtures/web3Instance';
 import { createWalletClass } from '@/wallet';
 import {
   v3,
@@ -12,7 +11,7 @@ describe('Wallet Class', () => {
   let wallet;
 
   beforeEach(() => {
-    const Wallet = createWalletClass(web3);
+    const Wallet = createWalletClass();
     wallet = new Wallet(v3);
   });
 
@@ -56,7 +55,7 @@ describe('Wallet Class', () => {
 
       describe('encryptMessageWithPublicKey / decryptMessageWithPrivateKey', () => {
         beforeEach(() => {
-          const Wallet = createWalletClass(web3);
+          const Wallet = createWalletClass();
           wallet = new Wallet(v3);
         });
 

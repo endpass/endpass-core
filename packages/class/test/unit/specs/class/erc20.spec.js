@@ -1,5 +1,3 @@
-import web3Instance from 'fixtures/web3Instance';
-
 const { createERC20TokenClass } = require.requireActual('@/erc20');
 
 describe('ERC20 Token', () => {
@@ -11,9 +9,10 @@ describe('ERC20 Token', () => {
     balance: 1,
   };
 
-  let address = '0xb8c77482e45f1f44de1745f52c74426c631bdd52';
+  const address = '0xb8c77482e45f1f44de1745f52c74426c631bdd52';
 
   let erc20;
+  const contractValue = { test: 'value' };
 
   // method.call() returns given val
   const contractMethod = val => ({
@@ -29,22 +28,18 @@ describe('ERC20 Token', () => {
   };
 
   beforeEach(() => {
-    const ERC20Token = createERC20TokenClass(web3Instance);
+    const ERC20Token = createERC20TokenClass({
+      eth: {
+        Contract: () => contractValue,
+      },
+    });
     erc20 = new ERC20Token(address);
   });
 
   it('should set web3', () => {
-    const checkValue = { test: 'value' };
-
-    const ERC20Token = createERC20TokenClass({
-      eth: {
-        Contract: () => checkValue,
-      },
-    });
-    erc20 = new ERC20Token();
     const contract = erc20.getContract();
 
-    expect(contract).toEqual(checkValue);
+    expect(contract).toEqual(contractValue);
   });
 
   it('saves address', () => {
