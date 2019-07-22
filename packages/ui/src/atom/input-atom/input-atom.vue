@@ -28,11 +28,15 @@ export default {
   },
   computed: {
     listeners() {
-      return Object.assign(this.$listeners, {
-        input: (event) => {
-          this.$emit('input', event.target.value);
+      return Object.assign(
+        {},
+        {
+          ...this.$listeners,
+          input: (value) => {
+            this.$emit('input', value);
+          },
         },
-      });
+      );
     },
 
     inputAtomCssClass() {

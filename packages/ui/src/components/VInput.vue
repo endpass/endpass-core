@@ -91,10 +91,15 @@ export default {
       return this.$attrs.name || this.label.replace(' ', '');
     },
     listeners() {
-      return {
-        ...(this.$listeners || {}),
-        input: event => this.$emit('input', event.target.value),
-      };
+      return Object.assign(
+        {},
+        {
+          ...this.$listeners,
+          input: (value) => {
+            this.$emit('input', value);
+          },
+        },
+      );
     },
     classes() {
       const classes = this.className.split(' ');
