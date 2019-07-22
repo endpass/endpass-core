@@ -1,8 +1,8 @@
-import web3 from 'web3';
+import HttpProvider from 'web3-providers-http';
+import IpcProvider from 'web3-providers-ipc';
+import WebsocketProvider from 'web3-providers-ws';
 import ProviderFactory from '@/provider/ProviderFactory';
 import MockMixin from '@/provider/mixins/MockMixin';
-
-const { HttpProvider, WebsocketProvider, IpcProvider } = web3.providers;
 
 describe('ProviderFactory', () => {
   const httpUrl = 'https://url.com';

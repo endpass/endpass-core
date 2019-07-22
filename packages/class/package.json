@@ -1,6 +1,6 @@
 {
   "name": "@endpass/class",
-  "version": "0.15.1",
+  "version": "0.16.0",
   "description": "Class modules",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -48,7 +48,6 @@
     "QueueAsync",
     "EventEmitter",
     "Network",
-    "Web3Factory",
     "Token",
     "wallet/Wallet",
     "storage/LocalStorage",
@@ -69,7 +68,6 @@
     "lodash": "^4.17.15",
     "path-to-regexp": "^2.4.0",
     "trezor-connect": "^6.0.0",
-    "web3": "1.0.0-beta.33",
     "web3-providers-http": "1.0.0-beta.33",
     "web3-providers-ipc": "1.0.0-beta.33",
     "web3-providers-ws": "1.0.0-beta.33",

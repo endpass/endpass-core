@@ -6,7 +6,6 @@ export { createERC20TokenClass } from './erc20';
 // classes WITHOUT web3 instance usage
 export { ProxyRequest } from './proxyRequest';
 export { default as EventEmitter } from './EventEmitter';
-export { default as Web3Factory } from './Web3Factory';
 export { ProviderFactory } from './provider';
 export { default as Network } from './Network';
 export { default as InpageProvider } from './provider/InpageProvider';
