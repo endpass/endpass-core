@@ -52,7 +52,9 @@
 <script>
 export default {
   name: 'VInput',
+
   inheritAttrs: false,
+
   props: {
     value: {
       type: [String, Number],
@@ -75,6 +77,7 @@ export default {
       default: null,
     },
   },
+
   computed: {
     innerValue: {
       get() {
@@ -89,7 +92,7 @@ export default {
     },
     listeners() {
       return {
-        ...this.$listeners,
+        ...(this.$listeners || {}),
         input: event => this.$emit('input', event.target.value),
       };
     },
