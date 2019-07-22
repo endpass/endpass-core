@@ -21,7 +21,7 @@
         v-if="isError"
         :is-error="isError"
       >
-        !
+        <svg-atom name="error" />
       </icon-atom>
     </select-atom>
     <error-atom
@@ -38,6 +38,7 @@ import SelectAtom from '@/atom/select-atom/select-atom';
 import FieldAtom from '@/atom/field-atom/field-atom';
 import ErrorAtom from '@/atom/error-atom/error-atom';
 import DescriptionAtom from '@/atom/description-atom/description-atom';
+import SvgAtom from '@/atom/svg-atom/svg-atom';
 
 export default {
   name: 'VSelect',
@@ -89,6 +90,7 @@ export default {
     FieldAtom,
     ErrorAtom,
     DescriptionAtom,
+    SvgAtom,
   },
 };
 </script>

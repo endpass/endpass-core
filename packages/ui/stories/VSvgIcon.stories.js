@@ -9,9 +9,9 @@ storiesOf('VSvgIcon/desktop', module).add('default', () => ({
           <tr>
             <td>
               <div>
-                <v-svg-icon name="arrow-left" height="100%" width="100%" />
+                <v-svg-icon name="endpass" height="100%" width="100%" />
               </div>
-              <span>arrow-left</span>
+              <span>endpass</span>
             </td>
             <td>
               <div>
@@ -102,13 +102,22 @@ storiesOf('VSvgIcon/desktop', module).add('default', () => ({
               <span>docs</span>
             </td>
             <td>
-
+              <div>
+                <v-svg-icon name="arrow-left" height="100%" width="100%" />
+              </div>
+              <span>arrow-left</span>
             </td>
             <td>
-
+              <div>
+                <v-svg-icon name="logout" height="100%" width="100%" />
+              </div>
+              <span>logout</span>
             </td>
             <td>
-
+              <div>
+                <v-svg-icon name="error" height="100%" width="100%" />
+              </div>
+              <span>error</span>
             </td>
           </tr>
         </table>

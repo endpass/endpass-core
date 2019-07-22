@@ -1749,6 +1749,38 @@ exports[`Storyshots VHeader/desktop default 1`] = `
       class="v-nav-divider theme-default"
     />
      
+    <div
+      class="theme-default v-logo is-white"
+    >
+      <div
+        class="v-logo-image"
+      >
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-endpass"
+            y="0"
+          />
+        </svg>
+      </div>
+       
+      <span
+        class="v-logo-label"
+      >
+        
+    Endpass
+  
+      </span>
+    </div>
+     
+    <div
+      class="v-nav-divider theme-default"
+    />
+     
     <a
       class="theme-default navigation-control-atom"
       role="button"
@@ -2001,9 +2033,17 @@ exports[`Storyshots VInput/desktop error 1`] = `
         class="icon-atom theme-default is-error"
         is-error="true"
       >
-        
-      !
-    
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-error"
+            y="0"
+          />
+        </svg>
       </i>
     </span>
      
@@ -2036,6 +2076,44 @@ exports[`Storyshots VLabel/desktop default 1`] = `
   
         Following content
       
+</div>
+`;
+
+exports[`Storyshots VLogo/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  >
+    [object Object]
+  </div>
+   
+  <div
+    class="theme-default v-logo"
+  >
+    <div
+      class="v-logo-image"
+    >
+      <svg
+        class="svg-atom theme-default"
+        height="100%"
+        width="100%"
+      >
+        <use
+          x="0"
+          xlink:href="#endpass-ui-icon-endpass"
+          y="0"
+        />
+      </svg>
+    </div>
+     
+    <span
+      class="v-logo-label"
+    >
+      
+    Endpass
+  
+    </span>
+  </div>
 </div>
 `;
 
@@ -3925,9 +4003,17 @@ exports[`Storyshots VSelect/desktop error 1`] = `
         class="icon-atom theme-default is-error"
         is-error="true"
       >
-        
-      !
-    
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-error"
+            y="0"
+          />
+        </svg>
       </i>
     </span>
      
@@ -4388,14 +4474,14 @@ exports[`Storyshots VSvgIcon/desktop default 1`] = `
           >
             <use
               x="0"
-              xlink:href="#endpass-ui-icon-arrow-left"
+              xlink:href="#endpass-ui-icon-endpass"
               y="0"
             />
           </svg>
         </div>
          
         <span>
-          arrow-left
+          endpass
         </span>
       </td>
        
@@ -4683,11 +4769,65 @@ exports[`Storyshots VSvgIcon/desktop default 1`] = `
         </span>
       </td>
        
-      <td />
+      <td>
+        <div>
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-arrow-left"
+              y="0"
+            />
+          </svg>
+        </div>
+         
+        <span>
+          arrow-left
+        </span>
+      </td>
        
-      <td />
+      <td>
+        <div>
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-logout"
+              y="0"
+            />
+          </svg>
+        </div>
+         
+        <span>
+          logout
+        </span>
+      </td>
        
-      <td />
+      <td>
+        <div>
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-error"
+              y="0"
+            />
+          </svg>
+        </div>
+         
+        <span>
+          error
+        </span>
+      </td>
     </tr>
   </table>
 </div>
