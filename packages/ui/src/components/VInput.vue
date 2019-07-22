@@ -95,8 +95,8 @@ export default {
         {},
         {
           ...this.$listeners,
-          input: (value) => {
-            this.$emit('input', value);
+          input: (e) => {
+            this.$emit('input', e.target.value);
           },
         },
       );
