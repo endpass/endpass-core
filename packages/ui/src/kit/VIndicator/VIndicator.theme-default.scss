@@ -1,0 +1,22 @@
+.v-indicator.theme-default {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.v-indicator.theme-default .v-indicator-dot{
+  margin: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.v-indicator.theme-default.status-ok .v-indicator-dot {
+  background: #3DBB61;
+}
+
+.v-indicator.theme-default.status-error .v-indicator-dot {
+  background: #DA1E28;
+}
