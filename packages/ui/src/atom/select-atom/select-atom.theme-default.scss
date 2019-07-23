@@ -22,6 +22,12 @@
   font-family: $primary-font;
   width: 100%;
   display: flex;
+  appearance: none;
+
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+  }
 }
 
 .select-atom.theme-default .select-atom-control::placeholder {
