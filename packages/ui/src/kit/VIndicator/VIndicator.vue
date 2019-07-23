@@ -16,7 +16,10 @@ export default {
   props: {
     status: {
       type: String,
-      default: 'ok', // error
+      default: 'ok',
+      validator(value) {
+        return ['ok', 'error'].indexOf(value) !== -1;
+      },
     },
   },
 

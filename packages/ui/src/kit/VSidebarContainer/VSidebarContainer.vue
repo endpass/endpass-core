@@ -14,11 +14,6 @@ import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
   name: 'VSidebarContainer',
-  computed: {
-    hasDefaultSlot() {
-      return !!this.$slots.default;
-    },
-  },
   mixins: [ThemeMixin],
 };
 </script>

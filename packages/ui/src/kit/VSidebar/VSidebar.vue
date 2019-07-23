@@ -24,6 +24,9 @@ export default {
     direction: {
       type: String,
       default: 'left',
+      validator(value) {
+        return ['right', 'left'].indexOf(value) !== -1;
+      },
     },
     isOpen: {
       type: Boolean,

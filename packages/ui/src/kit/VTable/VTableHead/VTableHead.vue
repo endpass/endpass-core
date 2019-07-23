@@ -13,6 +13,9 @@ export default {
     skin: {
       type: String,
       default: 'grey',
+      validator(value) {
+        return ['grey', 'none'].indexOf(value) !== -1;
+      },
     },
   },
   computed: {
