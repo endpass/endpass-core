@@ -13,14 +13,13 @@
   box-sizing: border-box;
   z-index: 2;
   background: $white;
-  //padding-top: 16px;
-  overflow-y: auto;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
 .v-sidebar-wrapper.theme-default {
-  overflow-x: hidden;
+  overflow: hidden;
   position: absolute;
   top: 0;
   bottom: 0;
