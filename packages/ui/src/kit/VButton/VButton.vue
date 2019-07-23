@@ -32,10 +32,28 @@ export default {
     skin: {
       type: String,
       default: 'primary',
+      validator(value) {
+        return (
+          [
+            'primary',
+            'secondary',
+            'tertiary',
+            'quaternary',
+            'ghost',
+            'social',
+            'success',
+            'error',
+            'quaternary-error',
+          ].indexOf(value) !== -1
+        );
+      },
     },
     size: {
       type: String,
       default: 'normal',
+      validator(value) {
+        return ['normal', 'big'].indexOf(value) !== -1;
+      },
     },
   },
   computed: {

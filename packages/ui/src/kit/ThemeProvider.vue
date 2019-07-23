@@ -30,6 +30,9 @@ export default {
     theme: {
       type: String,
       default: 'default',
+      validator(value) {
+        return ['default'].indexOf(value) !== -1;
+      },
     },
   },
 

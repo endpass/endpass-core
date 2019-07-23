@@ -15,6 +15,9 @@ export default {
     animation: {
       type: String,
       default: 'fade',
+      validator(value) {
+        return ['fade'].indexOf(value) !== -1;
+      },
     },
   },
   components: { MaskAtom },

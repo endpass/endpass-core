@@ -2944,192 +2944,200 @@ exports[`Storyshots VNavSidebar/desktop default 1`] = `
             class="v-sidebar theme-default is-closed"
           >
             <div
-              class="v-sidebar-container theme-default is-left"
+              class="v-sidebar-wrapper theme-default is-left"
             >
               <aside
                 class="v-sidebar-aside"
               >
                 <!---->
                  
-                <section
-                  class="theme-default v-nav-sidebar-sub-menu"
-                >
-                  <a
-                    class="theme-default navigation-sidebar-control-atom"
-                    role="button"
-                  >
-                    <!---->
-                    
-    Submenu
-    
-                    <i
-                      class="v-nav-sidebar-sub-menu-icon chevron"
-                    >
-                      <svg
-                        class="svg-atom theme-default"
-                        height="100%"
-                        width="100%"
-                      >
-                        <use
-                          x="0"
-                          xlink:href="#endpass-ui-icon-chevron-down"
-                          y="0"
-                        />
-                      </svg>
-                    </i>
-                  </a>
-                   
-                  <section
-                    class="v-nav-sidebar-sub-menu-content"
-                  >
-                    <a
-                      class="theme-default navigation-sidebar-control-atom"
-                      role="button"
-                    >
-                      
-                    Link one
-                  
-                    </a>
-                     
-                    <a
-                      class="theme-default navigation-sidebar-control-atom is-disabled"
-                      role="button"
-                    >
-                      
-                    Link two
-                  
-                    </a>
-                     
-                    <a
-                      class="theme-default navigation-sidebar-control-atom is-active"
-                      role="button"
-                    >
-                      
-                    Link three
-                  
-                    </a>
-                  </section>
-                </section>
-                 
-                <section
-                  class="theme-default v-nav-sidebar-sub-menu is-iconed"
-                >
-                  <a
-                    class="theme-default navigation-sidebar-control-atom"
-                    role="button"
-                  >
-                    <i
-                      class="v-nav-sidebar-sub-menu-icon additional"
-                    >
-                       
-                      <svg
-                        class="svg-atom theme-default"
-                        height="100%"
-                        width="100%"
-                      >
-                        <use
-                          x="0"
-                          xlink:href="#endpass-ui-icon-check"
-                          y="0"
-                        />
-                      </svg>
-                    </i>
-                    
-    Submenu with icon
-    
-                    <i
-                      class="v-nav-sidebar-sub-menu-icon chevron"
-                    >
-                      <svg
-                        class="svg-atom theme-default"
-                        height="100%"
-                        width="100%"
-                      >
-                        <use
-                          x="0"
-                          xlink:href="#endpass-ui-icon-chevron-down"
-                          y="0"
-                        />
-                      </svg>
-                    </i>
-                  </a>
-                   
-                  <section
-                    class="v-nav-sidebar-sub-menu-content"
-                  >
-                    <a
-                      class="theme-default navigation-sidebar-control-atom"
-                      role="button"
-                    >
-                      
-                    Link one
-                  
-                    </a>
-                     
-                    <a
-                      class="theme-default navigation-sidebar-control-atom is-disabled"
-                      role="button"
-                    >
-                      
-                    Link two
-                  
-                    </a>
-                     
-                    <a
-                      class="theme-default navigation-sidebar-control-atom is-active"
-                      role="button"
-                    >
-                      
-                    Link three
-                  
-                    </a>
-                  </section>
-                </section>
-                 
-                <a
-                  class="theme-default navigation-sidebar-control-atom"
-                  role="button"
-                >
-                  
-                  Single link one
-                
-                </a>
-                 
-                <a
-                  class="theme-default navigation-sidebar-control-atom"
-                  role="button"
-                >
-                  
-                  Single link two
-                
-                </a>
-                 
                 <div
-                  style="padding: 0px 16px;"
+                  class="v-sidebar-container theme-default"
                 >
                   <div
-                    class="v-divider theme-default"
+                    class="v-sidebar-container-wrapper"
                   >
-                    <hr
-                      class="v-divider-before"
-                    />
-                     
-                    <!---->
-                     
-                    <hr
-                      class="v-divider-after"
-                    />
-                  </div>
-                </div>
-                 
-                <a
-                  class="theme-default navigation-sidebar-control-atom is-active"
-                  role="button"
-                >
+                    <section
+                      class="theme-default v-nav-sidebar-sub-menu"
+                    >
+                      <a
+                        class="theme-default navigation-sidebar-control-atom"
+                        role="button"
+                      >
+                        <!---->
+                        
+    Submenu
+    
+                        <i
+                          class="v-nav-sidebar-sub-menu-icon chevron"
+                        >
+                          <svg
+                            class="svg-atom theme-default"
+                            height="100%"
+                            width="100%"
+                          >
+                            <use
+                              x="0"
+                              xlink:href="#endpass-ui-icon-chevron-down"
+                              y="0"
+                            />
+                          </svg>
+                        </i>
+                      </a>
+                       
+                      <section
+                        class="v-nav-sidebar-sub-menu-content"
+                      >
+                        <a
+                          class="theme-default navigation-sidebar-control-atom"
+                          role="button"
+                        >
+                          
+                    Link one
                   
+                        </a>
+                         
+                        <a
+                          class="theme-default navigation-sidebar-control-atom is-disabled"
+                          role="button"
+                        >
+                          
+                    Link two
+                  
+                        </a>
+                         
+                        <a
+                          class="theme-default navigation-sidebar-control-atom is-active"
+                          role="button"
+                        >
+                          
+                    Link three
+                  
+                        </a>
+                      </section>
+                    </section>
+                     
+                    <section
+                      class="theme-default v-nav-sidebar-sub-menu is-iconed"
+                    >
+                      <a
+                        class="theme-default navigation-sidebar-control-atom"
+                        role="button"
+                      >
+                        <i
+                          class="v-nav-sidebar-sub-menu-icon additional"
+                        >
+                           
+                          <svg
+                            class="svg-atom theme-default"
+                            height="100%"
+                            width="100%"
+                          >
+                            <use
+                              x="0"
+                              xlink:href="#endpass-ui-icon-check"
+                              y="0"
+                            />
+                          </svg>
+                        </i>
+                        
+    Submenu with icon
+    
+                        <i
+                          class="v-nav-sidebar-sub-menu-icon chevron"
+                        >
+                          <svg
+                            class="svg-atom theme-default"
+                            height="100%"
+                            width="100%"
+                          >
+                            <use
+                              x="0"
+                              xlink:href="#endpass-ui-icon-chevron-down"
+                              y="0"
+                            />
+                          </svg>
+                        </i>
+                      </a>
+                       
+                      <section
+                        class="v-nav-sidebar-sub-menu-content"
+                      >
+                        <a
+                          class="theme-default navigation-sidebar-control-atom"
+                          role="button"
+                        >
+                          
+                    Link one
+                  
+                        </a>
+                         
+                        <a
+                          class="theme-default navigation-sidebar-control-atom is-disabled"
+                          role="button"
+                        >
+                          
+                    Link two
+                  
+                        </a>
+                         
+                        <a
+                          class="theme-default navigation-sidebar-control-atom is-active"
+                          role="button"
+                        >
+                          
+                    Link three
+                  
+                        </a>
+                      </section>
+                    </section>
+                     
+                    <a
+                      class="theme-default navigation-sidebar-control-atom"
+                      role="button"
+                    >
+                      
+                  Single link one
+                
+                    </a>
+                     
+                    <a
+                      class="theme-default navigation-sidebar-control-atom"
+                      role="button"
+                    >
+                      
+                  Single link two
+                
+                    </a>
+                     
+                    <div
+                      style="padding: 0px 16px;"
+                    >
+                      <div
+                        class="v-divider theme-default"
+                      >
+                        <hr
+                          class="v-divider-before"
+                        />
+                         
+                        <!---->
+                         
+                        <hr
+                          class="v-divider-after"
+                        />
+                      </div>
+                    </div>
+                     
+                    <a
+                      class="theme-default navigation-sidebar-control-atom is-active"
+                      role="button"
+                    >
+                      
                   Single link three
                 
-                </a>
+                    </a>
+                  </div>
+                </div>
               </aside>
             </div>
              
@@ -4147,7 +4155,7 @@ exports[`Storyshots VSelect/desktop flat array 1`] = `
 </div>
 `;
 
-exports[`Storyshots VSidebar/desktop left 1`] = `
+exports[`Storyshots VSidebar/desktop left (fixed header) 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
@@ -4200,7 +4208,7 @@ exports[`Storyshots VSidebar/desktop left 1`] = `
         class="v-sidebar theme-default is-closed"
       >
         <div
-          class="v-sidebar-container theme-default is-left"
+          class="v-sidebar-wrapper theme-default is-left"
         >
           <aside
             class="v-sidebar-aside"
@@ -4244,29 +4252,19 @@ exports[`Storyshots VSidebar/desktop left 1`] = `
             </div>
              
             <div
-              class="v-divider theme-default"
-            >
-              <hr
-                class="v-divider-before"
-              />
-               
-              <!---->
-               
-              <hr
-                class="v-divider-after"
-              />
-            </div>
-             
-            <div
-              class="v-sidebar-panel theme-default"
+              class="v-sidebar-container theme-default"
             >
               <div
-                class="v-sidebar-panel-wrapper"
+                class="v-sidebar-container-wrapper"
               >
+                <div
+                  class="v-sidebar-panel theme-default"
+                >
+                  
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? 
                 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? 
-              
+                </div>
               </div>
             </div>
           </aside>
@@ -4278,7 +4276,7 @@ exports[`Storyshots VSidebar/desktop left 1`] = `
 </div>
 `;
 
-exports[`Storyshots VSidebar/desktop right 1`] = `
+exports[`Storyshots VSidebar/desktop right (full scrollable) 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
@@ -4331,7 +4329,7 @@ exports[`Storyshots VSidebar/desktop right 1`] = `
         class="v-sidebar theme-default is-closed"
       >
         <div
-          class="v-sidebar-container theme-default is-right"
+          class="v-sidebar-wrapper theme-default is-right"
         >
           <aside
             class="v-sidebar-aside"
@@ -4391,14 +4389,10 @@ exports[`Storyshots VSidebar/desktop right 1`] = `
             <div
               class="v-sidebar-panel theme-default"
             >
-              <div
-                class="v-sidebar-panel-wrapper"
-              >
-                
+              
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? 
               
-              </div>
             </div>
           </aside>
         </div>
