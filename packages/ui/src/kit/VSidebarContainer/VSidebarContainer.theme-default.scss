@@ -1,0 +1,22 @@
+.v-sidebar-container {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.v-sidebar-container-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 0;
+}
+
+.v-sidebar-container.theme-default .v-sidebar-container-divider {
+  height: 1px;
+  width: 100%;
+  background: $grey-2;
+}
+
+.v-sidebar .v-sidebar-container:not(:first-child) .v-sidebar-container-wrapper {
+  margin-top: 16px;
+  border-top: 1px solid $grey-2;
+}

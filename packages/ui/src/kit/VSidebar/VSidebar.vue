@@ -4,7 +4,7 @@
     :class="sideBarCssClass"
   >
     <div
-      class="v-sidebar-container"
+      class="v-sidebar-wrapper"
       :class="containerCssClass"
     >
       <aside class="v-sidebar-aside">

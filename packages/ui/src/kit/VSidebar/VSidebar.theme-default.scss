@@ -1,23 +1,25 @@
-.v-sidebar.is-closed .v-sidebar-container.is-right {
+.v-sidebar.is-closed .v-sidebar-wrapper.is-right {
   width: 0;
 }
 
-.v-sidebar.is-closed .v-sidebar-container.is-left {
+.v-sidebar.is-closed .v-sidebar-wrapper.is-left {
   width: 0;
 }
 
-.v-sidebar-container.theme-default .v-sidebar-aside {
+.v-sidebar-wrapper.theme-default .v-sidebar-aside {
   position: absolute;
   top: 0;
   bottom: 0;
   box-sizing: border-box;
-  overflow-y: auto;
   z-index: 2;
   background: $white;
-  padding: 16px 0;
+  //padding-top: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.v-sidebar-container.theme-default {
+.v-sidebar-wrapper.theme-default {
   overflow-x: hidden;
   position: absolute;
   top: 0;
@@ -25,24 +27,24 @@
   transition: width 0.4s ease-in-out;
 }
 
-.v-sidebar-container.is-right.theme-default {
+.v-sidebar-wrapper.is-right.theme-default {
   width: 280px;
   right: 0;
 }
 
-.v-sidebar-container.is-left.theme-default {
+.v-sidebar-wrapper.is-left.theme-default {
   width: 266px;
   left: 0;
 }
 
-.v-sidebar-container.is-right.theme-default .v-sidebar-aside {
+.v-sidebar-wrapper.is-right.theme-default .v-sidebar-aside {
   width: 270px;
   left: 10px;
 
   box-shadow: -4px 2px 8px rgba(36, 42, 46, 0.1), 0px 1px 1px rgba(36, 42, 46, 0.1);
 }
 
-.v-sidebar-container.is-left.theme-default .v-sidebar-aside {
+.v-sidebar-wrapper.is-left.theme-default .v-sidebar-aside {
   width: 256px;
   right: 10px;
   box-shadow: 4px 2px 8px rgba(36, 42, 46, 0.1), 0px 1px 1px rgba(36, 42, 46, 0.1);

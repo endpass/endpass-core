@@ -9,7 +9,9 @@
         slot="overlay"
         @click="emitClose"
       />
-      <slot />
+      <v-sidebar-container>
+        <slot />
+      </v-sidebar-container>
     </v-sidebar>
   </div>
 </template>
@@ -18,6 +20,7 @@
 import ThemeMixin from '@/mixins/ThemeMixin';
 import VSidebar from '@/kit/VSidebar';
 import OverlayAtom from '@/atom/overlay-atom/overlay-atom';
+import VSidebarContainer from '@/kit/VSidebarContainer/VSidebarContainer';
 
 export default {
   name: 'VNavSidebar',
@@ -42,6 +45,10 @@ export default {
   },
 
   mixins: [ThemeMixin],
-  components: { OverlayAtom, VSidebar },
+  components: {
+    VSidebarContainer,
+    OverlayAtom,
+    VSidebar,
+  },
 };
 </script>
