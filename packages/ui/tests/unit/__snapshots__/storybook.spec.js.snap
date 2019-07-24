@@ -3917,23 +3917,6 @@ exports[`Storyshots VSelect/desktop disabled 1`] = `
         </option>
       </select>
        
-      <!---->
-       
-      <i
-        class="icon-atom icon-arrow theme-default"
-      >
-        <svg
-          class="svg-atom theme-default"
-          height="100%"
-          width="100%"
-        >
-          <use
-            x="0"
-            xlink:href="#endpass-ui-icon-chevron-down"
-            y="0"
-          />
-        </svg>
-      </i>
     </span>
      
     <!---->
@@ -3994,23 +3977,6 @@ exports[`Storyshots VSelect/desktop enabled 1`] = `
         </option>
       </select>
        
-      <!---->
-       
-      <i
-        class="icon-atom icon-arrow theme-default"
-      >
-        <svg
-          class="svg-atom theme-default"
-          height="100%"
-          width="100%"
-        >
-          <use
-            x="0"
-            xlink:href="#endpass-ui-icon-chevron-down"
-            y="0"
-          />
-        </svg>
-      </i>
     </span>
      
     <!---->
@@ -4105,22 +4071,6 @@ exports[`Storyshots VSelect/desktop error 1`] = `
           />
         </svg>
       </i>
-       
-      <i
-        class="icon-atom icon-arrow theme-default"
-      >
-        <svg
-          class="svg-atom theme-default"
-          height="100%"
-          width="100%"
-        >
-          <use
-            x="0"
-            xlink:href="#endpass-ui-icon-chevron-down"
-            y="0"
-          />
-        </svg>
-      </i>
     </span>
      
     <div
@@ -4187,23 +4137,6 @@ exports[`Storyshots VSelect/desktop flat array 1`] = `
         </option>
       </select>
        
-      <!---->
-       
-      <i
-        class="icon-atom icon-arrow theme-default"
-      >
-        <svg
-          class="svg-atom theme-default"
-          height="100%"
-          width="100%"
-        >
-          <use
-            x="0"
-            xlink:href="#endpass-ui-icon-chevron-down"
-            y="0"
-          />
-        </svg>
-      </i>
     </span>
      
     <!---->
