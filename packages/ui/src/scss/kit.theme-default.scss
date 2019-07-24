@@ -20,6 +20,7 @@
 @import '@/atom/icon-atom/icon-atom.theme-default.scss';
 @import '@/atom/select-atom/select-atom.theme-default.scss';
 @import '@/atom/overlay-atom/overlay-atom.theme-default.scss';
+@import '@/atom/file-select-atom/file-select-atom.theme-default.scss';
 
 // kit
 @import '@/kit/VIndicator/VIndicator.theme-default.scss';
@@ -36,6 +37,8 @@
 @import '@/kit/VNavDivider/VNavDivider.theme-default.scss';
 @import '@/kit/VHeader/VHeader.theme-default.scss';
 @import '@/kit/VButton/VButton.theme-default.scss';
+@import '@/kit/VFileSelectButton/VFileSelectButton.theme-default.scss';
+@import '@/kit/VFileDropArea/VFileDropArea.theme-default.scss';
 @import '@/kit/VCheckbox/VCheckbox.theme-default.scss';
 @import '@/kit/VContentSwitcher/VContentSwitcher.theme-default.scss';
 @import '@/kit/VModal/VModal.theme-default.scss';

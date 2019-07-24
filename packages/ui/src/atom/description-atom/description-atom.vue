@@ -4,6 +4,7 @@
     class="description-atom"
   >
     {{ description }}
+    <slot />
   </div>
 </template>
 
