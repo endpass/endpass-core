@@ -17,12 +17,13 @@
   padding: 0 16px;
   height: 38px;
   border: 0;
-  background: none;
   outline: 0;
   font-family: $primary-font;
   width: 100%;
   display: flex;
   appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 11L3 5.99997L3.707 5.29297L8 9.58597L12.293 5.29297L13 5.99997L8 11Z" fill="currentColor" /><path fill-rule="evenodd" clip-rule="evenodd" d="M8 11L3 5.99997L3.707 5.29297L8 9.58597L12.293 5.29297L13 5.99997L8 11Z" fill="currentColor"/></svg>') no-repeat calc(100% - 10px) center;
+  background-size: 16px;
 
   &:-moz-focusring {
     color: transparent;

@@ -23,9 +23,6 @@
       >
         <svg-atom name="error" />
       </icon-atom>
-      <icon-atom class="icon-arrow">
-        <svg-atom name="chevron-down" />
-      </icon-atom>
     </select-atom>
     <error-atom
       v-if="isError"
