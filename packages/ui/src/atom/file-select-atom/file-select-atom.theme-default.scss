@@ -1,0 +1,91 @@
+.file-select-atom-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.file-select-atom.theme-default {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  display: flex;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  width: 100%;
+}
+
+.file-select-atom-label {
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s, border-color 0.3s, color 0.3s;
+  outline: 0;
+  box-shadow: 0 2px 4px rgba(36, 42, 46, 0.1), 0 1px 1px rgba(36, 42, 46, 0.1);
+  background: $primary-7;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-select-atom-slot {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+  white-space: nowrap;
+}
+
+.file-select-atom.theme-default[disabled] .file-select-atom-label {
+  border-color: transparent !important;
+  box-shadow: none !important;
+  background: $grey-2 !important;
+  color: $white !important;
+  cursor: default !important;
+}
+
+.file-select-atom.theme-default .file-select-atom-label:hover {
+  background: $primary-6;
+}
+
+.file-select-atom.theme-default .file-select-atom-label:focus {
+  box-shadow: none;
+}
+
+.file-select-atom.theme-default .file-select-atom-label:active {
+  background: $primary-8;
+  box-shadow: 0 2px 4px rgba(36, 42, 46, 0.1), 0 1px 1px rgba(36, 42, 46, 0.1);
+}
+
+.file-select-atom.theme-default.size-normal .file-select-atom-label {
+  padding: 12px 24px 10px;
+}
+
+.file-select-atom.theme-default.size-big .file-select-atom-label {
+  padding: 18px 24px 16px;
+}
+
+.file-select-atom.theme-default.size-area .file-select-atom-label {
+  padding: 12px 24px 10px;
+  width: 100%;
+  height: 154px;
+}
+
+.file-select-atom.theme-default.skin-ghost .file-select-atom-label {
+  color: $primary-7;
+  background: $grey-1;
+  box-shadow: none;
+}
+
+.file-select-atom.theme-default.skin-ghost .file-select-atom-label:hover {
+  background: $grey-2;
+}
+
+.file-select-atom.theme-default.skin-ghost .file-select-atom-label:active {
+  background: $grey-3;
+  color: $white;
+}
+

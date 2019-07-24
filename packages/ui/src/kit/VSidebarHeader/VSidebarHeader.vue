@@ -4,14 +4,14 @@
     :class="themeCssClass"
   >
     <div
-      v-if="hasTitleSlot || hasDefaultSlot"
+      v-if="hasTitleSlot || isDefaultSlot"
       class="v-sidebar-header-content"
     >
       <h3 v-if="hasTitleSlot">
         <slot name="title" />
       </h3>
       <div
-        v-if="hasDefaultSlot"
+        v-if="isDefaultSlot"
         class="v-sidebar-header-subtitle"
       >
         <slot />
@@ -36,7 +36,7 @@ export default {
     hasTitleSlot() {
       return !!this.$slots.title;
     },
-    hasDefaultSlot() {
+    isDefaultSlot() {
       return !!this.$slots.default;
     },
   },

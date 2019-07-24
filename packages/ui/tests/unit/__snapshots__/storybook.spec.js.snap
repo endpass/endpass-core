@@ -4,9 +4,7 @@ exports[`Storyshots Typography default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <h1
     class="v-h1"
@@ -68,9 +66,7 @@ exports[`Storyshots VButton/desktop change-skin 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <button
     class="v-button theme-default skin-primary size-normal"
@@ -96,9 +92,7 @@ exports[`Storyshots VButton/desktop disabled 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <table
     width="100%"
@@ -324,9 +318,7 @@ exports[`Storyshots VButton/desktop enabled 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <table
     width="100%"
@@ -542,9 +534,7 @@ exports[`Storyshots VButton/desktop icon 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <table
     width="100%"
@@ -900,9 +890,7 @@ exports[`Storyshots VButton/desktop social 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <table
     width="100%"
@@ -1070,9 +1058,7 @@ exports[`Storyshots VButton/desktop state 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <table
     width="100%"
@@ -1216,9 +1202,7 @@ exports[`Storyshots VCard/desktop default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     class="v-card theme-default"
@@ -1238,18 +1222,14 @@ exports[`Storyshots VCheckbox/desktop array 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <label
     class="v-checkbox theme-default"
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    >
-      [object Object]
-    </i>
+    />
      
     <input
       class="v-checkbox-control"
@@ -1278,18 +1258,14 @@ exports[`Storyshots VCheckbox/desktop default state 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <label
     class="v-checkbox theme-default"
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    >
-      [object Object]
-    </i>
+    />
      
     <input
       class="v-checkbox-control"
@@ -1313,18 +1289,14 @@ exports[`Storyshots VCheckbox/desktop default state false 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <label
     class="v-checkbox theme-default"
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    >
-      [object Object]
-    </i>
+    />
      
     <input
       class="v-checkbox-control"
@@ -1348,18 +1320,14 @@ exports[`Storyshots VCheckbox/desktop default state true 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <label
     class="v-checkbox theme-default is-checked"
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    >
-      [object Object]
-    </i>
+    />
      
     <input
       class="v-checkbox-control"
@@ -1383,18 +1351,14 @@ exports[`Storyshots VCheckbox/desktop disabled 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <label
     class="v-checkbox theme-default is-disabled"
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    >
-      [object Object]
-    </i>
+    />
      
     <input
       class="v-checkbox-control"
@@ -1420,9 +1384,7 @@ exports[`Storyshots VCheckbox/desktop disabled 1`] = `
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    >
-      [object Object]
-    </i>
+    />
      
     <input
       class="v-checkbox-control"
@@ -1447,18 +1409,14 @@ exports[`Storyshots VCheckbox/desktop error 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <label
     class="v-checkbox theme-default is-error"
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    >
-      [object Object]
-    </i>
+    />
      
     <input
       class="v-checkbox-control is-danger"
@@ -1482,18 +1440,14 @@ exports[`Storyshots VCheckbox/desktop true/false attr 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <label
     class="v-checkbox theme-default"
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    >
-      [object Object]
-    </i>
+    />
      
     <input
       class="v-checkbox-control"
@@ -1517,9 +1471,7 @@ exports[`Storyshots VContentSwitcher/desktop array objects 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <ul
     class="v-content-switcher theme-default"
@@ -1600,9 +1552,7 @@ exports[`Storyshots VContentSwitcher/desktop simple array strings 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <ul
     class="v-content-switcher theme-default"
@@ -1667,9 +1617,7 @@ exports[`Storyshots VDivider/desktop default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     class="v-divider theme-default"
@@ -1692,9 +1640,7 @@ exports[`Storyshots VDivider/desktop with text 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     class="v-divider theme-default"
@@ -1717,13 +1663,419 @@ exports[`Storyshots VDivider/desktop with text 1`] = `
 </div>
 `;
 
+exports[`Storyshots VFileDropArea/desktop custom text 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div
+    accept="image/*"
+    class="field-atom v-file-drop-area theme-default theme-default"
+  >
+    <label
+      class="label-atom theme-default"
+    >
+      
+  Multiple files
+
+    </label>
+     
+    <button
+      accept="image/*"
+      class="file-select-atom theme-default size-area skin-ghost"
+      type="button"
+    >
+      <label
+        class="file-select-atom-label"
+        for="file-select-atom-idx-2"
+      >
+        <span
+          class="file-select-atom-slot"
+        >
+          
+          Custom text
+        
+    
+  
+        </span>
+         
+        <input
+          accept="image/*"
+          class="file-select-atom-input"
+          id="file-select-atom-idx-2"
+          type="file"
+        />
+      </label>
+    </button>
+     
+    <div
+      accept="image/*"
+      class="description-atom v-file-drop-area-desc theme-default"
+    >
+      
+  images only, multiple
+  
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VFileDropArea/desktop disable 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div
+    accept="image/*"
+    class="field-atom v-file-drop-area theme-default theme-default"
+    disabled="disabled"
+  >
+    <label
+      class="label-atom theme-default"
+    >
+      
+  Disabled state
+
+    </label>
+     
+    <button
+      accept="image/*"
+      class="file-select-atom theme-default size-area skin-ghost"
+      disabled="disabled"
+      type="button"
+    >
+      <label
+        class="file-select-atom-label"
+        for="file-select-atom-idx-3"
+      >
+        <span
+          class="file-select-atom-slot"
+        >
+          
+    Add File
+  
+        </span>
+         
+        <input
+          accept="image/*"
+          class="file-select-atom-input"
+          disabled="disabled"
+          id="file-select-atom-idx-3"
+          type="file"
+        />
+      </label>
+    </button>
+     
+    <div
+      accept="image/*"
+      class="description-atom v-file-drop-area-desc theme-default"
+      disabled="disabled"
+    >
+      
+  images only
+  
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VFileDropArea/desktop enabled 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div
+    class="field-atom v-file-drop-area theme-default theme-default"
+  >
+    <label
+      class="label-atom theme-default"
+    >
+      
+  Single file
+
+    </label>
+     
+    <button
+      class="file-select-atom theme-default size-area skin-ghost"
+      type="button"
+    >
+      <label
+        class="file-select-atom-label"
+        for="file-select-atom-idx-1"
+      >
+        <span
+          class="file-select-atom-slot"
+        >
+          
+    Add File
+  
+        </span>
+         
+        <input
+          class="file-select-atom-input"
+          id="file-select-atom-idx-1"
+          type="file"
+        />
+      </label>
+    </button>
+     
+    <div
+      class="description-atom v-file-drop-area-desc theme-default"
+    >
+      
+  first description
+  
+      <span>
+        
+            with any file type
+          
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VFileSelectButton/desktop states 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <table>
+    <tr>
+      <td>
+        <div>
+          <div
+            class="field-atom v-file-select-button theme-default theme-default"
+          >
+            <label
+              class="label-atom v-file-select-label theme-default"
+            >
+              
+  Single file
+
+            </label>
+             
+            <div
+              class="description-atom v-file-select-button-desc theme-default"
+            >
+              
+  any file type
+  
+            </div>
+             
+            <button
+              class="file-select-atom theme-default size-normal skin-primary"
+              type="button"
+            >
+              <label
+                class="file-select-atom-label"
+                for="file-select-atom-idx-4"
+              >
+                <span
+                  class="file-select-atom-slot"
+                >
+                  
+    Add File
+  
+                </span>
+                 
+                <input
+                  class="file-select-atom-input"
+                  id="file-select-atom-idx-4"
+                  type="file"
+                />
+              </label>
+            </button>
+          </div>
+        </div>
+      </td>
+       
+      <td>
+        <div>
+          <div
+            accept="image/x-png,image/jpeg"
+            class="field-atom v-file-select-button theme-default theme-default"
+          >
+            <label
+              accept="image/x-png,image/jpeg"
+              class="label-atom v-file-select-label theme-default"
+            >
+              
+  Custom text
+
+            </label>
+             
+            <div
+              accept="image/x-png,image/jpeg"
+              class="description-atom v-file-select-button-desc theme-default"
+            >
+              
+  only .png and .jpg files
+  
+            </div>
+             
+            <button
+              accept="image/x-png,image/jpeg"
+              class="file-select-atom theme-default size-normal skin-primary"
+              type="button"
+            >
+              <label
+                class="file-select-atom-label"
+                for="file-select-atom-idx-5"
+              >
+                <span
+                  class="file-select-atom-slot"
+                >
+                  
+                  text
+                
+    
+  
+                </span>
+                 
+                <input
+                  accept="image/x-png,image/jpeg"
+                  class="file-select-atom-input"
+                  id="file-select-atom-idx-5"
+                  type="file"
+                />
+              </label>
+            </button>
+          </div>
+        </div>
+      </td>
+       
+      <td>
+        <div>
+          <div
+            accept="image/*"
+            class="field-atom v-file-select-button theme-default theme-default"
+            multiple="multiple"
+          >
+            <label
+              accept="image/*"
+              class="label-atom v-file-select-label theme-default"
+              multiple="multiple"
+            >
+              
+  Multiple files
+
+            </label>
+             
+            <div
+              accept="image/*"
+              class="description-atom v-file-select-button-desc theme-default"
+              multiple="multiple"
+            >
+              
+  images only, multiple
+  
+            </div>
+             
+            <button
+              accept="image/*"
+              class="file-select-atom theme-default size-normal skin-primary"
+              multiple="multiple"
+              type="button"
+            >
+              <label
+                class="file-select-atom-label"
+                for="file-select-atom-idx-6"
+              >
+                <span
+                  class="file-select-atom-slot"
+                >
+                  
+                  this is multiple select
+                
+    
+  
+                </span>
+                 
+                <input
+                  accept="image/*"
+                  class="file-select-atom-input"
+                  id="file-select-atom-idx-6"
+                  multiple="multiple"
+                  type="file"
+                />
+              </label>
+            </button>
+          </div>
+        </div>
+      </td>
+       
+      <td>
+        <div>
+          <div
+            accept="image/*"
+            class="field-atom v-file-select-button theme-default theme-default"
+            disabled="disabled"
+          >
+            <label
+              accept="image/*"
+              class="label-atom v-file-select-label theme-default"
+              disabled="disabled"
+            >
+              
+  Disabled state
+
+            </label>
+             
+            <div
+              accept="image/*"
+              class="description-atom v-file-select-button-desc theme-default"
+              disabled="disabled"
+            >
+              
+  images only
+  
+            </div>
+             
+            <button
+              accept="image/*"
+              class="file-select-atom theme-default size-normal skin-primary"
+              disabled="disabled"
+              type="button"
+            >
+              <label
+                class="file-select-atom-label"
+                for="file-select-atom-idx-7"
+              >
+                <span
+                  class="file-select-atom-slot"
+                >
+                  
+    Add File
+  
+                </span>
+                 
+                <input
+                  accept="image/*"
+                  class="file-select-atom-input"
+                  disabled="disabled"
+                  id="file-select-atom-idx-7"
+                  type="file"
+                />
+              </label>
+            </button>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+`;
+
 exports[`Storyshots VHeader/desktop default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <header
     class="v-header theme-default"
@@ -1862,9 +2214,7 @@ exports[`Storyshots VIndicator/desktop default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <table
     class="storybook-table"
@@ -1910,9 +2260,7 @@ exports[`Storyshots VInput/desktop disabled 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     class="field-atom theme-default"
@@ -1935,7 +2283,7 @@ exports[`Storyshots VInput/desktop disabled 1`] = `
     >
       
   Helper text goes here
-
+  
     </div>
      
     <span
@@ -1959,9 +2307,7 @@ exports[`Storyshots VInput/desktop enabled 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     class="field-atom theme-default"
@@ -1982,7 +2328,7 @@ exports[`Storyshots VInput/desktop enabled 1`] = `
     >
       
   Helper text goes here
-
+  
     </div>
      
     <span
@@ -2017,7 +2363,7 @@ exports[`Storyshots VInput/desktop enabled 1`] = `
     >
       
   Helper text goes here
-
+  
     </div>
      
     <span
@@ -2042,9 +2388,7 @@ exports[`Storyshots VInput/desktop error 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     class="field-atom theme-default"
@@ -2065,7 +2409,7 @@ exports[`Storyshots VInput/desktop error 1`] = `
     >
       
   Helper text goes here
-
+  
     </div>
      
     <span
@@ -2110,9 +2454,7 @@ exports[`Storyshots VLabel/desktop default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <label
     class="label-atom theme-default"
@@ -2131,9 +2473,7 @@ exports[`Storyshots VLogo/desktop default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     class="theme-default v-logo"
@@ -2169,9 +2509,7 @@ exports[`Storyshots VModal/VModalCard both 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     class="mask-atom theme-default"
@@ -2187,15 +2525,11 @@ exports[`Storyshots VModal/VModalCard both 1`] = `
         >
           <button
             class="v-modal-card-back"
-          >
-            [object Object]
-          </button>
+          />
            
           <button
             class="v-modal-card-close"
-          >
-            [object Object]
-          </button>
+          />
         </div>
          
         <header
@@ -2225,9 +2559,7 @@ exports[`Storyshots VModal/VModalCard closable 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     class="mask-atom theme-default"
@@ -2245,9 +2577,7 @@ exports[`Storyshots VModal/VModalCard closable 1`] = `
            
           <button
             class="v-modal-card-close"
-          >
-            [object Object]
-          </button>
+          />
         </div>
          
         <header
@@ -2277,9 +2607,7 @@ exports[`Storyshots VModal/VModalCard default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     class="mask-atom theme-default"
@@ -2325,9 +2653,7 @@ exports[`Storyshots VModal/VModalCard returnable 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     class="mask-atom theme-default"
@@ -2343,9 +2669,7 @@ exports[`Storyshots VModal/VModalCard returnable 1`] = `
         >
           <button
             class="v-modal-card-back"
-          >
-            [object Object]
-          </button>
+          />
            
           <!---->
         </div>
@@ -2377,9 +2701,7 @@ exports[`Storyshots VModal/VModalInfoCard both 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     class="mask-atom theme-default"
@@ -2407,15 +2729,11 @@ exports[`Storyshots VModal/VModalInfoCard both 1`] = `
           >
             <button
               class="v-modal-card-back"
-            >
-              [object Object]
-            </button>
+            />
              
             <button
               class="v-modal-card-close"
-            >
-              [object Object]
-            </button>
+            />
           </div>
            
           <header
@@ -2446,9 +2764,7 @@ exports[`Storyshots VModal/VModalInfoCard closable 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     class="mask-atom theme-default"
@@ -2478,9 +2794,7 @@ exports[`Storyshots VModal/VModalInfoCard closable 1`] = `
              
             <button
               class="v-modal-card-close"
-            >
-              [object Object]
-            </button>
+            />
           </div>
            
           <header
@@ -2511,9 +2825,7 @@ exports[`Storyshots VModal/VModalInfoCard default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     class="mask-atom theme-default"
@@ -2572,9 +2884,7 @@ exports[`Storyshots VModal/VModalInfoCard returnable 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     class="mask-atom theme-default"
@@ -2602,9 +2912,7 @@ exports[`Storyshots VModal/VModalInfoCard returnable 1`] = `
           >
             <button
               class="v-modal-card-back"
-            >
-              [object Object]
-            </button>
+            />
              
             <!---->
           </div>
@@ -2637,9 +2945,7 @@ exports[`Storyshots VNavControl/desktop active 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <a
     class="theme-default navigation-control-atom is-active"
@@ -2654,9 +2960,7 @@ exports[`Storyshots VNavControl/desktop as button 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <a
     class="theme-default navigation-control-atom"
@@ -2671,9 +2975,7 @@ exports[`Storyshots VNavControl/desktop default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <a
     class="theme-default navigation-control-atom"
@@ -2688,9 +2990,7 @@ exports[`Storyshots VNavDivider/desktop default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <header
     class="v-header theme-default"
@@ -2730,9 +3030,7 @@ exports[`Storyshots VNavIconButton/desktop active 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <button
     class="theme-default navigation-icon-button-atom is-active"
@@ -2758,9 +3056,7 @@ exports[`Storyshots VNavIconButton/desktop default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <button
     class="theme-default navigation-icon-button-atom"
@@ -2786,9 +3082,7 @@ exports[`Storyshots VNavIconButton/desktop with icon as prop 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <button
     class="theme-default navigation-icon-button-atom"
@@ -2813,9 +3107,7 @@ exports[`Storyshots VNavSidebar/desktop default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     style="position: relative; height: 100vh;"
@@ -3153,9 +3445,7 @@ exports[`Storyshots VNavSidebarControl/desktop active 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <a
     class="theme-default navigation-sidebar-control-atom is-active"
@@ -3172,9 +3462,7 @@ exports[`Storyshots VNavSidebarControl/desktop as button 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <a
     class="theme-default navigation-sidebar-control-atom"
@@ -3191,9 +3479,7 @@ exports[`Storyshots VNavSidebarControl/desktop as disabled button 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <a
     class="theme-default navigation-sidebar-control-atom is-disabled"
@@ -3210,9 +3496,7 @@ exports[`Storyshots VNavSidebarControl/desktop default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <a
     class="theme-default navigation-sidebar-control-atom"
@@ -3229,9 +3513,7 @@ exports[`Storyshots VNavSidebarControl/desktop disabled 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <a
     class="theme-default navigation-sidebar-control-atom is-disabled"
@@ -3248,9 +3530,7 @@ exports[`Storyshots VNavSidebarSubMenu/desktop default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <section
     class="theme-default v-nav-sidebar-sub-menu"
@@ -3318,9 +3598,7 @@ exports[`Storyshots VNavSidebarSubMenu/desktop disabled 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <section
     class="theme-default v-nav-sidebar-sub-menu"
@@ -3388,9 +3666,7 @@ exports[`Storyshots VNavSidebarSubMenu/desktop with icon as prop 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <section
     class="theme-default v-nav-sidebar-sub-menu is-iconed"
@@ -3473,9 +3749,7 @@ exports[`Storyshots VNavSidebarSubMenu/desktop with icon as slot 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <section
     class="theme-default v-nav-sidebar-sub-menu is-iconed"
@@ -3560,9 +3834,7 @@ exports[`Storyshots VNavSubMenu/desktop default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <section
     class="v-nav-sub-menu theme-default"
@@ -3623,9 +3895,7 @@ exports[`Storyshots VPagination/desktop default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     class="v-pagination theme-default"
@@ -3678,9 +3948,7 @@ exports[`Storyshots VPagination/desktop fullProps 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     class="v-pagination theme-default"
@@ -3775,9 +4043,7 @@ exports[`Storyshots VPagination/desktop withoutTotal 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     class="v-pagination theme-default"
@@ -3865,9 +4131,7 @@ exports[`Storyshots VSelect/desktop disabled 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     class="field-atom v-select theme-default"
@@ -3890,7 +4154,7 @@ exports[`Storyshots VSelect/desktop disabled 1`] = `
     >
       
   Helper text goes here
-
+  
     </div>
      
     <span
@@ -3928,9 +4192,7 @@ exports[`Storyshots VSelect/desktop enabled 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     class="field-atom v-select theme-default"
@@ -3951,7 +4213,7 @@ exports[`Storyshots VSelect/desktop enabled 1`] = `
     >
       
   Helper text goes here
-
+  
     </div>
      
     <span
@@ -4005,9 +4267,7 @@ exports[`Storyshots VSelect/desktop error 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     class="field-atom v-select theme-default"
@@ -4028,7 +4288,7 @@ exports[`Storyshots VSelect/desktop error 1`] = `
     >
       
   Helper text goes here
-
+  
     </div>
      
     <span
@@ -4088,9 +4348,7 @@ exports[`Storyshots VSelect/desktop flat array 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     class="field-atom v-select theme-default"
@@ -4111,7 +4369,7 @@ exports[`Storyshots VSelect/desktop flat array 1`] = `
     >
       
   Helper text goes here
-
+  
     </div>
      
     <span
@@ -4159,9 +4417,7 @@ exports[`Storyshots VSidebar/desktop left 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     style="position: relative; height: 100vh;"
@@ -4280,9 +4536,7 @@ exports[`Storyshots VSidebar/desktop right 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     style="position: relative; height: 100vh;"
@@ -4401,9 +4655,7 @@ exports[`Storyshots VSuperMenuControl/desktop active 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <a
     class="theme-default v-super-menu-control is-active"
@@ -4435,9 +4687,7 @@ exports[`Storyshots VSuperMenuControl/desktop as button 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <a
     class="theme-default v-super-menu-control"
@@ -4469,9 +4719,7 @@ exports[`Storyshots VSuperMenuControl/desktop default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <a
     class="theme-default v-super-menu-control"
@@ -4503,9 +4751,7 @@ exports[`Storyshots VSvgIcon/desktop default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <table
     class="storybook-table icons"
@@ -4883,9 +5129,7 @@ exports[`Storyshots VTable/desktop skin-grey(default) 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <table
     class="theme-default v-table"
@@ -5336,9 +5580,7 @@ exports[`Storyshots VTable/desktop skin-none 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <table
     class="theme-default v-table"
@@ -5789,9 +6031,7 @@ exports[`Storyshots VTable/desktop with-container 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     style="padding: 10px; background: white;"
@@ -6250,9 +6490,7 @@ exports[`Storyshots VTable/desktop with-container(no-header) 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <div
     style="padding: 10px; background: white;"
@@ -6667,9 +6905,7 @@ exports[`Storyshots VTable/desktop without-header 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  >
-    [object Object]
-  </div>
+  />
    
   <table
     class="theme-default v-table"
