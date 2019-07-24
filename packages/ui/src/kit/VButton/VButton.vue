@@ -4,17 +4,25 @@
     class="v-button"
     v-on="$listeners"
   >
+
     <icon-atom
-      v-if="$slots.iconBefore"
+      v-if="isLoading"
+      class="v-button-icon v-button-icon-loader"
+    >
+      <v-svg-icon name="loader"></v-svg-icon>
+    </icon-atom>
+    <icon-atom
+      v-if="$slots.iconBefore && !isLoading"
       class="v-button-icon icon-before"
     >
       <slot name="iconBefore" />
     </icon-atom>
-    <span class="v-button-label">
+    <span class="v-button-label"
+      v-if="!isLoading">
       <slot />
     </span>
     <icon-atom
-      v-if="$slots.iconAfter"
+      v-if="$slots.iconAfter && !isLoading"
       class="v-button-icon icon-after"
     >
       <slot name="iconAfter" />
@@ -24,6 +32,7 @@
 
 <script>
 import IconAtom from '@/atom/icon-atom/icon-atom';
+import VSvgIcon from '@/kit/VSvgIcon';
 import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
@@ -48,6 +57,10 @@ export default {
         );
       },
     },
+    isLoading: {
+      type: Boolean,
+      default: false
+    },
     size: {
       type: String,
       default: 'normal',
@@ -65,6 +78,6 @@ export default {
     },
   },
   mixins: [ThemeMixin],
-  components: { IconAtom },
+  components: { IconAtom, VSvgIcon },
 };
 </script>

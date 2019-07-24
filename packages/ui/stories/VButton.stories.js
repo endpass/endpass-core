@@ -73,7 +73,7 @@ storiesOf('VButton/desktop', module)
     },
     components: { VButton },
     template: `
-      <theme-provider>      
+      <theme-provider>
         <v-button @click="onSkinChange" :skin="skin" style="width: 300px;">Click to change skin</v-button>
         skin:{{ this.skin }}
       </theme-provider>
@@ -280,6 +280,44 @@ storiesOf('VButton/desktop', module)
               <td><v-button disabled @focus="onFocus" skin="tertiary" size="big">Button Label</v-button></td>
               <td><v-button disabled @blur="onBlur" skin="quaternary" size="big">Button Label</v-button></td>
               <td><v-button disabled @mouseleave="onLeave" skin="ghost" size="big">Button Label</v-button></td>
+            </tr>
+          </tbody>
+        </table>
+      </theme-provider>
+    `,
+  }))
+  .add('loading', () => ({
+    methods,
+    components: { VButton },
+    template: `
+      <theme-provider>
+        <table width="100%">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Primary</th>
+              <th>Secondary</th>
+              <th>Tertiary</th>
+              <th>Quaternary</th>
+              <th>Ghost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Normal</th>
+              <td><v-button :isLoading="true" @click="onClick">Button Label</v-button></td>
+              <td><v-button :isLoading="true" @mouseenter="onEnter" skin="secondary">Button Label</v-button></td>
+              <td><v-button :isLoading="true" @focus="onFocus" skin="tertiary">Button Label</v-button></td>
+              <td><v-button :isLoading="true" @blur="onBlur" skin="quaternary">Button Label</v-button></td>
+              <td><v-button :isLoading="true" @mouseleave="onLeave" skin="ghost">Button Label</v-button></td>
+            </tr>
+            <tr>
+              <th scope="row">Big</th>
+              <td><v-button :isLoading="true" @click="onClick" size="big">Button Label</v-button></td>
+              <td><v-button :isLoading="true" @mouseenter="onEnter" skin="secondary" size="big">Button Label</v-button></td>
+              <td><v-button :isLoading="true" @focus="onFocus" skin="tertiary" size="big">Button Label</v-button></td>
+              <td><v-button :isLoading="true" @blur="onBlur" skin="quaternary" size="big">Button Label</v-button></td>
+              <td><v-button :isLoading="true" @mouseleave="onLeave" skin="ghost" size="big">Button Label</v-button></td>
             </tr>
           </tbody>
         </table>

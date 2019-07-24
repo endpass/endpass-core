@@ -30,6 +30,12 @@
   align-items: center;
 }
 
+.v-button.theme-default .v-button-icon.v-button-icon-loader {
+  padding: 2.5px 0px;
+  margin: -0.5px 0;
+  animation: v-spin 1.5s linear infinite;
+}
+
 .v-button.theme-default .v-button-icon.icon-before {
   margin-right: 5px;
 }
