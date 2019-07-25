@@ -20,7 +20,7 @@
 import ThemeMixin from '@/mixins/ThemeMixin';
 import VSidebar from '@/kit/VSidebar';
 import OverlayAtom from '@/atom/overlay-atom/overlay-atom';
-import VSidebarContainer from '@/kit/VSidebarContainer/VSidebarContainer';
+import VSidebarContainer from '@/kit/VSidebar/VSidebarContainer/VSidebarContainer';
 
 export default {
   name: 'VNavSidebar',

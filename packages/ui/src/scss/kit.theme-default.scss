@@ -23,14 +23,16 @@
 @import '@/atom/file-select-atom/file-select-atom.theme-default.scss';
 
 // kit
+
 @import '@/kit/VIndicator/VIndicator.theme-default.scss';
+@import '@/kit/VProgressCircle/VProgressCircle.theme-default.scss';
 @import '@/kit/VLogo/VLogo.theme-default.scss';
 @import '@/kit/VSuperMenuControl/VSuperMenuControl.theme-default.scss';
 @import '@/kit/VPagination/VPagination.theme-default.scss';
 @import '@/kit/VSidebar/VSidebar.theme-default.scss';
-@import '@/kit/VSidebarHeader/VSidebarHeader.theme-default.scss';
-@import '@/kit/VSidebarPanel/VSidebarPanel.theme-default.scss';
-@import '@/kit/VSidebarContainer/VSidebarContainer.theme-default.scss';
+@import '@/kit/VSidebar/VSidebarHeader/VSidebarHeader.theme-default.scss';
+@import '@/kit/VSidebar/VSidebarPanel/VSidebarPanel.theme-default.scss';
+@import '@/kit/VSidebar/VSidebarContainer/VSidebarContainer.theme-default.scss';
 @import '@/kit/VNavSidebarSubMenu/VNavSidebarSubMenu.theme-default.scss';
 @import '@/kit/VNavSidebar/VNavSidebar.theme-default.scss';
 @import '@/kit/VNavSubMenu/VNavSubMenu.theme-default.scss';
