@@ -10,6 +10,7 @@ module.exports = {
     Cypress: true,
     cy: true,
     ENV: true,
+    icons: true,
   },
   extends: ['airbnb-base', 'plugin:vue/recommended'],
   plugins: ['prettier', 'json'],

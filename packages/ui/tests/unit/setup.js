@@ -1,5 +1,8 @@
 import Vue from 'vue';
 
+// Mocks
+import './mocks/endpassUtils/date.mock';
+
 Vue.config.productionTip = false;
 
 // console.error and console.warn throws errors and fails tests

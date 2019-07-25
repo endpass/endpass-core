@@ -17,4 +17,7 @@ module.exports = {
   testURL: 'http://localhost/',
   setupFiles: ['<rootDir>/tests/unit/setup'],
   setupTestFrameworkScriptFile: '<rootDir>/tests/unit/setupTests',
+  globals: {
+    icons: [],
+  },
 };

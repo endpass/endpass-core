@@ -2031,6 +2031,22 @@ exports[`Storyshots VContentSwitcher/desktop simple array strings 1`] = `
 </div>
 `;
 
+exports[`Storyshots VDateBadge/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <time
+    class="theme-default v-date-badge"
+  >
+    
+  2010-10-10 4:00
+
+  </time>
+</div>
+`;
+
 exports[`Storyshots VDescription/desktop default 1`] = `
 <div>
   <div
@@ -5426,7 +5442,7 @@ exports[`Storyshots VSuperMenuControl/desktop active 1`] = `
       >
         <use
           x="0"
-          xlink:href="#endpass-ui-icon-admin"
+          xlink:href="#endpass-ui-icon-apps"
           y="0"
         />
       </svg>
@@ -5458,7 +5474,7 @@ exports[`Storyshots VSuperMenuControl/desktop as button 1`] = `
       >
         <use
           x="0"
-          xlink:href="#endpass-ui-icon-admin"
+          xlink:href="#endpass-ui-icon-apps"
           y="0"
         />
       </svg>
@@ -5490,7 +5506,7 @@ exports[`Storyshots VSuperMenuControl/desktop default 1`] = `
       >
         <use
           x="0"
-          xlink:href="#endpass-ui-icon-admin"
+          xlink:href="#endpass-ui-icon-apps"
           y="0"
         />
       </svg>
@@ -5502,381 +5518,167 @@ exports[`Storyshots VSuperMenuControl/desktop default 1`] = `
 </div>
 `;
 
+exports[`Storyshots VSuperMenuSection/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <section
+    class="theme-default v-super-menu-section"
+  >
+    <p
+      class="v-super-menu-section-label"
+    >
+      
+    First section
+  
+    </p>
+     
+    <a
+      class="theme-default v-super-menu-control"
+      role="button"
+    >
+      <i
+        class="v-super-menu-control-icon"
+      >
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-apps"
+            y="0"
+          />
+        </svg>
+      </i>
+       
+            Apps
+          
+    </a>
+     
+    <a
+      class="theme-default v-super-menu-control is-active"
+      role="button"
+    >
+      <i
+        class="v-super-menu-control-icon"
+      >
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-users"
+            y="0"
+          />
+        </svg>
+      </i>
+       
+            Users
+          
+    </a>
+     
+    <a
+      class="theme-default v-super-menu-control"
+      role="button"
+    >
+      <i
+        class="v-super-menu-control-icon"
+      >
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-permission"
+            y="0"
+          />
+        </svg>
+      </i>
+       
+            Permissions
+          
+    </a>
+  </section>
+   
+  <section
+    class="theme-default v-super-menu-section"
+  >
+    <p
+      class="v-super-menu-section-label"
+    >
+      
+    Second section
+  
+    </p>
+     
+    <a
+      class="theme-default v-super-menu-control"
+      role="button"
+    >
+      <i
+        class="v-super-menu-control-icon"
+      >
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-profile"
+            y="0"
+          />
+        </svg>
+      </i>
+       
+            Profile
+          
+    </a>
+     
+    <a
+      class="theme-default v-super-menu-control"
+      role="button"
+    >
+      <i
+        class="v-super-menu-control-icon"
+      >
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-activity"
+            y="0"
+          />
+        </svg>
+      </i>
+       
+            Activity
+          
+    </a>
+  </section>
+</div>
+`;
+
 exports[`Storyshots VSvgIcon/desktop default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
-  <table
-    class="storybook-table icons"
-  >
-    <tr>
-      <td>
-        <div>
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-endpass"
-              y="0"
-            />
-          </svg>
-        </div>
-         
-        <span>
-          endpass
-        </span>
-      </td>
-       
-      <td>
-        <div>
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-check"
-              y="0"
-            />
-          </svg>
-        </div>
-         
-        <span>
-          check
-        </span>
-      </td>
-       
-      <td>
-        <div>
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-chevron-down"
-              y="0"
-            />
-          </svg>
-        </div>
-         
-        <span>
-          chevron-down
-        </span>
-      </td>
-       
-      <td>
-        <div>
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-chevron-up"
-              y="0"
-            />
-          </svg>
-        </div>
-         
-        <span>
-          chevron-up
-        </span>
-      </td>
-       
-      <td>
-        <div>
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-close"
-              y="0"
-            />
-          </svg>
-        </div>
-         
-        <span>
-          close
-        </span>
-      </td>
-       
-      <td>
-        <div>
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-eye"
-              y="0"
-            />
-          </svg>
-        </div>
-         
-        <span>
-          eye
-        </span>
-      </td>
-    </tr>
-     
-    <tr>
-      <td>
-        <div>
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-menu"
-              y="0"
-            />
-          </svg>
-        </div>
-         
-        <span>
-          menu
-        </span>
-      </td>
-       
-      <td>
-        <div>
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-action"
-              y="0"
-            />
-          </svg>
-        </div>
-         
-        <span>
-          action
-        </span>
-      </td>
-       
-      <td>
-        <div>
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-google"
-              y="0"
-            />
-          </svg>
-        </div>
-         
-        <span>
-          google
-        </span>
-      </td>
-       
-      <td>
-        <div>
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-github"
-              y="0"
-            />
-          </svg>
-        </div>
-         
-        <span>
-          github
-        </span>
-      </td>
-       
-      <td>
-        <div>
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-admin"
-              y="0"
-            />
-          </svg>
-        </div>
-         
-        <span>
-          admin
-        </span>
-      </td>
-       
-      <td>
-        <div>
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-apps-list"
-              y="0"
-            />
-          </svg>
-        </div>
-         
-        <span>
-          apps-list
-        </span>
-      </td>
-    </tr>
-     
-    <tr>
-      <td>
-        <div>
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-home"
-              y="0"
-            />
-          </svg>
-        </div>
-         
-        <span>
-          home
-        </span>
-      </td>
-       
-      <td>
-        <div>
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-permission"
-              y="0"
-            />
-          </svg>
-        </div>
-         
-        <span>
-          permission
-        </span>
-      </td>
-       
-      <td>
-        <div>
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-docs"
-              y="0"
-            />
-          </svg>
-        </div>
-         
-        <span>
-          docs
-        </span>
-      </td>
-       
-      <td>
-        <div>
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-arrow-left"
-              y="0"
-            />
-          </svg>
-        </div>
-         
-        <span>
-          arrow-left
-        </span>
-      </td>
-       
-      <td>
-        <div>
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-logout"
-              y="0"
-            />
-          </svg>
-        </div>
-         
-        <span>
-          logout
-        </span>
-      </td>
-       
-      <td>
-        <div>
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-error"
-              y="0"
-            />
-          </svg>
-        </div>
-         
-        <span>
-          error
-        </span>
-      </td>
-    </tr>
-  </table>
+  <div
+    class="storybook-grid icons"
+  />
 </div>
 `;
 
