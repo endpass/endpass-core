@@ -7,6 +7,9 @@ storiesOf('VLabel/desktop', module).add('default', () => ({
       <theme-provider>
         <v-label label="Label text" />
         Following content
+        <br/><br/>
+        <v-label label="Disabled label" disabled/>
+        Following content
       </theme-provider>
     `,
 }));

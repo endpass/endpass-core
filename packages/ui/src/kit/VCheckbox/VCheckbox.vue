@@ -92,7 +92,7 @@ export default {
       return Object.assign(this.themeCssClass, {
         'is-checked': this.isChecked,
         'is-focused': this.isFocused,
-        'is-disabled': this.disabled || this.$attrs.disabled,
+        'is-disabled': this.disabled || this.$attrs.disabled !== undefined,
         'is-error': this.error,
       });
     },

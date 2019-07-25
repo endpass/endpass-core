@@ -7,9 +7,9 @@ import VNavSubMenu from '@/kit/VNavSubMenu';
 import VNavControl from '@/kit/VNavControl';
 import VSvgIcon from '@/kit/VSvgIcon';
 import VSidebar from '@/kit/VSidebar';
-import VSidebarHeader from '@/kit/VSidebarHeader';
-import VSidebarPanel from '@/kit/VSidebarPanel';
-import VSidebarContainer from '@/kit/VSidebarContainer';
+import VSidebarHeader from '@/kit/VSidebar/VSidebarHeader';
+import VSidebarPanel from '@/kit/VSidebar/VSidebarPanel';
+import VSidebarContainer from '@/kit/VSidebar/VSidebarContainer';
 
 storiesOf('VSidebar/desktop', module)
   .add('left', () => ({

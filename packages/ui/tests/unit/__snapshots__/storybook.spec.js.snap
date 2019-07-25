@@ -1613,6 +1613,39 @@ exports[`Storyshots VContentSwitcher/desktop simple array strings 1`] = `
 </div>
 `;
 
+exports[`Storyshots VDescription/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div
+    class="description-atom theme-default"
+  >
+    
+  Description text
+  
+  </div>
+  
+        Following content        
+        
+  <br />
+  <br />
+   
+  <div
+    class="description-atom theme-default"
+    disabled="disabled"
+  >
+    
+  Disabled description
+  
+  </div>
+  
+        Following content
+      
+</div>
+`;
+
 exports[`Storyshots VDivider/desktop default 1`] = `
 <div>
   <div
@@ -1669,54 +1702,58 @@ exports[`Storyshots VFileDropArea/desktop custom text 1`] = `
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
+  <label
+    class="label-atom theme-default"
+  >
+    
+  Multiple files
+
+  </label>
+   
   <div
     accept="image/*"
     class="field-atom v-file-drop-area theme-default theme-default"
   >
-    <label
-      class="label-atom theme-default"
-    >
-      
-  Multiple files
-
-    </label>
-     
     <button
-      accept="image/*"
-      class="file-select-atom theme-default size-area skin-ghost"
+      class="v-file-drop-area-button"
       type="button"
     >
       <label
-        class="file-select-atom-label"
-        for="file-select-atom-idx-2"
+        class="v-file-drop-area-label"
+        for="v-file-drop-area-idx-2"
       >
-        <span
-          class="file-select-atom-slot"
-        >
-          
-          Custom text
-        
-    
+        <div>
+          <p>
+            Custom Text
+          </p>
+           
+          <div
+            class="description-atom theme-default"
+            disabled="disabled"
+          >
+            
+  or drop files here
   
-        </span>
+          </div>
+        </div>
          
         <input
           accept="image/*"
-          class="file-select-atom-input"
-          id="file-select-atom-idx-2"
+          class="file-drop-area-input"
+          id="v-file-drop-area-idx-2"
           type="file"
         />
       </label>
     </button>
-     
-    <div
-      accept="image/*"
-      class="description-atom v-file-drop-area-desc theme-default"
-    >
-      
+  </div>
+   
+  <div
+    class="description-atom theme-default"
+    disabled="disabled"
+  >
+    
   images only, multiple
   
-    </div>
   </div>
 </div>
 `;
@@ -1727,56 +1764,51 @@ exports[`Storyshots VFileDropArea/desktop disable 1`] = `
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
+  <label
+    class="label-atom theme-default"
+  >
+    
+  Disabled state
+
+  </label>
+   
   <div
     accept="image/*"
     class="field-atom v-file-drop-area theme-default theme-default"
     disabled="disabled"
   >
-    <label
-      class="label-atom theme-default"
-    >
-      
-  Disabled state
-
-    </label>
-     
     <button
-      accept="image/*"
-      class="file-select-atom theme-default size-area skin-ghost"
-      disabled="disabled"
+      class="v-file-drop-area-button"
       type="button"
     >
       <label
-        class="file-select-atom-label"
-        for="file-select-atom-idx-3"
+        class="v-file-drop-area-label"
+        for="v-file-drop-area-idx-3"
       >
-        <span
-          class="file-select-atom-slot"
-        >
-          
-    Add File
+        <div>
+          <p>
+            Custom Text
+          </p>
+           
+          <div
+            class="description-atom theme-default"
+            disabled="disabled"
+          >
+            
+  or drop files here
   
-        </span>
+          </div>
+        </div>
          
         <input
           accept="image/*"
-          class="file-select-atom-input"
+          class="file-drop-area-input"
           disabled="disabled"
-          id="file-select-atom-idx-3"
+          id="v-file-drop-area-idx-3"
           type="file"
         />
       </label>
     </button>
-     
-    <div
-      accept="image/*"
-      class="description-atom v-file-drop-area-desc theme-default"
-      disabled="disabled"
-    >
-      
-  images only
-  
-    </div>
   </div>
 </div>
 `;
@@ -1787,53 +1819,47 @@ exports[`Storyshots VFileDropArea/desktop enabled 1`] = `
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
+  <label
+    class="label-atom theme-default"
+  >
+    
+  Single File
+
+  </label>
+   
   <div
     class="field-atom v-file-drop-area theme-default theme-default"
   >
-    <label
-      class="label-atom theme-default"
-    >
-      
-  Single file
-
-    </label>
-     
     <button
-      class="file-select-atom theme-default size-area skin-ghost"
+      class="v-file-drop-area-button"
       type="button"
     >
       <label
-        class="file-select-atom-label"
-        for="file-select-atom-idx-1"
+        class="v-file-drop-area-label"
+        for="v-file-drop-area-idx-1"
       >
-        <span
-          class="file-select-atom-slot"
-        >
-          
-    Add File
+        <div>
+          <p>
+            Add File
+          </p>
+           
+          <div
+            class="description-atom theme-default"
+            disabled="disabled"
+          >
+            
+  or drop files here
   
-        </span>
+          </div>
+        </div>
          
         <input
-          class="file-select-atom-input"
-          id="file-select-atom-idx-1"
+          class="file-drop-area-input"
+          id="v-file-drop-area-idx-1"
           type="file"
         />
       </label>
     </button>
-     
-    <div
-      class="description-atom v-file-drop-area-desc theme-default"
-    >
-      
-  first description
-  
-      <span>
-        
-            with any file type
-          
-      </span>
-    </div>
   </div>
 </div>
 `;
@@ -1873,7 +1899,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
             >
               <label
                 class="file-select-atom-label"
-                for="file-select-atom-idx-4"
+                for="file-select-atom-idx-1"
               >
                 <span
                   class="file-select-atom-slot"
@@ -1885,7 +1911,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
                  
                 <input
                   class="file-select-atom-input"
-                  id="file-select-atom-idx-4"
+                  id="file-select-atom-idx-1"
                   type="file"
                 />
               </label>
@@ -1925,7 +1951,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
             >
               <label
                 class="file-select-atom-label"
-                for="file-select-atom-idx-5"
+                for="file-select-atom-idx-2"
               >
                 <span
                   class="file-select-atom-slot"
@@ -1940,7 +1966,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
                 <input
                   accept="image/x-png,image/jpeg"
                   class="file-select-atom-input"
-                  id="file-select-atom-idx-5"
+                  id="file-select-atom-idx-2"
                   type="file"
                 />
               </label>
@@ -1984,7 +2010,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
             >
               <label
                 class="file-select-atom-label"
-                for="file-select-atom-idx-6"
+                for="file-select-atom-idx-3"
               >
                 <span
                   class="file-select-atom-slot"
@@ -1999,7 +2025,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
                 <input
                   accept="image/*"
                   class="file-select-atom-input"
-                  id="file-select-atom-idx-6"
+                  id="file-select-atom-idx-3"
                   multiple="multiple"
                   type="file"
                 />
@@ -2044,7 +2070,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
             >
               <label
                 class="file-select-atom-label"
-                for="file-select-atom-idx-7"
+                for="file-select-atom-idx-4"
               >
                 <span
                   class="file-select-atom-slot"
@@ -2058,7 +2084,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
                   accept="image/*"
                   class="file-select-atom-input"
                   disabled="disabled"
-                  id="file-select-atom-idx-7"
+                  id="file-select-atom-idx-4"
                   type="file"
                 />
               </label>
@@ -2461,6 +2487,20 @@ exports[`Storyshots VLabel/desktop default 1`] = `
   >
     
   Label text
+
+  </label>
+  
+        Following content
+        
+  <br />
+  <br />
+   
+  <label
+    class="label-atom theme-default"
+    disabled="disabled"
+  >
+    
+  Disabled label
 
   </label>
   
@@ -4124,6 +4164,112 @@ exports[`Storyshots VPagination/desktop withoutTotal 1`] = `
   <p>
     offset: 0
   </p>
+</div>
+`;
+
+exports[`Storyshots VProgressCircle/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <table
+    class="storybook-table"
+  >
+    <tr>
+      <td>
+        <div
+          class="field-atom v-progress-circle theme-default theme-default"
+        >
+          <svg
+            class="v-progress-circle-back"
+          >
+            <circle />
+          </svg>
+           
+          <svg
+            class="v-progress-circle-over"
+            style="stroke-dasharray: 94, 188.4;"
+          >
+            <circle />
+          </svg>
+        </div>
+         
+        <span>
+          50%
+        </span>
+      </td>
+       
+      <td>
+        <div
+          class="field-atom v-progress-circle theme-default theme-default"
+        >
+          <svg
+            class="v-progress-circle-back"
+          >
+            <circle />
+          </svg>
+           
+          <svg
+            class="v-progress-circle-over"
+            style="stroke-dasharray: 141, 188.4;"
+          >
+            <circle />
+          </svg>
+        </div>
+         
+        <span>
+          75%
+        </span>
+      </td>
+       
+      <td>
+        <div
+          class="field-atom v-progress-circle theme-default theme-default"
+        >
+          <svg
+            class="v-progress-circle-back"
+          >
+            <circle />
+          </svg>
+           
+          <svg
+            class="v-progress-circle-over"
+            style="stroke-dasharray: 9, 188.4;"
+          >
+            <circle />
+          </svg>
+        </div>
+         
+        <span>
+          5%
+        </span>
+      </td>
+       
+      <td>
+        <div
+          class="field-atom v-progress-circle theme-default theme-default"
+        >
+          <svg
+            class="v-progress-circle-back"
+          >
+            <circle />
+          </svg>
+           
+          <svg
+            class="v-progress-circle-over"
+            style="stroke-dasharray: 178, 188.4;"
+          >
+            <circle />
+          </svg>
+        </div>
+         
+        <span>
+          95%
+        </span>
+      </td>
+    </tr>
+  </table>
 </div>
 `;
 

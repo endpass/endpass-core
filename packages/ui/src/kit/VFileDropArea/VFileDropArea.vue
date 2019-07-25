@@ -3,56 +3,42 @@
     class="v-file-drop-area"
     :class="themeCssClass"
   >
-    <label-atom
-      v-if="label"
-      :label="label"
-    />
-    <file-select-atom
-      v-bind="$attrs"
-      size="area"
-      skin="ghost"
-      @change="onChange"
+    <button
+      class="v-file-drop-area-button"
+      type="button"
     >
-      <slot name="default" />
-      {{ !isDefaultSlot ? 'Add File' : '' }}
-    </file-select-atom>
-    <description-atom
-      v-if="isDescription"
-      v-bind="$attrs"
-      class="v-file-drop-area-desc"
-      :description="description"
-    >
-      <slot name="desc" />
-    </description-atom>
+      <label
+        class="v-file-drop-area-label"
+        :for="inputId"
+      >
+        <div>
+          <slot />
+        </div>
+        <input
+          :id="inputId"
+          type="file"
+          class="file-drop-area-input"
+          v-bind="$attrs"
+          @change="onChange"
+        >
+      </label>
+    </button>
   </field-atom>
 </template>
 
 <script>
 import ThemeMixin from '@/mixins/ThemeMixin';
-import FileSelectAtom from '@/atom/file-select-atom/file-select-atom';
 import FieldAtom from '@/atom/field-atom/field-atom';
-import DescriptionAtom from '@/atom/description-atom/description-atom';
-import LabelAtom from '@/atom/label-atom/label-atom';
+
+let inputId = 1;
 
 export default {
   name: 'VFileDropArea',
-  props: {
-    label: {
-      type: String,
-      default: null,
-    },
-    description: {
-      type: String,
-      default: 'block',
-    },
-  },
-  computed: {
-    isDefaultSlot() {
-      return !!this.$slots.default;
-    },
-    isDescription() {
-      return !!this.$slots.desc || this.description;
-    },
+  data() {
+    return {
+      // eslint-disable-next-line no-plusplus
+      inputId: `v-file-drop-area-idx-${inputId++}`,
+    };
   },
   methods: {
     onChange(e) {
@@ -64,6 +50,9 @@ export default {
       return false;
     },
     handleDrop(e) {
+      if (this.$attrs.disabled !== undefined) {
+        return this.preventDrop(e);
+      }
       const files = this.getTransferFiles(e);
       this.$emit('change', files);
       return this.preventDrop(e);
@@ -99,10 +88,7 @@ export default {
   },
   mixins: [ThemeMixin],
   components: {
-    LabelAtom,
-    DescriptionAtom,
     FieldAtom,
-    FileSelectAtom,
   },
 };
 </script>
