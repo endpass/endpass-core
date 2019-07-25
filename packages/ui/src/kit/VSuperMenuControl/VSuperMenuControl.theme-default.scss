@@ -1,5 +1,6 @@
 .v-super-menu-control.theme-default {
   box-sizing: border-box;
+  position: relative;
   display: flex;
   align-items: center;
   padding: 7px 17px;
@@ -14,8 +15,7 @@
   height: 16px;
   margin-right: 20px;
   margin-bottom: 2px;
-  color: rgba(110, 50, 201, 0.5);
-  transition: color 0.15s;
+  color: var(--endpass-ui-color-black);
 }
 
 .v-super-menu-control.theme-default.is-gapped {
@@ -23,8 +23,16 @@
 }
 
 .v-super-menu-control.theme-default:hover,
-.v-super-menu-control.theme-default:hover .v-super-menu-control-icon,
-.v-super-menu-control.theme-default.is-active,
-.v-super-menu-control.theme-default.is-active .v-super-menu-control-icon {
+.v-super-menu-control.theme-default.is-active {
   color: var(--endpass-ui-color-primary-7);
+}
+
+.v-super-menu-control.theme-default.is-active:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: var(--endpass-ui-color-primary-7);
 }

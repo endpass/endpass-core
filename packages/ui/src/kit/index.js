@@ -2,6 +2,8 @@
 export { default as ThemeProvider } from '@/kit/ThemeProvider';
 
 // Components
+export { default as VSuperMenuSection } from '@/kit/VSuperMenuSection';
+export { default as VDateBadge } from '@/kit/VDateBadge';
 export { default as VLogo } from '@/kit/VLogo';
 export { default as VSuperMenuControl } from '@/kit/VSuperMenuControl';
 export { default as VLabel } from '@/kit/VLabel';

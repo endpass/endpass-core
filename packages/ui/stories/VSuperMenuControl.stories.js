@@ -11,7 +11,7 @@ storiesOf('VSuperMenuControl/desktop', module)
     components: { VSuperMenuControl },
     template: `
       <theme-provider>
-        <v-super-menu-control icon="admin">
+        <v-super-menu-control icon="apps">
           Super sidebar control
         </v-super-menu-control>
       </theme-provider>
@@ -21,7 +21,7 @@ storiesOf('VSuperMenuControl/desktop', module)
     components: { VSuperMenuControl },
     template: `
       <theme-provider>
-        <v-super-menu-control icon="admin" :is-active="true">
+        <v-super-menu-control icon="apps" :is-active="true">
           Active super sidebar control
         </v-super-menu-control>
       </theme-provider>
@@ -32,7 +32,7 @@ storiesOf('VSuperMenuControl/desktop', module)
     components: { VSuperMenuControl },
     template: `
       <theme-provider>
-        <v-super-menu-control icon="admin" @click="onClick">
+        <v-super-menu-control icon="apps" @click="onClick">
           Active super sidebar control
         </v-super-menu-control>
       </theme-provider>
