@@ -37,6 +37,13 @@ export default {
       type: Array,
       default: () => [],
     },
+    skin: {
+      type: String,
+      default: 'primary',
+      validator(value) {
+        return ['primary', 'secondary'].indexOf(value) !== -1;
+      },
+    },
   },
   computed: {
     listeners() {
@@ -48,8 +55,9 @@ export default {
     },
 
     selectAtomCssClass() {
-      return Object.assign(this.themeCssClass, {
+      return Object.assign({}, this.themeCssClass, {
         'is-error': this.$attrs['is-error'],
+        [`skin-${this.skin}`]: true,
       });
     },
   },
