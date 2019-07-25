@@ -74,6 +74,8 @@ exports[`Storyshots VButton/desktop change-skin 1`] = `
   >
     <!---->
      
+    <!---->
+     
     <span
       class="v-button-label"
     >
@@ -138,6 +140,8 @@ exports[`Storyshots VButton/desktop disabled 1`] = `
           >
             <!---->
              
+            <!---->
+             
             <span
               class="v-button-label"
             >
@@ -153,6 +157,8 @@ exports[`Storyshots VButton/desktop disabled 1`] = `
             class="v-button theme-default skin-secondary size-normal"
             disabled="disabled"
           >
+            <!---->
+             
             <!---->
              
             <span
@@ -172,6 +178,8 @@ exports[`Storyshots VButton/desktop disabled 1`] = `
           >
             <!---->
              
+            <!---->
+             
             <span
               class="v-button-label"
             >
@@ -189,6 +197,8 @@ exports[`Storyshots VButton/desktop disabled 1`] = `
           >
             <!---->
              
+            <!---->
+             
             <span
               class="v-button-label"
             >
@@ -204,6 +214,8 @@ exports[`Storyshots VButton/desktop disabled 1`] = `
             class="v-button theme-default skin-ghost size-normal"
             disabled="disabled"
           >
+            <!---->
+             
             <!---->
              
             <span
@@ -231,6 +243,8 @@ exports[`Storyshots VButton/desktop disabled 1`] = `
           >
             <!---->
              
+            <!---->
+             
             <span
               class="v-button-label"
             >
@@ -246,6 +260,8 @@ exports[`Storyshots VButton/desktop disabled 1`] = `
             class="v-button theme-default skin-secondary size-big"
             disabled="disabled"
           >
+            <!---->
+             
             <!---->
              
             <span
@@ -265,6 +281,8 @@ exports[`Storyshots VButton/desktop disabled 1`] = `
           >
             <!---->
              
+            <!---->
+             
             <span
               class="v-button-label"
             >
@@ -282,6 +300,8 @@ exports[`Storyshots VButton/desktop disabled 1`] = `
           >
             <!---->
              
+            <!---->
+             
             <span
               class="v-button-label"
             >
@@ -297,6 +317,8 @@ exports[`Storyshots VButton/desktop disabled 1`] = `
             class="v-button theme-default skin-ghost size-big"
             disabled="disabled"
           >
+            <!---->
+             
             <!---->
              
             <span
@@ -363,6 +385,8 @@ exports[`Storyshots VButton/desktop enabled 1`] = `
           >
             <!---->
              
+            <!---->
+             
             <span
               class="v-button-label"
             >
@@ -377,6 +401,8 @@ exports[`Storyshots VButton/desktop enabled 1`] = `
           <button
             class="v-button theme-default skin-secondary size-normal"
           >
+            <!---->
+             
             <!---->
              
             <span
@@ -395,6 +421,8 @@ exports[`Storyshots VButton/desktop enabled 1`] = `
           >
             <!---->
              
+            <!---->
+             
             <span
               class="v-button-label"
             >
@@ -411,6 +439,8 @@ exports[`Storyshots VButton/desktop enabled 1`] = `
           >
             <!---->
              
+            <!---->
+             
             <span
               class="v-button-label"
             >
@@ -425,6 +455,8 @@ exports[`Storyshots VButton/desktop enabled 1`] = `
           <button
             class="v-button theme-default skin-ghost size-normal"
           >
+            <!---->
+             
             <!---->
              
             <span
@@ -451,6 +483,8 @@ exports[`Storyshots VButton/desktop enabled 1`] = `
           >
             <!---->
              
+            <!---->
+             
             <span
               class="v-button-label"
             >
@@ -465,6 +499,8 @@ exports[`Storyshots VButton/desktop enabled 1`] = `
           <button
             class="v-button theme-default skin-secondary size-big"
           >
+            <!---->
+             
             <!---->
              
             <span
@@ -483,6 +519,8 @@ exports[`Storyshots VButton/desktop enabled 1`] = `
           >
             <!---->
              
+            <!---->
+             
             <span
               class="v-button-label"
             >
@@ -499,6 +537,8 @@ exports[`Storyshots VButton/desktop enabled 1`] = `
           >
             <!---->
              
+            <!---->
+             
             <span
               class="v-button-label"
             >
@@ -513,6 +553,8 @@ exports[`Storyshots VButton/desktop enabled 1`] = `
           <button
             class="v-button theme-default skin-ghost size-big"
           >
+            <!---->
+             
             <!---->
              
             <span
@@ -579,6 +621,8 @@ exports[`Storyshots VButton/desktop icon 1`] = `
           >
             <!---->
              
+            <!---->
+             
             <span
               class="v-button-label"
             >
@@ -607,6 +651,8 @@ exports[`Storyshots VButton/desktop icon 1`] = `
           <button
             class="v-button theme-default skin-secondary size-normal"
           >
+            <!---->
+             
             <!---->
              
             <span
@@ -639,6 +685,8 @@ exports[`Storyshots VButton/desktop icon 1`] = `
           >
             <!---->
              
+            <!---->
+             
             <span
               class="v-button-label"
             >
@@ -669,6 +717,8 @@ exports[`Storyshots VButton/desktop icon 1`] = `
           >
             <!---->
              
+            <!---->
+             
             <span
               class="v-button-label"
             >
@@ -697,6 +747,8 @@ exports[`Storyshots VButton/desktop icon 1`] = `
           <button
             class="v-button theme-default skin-ghost size-normal"
           >
+            <!---->
+             
             <!---->
              
             <span
@@ -737,6 +789,8 @@ exports[`Storyshots VButton/desktop icon 1`] = `
           >
             <!---->
              
+            <!---->
+             
             <span
               class="v-button-label"
             >
@@ -765,6 +819,8 @@ exports[`Storyshots VButton/desktop icon 1`] = `
           <button
             class="v-button theme-default skin-secondary size-big"
           >
+            <!---->
+             
             <!---->
              
             <span
@@ -797,6 +853,8 @@ exports[`Storyshots VButton/desktop icon 1`] = `
           >
             <!---->
              
+            <!---->
+             
             <span
               class="v-button-label"
             >
@@ -825,6 +883,8 @@ exports[`Storyshots VButton/desktop icon 1`] = `
           <button
             class="v-button theme-default skin-quaternary size-big"
           >
+            <!---->
+             
             <!---->
              
             <span
@@ -857,6 +917,8 @@ exports[`Storyshots VButton/desktop icon 1`] = `
           >
             <!---->
              
+            <!---->
+             
             <span
               class="v-button-label"
             >
@@ -878,6 +940,342 @@ exports[`Storyshots VButton/desktop icon 1`] = `
                 />
               </svg>
             </i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Storyshots VButton/desktop loading 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <table
+    width="100%"
+  >
+    <thead>
+      <tr>
+        <th />
+         
+        <th>
+          Primary
+        </th>
+         
+        <th>
+          Secondary
+        </th>
+         
+        <th>
+          Tertiary
+        </th>
+         
+        <th>
+          Quaternary
+        </th>
+         
+        <th>
+          Ghost
+        </th>
+      </tr>
+    </thead>
+     
+    <tbody>
+      <tr>
+        <th
+          scope="row"
+        >
+          Normal
+        </th>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-primary size-normal"
+          >
+            <i
+              class="icon-atom v-button-icon v-button-icon-loader theme-default"
+            >
+              <svg
+                class="svg-atom theme-default"
+                height="100%"
+                width="100%"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-loader"
+                  y="0"
+                />
+              </svg>
+            </i>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-secondary size-normal"
+          >
+            <i
+              class="icon-atom v-button-icon v-button-icon-loader theme-default"
+            >
+              <svg
+                class="svg-atom theme-default"
+                height="100%"
+                width="100%"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-loader"
+                  y="0"
+                />
+              </svg>
+            </i>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-tertiary size-normal"
+          >
+            <i
+              class="icon-atom v-button-icon v-button-icon-loader theme-default"
+            >
+              <svg
+                class="svg-atom theme-default"
+                height="100%"
+                width="100%"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-loader"
+                  y="0"
+                />
+              </svg>
+            </i>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-quaternary size-normal"
+          >
+            <i
+              class="icon-atom v-button-icon v-button-icon-loader theme-default"
+            >
+              <svg
+                class="svg-atom theme-default"
+                height="100%"
+                width="100%"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-loader"
+                  y="0"
+                />
+              </svg>
+            </i>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-ghost size-normal"
+          >
+            <i
+              class="icon-atom v-button-icon v-button-icon-loader theme-default"
+            >
+              <svg
+                class="svg-atom theme-default"
+                height="100%"
+                width="100%"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-loader"
+                  y="0"
+                />
+              </svg>
+            </i>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+      </tr>
+       
+      <tr>
+        <th
+          scope="row"
+        >
+          Big
+        </th>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-primary size-big"
+          >
+            <i
+              class="icon-atom v-button-icon v-button-icon-loader theme-default"
+            >
+              <svg
+                class="svg-atom theme-default"
+                height="100%"
+                width="100%"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-loader"
+                  y="0"
+                />
+              </svg>
+            </i>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-secondary size-big"
+          >
+            <i
+              class="icon-atom v-button-icon v-button-icon-loader theme-default"
+            >
+              <svg
+                class="svg-atom theme-default"
+                height="100%"
+                width="100%"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-loader"
+                  y="0"
+                />
+              </svg>
+            </i>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-tertiary size-big"
+          >
+            <i
+              class="icon-atom v-button-icon v-button-icon-loader theme-default"
+            >
+              <svg
+                class="svg-atom theme-default"
+                height="100%"
+                width="100%"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-loader"
+                  y="0"
+                />
+              </svg>
+            </i>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-quaternary size-big"
+          >
+            <i
+              class="icon-atom v-button-icon v-button-icon-loader theme-default"
+            >
+              <svg
+                class="svg-atom theme-default"
+                height="100%"
+                width="100%"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-loader"
+                  y="0"
+                />
+              </svg>
+            </i>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-ghost size-big"
+          >
+            <i
+              class="icon-atom v-button-icon v-button-icon-loader theme-default"
+            >
+              <svg
+                class="svg-atom theme-default"
+                height="100%"
+                width="100%"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-loader"
+                  y="0"
+                />
+              </svg>
+            </i>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
           </button>
         </td>
       </tr>
@@ -921,6 +1319,8 @@ exports[`Storyshots VButton/desktop social 1`] = `
           <button
             class="v-button theme-default skin-social size-normal"
           >
+            <!---->
+             
             <i
               class="icon-atom v-button-icon icon-before theme-default"
             >
@@ -952,6 +1352,8 @@ exports[`Storyshots VButton/desktop social 1`] = `
           <button
             class="v-button theme-default skin-social size-normal"
           >
+            <!---->
+             
             <i
               class="icon-atom v-button-icon icon-before theme-default"
             >
@@ -991,6 +1393,8 @@ exports[`Storyshots VButton/desktop social 1`] = `
           <button
             class="v-button theme-default skin-social size-big"
           >
+            <!---->
+             
             <i
               class="icon-atom v-button-icon icon-before theme-default"
             >
@@ -1022,6 +1426,8 @@ exports[`Storyshots VButton/desktop social 1`] = `
           <button
             class="v-button theme-default skin-social size-big"
           >
+            <!---->
+             
             <i
               class="icon-atom v-button-icon icon-before theme-default"
             >
@@ -1095,6 +1501,8 @@ exports[`Storyshots VButton/desktop state 1`] = `
           >
             <!---->
              
+            <!---->
+             
             <span
               class="v-button-label"
             >
@@ -1111,6 +1519,8 @@ exports[`Storyshots VButton/desktop state 1`] = `
           >
             <!---->
              
+            <!---->
+             
             <span
               class="v-button-label"
             >
@@ -1125,6 +1535,8 @@ exports[`Storyshots VButton/desktop state 1`] = `
           <button
             class="v-button theme-default skin-quaternary-error size-normal"
           >
+            <!---->
+             
             <!---->
              
             <span
@@ -1151,6 +1563,8 @@ exports[`Storyshots VButton/desktop state 1`] = `
           >
             <!---->
              
+            <!---->
+             
             <span
               class="v-button-label"
             >
@@ -1167,6 +1581,8 @@ exports[`Storyshots VButton/desktop state 1`] = `
           >
             <!---->
              
+            <!---->
+             
             <span
               class="v-button-label"
             >
@@ -1181,6 +1597,8 @@ exports[`Storyshots VButton/desktop state 1`] = `
           <button
             class="v-button theme-default skin-quaternary-error size-big"
           >
+            <!---->
+             
             <!---->
              
             <span
