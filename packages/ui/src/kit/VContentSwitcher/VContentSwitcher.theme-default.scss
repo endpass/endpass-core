@@ -16,7 +16,7 @@
   position: absolute;
   width: 1px;
   height: 20px;
-  background-color: var(--color-grey-2);
+  background-color: var(--endpass-ui-color-grey-2);
   top: 50%;
   left: 0;
   z-index: 1;
@@ -55,27 +55,27 @@
   line-height: 16px;
   letter-spacing: -0.2px;
   padding: 11px 5px;
-  border: 1px solid var(--color-grey-1);
-  background-color: var(--color-grey-1);
+  border: 1px solid var(--endpass-ui-color-grey-1);
+  background-color: var(--endpass-ui-color-grey-1);
   user-select: none;
   position: relative;
   transition: background-color .3s, color .3s, border-color .3s, font-weight .3s;
 }
 
 .v-content-switcher.theme-default .v-content-switcher-label:hover {
-  background-color: var(--color-grey-2);
-  border-color: var(--color-grey-2);
+  background-color: var(--endpass-ui-color-grey-2);
+  border-color: var(--endpass-ui-color-grey-2);
 }
 
 .v-content-switcher.theme-default .v-content-switcher-item.is-focused .v-content-switcher-label {
-  background-color: var(--color-primary-2);
-  border-color: var(--color-primary-7);
+  background-color: var(--endpass-ui-color-primary-2);
+  border-color: var(--endpass-ui-color-primary-7);
 }
 
 .v-content-switcher.theme-default .v-content-switcher-item.is-checked .v-content-switcher-label {
-  background-color: var(--color-black);
-  border-color: var(--color-black);
-  color: var(--color-white);
+  background-color: var(--endpass-ui-color-black);
+  border-color: var(--endpass-ui-color-black);
+  color: var(--endpass-ui-color-white);
 }
 
 .v-content-switcher.theme-default .v-content-switcher-item:first-child .v-content-switcher-label {
@@ -87,5 +87,5 @@
 }
 
 .v-content-switcher.theme-default .v-content-switcher-item.is-checked.is-focused .v-content-switcher-label {
-  border-color: var(--color-primary-7);
+  border-color: var(--endpass-ui-color-primary-7);
 }

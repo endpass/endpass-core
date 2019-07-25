@@ -14,7 +14,7 @@
 }
 
 .v-checkbox.theme-default .v-checkbox-label {
-  color: var(--color-grey-9);
+  color: var(--endpass-ui-color-grey-9);
   font-size: 14px;
   line-height: 14px;
   letter-spacing: -0.175px;
@@ -29,31 +29,31 @@
   align-items: center;
   justify-content: center;
   border-radius: 2px;
-  border: 1px solid var(--color-black);
+  border: 1px solid var(--endpass-ui-color-black);
   transition: border-color 0.3s, background-color 0.3s;
 }
 
 .v-checkbox.theme-default:hover .v-checkbox-frame,
 .v-checkbox.theme-default.is-focused .v-checkbox-frame {
-  border-color: var(--color-primary-7);
+  border-color: var(--endpass-ui-color-primary-7);
 }
 
 .v-checkbox.theme-default.is-checked .v-checkbox-frame {
-  background-color: var(--color-black);
+  background-color: var(--endpass-ui-color-black);
 }
 
 .v-checkbox.theme-default.is-disabled .v-checkbox-frame {
-  border-color: var(--color-grey-4);
+  border-color: var(--endpass-ui-color-grey-4);
 }
 
 .v-checkbox.theme-default.is-disabled .v-checkbox-label {
-  color: var(--color-grey-4);
+  color: var(--endpass-ui-color-grey-4);
 }
 
 .v-checkbox.theme-default.is-error .v-checkbox-frame {
-  border-color: var(--color-error);
+  border-color: var(--endpass-ui-color-error);
 }
 
 .v-checkbox.theme-default.is-checked.is-disabled .v-checkbox-frame {
-  background-color: var(--color-grey-4);
+  background-color: var(--endpass-ui-color-grey-4);
 }

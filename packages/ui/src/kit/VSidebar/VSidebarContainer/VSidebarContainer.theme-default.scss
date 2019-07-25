@@ -13,10 +13,10 @@
 .v-sidebar-container.theme-default .v-sidebar-container-divider {
   height: 1px;
   width: 100%;
-  background: var(--color-grey-2);
+  background: var(--endpass-ui-color-grey-2);
 }
 
 .v-sidebar .v-sidebar-container:not(:first-child) .v-sidebar-container-wrapper {
   margin-top: 16px;
-  border-top: 1px solid var(--color-grey-2);
+  border-top: 1px solid var(--endpass-ui-color-grey-2);
 }

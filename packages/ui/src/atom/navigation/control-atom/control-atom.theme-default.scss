@@ -6,8 +6,8 @@
   padding: 16px 16px 13px;
   margin: 0;
   border: none;
-  border-bottom: 3px solid var(--color-primary-7);
-  background: var(--color-primary-7);
+  border-bottom: 3px solid var(--endpass-ui-color-primary-7);
+  background: var(--endpass-ui-color-primary-7);
   transition: color 0.3s, background 0.3s, border-bottom 0.3s;
   color: rgba(255, 255, 255, 0.75);
   font-size: 14px;
@@ -18,10 +18,10 @@
 .navigation-control-atom.theme-default:active,
 .navigation-control-atom.theme-default:hover,
 .navigation-control-atom.theme-default:focus {
-  color: var(--color-white);
+  color: var(--endpass-ui-color-white);
 }
 
 .navigation-control-atom.theme-default.is-active {
-  border-bottom: 3px solid var(--color-primary-5);
-  color: var(--color-white);
+  border-bottom: 3px solid var(--endpass-ui-color-primary-5);
+  color: var(--endpass-ui-color-white);
 }
