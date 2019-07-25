@@ -9,7 +9,7 @@
       v-if="isLoading"
       class="v-button-icon v-button-icon-loader"
     >
-      <v-svg-icon name="loader"></v-svg-icon>
+      <svg-atom name="loader"></svg-atom>
     </icon-atom>
     <icon-atom
       v-if="$slots.iconBefore && !isLoading"
@@ -32,7 +32,7 @@
 
 <script>
 import IconAtom from '@/atom/icon-atom/icon-atom';
-import VSvgIcon from '@/kit/VSvgIcon';
+import SvgAtom from '@/atom/svg-atom/svg-atom';
 import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
@@ -78,6 +78,6 @@ export default {
     },
   },
   mixins: [ThemeMixin],
-  components: { IconAtom, VSvgIcon },
+  components: { IconAtom, SvgAtom },
 };
 </script>
