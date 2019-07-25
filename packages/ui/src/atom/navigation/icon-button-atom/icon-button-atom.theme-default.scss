@@ -6,24 +6,24 @@
   width: 48px;
   padding: 3px 0 0;
   border: none;
-  border-bottom: 3px solid var(--color-primary-7);
-  background: var(--color-primary-7);
+  border-bottom: 3px solid var(--endpass-ui-color-primary-7);
+  background: var(--endpass-ui-color-primary-7);
   transition: background 0.3s, border-bottom 0.3s;
   cursor: pointer;
-  color: var(--color-white);
+  color: var(--endpass-ui-color-white);
 
   &:focus {
-    background: var(--color-primary-8);
-    border-bottom: 3px var(--color-primary-8);
+    background: var(--endpass-ui-color-primary-8);
+    border-bottom: 3px var(--endpass-ui-color-primary-8);
   }
 
   &:active {
-    background: var(--color-primary-7);
+    background: var(--endpass-ui-color-primary-7);
     border-bottom: 3px solid #d0b0ff;
   }
 
   &.is-active {
-    background: var(--color-primary-7);
+    background: var(--endpass-ui-color-primary-7);
     border-bottom: 3px solid #d0b0ff;
   }
 }

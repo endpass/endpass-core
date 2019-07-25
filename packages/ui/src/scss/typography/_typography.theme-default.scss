@@ -8,7 +8,7 @@
 .v-body,
 .v-small,
 .v-tiny {
-  font-family: var(--font-family-primary);
+  font-family: var(--endpass-ui-font-family-primary);
 }
 
 .v-h1,
@@ -36,11 +36,11 @@
 .v-h4 {
   font-size: 20px;
   line-height: 1.3;
-  color: var(--color-grey-5);
+  color: var(--endpass-ui-color-grey-5);
 
   &.is-bold {
     font-weight: 700;
-    color: var(--color-black);
+    color: var(--endpass-ui-color-black);
   }
 }
 
