@@ -23,8 +23,8 @@
   transition: background 0.3s, box-shadow 0.3s, border-color 0.3s, color 0.3s;
   outline: 0;
   box-shadow: 0 2px 4px rgba(36, 42, 46, 0.1), 0 1px 1px rgba(36, 42, 46, 0.1);
-  background: $primary-7;
-  color: $white;
+  background: var(--color-primary-7);
+  color: var(--color-white);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,13 +42,13 @@
 .file-select-atom.theme-default[disabled] .file-select-atom-label {
   border-color: transparent !important;
   box-shadow: none !important;
-  background: $grey-2 !important;
-  color: $white !important;
+  background: var(--color-grey-2) !important;
+  color: var(--color-white) !important;
   cursor: default !important;
 }
 
 .file-select-atom.theme-default .file-select-atom-label:hover {
-  background: $primary-6;
+  background: var(--color-primary-6);
 }
 
 .file-select-atom.theme-default .file-select-atom-label:focus {
@@ -56,7 +56,7 @@
 }
 
 .file-select-atom.theme-default .file-select-atom-label:active {
-  background: $primary-8;
+  background: var(--color-primary-8);
   box-shadow: 0 2px 4px rgba(36, 42, 46, 0.1), 0 1px 1px rgba(36, 42, 46, 0.1);
 }
 
@@ -75,17 +75,17 @@
 }
 
 .file-select-atom.theme-default.skin-ghost .file-select-atom-label {
-  color: $primary-7;
-  background: $grey-1;
+  color: var(--color-primary-7);
+  background: var(--color-grey-1);
   box-shadow: none;
 }
 
 .file-select-atom.theme-default.skin-ghost .file-select-atom-label:hover {
-  background: $grey-2;
+  background: var(--color-grey-2);
 }
 
 .file-select-atom.theme-default.skin-ghost .file-select-atom-label:active {
-  background: $grey-3;
-  color: $white;
+  background: var(--color-grey-3);
+  color: var(--color-white);
 }
 

@@ -3,9 +3,9 @@
   font-size: 12px;
   line-height: 16px;
   margin-bottom: 8px;
-  color: $black;
+  color: var(--color-black);
 }
 
 .label-atom.theme-default[disabled=disabled] {
-  color: $grey-4;
+  color: var(--color-grey-4);
 }

@@ -1,12 +1,13 @@
 @import 'variables.kit';
-
-$primary-1: #f7f1ff;
-$primary-2: #e6d6ff;
-$primary-3: #d0b0ff;
-$primary-4: #bb8eff;
-$primary-5: #a66efa;
-$primary-6: #8a3ffc;
-$primary-7: #6e32c9;
-$primary-8: #4f2196;
-$primary-9: #38146b;
-$primary-10: #1e1033;
+:root {
+  --color-primary-1: #f7f1ff;
+  --color-primary-2: #e6d6ff;
+  --color-primary-3: #d0b0ff;
+  --color-primary-4: #bb8eff;
+  --color-primary-5: #a66efa;
+  --color-primary-6: #8a3ffc;
+  --color-primary-7: #6e32c9;
+  --color-primary-8: #4f2196;
+  --color-primary-9: #38146b;
+  --color-primary-10: #1e1033;
+}

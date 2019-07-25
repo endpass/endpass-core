@@ -22,7 +22,7 @@
   cursor: pointer;
   transition: background 0.3s, border-color 0.3s;
   outline: 0;
-  background: $grey-1;
+  background: var(--color-grey-1);
   box-shadow: none;
   display: flex;
   justify-content: center;
@@ -35,15 +35,15 @@
 .v-file-drop-area.theme-default[disabled] .v-file-drop-area-label {
   border-color: transparent !important;
   box-shadow: none !important;
-  background: $grey-2 !important;
+  background: var(--color-grey-2) !important;
   cursor: default !important;
 }
 
 .v-file-drop-area.theme-default .v-file-drop-area-label:hover {
-  background: $grey-2;
+  background: var(--color-grey-2);
 }
 
 .v-file-drop-area.theme-default .v-file-drop-area-label:active {
-  background: $grey-3;
+  background: var(--color-grey-3);
 }
 

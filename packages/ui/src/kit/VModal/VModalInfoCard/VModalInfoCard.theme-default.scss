@@ -13,7 +13,7 @@
   font-size: 20px;
   line-height: 26px;
   letter-spacing: -0.25px;
-  color: $white;
+  color: var(--color-white);
 }
 
 @media (max-width: $lt-small-breakpoint) {

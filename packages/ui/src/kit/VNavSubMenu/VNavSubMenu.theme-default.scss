@@ -10,7 +10,7 @@
   margin-left: 8px;
   width: 16px;
   height: 16px;
-  color: $primary-5;
+  color: var(--color-primary-5);
 }
 
 .v-nav-sub-menu.theme-default .v-nav-sub-menu-content {
@@ -36,7 +36,7 @@
 }
 
 .v-nav-sub-menu.theme-default.is-expanded .v-nav-sub-menu-icon {
-  color: $white;
+  color: var(--color-white);
 }
 
 .v-nav-sub-menu.theme-default .v-nav-sub-menu-content .navigation-control-atom {
@@ -46,5 +46,5 @@
 .v-nav-sub-menu.theme-default
   .v-nav-sub-menu-content
   .navigation-control-atom:hover {
-  background: $primary-8;
+  background: var(--color-primary-8);
 }

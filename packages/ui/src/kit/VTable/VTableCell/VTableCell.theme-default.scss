@@ -1,7 +1,7 @@
 .v-table-cell.theme-default {
   font-size: 14px;
   line-height: 18px;
-  color: $black;
+  color: var(--color-black);
   padding: 14px 16px 15px;
-  border-top: 1px solid $grey-2;
+  border-top: 1px solid var(--color-grey-2);
 }

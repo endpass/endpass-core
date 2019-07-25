@@ -3,10 +3,10 @@
 }
 
 .v-table-row.theme-default:hover .v-table-cell {
-  background-color: rgba($grey-1, 0.5);
+  background-color: rgba(var(--color-grey-1), 0.5);
   cursor: pointer;
 }
 
 .v-table-row.theme-default.is-active .v-table-cell {
-  background-color: $grey-1;
+  background-color: var(--color-grey-1);
 }
