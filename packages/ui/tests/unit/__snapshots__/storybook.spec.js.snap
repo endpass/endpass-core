@@ -4722,7 +4722,7 @@ exports[`Storyshots VSelect/desktop disabled 1`] = `
     </div>
      
     <span
-      class="select-atom theme-default"
+      class="select-atom theme-default skin-primary"
     >
       <select
         class="select-atom-control"
@@ -4781,7 +4781,7 @@ exports[`Storyshots VSelect/desktop enabled 1`] = `
     </div>
      
     <span
-      class="select-atom theme-default"
+      class="select-atom theme-default skin-primary"
     >
       <select
         class="select-atom-control"
@@ -4791,7 +4791,7 @@ exports[`Storyshots VSelect/desktop enabled 1`] = `
           value="value"
         >
           
-      text option 1
+      text option 1 with a long long long long long long long text
     
         </option>
         <option
@@ -4816,7 +4816,7 @@ exports[`Storyshots VSelect/desktop enabled 1`] = `
     options: [
   {
     "val": "value",
-    "text": "text option 1"
+    "text": "text option 1 with a long long long long long long long text"
   },
   {
     "val": "next value",
@@ -4856,7 +4856,7 @@ exports[`Storyshots VSelect/desktop error 1`] = `
     </div>
      
     <span
-      class="select-atom theme-default is-error"
+      class="select-atom theme-default is-error skin-primary"
     >
       <select
         class="select-atom-control"
@@ -4937,7 +4937,7 @@ exports[`Storyshots VSelect/desktop flat array 1`] = `
     </div>
      
     <span
-      class="select-atom theme-default"
+      class="select-atom theme-default skin-primary"
     >
       <select
         class="select-atom-control"
@@ -4974,6 +4974,197 @@ exports[`Storyshots VSelect/desktop flat array 1`] = `
   "option 2"
 ]
   </p>
+</div>
+`;
+
+exports[`Storyshots VSelect/desktop skins 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            Primary
+          </th>
+           
+          <th>
+            Secondary
+          </th>
+           
+          <th>
+            Disabled
+          </th>
+        </tr>
+      </thead>
+       
+      <tr>
+        <td>
+          <div
+            class="field-atom v-select theme-default"
+            style="width: 288px;"
+          >
+            <label
+              class="label-atom theme-default"
+              placeholder="Placeholder text"
+            >
+              
+  Label
+
+            </label>
+             
+            <div
+              class="description-atom theme-default"
+              placeholder="Placeholder text"
+            >
+              
+  Helper text goes here
+  
+            </div>
+             
+            <span
+              class="select-atom theme-default skin-primary"
+            >
+              <select
+                class="select-atom-control"
+                placeholder="Placeholder text"
+              >
+                <option
+                  value="value"
+                >
+                  
+      text option 1 with a text
+    
+                </option>
+                <option
+                  value="next value"
+                >
+                  
+      next option
+    
+                </option>
+              </select>
+               
+            </span>
+             
+            <!---->
+          </div>
+        </td>
+         
+        <td
+          style="padding: 20px;"
+        >
+          <div
+            class="field-atom v-select theme-default"
+            style="width: 288px;"
+          >
+            <label
+              class="label-atom theme-default"
+              placeholder="Placeholder text"
+            >
+              
+  Label
+
+            </label>
+             
+            <div
+              class="description-atom theme-default"
+              placeholder="Placeholder text"
+            >
+              
+  Helper text goes here
+  
+            </div>
+             
+            <span
+              class="select-atom theme-default skin-secondary"
+            >
+              <select
+                class="select-atom-control"
+                placeholder="Placeholder text"
+              >
+                <option
+                  value="value"
+                >
+                  
+      text option 1 with a text
+    
+                </option>
+                <option
+                  value="next value"
+                >
+                  
+      next option
+    
+                </option>
+              </select>
+               
+            </span>
+             
+            <!---->
+          </div>
+        </td>
+         
+        <td>
+          <div
+            class="field-atom v-select theme-default"
+            style="width: 288px;"
+          >
+            <label
+              class="label-atom theme-default"
+              disabled="disabled"
+              placeholder="Placeholder text"
+            >
+              
+  Label
+
+            </label>
+             
+            <div
+              class="description-atom theme-default"
+              disabled="disabled"
+              placeholder="Placeholder text"
+            >
+              
+  Helper text goes here
+  
+            </div>
+             
+            <span
+              class="select-atom theme-default skin-secondary"
+            >
+              <select
+                class="select-atom-control"
+                disabled="disabled"
+                placeholder="Placeholder text"
+              >
+                <option
+                  value="value"
+                >
+                  
+      text option 1 with a text
+    
+                </option>
+                <option
+                  value="next value"
+                >
+                  
+      next option
+    
+                </option>
+              </select>
+               
+            </span>
+             
+            <!---->
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>
 `;
 

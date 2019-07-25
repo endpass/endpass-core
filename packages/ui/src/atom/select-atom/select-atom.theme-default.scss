@@ -1,6 +1,4 @@
 .select-atom.theme-default {
-  background-color: var(--endpass-ui-color-grey-1);
-  border: 1px solid var(--endpass-ui-color-grey-1);
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -23,12 +21,25 @@
   display: flex;
   appearance: none;
   background: url('data:image/svg+xml;utf8,<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 11L3 5.99997L3.707 5.29297L8 9.58597L12.293 5.29297L13 5.99997L8 11Z" fill="currentColor" /><path fill-rule="evenodd" clip-rule="evenodd" d="M8 11L3 5.99997L3.707 5.29297L8 9.58597L12.293 5.29297L13 5.99997L8 11Z" fill="currentColor"/></svg>') no-repeat calc(100% - 10px) center;
+  background-color: transparent;
   background-size: 16px;
+
+  // padding for right arrow
+  padding-right: 38px;
 
   &:-moz-focusring {
     color: transparent;
     text-shadow: 0 0 0 #000;
   }
+}
+.select-atom.theme-default.skin-primary {
+  background-color: var(--endpass-ui-color-grey-1);
+  border: 1px solid var(--endpass-ui-color-grey-1);
+}
+
+.select-atom.theme-default.skin-secondary {
+  background-color: var(--endpass-ui-color-white);
+  border: 1px solid var(--endpass-ui-color-grey-1);
 }
 
 .select-atom.theme-default .select-atom-control::placeholder {

@@ -14,6 +14,7 @@
       :value="value"
       :is-error="isError"
       :options="options"
+      :skin="skin"
       v-bind="$attrs"
       v-on="listeners"
     >
@@ -63,6 +64,10 @@ export default {
     options: {
       type: Array,
       default: () => [],
+    },
+    skin: {
+      type: String,
+      default: 'primary',
     },
   },
   data() {

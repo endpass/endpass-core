@@ -17,7 +17,11 @@ storiesOf('VSelect/desktop', module)
       return {
         model: 'value',
         options: [
-          { val: 'value', text: 'text option 1' },
+          {
+            val: 'value',
+            text:
+              'text option 1 with a long long long long long long long text',
+          },
           { val: 'next value', text: 'next option' },
         ],
         label: 'Label',
@@ -37,6 +41,75 @@ storiesOf('VSelect/desktop', module)
         />
         <p>model: {{ model }}</p>
         <p>options: {{ options }}</p>        
+      </theme-provider>
+    `,
+  }))
+  .add('skins', () => ({
+    methods,
+    components: { VSelect },
+    data() {
+      return {
+        model: 'value',
+        options: [
+          { val: 'value', text: 'text option 1 with a text' },
+          { val: 'next value', text: 'next option' },
+        ],
+        label: 'Label',
+        description: 'Helper text goes here',
+      };
+    },
+    template: `
+      <theme-provider>
+        <div>      
+          <table>
+            <thead>
+              <tr>
+                <th>Primary</th>
+                <th>Secondary</th>
+                <th>Disabled</th>            
+              </tr>          
+            </thead>
+            <tr>
+              <td>
+                <v-select
+                  style="width: 288px;"
+                  v-model="model"
+                  placeholder="Placeholder text"
+                  @input="onInput"
+                  skin="primary"
+                  :options="options"
+                  :label="label"
+                  :description="description"
+                />
+              </td>          
+              <td style="background-color: var(--endpass-ui-color-grey-1); padding: 20px;">
+                <v-select
+                  style="width: 288px;"
+                  v-model="model"
+                  placeholder="Placeholder text"
+                  @input="onInput"
+                  skin="secondary"
+                  :options="options"
+                  :label="label"
+                  :description="description"
+                />
+              </td>          
+              <td>
+                <v-select
+                  style="width: 288px;"
+                  v-model="model"
+                  placeholder="Placeholder text"
+                  @input="onInput"
+                  skin="secondary"
+                  disabled
+                  :options="options"
+                  :label="label"
+                  :description="description"
+                />
+              </td>          
+            </tr>        
+          </table>
+        </div>
       </theme-provider>
     `,
   }))
