@@ -5,7 +5,7 @@
 }
 
 .v-logo.theme-default.is-white {
-  color: $white;
+  color: var(--color-white);
 }
 
 .v-logo.theme-default .v-logo-image {

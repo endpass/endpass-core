@@ -39,11 +39,11 @@
 }
 
 .v-button.theme-default.skin-primary {
-  background: $primary-7;
+  background: var(--color-primary-7);
 }
 
 .v-button.theme-default.skin-primary:hover {
-  background: $primary-6;
+  background: var(--color-primary-6);
 }
 
 .v-button.theme-default.skin-primary:focus {
@@ -51,17 +51,17 @@
 }
 
 .v-button.theme-default.skin-primary:active {
-  background: $primary-8;
+  background: var(--color-primary-8);
   box-shadow: 0 2px 4px rgba(36, 42, 46, 0.1), 0 1px 1px rgba(36, 42, 46, 0.1);
 }
 
 .v-button.theme-default.skin-secondary {
-  background: $grey-9;
-  color: $white;
+  background: var(--color-grey-9);
+  color: var(--color-white);
 }
 
 .v-button.theme-default.skin-secondary:hover {
-  background: $grey-6;
+  background: var(--color-grey-6);
 }
 
 .v-button.theme-default.skin-secondary:focus {
@@ -69,13 +69,13 @@
 }
 
 .v-button.theme-default.skin-secondary:active {
-  background: $black;
+  background: var(--color-black);
   box-shadow: 0 2px 4px rgba(36, 42, 46, 0.1), 0 1px 1px rgba(36, 42, 46, 0.1);
 }
 
 .v-button.theme-default.skin-tertiary {
-  background: $white;
-  color: $primary-7;
+  background: var(--color-white);
+  color: var(--color-primary-7);
 }
 
 .v-button.theme-default.skin-tertiary:focus {
@@ -83,18 +83,18 @@
 }
 
 .v-button.theme-default.skin-tertiary:active {
-  background: $primary-1;
+  background: var(--color-primary-1);
   box-shadow: 0 2px 4px rgba(36, 42, 46, 0.1), 0 1px 1px rgba(36, 42, 46, 0.1);
 }
 
 .v-button.theme-default[disabled] .v-button-label {
-  color: $grey-4 !important;
+  color: var(--color-grey-4) !important;
 }
 
 .v-button.theme-default.skin-tertiary .v-button-label,
 .v-button.theme-default.skin-quaternary .v-button-label,
 .v-button.theme-default.skin-ghost .v-button-label {
-  color: $primary-7;
+  color: var(--color-primary-7);
 }
 
 .v-button.theme-default.skin-primary .v-button-label,
@@ -103,50 +103,50 @@
 .v-button.theme-default.skin-quaternary:hover .v-button-icon,
 .v-button.theme-default.skin-quaternary:focus .v-button-label,
 .v-button.theme-default.skin-ghost:active .v-button-label {
-  color: $white;
+  color: var(--color-white);
 }
 
 .v-button.theme-default.skin-tertiary:hover .v-button-label {
-  color: $primary-6;
+  color: var(--color-primary-6);
 }
 
 .v-button.theme-default.skin-quaternary {
   box-shadow: none;
-  border-color: $primary-7;
-  color: $primary-7;
+  border-color: var(--color-primary-7);
+  color: var(--color-primary-7);
 }
 
 .v-button.theme-default.skin-quaternary:hover {
-  background: $primary-7;
+  background: var(--color-primary-7);
   box-shadow: 0 2px 4px rgba(36, 42, 46, 0.1), 0 1px 1px rgba(36, 42, 46, 0.1);
 }
 
 .v-button.theme-default.skin-quaternary:focus {
-  background: $primary-7;
+  background: var(--color-primary-7);
 }
 
 .v-button.theme-default.skin-quaternary:active {
-  background: $primary-8;
+  background: var(--color-primary-8);
   box-shadow: 0 2px 4px rgba(36, 42, 46, 0.1), 0 1px 1px rgba(36, 42, 46, 0.1);
 }
 
 .v-button.theme-default.skin-ghost {
   box-shadow: none;
   border-color: transparent;
-  color: $primary-7;
+  color: var(--color-primary-7);
 }
 
 .v-button.theme-default.skin-ghost:hover {
-  background: $grey-2;
+  background: var(--color-grey-2);
 }
 
 .v-button.theme-default.skin-ghost:focus {
-  border-color: $primary-7;
+  border-color: var(--color-primary-7);
 }
 
 .v-button.theme-default.skin-ghost:active {
   border-color: transparent;
-  background: $grey-3;
+  background: var(--color-grey-3);
 }
 
 .v-button.theme-default.size-normal {
@@ -172,7 +172,7 @@
 .v-button.theme-default[disabled] {
   border-color: transparent !important;
   box-shadow: none !important;
-  background: $grey-2 !important;
+  background: var(--color-grey-2) !important;
 }
 
 .v-button.theme-default .svg-atom {
@@ -185,7 +185,7 @@
 .v-button.theme-default.skin-tertiary .svg-atom,
 .v-button.theme-default.skin-quaternary .svg-atom,
 .v-button.theme-default.skin-ghost .svg-atom {
-  fill: $primary-7;
+  fill: var(--color-primary-7);
 }
 
 .v-button.theme-default.skin-social .svg-atom {
@@ -198,31 +198,31 @@
 .v-button.theme-default.skin-quaternary:hover .svg-atom,
 .v-button.theme-default.skin-quaternary:focus .svg-atom,
 .v-button.theme-default.skin-ghost:active .svg-atom {
-  fill: $white;
+  fill: var(--color-white);
 }
 
 .v-button.theme-default.skin-tertiary:hover .svg-atom {
-  fill: $primary-6;
+  fill: var(--color-primary-6);
 }
 
 .v-button.skin-success {
-  background-color: $success;
-  color: $white;
+  background-color: var(--color-success);
+  color: var(--color-white);
 }
 
 .v-button.skin-error {
-  background-color: $error;
-  color: $white;
+  background-color: var(--color-error);
+  color: var(--color-white);
 }
 
 .v-button.skin-quaternary-error {
-  color: $error;
-  border-color: $error;
+  color: var(--color-error);
+  border-color: var(--color-error);
   box-shadow: none;
 }
 
 .v-button.theme-default.skin-social {
   box-shadow: none;
-  border: 1px solid $grey-8;
-  color: $grey-8;
+  border: 1px solid var(--color-grey-8);
+  color: var(--color-grey-8);
 }

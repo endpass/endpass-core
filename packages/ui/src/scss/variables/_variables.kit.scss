@@ -1,20 +1,22 @@
-$primary-font: 'Akkurat Pro', Helvetica, Arial, sans-serif;
+:root {
+  --font-family-primary: 'Akkurat Pro', Helvetica, Arial, sans-serif;
 
-$warning-primary: #fc7b1e;
-$warning-secondary: #fdd13a;
-$error: #d91d28;
-$success: #24a148;
-$white: #ffffff;
-$black: #13171a;
-$grey-1: #f2f4f8;
-$grey-2: #d5d9e0;
-$grey-3: #b9bfc7;
-$grey-4: #9fa5ad;
-$grey-5: #868d95;
-$grey-6: #697077;
-$grey-7: #50565b;
-$grey-8: #373d42;
-$grey-9: #242a2e;
+  --color-warning-primary: #fc7b1e;
+  --color-warning-secondary: #fdd13a;
+  --color-error: #d91d28;
+  --color-success: #24a148;
+  --color-white: #ffffff;
+  --color-black: #13171a;
+  --color-grey-1: #f2f4f8;
+  --color-grey-2: #d5d9e0;
+  --color-grey-3: #b9bfc7;
+  --color-grey-4: #9fa5ad;
+  --color-grey-5: #868d95;
+  --color-grey-6: #697077;
+  --color-grey-7: #50565b;
+  --color-grey-8: #373d42;
+  --color-grey-9: #242a2e;
+}
 
 // breakpoints
 $lt-small-breakpoint: 767.98px;

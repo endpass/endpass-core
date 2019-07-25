@@ -3,7 +3,7 @@
   height: 82px;
 }
 .v-progress-circle.theme-default .v-progress-circle-over {
-  animation: spin 1.5s ease-in-out infinite;
+  animation: v-spin 1.5s ease-in-out infinite;
   stroke-dasharray: 0, 188.4;
   position: relative;
   transform: rotate(-90deg);
@@ -25,13 +25,13 @@
 }
 
 .v-progress-circle.theme-default .v-progress-circle-back circle {
-  stroke: $grey-3;
+  stroke: var(--color-grey-3);
   stroke-width: 4;
   fill: none;
 }
 
 .v-progress-circle.theme-default .v-progress-circle-over circle {
-  stroke: $primary-7;
+  stroke: var(--color-primary-7);
   stroke-width: 4;
   fill: none;
 }
