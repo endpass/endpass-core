@@ -8062,3 +8062,413 @@ exports[`Storyshots VTable/desktop without-header 1`] = `
   </table>
 </div>
 `;
+
+exports[`Storyshots VTag/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <table>
+    <thead>
+      <tr>
+        <th />
+         
+        <th>
+          
+                No skin
+              
+        </th>
+         
+        <th>
+          
+                cyan
+              
+        </th>
+         
+        <th>
+          
+                red
+              
+        </th>
+         
+        <th>
+          
+                magenta
+              
+        </th>
+         
+        <th>
+          
+                purple
+              
+        </th>
+         
+        <th>
+          
+                blue
+              
+        </th>
+         
+        <th>
+          
+                teal
+              
+        </th>
+         
+        <th>
+          
+                green
+              
+        </th>
+         
+        <th>
+          
+                gray
+              
+        </th>
+         
+        <th>
+          
+                disabled
+              
+        </th>
+      </tr>
+    </thead>
+     
+    <tr>
+      <td>
+        default
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default skin-default"
+        >
+          text tag 
+          <!---->
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default skin-cyan"
+        >
+          text tag 
+          <!---->
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default skin-red"
+        >
+          text tag 
+          <!---->
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default skin-magenta"
+        >
+          text tag 
+          <!---->
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default skin-purple"
+        >
+          text tag 
+          <!---->
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default skin-blue"
+        >
+          text tag 
+          <!---->
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default skin-teal"
+        >
+          text tag 
+          <!---->
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default skin-green"
+        >
+          text tag 
+          <!---->
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default skin-gray"
+        >
+          text tag 
+          <!---->
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default skin-default"
+          disabled="disabled"
+        >
+          text tag 
+          <!---->
+        </div>
+      </td>
+    </tr>
+     
+    <tr>
+      <td>
+        is-closable
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default is-closable skin-default"
+        >
+          text tag 
+          <i
+            class="icon-atom v-tag-close theme-default"
+          >
+            <svg
+              class="svg-atom theme-default"
+              height="100%"
+              width="100%"
+            >
+              <use
+                x="0"
+                xlink:href="#endpass-ui-icon-close"
+                y="0"
+              />
+            </svg>
+          </i>
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default is-closable skin-cyan"
+        >
+          text tag 
+          <i
+            class="icon-atom v-tag-close theme-default"
+          >
+            <svg
+              class="svg-atom theme-default"
+              height="100%"
+              width="100%"
+            >
+              <use
+                x="0"
+                xlink:href="#endpass-ui-icon-close"
+                y="0"
+              />
+            </svg>
+          </i>
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default is-closable skin-red"
+        >
+          text tag 
+          <i
+            class="icon-atom v-tag-close theme-default"
+          >
+            <svg
+              class="svg-atom theme-default"
+              height="100%"
+              width="100%"
+            >
+              <use
+                x="0"
+                xlink:href="#endpass-ui-icon-close"
+                y="0"
+              />
+            </svg>
+          </i>
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default is-closable skin-magenta"
+        >
+          text tag 
+          <i
+            class="icon-atom v-tag-close theme-default"
+          >
+            <svg
+              class="svg-atom theme-default"
+              height="100%"
+              width="100%"
+            >
+              <use
+                x="0"
+                xlink:href="#endpass-ui-icon-close"
+                y="0"
+              />
+            </svg>
+          </i>
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default is-closable skin-purple"
+        >
+          text tag 
+          <i
+            class="icon-atom v-tag-close theme-default"
+          >
+            <svg
+              class="svg-atom theme-default"
+              height="100%"
+              width="100%"
+            >
+              <use
+                x="0"
+                xlink:href="#endpass-ui-icon-close"
+                y="0"
+              />
+            </svg>
+          </i>
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default is-closable skin-blue"
+        >
+          text tag 
+          <i
+            class="icon-atom v-tag-close theme-default"
+          >
+            <svg
+              class="svg-atom theme-default"
+              height="100%"
+              width="100%"
+            >
+              <use
+                x="0"
+                xlink:href="#endpass-ui-icon-close"
+                y="0"
+              />
+            </svg>
+          </i>
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default is-closable skin-teal"
+        >
+          text tag 
+          <i
+            class="icon-atom v-tag-close theme-default"
+          >
+            <svg
+              class="svg-atom theme-default"
+              height="100%"
+              width="100%"
+            >
+              <use
+                x="0"
+                xlink:href="#endpass-ui-icon-close"
+                y="0"
+              />
+            </svg>
+          </i>
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default is-closable skin-green"
+        >
+          text tag 
+          <i
+            class="icon-atom v-tag-close theme-default"
+          >
+            <svg
+              class="svg-atom theme-default"
+              height="100%"
+              width="100%"
+            >
+              <use
+                x="0"
+                xlink:href="#endpass-ui-icon-close"
+                y="0"
+              />
+            </svg>
+          </i>
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default is-closable skin-gray"
+        >
+          text tag 
+          <i
+            class="icon-atom v-tag-close theme-default"
+          >
+            <svg
+              class="svg-atom theme-default"
+              height="100%"
+              width="100%"
+            >
+              <use
+                x="0"
+                xlink:href="#endpass-ui-icon-close"
+                y="0"
+              />
+            </svg>
+          </i>
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default is-closable skin-default"
+          disabled="disabled"
+        >
+          text tag 
+          <i
+            class="icon-atom v-tag-close theme-default"
+          >
+            <svg
+              class="svg-atom theme-default"
+              height="100%"
+              width="100%"
+            >
+              <use
+                x="0"
+                xlink:href="#endpass-ui-icon-close"
+                y="0"
+              />
+            </svg>
+          </i>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+`;

@@ -4,12 +4,11 @@
     class="v-button"
     v-on="$listeners"
   >
-
     <icon-atom
       v-if="isLoading"
       class="v-button-icon v-button-icon-loader"
     >
-      <svg-atom name="loader"></svg-atom>
+      <svg-atom name="loader" />
     </icon-atom>
     <icon-atom
       v-if="$slots.iconBefore && !isLoading"
@@ -17,8 +16,10 @@
     >
       <slot name="iconBefore" />
     </icon-atom>
-    <span class="v-button-label"
-      v-if="!isLoading">
+    <span
+      v-if="!isLoading"
+      class="v-button-label"
+    >
       <slot />
     </span>
     <icon-atom
@@ -59,7 +60,7 @@ export default {
     },
     isLoading: {
       type: Boolean,
-      default: false
+      default: false,
     },
     size: {
       type: String,

@@ -70,11 +70,6 @@ export default {
       default: 'primary',
     },
   },
-  data() {
-    return {
-      isFocus: false,
-    };
-  },
   computed: {
     listeners() {
       return Object.assign(this.$listeners, {
