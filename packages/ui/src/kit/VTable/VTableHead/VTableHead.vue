@@ -14,7 +14,7 @@ export default {
       type: String,
       default: 'grey',
       validator(value) {
-        return ['grey', 'none'].indexOf(value) !== -1;
+        return ['grey', 'none', 'light'].indexOf(value) !== -1;
       },
     },
   },

@@ -53,6 +53,50 @@ storiesOf('VTable/desktop', module)
       </theme-provider>
     `,
   }))
+  .add('skin-light', () => ({
+    components: {
+      VTable,
+      VTableRow,
+      VTableCell,
+      VTableHead,
+      VTableBody,
+      VTableHeadCell,
+    },
+    data() {
+      return {
+        rows: new Array(10),
+      };
+    },
+    template: `
+      <theme-provider>
+        <v-table>
+          <v-table-head skin="light">
+            <v-table-row>
+              <v-table-head-cell>Column header</v-table-head-cell>
+              <v-table-head-cell>Column header</v-table-head-cell>
+              <v-table-head-cell>Column header</v-table-head-cell>
+              <v-table-head-cell>Column header</v-table-head-cell>
+              <v-table-head-cell>Column header</v-table-head-cell>
+              <v-table-head-cell>Column header</v-table-head-cell>
+            </v-table-row>
+          </v-table-head>
+          <v-table-body>
+            <v-table-row
+              v-for="(row, index) in rows"
+              :key="index"
+            >
+              <v-table-cell>cell text</v-table-cell>
+              <v-table-cell>cell text</v-table-cell>
+              <v-table-cell>cell text</v-table-cell>
+              <v-table-cell>cell text</v-table-cell>
+              <v-table-cell>cell text</v-table-cell>
+              <v-table-cell>cell text</v-table-cell>
+            </v-table-row>
+          </v-table-body>
+        </v-table>
+      </theme-provider>
+    `,
+  }))
   .add('skin-none', () => ({
     components: {
       VTable,
@@ -113,7 +157,7 @@ storiesOf('VTable/desktop', module)
     },
     template: `
       <theme-provider>
-        <v-table>         
+        <v-table>
           <v-table-body>
             <v-table-row
               v-for="(row, index) in rows"
@@ -148,8 +192,8 @@ storiesOf('VTable/desktop', module)
     },
     template: `
       <theme-provider>
-        <div style="padding: 10px; background: white;">       
-          <v-table-container>     
+        <div style="padding: 10px; background: white;">
+          <v-table-container>
             <v-table>
               <v-table-head>
                 <v-table-row>
@@ -160,7 +204,7 @@ storiesOf('VTable/desktop', module)
                   <v-table-head-cell>Column header</v-table-head-cell>
                   <v-table-head-cell>Column header</v-table-head-cell>
                 </v-table-row>
-              </v-table-head>         
+              </v-table-head>
               <v-table-body>
                 <v-table-row
                   v-for="(row, index) in rows"
@@ -197,9 +241,9 @@ storiesOf('VTable/desktop', module)
     },
     template: `
       <theme-provider>
-        <div style="padding: 10px; background: white;">       
-          <v-table-container>     
-            <v-table>                       
+        <div style="padding: 10px; background: white;">
+          <v-table-container>
+            <v-table>
               <v-table-body>
                 <v-table-row
                   v-for="(row, index) in rows"

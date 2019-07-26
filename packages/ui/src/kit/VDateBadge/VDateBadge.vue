@@ -13,7 +13,7 @@ export default {
 
   props: {
     date: {
-      type: [String, Date],
+      type: [String, Date, Number],
       required: true,
     },
   },

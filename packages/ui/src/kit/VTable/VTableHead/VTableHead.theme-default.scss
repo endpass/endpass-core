@@ -6,6 +6,17 @@
   background-color: var(--endpass-ui-color-grey-1);
 }
 
+.v-table-head.theme-default.skin-light {
+  background-color: var(--endpass-ui-color-white);
+}
+
+.v-table-head.theme-default.skin-light .v-table-head-cell {
+  color: var(--endpass-ui-color-grey-3);
+  font-size: 12px;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
 // select first row
 .v-table-head.theme-default:first-child .v-table-head-cell:first-child {
   border-top-left-radius: 4px;
