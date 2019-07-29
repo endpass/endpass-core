@@ -4,9 +4,7 @@ module.exports = {
   ...base,
   rules: {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    rules: {
-      'prettier/prettier': ['error'],
-    },
+    'prettier/prettier': ['error'],
     'arrow-parens': ['error', 'as-needed'],
     'no-shadow': ['warn'],
     'consistent-return': 'error',
