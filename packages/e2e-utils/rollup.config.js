@@ -32,18 +32,19 @@ const commonConfig = {
       runtimeHelpers: true,
     }),
     copy({
-      targets: {
-        'package.json': 'dist/package.json',
-        'README.md': 'dist/README.md',
-        'yarn.lock': 'dist/yarn.lock',
-        ...glob.sync(['./src/worker/*']).reduce(
-          (acc, item) =>
-            Object.assign(acc, {
-              [item]: `dist/${path.basename(item)}`,
-            }),
-          {},
-        ),
-      },
+      targets: [
+        {
+          src: [
+            'package.json',
+            'README.md',
+            'yarn.lock',
+            ...glob
+              .sync(['./src/worker/*'])
+              .reduce((acc, item) => acc.concat(item), []),
+          ],
+          dest: 'dist',
+        },
+      ],
     }),
   ],
   watch: {

@@ -1,6 +1,6 @@
 {
   "name": "@endpass/e2e-utils",
-  "version": "0.2.13",
+  "version": "0.2.14",
   "description": "Utilities for e2e testing",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -38,28 +38,28 @@
     }
   },
   "dependencies": {
-    "@babel/runtime": "^7.4.5",
-    "@endpass/class": "^0.14.5",
+    "@babel/runtime": "^7.5.5",
+    "@endpass/class": "^0.16.1",
     "nanoid": "^2.0.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/plugin-transform-runtime": "^7.4.4",
-    "@babel/preset-env": "^7.4.5",
-    "@endpass/eslint-plugin-endpass": "^0.1.0",
-    "ejs": "^2.6.1",
-    "eslint": "^5.16.0",
-    "fast-glob": "^2.2.7",
-    "husky": "^2.4.0",
-    "lint-staged": "^8.2.0",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@endpass/eslint-plugin-endpass": "^0.1.2",
+    "ejs": "^2.6.2",
+    "eslint": "^6.1.0",
+    "fast-glob": "^3.0.4",
+    "husky": "^3.0.1",
+    "lint-staged": "^9.2.1",
     "prettier": "^1.18.2",
     "rimraf": "^2.6.3",
-    "rollup": "^1.14.6",
+    "rollup": "^1.17.0",
     "rollup-plugin-alias": "^1.5.2",
-    "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-commonjs": "^10.0.0",
-    "rollup-plugin-copy": "^2.0.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-copy": "^3.1.0",
     "rollup-plugin-json": "^4.0.0",
-    "rollup-plugin-node-resolve": "^5.0.1"
+    "rollup-plugin-node-resolve": "^5.2.0"
   }
 }
