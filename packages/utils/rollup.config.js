@@ -27,11 +27,9 @@ const commonConfig = {
     }),
     // commonjs(),
     copy({
-      targets: {
-        'package.json': 'dist/package.json',
-        'README.md': 'dist/README.md',
-        'yarn.lock': 'dist/yarn.lock',
-      },
+      targets: [
+        { src: ['package.json', 'README.md', 'yarn.lock'], dest: 'dist' },
+      ],
     }),
   ],
   watch: {
