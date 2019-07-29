@@ -25,9 +25,7 @@ module.exports = {
   },
   rules: {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    rules: {
-      'prettier/prettier': ['error'],
-    },
+    'prettier/prettier': ['error'],
     'implicit-arrow-linebreak': 'off',
     'no-empty': 'warn',
     'class-methods-use-this': 'off',
