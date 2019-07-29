@@ -11,9 +11,7 @@ module.exports = {
     cy: true,
     ENV: true,
   },
-  extends: [
-    'airbnb-base',
-  ],
+  extends: ['airbnb-base'],
   plugins: ['prettier', 'json'],
   parserOptions: {
     parser: 'babel-eslint',
@@ -27,9 +25,7 @@ module.exports = {
   },
   rules: {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    rules: {
-      'prettier/prettier': ['error'],
-    },
+    'prettier/prettier': ['error'],
     'implicit-arrow-linebreak': 'off',
     'no-empty': 'warn',
     'class-methods-use-this': 'off',
