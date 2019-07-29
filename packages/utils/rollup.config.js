@@ -11,7 +11,7 @@ function resolveDir(dir) {
 }
 
 const SOURCE_PATH = path.join(__dirname, './src');
-const INPUT_PATH = path.join(SOURCE_PATH, './**/*.js');
+const INPUT_PATH = path.join(SOURCE_PATH, './**/*.js').replace(/\\/g, '/');
 const IGNORE_PATHS = ['./node_modules/**'];
 
 const commonConfig = {

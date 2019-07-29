@@ -9,7 +9,10 @@ module.exports = {
     '^mocks/(.*)$': '<rootDir>/test/unit/mocks/$1',
     '^@/(.*)$': '<rootDir>/src/$1',
   },
-  testMatch: ['<rootDir>/(test/unit/**/*.spec.js|**/__tests__/*.js)'],
+  testMatch: [
+    '<rootDir>/test/unit/**/*.spec.js',
+    '<rootDir>/**/__tests__/*.js',
+  ],
   transform: {
     '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
     '.+\\.(css|styl|less|sass|scss|png|jpe?g|ttf|woff2?|svg)$':
@@ -21,5 +24,5 @@ module.exports = {
   },
   transformIgnorePatterns: ['node_modules'],
   setupFiles: ['<rootDir>/test/unit/setup', 'jest-canvas-mock'],
-  setupTestFrameworkScriptFile: '<rootDir>/test/unit/setupTests',
+  setupFilesAfterEnv: ['<rootDir>/test/unit/setupTests'],
 };
