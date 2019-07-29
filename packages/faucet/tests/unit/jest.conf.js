@@ -1,4 +1,5 @@
 const path = require('path');
+
 module.exports = {
   rootDir: path.resolve(__dirname, '../../'),
   moduleFileExtensions: ['js', 'jsx', 'json', 'vue'],
@@ -17,5 +18,5 @@ module.exports = {
   ],
   testURL: 'http://localhost/',
   setupFiles: ['<rootDir>/tests/unit/setup'],
-  setupTestFrameworkScriptFile: '<rootDir>/tests/unit/setupTests',
+  setupFilesAfterEnv: ['<rootDir>/tests/unit/setupTests'],
 };
