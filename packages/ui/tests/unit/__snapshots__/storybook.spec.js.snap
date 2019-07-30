@@ -8854,7 +8854,7 @@ exports[`Storyshots VTextarea/desktop disabled 1`] = `
     </div>
      
     <span
-      class="textarea-atom theme-default"
+      class="textarea-atom theme-default skin-default"
       disabled="disabled"
     >
       <textarea
@@ -8899,7 +8899,7 @@ exports[`Storyshots VTextarea/desktop enabled 1`] = `
     </div>
      
     <span
-      class="textarea-atom theme-default"
+      class="textarea-atom theme-default skin-default"
     >
       <textarea
         class="textarea-atom-control"
@@ -8945,7 +8945,7 @@ exports[`Storyshots VTextarea/desktop error 1`] = `
     </div>
      
     <span
-      class="textarea-atom theme-default is-error"
+      class="textarea-atom theme-default is-error skin-default"
     >
       <textarea
         class="textarea-atom-control"
@@ -8979,5 +8979,51 @@ exports[`Storyshots VTextarea/desktop error 1`] = `
 
     </div>
   </div>
+</div>
+`;
+
+exports[`Storyshots VTextarea/desktop skin white 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div
+    class="field-atom theme-default"
+    style="width: 288px;"
+  >
+    <label
+      class="label-atom theme-default"
+      placeholder="Placeholder text"
+    >
+      
+  Label
+
+    </label>
+     
+    <div
+      class="description-atom theme-default"
+      placeholder="Placeholder text"
+    >
+      
+  Helper text goes here
+  
+    </div>
+     
+    <span
+      class="textarea-atom theme-default skin-white"
+    >
+      <textarea
+        class="textarea-atom-control"
+        placeholder="Placeholder text"
+      />
+       
+    </span>
+     
+    <!---->
+  </div>
+  
+        
+      
 </div>
 `;
