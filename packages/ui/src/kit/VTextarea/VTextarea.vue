@@ -63,6 +63,9 @@ export default {
     skin: {
       type: String,
       default: 'default',
+      validator(value) {
+        return ['default', 'white'].indexOf(value) !== -1;
+      },
     },
   },
   computed: {
