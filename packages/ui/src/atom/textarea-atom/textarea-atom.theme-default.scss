@@ -9,6 +9,11 @@
   padding: 12px 0;
 }
 
+.textarea-atom.theme-default.skin-white {
+  background-color: var(--endpass-ui-color-white);
+  border: 1px solid var(--endpass-ui-color-white);
+}
+
 .textarea-atom.theme-default .textarea-atom-control {
   font-size: 14px;
   color: var(--endpass-ui-color-grey-8);

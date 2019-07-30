@@ -77,4 +77,29 @@ storiesOf('VTextarea/desktop', module)
         />
       </theme-provider>
     `,
+  }))
+  .add('skin white', () => ({
+    methods,
+    components: { VTextarea },
+    data() {
+      return {
+        model: null,
+        label: 'Label',
+        description: 'Helper text goes here',
+      };
+    },
+    template: `
+      <theme-provider>
+        <v-textarea
+          style="width: 288px;"
+          v-model="model"
+          placeholder="Placeholder text"
+          @input="onInput"
+          skin="white"
+          :label="label"
+          :description="description"
+        />
+        {{ model }}
+      </theme-provider>
+    `,
   }));

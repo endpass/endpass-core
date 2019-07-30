@@ -13,6 +13,7 @@
     <textarea-atom
       :value="value"
       :is-error="isError"
+      :class="skinCssClass"
       v-bind="$attrs"
       v-on="listeners"
     >
@@ -59,6 +60,10 @@ export default {
       type: String,
       default: null,
     },
+    skin: {
+      type: String,
+      default: 'default',
+    },
   },
   computed: {
     listeners() {
@@ -70,6 +75,9 @@ export default {
     },
     isError() {
       return !!this.error;
+    },
+    skinCssClass() {
+      return `skin-${this.skin}`;
     },
   },
   components: {
