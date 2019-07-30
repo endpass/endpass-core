@@ -1,18 +1,15 @@
 import { storiesOf } from '@storybook/vue';
 import { action } from '@storybook/addon-actions';
-import VInput from '@/kit/VInput';
+import VTextarea from '@/kit/VTextarea';
 
 const methods = {
   onInput: action('onInput'),
-  onHover: action('onHover'),
-  onFocus: action('onFocus'),
-  onBlur: action('onBlur'),
 };
 
-storiesOf('VInput/desktop', module)
+storiesOf('VTextarea/desktop', module)
   .add('enabled', () => ({
     methods,
-    components: { VInput },
+    components: { VTextarea },
     data() {
       return {
         model: null,
@@ -22,7 +19,7 @@ storiesOf('VInput/desktop', module)
     },
     template: `
       <theme-provider>
-        <v-input
+        <v-textarea
           style="width: 288px;"
           v-model="model"
           placeholder="Placeholder text"
@@ -44,10 +41,10 @@ storiesOf('VInput/desktop', module)
       };
     },
     methods,
-    components: { VInput },
+    components: { VTextarea },
     template: `
       <theme-provider>
-        <v-input
+        <v-textarea
           v-model="model"
           :error="error"
           style="width: 288px;"
@@ -60,7 +57,7 @@ storiesOf('VInput/desktop', module)
   }))
   .add('disabled', () => ({
     methods,
-    components: { VInput },
+    components: { VTextarea },
     data() {
       return {
         model: null,
@@ -70,7 +67,7 @@ storiesOf('VInput/desktop', module)
     },
     template: `
       <theme-provider>
-        <v-input
+        <v-textarea
           v-model="model"
           disabled="true"
           style="width: 288px;"

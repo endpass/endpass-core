@@ -10,7 +10,7 @@
       v-bind="$attrs"
       :description="description"
     />
-    <input-atom
+    <textarea-atom
       :value="value"
       :is-error="isError"
       v-bind="$attrs"
@@ -22,7 +22,7 @@
       >
         <svg-atom name="error" />
       </icon-atom>
-    </input-atom>
+    </textarea-atom>
     <error-atom
       v-if="isError"
       :error="error"
@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import InputAtom from '@/atom/input-atom/input-atom';
+import TextareaAtom from '@/atom/textarea-atom/textarea-atom';
 import LabelAtom from '@/atom/label-atom/label-atom';
 import FieldAtom from '@/atom/field-atom/field-atom';
 import ErrorAtom from '@/atom/error-atom/error-atom';
@@ -40,7 +40,7 @@ import IconAtom from '@/atom/icon-atom/icon-atom';
 import SvgAtom from '@/atom/svg-atom/svg-atom';
 
 export default {
-  name: 'VInput',
+  name: 'VTextarea',
   inheritAttrs: false,
   props: {
     label: {
@@ -60,27 +60,20 @@ export default {
       default: null,
     },
   },
-  data() {
-    return {
-      isFocus: false,
-    };
-  },
   computed: {
     listeners() {
-      return Object.assign({},
-        this.$listeners,
-        {
-          input: (value) => {
-            this.$emit('input', value);
-          },
-        });
+      return Object.assign({}, this.$listeners, {
+        input: (value) => {
+          this.$emit('input', value);
+        },
+      });
     },
     isError() {
       return !!this.error;
     },
   },
   components: {
-    InputAtom,
+    TextareaAtom,
     LabelAtom,
     FieldAtom,
     ErrorAtom,
