@@ -1,0 +1,60 @@
+.textarea-atom.theme-default {
+  background-color: var(--endpass-ui-color-grey-1);
+  border: 1px solid var(--endpass-ui-color-grey-1);
+  display: flex;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: background-color .3s, border-color .3s;
+  border-radius: 4px;
+  padding: 12px 0;
+}
+
+.textarea-atom.theme-default .textarea-atom-control {
+  font-size: 14px;
+  color: var(--endpass-ui-color-grey-8);
+  letter-spacing: -0.175px;
+  padding: 0 16px;
+  height: 38px;
+  border: 0;
+  background: none;
+  outline: 0;
+  font-family: var(--endpass-ui-font-family-primary);
+  width: 100%;
+  display: flex;
+  resize: none;
+}
+
+.textarea-atom.theme-default .textarea-atom-control::placeholder {
+  color: var(--endpass-ui-color-grey-5);
+  transition: opacity .3s, color .3s;
+}
+
+
+.textarea-atom.theme-default:hover {
+  border-color: var(--endpass-ui-color-grey-2);
+
+  .textarea-atom-control::placeholder {
+    color: var(--endpass-ui-color-grey-6);
+  }
+}
+
+.textarea-atom.theme-default:focus-within {
+  border-color: var(--endpass-ui-color-primary-7);
+  background-color: var(--endpass-ui-color-white);
+
+  .textarea-atom-control::placeholder {
+    opacity: 0;
+  }
+}
+
+.textarea-atom.theme-default.is-error {
+  border-color: var(--endpass-ui-color-error);
+}
+
+.textarea-atom.theme-default[disabled=disabled] {
+  border-color: var(--endpass-ui-color-grey-1);
+
+  .textarea-atom-control::placeholder {
+    color: var(--endpass-ui-color-grey-4);
+  }
+}
