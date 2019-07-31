@@ -27,6 +27,7 @@
 
 <script>
 import ThemeMixin from '@/mixins/ThemeMixin';
+import IsDisabledMixin from '@/mixins/IsDisabledMixin';
 import IconAtom from '@/atom/icon-atom/icon-atom';
 import checkSvgIcon from '@/img/check.svg';
 
@@ -92,7 +93,7 @@ export default {
       return Object.assign(this.themeCssClass, {
         'is-checked': this.isChecked,
         'is-focused': this.isFocused,
-        'is-disabled': this.disabled || this.$attrs.disabled !== undefined,
+        'is-disabled': this.disabled || this.isDisabled,
         'is-error': this.error,
       });
     },
