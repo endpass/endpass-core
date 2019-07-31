@@ -4,8 +4,8 @@ export default {
     themeCssClass() {
       return this.theme
         ? {
-            [`theme-${this.theme}`]: !!this.theme,
-          }
+          [`theme-${this.theme}`]: !!this.theme,
+        }
         : {};
     },
   },

@@ -23,7 +23,9 @@ storiesOf('VFileDropArea/desktop', module)
     template: `
       <theme-provider>
         <v-label label="Single File"/>
-        <v-file-drop-area @change="onChange">
+        <v-file-drop-area @change="onChange"
+            :disabled="false"
+        >
           <p>Add File</p>
           <v-description disabled description="or drop files here"/>
         </v-file-drop-area>

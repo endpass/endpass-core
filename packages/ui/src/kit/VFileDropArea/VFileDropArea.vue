@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import IsDisabledMixin from '@/mixins/IsDisabledMixin';
 import ThemeMixin from '@/mixins/ThemeMixin';
 import FieldAtom from '@/atom/field-atom/field-atom';
 
@@ -50,7 +51,7 @@ export default {
       return false;
     },
     handleDrop(e) {
-      if (this.$attrs.disabled !== undefined) {
+      if (this.isDisabled) {
         return this.preventDrop(e);
       }
       const files = this.getTransferFiles(e);
@@ -86,7 +87,7 @@ export default {
     window.removeEventListener('dragover', this.preventDrop, false);
     window.removeEventListener('drop', this.handleDrop, false);
   },
-  mixins: [ThemeMixin],
+  mixins: [ThemeMixin, IsDisabledMixin],
   components: {
     FieldAtom,
   },
