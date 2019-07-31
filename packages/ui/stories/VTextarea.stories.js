@@ -20,7 +20,7 @@ storiesOf('VTextarea/desktop', module)
     template: `
       <theme-provider>
         <v-textarea
-          style="width: 288px;"
+          style="width: 288px; height: 80px;"
           v-model="model"
           placeholder="Placeholder text"
           @input="onInput"
@@ -47,7 +47,7 @@ storiesOf('VTextarea/desktop', module)
         <v-textarea
           v-model="model"
           :error="error"
-          style="width: 288px;"
+          style="width: 288px; height: 80px;"
           placeholder="Placeholder text"
           :label="label"
           :description="description"
@@ -70,7 +70,7 @@ storiesOf('VTextarea/desktop', module)
         <v-textarea
           v-model="model"
           disabled="true"
-          style="width: 288px;"
+          style="width: 288px; height: 80px;"
           placeholder="Placeholder text"
           :label="label"
           :description="description"
@@ -91,7 +91,7 @@ storiesOf('VTextarea/desktop', module)
     template: `
       <theme-provider>
         <v-textarea
-          style="width: 288px;"
+          style="width: 288px; height: 80px;"
           v-model="model"
           placeholder="Placeholder text"
           @input="onInput"

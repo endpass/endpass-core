@@ -8831,7 +8831,7 @@ exports[`Storyshots VTextarea/desktop disabled 1`] = `
    
   <div
     class="field-atom theme-default"
-    style="width: 288px;"
+    style="width: 288px; height: 80px;"
   >
     <label
       class="label-atom theme-default"
@@ -8878,7 +8878,7 @@ exports[`Storyshots VTextarea/desktop enabled 1`] = `
    
   <div
     class="field-atom theme-default"
-    style="width: 288px;"
+    style="width: 288px; height: 80px;"
   >
     <label
       class="label-atom theme-default"
@@ -8924,7 +8924,7 @@ exports[`Storyshots VTextarea/desktop error 1`] = `
    
   <div
     class="field-atom theme-default"
-    style="width: 288px;"
+    style="width: 288px; height: 80px;"
   >
     <label
       class="label-atom theme-default"
@@ -8990,7 +8990,7 @@ exports[`Storyshots VTextarea/desktop skin white 1`] = `
    
   <div
     class="field-atom theme-default"
-    style="width: 288px;"
+    style="width: 288px; height: 80px;"
   >
     <label
       class="label-atom theme-default"
