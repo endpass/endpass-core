@@ -7,23 +7,39 @@ const E2E_SW_METHODS = {
   E2E_CLEAR_MOCKS: 'E2E_CLEAR_MOCKS',
 };
 
+const DIRECTION = {
+  CLIENT: 'e2e-sw-client',
+  HOST: 'e2e-sw-host',
+};
+
 class SWControllerDuplexBridge {
   /**
+   * @param {object} options
    * @param {Window} [options.target]
+   * @param {Window} [options.bus]
    * @param {SWController} [options.controller]
+   * @param {string} [options.name]
+   * @param {boolean} [options.isHost]
    * @param {boolean} showLogs
    */
-  constructor({ target, controller, showLogs = false }) {
-    this.setupFinishReceiveResolver = null;
-    this.setupFinishSendResolver = null;
+  constructor({
+    target,
+    controller,
+    showLogs = false,
+    isHost = false,
+    name = '',
+    bus,
+  }) {
     this.controller = controller || null;
     this.messenger = new CrossWindowMessenger({
-      from: 'e2e-sw-client',
-      to: 'e2e-sw-host',
+      from: isHost ? DIRECTION.HOST : DIRECTION.CLIENT,
+      to: isHost ? DIRECTION.CLIENT : DIRECTION.HOST,
       showLogs,
       target,
+      bus,
+      name,
     });
-    // Meta field for more comfortable responsibility indetification
+    // Meta field for more comfortable responsibility identification
     this.isSender = !!target;
     this.isReceiver = !this.isSender;
   }
@@ -41,9 +57,6 @@ class SWControllerDuplexBridge {
             break;
           case E2E_SW_METHODS.E2E_CLEAR_MOCKS:
             this.controller.clearMocks();
-            break;
-          case E2E_SW_METHODS.E2E_FINISH_SETUP:
-            this.resolveFinishSetupReceive();
             break;
           default:
             break;
@@ -92,7 +105,16 @@ class SWControllerDuplexBridge {
 
   finishSetup() {
     this.messenger.send(E2E_SW_METHODS.E2E_FINISH_SETUP);
-    this.resolveFinishSetupSend();
+  }
+
+  awaitSetupFinish() {
+    return new Promise(resolve => {
+      this.messenger.subscribe((payload, { method }) => {
+        if (method === E2E_SW_METHODS.E2E_FINISH_SETUP) {
+          resolve();
+        }
+      });
+    });
   }
 
   subscribe() {
@@ -119,30 +141,6 @@ class SWControllerDuplexBridge {
     //         break;
     //     }
     //   });
-  }
-
-  resolveFinishSetupSend() {
-    if (this.setupFinishSendResolver) {
-      this.setupFinishSendResolver();
-    }
-  }
-
-  resolveFinishSetupReceive() {
-    if (this.setupFinishReceiveResolver) {
-      this.setupFinishReceiveResolver();
-    }
-  }
-
-  awaitSetupFinishSend() {
-    return new Promise(resolve => {
-      this.setupFinishSendResolver = resolve;
-    });
-  }
-
-  awaitSetupFinishReceive() {
-    return new Promise(resolve => {
-      this.setupFinishReceiveResolver = resolve;
-    });
   }
 }
 
