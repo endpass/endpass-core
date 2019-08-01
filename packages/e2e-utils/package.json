@@ -17,7 +17,7 @@
     "update": "yarn build && npm publish ./dist",
     "build": "yarn clear && yarn build:dist && yarn build:worker",
     "build:dist": "rollup -c ./rollup.config.js",
-    "build:worker": "./scripts/updateWorkerVersion.js",
+    "build:worker": "node ./scripts/updateWorkerVersion.js",
     "clear": "rimraf ./dist",
     "unit": "jest --config ./jest.conf.js",
     "format:prettier": "prettier --write '**/*.{js,json}'",
