@@ -9,8 +9,8 @@ import pkg from './package.json';
 
 const SOURCE_PATH = path.join(__dirname, './src');
 const DIST_PATH = path.join(__dirname, './dist');
-const INPUT_PATH = path.join(SOURCE_PATH, './*.js');
-const STATIC_PATH = path.join(SOURCE_PATH, './static/**');
+const INPUT_PATH = path.join(SOURCE_PATH, './*.js').replace(/\\/g, '/');
+const STATIC_PATH = path.join(SOURCE_PATH, './static/**').replace(/\\/g, '/');
 const IGNORE_PATHS = [
   './node_modules/**',
   './src/worker/**',
