@@ -1,7 +1,20 @@
 .v-progress-circle.theme-default {
+  position: relative;
   width: 82px;
   height: 82px;
 }
+
+.v-progress-circle.theme-default .v-progress-circle-text {
+  position: absolute;
+  top: calc(50% + 1px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: -0.3px;
+  color: var(--endpass-ui-color-grey-3);
+}
+
 .v-progress-circle.theme-default .v-progress-circle-over {
   animation: v-spin 1.5s ease-in-out infinite;
   stroke-dasharray: 0, 188.4;

@@ -1,16 +1,7 @@
 <template>
-  <field-atom
-    class="v-file-drop-area"
-    :class="themeCssClass"
-  >
-    <button
-      class="v-file-drop-area-button"
-      type="button"
-    >
-      <label
-        class="v-file-drop-area-label"
-        :for="inputId"
-      >
+  <field-atom class="v-file-drop-area" :class="themeCssClass">
+    <button class="v-file-drop-area-button" type="button">
+      <label class="v-file-drop-area-label" :for="inputId">
         <div>
           <slot />
         </div>
@@ -20,7 +11,7 @@
           class="file-drop-area-input"
           v-bind="$attrs"
           @change="onChange"
-        >
+        />
       </label>
     </button>
   </field-atom>
