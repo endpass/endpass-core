@@ -38,7 +38,7 @@ storiesOf('VFileDropArea/desktop', module)
     template: `
       <theme-provider>
       <v-label label="Multiple files"/>
-        <v-file-drop-area 
+        <v-file-drop-area
           @change="onChange"
           accept="image/*"
         >
@@ -55,14 +55,30 @@ storiesOf('VFileDropArea/desktop', module)
     template: `
       <theme-provider>
       <v-label label="Disabled state"/>
-        <v-file-drop-area 
+        <v-file-drop-area
           @change="onChange"
           accept="image/*"
           disabled
         >
           <p>Custom Text</p>
           <v-description disabled description="or drop files here"/>
-        </v-file-drop-area>      
+        </v-file-drop-area>
+      </theme-provider>
+    `,
+  }))
+  .add('only for jpeg', () => ({
+    methods,
+    components,
+    template: `
+      <theme-provider>
+      <v-label label="Disabled state"/>
+        <v-file-drop-area
+          accept=".jpeg"
+          @change="onChange"
+        >
+          <p>Custom Text</p>
+          <v-description disabled description="or drop files here"/>
+        </v-file-drop-area>
       </theme-provider>
     `,
   }));
