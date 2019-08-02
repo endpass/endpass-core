@@ -1,6 +1,6 @@
 {
   "name": "@endpass/e2e-utils",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Utilities for e2e testing",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5",
-    "@endpass/class": "^0.16.1",
+    "@endpass/class": "^0.17.0",
     "nanoid": "^2.0.3"
   },
   "devDependencies": {
@@ -50,11 +50,11 @@
     "ejs": "^2.6.2",
     "eslint": "^6.1.0",
     "fast-glob": "^3.0.4",
-    "husky": "^3.0.1",
+    "husky": "^3.0.2",
     "lint-staged": "^9.2.1",
     "prettier": "^1.18.2",
     "rimraf": "^2.6.3",
-    "rollup": "^1.17.0",
+    "rollup": "^1.18.0",
     "rollup-plugin-alias": "^1.5.2",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.0.1",
