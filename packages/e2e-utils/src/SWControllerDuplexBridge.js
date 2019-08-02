@@ -44,27 +44,6 @@ class SWControllerDuplexBridge {
     this.isReceiver = !this.isSender;
   }
 
-  // FIXME: crutch, remove when problem with CrossWindowMessenger will be solved
-  subscribeOnIncomingMessages() {
-    window.addEventListener('message', ({ data }) => {
-      if (data.from === 'endpass-cw-msgr-e2e-sw-client') {
-        switch (data.method) {
-          case E2E_SW_METHODS.E2E_MOCK_ROUTE:
-            this.controller.mockRoute(data.payload);
-            break;
-          case E2E_SW_METHODS.E2E_MOCK_ROUTE_ONCE:
-            this.controller.mockRouteOnce(data.payload);
-            break;
-          case E2E_SW_METHODS.E2E_CLEAR_MOCKS:
-            this.controller.clearMocks();
-            break;
-          default:
-            break;
-        }
-      }
-    });
-  }
-
   /**
    * @param {object} payload
    * @param {string} payload.url
@@ -124,23 +103,21 @@ class SWControllerDuplexBridge {
       );
     }
 
-    // FIXME: crutch, see FIXME comment above
-    this.subscribeOnIncomingMessages();
-    //   this.messenger.subscribe(({ method, payload }) => {
-    //     switch (method) {
-    //       case E2E_SW_METHODS.E2E_MOCK_ROUTE:
-    //         this.controller.mockRoute(payload);
-    //         break;
-    //       case E2E_SW_METHODS.E2E_MOCK_ROUTE_ONCE:
-    //         this.controller.mockRouteOnce(payload);
-    //         break;
-    //       case E2E_SW_METHODS.E2E_CLEAR_MOCKS:
-    //         this.controller.clearMocks();
-    //         break;
-    //       default:
-    //         break;
-    //     }
-    //   });
+    this.messenger.subscribe((payload, { method }) => {
+      switch (method) {
+        case E2E_SW_METHODS.E2E_MOCK_ROUTE:
+          this.controller.mockRoute(payload);
+          break;
+        case E2E_SW_METHODS.E2E_MOCK_ROUTE_ONCE:
+          this.controller.mockRouteOnce(payload);
+          break;
+        case E2E_SW_METHODS.E2E_CLEAR_MOCKS:
+          this.controller.clearMocks();
+          break;
+        default:
+          break;
+      }
+    });
   }
 }
 
