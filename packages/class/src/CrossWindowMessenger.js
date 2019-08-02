@@ -51,10 +51,11 @@ export default class CrossWindowMessenger {
     if (
       data.messageType !== MESSAGE_TYPE
       || data.to !== this.directionFrom
-      || this.target !== source
+      || (this.target && this.target !== this.bus && this.target !== source)
     ) {
       return;
     }
+
     if (this.showLogs) {
       // eslint-disable-next-line
       console.log(
