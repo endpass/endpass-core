@@ -3,7 +3,7 @@ import { CrossWindowMessenger } from '@endpass/class';
 const E2E_SW_METHODS = {
   E2E_MOCK_ROUTE: 'E2E_MOCK_ROUTE',
   E2E_MOCK_ROUTE_ONCE: 'E2E_MOCK_ROUTE_ONCE',
-  E2E_FINISH_SETUP: 'E2E_FINISH_SETUP',
+  E2E_SETUP_FINISH: 'E2E_SETUP_FINISH',
   E2E_CLEAR_MOCKS: 'E2E_CLEAR_MOCKS',
 };
 
@@ -42,6 +42,7 @@ class SWControllerDuplexBridge {
     // Meta field for more comfortable responsibility identification
     this.isSender = !!target;
     this.isReceiver = !this.isSender;
+    this.setupFinishResolver = null;
   }
 
   /**
@@ -82,18 +83,30 @@ class SWControllerDuplexBridge {
     this.messenger.send(E2E_SW_METHODS.E2E_CLEAR_MOCKS);
   }
 
-  finishSetup() {
-    this.messenger.send(E2E_SW_METHODS.E2E_FINISH_SETUP);
+  // call in auth
+  awaitSetupFinish() {
+    return this.messenger.sendAndWaitResponse(E2E_SW_METHODS.E2E_SETUP_FINISH);
   }
 
-  awaitSetupFinish() {
+  // call in connect before start tests
+  awaitSetupStart() {
     return new Promise(resolve => {
-      this.messenger.subscribe((payload, { method }) => {
-        if (method === E2E_SW_METHODS.E2E_FINISH_SETUP) {
+      this.messenger.subscribe((payload, { method, answer }) => {
+        if (method === E2E_SW_METHODS.E2E_SETUP_FINISH) {
           resolve();
+          this.setupFinishResolver = answer;
         }
       });
     });
+  }
+
+  // call in connect after mocks are done
+  setupFinish() {
+    if (!this.setupFinishResolver) {
+      return;
+    }
+    this.setupFinishResolver();
+    this.setupFinishResolver = null;
   }
 
   subscribe() {

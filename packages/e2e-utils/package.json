@@ -1,6 +1,6 @@
 {
   "name": "@endpass/e2e-utils",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Utilities for e2e testing",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
