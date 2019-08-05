@@ -1,6 +1,12 @@
 export class NotificationError {
+  // eslint-disable-line
   constructor({
-    title, message, text, type = 'is-info', log = false,
+    title,
+    message,
+    text,
+    type = 'is-info',
+    log = false,
+    group = null,
   }) {
     if (!title) {
       throw new Error('Notification error needs a title');
@@ -16,6 +22,7 @@ export class NotificationError {
     this.text = text || message;
     this.type = type;
     this.log = log;
+    this.group = group;
 
     if (typeof Error.captureStackTrace === 'function') {
       Error.captureStackTrace(this, this.constructor);
