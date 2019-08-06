@@ -9,12 +9,14 @@
         class="v-modal-card-back"
         @click="$emit('return', $event)"
         v-html="backSvgIcon"
+        data-test="modal-card-button-back"
       />
       <button
         v-if="isClosable"
         class="v-modal-card-close"
         @click="$emit('close', $event)"
         v-html="closeSvgIcon"
+        data-test="modal-card-button-close"
       />
     </div>
     <header
