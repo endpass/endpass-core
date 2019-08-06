@@ -3149,10 +3149,12 @@ exports[`Storyshots VModal/VModalCard both 1`] = `
         >
           <button
             class="v-modal-card-back"
+            data-test="modal-card-button-back"
           />
            
           <button
             class="v-modal-card-close"
+            data-test="modal-card-button-close"
           />
         </div>
          
@@ -3201,6 +3203,7 @@ exports[`Storyshots VModal/VModalCard closable 1`] = `
            
           <button
             class="v-modal-card-close"
+            data-test="modal-card-button-close"
           />
         </div>
          
@@ -3293,6 +3296,7 @@ exports[`Storyshots VModal/VModalCard returnable 1`] = `
         >
           <button
             class="v-modal-card-back"
+            data-test="modal-card-button-back"
           />
            
           <!---->
@@ -3353,10 +3357,12 @@ exports[`Storyshots VModal/VModalInfoCard both 1`] = `
           >
             <button
               class="v-modal-card-back"
+              data-test="modal-card-button-back"
             />
              
             <button
               class="v-modal-card-close"
+              data-test="modal-card-button-close"
             />
           </div>
            
@@ -3418,6 +3424,7 @@ exports[`Storyshots VModal/VModalInfoCard closable 1`] = `
              
             <button
               class="v-modal-card-close"
+              data-test="modal-card-button-close"
             />
           </div>
            
@@ -3536,6 +3543,7 @@ exports[`Storyshots VModal/VModalInfoCard returnable 1`] = `
           >
             <button
               class="v-modal-card-back"
+              data-test="modal-card-button-back"
             />
              
             <!---->
