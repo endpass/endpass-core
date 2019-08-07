@@ -34,43 +34,43 @@
 }
 
 .v-tag.theme-default.skin-default {
-  border-color: #0058A1;
-  color: #0058A1;
+  border-color: #0058a1;
+  color: #0058a1;
 }
 
 .v-tag.theme-default.skin-cyan {
-  color: #0058A1;
-  background-color: #B3E6FF;
+  color: #0058a1;
+  background-color: #b3e6ff;
 }
 
 .v-tag.theme-default.skin-red {
-  color: #A51920;
-  background-color: #FCD0D3;
+  color: #a51920;
+  background-color: #fcd0d3;
 }
 
 .v-tag.theme-default.skin-magenta {
-  color: #A11950;
-  background-color: #FFCFE1;
+  color: #a11950;
+  background-color: #ffcfe1;
 }
 
 .v-tag.theme-default.skin-purple {
-  color: #6E32C9;
-  background-color: #E6D6FF;
+  color: #6e32c9;
+  background-color: #e6d6ff;
 }
 
 .v-tag.theme-default.skin-blue {
-  color: #054ADA;
-  background-color: #C9DEFF;
+  color: #054ada;
+  background-color: #c9deff;
 }
 
 .v-tag.theme-default.skin-teal {
   color: #006161;
-  background-color: #92EEEE;
+  background-color: #92eeee;
 }
 
 .v-tag.theme-default.skin-green {
-  color: #10642A;
-  background-color: #9DEEB2;
+  color: #10642a;
+  background-color: #9deeb2;
 }
 
 .v-tag.theme-default.skin-gray {
@@ -78,6 +78,10 @@
   background-color: var(--endpass-ui-color-grey-2);
 }
 
+.v-tag.theme-default.skin-light-gray {
+  color: var(--endpass-ui-color-grey-9);
+  background-color: var(--endpass-ui-color-grey-1);
+}
 
 .v-tag.theme-default[disabled] {
   background-color: var(--endpass-ui-color-grey-1);

@@ -43,6 +43,7 @@ export default {
             'teal',
             'green',
             'gray',
+            'light-gray',
           ].indexOf(value) !== -1
         );
       },
