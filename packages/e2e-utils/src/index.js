@@ -1,2 +1,3 @@
 module.exports.SWController = require('./SWController').default;
-module.exports.SWControllerDuplexBridge = require('./SWControllerDuplexBridge').default;
+module.exports.SWClient = require('./SWClient').default;
+module.exports.SWHost = require('./SWHost').default;

@@ -53,21 +53,42 @@ const createResponse = mockData => {
   });
 };
 
-const handleIncomingWorkerMessage = async ({ data }) => {
-  switch (data.method) {
-    case this.SWMessagesMethods.MOCK_ONCE:
+const handleIncomingWorkerMessage = async ev => {
+  const { SWMessagesMethods } = this;
+  const { data = {} } = ev;
+  const { method, msgType, msgId } = data;
+
+  if (msgType !== SWMessagesMethods.MSG_TYPE_REQUEST) {
+    return;
+  }
+
+  switch (method) {
+    case SWMessagesMethods.MOCK_ONCE:
       await onceRouteTable.save(data.mock);
       break;
-    case this.SWMessagesMethods.MOCK:
+    case SWMessagesMethods.MOCK:
       await staticRouteTable.save(data.mock);
       break;
-    case this.SWMessagesMethods.CLEAR_ALL_MOCKS:
+    case SWMessagesMethods.CLEAR_ALL_MOCKS:
       await staticRouteTable.clear();
       await onceRouteTable.clear();
       break;
     default:
       break;
   }
+
+  const sendData = {
+    msgId,
+    msgType: SWMessagesMethods.MSG_TYPE_ANSWER,
+    method: data.method,
+  };
+
+  self.clients.matchAll().then(all =>
+    all.map(client => {
+      client.postMessage(sendData);
+      return client;
+    }),
+  );
 };
 const fetchMiddleware = async (req, res, endWith) => {
   const onceRouteMock = await onceRouteTable.find({
