@@ -18,6 +18,8 @@ const IGNORE_PATHS = [
 ];
 const { nanoid, ...external } = pkg.dependencies;
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const commonConfig = {
   external: [...Object.keys(external)],
   plugins: [
@@ -59,6 +61,7 @@ export default [
     output: [
       {
         exports: 'named',
+        sourcemap: !isProd,
         format: 'cjs',
         dir: DIST_PATH,
         entryFileNames: '[name].js',
@@ -71,6 +74,7 @@ export default [
       {
         esModule: false,
         exports: 'auto',
+        sourcemap: !isProd,
         format: 'umd',
         dir: DIST_PATH,
         name: path.basename(filePath, path.extname(filePath)),
