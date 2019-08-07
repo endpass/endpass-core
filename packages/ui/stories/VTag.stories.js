@@ -11,12 +11,12 @@ storiesOf('VTag/desktop', module).add('default', () => ({
   components: { VTag },
   template: `
       <theme-provider>
-        
+
         <table>
           <thead>
             <tr>
               <th>
-                
+
               </th>
               <th>
                 No skin
@@ -46,6 +46,9 @@ storiesOf('VTag/desktop', module).add('default', () => ({
                 gray
               </th>
               <th>
+                light-gray
+              </th>
+              <th>
                 disabled
               </th>
             </tr>
@@ -53,67 +56,73 @@ storiesOf('VTag/desktop', module).add('default', () => ({
           <tr>
             <td>default</td>
             <td>
-              <v-tag >text tag</v-tag>            
+              <v-tag >text tag</v-tag>
             </td>
             <td>
-              <v-tag skin="cyan">text tag</v-tag>            
+              <v-tag skin="cyan">text tag</v-tag>
             </td>
             <td>
-              <v-tag skin="red">text tag</v-tag>            
+              <v-tag skin="red">text tag</v-tag>
             </td>
             <td>
-              <v-tag skin="magenta">text tag</v-tag>            
+              <v-tag skin="magenta">text tag</v-tag>
             </td>
             <td>
-              <v-tag skin="purple">text tag</v-tag>            
+              <v-tag skin="purple">text tag</v-tag>
             </td>
             <td>
-              <v-tag skin="blue">text tag</v-tag>            
+              <v-tag skin="blue">text tag</v-tag>
             </td>
             <td>
-              <v-tag skin="teal">text tag</v-tag>            
+              <v-tag skin="teal">text tag</v-tag>
             </td>
             <td>
-              <v-tag skin="green">text tag</v-tag>            
+              <v-tag skin="green">text tag</v-tag>
             </td>
             <td>
-              <v-tag skin="gray">text tag</v-tag>            
+              <v-tag skin="gray">text tag</v-tag>
             </td>
             <td>
-              <v-tag disabled>text tag</v-tag>            
+              <v-tag skin="light-gray">text tag</v-tag>
+            </td>
+            <td>
+              <v-tag disabled>text tag</v-tag>
             </td>
           </tr>
           <tr>
             <td>is-closable</td>
             <td>
-              <v-tag @click="onClick" is-closable >text tag</v-tag>            
+              <v-tag @click="onClick" is-closable >text tag</v-tag>
             </td>
             <td>
-              <v-tag @click="onClick" is-closable  skin="cyan">text tag</v-tag>            
+              <v-tag @click="onClick" is-closable  skin="cyan">text tag</v-tag>
             </td>
             <td>
-              <v-tag @click="onClick" is-closable  skin="red">text tag</v-tag>            
+              <v-tag @click="onClick" is-closable  skin="red">text tag</v-tag>
             </td>
             <td>
-              <v-tag @click="onClick" is-closable  skin="magenta">text tag</v-tag>            
+              <v-tag @click="onClick" is-closable  skin="magenta">text tag</v-tag>
             </td>
             <td>
-              <v-tag @click="onClick" is-closable  skin="purple">text tag</v-tag>            
+              <v-tag @click="onClick" is-closable  skin="purple">text tag</v-tag>
             </td>
             <td>
-              <v-tag @click="onClick" is-closable  skin="blue">text tag</v-tag>            
+              <v-tag @click="onClick" is-closable  skin="blue">text tag</v-tag>
             </td>
             <td>
-              <v-tag @click="onClick" is-closable  skin="teal">text tag</v-tag>            
+              <v-tag @click="onClick" is-closable  skin="teal">text tag</v-tag>
             </td>
             <td>
-              <v-tag @click="onClick" is-closable  skin="green">text tag</v-tag>            
+              <v-tag @click="onClick" is-closable  skin="green">text tag</v-tag>
             </td>
             <td>
-              <v-tag @click="onClick" is-closable  skin="gray">text tag</v-tag>            
+              <v-tag @click="onClick" is-closable  skin="gray">text tag</v-tag>
             </td>
             <td>
-              <v-tag @click="onClick" is-closable  disabled>text tag</v-tag>            
+              <v-tag @click="onClick" is-closable  skin="light-gray">text tag</v-tag>
+            </td>
+            <td>
+              <v-tag @click="onClick" is-closable  disabled>text tag</v-tag>
             </td>
           </tr>        </table>
       </theme-provider>
