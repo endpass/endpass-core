@@ -23,3 +23,4 @@ export { default as Token } from './Token';
 export { default as CrossWindowMessenger } from './CrossWindowMessenger';
 export { default as QueueArray } from './QueueArray';
 export { default as QueueAsync } from './QueueAsync';
+export { default as ConnectError } from './ConnectError';
