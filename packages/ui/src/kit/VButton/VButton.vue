@@ -5,8 +5,8 @@
     v-on="$listeners"
   >
     <icon-atom
-      v-if="isLoading"
-      class="v-button-icon v-button-icon-loader"
+      v-if="$slots.iconBefore && isSocialIcon && isLoading"
+      class="v-button-icon icon-before v-button-icon-loader"
     >
       <svg-atom name="loader" />
     </icon-atom>
@@ -17,11 +17,24 @@
       <slot name="iconBefore" />
     </icon-atom>
     <span
-      v-if="!isLoading"
+      v-if="!isLoading || isSocialIcon"
       class="v-button-label"
     >
       <slot />
     </span>
+
+    <icon-atom
+      v-if="!isSocialIcon && isLoading"
+      class="v-button-icon v-button-icon-loader"
+    >
+      <svg-atom name="loader" />
+    </icon-atom>
+    <icon-atom
+      v-if="$slots.iconAfter && isSocialIcon && isLoading"
+      class="v-button-icon icon-after v-button-icon-loader"
+    >
+      <svg-atom name="loader" />
+    </icon-atom>
     <icon-atom
       v-if="$slots.iconAfter && !isLoading"
       class="v-button-icon icon-after"
@@ -76,6 +89,9 @@ export default {
         [`skin-${this.skin}`]: true,
         [`size-${this.size}`]: true,
       });
+    },
+    isSocialIcon() {
+      return this.skin === 'social' && (this.$slots.iconBefore || this.$slots.iconAfter)
     },
   },
   mixins: [ThemeMixin],

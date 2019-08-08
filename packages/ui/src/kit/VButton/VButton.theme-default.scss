@@ -32,10 +32,10 @@
 
 .v-button.theme-default .v-button-icon.v-button-icon-loader {
   padding: 2.5px 0px;
-  margin: -0.5px 0;
+  margin-top: -0.5px;
+  margin-bottom: -0.5px;
   animation: v-spin 1.5s linear infinite;
 }
-
 .v-button.theme-default .v-button-icon.icon-before {
   margin-right: 5px;
 }
@@ -199,7 +199,11 @@
   width: 18px;
   height: 18px;
 }
-
+.v-button.theme-default.skin-social .v-button-icon.v-button-icon-loader {
+  margin-top: -4px;
+  margin-bottom: -4px;
+  padding: 4px 0;
+}
 .v-button.theme-default.skin-primary .svg-atom,
 .v-button.theme-default.skin-secondary .svg-atom,
 .v-button.theme-default.skin-quaternary:hover .svg-atom,
