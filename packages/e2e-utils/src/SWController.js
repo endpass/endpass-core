@@ -28,9 +28,6 @@ class SWController {
           return;
         }
 
-        console.log('-- step 3, receive message via channel');
-        console.log('--- onMessage', data);
-
         navigator.serviceWorker.removeEventListener('message', onMessage);
         resolve();
       };
@@ -41,8 +38,6 @@ class SWController {
         msgId,
         msgType: METHODS.MSG_TYPE_REQUEST,
       };
-
-      console.log('-- step 2, send message via channel');
 
       sw.postMessage(sendData);
     });
