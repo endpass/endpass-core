@@ -1,5 +1,6 @@
 this.importScripts(
-  'https://unpkg.com/@endpass/e2e-utils@<%= PACKAGE_VERSION %>/SWMessagesMethods.js',
+  'http://localhost/e2e-utils/SWMessagesMethods.js',
+  // 'https://unpkg.com/@endpass/e2e-utils@<%= PACKAGE_VERSION %>/SWMessagesMethods.js',
 );
 this.importScripts('https://unpkg.com/dexie@2.0.4/dist/dexie.min.js');
 this.importScripts('https://unpkg.com/serviceworkers-ware@0.3.2/dist/sww.js');
@@ -9,17 +10,28 @@ this.importScripts('https://unpkg.com/serviceworkers-ware@0.3.2/dist/sww.js');
  */
 const db = new this.Dexie('routes_mocks_db');
 
-db.version(1).stores({
-  static: 'id,url,method,status,headers,response',
-  once: 'id,url,method,status,headers,response',
+db.version(2).stores({
+  static: '++index,id,url,method,status,headers',
+  once: '++index,id,url,method,status,headers',
 });
 
 const wrapRoutesDBTable = table => ({
-  save: route => db[table].add(route),
+  add: route => db[table].add(route),
+
+  put: async (filter, route) => {
+    const field = await db[table].where(filter).first();
+    if (field) {
+      return db[table].where(filter).modify(route);
+    } else {
+      return db[table].add(route);
+    }
+  },
 
   remove: id => db[table].delete(id),
 
-  find: ({ url, method }) => db[table].get({ url, method }),
+  find: ({ url, method }) =>
+    // wild cards find
+    db[table].get({ url, method }),
 
   clear: () => db[table].clear(),
 });
@@ -57,6 +69,7 @@ const handleIncomingWorkerMessage = async ev => {
   const { SWMessagesMethods } = this;
   const { data = {} } = ev;
   const { method, msgType, msgId } = data;
+  const { mock } = data;
 
   if (msgType !== SWMessagesMethods.MSG_TYPE_REQUEST) {
     return;
@@ -64,10 +77,18 @@ const handleIncomingWorkerMessage = async ev => {
 
   switch (method) {
     case SWMessagesMethods.MOCK_ONCE:
-      await onceRouteTable.save(data.mock);
+      await onceRouteTable.add(data.mock);
       break;
     case SWMessagesMethods.MOCK:
-      await staticRouteTable.save(data.mock);
+      // find same, update if exist or save
+      await staticRouteTable.put(
+        {
+          url: mock.url,
+          method: mock.method,
+          status: mock.status,
+        },
+        mock,
+      );
       break;
     case SWMessagesMethods.CLEAR_ALL_MOCKS:
       await staticRouteTable.clear();
@@ -90,11 +111,9 @@ const handleIncomingWorkerMessage = async ev => {
     }),
   );
 };
+
 const fetchMiddleware = async (req, res, endWith) => {
-  const onceRouteMock = await onceRouteTable.find({
-    url: req.url,
-    method: req.method,
-  });
+  const onceRouteMock = await onceRouteTable.find(req);
 
   if (onceRouteMock) {
     await onceRouteTable.remove(onceRouteMock.id);
@@ -102,10 +121,7 @@ const fetchMiddleware = async (req, res, endWith) => {
     return endWith(createResponse(onceRouteMock));
   }
 
-  const staticRouteMock = await staticRouteTable.find({
-    url: req.url,
-    method: req.method,
-  });
+  const staticRouteMock = await staticRouteTable.find(req);
 
   if (staticRouteMock) {
     return endWith(createResponse(staticRouteMock));
