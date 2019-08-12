@@ -1,7 +1,10 @@
 this.importScripts(
-  'http://localhost/e2e-utils/SWMessagesMethods.js',
-  // 'https://unpkg.com/@endpass/e2e-utils@<%= PACKAGE_VERSION %>/SWMessagesMethods.js',
+  'https://unpkg.com/@endpass/e2e-utils@<%= PACKAGE_VERSION %>/SWMessagesMethods.js',
 );
+this.importScripts(
+  'https://unpkg.com/@endpass/e2e-utils@<%= PACKAGE_VERSION %>/SWUtils.js',
+);
+
 this.importScripts('https://unpkg.com/dexie@2.0.4/dist/dexie.min.js');
 this.importScripts('https://unpkg.com/serviceworkers-ware@0.3.2/dist/sww.js');
 
@@ -10,29 +13,48 @@ this.importScripts('https://unpkg.com/serviceworkers-ware@0.3.2/dist/sww.js');
  */
 const db = new this.Dexie('routes_mocks_db');
 
-db.version(2).stores({
-  static: '++index,id,url,method,status,headers',
-  once: '++index,id,url,method,status,headers',
-});
+try {
+  db.version(2).stores({
+    static: '++index,id,url,method,status,headers',
+    once: '++index,id,url,method,status,headers',
+  });
+} catch (e) {
+  // eslint-disable-next-line no-console
+  console.error(e);
+}
+
+const createEntity = route =>
+  Object.assign({}, route, {
+    wildCardUrl: this.SWUtils.createWildCardUrl(route.url),
+  });
 
 const wrapRoutesDBTable = table => ({
-  add: route => db[table].add(route),
+  add: route => db[table].add(createEntity(route)),
 
   put: async (filter, route) => {
+    const entity = createEntity(route);
     const field = await db[table].where(filter).first();
     if (field) {
-      return db[table].where(filter).modify(route);
-    } else {
-      return db[table].add(route);
+      return db[table].where(filter).modify(entity);
     }
+    return db[table].add(entity);
   },
 
-  remove: id => db[table].delete(id),
+  remove: filter => db[table].where(filter).delete(),
 
-  find: ({ url, method }) =>
-    // wild cards find
-    db[table].get({ url, method }),
+  find: async ({ url, method }) => {
+    const val = await db[table]
+      .where({ method })
+      .filter(route => {
+        const res =
+          url === route.url ||
+          (route.wildCardUrl && url.search(route.wildCardUrl) === 0);
+        return res;
+      })
+      .first();
 
+    return val;
+  },
   clear: () => db[table].clear(),
 });
 const staticRouteTable = wrapRoutesDBTable('static');
@@ -104,6 +126,7 @@ const handleIncomingWorkerMessage = async ev => {
     method: data.method,
   };
 
+  // eslint-disable-next-line no-restricted-globals
   self.clients.matchAll().then(all =>
     all.map(client => {
       client.postMessage(sendData);
@@ -116,7 +139,7 @@ const fetchMiddleware = async (req, res, endWith) => {
   const onceRouteMock = await onceRouteTable.find(req);
 
   if (onceRouteMock) {
-    await onceRouteTable.remove(onceRouteMock.id);
+    await onceRouteTable.remove({ id: onceRouteMock.id });
 
     return endWith(createResponse(onceRouteMock));
   }
