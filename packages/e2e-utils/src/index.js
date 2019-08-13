@@ -1,3 +1,2 @@
-module.exports.SWController = require('./SWController').default;
-module.exports.SWClient = require('./SWClient').default;
-module.exports.SWHost = require('./SWHost').default;
+// eslint-disable-next-line import/prefer-default-export
+export { default as E2EBridge } from './E2EBridge';

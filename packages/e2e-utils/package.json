@@ -1,6 +1,6 @@
 {
   "name": "@endpass/e2e-utils",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "Utilities for e2e testing",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -15,10 +15,9 @@
   },
   "scripts": {
     "update": "yarn build && npm publish ./dist",
-    "build": "yarn clear && yarn build:dist && yarn build:worker",
+    "build": "yarn clear && yarn build:dist",
     "build:dev": "rollup -c",
     "build:dist": "NODE_ENV=production rollup -c ./rollup.config.js",
-    "build:worker": "node ./scripts/updateWorkerVersion.js",
     "clear": "rimraf ./dist",
     "test": "npm run test:unit",
     "test:unit": "jest ./tests",
@@ -39,14 +38,9 @@
       "pre-commit": "lint-staged"
     }
   },
-  "dependencies": {
-    "@babel/runtime": "^7.5.5",
-    "@endpass/class": "^0.17.1",
-    "nanoid": "^2.0.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.5.5",
-    "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@endpass/eslint-plugin-endpass": "^0.1.2",
     "ejs": "^2.6.2",
