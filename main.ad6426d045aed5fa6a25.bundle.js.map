@@ -1,0 +1,1 @@
+{"version":3,"file":"main.ad6426d045aed5fa6a25.bundle.js","sources":["webpack:///./src/mixins/ThemeMixin.js"],"sourcesContent":["export default {\n  inject: ['theme'],\n  computed: {\n    themeCssClass() {\n      return this.theme\n        ? {\n          [`theme-${this.theme}`]: !!this.theme,\n        }\n        : {};\n    },\n  },\n};\n"],"mappings":"AAAA","sourceRoot":""}
