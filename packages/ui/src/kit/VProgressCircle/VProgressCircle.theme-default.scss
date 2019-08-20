@@ -30,13 +30,6 @@
   height: 82px;
 }
 
-.v-progress-circle.theme-default .v-progress-circle-back circle,
-.v-progress-circle.theme-default .v-progress-circle-over circle {
-  cx: 41px;
-  cy: 41px;
-  r: 30px;
-}
-
 .v-progress-circle.theme-default .v-progress-circle-back circle {
   stroke: var(--endpass-ui-color-grey-3);
   stroke-width: 4;
@@ -44,7 +37,6 @@
 }
 
 .v-progress-circle.theme-default .v-progress-circle-over circle {
-  stroke: var(--endpass-ui-color-primary-7);
   stroke-width: 4;
   fill: none;
 }
