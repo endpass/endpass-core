@@ -34,6 +34,7 @@ export default (ParentProvider) => {
     constructor(...args) {
       super(...args);
 
+      this.isMock = true;
       this.mockValues = {};
       this.mockValuesOnce = {};
     }
