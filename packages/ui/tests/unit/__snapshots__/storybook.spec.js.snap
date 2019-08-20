@@ -5056,14 +5056,23 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
           <svg
             class="v-progress-circle-back"
           >
-            <circle />
+            <circle
+              cx="41px"
+              cy="41px"
+              r="30px"
+            />
           </svg>
            
           <svg
             class="v-progress-circle-over"
             style="stroke-dasharray: 94, 188.4;"
           >
-            <circle />
+            <circle
+              cx="41px"
+              cy="41px"
+              r="30px"
+              stroke="#6e32c9"
+            />
           </svg>
            
           <!---->
@@ -5077,14 +5086,23 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
           <svg
             class="v-progress-circle-back"
           >
-            <circle />
+            <circle
+              cx="41px"
+              cy="41px"
+              r="30px"
+            />
           </svg>
            
           <svg
             class="v-progress-circle-over"
             style="stroke-dasharray: 141, 188.4;"
           >
-            <circle />
+            <circle
+              cx="41px"
+              cy="41px"
+              r="30px"
+              stroke="#6e32c9"
+            />
           </svg>
            
           <!---->
@@ -5098,14 +5116,23 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
           <svg
             class="v-progress-circle-back"
           >
-            <circle />
+            <circle
+              cx="41px"
+              cy="41px"
+              r="30px"
+            />
           </svg>
            
           <svg
             class="v-progress-circle-over"
             style="stroke-dasharray: 9, 188.4;"
           >
-            <circle />
+            <circle
+              cx="41px"
+              cy="41px"
+              r="30px"
+              stroke="#6e32c9"
+            />
           </svg>
            
           <!---->
@@ -5119,14 +5146,23 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
           <svg
             class="v-progress-circle-back"
           >
-            <circle />
+            <circle
+              cx="41px"
+              cy="41px"
+              r="30px"
+            />
           </svg>
            
           <svg
             class="v-progress-circle-over"
             style="stroke-dasharray: 178, 188.4;"
           >
-            <circle />
+            <circle
+              cx="41px"
+              cy="41px"
+              r="30px"
+              stroke="#6e32c9"
+            />
           </svg>
            
           <!---->
@@ -5154,14 +5190,23 @@ exports[`Storyshots VProgressCircle/desktop with label 1`] = `
           <svg
             class="v-progress-circle-back"
           >
-            <circle />
+            <circle
+              cx="41px"
+              cy="41px"
+              r="30px"
+            />
           </svg>
            
           <svg
             class="v-progress-circle-over"
             style="stroke-dasharray: 94, 188.4;"
           >
-            <circle />
+            <circle
+              cx="41px"
+              cy="41px"
+              r="30px"
+              stroke="#6e32c9"
+            />
           </svg>
            
           <span
@@ -5181,14 +5226,23 @@ exports[`Storyshots VProgressCircle/desktop with label 1`] = `
           <svg
             class="v-progress-circle-back"
           >
-            <circle />
+            <circle
+              cx="41px"
+              cy="41px"
+              r="30px"
+            />
           </svg>
            
           <svg
             class="v-progress-circle-over"
             style="stroke-dasharray: 141, 188.4;"
           >
-            <circle />
+            <circle
+              cx="41px"
+              cy="41px"
+              r="30px"
+              stroke="#6e32c9"
+            />
           </svg>
            
           <span
@@ -5208,14 +5262,23 @@ exports[`Storyshots VProgressCircle/desktop with label 1`] = `
           <svg
             class="v-progress-circle-back"
           >
-            <circle />
+            <circle
+              cx="41px"
+              cy="41px"
+              r="30px"
+            />
           </svg>
            
           <svg
             class="v-progress-circle-over"
             style="stroke-dasharray: 9, 188.4;"
           >
-            <circle />
+            <circle
+              cx="41px"
+              cy="41px"
+              r="30px"
+              stroke="#6e32c9"
+            />
           </svg>
            
           <span
@@ -5235,14 +5298,23 @@ exports[`Storyshots VProgressCircle/desktop with label 1`] = `
           <svg
             class="v-progress-circle-back"
           >
-            <circle />
+            <circle
+              cx="41px"
+              cy="41px"
+              r="30px"
+            />
           </svg>
            
           <svg
             class="v-progress-circle-over"
             style="stroke-dasharray: 178, 188.4;"
           >
-            <circle />
+            <circle
+              cx="41px"
+              cy="41px"
+              r="30px"
+              stroke="#6e32c9"
+            />
           </svg>
            
           <span

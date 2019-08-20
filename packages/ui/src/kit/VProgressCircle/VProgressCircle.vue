@@ -1,15 +1,30 @@
 <template>
-  <field-atom class="v-progress-circle" :class="themeCssClass">
+  <field-atom
+    class="v-progress-circle"
+    :class="themeCssClass"
+  >
     <svg class="v-progress-circle-back">
-      <circle />
+      <circle
+        :r="r"
+        :cx="cx"
+        :cy="cy"
+      />
     </svg>
     <svg
       class="v-progress-circle-over"
       :style="{ strokeDasharray: strokeDasharray }"
     >
-      <circle />
+      <circle
+        :r="r"
+        :cx="cx"
+        :cy="cy"
+        :stroke="stroke"
+      />
     </svg>
-    <span v-if="isLabelVisible" class="v-progress-circle-text">
+    <span
+      v-if="isLabelVisible"
+      class="v-progress-circle-text"
+    >
       {{ progressText }}
     </span>
   </field-atom>
@@ -29,10 +44,25 @@ export default {
       type: [Number, String],
       default: 0,
     },
-
     isLabelVisible: {
       type: Boolean,
       default: false,
+    },
+    r: {
+      type: String,
+      default: '30px',
+    },
+    cx: {
+      type: String,
+      default: '41px',
+    },
+    cy: {
+      type: String,
+      default: '41px',
+    },
+    stroke: {
+      type: String,
+      default: '#6e32c9',
     },
   },
 
