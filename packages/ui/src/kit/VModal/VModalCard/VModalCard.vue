@@ -1,22 +1,23 @@
 <template>
-  <div
+  <close-by-key-atom
     class="v-modal-card"
     :class="themeCssClass"
+    @close="onClose"
   >
     <div class="v-modal-card-controls">
       <button
         v-if="isReturnable"
         class="v-modal-card-back"
+        data-test="modal-card-button-back"
         @click="$emit('return', $event)"
         v-html="backSvgIcon"
-        data-test="modal-card-button-back"
       />
       <button
         v-if="isClosable"
         class="v-modal-card-close"
-        @click="$emit('close', $event)"
-        v-html="closeSvgIcon"
         data-test="modal-card-button-close"
+        @click="onClose"
+        v-html="closeSvgIcon"
       />
     </div>
     <header
@@ -30,13 +31,14 @@
     <div class="v-modal-card-body">
       <slot />
     </div>
-  </div>
+  </close-by-key-atom>
 </template>
 
 <script>
 import ThemeMixin from '@/mixins/ThemeMixin';
 import closeSvgIcon from '@/img/close.svg';
 import backSvgIcon from '@/img/arrowLeft.svg';
+import CloseByKeyAtom from '@/atom/close-by-key-atom/close-by-key-atom';
 
 export default {
   name: 'VModalCard',
@@ -56,6 +58,12 @@ export default {
       backSvgIcon,
     };
   },
+  methods: {
+    onClose($event) {
+      this.$emit('close', $event);
+    },
+  },
   mixins: [ThemeMixin],
+  components: { CloseByKeyAtom },
 };
 </script>
