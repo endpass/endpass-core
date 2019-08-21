@@ -3415,222 +3415,15 @@ exports[`Storyshots VModal/VModalCard both 1`] = `
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
-  <div
-    class="mask-atom theme-default"
-  >
+  <div>
     <div
-      class="mask-atom-centered"
+      class="mask-atom theme-default"
     >
       <div
-        class="v-modal-card theme-default"
+        class="mask-atom-centered"
       >
         <div
-          class="v-modal-card-controls"
-        >
-          <button
-            class="v-modal-card-back"
-            data-test="modal-card-button-back"
-          />
-           
-          <button
-            class="v-modal-card-close"
-            data-test="modal-card-button-close"
-          />
-        </div>
-         
-        <header
-          class="v-modal-card-header"
-        >
-          <h3
-            class="v-modal-card-title"
-          >
-            Modal title
-          </h3>
-        </header>
-         
-        <div
-          class="v-modal-card-body"
-        >
-          
-            Modal body
-          
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots VModal/VModalCard closable 1`] = `
-<div>
-  <div
-    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  />
-   
-  <div
-    class="mask-atom theme-default"
-  >
-    <div
-      class="mask-atom-centered"
-    >
-      <div
-        class="v-modal-card theme-default"
-      >
-        <div
-          class="v-modal-card-controls"
-        >
-          <!---->
-           
-          <button
-            class="v-modal-card-close"
-            data-test="modal-card-button-close"
-          />
-        </div>
-         
-        <header
-          class="v-modal-card-header"
-        >
-          <h3
-            class="v-modal-card-title"
-          >
-            Modal title
-          </h3>
-        </header>
-         
-        <div
-          class="v-modal-card-body"
-        >
-          
-            Modal body
-          
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots VModal/VModalCard default 1`] = `
-<div>
-  <div
-    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  />
-   
-  <div
-    class="mask-atom theme-default"
-  >
-    <div
-      class="mask-atom-centered"
-    >
-      <div
-        class="v-modal-card theme-default"
-      >
-        <div
-          class="v-modal-card-controls"
-        >
-          <!---->
-           
-          <!---->
-        </div>
-         
-        <header
-          class="v-modal-card-header"
-        >
-          <h3
-            class="v-modal-card-title"
-          >
-            Modal title
-          </h3>
-        </header>
-         
-        <div
-          class="v-modal-card-body"
-        >
-          
-            Modal body
-          
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots VModal/VModalCard returnable 1`] = `
-<div>
-  <div
-    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  />
-   
-  <div
-    class="mask-atom theme-default"
-  >
-    <div
-      class="mask-atom-centered"
-    >
-      <div
-        class="v-modal-card theme-default"
-      >
-        <div
-          class="v-modal-card-controls"
-        >
-          <button
-            class="v-modal-card-back"
-            data-test="modal-card-button-back"
-          />
-           
-          <!---->
-        </div>
-         
-        <header
-          class="v-modal-card-header"
-        >
-          <h3
-            class="v-modal-card-title"
-          >
-            Modal title
-          </h3>
-        </header>
-         
-        <div
-          class="v-modal-card-body"
-        >
-          
-            Modal body
-          
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots VModal/VModalInfoCard both 1`] = `
-<div>
-  <div
-    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  />
-   
-  <div
-    class="mask-atom theme-default"
-  >
-    <div
-      class="mask-atom-centered"
-    >
-      <div
-        class="v-modal-info-card theme-default"
-      >
-        <aside
-          class="v-modal-info-card-aside"
-          style="background-image: url(img/info_bg.png);"
-        >
-          Some additional information about Endpass
-        </aside>
-         
-        <div
-          back-svg-href="img/icons.svg#icon-arrow-left"
           class="v-modal-card theme-default"
-          close-svg-href="img/icons.svg#icon-close"
         >
           <div
             class="v-modal-card-controls"
@@ -3659,9 +3452,226 @@ exports[`Storyshots VModal/VModalInfoCard both 1`] = `
           <div
             class="v-modal-card-body"
           >
-              
+            
             Modal body
           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VModal/VModalCard closable 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div>
+    <div
+      class="mask-atom theme-default"
+    >
+      <div
+        class="mask-atom-centered"
+      >
+        <div
+          class="v-modal-card theme-default"
+        >
+          <div
+            class="v-modal-card-controls"
+          >
+            <!---->
+             
+            <button
+              class="v-modal-card-close"
+              data-test="modal-card-button-close"
+            />
+          </div>
+           
+          <header
+            class="v-modal-card-header"
+          >
+            <h3
+              class="v-modal-card-title"
+            >
+              Modal title
+            </h3>
+          </header>
+           
+          <div
+            class="v-modal-card-body"
+          >
+            
+            Modal body
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VModal/VModalCard default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div>
+    <div
+      class="mask-atom theme-default"
+    >
+      <div
+        class="mask-atom-centered"
+      >
+        <div
+          class="v-modal-card theme-default"
+        >
+          <div
+            class="v-modal-card-controls"
+          >
+            <!---->
+             
+            <!---->
+          </div>
+           
+          <header
+            class="v-modal-card-header"
+          >
+            <h3
+              class="v-modal-card-title"
+            >
+              Modal title
+            </h3>
+          </header>
+           
+          <div
+            class="v-modal-card-body"
+          >
+            
+            Modal body
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VModal/VModalCard returnable 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div>
+    <div
+      class="mask-atom theme-default"
+    >
+      <div
+        class="mask-atom-centered"
+      >
+        <div
+          class="v-modal-card theme-default"
+        >
+          <div
+            class="v-modal-card-controls"
+          >
+            <button
+              class="v-modal-card-back"
+              data-test="modal-card-button-back"
+            />
+             
+            <!---->
+          </div>
+           
+          <header
+            class="v-modal-card-header"
+          >
+            <h3
+              class="v-modal-card-title"
+            >
+              Modal title
+            </h3>
+          </header>
+           
+          <div
+            class="v-modal-card-body"
+          >
+            
+            Modal body
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VModal/VModalInfoCard both 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div>
+    <div
+      class="mask-atom theme-default"
+    >
+      <div
+        class="mask-atom-centered"
+      >
+        <div
+          class="v-modal-info-card theme-default"
+        >
+          <aside
+            class="v-modal-info-card-aside"
+            style="background-image: url(img/info_bg.png);"
+          >
+            Some additional information about Endpass
+          </aside>
+           
+          <div
+            back-svg-href="img/icons.svg#icon-arrow-left"
+            class="v-modal-card theme-default"
+            close-svg-href="img/icons.svg#icon-close"
+          >
+            <div
+              class="v-modal-card-controls"
+            >
+              <button
+                class="v-modal-card-back"
+                data-test="modal-card-button-back"
+              />
+               
+              <button
+                class="v-modal-card-close"
+                data-test="modal-card-button-close"
+              />
+            </div>
+             
+            <header
+              class="v-modal-card-header"
+            >
+              <h3
+                class="v-modal-card-title"
+              >
+                Modal title
+              </h3>
+            </header>
+             
+            <div
+              class="v-modal-card-body"
+            >
+                
+            Modal body
+          
+            </div>
           </div>
         </div>
       </div>
@@ -3676,54 +3686,56 @@ exports[`Storyshots VModal/VModalInfoCard closable 1`] = `
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
-  <div
-    class="mask-atom theme-default"
-  >
+  <div>
     <div
-      class="mask-atom-centered"
+      class="mask-atom theme-default"
     >
       <div
-        class="v-modal-info-card theme-default"
+        class="mask-atom-centered"
       >
-        <aside
-          class="v-modal-info-card-aside"
-          style="background-image: url(img/info_bg.png);"
-        >
-          Some additional information about Endpass
-        </aside>
-         
         <div
-          back-svg-href="img/icons.svg#icon-arrow-left"
-          class="v-modal-card theme-default"
-          close-svg-href="img/icons.svg#icon-close"
+          class="v-modal-info-card theme-default"
         >
-          <div
-            class="v-modal-card-controls"
+          <aside
+            class="v-modal-info-card-aside"
+            style="background-image: url(img/info_bg.png);"
           >
-            <!---->
-             
-            <button
-              class="v-modal-card-close"
-              data-test="modal-card-button-close"
-            />
-          </div>
+            Some additional information about Endpass
+          </aside>
            
-          <header
-            class="v-modal-card-header"
+          <div
+            back-svg-href="img/icons.svg#icon-arrow-left"
+            class="v-modal-card theme-default"
+            close-svg-href="img/icons.svg#icon-close"
           >
-            <h3
-              class="v-modal-card-title"
+            <div
+              class="v-modal-card-controls"
             >
-              Modal title
-            </h3>
-          </header>
-           
-          <div
-            class="v-modal-card-body"
-          >
-              
+              <!---->
+               
+              <button
+                class="v-modal-card-close"
+                data-test="modal-card-button-close"
+              />
+            </div>
+             
+            <header
+              class="v-modal-card-header"
+            >
+              <h3
+                class="v-modal-card-title"
+              >
+                Modal title
+              </h3>
+            </header>
+             
+            <div
+              class="v-modal-card-body"
+            >
+                
             Modal body
           
+            </div>
           </div>
         </div>
       </div>
@@ -3738,51 +3750,53 @@ exports[`Storyshots VModal/VModalInfoCard default 1`] = `
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
-  <div
-    class="mask-atom theme-default"
-  >
+  <div>
     <div
-      class="mask-atom-centered"
+      class="mask-atom theme-default"
     >
       <div
-        class="v-modal-info-card theme-default"
+        class="mask-atom-centered"
       >
-        <aside
-          class="v-modal-info-card-aside"
-          style="background-image: url(img/info_bg.png);"
-        >
-          Some additional information about Endpass
-        </aside>
-         
         <div
-          back-svg-href="img/icons.svg#icon-arrow-left"
-          class="v-modal-card theme-default"
-          close-svg-href="img/icons.svg#icon-close"
+          class="v-modal-info-card theme-default"
         >
-          <div
-            class="v-modal-card-controls"
+          <aside
+            class="v-modal-info-card-aside"
+            style="background-image: url(img/info_bg.png);"
           >
-            <!---->
-             
-            <!---->
-          </div>
+            Some additional information about Endpass
+          </aside>
            
-          <header
-            class="v-modal-card-header"
+          <div
+            back-svg-href="img/icons.svg#icon-arrow-left"
+            class="v-modal-card theme-default"
+            close-svg-href="img/icons.svg#icon-close"
           >
-            <h3
-              class="v-modal-card-title"
+            <div
+              class="v-modal-card-controls"
             >
-              Modal title
-            </h3>
-          </header>
-           
-          <div
-            class="v-modal-card-body"
-          >
-              
+              <!---->
+               
+              <!---->
+            </div>
+             
+            <header
+              class="v-modal-card-header"
+            >
+              <h3
+                class="v-modal-card-title"
+              >
+                Modal title
+              </h3>
+            </header>
+             
+            <div
+              class="v-modal-card-body"
+            >
+                
             Modal body
           
+            </div>
           </div>
         </div>
       </div>
@@ -3797,54 +3811,56 @@ exports[`Storyshots VModal/VModalInfoCard returnable 1`] = `
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
-  <div
-    class="mask-atom theme-default"
-  >
+  <div>
     <div
-      class="mask-atom-centered"
+      class="mask-atom theme-default"
     >
       <div
-        class="v-modal-info-card theme-default"
+        class="mask-atom-centered"
       >
-        <aside
-          class="v-modal-info-card-aside"
-          style="background-image: url(img/info_bg.png);"
-        >
-          Some additional information about Endpass
-        </aside>
-         
         <div
-          back-svg-href="img/icons.svg#icon-arrow-left"
-          class="v-modal-card theme-default"
-          close-svg-href="img/icons.svg#icon-close"
+          class="v-modal-info-card theme-default"
         >
-          <div
-            class="v-modal-card-controls"
+          <aside
+            class="v-modal-info-card-aside"
+            style="background-image: url(img/info_bg.png);"
           >
-            <button
-              class="v-modal-card-back"
-              data-test="modal-card-button-back"
-            />
-             
-            <!---->
-          </div>
+            Some additional information about Endpass
+          </aside>
            
-          <header
-            class="v-modal-card-header"
+          <div
+            back-svg-href="img/icons.svg#icon-arrow-left"
+            class="v-modal-card theme-default"
+            close-svg-href="img/icons.svg#icon-close"
           >
-            <h3
-              class="v-modal-card-title"
+            <div
+              class="v-modal-card-controls"
             >
-              Modal title
-            </h3>
-          </header>
-           
-          <div
-            class="v-modal-card-body"
-          >
-              
+              <button
+                class="v-modal-card-back"
+                data-test="modal-card-button-back"
+              />
+               
+              <!---->
+            </div>
+             
+            <header
+              class="v-modal-card-header"
+            >
+              <h3
+                class="v-modal-card-title"
+              >
+                Modal title
+              </h3>
+            </header>
+             
+            <div
+              class="v-modal-card-body"
+            >
+                
             Modal body
           
+            </div>
           </div>
         </div>
       </div>
