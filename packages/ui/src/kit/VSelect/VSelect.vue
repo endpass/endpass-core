@@ -72,7 +72,7 @@ export default {
   },
   computed: {
     listeners() {
-      return Object.assign(this.$listeners, {
+      return Object.assign({}, this.$listeners, {
         input: (value) => {
           this.$emit('input', value);
         },
