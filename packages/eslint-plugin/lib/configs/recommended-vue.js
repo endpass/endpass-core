@@ -2,10 +2,8 @@ const recommended = require('./recommended');
 
 module.exports = {
   ...recommended,
-  extends: [
-    ...recommended.extends,
-    'plugin:vue/recommended'
-  ],
+  plugins: ['json'],
+  extends: [...recommended.extends, 'plugin:vue/recommended', 'prettier'],
   settings: {
     'import/resolver': {
       node: {
@@ -15,6 +13,7 @@ module.exports = {
   },
   rules: {
     ...recommended.rules,
+    'prettier/prettier': 'off',
     'vue/max-attributes-per-line': [
       'error',
       {
