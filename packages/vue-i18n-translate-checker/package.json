@@ -1,0 +1,22 @@
+{
+  "name": "@endpass/vue-i18n-translate-checker",
+  "version": "0.0.1",
+  "bin": "./bin.js",
+  "description": "Vue i18n translate checker",
+  "author": "Endpass, Inc",
+  "homepage": "http://endpass.com/",
+  "license": "MIT",
+  "repository": "https://github.com/endpass/endpass-core/tree/master/packages/vue-i18n-translate-checker",
+  "engines": {
+    "node": ">=10"
+  },
+  "files": [
+    "*.js"
+  ],
+  "dependencies": {
+    "fast-glob": "^3.0.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
