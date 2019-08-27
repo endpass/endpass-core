@@ -1,6 +1,6 @@
 {
   "name": "@endpass/vue-i18n-translate-checker",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "bin": "./bin.js",
   "description": "Vue i18n translate checker",
   "author": "Endpass, Inc",

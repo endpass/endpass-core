@@ -6,7 +6,7 @@ const fastGlob = require("fast-glob");
 const reg = new RegExp(`(\\.t|\\$t)\\(['|"][(\\w\\.)]*['|"][\\,|\\)]`, 'ig');
 
 const resolvePath = (...args) => {
-  return path.resolve.apply(path, [__dirname, '../../', ...args]);
+  return path.resolve.apply(path, [__dirname, '../../../', ...args]);
 };
 
 const treeToFlatList = (tree) => {
