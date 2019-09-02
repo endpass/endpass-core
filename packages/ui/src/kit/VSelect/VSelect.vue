@@ -2,7 +2,6 @@
   <field-atom class="v-select">
     <label-atom
       v-if="label"
-      v-bind="$attrs"
       :label="label"
     />
     <description-atom
