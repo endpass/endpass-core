@@ -35,10 +35,15 @@
         :key="num"
         class="v-pagination-node"
         data-test="btn-goto-page"
+        :data-test-active="currentPage === num"
         @click.prevent="goToPage(num)"
       >
         {{ num }}
-        <span :class="{ 'v-pagination-active-foot': currentPage === num }" />
+        <span 
+          v-if="currentPage === num" 
+          class="v-pagination-active-foot"
+          data-test="active-page-indicator"
+        />
       </a>
 
       <span
