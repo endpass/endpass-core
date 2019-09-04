@@ -53,6 +53,21 @@ export default class ConnectError {
     return error;
   }
 
+  static createFromError(error, defaultCode = ERRORS.NOT_DEFINED) {
+    if (!(error instanceof Error)) {
+      return ConnectError.create(defaultCode);
+    }
+
+    if (!error.code) {
+      const resError = new Error(error.message);
+      resError.code = defaultCode;
+      resError.stack = error.stack;
+      return resError;
+    }
+
+    return error;
+  }
+
   static get ERRORS() {
     return ERRORS;
   }
