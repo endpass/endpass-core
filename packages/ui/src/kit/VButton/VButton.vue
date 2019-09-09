@@ -91,7 +91,8 @@ export default {
       });
     },
     isSocialIcon() {
-      return this.skin === 'social' && (this.$slots.iconBefore || this.$slots.iconAfter)
+      return this.skin === 'social'
+        && (this.$slots.iconBefore || this.$slots.iconAfter);
     },
   },
   mixins: [ThemeMixin],

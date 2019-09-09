@@ -1,0 +1,63 @@
+.toggle-atom.theme-default {
+  border-radius: 12px;
+  transition: box-shadow .3s, background-color .3s;
+  box-shadow: 0 0 0 2px transparent;
+  cursor: pointer;
+  padding: 3px;
+}
+
+.toggle-atom.theme-default.size-normal {
+  width: 42px;
+  height: 18px;
+  background-color: var(--endpass-ui-color-grey-4);
+}
+
+.toggle-atom.theme-default.size-mini {
+  width: 26px;
+  height: 10px;
+  background-color: var(--endpass-ui-color-grey-3);
+}
+
+.toggle-atom.theme-default.is-checked {
+  background-color: var(--endpass-ui-color-success);
+}
+
+.toggle-atom.theme-default:focus-within {
+  box-shadow: 0 0 0 2px var(--endpass-ui-color-primary-7);
+}
+
+.toggle-atom.theme-default .toggle-atom-handle {
+  background-color: var(--endpass-ui-color-white);
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: top;
+  transition: margin-left .3s;
+}
+
+.toggle-atom.theme-default.is-disabled .toggle-atom-handle {
+  background-color: var(--endpass-ui-color-grey-2);
+}
+
+.toggle-atom.theme-default.size-normal .toggle-atom-handle {
+  width: 18px;
+  height: 18px;
+}
+
+.toggle-atom.theme-default.size-mini .toggle-atom-handle {
+  width: 10px;
+  height: 10px;
+}
+
+.toggle-atom.theme-default.size-normal.is-checked .toggle-atom-handle {
+  margin-left: 24px;
+}
+
+.toggle-atom.theme-default.size-mini.is-checked .toggle-atom-handle {
+  margin-left: 16px;
+}
+
+.toggle-atom.theme-default.is-disabled {
+  background-color: var(--endpass-ui-color-grey-1);
+  cursor: default;
+}
+

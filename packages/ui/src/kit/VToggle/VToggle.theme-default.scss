@@ -1,0 +1,23 @@
+.v-toggle.theme-default {
+  display: flex;
+  align-items: center;
+  outline: 0;
+}
+
+.v-toggle.theme-default .v-toggle-control {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.v-toggle.theme-default .v-toggle-label{
+  color: var(--endpass-ui-color-grey-9);
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: -0.175px;
+  user-select: none;
+  margin-left: 10px;
+}
+

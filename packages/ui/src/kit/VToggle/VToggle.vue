@@ -1,83 +1,61 @@
 <template>
-  <label
-    class="v-checkbox"
-    :class="checkboxCssClass"
+  <div
+    class="v-toggle"
+    :class="themeCssClass"
   >
-    <icon-atom
-      class="v-checkbox-frame"
-      v-html="checkSvgIcon"
-    />
-    <input
-      :disabled="disabled"
-      :name="name"
-      :class="{ 'is-danger': error }"
-      :checked="isChecked"
-      :value="value"
-      class="v-checkbox-control"
-      type="checkbox"
-      @change="handleChange"
-      @focus="isFocused = true"
-      @blur="isFocused = false"
+    <toggle-atom
+      :size="size"
+      :class="toggleCssClass"
     >
-    <span class="v-checkbox-label">
+      <input
+        title=""
+        :checked="isChecked"
+        :value="value"
+        class="v-toggle-control"
+        type="checkbox"
+        v-bind="$attrs"
+        @change="handleChange"
+      >
+    </toggle-atom>
+    <span
+      v-if="$slots.default"
+      class="v-toggle-label"
+    >
       <slot />
     </span>
-  </label>
+  </div>
 </template>
 
 <script>
+import ToggleAtom from '@/atom/toggle-atom/toggle-atom';
 import ThemeMixin from '@/mixins/ThemeMixin';
 import IsDisabledMixin from '@/mixins/IsDisabledMixin';
-import IconAtom from '@/atom/icon-atom/icon-atom';
-import checkSvgIcon from '@/img/check.svg';
 
 export default {
-  name: 'VCheckbox',
-
+  name: 'VToggle',
+  inheritAttrs: false,
   props: {
-    name: {
-      type: String,
-      default: 'checkbox',
-    },
-
     value: {
       type: [String, Boolean],
       default: false,
     },
-
     modelValue: {
       type: null,
       default: false,
     },
-
     trueValue: {
       type: null,
       default: true,
     },
-
     falseValue: {
       type: null,
       default: false,
     },
-
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-
-    error: {
+    size: {
       type: String,
-      default: null,
+      default: 'normal',
     },
   },
-
-  data() {
-    return {
-      isFocused: false,
-      checkSvgIcon,
-    };
-  },
-
   computed: {
     isChecked() {
       const isListHandling = this.modelValue instanceof Array;
@@ -88,17 +66,14 @@ export default {
 
       return this.modelValue === this.trueValue;
     },
-
-    checkboxCssClass() {
-      return Object.assign(this.themeCssClass, {
+    toggleCssClass() {
+      return Object.assign({}, {
         'is-checked': this.isChecked,
-        'is-focused': this.isFocused,
-        'is-disabled': this.disabled || this.isDisabled,
-        'is-error': this.error,
+        'is-disabled': this.isDisabled,
+        [`size-${this.size}`]: true,
       });
     },
   },
-
   methods: {
     handleChange(event) {
       const { checked } = event.target;
@@ -116,15 +91,11 @@ export default {
       } else {
         newValue.push(this.value);
       }
-
       this.$emit('change', newValue);
     },
   },
-
   mixins: [ThemeMixin, IsDisabledMixin],
-
-  components: { IconAtom },
-
+  components: { ToggleAtom },
   model: {
     prop: 'modelValue',
     event: 'change',
