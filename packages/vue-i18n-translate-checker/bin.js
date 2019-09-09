@@ -98,22 +98,23 @@ const analyzeMaps = (locale, usedMap, checkNotUsed) => {
   const declaredMap = getDeclared(locale);
   const notUsed = checkNotUsed ? analyzeNotUsed(declaredMap, usedMap) : [];
   const notDeclaredMap = analyzeNotDeclared(declaredMap, usedMap);
-  const isNotDeclared = Object.keys(notDeclaredMap).length !== 0;
+  const haveNotDeclared = Object.keys(notDeclaredMap).length !== 0;
+  const haveNotUsed = notUsed.length !== 0;
 
   console.log('\x1b[32m%s\x1b[0m', ' analyze of i18n usage');
-  if (notUsed.length) {
+  if (haveNotUsed) {
     console.log('\x1b[33m%s\x1b[0m', `\n not used for [${locale}]`);
     console.log(notUsed);
     console.log(`\ntotal not used: ${notUsed.length}`);
   }
-  if (isNotDeclared) {
+  if (haveNotDeclared) {
     console.log('\x1b[31m%s\x1b[0m', '\n\n not declared');
     logFile(notDeclaredMap);
   }
-  if (!isNotDeclared && notUsed.length === 0){
-    console.log('\x1b[32m%s\x1b[0m', '\n i18n is fine');
-  } else {
+  if (haveNotDeclared || haveNotUsed){
     process.exit(1);
+  } else {
+    console.log('\x1b[32m%s\x1b[0m', '\n i18n is fine');
   }
 };
 
