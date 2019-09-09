@@ -24,6 +24,7 @@
 @import '@/atom/overlay-atom/overlay-atom.theme-default.scss';
 @import '@/atom/file-select-atom/file-select-atom.theme-default.scss';
 @import '@/atom/textarea-atom/textarea-atom.theme-default.scss';
+@import '@/atom/toggle-atom/toggle-atom.theme-default.scss';
 
 // kit
 
@@ -63,3 +64,4 @@
 @import '@/kit/VCard/VCard.theme-default.scss';
 @import '@/kit/VCard/VCardBody/VCardBody.theme-default.scss';
 @import '@/kit/VTag/VTag.theme-default.scss';
+@import '@/kit/VToggle/VToggle.theme-default.scss';

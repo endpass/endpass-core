@@ -9591,3 +9591,401 @@ exports[`Storyshots VTextarea/desktop skin white 1`] = `
       
 </div>
 `;
+
+exports[`Storyshots VToggle/desktop array 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div
+    class="v-toggle theme-default"
+  >
+    <label
+      class="toggle-atom theme-default size-normal size-normal"
+    >
+      <input
+        class="v-toggle-control"
+        name="Name"
+        title=""
+        type="checkbox"
+        value="Crypto!"
+      />
+       
+      <span
+        class="toggle-atom-handle"
+      />
+    </label>
+     
+    <span
+      class="v-toggle-label"
+    >
+      
+          with Crypto!
+        
+    </span>
+  </div>
+   
+  <div>
+    persons: Bob, Alice
+  </div>
+   
+  <div
+    class="v-toggle theme-default"
+  >
+    <label
+      class="toggle-atom theme-default size-mini size-mini"
+    >
+      <input
+        class="v-toggle-control"
+        name="Name"
+        title=""
+        type="checkbox"
+        value="Crypto!"
+      />
+       
+      <span
+        class="toggle-atom-handle"
+      />
+    </label>
+     
+    <span
+      class="v-toggle-label"
+    >
+      
+          with Crypto!
+        
+    </span>
+  </div>
+   
+  <div>
+    persons: Bob, Alice
+  </div>
+</div>
+`;
+
+exports[`Storyshots VToggle/desktop default state 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div
+    class="v-toggle theme-default"
+  >
+    <label
+      class="toggle-atom theme-default size-normal size-normal"
+    >
+      <input
+        class="v-toggle-control"
+        name="Name"
+        title=""
+        type="checkbox"
+        value="false"
+      />
+       
+      <span
+        class="toggle-atom-handle"
+      />
+    </label>
+     
+    <span
+      class="v-toggle-label"
+    >
+      
+          state: false
+        
+    </span>
+  </div>
+   
+  <br />
+   
+  <div
+    class="v-toggle theme-default"
+  >
+    <label
+      class="toggle-atom theme-default size-mini size-mini"
+    >
+      <input
+        class="v-toggle-control"
+        name="Name"
+        title=""
+        type="checkbox"
+        value="false"
+      />
+       
+      <span
+        class="toggle-atom-handle"
+      />
+    </label>
+     
+    <span
+      class="v-toggle-label"
+    >
+      
+          state: false
+        
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VToggle/desktop default state false 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div
+    class="v-toggle theme-default"
+  >
+    <label
+      class="toggle-atom theme-default size-normal size-normal"
+    >
+      <input
+        class="v-toggle-control"
+        title=""
+        type="checkbox"
+        value="false"
+      />
+       
+      <span
+        class="toggle-atom-handle"
+      />
+    </label>
+     
+    <span
+      class="v-toggle-label"
+    >
+      
+          state: false
+        
+    </span>
+  </div>
+   
+  <br />
+   
+  <div
+    class="v-toggle theme-default"
+  >
+    <label
+      class="toggle-atom theme-default size-mini size-mini"
+    >
+      <input
+        class="v-toggle-control"
+        title=""
+        type="checkbox"
+        value="false"
+      />
+       
+      <span
+        class="toggle-atom-handle"
+      />
+    </label>
+     
+    <span
+      class="v-toggle-label"
+    >
+      
+          state: false
+        
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VToggle/desktop default state true 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div
+    class="v-toggle theme-default"
+  >
+    <label
+      class="toggle-atom theme-default size-normal is-checked size-normal"
+    >
+      <input
+        class="v-toggle-control"
+        title=""
+        type="checkbox"
+        value="false"
+      />
+       
+      <span
+        class="toggle-atom-handle"
+      />
+    </label>
+     
+    <span
+      class="v-toggle-label"
+    >
+      
+          state: true
+        
+    </span>
+  </div>
+   
+  <br />
+   
+  <div
+    class="v-toggle theme-default"
+  >
+    <label
+      class="toggle-atom theme-default size-mini is-checked size-mini"
+    >
+      <input
+        class="v-toggle-control"
+        title=""
+        type="checkbox"
+        value="false"
+      />
+       
+      <span
+        class="toggle-atom-handle"
+      />
+    </label>
+     
+    <span
+      class="v-toggle-label"
+    >
+      
+          state: true
+        
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VToggle/desktop disabled 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div
+    class="v-toggle theme-default"
+  >
+    <label
+      class="toggle-atom theme-default size-normal is-disabled size-normal"
+    >
+      <input
+        class="v-toggle-control"
+        disabled="disabled"
+        title=""
+        type="checkbox"
+        value="false"
+      />
+       
+      <span
+        class="toggle-atom-handle"
+      />
+    </label>
+     
+    <span
+      class="v-toggle-label"
+    >
+      
+          disabled
+        
+    </span>
+  </div>
+   
+  <br />
+   
+  <div
+    class="v-toggle theme-default"
+  >
+    <label
+      class="toggle-atom theme-default size-mini is-checked is-disabled size-mini"
+    >
+      <input
+        class="v-toggle-control"
+        disabled="disabled"
+        title=""
+        type="checkbox"
+        value="false"
+      />
+       
+      <span
+        class="toggle-atom-handle"
+      />
+    </label>
+     
+    <span
+      class="v-toggle-label"
+    >
+      
+          disabled
+        
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VToggle/desktop true/false attr 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div
+    class="v-toggle theme-default"
+  >
+    <label
+      class="toggle-atom theme-default size-normal size-normal"
+    >
+      <input
+        class="v-toggle-control"
+        name="Name"
+        title=""
+        type="checkbox"
+        value="false"
+      />
+       
+      <span
+        class="toggle-atom-handle"
+      />
+    </label>
+     
+    <span
+      class="v-toggle-label"
+    >
+      
+          state: no
+        
+    </span>
+  </div>
+   
+  <br />
+   
+  <div
+    class="v-toggle theme-default"
+  >
+    <label
+      class="toggle-atom theme-default size-mini size-mini"
+    >
+      <input
+        class="v-toggle-control"
+        name="Name"
+        title=""
+        type="checkbox"
+        value="false"
+      />
+       
+      <span
+        class="toggle-atom-handle"
+      />
+    </label>
+     
+    <span
+      class="v-toggle-label"
+    >
+      
+          state: no
+        
+    </span>
+  </div>
+</div>
+`;
