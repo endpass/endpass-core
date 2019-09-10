@@ -1,33 +1,39 @@
 import CrossWindowMessenger from '@/CrossWindowMessenger';
 
 describe('CrossWindowMessenger class', () => {
-  const busMock = {
-    list: [],
-    addEventListener(msg, cb) {
-      this.list.push({
-        msg,
-        cb,
-      });
-    },
-    removeEventListener(msg, cb) {
-      this.list = this.list.filter(item => item.cb !== cb);
-    },
-    postMessage(data) {
-      const ev = {
-        data,
-        source: busMock,
-      };
-      this.list.forEach(({ cb }) => {
-        cb(ev);
-      });
-    },
+  const createBus = () => {
+    const bus = {
+      list: [],
+      addEventListener(msg, cb) {
+        this.list.push({
+          msg,
+          cb,
+        });
+      },
+      removeEventListener(msg, cb) {
+        this.list = this.list.filter(item => item.cb !== cb);
+      },
+      postMessage(data) {
+        const ev = {
+          data,
+          source: bus,
+        };
+        this.list.forEach(({ cb }) => {
+          cb(ev);
+        });
+      },
+    };
+    return bus;
   };
+
+  let busMock = createBus();
 
   let messengerOne;
   let messengerTwo;
 
   describe('methods', () => {
     beforeEach(() => {
+      busMock = createBus();
       messengerOne = new CrossWindowMessenger({
         name: 'one',
         target: busMock,
@@ -67,7 +73,7 @@ describe('CrossWindowMessenger class', () => {
       });
     });
 
-    it('should handle data by subscribe', (done) => {
+    it('should handle data by subscribe', done => {
       const methodName = 'checkMethod';
 
       messengerTwo.subscribe(methodName, (payload, req) => {
@@ -162,6 +168,7 @@ describe('CrossWindowMessenger class', () => {
     let messengerListenerOne;
     let messengerListenerTwo;
     beforeEach(() => {
+      busMock = createBus();
       messengerListenerOne = new CrossWindowMessenger({
         name: 'listenOne',
         bus: busMock,
@@ -188,6 +195,57 @@ describe('CrossWindowMessenger class', () => {
 
       expect(handler).toBeCalled();
       expect(handlerSecond).not.toBeCalled();
+    });
+  });
+
+  describe('answer to answer', () => {
+    beforeEach(() => {
+      busMock = createBus();
+
+      messengerOne = new CrossWindowMessenger({
+        name: 'one',
+        target: busMock,
+        bus: busMock,
+        to: 'two',
+        from: 'one',
+      });
+
+      messengerTwo = new CrossWindowMessenger({
+        name: 'two',
+        target: busMock,
+        bus: busMock,
+        to: 'one',
+        from: 'two',
+      });
+    });
+
+    it('should call only one answer', () => {
+      const dataOne = 'dataOne';
+      const dataOneAnswer = 'dataOneAnswer';
+      const dataTwo = 'dataTwo';
+      const handlerOne = jest.fn();
+      const handlerTwo = jest.fn();
+      messengerOne.subscribe((payload, req) => {
+        // step 3.
+        expect(payload).toBe(dataTwo);
+
+        // will be ignored in messengerTwo
+        req.answer(dataOneAnswer);
+        handlerOne();
+      });
+
+      messengerTwo.subscribe((payload, req) => {
+        // step 2.
+        expect(payload).toBe(dataOne);
+        req.answer(dataTwo);
+        handlerTwo();
+      });
+
+      // step 1.
+      messengerOne.send('method', dataOne);
+
+      expect(handlerOne).toBeCalledTimes(1);
+      expect(handlerTwo).toBeCalledTimes(1);
     });
   });
 });

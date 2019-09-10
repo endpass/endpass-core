@@ -6,6 +6,9 @@ const privateMethods = {
   sendOutside: Symbol('sendOutside'),
   onAction: Symbol('onAction'),
   offAction: Symbol('offAction'),
+  isSkippedMessage: Symbol('isSkippedMessage'),
+  createAnswer: Symbol('createAnswer'),
+  log: Symbol('log'),
 };
 
 export default class CrossWindowMessenger {
@@ -42,47 +45,79 @@ export default class CrossWindowMessenger {
     this.bus.addEventListener('message', this[privateMethods.onReceiveMessage]);
   }
 
+  [privateMethods.log](...args) {
+    if (this.showLogs) {
+      // eslint-disable-next-line
+      console.log.apply(console, [this.name, ...args]);
+    }
+  }
+
+  /**
+   *
+   * @param {Event} ev
+   * @return {boolean}
+   */
+  [privateMethods.isSkippedMessage](ev) {
+    const { data, source } = ev;
+    return (
+      !data ||
+      data.messageType !== MESSAGE_TYPE ||
+      data.to !== this.directionFrom ||
+      (this.target && this.target !== this.bus && this.target !== source)
+    );
+  }
+
+  /**
+   *
+   * @param {Window} source
+   * @param {object} data
+   * @return {Function}
+   */
+  [privateMethods.createAnswer]({ source, data }) {
+    const { from, to, method, meta = {} } = data;
+    return result => {
+      if (meta.isAnswer) {
+        return;
+      }
+
+      this[privateMethods.sendOutside]({
+        target: source,
+        method,
+        to: from,
+        from: to,
+        payload: result,
+        meta: {
+          ...meta,
+          isAnswer: true,
+        },
+      });
+    };
+  }
+
   /**
    * Receive event from other window and prepare answer
    * @param ev Event from window.postMessage emitter
    */
   [privateMethods.onReceiveMessage](ev) {
-    const { source, data = {} } = ev;
-    if (
-      data.messageType !== MESSAGE_TYPE
-      || data.to !== this.directionFrom
-      || (this.target && this.target !== this.bus && this.target !== source)
-    ) {
+    if (this[privateMethods.isSkippedMessage](ev)) {
       return;
     }
 
-    if (this.showLogs) {
-      // eslint-disable-next-line
-      console.log(
-        '-- CrossWindowMessenger.onReceiveMessage()',
-        this.name,
-        data,
-      );
-    }
-    const {
-      payload, from, to, method,
-    } = data;
+    const { source, data } = ev;
+    const { payload, method } = data;
+
+    this[privateMethods.log](
+      '-- CrossWindowMessenger.onReceiveMessage()',
+      data,
+    );
 
     const req = {
       source,
       method,
-      answer: (result) => {
-        this[privateMethods.sendOutside]({
-          target: source,
-          method,
-          to: from,
-          from: to,
-          payload: result,
-        });
-      },
+      answer: this[privateMethods.createAnswer](ev),
     };
 
-    this.actions.forEach((action) => {
+    this.actions.forEach(action => {
       const { method: actionMethod, cb } = action;
       if (actionMethod === method || actionMethod === ALL_METHODS) {
         cb(payload, req);
@@ -101,7 +136,7 @@ export default class CrossWindowMessenger {
   [privateMethods.sendOutside](props) {
     if (this.showLogs) {
       // eslint-disable-next-line
-      console.log('-- CrossWindowMessenger().sendOutside', this.name, props);
+      this[privateMethods.log]('-- CrossWindowMessenger().sendOutside', props);
     }
 
     if (!props.target) {
@@ -127,6 +162,9 @@ export default class CrossWindowMessenger {
         from: props.from,
         method: props.method,
         payload: props.payload,
+        meta: {
+          ...props.meta,
+        },
       },
       '*',
     );
@@ -140,7 +178,7 @@ export default class CrossWindowMessenger {
   [privateMethods.onAction](method, cb) {
     const methodList = [].concat(method);
 
-    methodList.forEach((item) => {
+    methodList.forEach(item => {
       this.actions.push({
         method: item,
         cb,
@@ -176,15 +214,14 @@ export default class CrossWindowMessenger {
       throw new Error('Target is not defined to send message!');
     }
 
-    const result = new Promise((resolve) => {
+    const result = new Promise(resolve => {
       // TODO: add timeout here ?
 
       const handler = (data, req) => {
         if (this.showLogs) {
           // eslint-disable-next-line
-          console.log(
+          this[privateMethods.log](
             '-- CrossWindowMessenger.sendAndWaitResponse() -> handler callback',
-            this.name,
             data,
             req,
           );
