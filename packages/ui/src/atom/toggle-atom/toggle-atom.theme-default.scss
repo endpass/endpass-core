@@ -2,19 +2,20 @@
   border-radius: 12px;
   transition: box-shadow .3s, background-color .3s;
   box-shadow: 0 0 0 2px transparent;
+  box-sizing: border-box;
   cursor: pointer;
   padding: 3px;
 }
 
 .toggle-atom.theme-default.size-normal {
-  width: 42px;
-  height: 18px;
+  width: 48px;
+  height: 24px;
   background-color: var(--endpass-ui-color-grey-4);
 }
 
 .toggle-atom.theme-default.size-mini {
-  width: 26px;
-  height: 10px;
+  width: 32px;
+  height: 16px;
   background-color: var(--endpass-ui-color-grey-3);
 }
 
