@@ -1,4 +1,4 @@
-.v-file-drop-area.theme-default .v-file-drop-area-button {
+.v-file-drop-area-content.theme-default .v-file-drop-area-button {
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
@@ -17,7 +17,7 @@
   display: none;
 }
 
-.v-file-drop-area.theme-default .v-file-drop-area-label {
+.v-file-drop-area-content.theme-default .v-file-drop-area-label {
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.3s, border-color 0.3s;
@@ -32,18 +32,18 @@
   height: 154px;
 }
 
-.v-file-drop-area.theme-default[disabled] .v-file-drop-area-label {
+.v-file-drop-area-content.theme-default[disabled] .v-file-drop-area-label {
   border-color: transparent !important;
   box-shadow: none !important;
   background: var(--endpass-ui-color-grey-2) !important;
   cursor: default !important;
 }
 
-.v-file-drop-area.theme-default .v-file-drop-area-label:hover {
+.v-file-drop-area-content.theme-default .v-file-drop-area-label:hover {
   background: var(--endpass-ui-color-grey-2);
 }
 
-.v-file-drop-area.theme-default .v-file-drop-area-label:active {
+.v-file-drop-area-content.theme-default .v-file-drop-area-label:active {
   background: var(--endpass-ui-color-grey-3);
 }
 

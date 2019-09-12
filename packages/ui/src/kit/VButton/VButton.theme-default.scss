@@ -26,16 +26,10 @@
 
 .v-button.theme-default .v-button-icon {
   display: flex;
-  height: 10px;
+  height: 14px;
   align-items: center;
 }
 
-.v-button.theme-default .v-button-icon.v-button-icon-loader {
-  padding: 2.5px 0px;
-  margin-top: -0.5px;
-  margin-bottom: -0.5px;
-  animation: v-spin 1.5s linear infinite;
-}
 .v-button.theme-default .v-button-icon.icon-before {
   margin-right: 5px;
 }
@@ -198,11 +192,6 @@
 .v-button.theme-default.skin-social .svg-atom {
   width: 18px;
   height: 18px;
-}
-.v-button.theme-default.skin-social .v-button-icon.v-button-icon-loader {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0;
 }
 .v-button.theme-default.skin-primary .svg-atom,
 .v-button.theme-default.skin-secondary .svg-atom,

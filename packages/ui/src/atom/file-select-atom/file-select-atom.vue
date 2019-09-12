@@ -53,10 +53,11 @@ export default {
   },
   computed: {
     buttonCssClass() {
-      return Object.assign({}, this.themeCssClass, {
+      return {
+        ...this.themeCssClass,
         [`size-${this.size}`]: true,
         [`skin-${this.skin}`]: true,
-      });
+      };
     },
   },
   methods: {

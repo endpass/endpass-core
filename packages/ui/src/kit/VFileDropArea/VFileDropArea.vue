@@ -1,28 +1,34 @@
 <template>
-  <field-atom
-    class="v-file-drop-area"
-    :class="themeCssClass"
-  >
-    <button
-      class="v-file-drop-area-button"
-      type="button"
+  <field-atom>
+    <label-atom
+      v-if="label"
+      :label="label"
+    />
+    <div
+      class="v-file-drop-area-content"
+      :class="themeCssClass"
     >
-      <label
-        class="v-file-drop-area-label"
-        :for="inputId"
+      <button
+        class="v-file-drop-area-button"
+        type="button"
       >
-        <div>
-          <slot />
-        </div>
-        <input
-          :id="inputId"
-          type="file"
-          class="file-drop-area-input"
-          v-bind="$attrs"
-          @change="onChange"
+        <label
+          class="v-file-drop-area-label"
+          :for="inputId"
         >
-      </label>
-    </button>
+          <div>
+            <slot />
+          </div>
+          <input
+            :id="inputId"
+            type="file"
+            class="file-drop-area-input"
+            v-bind="$attrs"
+            @change="onChange"
+          >
+        </label>
+      </button>
+    </div>
   </field-atom>
 </template>
 
@@ -30,11 +36,19 @@
 import IsDisabledMixin from '@/mixins/IsDisabledMixin';
 import ThemeMixin from '@/mixins/ThemeMixin';
 import FieldAtom from '@/atom/field-atom/field-atom';
+import LabelAtom from '@/atom/label-atom/label-atom';
 
 let inputId = 1;
 
 export default {
   name: 'VFileDropArea',
+  props: {
+    label: {
+      type: String,
+      default: null,
+    },
+  },
+
   data() {
     return {
       // eslint-disable-next-line no-plusplus
@@ -44,6 +58,10 @@ export default {
   methods: {
     onChange(e) {
       this.$emit('change', e.target.files);
+
+      // drop value for reselect file(s)
+      // eslint-disable-next-line no-param-reassign
+      e.target.value = '';
     },
     preventDrop(e) {
       e.preventDefault();
@@ -66,7 +84,8 @@ export default {
           fileList = dataTransfer.files;
         } else if (dataTransfer.items && dataTransfer.items.length) {
           // During the drag even the dataTransfer.files is null
-          // but Chrome implements some drag store, which is accessible via dataTransfer.items
+          // but Chrome implements some drag store,
+          // which is accessible via dataTransfer.items
           fileList = dataTransfer.items;
         }
       } else if (e.target && e.target.files) {
@@ -90,6 +109,7 @@ export default {
   mixins: [ThemeMixin, IsDisabledMixin],
   components: {
     FieldAtom,
+    LabelAtom,
   },
 };
 </script>
