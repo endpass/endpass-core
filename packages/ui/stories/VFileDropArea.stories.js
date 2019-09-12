@@ -2,7 +2,6 @@ import { storiesOf } from '@storybook/vue';
 import { action } from '@storybook/addon-actions';
 import VFileDropArea from '@/kit/VFileDropArea';
 import VButton from '@/kit/VButton';
-import VLabel from '@/kit/VLabel';
 import VDescription from '@/kit/VDescription';
 
 const methods = {
@@ -12,7 +11,6 @@ const methods = {
 const components = {
   VFileDropArea,
   VButton,
-  VLabel,
   VDescription,
 };
 
@@ -22,8 +20,8 @@ storiesOf('VFileDropArea/desktop', module)
     components,
     template: `
       <theme-provider>
-        <v-label label="Single File"/>
         <v-file-drop-area @change="onChange"
+            label="Single File"
             :disabled="false"
         >
           <p>Add File</p>
@@ -37,8 +35,8 @@ storiesOf('VFileDropArea/desktop', module)
     components,
     template: `
       <theme-provider>
-      <v-label label="Multiple files"/>
         <v-file-drop-area
+          label="Multiple files"
           @change="onChange"
           accept="image/*"
         >
@@ -54,8 +52,8 @@ storiesOf('VFileDropArea/desktop', module)
     components,
     template: `
       <theme-provider>
-      <v-label label="Disabled state"/>
         <v-file-drop-area
+          label="Disabled state"
           @change="onChange"
           accept="image/*"
           disabled
@@ -71,8 +69,8 @@ storiesOf('VFileDropArea/desktop', module)
     components,
     template: `
       <theme-provider>
-      <v-label label="Disabled state"/>
         <v-file-drop-area
+          label="Only .jpeg files"
           accept=".jpeg"
           @change="onChange"
         >

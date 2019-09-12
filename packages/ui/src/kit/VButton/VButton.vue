@@ -6,9 +6,9 @@
   >
     <icon-atom
       v-if="$slots.iconBefore && isSocialIcon && isLoading"
-      class="v-button-icon icon-before v-button-icon-loader"
+      class="v-button-icon icon-before"
     >
-      <svg-atom name="loader" />
+      <button-loader-atom />
     </icon-atom>
     <icon-atom
       v-if="$slots.iconBefore && !isLoading"
@@ -25,15 +25,15 @@
 
     <icon-atom
       v-if="!isSocialIcon && isLoading"
-      class="v-button-icon v-button-icon-loader"
+      class="v-button-icon"
     >
-      <svg-atom name="loader" />
+      <button-loader-atom />
     </icon-atom>
     <icon-atom
       v-if="$slots.iconAfter && isSocialIcon && isLoading"
-      class="v-button-icon icon-after v-button-icon-loader"
+      class="v-button-icon icon-after"
     >
-      <svg-atom name="loader" />
+      <button-loader-atom />
     </icon-atom>
     <icon-atom
       v-if="$slots.iconAfter && !isLoading"
@@ -46,8 +46,8 @@
 
 <script>
 import IconAtom from '@/atom/icon-atom/icon-atom';
-import SvgAtom from '@/atom/svg-atom/svg-atom';
 import ThemeMixin from '@/mixins/ThemeMixin';
+import ButtonLoaderAtom from '@/atom/button-loader-atom/button-loader-atom';
 
 export default {
   name: 'VButton',
@@ -85,17 +85,20 @@ export default {
   },
   computed: {
     vButtonCssClass() {
-      return Object.assign({}, this.themeCssClass, {
+      return {
+        ...this.themeCssClass,
         [`skin-${this.skin}`]: true,
         [`size-${this.size}`]: true,
-      });
+      };
     },
     isSocialIcon() {
-      return this.skin === 'social'
-        && (this.$slots.iconBefore || this.$slots.iconAfter);
+      return (
+        this.skin === 'social' &&
+        (this.$slots.iconBefore || this.$slots.iconAfter)
+      );
     },
   },
   mixins: [ThemeMixin],
-  components: { IconAtom, SvgAtom },
+  components: { ButtonLoaderAtom, IconAtom },
 };
 </script>

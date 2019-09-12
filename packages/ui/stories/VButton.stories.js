@@ -295,6 +295,8 @@ storiesOf('VButton/desktop', module)
           <thead>
             <tr>
               <th></th>
+              <th>Disabled</th>
+              <th>With title</th>
               <th>Primary</th>
               <th>Secondary</th>
               <th>Tertiary</th>
@@ -306,6 +308,8 @@ storiesOf('VButton/desktop', module)
           <tbody>
             <tr>
               <th scope="row">Normal</th>
+              <td><v-button :isLoading="true" :disabled="true" @click="onClick">disabled</v-button></td>
+              <td><v-button @click="onClick">title</v-button></td>
               <td><v-button :isLoading="true" @click="onClick">Button Label</v-button></td>
               <td><v-button :isLoading="true" @mouseenter="onEnter" skin="secondary">Button Label</v-button></td>
               <td><v-button :isLoading="true" @focus="onFocus" skin="tertiary">Button Label</v-button></td>
@@ -320,6 +324,8 @@ storiesOf('VButton/desktop', module)
             </tr>
             <tr>
               <th scope="row">Big</th>
+              <td><v-button :isLoading="true" :disabled="true" size="big" @click="onClick">disabled</v-button></td>
+              <td><v-button @click="onClick" size="big">title</v-button></td>
               <td><v-button :isLoading="true" @click="onClick" size="big">Button Label</v-button></td>
               <td><v-button :isLoading="true" @mouseenter="onEnter" skin="secondary" size="big">Button Label</v-button></td>
               <td><v-button :isLoading="true" @focus="onFocus" skin="tertiary" size="big">Button Label</v-button></td>

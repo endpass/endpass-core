@@ -1086,6 +1086,14 @@ exports[`Storyshots VButton/desktop loading 1`] = `
         <th />
          
         <th>
+          Disabled
+        </th>
+         
+        <th>
+          With title
+        </th>
+         
+        <th>
           Primary
         </th>
          
@@ -1122,6 +1130,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
         <td>
           <button
             class="v-button theme-default skin-primary size-normal"
+            disabled="disabled"
           >
             <!---->
              
@@ -1130,19 +1139,113 @@ exports[`Storyshots VButton/desktop loading 1`] = `
             <!---->
              
             <i
-              class="icon-atom v-button-icon v-button-icon-loader theme-default"
+              class="icon-atom v-button-icon theme-default"
             >
-              <svg
-                class="svg-atom theme-default"
-                height="100%"
-                width="100%"
+              <span
+                class="button-loader-atom theme-default"
               >
-                <use
-                  x="0"
-                  xlink:href="#endpass-ui-icon-loader"
-                  y="0"
-                />
-              </svg>
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-empty"
+                    y="0"
+                  />
+                </svg>
+                 
+                <span
+                  class="button-loader-atom-spinner"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-loader"
+                      y="0"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </i>
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-primary size-normal"
+          >
+            <!---->
+             
+            <!---->
+             
+            <span
+              class="v-button-label"
+            >
+              title
+            </span>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-primary size-normal"
+          >
+            <!---->
+             
+            <!---->
+             
+            <!---->
+             
+            <i
+              class="icon-atom v-button-icon theme-default"
+            >
+              <span
+                class="button-loader-atom theme-default"
+              >
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-empty"
+                    y="0"
+                  />
+                </svg>
+                 
+                <span
+                  class="button-loader-atom-spinner"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-loader"
+                      y="0"
+                    />
+                  </svg>
+                </span>
+              </span>
             </i>
              
             <!---->
@@ -1162,19 +1265,39 @@ exports[`Storyshots VButton/desktop loading 1`] = `
             <!---->
              
             <i
-              class="icon-atom v-button-icon v-button-icon-loader theme-default"
+              class="icon-atom v-button-icon theme-default"
             >
-              <svg
-                class="svg-atom theme-default"
-                height="100%"
-                width="100%"
+              <span
+                class="button-loader-atom theme-default"
               >
-                <use
-                  x="0"
-                  xlink:href="#endpass-ui-icon-loader"
-                  y="0"
-                />
-              </svg>
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-empty"
+                    y="0"
+                  />
+                </svg>
+                 
+                <span
+                  class="button-loader-atom-spinner"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-loader"
+                      y="0"
+                    />
+                  </svg>
+                </span>
+              </span>
             </i>
              
             <!---->
@@ -1194,19 +1317,39 @@ exports[`Storyshots VButton/desktop loading 1`] = `
             <!---->
              
             <i
-              class="icon-atom v-button-icon v-button-icon-loader theme-default"
+              class="icon-atom v-button-icon theme-default"
             >
-              <svg
-                class="svg-atom theme-default"
-                height="100%"
-                width="100%"
+              <span
+                class="button-loader-atom theme-default"
               >
-                <use
-                  x="0"
-                  xlink:href="#endpass-ui-icon-loader"
-                  y="0"
-                />
-              </svg>
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-empty"
+                    y="0"
+                  />
+                </svg>
+                 
+                <span
+                  class="button-loader-atom-spinner"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-loader"
+                      y="0"
+                    />
+                  </svg>
+                </span>
+              </span>
             </i>
              
             <!---->
@@ -1226,19 +1369,39 @@ exports[`Storyshots VButton/desktop loading 1`] = `
             <!---->
              
             <i
-              class="icon-atom v-button-icon v-button-icon-loader theme-default"
+              class="icon-atom v-button-icon theme-default"
             >
-              <svg
-                class="svg-atom theme-default"
-                height="100%"
-                width="100%"
+              <span
+                class="button-loader-atom theme-default"
               >
-                <use
-                  x="0"
-                  xlink:href="#endpass-ui-icon-loader"
-                  y="0"
-                />
-              </svg>
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-empty"
+                    y="0"
+                  />
+                </svg>
+                 
+                <span
+                  class="button-loader-atom-spinner"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-loader"
+                      y="0"
+                    />
+                  </svg>
+                </span>
+              </span>
             </i>
              
             <!---->
@@ -1258,19 +1421,39 @@ exports[`Storyshots VButton/desktop loading 1`] = `
             <!---->
              
             <i
-              class="icon-atom v-button-icon v-button-icon-loader theme-default"
+              class="icon-atom v-button-icon theme-default"
             >
-              <svg
-                class="svg-atom theme-default"
-                height="100%"
-                width="100%"
+              <span
+                class="button-loader-atom theme-default"
               >
-                <use
-                  x="0"
-                  xlink:href="#endpass-ui-icon-loader"
-                  y="0"
-                />
-              </svg>
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-empty"
+                    y="0"
+                  />
+                </svg>
+                 
+                <span
+                  class="button-loader-atom-spinner"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-loader"
+                      y="0"
+                    />
+                  </svg>
+                </span>
+              </span>
             </i>
              
             <!---->
@@ -1284,19 +1467,39 @@ exports[`Storyshots VButton/desktop loading 1`] = `
             class="v-button theme-default skin-social size-normal"
           >
             <i
-              class="icon-atom v-button-icon icon-before v-button-icon-loader theme-default"
+              class="icon-atom v-button-icon icon-before theme-default"
             >
-              <svg
-                class="svg-atom theme-default"
-                height="100%"
-                width="100%"
+              <span
+                class="button-loader-atom theme-default"
               >
-                <use
-                  x="0"
-                  xlink:href="#endpass-ui-icon-loader"
-                  y="0"
-                />
-              </svg>
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-empty"
+                    y="0"
+                  />
+                </svg>
+                 
+                <span
+                  class="button-loader-atom-spinner"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-loader"
+                      y="0"
+                    />
+                  </svg>
+                </span>
+              </span>
             </i>
              
             <!---->
@@ -1326,6 +1529,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
         <td>
           <button
             class="v-button theme-default skin-primary size-big"
+            disabled="disabled"
           >
             <!---->
              
@@ -1334,19 +1538,113 @@ exports[`Storyshots VButton/desktop loading 1`] = `
             <!---->
              
             <i
-              class="icon-atom v-button-icon v-button-icon-loader theme-default"
+              class="icon-atom v-button-icon theme-default"
             >
-              <svg
-                class="svg-atom theme-default"
-                height="100%"
-                width="100%"
+              <span
+                class="button-loader-atom theme-default"
               >
-                <use
-                  x="0"
-                  xlink:href="#endpass-ui-icon-loader"
-                  y="0"
-                />
-              </svg>
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-empty"
+                    y="0"
+                  />
+                </svg>
+                 
+                <span
+                  class="button-loader-atom-spinner"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-loader"
+                      y="0"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </i>
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-primary size-big"
+          >
+            <!---->
+             
+            <!---->
+             
+            <span
+              class="v-button-label"
+            >
+              title
+            </span>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-primary size-big"
+          >
+            <!---->
+             
+            <!---->
+             
+            <!---->
+             
+            <i
+              class="icon-atom v-button-icon theme-default"
+            >
+              <span
+                class="button-loader-atom theme-default"
+              >
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-empty"
+                    y="0"
+                  />
+                </svg>
+                 
+                <span
+                  class="button-loader-atom-spinner"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-loader"
+                      y="0"
+                    />
+                  </svg>
+                </span>
+              </span>
             </i>
              
             <!---->
@@ -1366,19 +1664,39 @@ exports[`Storyshots VButton/desktop loading 1`] = `
             <!---->
              
             <i
-              class="icon-atom v-button-icon v-button-icon-loader theme-default"
+              class="icon-atom v-button-icon theme-default"
             >
-              <svg
-                class="svg-atom theme-default"
-                height="100%"
-                width="100%"
+              <span
+                class="button-loader-atom theme-default"
               >
-                <use
-                  x="0"
-                  xlink:href="#endpass-ui-icon-loader"
-                  y="0"
-                />
-              </svg>
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-empty"
+                    y="0"
+                  />
+                </svg>
+                 
+                <span
+                  class="button-loader-atom-spinner"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-loader"
+                      y="0"
+                    />
+                  </svg>
+                </span>
+              </span>
             </i>
              
             <!---->
@@ -1398,19 +1716,39 @@ exports[`Storyshots VButton/desktop loading 1`] = `
             <!---->
              
             <i
-              class="icon-atom v-button-icon v-button-icon-loader theme-default"
+              class="icon-atom v-button-icon theme-default"
             >
-              <svg
-                class="svg-atom theme-default"
-                height="100%"
-                width="100%"
+              <span
+                class="button-loader-atom theme-default"
               >
-                <use
-                  x="0"
-                  xlink:href="#endpass-ui-icon-loader"
-                  y="0"
-                />
-              </svg>
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-empty"
+                    y="0"
+                  />
+                </svg>
+                 
+                <span
+                  class="button-loader-atom-spinner"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-loader"
+                      y="0"
+                    />
+                  </svg>
+                </span>
+              </span>
             </i>
              
             <!---->
@@ -1430,19 +1768,39 @@ exports[`Storyshots VButton/desktop loading 1`] = `
             <!---->
              
             <i
-              class="icon-atom v-button-icon v-button-icon-loader theme-default"
+              class="icon-atom v-button-icon theme-default"
             >
-              <svg
-                class="svg-atom theme-default"
-                height="100%"
-                width="100%"
+              <span
+                class="button-loader-atom theme-default"
               >
-                <use
-                  x="0"
-                  xlink:href="#endpass-ui-icon-loader"
-                  y="0"
-                />
-              </svg>
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-empty"
+                    y="0"
+                  />
+                </svg>
+                 
+                <span
+                  class="button-loader-atom-spinner"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-loader"
+                      y="0"
+                    />
+                  </svg>
+                </span>
+              </span>
             </i>
              
             <!---->
@@ -1462,19 +1820,39 @@ exports[`Storyshots VButton/desktop loading 1`] = `
             <!---->
              
             <i
-              class="icon-atom v-button-icon v-button-icon-loader theme-default"
+              class="icon-atom v-button-icon theme-default"
             >
-              <svg
-                class="svg-atom theme-default"
-                height="100%"
-                width="100%"
+              <span
+                class="button-loader-atom theme-default"
               >
-                <use
-                  x="0"
-                  xlink:href="#endpass-ui-icon-loader"
-                  y="0"
-                />
-              </svg>
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-empty"
+                    y="0"
+                  />
+                </svg>
+                 
+                <span
+                  class="button-loader-atom-spinner"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-loader"
+                      y="0"
+                    />
+                  </svg>
+                </span>
+              </span>
             </i>
              
             <!---->
@@ -1488,19 +1866,39 @@ exports[`Storyshots VButton/desktop loading 1`] = `
             class="v-button theme-default skin-social size-big"
           >
             <i
-              class="icon-atom v-button-icon icon-before v-button-icon-loader theme-default"
+              class="icon-atom v-button-icon icon-before theme-default"
             >
-              <svg
-                class="svg-atom theme-default"
-                height="100%"
-                width="100%"
+              <span
+                class="button-loader-atom theme-default"
               >
-                <use
-                  x="0"
-                  xlink:href="#endpass-ui-icon-loader"
-                  y="0"
-                />
-              </svg>
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-empty"
+                    y="0"
+                  />
+                </svg>
+                 
+                <span
+                  class="button-loader-atom-spinner"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-loader"
+                      y="0"
+                    />
+                  </svg>
+                </span>
+              </span>
             </i>
              
             <!---->
@@ -2416,49 +2814,53 @@ exports[`Storyshots VFileDropArea/desktop custom text 1`] = `
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
-  <label
-    class="label-atom theme-default"
-  >
-    
-  Multiple files
-
-  </label>
-   
   <div
     accept="image/*"
-    class="field-atom v-file-drop-area theme-default theme-default"
+    class="field-atom theme-default"
   >
-    <button
-      class="v-file-drop-area-button"
-      type="button"
+    <label
+      class="label-atom theme-default"
     >
-      <label
-        class="v-file-drop-area-label"
-        for="v-file-drop-area-idx-2"
+      
+  Multiple files
+
+    </label>
+     
+    <div
+      class="v-file-drop-area-content theme-default"
+    >
+      <button
+        class="v-file-drop-area-button"
+        type="button"
       >
-        <div>
-          <p>
-            Custom Text
-          </p>
-           
-          <div
-            class="description-atom theme-default"
-            disabled="disabled"
-          >
-            
+        <label
+          class="v-file-drop-area-label"
+          for="v-file-drop-area-idx-2"
+        >
+          <div>
+            <p>
+              Custom Text
+            </p>
+             
+            <div
+              class="description-atom theme-default"
+              disabled="disabled"
+            >
+              
   or drop files here
   
+            </div>
           </div>
-        </div>
-         
-        <input
-          accept="image/*"
-          class="file-drop-area-input"
-          id="v-file-drop-area-idx-2"
-          type="file"
-        />
-      </label>
-    </button>
+           
+          <input
+            accept="image/*"
+            class="file-drop-area-input"
+            id="v-file-drop-area-idx-2"
+            type="file"
+          />
+        </label>
+      </button>
+    </div>
   </div>
    
   <div
@@ -2478,51 +2880,55 @@ exports[`Storyshots VFileDropArea/desktop disable 1`] = `
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
-  <label
-    class="label-atom theme-default"
-  >
-    
-  Disabled state
-
-  </label>
-   
   <div
     accept="image/*"
-    class="field-atom v-file-drop-area theme-default theme-default"
+    class="field-atom theme-default"
     disabled="disabled"
   >
-    <button
-      class="v-file-drop-area-button"
-      type="button"
+    <label
+      class="label-atom theme-default"
     >
-      <label
-        class="v-file-drop-area-label"
-        for="v-file-drop-area-idx-3"
+      
+  Disabled state
+
+    </label>
+     
+    <div
+      class="v-file-drop-area-content theme-default"
+    >
+      <button
+        class="v-file-drop-area-button"
+        type="button"
       >
-        <div>
-          <p>
-            Custom Text
-          </p>
-           
-          <div
-            class="description-atom theme-default"
-            disabled="disabled"
-          >
-            
+        <label
+          class="v-file-drop-area-label"
+          for="v-file-drop-area-idx-3"
+        >
+          <div>
+            <p>
+              Custom Text
+            </p>
+             
+            <div
+              class="description-atom theme-default"
+              disabled="disabled"
+            >
+              
   or drop files here
   
+            </div>
           </div>
-        </div>
-         
-        <input
-          accept="image/*"
-          class="file-drop-area-input"
-          disabled="disabled"
-          id="v-file-drop-area-idx-3"
-          type="file"
-        />
-      </label>
-    </button>
+           
+          <input
+            accept="image/*"
+            class="file-drop-area-input"
+            disabled="disabled"
+            id="v-file-drop-area-idx-3"
+            type="file"
+          />
+        </label>
+      </button>
+    </div>
   </div>
 </div>
 `;
@@ -2533,47 +2939,51 @@ exports[`Storyshots VFileDropArea/desktop enabled 1`] = `
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
-  <label
-    class="label-atom theme-default"
+  <div
+    class="field-atom theme-default"
   >
-    
+    <label
+      class="label-atom theme-default"
+    >
+      
   Single File
 
-  </label>
-   
-  <div
-    class="field-atom v-file-drop-area theme-default theme-default"
-  >
-    <button
-      class="v-file-drop-area-button"
-      type="button"
+    </label>
+     
+    <div
+      class="v-file-drop-area-content theme-default"
     >
-      <label
-        class="v-file-drop-area-label"
-        for="v-file-drop-area-idx-1"
+      <button
+        class="v-file-drop-area-button"
+        type="button"
       >
-        <div>
-          <p>
-            Add File
-          </p>
-           
-          <div
-            class="description-atom theme-default"
-            disabled="disabled"
-          >
-            
+        <label
+          class="v-file-drop-area-label"
+          for="v-file-drop-area-idx-1"
+        >
+          <div>
+            <p>
+              Add File
+            </p>
+             
+            <div
+              class="description-atom theme-default"
+              disabled="disabled"
+            >
+              
   or drop files here
   
+            </div>
           </div>
-        </div>
-         
-        <input
-          class="file-drop-area-input"
-          id="v-file-drop-area-idx-1"
-          type="file"
-        />
-      </label>
-    </button>
+           
+          <input
+            class="file-drop-area-input"
+            id="v-file-drop-area-idx-1"
+            type="file"
+          />
+        </label>
+      </button>
+    </div>
   </div>
 </div>
 `;
@@ -2584,49 +2994,53 @@ exports[`Storyshots VFileDropArea/desktop only for jpeg 1`] = `
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
-  <label
-    class="label-atom theme-default"
-  >
-    
-  Disabled state
-
-  </label>
-   
   <div
     accept=".jpeg"
-    class="field-atom v-file-drop-area theme-default theme-default"
+    class="field-atom theme-default"
   >
-    <button
-      class="v-file-drop-area-button"
-      type="button"
+    <label
+      class="label-atom theme-default"
     >
-      <label
-        class="v-file-drop-area-label"
-        for="v-file-drop-area-idx-4"
+      
+  Only .jpeg files
+
+    </label>
+     
+    <div
+      class="v-file-drop-area-content theme-default"
+    >
+      <button
+        class="v-file-drop-area-button"
+        type="button"
       >
-        <div>
-          <p>
-            Custom Text
-          </p>
-           
-          <div
-            class="description-atom theme-default"
-            disabled="disabled"
-          >
-            
+        <label
+          class="v-file-drop-area-label"
+          for="v-file-drop-area-idx-4"
+        >
+          <div>
+            <p>
+              Custom Text
+            </p>
+             
+            <div
+              class="description-atom theme-default"
+              disabled="disabled"
+            >
+              
   or drop files here
   
+            </div>
           </div>
-        </div>
-         
-        <input
-          accept=".jpeg"
-          class="file-drop-area-input"
-          id="v-file-drop-area-idx-4"
-          type="file"
-        />
-      </label>
-    </button>
+           
+          <input
+            accept=".jpeg"
+            class="file-drop-area-input"
+            id="v-file-drop-area-idx-4"
+            type="file"
+          />
+        </label>
+      </button>
+    </div>
   </div>
 </div>
 `;

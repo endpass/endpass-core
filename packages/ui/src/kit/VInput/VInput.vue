@@ -66,13 +66,12 @@ export default {
   },
   computed: {
     listeners() {
-      return Object.assign({},
-        this.$listeners,
-        {
-          input: (value) => {
-            this.$emit('input', value);
-          },
-        });
+      return {
+        ...this.$listeners,
+        input: value => {
+          this.$emit('input', value);
+        },
+      };
     },
     isError() {
       return !!this.error;
