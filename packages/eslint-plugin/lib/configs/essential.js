@@ -40,6 +40,8 @@ module.exports = {
         insertPragma: false,
       },
     ],
+    'no-restricted-syntax': ['error', 'ForInStatement'],
+    'no-await-in-loop': 'off',
     'arrow-parens': ['error', 'as-needed'],
     'consistent-return': 'error',
     'operator-linebreak': 'off',

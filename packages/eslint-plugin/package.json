@@ -1,6 +1,6 @@
 {
   "name": "@endpass/eslint-plugin-endpass",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Endpass eslint plugin",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
