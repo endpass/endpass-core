@@ -18,3 +18,4 @@ storiesOf('VDivider/desktop', module)
       </theme-provider>
     `,
   }));
+

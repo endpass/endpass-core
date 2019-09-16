@@ -7,15 +7,15 @@
 
 .v-divider.theme-default .v-divider-before,
 .v-divider.theme-default .v-divider-after {
+  flex: 1 1 auto;
   border: 0;
   margin: 9px 0 10px;
   height: 1px;
-  width: 100%;
+  min-width: 5px;
   background-color: var(--endpass-ui-color-grey-2);
 }
 
 .v-divider.theme-default .v-divider-text {
-  width: 100%;
   text-align: center;
   margin: 0 10px;
   font-size: 14px;
