@@ -1,6 +1,6 @@
 {
   "name": "@endpass/class",
-  "version": "0.18.1",
+  "version": "0.18.2",
   "description": "Class modules",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -39,14 +39,14 @@
     "QueueArray",
     "QueueAsync",
     "EventEmitter",
-    "Network",
+    "Network/Network",
     "Token",
     "wallet/Wallet",
     "provider/ProviderFactory",
     "transaction/Transaction",
     "storage/LocalStorage",
     "ConnectError",
-    "Signer"
+    "Signer/Signer"
   ],
   "bugs": {
     "url": "https://github.com/endpass/endpass-core/issues"
