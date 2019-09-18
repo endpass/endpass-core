@@ -22,6 +22,8 @@ const inputFiles = pkg.separatedModules
   .concat('index')
   .map(item => resolveFile(`./src/${item}.js`));
 
+const inputDeclarations = pkg.separatedModules.map(item => `src/${item}.d.ts`);
+
 export default {
   input: inputFiles,
   external: [
@@ -50,10 +52,18 @@ export default {
     copy({
       targets: [
         {
-          src: ['src', 'types', 'package.json', 'README.md', 'yarn.lock'],
+          src: [
+            'src',
+            'types',
+            'package.json',
+            'README.md',
+            'yarn.lock',
+            ...inputDeclarations,
+          ],
           dest: 'dist',
         },
       ],
+      verbose: true,
     }),
   ],
   watch: {
