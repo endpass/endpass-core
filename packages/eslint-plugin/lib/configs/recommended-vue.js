@@ -2,7 +2,7 @@ const recommended = require('./recommended');
 
 module.exports = {
   ...recommended,
-  plugins: ['json', '@typescript-eslint'],
+  plugins: [...recommended.plugins, 'json'],
   extends: [...recommended.extends, 'plugin:vue/recommended', 'prettier'],
   settings: {
     'import/resolver': {

@@ -2,6 +2,7 @@ const essential = require('./essential');
 
 module.exports = {
   ...essential,
+  plugins: ['@typescript-eslint'],
   settings: {
     'import/resolver': {
       node: {
