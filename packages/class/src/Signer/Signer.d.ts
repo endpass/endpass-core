@@ -12,5 +12,3 @@ declare class Signer {
 
   static privateKeyToStr(privateKey: string | Buffer): string;
 }
-
-export default Signer;
