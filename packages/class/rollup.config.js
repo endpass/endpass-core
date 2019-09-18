@@ -30,6 +30,8 @@ export default {
     '@endpass/utils/keystoreKeyGen',
     '@endpass/utils/crypto',
     'ethereumjs-wallet/hdkey',
+    'eth-lib/lib/hash',
+    'eth-lib/lib/account',
   ],
   plugins: [
     json(),

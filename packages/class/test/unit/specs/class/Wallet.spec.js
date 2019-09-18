@@ -1,11 +1,11 @@
 import Tx from 'ethereumjs-tx';
-import { createWalletClass } from '@/wallet';
 import {
   v3,
   v3password,
   privateKey,
   messageToEncrypt,
 } from 'fixtures/accounts';
+import { createWalletClass } from '@/wallet';
 
 describe('Wallet Class', () => {
   let wallet;
