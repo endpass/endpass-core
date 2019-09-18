@@ -3,5 +3,6 @@
 System.config({
   paths: {
     '@/*': './src/*',
+    'fixtures/*': './test/unit/fixtures/*',
   },
 });

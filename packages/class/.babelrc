@@ -5,7 +5,8 @@
         "browsers": ["> 1%", "last 2 versions"]
       },
       "modules": false
-    }]
+    }],
+    "@babel/preset-typescript"
   ],
   "plugins": [
     "@babel/plugin-proposal-class-properties",

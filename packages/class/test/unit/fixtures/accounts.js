@@ -11,6 +11,10 @@ export const addresses = [
 
 export const v3password = 'password123';
 
+// Private key buffer for v3Import
+export const privateKeyImport =
+  '0x070dc3117300011918e26b02176945cc15c3d548cf49fd8418d97f93af699e46';
+
 // Encrypted keystore for a normal account
 export const v3 = {
   crypto: {
