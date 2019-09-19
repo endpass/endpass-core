@@ -2,7 +2,6 @@ const recommended = require('./recommended');
 
 module.exports = {
   ...recommended,
-  plugins: [...recommended.plugins, 'json'],
   extends: [...recommended.extends, 'plugin:vue/recommended', 'prettier'],
   settings: {
     'import/resolver': {
