@@ -1,6 +1,6 @@
 {
   "name": "@endpass/class",
-  "version": "0.18.2",
+  "version": "0.18.3",
   "description": "Class modules",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -78,7 +78,7 @@
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-typescript": "^7.6.0",
     "@babel/runtime": "^7.6.0",
-    "@endpass/eslint-plugin-endpass": "^0.2.6",
+    "@endpass/eslint-plugin-endpass": "^0.2.7",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^24.9.0",
     "babel-plugin-dynamic-import-node": "^2.3.0",
