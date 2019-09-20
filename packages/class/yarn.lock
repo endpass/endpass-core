@@ -927,10 +927,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@endpass/eslint-plugin-endpass@^0.2.6":
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/@endpass/eslint-plugin-endpass/-/eslint-plugin-endpass-0.2.6.tgz#a9cfe45ce056a999869aa04ea6ae0ccd5c5e50a2"
-  integrity sha512-wD46iHXLKIrWQOZm9n/U0kmRFpLF1WdDZ/FDHsF/beQrUJ8cY9Va/PlyY3uCYnV/ACSZKjoo1eBkkMBuSxInXw==
+"@endpass/eslint-plugin-endpass@^0.2.7":
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/@endpass/eslint-plugin-endpass/-/eslint-plugin-endpass-0.2.7.tgz#332fca025fbf08891fd78ec183d826afd84e6c97"
+  integrity sha512-LFAbfzjLB3iLW+tFlXjDjGNc7IB8cWQZd0mivQaf0GDkgt3x33vICa6XePsCxIMCkuXDYI4E29KRddM4W+yP1A==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^2.3.0"
     "@typescript-eslint/parser" "^2.3.0"
