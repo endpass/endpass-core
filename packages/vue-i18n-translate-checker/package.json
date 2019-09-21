@@ -1,6 +1,6 @@
 {
   "name": "@endpass/vue-i18n-translate-checker",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "bin": "./bin.js",
   "description": "Vue i18n translate checker",
   "author": "Endpass, Inc",
@@ -11,12 +11,22 @@
     "node": ">=10"
   },
   "files": [
-    "*.js"
+    "bin.js",
+    "matchFiles.js"
   ],
   "dependencies": {
     "fast-glob": "^3.0.4"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "unit": "jest",
+    "test": "yarn unit"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.6.0",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0"
   }
 }

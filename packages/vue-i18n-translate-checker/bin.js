@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 const path = require('path');
 const fs = require('fs');
-const fastGlob = require("fast-glob");
+const fastGlob = require('fast-glob');
 
-const reg = new RegExp(`(\\.t|\\$t)\\(['|"][(\\w\\.)]*['|"][\\,|\\)]`, 'ig');
+const matchFiles = require('./matchFiles');
 
 const resolvePath = (...args) => {
   return path.resolve.apply(path, [__dirname, '../../../', ...args]);
@@ -27,7 +27,15 @@ const treeToFlatList = (tree) => {
   return res;
 };
 
-const getDeclared = (locale) => {
+const showFiles = (filesMap) => {
+  Object.keys(filesMap).forEach((fileName) => {
+    const fields = filesMap[fileName];
+    console.log('\x1b[31m%s\x1b[0m', fileName);
+    console.log(fields);
+  });
+};
+
+const getLocaleJsonFlatObject = (locale) => {
   const content = require(resolvePath(locale));
   const obj = treeToFlatList(content).reduce((map, key) => {
     map[key] = true;
@@ -36,35 +44,7 @@ const getDeclared = (locale) => {
   return obj
 };
 
-const matchFiles = async (entries) => {
-  let counter = 0;
-  const totalEntities = entries.length;
-  console.log(`total files: ${totalEntities}`);
-  const usedMatches = {};
-  return new Promise((resolve, reject) => {
-    entries.forEach((entity) => {
-      fs.readFile(entity, 'utf8', function(err, content) {
-        counter++;
-        if (err) {
-          reject(err);
-          throw err;
-        }
-        const matches = content.match(reg);
-        if (matches) {
-          matches.forEach((item) => {
-            const key = item.slice(4, -2);
-            usedMatches[key] = usedMatches[key] || entity;
-          });
-        }
-        if (counter === totalEntities) {
-          resolve(usedMatches);
-        }
-      });
-    });
-  });
-};
-
-const analyzeNotUsed = (declared, used) => {
+const analyzeNotUsedKeys = (declared, used) => {
   return Object.keys(declared).reduce((notUsed, key) => {
     if (!used.hasOwnProperty(key)) {
       notUsed.push(key);
@@ -73,7 +53,7 @@ const analyzeNotUsed = (declared, used) => {
   }, []);
 };
 
-const analyzeNotDeclared = (declared, used) => {
+const analyzeNotDeclaredKeys = (declared, used) => {
   const filesList = {};
   Object.keys(used).reduce((notDeclared, key) => {
     if (!declared.hasOwnProperty(key)) {
@@ -86,32 +66,24 @@ const analyzeNotDeclared = (declared, used) => {
   return filesList;
 };
 
-const logFile = (filesMap) => {
-  Object.keys(filesMap).forEach((fileName) => {
-    const fields = filesMap[fileName];
-    console.log('\x1b[31m%s\x1b[0m', fileName);
-    console.log(fields);
-  });
-};
-
-const analyzeMaps = (locale, usedMap, checkNotUsed) => {
-  const declaredMap = getDeclared(locale);
-  const notUsed = checkNotUsed ? analyzeNotUsed(declaredMap, usedMap) : [];
-  const notDeclaredMap = analyzeNotDeclared(declaredMap, usedMap);
-  const haveNotDeclared = Object.keys(notDeclaredMap).length !== 0;
-  const haveNotUsed = notUsed.length !== 0;
+const analyzeLocale = (locale, usedInFilesMap, checkNotUsed) => {
+  const jsonFlatObject = getLocaleJsonFlatObject(locale);
+  const notUsed = checkNotUsed ? analyzeNotUsedKeys(jsonFlatObject, usedInFilesMap) : [];
+  const notDeclaredMap = analyzeNotDeclaredKeys(jsonFlatObject, usedInFilesMap);
+  const isNotDeclared = Object.keys(notDeclaredMap).length !== 0;
+  const isNotUsed = notUsed.length !== 0;
 
   console.log('\x1b[32m%s\x1b[0m', ' analyze of i18n usage');
-  if (haveNotUsed) {
+  if (isNotUsed) {
     console.log('\x1b[33m%s\x1b[0m', `\n not used for [${locale}]`);
     console.log(notUsed);
     console.log(`\ntotal not used: ${notUsed.length}`);
   }
-  if (haveNotDeclared) {
+  if (isNotDeclared) {
     console.log('\x1b[31m%s\x1b[0m', '\n\n not declared');
-    logFile(notDeclaredMap);
+    showFiles(notDeclaredMap);
   }
-  if (haveNotDeclared || haveNotUsed){
+  if (isNotDeclared || isNotUsed) {
     process.exit(1);
   } else {
     console.log('\x1b[32m%s\x1b[0m', '\n i18n is fine');
@@ -128,8 +100,12 @@ const getEntries = (config, args) => {
   if (args.length) {
     return args;
   }
-  const res = fastGlob.sync(config.searchPath, { dot: true });
+  const res = fastGlob.sync(config.searchPath, {dot: true});
   return res;
+};
+
+const reader = (entity, cb) => {
+  fs.readFile(entity, 'utf8', cb);
 };
 
 var cli = {
@@ -137,10 +113,10 @@ var cli = {
     try {
       const config = getLocales();
       const entries = getEntries(config, files);
-      const usedInFiles = await matchFiles(entries);
+      const usedInFilesMap = await matchFiles(entries, reader);
       const checkNotUsed = !files.length;
       config.locales.forEach((locale) => {
-        analyzeMaps(locale, usedInFiles, checkNotUsed);
+        analyzeLocale(locale, usedInFilesMap, checkNotUsed);
       })
     } catch (e) {
       console.error(e);
