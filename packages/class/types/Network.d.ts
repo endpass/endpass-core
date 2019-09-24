@@ -33,9 +33,13 @@ declare class Network {
     RINKEBY: 4;
     ETHEREUM_CLASSIC: 61;
   };
+
   static NETWORK_URL: NETWORK_URL;
+
   static NETWORK_URL_HTTP: NETWORK_URL;
+
   static CURRENCIES: CURRENCY[];
+
   static DEFAULT_NETWORKS: DEFAULT_NETWORKS;
 }
 
