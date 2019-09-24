@@ -1,4 +1,4 @@
-declare enum ERRORS {
+declare enum ERROR_KEYS {
   AUTH_CANCELED_BY_USER = 'AUTH_CANCELED_BY_USER',
   AUTH = 'AUTH',
   AUTH_LOGOUT = 'AUTH_LOGOUT',
@@ -20,6 +20,11 @@ declare enum ERRORS {
   POPUP_CLOSED = 'POPUP_CLOSED',
   NOT_DEFINED = 'NOT_DEFINED',
 }
+
+type ERRORS = {
+  [index in keyof typeof ERROR_KEYS]: string[];
+}
+
 
 type ErrorCode = Error & {
   code: number,
