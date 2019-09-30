@@ -18,6 +18,24 @@
   padding: 0 5px;
 }
 
+.v-modal-card.theme-default .v-modal-card-description {
+  font-size: 14px;
+  color: var(--endpass-ui-color-grey-6);
+  text-align: center;
+  margin-bottom: 18px;
+}
+.v-modal-card.theme-default .v-modal-card-title + .v-modal-card-description {
+  margin-top: -10px;
+}
+
+.v-modal-card.theme-default .v-modal-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  margin-top: 8px;
+}
+
 .v-modal-card.theme-default .v-modal-card-controls {
   display: flex;
   min-height: 17px;

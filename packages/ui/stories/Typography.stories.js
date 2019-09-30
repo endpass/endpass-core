@@ -12,6 +12,11 @@ storiesOf('Typography', module).add('default', () => ({
         <p class="v-body is-small">Small body body text</p>
         <p class="v-small">Small text</p>
         <p class="v-tiny">Tiny text</p>
+        <div class="theme-default">
+          <p class="v-text-size-12">Text size 12</p>
+          <p class="v-text-size-14">Text size 14</p>
+          <p class="v-text-size-16">Text size 16</p>
+        </div>
       </theme-provider>
     `,
 }));

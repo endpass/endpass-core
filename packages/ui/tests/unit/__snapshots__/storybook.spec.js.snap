@@ -59,6 +59,28 @@ exports[`Storyshots Typography default 1`] = `
   >
     Tiny text
   </p>
+   
+  <div
+    class="theme-default"
+  >
+    <p
+      class="v-text-size-12"
+    >
+      Text size 12
+    </p>
+     
+    <p
+      class="v-text-size-14"
+    >
+      Text size 14
+    </p>
+     
+    <p
+      class="v-text-size-16"
+    >
+      Text size 16
+    </p>
+  </div>
 </div>
 `;
 
@@ -3852,11 +3874,15 @@ exports[`Storyshots VModal/VModalCard both 1`] = `
           <header
             class="v-modal-card-header"
           >
+            <!---->
+             
             <h3
               class="v-modal-card-title"
             >
               Modal title
             </h3>
+             
+            <!---->
           </header>
            
           <div
@@ -3903,11 +3929,15 @@ exports[`Storyshots VModal/VModalCard closable 1`] = `
           <header
             class="v-modal-card-header"
           >
+            <!---->
+             
             <h3
               class="v-modal-card-title"
             >
               Modal title
             </h3>
+             
+            <!---->
           </header>
            
           <div
@@ -3951,11 +3981,15 @@ exports[`Storyshots VModal/VModalCard default 1`] = `
           <header
             class="v-modal-card-header"
           >
+            <!---->
+             
             <h3
               class="v-modal-card-title"
             >
               Modal title
             </h3>
+             
+            <!---->
           </header>
            
           <div
@@ -3964,6 +3998,134 @@ exports[`Storyshots VModal/VModalCard default 1`] = `
             
             Modal body
           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VModal/VModalCard description 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div>
+    <div
+      class="mask-atom theme-default"
+    >
+      <div
+        class="mask-atom-centered"
+      >
+        <div
+          class="v-modal-card theme-default"
+        >
+          <div
+            class="v-modal-card-controls"
+          >
+            <button
+              class="v-modal-card-back"
+              data-test="modal-card-button-back"
+            />
+             
+            <button
+              class="v-modal-card-close"
+              data-test="modal-card-button-close"
+            />
+          </div>
+           
+          <header
+            class="v-modal-card-header"
+          >
+            <!---->
+             
+            <h3
+              class="v-modal-card-title"
+            >
+              Modal title
+            </h3>
+             
+            <div
+              class="v-modal-card-description"
+            >
+              some description text
+            </div>
+          </header>
+           
+          <div
+            class="v-modal-card-body"
+          >
+             
+              Modal body
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VModal/VModalCard icon 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div>
+    <div
+      class="mask-atom theme-default"
+    >
+      <div
+        class="mask-atom-centered"
+      >
+        <div
+          class="v-modal-card theme-default"
+        >
+          <div
+            class="v-modal-card-controls"
+          >
+            <button
+              class="v-modal-card-back"
+              data-test="modal-card-button-back"
+            />
+             
+            <button
+              class="v-modal-card-close"
+              data-test="modal-card-button-close"
+            />
+          </div>
+           
+          <header
+            class="v-modal-card-header"
+          >
+            <div
+              class="v-modal-card-icon"
+            >
+              icon
+            </div>
+             
+            <h3
+              class="v-modal-card-title"
+            >
+              Modal title
+            </h3>
+             
+            <div
+              class="v-modal-card-description"
+            >
+              some description text
+            </div>
+          </header>
+           
+          <div
+            class="v-modal-card-body"
+          >
+              
+                Modal body
+              
           </div>
         </div>
       </div>
@@ -4002,11 +4164,15 @@ exports[`Storyshots VModal/VModalCard returnable 1`] = `
           <header
             class="v-modal-card-header"
           >
+            <!---->
+             
             <h3
               class="v-modal-card-title"
             >
               Modal title
             </h3>
+             
+            <!---->
           </header>
            
           <div
@@ -4068,11 +4234,15 @@ exports[`Storyshots VModal/VModalInfoCard both 1`] = `
             <header
               class="v-modal-card-header"
             >
+              <!---->
+               
               <h3
                 class="v-modal-card-title"
               >
                 Modal title
               </h3>
+               
+              <!---->
             </header>
              
             <div
@@ -4132,11 +4302,15 @@ exports[`Storyshots VModal/VModalInfoCard closable 1`] = `
             <header
               class="v-modal-card-header"
             >
+              <!---->
+               
               <h3
                 class="v-modal-card-title"
               >
                 Modal title
               </h3>
+               
+              <!---->
             </header>
              
             <div
@@ -4193,11 +4367,15 @@ exports[`Storyshots VModal/VModalInfoCard default 1`] = `
             <header
               class="v-modal-card-header"
             >
+              <!---->
+               
               <h3
                 class="v-modal-card-title"
               >
                 Modal title
               </h3>
+               
+              <!---->
             </header>
              
             <div
@@ -4257,11 +4435,15 @@ exports[`Storyshots VModal/VModalInfoCard returnable 1`] = `
             <header
               class="v-modal-card-header"
             >
+              <!---->
+               
               <h3
                 class="v-modal-card-title"
               >
                 Modal title
               </h3>
+               
+              <!---->
             </header>
              
             <div

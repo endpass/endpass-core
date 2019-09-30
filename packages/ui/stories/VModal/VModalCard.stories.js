@@ -100,4 +100,60 @@ storiesOf('VModal/VModalCard', module)
         </v-modal>
       </theme-provider>
     `,
+  }))
+  .add('description', () => ({
+    methods,
+    components: { VModal, VModalCard },
+    data() {
+      return {
+        title: 'Modal title',
+        body: 'Modal body',
+        description: 'some description text'
+      };
+    },
+    template: `
+        <theme-provider>
+          <v-modal @click="onMaskClick">
+            <v-modal-card
+              :is-closable="true"
+              @close="onClose"
+              :is-returnable="true"
+              @return="onReturn"
+            >
+              <template slot="description">{{ description }}</template>
+              <template slot="title">{{ title }}</template>
+              {{ body }}
+            </v-modal-card>
+          </v-modal>
+        </theme-provider>
+      `,
+  }))
+  .add('icon', () => ({
+    methods,
+    components: { VModal, VModalCard },
+    data() {
+      return {
+        title: 'Modal title',
+        body: 'Modal body',
+        icon: 'icon',
+        description: 'some description text'
+      };
+    },
+    template: `
+          <theme-provider>
+            <v-modal @click="onMaskClick">
+              <v-modal-card
+                :is-closable="true"
+                @close="onClose"
+                :is-returnable="true"
+                @return="onReturn"
+              >
+                <template slot="icon">{{ icon }}</template>
+                <template slot="title">{{ title }}</template>
+                <template slot="description">{{ description }}</template>
+                {{ body }}
+              </v-modal-card>
+            </v-modal>
+          </theme-provider>
+        `,
   }));
