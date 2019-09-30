@@ -21,12 +21,27 @@
       />
     </div>
     <header
-      v-if="$slots.title"
+      v-if="$slots.title || $slots.icon || $slots.description"
       class="v-modal-card-header"
     >
-      <h3 class="v-modal-card-title">
+      <div
+        v-if="$slots.icon"
+        class="v-modal-card-icon"
+      >
+        <slot name="icon" />
+      </div>
+      <h3
+        v-if="$slots.title"
+        class="v-modal-card-title"
+      >
         <slot name="title" />
       </h3>
+      <div
+        v-if="$slots.description"
+        class="v-modal-card-description"
+      >
+        <slot name="description" />
+      </div>
     </header>
     <div class="v-modal-card-body">
       <slot />
