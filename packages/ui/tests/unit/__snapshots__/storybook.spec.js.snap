@@ -1,86 +1,160 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Typography default 1`] = `
-<div>
+<div
+  class="theme-default"
+>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
-  <h1
-    class="v-h1"
+  <table
+    width="100%"
   >
-    H1 Title
-  </h1>
-   
-  <h2
-    class="v-h2"
-  >
-    H2 Title
-  </h2>
-   
-  <h3
-    class="v-h3"
-  >
-    H3 Title
-  </h3>
-   
-  <h4
-    class="v-h4"
-  >
-    H4 Title
-  </h4>
-   
-  <h4
-    class="v-h4 is-bold"
-  >
-    H4 Bold Title
-  </h4>
-   
-  <p
-    class="v-body"
-  >
-    Plain body text
-  </p>
-   
-  <p
-    class="v-body is-small"
-  >
-    Small body body text
-  </p>
-   
-  <p
-    class="v-small"
-  >
-    Small text
-  </p>
-   
-  <p
-    class="v-tiny"
-  >
-    Tiny text
-  </p>
-   
-  <div
-    class="theme-default"
-  >
-    <p
-      class="v-text-size-12"
-    >
-      Text size 12
-    </p>
+    <thead>
+      <tr>
+        <th>
+          H
+        </th>
+         
+        <th>
+          Text
+        </th>
+         
+        <th>
+          Font size
+        </th>
+         
+        <th>
+          Line height
+        </th>
+      </tr>
+    </thead>
      
-    <p
-      class="v-text-size-14"
-    >
-      Text size 14
-    </p>
-     
-    <p
-      class="v-text-size-16"
-    >
-      Text size 16
-    </p>
-  </div>
+    <tbody>
+      <tr>
+        <td>
+          <h1
+            class="v-h1"
+          >
+            H1 Title
+          </h1>
+           
+          <h2
+            class="v-h2"
+          >
+            H2 Title
+          </h2>
+           
+          <h3
+            class="v-h3"
+          >
+            H3 Title
+          </h3>
+           
+          <h4
+            class="v-h4"
+          >
+            H4 Title
+          </h4>
+           
+          <h4
+            class="v-h4 is-bold"
+          >
+            H4 Bold Title
+          </h4>
+        </td>
+         
+        <td>
+          <p
+            class="v-body"
+          >
+            Plain body text
+          </p>
+           
+          <p
+            class="v-body is-small"
+          >
+            Small body body text
+          </p>
+           
+          <p
+            class="v-small"
+          >
+            Small text
+          </p>
+           
+          <p
+            class="v-tiny"
+          >
+            Tiny text
+          </p>
+        </td>
+         
+        <td>
+          <p
+            class="v-fs-12"
+          >
+            Font size 12
+          </p>
+           
+          <p
+            class="v-fs-14"
+          >
+            Font size 14
+          </p>
+           
+          <p
+            class="v-fs-16"
+          >
+            Font size 16
+          </p>
+        </td>
+         
+        <td>
+          <p
+            class="v-lh-1"
+          >
+            line height 1
+            <br />
+            next line
+          </p>
+           
+          <p
+            class="v-lh-1-2"
+          >
+            line height 1.2
+            <br />
+            next line
+          </p>
+           
+          <p
+            class="v-lh-1-3"
+          >
+            line height 1.3
+            <br />
+            next line
+          </p>
+           
+          <p
+            class="v-lh-1-4"
+          >
+            line height 1.4
+            <br />
+            next line
+          </p>
+           
+          <p
+            class="v-lh-1-5"
+          >
+            line height 1.5
+            <br />
+            next line
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 `;
 
@@ -3802,6 +3876,52 @@ exports[`Storyshots VLabel/desktop default 1`] = `
   
         Following content
       
+</div>
+`;
+
+exports[`Storyshots VLink/desktop default 1`] = `
+<div
+  class="theme-default"
+>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div>
+    open in new tab 
+    <a
+      class="v-link theme-default"
+      href="http://google.com"
+      target="_blank"
+    >
+      http://google.com
+    </a>
+  </div>
+   
+  <div>
+    <a
+      class="v-link theme-default"
+    >
+      just link
+    </a>
+  </div>
+   
+  <div>
+    <a
+      class="v-link theme-default is-underline"
+    >
+      with underline
+    </a>
+  </div>
+   
+  <div>
+    <a
+      class="v-link theme-default"
+      disabled="disabled"
+    >
+      disabled
+    </a>
+  </div>
 </div>
 `;
 

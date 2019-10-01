@@ -1,0 +1,29 @@
+.v-link.theme-default {
+  text-decoration: none;
+  color: var(--endpass-ui-color-primary-6);
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    color: var(--endpass-ui-color-black);
+  }
+  &:visited {
+    color: var(--endpass-ui-color-primary-6);
+  }
+}
+
+.v-link.theme-default.is-underline {
+  text-decoration: underline;
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.v-link.theme-default[disabled] {
+  color: var(--endpass-ui-color-grey-6);
+  text-decoration: none;
+}
