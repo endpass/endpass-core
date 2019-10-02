@@ -89,6 +89,22 @@ exports[`Storyshots Typography default 1`] = `
           >
             Tiny text
           </p>
+           
+          <p
+            class="v-text-center"
+          >
+            center text
+          </p>
+           
+          <p>
+            text 
+            <span
+              class="v-fw-b"
+            >
+              strong
+            </span>
+             text
+          </p>
         </td>
          
         <td>

@@ -26,6 +26,8 @@ storiesOf('Typography', module).add('default', () => ({
                 <p class="v-body is-small">Small body body text</p>
                 <p class="v-small">Small text</p>
                 <p class="v-tiny">Tiny text</p>
+                <p class="v-text-center">center text</p>
+                <p >text <span class="v-fw-b">strong</span> text</p>
               </td>
               <td>
                 <p class="v-fs-12">Font size 12</p>
