@@ -17,6 +17,7 @@ const ERRORS = {
   OAUTH_AUTHORIZE_EXCHANGE_TOKEN: 'OAUTH_AUTHORIZE_EXCHANGE_TOKEN',
   EVENT_EMITTER_NOT_PROVIDED: 'EVENT_EMITTER_NOT_PROVIDED',
   CREATE_DOCUMENT: 'CREATE_DOCUMENT',
+  CREATE_WALLET: 'CREATE_WALLET',
   POPUP_CLOSED: 'POPUP_CLOSED',
   NOT_DEFINED: 'NOT_DEFINED',
 };
@@ -42,6 +43,7 @@ const ERRORS_TITLE = {
     'Authorization failed: token exchange unsuccessful',
   EVENT_EMITTER_NOT_PROVIDED: 'Event emitter is not provided',
   CREATE_DOCUMENT: 'Document creation error',
+  CREATE_WALLET: 'Wallet creation error',
   POPUP_CLOSED: 'The popup was closed',
   NOT_DEFINED: 'Endpass connect not defined error',
 };
