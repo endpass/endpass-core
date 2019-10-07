@@ -16,10 +16,12 @@ export default class ServerProvider {
     return this[privateMethods.write](params);
   }
 
-  [privateMethods.read] = async (params) => {
+  [privateMethods.read] = async params => {
     try {
-      const { url } = params;
-      const { data } = await this.connection.get(url);
+      const { url, headers = {} } = params;
+      const { data } = await this.connection.get(url, {
+        headers,
+      });
 
       return data;
     } catch (e) {
@@ -31,10 +33,12 @@ export default class ServerProvider {
     }
   };
 
-  [privateMethods.write] = async (params) => {
+  [privateMethods.write] = async params => {
     try {
-      const { url, payload } = params;
-      const { data } = await this.connection.post(url, payload);
+      const { url, payload, headers = {} } = params;
+      const { data } = await this.connection.post(url, payload, {
+        headers,
+      });
 
       return data;
     } catch (e) {
@@ -46,15 +50,18 @@ export default class ServerProvider {
     }
   };
 
-  [privateMethods.remove] = async (params) => {
+  [privateMethods.remove] = async params => {
     try {
-      const { url, payload } = params;
-      const { data } = await this.connection.delete(url, payload);
+      const { url, payload, headers = {} } = params;
+      const { data } = await this.connection.delete(url, payload, {
+        headers
+      });
 
       return data;
     } catch (e) {
       e.title = 'Error in server storage';
-      e.text = "Can't remove data from server storage, maybe it is not available";
+      e.text =
+        "Can't remove data from server storage, maybe it is not available";
       e.type = 'is-warning';
 
       throw e;
