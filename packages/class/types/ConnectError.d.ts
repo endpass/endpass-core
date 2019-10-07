@@ -32,7 +32,7 @@ type ErrorCode = Error & {
 }
 
 declare class ConnectError {
-  static create(code: number, message: string): ErrorCode;
+  static create(code: number, message?: string): ErrorCode;
 
   static createFromError(error: Error, defaultCode: number): ErrorCode;
 
