@@ -23,7 +23,7 @@ declare enum ERROR_KEYS {
 }
 
 type ERRORS = {
-  [index in keyof typeof ERROR_KEYS]: string[];
+  [index in keyof typeof ERROR_KEYS]: string;
 }
 
 
@@ -32,9 +32,9 @@ type ErrorCode = Error & {
 }
 
 declare class ConnectError {
-  static create(code: number, message?: string): ErrorCode;
+  static create(code: number | string, message?: string): ErrorCode;
 
-  static createFromError(error: Error, defaultCode: number): ErrorCode;
+  static createFromError(error: Error, defaultCode: number | string): ErrorCode;
 
   static get ERRORS(): ERRORS;
 }
