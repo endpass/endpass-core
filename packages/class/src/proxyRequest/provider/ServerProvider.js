@@ -52,8 +52,8 @@ export default class ServerProvider {
 
   [privateMethods.remove] = async params => {
     try {
-      const { url, payload, headers = {} } = params;
-      const { data } = await this.connection.delete(url, payload, {
+      const { url, headers = {} } = params;
+      const { data } = await this.connection.delete(url, {
         headers
       });
 

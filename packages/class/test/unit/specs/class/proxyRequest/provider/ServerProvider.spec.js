@@ -30,20 +30,14 @@ describe('ServerProvider', () => {
     });
 
     it('should write data', async () => {
-      expect.assertions(3);
+      expect.assertions(2);
 
-      const checkAddr = 'checkAddr';
       const result = await instance.request({
         url: `${apiUrl}account`,
         method: 'write',
-        payload: {
-          address: checkAddr,
-          data: 'testData',
-        },
       });
 
       expect(connection.post).toBeCalled();
-      expect(result.payload.address).toBe(checkAddr);
       expect(result.success).toBe(true);
     });
 
@@ -66,20 +60,14 @@ describe('ServerProvider', () => {
     });
 
     it('should remove data', async () => {
-      expect.assertions(3);
+      expect.assertions(2);
 
-      const checkAddr = 'checkAddr';
       const result = await instance.request({
         url: `${apiUrl}account`,
         method: 'remove',
-        payload: {
-          address: checkAddr,
-          data: 'testData',
-        },
       });
 
       expect(connection.delete).toBeCalled();
-      expect(result.payload.address).toBe(checkAddr);
       expect(result.success).toBe(true);
     });
   });
