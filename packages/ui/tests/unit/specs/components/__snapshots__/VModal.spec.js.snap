@@ -2,7 +2,7 @@
 
 exports[`VModal page render should render initial state of the component 1`] = `
 <div
-  class="modal is-active"
+  class="modal is-active is-footerless"
 >
   <div
     class="modal-background"
@@ -31,9 +31,7 @@ exports[`VModal page render should render initial state of the component 1`] = `
       class="modal-card-body"
     />
      
-    <div
-      class="modal-card-foot"
-    />
+    <!---->
   </div>
 </div>
 `;
