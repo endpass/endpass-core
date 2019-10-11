@@ -1,24 +1,20 @@
 <template>
-  <div class="modal is-active">
-    <div
-      class="modal-background"
-      @click="close"
-    />
+  <div
+    :class="{ modal: true, 'is-active': true, 'is-footerless': isFooterless }"
+  >
+    <div class="modal-background" @click="close" />
     <div class="modal-logo" />
     <div class="modal-card">
       <div class="modal-card-head">
         <h3 class="modal-card-title">
           <slot name="header" />
         </h3>
-        <button
-          class="delete is-large"
-          @click="close"
-        />
+        <button class="delete is-large" @click="close" />
       </div>
       <div class="modal-card-body">
         <slot />
       </div>
-      <div class="modal-card-foot">
+      <div v-if="!isFooterless" class="modal-card-foot">
         <slot name="footer" />
       </div>
     </div>
@@ -29,6 +25,11 @@
 // Generic modal component to be used with slots
 export default {
   name: 'VModal',
+  computed: {
+    isFooterless() {
+      return !this.$slots.footer;
+    },
+  },
   methods: {
     close() {
       this.$emit('close');
@@ -130,5 +131,10 @@ export default {
   .delete {
     background-color: transparent;
   }
+}
+
+.modal.is-footerless .modal-card-body {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 </style>
