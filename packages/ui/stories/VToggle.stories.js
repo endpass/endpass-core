@@ -174,7 +174,7 @@ storiesOf('VToggle/desktop', module)
       <theme-provider>
         <v-toggle
           v-model="model"
-          disabled
+          :disabled="true"
           @input="onChange"
         >
           disabled
@@ -182,7 +182,7 @@ storiesOf('VToggle/desktop', module)
         <br/>
         <v-toggle
           v-model="model"
-          disabled
+          :disabled="true"
           size="mini"
           :true-value="null"
           @input="onChange"
