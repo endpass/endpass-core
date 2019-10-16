@@ -67,11 +67,11 @@ export default {
       return this.modelValue === this.trueValue;
     },
     toggleCssClass() {
-      return Object.assign({}, {
+      return {
         'is-checked': this.isChecked,
-        'is-disabled': this.isDisabled,
+        'is-disabled': this.$attrs.disabled,
         [`size-${this.size}`]: true,
-      });
+      };
     },
   },
   methods: {
