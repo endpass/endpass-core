@@ -7,6 +7,7 @@ export default {
   provide() {
     return {
       addTab: this.addTab,
+      removeTab: this.removeTab,
     };
   },
 
@@ -24,6 +25,14 @@ export default {
   methods: {
     addTab(tab) {
       this.tabs = this.tabs.concat(tab);
+    },
+
+    removeTab(tab) {
+      const tabIdx = this.tabs.indexOf(tab);
+
+      if (tabIdx === -1) return;
+
+      this.tabs.splice(tabIdx, 1);
     },
   },
 

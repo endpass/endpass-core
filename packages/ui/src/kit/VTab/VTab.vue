@@ -2,7 +2,7 @@
 export default {
   name: 'VTab',
 
-  inject: ['addTab'],
+  inject: ['addTab', 'removeTab'],
 
   props: {
     label: {
@@ -13,6 +13,10 @@ export default {
 
   mounted() {
     this.addTab(this);
+  },
+
+  beforeDestroy() {
+    this.removeTab(this);
   },
 
   render() {
