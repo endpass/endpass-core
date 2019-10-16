@@ -9671,6 +9671,36 @@ exports[`Storyshots VTable/desktop without-header 1`] = `
 </div>
 `;
 
+exports[`Storyshots VTabs/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div
+    class="theme-default v-tabs"
+  >
+    <!---->
+     
+    <!---->
+    <section
+      class="v-tabs-controls"
+    >
+      <button
+        class="v-tabs-control is-active"
+      >
+        Foo
+      </button>
+      <button
+        class="v-tabs-control"
+      >
+        Bar
+      </button>
+    </section>
+  </div>
+</div>
+`;
+
 exports[`Storyshots VTag/desktop default 1`] = `
 <div>
   <div
