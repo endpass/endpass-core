@@ -1,26 +1,31 @@
 .toggle-atom.theme-default {
   border-radius: 12px;
-  transition: box-shadow .3s, background-color .3s;
+  transition: box-shadow .3s, background-color .3s, border-color .3s;
   box-shadow: 0 0 0 2px transparent;
   box-sizing: border-box;
   cursor: pointer;
-  padding: 3px;
+  padding: 2px 3px 3px 2px;
+  border: 1px;
+  border-style: solid;
 }
 
 .toggle-atom.theme-default.size-normal {
   width: 48px;
   height: 24px;
   background-color: var(--endpass-ui-color-grey-4);
+  border-color: var(--endpass-ui-color-grey-4);
 }
 
 .toggle-atom.theme-default.size-mini {
   width: 32px;
   height: 16px;
   background-color: var(--endpass-ui-color-grey-3);
+  border-color: var(--endpass-ui-color-grey-3);
 }
 
 .toggle-atom.theme-default.is-checked {
   background-color: var(--endpass-ui-color-success);
+  border-color: var(--endpass-ui-color-success);
 }
 
 .toggle-atom.theme-default:focus-within {
@@ -59,6 +64,7 @@
 
 .toggle-atom.theme-default.is-disabled {
   background-color: var(--endpass-ui-color-grey-1);
+  border-color: var(--endpass-ui-color-grey-2);
   cursor: default;
 }
 
