@@ -13,12 +13,12 @@ const privateMethods = {
 
 export default class CrossWindowMessenger {
   /**
-   * @param {String} props.to To direction of send messages
-   * @param {String} props.from From direction of receive messages
+   * @param {string} props.to To direction of send messages
+   * @param {string} props.from From direction of receive messages
    * @param {Window} [props.target] target object for messages
-   * @param {String} [props.name] name of current messenger
-   * @param {Boolean} [props.showLogs] show logs for debug
-   * @param {Object} [props.bus] bus for events
+   * @param {string} [props.name] name of current messenger
+   * @param {boolean} [props.showLogs] show logs for debug
+   * @param {object} [props.bus] bus for events
    */
   constructor(props = {}) {
     if (!props.to || !props.from) {
@@ -96,7 +96,7 @@ export default class CrossWindowMessenger {
 
   /**
    * Receive event from other window and prepare answer
-   * @param ev Event from window.postMessage emitter
+   * @param {Event} ev Event from window.postMessage emitter
    */
   [privateMethods.onReceiveMessage](ev) {
     if (this[privateMethods.isSkippedMessage](ev)) {
@@ -127,11 +127,11 @@ export default class CrossWindowMessenger {
 
   /**
    * Send message to target
-   * @param {String} props.to To direction of send messages
-   * @param {String} props.from From direction of receive messages
+   * @param {string} props.to To direction of send messages
+   * @param {string} props.from From direction of receive messages
    * @param {Window} props.target target object for messages
-   * @param {String} props.method method what method need to be call
-   * @param {Object} [props.payload] payload send data
+   * @param {string} props.method method what method need to be call
+   * @param {object} [props.payload] payload send data
    */
   [privateMethods.sendOutside](props) {
     if (this.showLogs) {
@@ -196,7 +196,7 @@ export default class CrossWindowMessenger {
 
   /**
    * Define target for send messages
-   * @param {Object} target
+   * @param {object} target
    */
   setTarget(target) {
     this.target = target;
@@ -205,9 +205,9 @@ export default class CrossWindowMessenger {
   /**
    * Wait answer for special method
    *
-   * @param {String} method method for await process
-   * @param {any} [payload] send payload data
-   * @returns {Promise<any>}
+   * @param {string} method method for await process
+   * @param {object} [payload] send payload data
+   * @returns {Promise<object>}
    */
   async sendAndWaitResponse(method, payload) {
     if (!this.target) {
@@ -239,8 +239,8 @@ export default class CrossWindowMessenger {
 
   /**
    * Subscribe to special method for answer
-   * @param {String | Function} method
-   * @param {Function} cb callback
+   * @param {string | Function} method
+   * @param {Function=} cb callback
    * @return {Function} disposer
    */
   subscribe(method, cb) {
@@ -264,8 +264,8 @@ export default class CrossWindowMessenger {
 
   /**
    * Send data to target
-   * @param {String} method
-   * @param {{}} payload
+   * @param {string} method
+   * @param {object} payload
    */
   send(method, payload) {
     this[privateMethods.sendOutside]({
