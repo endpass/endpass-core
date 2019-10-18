@@ -7,10 +7,10 @@ storiesOf('VTabs/desktop', module).add('default', () => ({
   template: `
       <theme-provider>
         <v-tabs>
-          <v-tab label="Foo">
+          <v-tab label="Foo" data-test="foo-tab">
             Foo content
           </v-tab>
-          <v-tab label="Bar">
+          <v-tab label="Bar" data-test="bar-tab">
             Bar content
           </v-tab>
         </v-tabs>

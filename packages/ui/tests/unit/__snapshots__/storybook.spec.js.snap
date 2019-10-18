@@ -9688,11 +9688,13 @@ exports[`Storyshots VTabs/desktop default 1`] = `
     >
       <button
         class="v-tabs-control is-active"
+        data-test="foo-tab"
       >
         Foo
       </button>
       <button
         class="v-tabs-control"
+        data-test="bar-tab"
       >
         Bar
       </button>
