@@ -6,7 +6,6 @@
   "homepage": "http://endpass.com/",
   "license": "MIT",
   "main": "index.js",
-  "typings": "./types",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/endpass/endpass-core.git"

@@ -29,7 +29,7 @@ const commonConfig = {
     copy({
       targets: [
         {
-          src: ['types', 'package.json', 'README.md', 'yarn.lock'],
+          src: ['src', 'package.json', 'README.md', 'yarn.lock'],
           dest: 'dist',
         },
         {
@@ -37,7 +37,6 @@ const commonConfig = {
           dest: 'dist',
         },
       ],
-
     }),
   ],
   watch: {
