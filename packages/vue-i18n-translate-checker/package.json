@@ -1,6 +1,6 @@
 {
   "name": "@endpass/vue-i18n-translate-checker",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "bin": "./bin.js",
   "description": "Vue i18n translate checker",
   "author": "Endpass, Inc",
@@ -14,7 +14,8 @@
     "lib": "lib"
   },
   "files": [
-    "bin.js"
+    "bin.js",
+    "lib"
   ],
   "dependencies": {
     "fast-glob": "^3.1.0"
