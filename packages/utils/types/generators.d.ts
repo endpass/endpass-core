@@ -1,4 +1,4 @@
 declare module '@endpass/utils/generators' {
-  function repeatWithInterval(ms: number): Generator;
-  function sleep<T>(ms: number, result: T): Promise<T>;
+  export function repeatWithInterval(ms: number): Generator;
+  export function sleep<T>(ms: number, result: T): Promise<T>;
 }

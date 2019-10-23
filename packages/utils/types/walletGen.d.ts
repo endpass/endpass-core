@@ -1,16 +1,24 @@
 /// <reference path="constants.d.ts" />
 
 declare namespace walletGen {
-  function createComplex(
+  export function createComplex(
     password: string,
     encryptOptions: KDFEncryptOptions,
-  ): Promise<any>;
+  ): Promise<{
+    seedKey: string,
+    encryptedSeed: string,
+    v3KeystoreHdWallet: v3Keystore,
+    v3KeystoreChildWallet: v3Keystore,
+  }>;
 
-  function createHDWithChild(
+  export function createHDWithChild(
     seedKey: string,
     password: string,
     encryptOptions: KDFEncryptOptions,
-  ): object;
+  ): {
+    v3KeystoreHdWallet: v3Keystore,
+    v3KeystoreChildWallet: v3Keystore,
+  };
 }
 
 export default walletGen;

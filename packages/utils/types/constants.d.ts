@@ -3,8 +3,9 @@ declare type KDFEncryptOptions = {
     n: number,
 };
 
-declare module '@endpass/utils/constants' {
-  const KDF_ENCRYPT_OPTIONS: KDFEncryptOptions;
+declare type HDKeyMnemonicPath = string;
 
-  type HD_KEY_MNEMONIC_PATH = "m/44'/60'/0'/0";
+declare module '@endpass/utils/constants' {
+  export const KDF_ENCRYPT_OPTIONS: KDFEncryptOptions;
+  export const HD_KEY_MNEMONIC_PATH: HDKeyMnemonicPath;
 }
