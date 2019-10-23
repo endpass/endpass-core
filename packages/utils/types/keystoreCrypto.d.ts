@@ -6,7 +6,7 @@ declare module '@endpass/utils/keystoreCrypto' {
     password: string,
     privateKey: string | Buffer,
     options: KDFEncryptOptions
-  ): KeyObject;
+  ): Keystore;
 
   export function decrypt(
     password: string,

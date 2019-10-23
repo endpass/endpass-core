@@ -1,7 +1,7 @@
 // Private unexported namespace which visible only within this file
 declare namespace private {
   // Common template type for key stores
-  type BasicKeyObject = {
+  type BasicKeystore = {
     id: string,
     version: 3,
 
@@ -14,7 +14,7 @@ declare namespace private {
       mac: string,
       kdf: string,
 
-      // In the basic key object kdfparams may accept any object value
+      // In the basic key store kdfparams may accept any object value
       // Note that this is common, generic type which should not be used
       // out of bounds of this file
       kdfparams: object,
@@ -22,12 +22,12 @@ declare namespace private {
   };
 
   // Common template type for addressed keystores
-  type BasicAddressedKeyObject = {
+  type BasicAddressedKeystore = {
     address: string,
-  } & BasicKeyObject;
+  } & BasicKeystore;
 }
 
-declare type KeyObject = {
+declare type Keystore = {
   crypto: {
     kdfparams: {
       c: number,
@@ -36,9 +36,9 @@ declare type KeyObject = {
       salt: string,
     },
   },
-} & private.BasicKeyObject;
+} & private.BasicKeystore;
 
-declare type AddressedKeyObject = private.BasicAddressedKeyObject & KeyObject;
+declare type AddressedKeystore = private.BasicAddressedKeystore & Keystore;
 
 declare type v3Keystore = {
   crypto: {
@@ -50,4 +50,4 @@ declare type v3Keystore = {
       salt: string,
     },
   },
-} & private.BasicAddressedKeyObject;
+} & private.BasicAddressedKeystore;

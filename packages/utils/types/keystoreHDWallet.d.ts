@@ -9,7 +9,7 @@ declare module '@endpass/utils/keystoreHDWallet' {
     password: string,
     wallet: object,
     encryptOptions: object
-  ): AddressedKeyObject;
+  ): AddressedKeystore;
 
   // @todo object => HDKey (?)
   export function decryptHDWallet(
