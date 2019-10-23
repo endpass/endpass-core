@@ -1,15 +1,15 @@
-import { KDF_ENCRYPT_OPTIONS } from './src/constants';
+/// <reference path="constants.d.ts" />
 
 declare namespace walletGen {
   function createComplex(
     password: string,
-    encryptOptions: typeof KDF_ENCRYPT_OPTIONS,
+    encryptOptions: KDFEncryptOptions,
   ): Promise<any>;
 
   function createHDWithChild(
     seedKey: string,
     password: string,
-    encryptOptions: typeof KDF_ENCRYPT_OPTIONS,
+    encryptOptions: KDFEncryptOptions,
   ): object;
 }
 
