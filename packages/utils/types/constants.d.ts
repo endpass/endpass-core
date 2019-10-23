@@ -1,11 +1,9 @@
 declare type KDFEncryptOptions = {
-    kdf: string,
-    n: number,
+  kdf: 'scrypt',
+  n: 8192,
 };
-
-declare type HDKeyMnemonicPath = string;
 
 declare module '@endpass/utils/constants' {
   export const KDF_ENCRYPT_OPTIONS: KDFEncryptOptions;
-  export const HD_KEY_MNEMONIC_PATH: HDKeyMnemonicPath;
+  export const HD_KEY_MNEMONIC_PATH: "m/44'/60'/0'/0";
 }
