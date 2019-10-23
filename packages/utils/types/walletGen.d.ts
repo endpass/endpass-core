@@ -1,9 +1,9 @@
 /// <reference path="constants.d.ts" />
 
-declare namespace walletGen {
+declare module "@endpass/utils/walletGen" {
   export function createComplex(
     password: string,
-    encryptOptions: KDFEncryptOptions,
+    encryptOptions: KDFEncryptOptions
   ): Promise<{
     seedKey: string,
     encryptedSeed: string,
@@ -20,5 +20,3 @@ declare namespace walletGen {
     v3KeystoreChildWallet: v3Keystore,
   };
 }
-
-export default walletGen;
