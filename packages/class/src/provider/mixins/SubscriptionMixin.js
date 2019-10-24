@@ -16,13 +16,14 @@ const createCallbacks = () => ({
   [EVENT_TYPES.ERROR]: () => {},
 });
 
-export default (ParentProvider) => {
+export default ParentProvider => {
   class SubscriptionProvider extends ParentProvider {
-    notificationCallbacks = createCallbacks();
-
-    subsrciptionIds = {};
-
-    newBlocksIntervalId = null;
+    constructor(props) {
+      super(props);
+      this.notificationCallbacks = createCallbacks();
+      this.subsrciptionIds = {};
+      this.newBlocksIntervalId = null;
+    }
 
     on(type, callback) {
       if (typeof callback !== 'function') {
@@ -51,7 +52,8 @@ export default (ParentProvider) => {
     removeAllListeners(type) {
       if (!type) return;
 
-      this.notificationCallbacks[type] = type === EVENT_TYPES.DATA ? [] : () => {};
+      this.notificationCallbacks[type] =
+        type === EVENT_TYPES.DATA ? [] : () => {};
     }
 
     reset() {
@@ -101,7 +103,7 @@ export default (ParentProvider) => {
 
             lastBlockNumber = blockNumber;
 
-            this.notificationCallbacks[EVENT_TYPES.DATA].forEach((callback) => {
+            this.notificationCallbacks[EVENT_TYPES.DATA].forEach(callback => {
               Object.entries(this.subsrciptionIds).forEach(
                 ([subsrciptionId, { type }]) => {
                   if (type === 'newHeads') {

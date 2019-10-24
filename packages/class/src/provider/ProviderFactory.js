@@ -7,6 +7,15 @@ import SubscriptionMixin from './mixins/SubscriptionMixin';
 import MockMixin from './mixins/MockMixin';
 import applyMixinsToClass from './applyMixinsToClass';
 
+// hack solution for FF, see details on https://github.com/vuejs/vue/issues/8697
+try {
+  const versions = process.versions || {};
+  process.versions = {
+    node: '11.2.0',
+    ...versions,
+  };
+} catch (e) {}
+
 export default class ProviderFactory {
   static getProviderClass(url) {
     HttpProvider.prototype.sendAsync = HttpProvider.prototype.send;
@@ -55,7 +64,7 @@ export default class ProviderFactory {
         fallbackUrls.map(urlItem => ProviderFactory.getInstance(urlItem));
     }
 
-    provider.setErrorHandler = (handler) => {
+    provider.setErrorHandler = handler => {
       if (provider.on) {
         provider.on('error', e => handler(e));
       }
