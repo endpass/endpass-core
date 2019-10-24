@@ -27,6 +27,7 @@ declare namespace private {
   } & BasicKeystore;
 }
 
+// Keystore types
 declare type Keystore = {
   crypto: {
     kdfparams: {
@@ -51,3 +52,19 @@ declare type v3Keystore = {
     },
   },
 } & private.BasicAddressedKeystore;
+
+// Ethereum types
+declare class Wallet {
+  static fromPrivateKey(key: Buffer): Wallet;
+  static fromV3(json: string, password: string): Wallet;
+  getPrivateKey(): Buffer;
+  getAddressString(): string;
+}
+
+declare class EthereumHDKey {
+  privateExtendedKey (): string;
+  publicExtendedKey (): string;
+  derivePath (path: string): EthereumHDKey;
+  deriveChild (index: number): EthereumHDKey;
+  getWallet (): Wallet;
+}
