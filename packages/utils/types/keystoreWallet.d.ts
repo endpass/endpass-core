@@ -7,7 +7,7 @@ declare module '@endpass/utils/keystoreWallet' {
     password: string,
     hdKeystore: object,
     index?: number
-  ): any;
+  ): object;
 
   // @todo wallet
   export function encryptWallet(

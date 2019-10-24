@@ -1,6 +1,6 @@
 declare type KDFEncryptOptions = {
   kdf: 'scrypt',
-  n: 8192,
+  n: number,
 };
 
 declare module '@endpass/utils/constants' {
