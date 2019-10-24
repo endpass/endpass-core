@@ -47,6 +47,7 @@ export default {
       .filter($el => !!$el.tag)
       .map(($el, i) => {
         const componentProps = $el.componentOptions.propsData || {};
+        const componentAttrs = $el.data.attrs || {};
 
         return h(
           'button',
@@ -55,6 +56,7 @@ export default {
               'v-tabs-control': true,
               'is-active': ctx.activeTabIdx === i,
             },
+            attrs: componentAttrs,
             on: {
               click() {
                 if (ctx.activeTabIdx === i) return;
