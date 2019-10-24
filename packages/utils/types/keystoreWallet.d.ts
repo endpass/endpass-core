@@ -2,17 +2,15 @@
 /// <reference path="constants.d.ts" />
 
 declare module '@endpass/utils/keystoreWallet' {
-  // @todo hdKeystore, any => ?
   export function createWalletByIndex(
     password: string,
-    hdKeystore: object,
+    hdKeystore: v3Keystore,
     index?: number
   ): object;
 
-  // @todo wallet
   export function encryptWallet(
     password: string,
-    wallet: object,
+    wallet: Wallet,
     encryptOptions: KDFEncryptOptions
   ): v3Keystore;
 
@@ -20,5 +18,5 @@ declare module '@endpass/utils/keystoreWallet' {
   export function decryptWallet(
     password: string,
     v3Keystore: v3Keystore
-  ): any;
+  ): Wallet;
 }
