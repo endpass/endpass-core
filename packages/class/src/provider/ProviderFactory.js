@@ -8,11 +8,13 @@ import MockMixin from './mixins/MockMixin';
 import applyMixinsToClass from './applyMixinsToClass';
 
 // hack solution for FF, see details on https://github.com/vuejs/vue/issues/8697
-const versions = process.versions || {};
-process.versions = {
-  node: '11.2.0',
-  ...versions,
-};
+try {
+  const versions = process.versions || {};
+  process.versions = {
+    node: '11.2.0',
+    ...versions,
+  };
+} catch (e) {}
 
 export default class ProviderFactory {
   static getProviderClass(url) {
