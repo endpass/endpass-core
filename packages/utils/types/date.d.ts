@@ -1,5 +1,5 @@
 declare module '@endpass/utils/date' {
-  type DayJsDate = Date | Dayjs | string | number;
+  type DayJsDate = Date | object | string | number;
 
   export function formateDate(
     date: DayJsDate,
