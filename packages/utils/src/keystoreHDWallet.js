@@ -22,8 +22,8 @@ const keystoreHDWallet = {
   /**
    * Encrypts an ethereumjs Wallet
    *
-   * @param password
-   * @param wallet
+   * @param {string} password
+   * @param {EthereumHDKey} wallet
    * @param [encryptOptions]
    * @returns {*}
    */
