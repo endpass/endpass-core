@@ -6,5 +6,5 @@ declare module '@endpass/utils/arrays' {
   export function mapArrayByProp(
     arr: Array<string | number>,
     prop: string | number
-  ): Array<string | number>;
+  ): {[key: string | number]: object}
 }
