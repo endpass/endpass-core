@@ -6,7 +6,7 @@ declare module '@endpass/utils/keystoreWallet' {
     password: string,
     hdKeystore: v3Keystore,
     index?: number
-  ): object;
+  ): Wallet;
 
   export function encryptWallet(
     password: string,
