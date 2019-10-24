@@ -14,7 +14,6 @@ declare module '@endpass/utils/keystoreWallet' {
     encryptOptions: KDFEncryptOptions
   ): v3Keystore;
 
-  // @todo any => Wallet
   export function decryptWallet(
     password: string,
     v3Keystore: v3Keystore
