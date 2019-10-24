@@ -1,6 +1,23 @@
 declare module '@endpass/utils/date' {
-  export function formateDate(date: Date): string;
-  export function fromNow(date: Date): string;
-  export function fromTo(fromDate: Date, toDate: Date): string;
-  export function addToDate(date: Date, value: number, unit: string): Date;
+  type DayJsDate = Date | string | number;
+
+  export function formateDate(
+    date: DayJsDate,
+    template?: string
+  ): string;
+
+  export function fromNow(
+    date: DayJsDate
+  ): string;
+
+  export function fromTo(
+    fromDate: DayJsDate,
+    toDate: DayJsDate
+  ): string;
+
+  export function addToDate(
+    date: DayJsDate,
+    value: number,
+    unit: string
+  ): Date;
 }
