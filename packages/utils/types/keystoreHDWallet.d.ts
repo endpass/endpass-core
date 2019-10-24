@@ -1,4 +1,5 @@
 /// <reference path="global.d.ts" />
+/// <reference path="constants.d.ts" />
 
 declare module '@endpass/utils/keystoreHDWallet' {
   // @todo object => HDKey (?)
@@ -8,7 +9,7 @@ declare module '@endpass/utils/keystoreHDWallet' {
   export function encryptHDWallet(
     password: string,
     wallet: object,
-    encryptOptions: object
+    encryptOptions: KDFEncryptOptions
   ): AddressedKeystore;
 
   // @todo object => HDKey (?)
