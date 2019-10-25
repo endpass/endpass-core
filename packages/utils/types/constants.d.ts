@@ -1,5 +1,7 @@
+declare type KDFEncryptScryptProperty = 'scrypt';
+
 declare type KDFEncryptOptions = {
-  kdf: 'scrypt',
+  kdf: KDFEncryptScryptProperty,
   n: number,
 };
 
