@@ -1,5 +1,5 @@
-/// <reference path="global.d.ts" />
 /// <reference path="constants.d.ts" />
+/// <reference path="keystores.d.ts" />
 
 declare module '@endpass/utils/keystoreCrypto' {
   export function encrypt(

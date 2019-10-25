@@ -1,5 +1,6 @@
-/// <reference path="global.d.ts" />
 /// <reference path="constants.d.ts" />
+/// <reference path="ethereum.d.ts" />
+/// <reference path="keystores.d.ts" />
 
 declare module '@endpass/utils/keystoreWallet' {
   export function createWalletByIndex(

@@ -1,4 +1,5 @@
 /// <reference path="constants.d.ts" />
+/// <reference path="keystores.d.ts" />
 
 declare module "@endpass/utils/walletGen" {
   export function createComplex(
