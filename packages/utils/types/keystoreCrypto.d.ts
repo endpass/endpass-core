@@ -6,10 +6,10 @@ declare module '@endpass/utils/keystoreCrypto' {
     password: string,
     privateKey: string | Buffer,
     options: KDFEncryptOptions
-  ): v3KeystoreWithoutAddress;
+  ): V3KeystoreWithoutAddress;
 
   export function decrypt(
     password: string,
-    v3Keystore: v3Keystore
+    v3Keystore: V3Keystore
   ): Buffer;
 }

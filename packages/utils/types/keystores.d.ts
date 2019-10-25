@@ -28,7 +28,7 @@ declare namespace _ {
 }
 
 // Keystore types
-declare type v3Keystore = {
+declare type V3Keystore = {
   crypto: {
     kdfparams: {
       dklen: number,
@@ -40,7 +40,7 @@ declare type v3Keystore = {
   },
 } & _.BasicAddressedKeystore;
 
-declare type v3KeystoreWithoutAddress = {
+declare type V3KeystoreWithoutAddress = {
   crypto: {
     kdfparams: {
       dklen: number,
