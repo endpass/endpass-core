@@ -9,10 +9,10 @@ declare module '@endpass/utils/keystoreHDWallet' {
     password: string,
     wallet: EthereumHDKey,
     encryptOptions: KDFEncryptOptions
-  ): v3Keystore;
+  ): V3Keystore;
 
   export function decryptHDWallet(
     password: string,
-    v3Keystore: v3Keystore
+    v3Keystore: V3Keystore
   ): EthereumHDKey;
 }

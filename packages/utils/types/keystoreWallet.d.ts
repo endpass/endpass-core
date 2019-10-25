@@ -5,7 +5,7 @@
 declare module '@endpass/utils/keystoreWallet' {
   export function createWalletByIndex(
     password: string,
-    hdKeystore: v3Keystore,
+    hdKeystore: V3Keystore,
     index?: number
   ): Wallet;
 
@@ -13,10 +13,10 @@ declare module '@endpass/utils/keystoreWallet' {
     password: string,
     wallet: Wallet,
     encryptOptions: KDFEncryptOptions
-  ): v3Keystore;
+  ): V3Keystore;
 
   export function decryptWallet(
     password: string,
-    v3Keystore: v3Keystore
+    v3Keystore: V3Keystore
   ): Wallet;
 }
