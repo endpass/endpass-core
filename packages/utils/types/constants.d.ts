@@ -1,11 +1,16 @@
-declare type KDFEncryptScryptProperty = 'scrypt';
+declare namespace KDFTypes {
+  type KdfProperty = 'scrypt';
 
-declare type KDFEncryptOptions = {
-  kdf: KDFEncryptScryptProperty,
-  n: number,
-};
+  type EncryptOptions = {
+    kdf: KdfProperty,
+    n: number,
+  }
+}
+
+// Just shorthand for the KDFTypes.EncryptOptions type
+declare type KDFEncryptOptions = KDFTypes.EncryptOptions;
 
 declare module '@endpass/utils/constants' {
-  export const KDF_ENCRYPT_OPTIONS: KDFEncryptOptions;
+  export const KDF_ENCRYPT_OPTIONS: KDFTypes.EncryptOptions;
   export const HD_KEY_MNEMONIC_PATH: "m/44'/60'/0'/0";
 }
