@@ -1,4 +1,5 @@
 /// <reference path="constants.d.ts" />
+/// <reference path="keystores.d.ts" />
 
 declare module "@endpass/utils/walletGen" {
   export function createComplex(
@@ -7,8 +8,8 @@ declare module "@endpass/utils/walletGen" {
   ): Promise<{
     seedKey: string,
     encryptedSeed: string,
-    v3KeystoreHdWallet: v3Keystore,
-    v3KeystoreChildWallet: v3Keystore,
+    v3KeystoreHdWallet: V3Keystore,
+    v3KeystoreChildWallet: V3Keystore,
   }>;
 
   export function createHDWithChild(
@@ -16,7 +17,7 @@ declare module "@endpass/utils/walletGen" {
     password: string,
     encryptOptions: KDFEncryptOptions,
   ): {
-    v3KeystoreHdWallet: v3Keystore,
-    v3KeystoreChildWallet: v3Keystore,
+    v3KeystoreHdWallet: V3Keystore,
+    v3KeystoreChildWallet: V3Keystore,
   };
 }

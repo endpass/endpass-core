@@ -1,5 +1,5 @@
 // Private unexported namespace which visible only within this file
-declare namespace private {
+declare namespace _ {
   // Common template type for key stores
   type BasicKeystore = {
     id: string,
@@ -28,7 +28,7 @@ declare namespace private {
 }
 
 // Keystore types
-declare type v3Keystore = {
+declare type V3Keystore = {
   crypto: {
     kdfparams: {
       dklen: number,
@@ -38,9 +38,9 @@ declare type v3Keystore = {
       salt: string,
     },
   },
-} & private.BasicAddressedKeystore;
+} & _.BasicAddressedKeystore;
 
-declare type v3KeystoreWithoutAddress = {
+declare type V3KeystoreWithoutAddress = {
   crypto: {
     kdfparams: {
       dklen: number,
@@ -50,21 +50,4 @@ declare type v3KeystoreWithoutAddress = {
       salt: string,
     },
   },
-} & private.BasicKeystore;
-
-// Ethereum types
-declare class Wallet {
-  static fromPrivateKey(key: Buffer): Wallet;
-  static fromV3(json: string, password: string): Wallet;
-  getPrivateKey(): Buffer;
-  getAddressString(): string;
-  getChecksumAddressString(): string;
-}
-
-declare class EthereumHDKey {
-  privateExtendedKey (): string;
-  publicExtendedKey (): string;
-  derivePath (path: string): EthereumHDKey;
-  deriveChild (index: number): EthereumHDKey;
-  getWallet (): Wallet;
-}
+} & _.BasicKeystore;

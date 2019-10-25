@@ -1,15 +1,15 @@
-/// <reference path="global.d.ts" />
 /// <reference path="constants.d.ts" />
+/// <reference path="keystores.d.ts" />
 
 declare module '@endpass/utils/keystoreCrypto' {
   export function encrypt(
     password: string,
     privateKey: string | Buffer,
     options: KDFEncryptOptions
-  ): v3KeystoreWithoutAddress;
+  ): V3KeystoreWithoutAddress;
 
   export function decrypt(
     password: string,
-    v3Keystore: v3Keystore
+    v3Keystore: V3Keystore
   ): Buffer;
 }
