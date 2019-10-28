@@ -1,7 +1,64 @@
 const recommended = require('./recommended');
 
+// need remove `parser` in root level for vue-parser allowing sets
+const { parser, ...vueConfig } = recommended;
+
+const vueRules = {
+  ...recommended.rules,
+  'vue/max-attributes-per-line': [
+    'error',
+    {
+      singleline: 1,
+      multiline: {
+        max: 1,
+        allowFirstLine: false,
+      },
+    },
+  ],
+  'vue/html-closing-bracket-newline': [
+    'error',
+    {
+      singleline: 'never',
+      multiline: 'always',
+    },
+  ],
+  'vue/order-in-components': [
+    'error',
+    {
+      order: [
+        'el',
+        'name',
+        'inheritAttrs',
+        'inject',
+        'provide',
+        ['props', 'propsData'],
+        'data',
+        'computed',
+        'watch',
+        'methods',
+        'LIFECYCLE_HOOKS',
+        'mixins',
+        'components',
+        [
+          'functional',
+          'delimiters',
+          'comments',
+          'directives',
+          'filters',
+          'parent',
+          'extends',
+          'model',
+          'template',
+          'render',
+          'renderError',
+        ],
+      ],
+    },
+  ],
+};
+
 module.exports = {
-  ...recommended,
+  ...vueConfig,
   extends: [...recommended.extends, 'plugin:vue/recommended', 'prettier'],
   settings: {
     'import/resolver': {
@@ -10,58 +67,15 @@ module.exports = {
       },
     },
   },
-  rules: {
-    ...recommended.rules,
-    'prettier/prettier': 'off',
-    'vue/max-attributes-per-line': [
-      'error',
-      {
-        singleline: 1,
-        multiline: {
-          max: 1,
-          allowFirstLine: false,
-        },
-      },
-    ],
-    'vue/html-closing-bracket-newline': [
-      'error',
-      {
-        singleline: 'never',
-        multiline: 'always',
-      },
-    ],
-    'vue/order-in-components': [
-      'error',
-      {
-        order: [
-          'el',
-          'name',
-          'inheritAttrs',
-          'inject',
-          'provide',
-          ['props', 'propsData'],
-          'data',
-          'computed',
-          'watch',
-          'methods',
-          'LIFECYCLE_HOOKS',
-          'mixins',
-          'components',
-          [
-            'functional',
-            'delimiters',
-            'comments',
-            'directives',
-            'filters',
-            'parent',
-            'extends',
-            'model',
-            'template',
-            'render',
-            'renderError',
-          ],
-        ],
-      },
-    ],
-  },
+  rules: vueRules,
+  overrides: [
+    {
+      files: ['*.vue'],
+      extends: [...recommended.extends, 'plugin:vue/recommended'],
+      rules: {
+        ...vueRules,
+        'prettier/prettier': 'off',
+      }
+    }
+  ],
 };

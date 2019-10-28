@@ -1,6 +1,6 @@
 {
   "name": "@endpass/eslint-plugin-endpass",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Endpass eslint plugin",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -25,15 +25,15 @@
     "url": "https://github.com/endpass/endpass-core/issues"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.3.0",
-    "@typescript-eslint/parser": "^2.3.0",
+    "@typescript-eslint/eslint-plugin": "^2.5.0",
+    "@typescript-eslint/parser": "^2.5.0",
     "babel-eslint": "^10.0.3",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-config-prettier": "^6.3.0",
+    "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-json": "^1.4.0",
-    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-json": "^2.0.1",
+    "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^5.2.3"
   },
   "peerDependencies": {
