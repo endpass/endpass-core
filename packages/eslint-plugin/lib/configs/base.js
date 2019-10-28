@@ -13,8 +13,15 @@ module.exports = {
   },
   extends: ['airbnb-base'],
   plugins: ['prettier', 'json', '@typescript-eslint'],
+  parser: 'babel-eslint',
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: "babel-eslint",
+    sourceType: "module",
+    ecmaVersion: 6,
+    ecmaFeatures: {
+      "jsx": true,
+      "modules": true
+    }
   },
   overrides: [
     {
@@ -26,10 +33,9 @@ module.exports = {
     {
       files: ['*.ts'],
       plugins: ['@typescript-eslint'],
-      parserOptions: {
-        parser: '@typescript-eslint/parser'
-      },
+      parser: '@typescript-eslint/parser',
       rules: {
+        'no-useless-constructor': 'off',
         'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': ['error', {
           vars: 'all',
