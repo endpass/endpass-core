@@ -11,7 +11,7 @@ export declare type MessengerRequester = {
   source: Window | {};
   method: string;
   answer: Function;
-}
+};
 
 declare class CrossWindowMessenger {
   constructor(props: MessengerProps);
