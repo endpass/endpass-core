@@ -13,6 +13,10 @@
   box-shadow: 0 2px 4px rgba(36, 42, 46, 0.1), 0 1px 1px rgba(36, 42, 46, 0.1);
 }
 
+.v-button.theme-default.is-inline {
+  width: auto;
+}
+
 .v-button.theme-default .v-button-label {
   text-transform: uppercase;
   font-size: 14px;

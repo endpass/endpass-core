@@ -181,8 +181,7 @@ exports[`Storyshots VButton/desktop change-skin 1`] = `
   />
    
   <button
-    class="v-button theme-default skin-primary size-normal"
-    style="width: 300px;"
+    class="v-button theme-default skin-primary size-normal is-inline"
   >
     <!---->
      
@@ -200,9 +199,106 @@ exports[`Storyshots VButton/desktop change-skin 1`] = `
      
     <!---->
   </button>
-  
-        skin:primary
-      
+   
+  <span>
+    
+           
+    <span
+      class="v-fw-b"
+    >
+      primary
+    </span>
+             
+        
+  </span>
+  <span>
+    
+           
+    <span
+      class=""
+    >
+      secondary
+    </span>
+             
+        
+  </span>
+  <span>
+    
+           
+    <span
+      class=""
+    >
+      tertiary
+    </span>
+             
+        
+  </span>
+  <span>
+    
+           
+    <span
+      class=""
+    >
+      quaternary
+    </span>
+             
+        
+  </span>
+  <span>
+    
+           
+    <span
+      class=""
+    >
+      ghost
+    </span>
+             
+        
+  </span>
+  <span>
+    
+           
+    <span
+      class=""
+    >
+      social
+    </span>
+             
+        
+  </span>
+  <span>
+    
+           
+    <span
+      class=""
+    >
+      success
+    </span>
+             
+        
+  </span>
+  <span>
+    
+           
+    <span
+      class=""
+    >
+      error
+    </span>
+             
+        
+  </span>
+  <span>
+    
+           
+    <span
+      class=""
+    >
+      quaternary-error
+    </span>
+             
+        
+  </span>
 </div>
 `;
 
@@ -1180,6 +1276,66 @@ exports[`Storyshots VButton/desktop icon 1`] = `
         </td>
       </tr>
     </tbody>
+  </table>
+</div>
+`;
+
+exports[`Storyshots VButton/desktop is-inline 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <table
+    width="50%"
+  >
+    <tr>
+      <td>
+        <button
+          class="v-button theme-default skin-primary size-normal"
+        >
+          <!---->
+           
+          <!---->
+           
+          <span
+            class="v-button-label"
+          >
+            is default, width = 100%
+          </span>
+           
+          <!---->
+           
+          <!---->
+           
+          <!---->
+        </button>
+      </td>
+    </tr>
+     
+    <tr>
+      <td>
+        <button
+          class="v-button theme-default skin-primary size-normal is-inline"
+        >
+          <!---->
+           
+          <!---->
+           
+          <span
+            class="v-button-label"
+          >
+            is inline, width = auto
+          </span>
+           
+          <!---->
+           
+          <!---->
+           
+          <!---->
+        </button>
+      </td>
+    </tr>
   </table>
 </div>
 `;

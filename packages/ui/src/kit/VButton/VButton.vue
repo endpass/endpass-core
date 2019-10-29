@@ -75,6 +75,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    isInline: {
+      type: Boolean,
+      default: false,
+    },
     size: {
       type: String,
       default: 'normal',
@@ -89,6 +93,7 @@ export default {
         ...this.themeCssClass,
         [`skin-${this.skin}`]: true,
         [`size-${this.size}`]: true,
+        'is-inline': this.isInline,
       };
     },
     isSocialIcon() {

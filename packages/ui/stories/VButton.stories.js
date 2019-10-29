@@ -58,8 +58,11 @@ storiesOf('VButton/desktop', module)
           'secondary',
           'tertiary',
           'quaternary',
-          'quaternary-error',
           'ghost',
+          'social',
+          'success',
+          'error',
+          'quaternary-error',
         ],
         skin: 'primary',
       };
@@ -74,8 +77,33 @@ storiesOf('VButton/desktop', module)
     components: { VButton },
     template: `
       <theme-provider>
-        <v-button @click="onSkinChange" :skin="skin" style="width: 300px;">Click to change skin</v-button>
-        skin:{{ this.skin }}
+        <v-button @click="onSkinChange" :skin="skin" is-inline>Click to change skin</v-button>
+        <span 
+          v-for="skinItem in skins"
+          :key="skinItem"
+        >
+          &nbsp;<span :class="{ 'v-fw-b': (skinItem == skin) }">{{ skinItem }}</span>&nbsp;        
+        </span>
+        
+      </theme-provider>
+    `,
+  }))
+  .add('is-inline', () => ({
+    components: { VButton },
+    template: `
+      <theme-provider>
+      <table width="50%">
+        <tr>
+          <td>
+            <v-button>is default, width = 100%</v-button>
+          </td>      
+        </tr>
+        <tr>
+          <td>
+            <v-button is-inline>is inline, width = auto</v-button>               
+          </td>      
+        </tr>
+      </table>
       </theme-provider>
     `,
   }))
