@@ -1,6 +1,6 @@
 {
   "name": "@endpass/class",
-  "version": "0.18.15",
+  "version": "0.19.0",
   "description": "Class modules",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -45,7 +45,6 @@
     "provider/ProviderFactory",
     "transaction/Transaction",
     "storage/LocalStorage",
-    "ConnectError",
     "request/Request",
     "request/RequestError",
     "Signer/Signer"
