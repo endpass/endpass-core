@@ -15,7 +15,7 @@ declare class Request {
 
   get(url: string, config?: AxiosRequestConfig): Promise<any>;
 
-  post(url: string, body: any, config?: AxiosRequestConfig): Promise<any>;
+  post(url: string, body?: any, config?: AxiosRequestConfig): Promise<any>;
 
   delete(url: string, config?: AxiosRequestConfig): Promise<any>;
 
