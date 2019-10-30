@@ -17,10 +17,11 @@ module.exports = {
   parserOptions: {
     parser: "babel-eslint",
     sourceType: "module",
-    ecmaVersion: 6,
+    ecmaVersion: 2018,
     ecmaFeatures: {
       "jsx": true,
-      "modules": true
+      "modules": true,
+      generators: true,
     }
   },
   overrides: [
