@@ -57,25 +57,28 @@ const vueRules = {
   ],
 };
 
+const settings = {
+  'import/resolver': {
+    node: {
+      extensions: ['.js', '.jsx', '.vue'],
+    },
+  },
+};
+
 module.exports = {
   ...vueConfig,
   extends: [...recommended.extends, 'plugin:vue/recommended', 'prettier'],
-  settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx', '.vue'],
-      },
-    },
-  },
+  settings,
   rules: vueRules,
   overrides: [
     {
       files: ['*.vue'],
       extends: [...recommended.extends, 'plugin:vue/recommended'],
+      settings,
       rules: {
         ...vueRules,
         'prettier/prettier': 'off',
-      }
-    }
+      },
+    },
   ],
 };

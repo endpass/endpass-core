@@ -55,6 +55,8 @@ module.exports = {
       'error',
       {
         ignore: ['@', 'fixtures', 'mocks'],
+        commonjs: true,
+        caseSensitive: true,
       },
     ],
   },
