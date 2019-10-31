@@ -5944,285 +5944,429 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
   <table
     class="storybook-table"
   >
-    <tr>
-      <td>
-        <div
-          class="field-atom v-progress-circle theme-default theme-default"
-        >
-          <svg
-            class="v-progress-circle-back"
+    <thead>
+      <tr>
+        <th>
+          0
+        </th>
+         
+        <th>
+          50
+        </th>
+         
+        <th>
+          75
+        </th>
+         
+        <th>
+          5
+        </th>
+         
+        <th>
+          95
+        </th>
+         
+        <th>
+          100
+        </th>
+      </tr>
+    </thead>
+     
+    <tbody>
+      <tr>
+        <td>
+          <div
+            class="field-atom v-progress-circle theme-default theme-default"
           >
-            <circle
-              cx="41px"
-              cy="41px"
-              r="30px"
-            />
-          </svg>
-           
-          <svg
-            class="v-progress-circle-over"
-            style="stroke-dasharray: 94, 188.4;"
+            <svg
+              class="v-progress-circle-back"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+              />
+            </svg>
+             
+            <svg
+              class="v-progress-circle-over"
+              style="stroke-dasharray: 3, 188.4;"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke="#6e32c9"
+              />
+            </svg>
+             
+            <!---->
+          </div>
+        </td>
+         
+        <td>
+          <div
+            class="field-atom v-progress-circle theme-default theme-default"
           >
-            <circle
-              cx="41px"
-              cy="41px"
-              r="30px"
-              stroke="#6e32c9"
-            />
-          </svg>
-           
-          <!---->
-        </div>
-      </td>
+            <svg
+              class="v-progress-circle-back"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+              />
+            </svg>
+             
+            <svg
+              class="v-progress-circle-over"
+              style="stroke-dasharray: 94, 188.4;"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke="#6e32c9"
+              />
+            </svg>
+             
+            <!---->
+          </div>
+        </td>
+         
+        <td>
+          <div
+            class="field-atom v-progress-circle theme-default theme-default"
+          >
+            <svg
+              class="v-progress-circle-back"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+              />
+            </svg>
+             
+            <svg
+              class="v-progress-circle-over"
+              style="stroke-dasharray: 141, 188.4;"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke="#6e32c9"
+              />
+            </svg>
+             
+            <!---->
+          </div>
+        </td>
+         
+        <td>
+          <div
+            class="field-atom v-progress-circle theme-default theme-default"
+          >
+            <svg
+              class="v-progress-circle-back"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+              />
+            </svg>
+             
+            <svg
+              class="v-progress-circle-over"
+              style="stroke-dasharray: 9, 188.4;"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke="#6e32c9"
+              />
+            </svg>
+             
+            <!---->
+          </div>
+        </td>
+         
+        <td>
+          <div
+            class="field-atom v-progress-circle theme-default theme-default"
+          >
+            <svg
+              class="v-progress-circle-back"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+              />
+            </svg>
+             
+            <svg
+              class="v-progress-circle-over"
+              style="stroke-dasharray: 178, 188.4;"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke="#6e32c9"
+              />
+            </svg>
+             
+            <!---->
+          </div>
+        </td>
+         
+        <td>
+          <div
+            class="field-atom v-progress-circle theme-default theme-default"
+          >
+            <svg
+              class="v-progress-circle-back"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+              />
+            </svg>
+             
+            <svg
+              class="v-progress-circle-over"
+              style="stroke-dasharray: 184, 188.4;"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke="#6e32c9"
+              />
+            </svg>
+             
+            <!---->
+          </div>
+        </td>
+      </tr>
        
-      <td>
-        <div
-          class="field-atom v-progress-circle theme-default theme-default"
-        >
-          <svg
-            class="v-progress-circle-back"
+      <tr>
+        <td>
+          <div
+            class="field-atom v-progress-circle theme-default theme-default"
           >
-            <circle
-              cx="41px"
-              cy="41px"
-              r="30px"
-            />
-          </svg>
-           
-          <svg
-            class="v-progress-circle-over"
-            style="stroke-dasharray: 141, 188.4;"
+            <svg
+              class="v-progress-circle-back"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+              />
+            </svg>
+             
+            <svg
+              class="v-progress-circle-over"
+              style="stroke-dasharray: 3, 188.4;"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke="#6e32c9"
+              />
+            </svg>
+             
+            <!---->
+          </div>
+        </td>
+         
+        <td>
+          <div
+            class="field-atom v-progress-circle theme-default theme-default"
           >
-            <circle
-              cx="41px"
-              cy="41px"
-              r="30px"
-              stroke="#6e32c9"
-            />
-          </svg>
-           
-          <!---->
-        </div>
-      </td>
-       
-      <td>
-        <div
-          class="field-atom v-progress-circle theme-default theme-default"
-        >
-          <svg
-            class="v-progress-circle-back"
-          >
-            <circle
-              cx="41px"
-              cy="41px"
-              r="30px"
-            />
-          </svg>
-           
-          <svg
-            class="v-progress-circle-over"
-            style="stroke-dasharray: 9, 188.4;"
-          >
-            <circle
-              cx="41px"
-              cy="41px"
-              r="30px"
-              stroke="#6e32c9"
-            />
-          </svg>
-           
-          <!---->
-        </div>
-      </td>
-       
-      <td>
-        <div
-          class="field-atom v-progress-circle theme-default theme-default"
-        >
-          <svg
-            class="v-progress-circle-back"
-          >
-            <circle
-              cx="41px"
-              cy="41px"
-              r="30px"
-            />
-          </svg>
-           
-          <svg
-            class="v-progress-circle-over"
-            style="stroke-dasharray: 178, 188.4;"
-          >
-            <circle
-              cx="41px"
-              cy="41px"
-              r="30px"
-              stroke="#6e32c9"
-            />
-          </svg>
-           
-          <!---->
-        </div>
-      </td>
-    </tr>
-  </table>
-</div>
-`;
-
-exports[`Storyshots VProgressCircle/desktop with label 1`] = `
-<div>
-  <div
-    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  />
-   
-  <table
-    class="storybook-table"
-  >
-    <tr>
-      <td>
-        <div
-          class="field-atom v-progress-circle theme-default theme-default"
-        >
-          <svg
-            class="v-progress-circle-back"
-          >
-            <circle
-              cx="41px"
-              cy="41px"
-              r="30px"
-            />
-          </svg>
-           
-          <svg
-            class="v-progress-circle-over"
-            style="stroke-dasharray: 94, 188.4;"
-          >
-            <circle
-              cx="41px"
-              cy="41px"
-              r="30px"
-              stroke="#6e32c9"
-            />
-          </svg>
-           
-          <span
-            class="v-progress-circle-text"
-          >
-            
+            <svg
+              class="v-progress-circle-back"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+              />
+            </svg>
+             
+            <svg
+              class="v-progress-circle-over"
+              style="stroke-dasharray: 94, 188.4;"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke="#6e32c9"
+              />
+            </svg>
+             
+            <span
+              class="v-progress-circle-text"
+            >
+              
     50%
   
-          </span>
-        </div>
-      </td>
-       
-      <td>
-        <div
-          class="field-atom v-progress-circle theme-default theme-default"
-        >
-          <svg
-            class="v-progress-circle-back"
+            </span>
+          </div>
+        </td>
+         
+        <td>
+          <div
+            class="field-atom v-progress-circle theme-default theme-default"
           >
-            <circle
-              cx="41px"
-              cy="41px"
-              r="30px"
-            />
-          </svg>
-           
-          <svg
-            class="v-progress-circle-over"
-            style="stroke-dasharray: 141, 188.4;"
-          >
-            <circle
-              cx="41px"
-              cy="41px"
-              r="30px"
-              stroke="#6e32c9"
-            />
-          </svg>
-           
-          <span
-            class="v-progress-circle-text"
-          >
-            
+            <svg
+              class="v-progress-circle-back"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+              />
+            </svg>
+             
+            <svg
+              class="v-progress-circle-over"
+              style="stroke-dasharray: 141, 188.4;"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke="#6e32c9"
+              />
+            </svg>
+             
+            <span
+              class="v-progress-circle-text"
+            >
+              
     75%
   
-          </span>
-        </div>
-      </td>
-       
-      <td>
-        <div
-          class="field-atom v-progress-circle theme-default theme-default"
-        >
-          <svg
-            class="v-progress-circle-back"
+            </span>
+          </div>
+        </td>
+         
+        <td>
+          <div
+            class="field-atom v-progress-circle theme-default theme-default"
           >
-            <circle
-              cx="41px"
-              cy="41px"
-              r="30px"
-            />
-          </svg>
-           
-          <svg
-            class="v-progress-circle-over"
-            style="stroke-dasharray: 9, 188.4;"
-          >
-            <circle
-              cx="41px"
-              cy="41px"
-              r="30px"
-              stroke="#6e32c9"
-            />
-          </svg>
-           
-          <span
-            class="v-progress-circle-text"
-          >
-            
+            <svg
+              class="v-progress-circle-back"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+              />
+            </svg>
+             
+            <svg
+              class="v-progress-circle-over"
+              style="stroke-dasharray: 9, 188.4;"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke="#6e32c9"
+              />
+            </svg>
+             
+            <span
+              class="v-progress-circle-text"
+            >
+              
     5%
   
-          </span>
-        </div>
-      </td>
-       
-      <td>
-        <div
-          class="field-atom v-progress-circle theme-default theme-default"
-        >
-          <svg
-            class="v-progress-circle-back"
+            </span>
+          </div>
+        </td>
+         
+        <td>
+          <div
+            class="field-atom v-progress-circle theme-default theme-default"
           >
-            <circle
-              cx="41px"
-              cy="41px"
-              r="30px"
-            />
-          </svg>
-           
-          <svg
-            class="v-progress-circle-over"
-            style="stroke-dasharray: 178, 188.4;"
-          >
-            <circle
-              cx="41px"
-              cy="41px"
-              r="30px"
-              stroke="#6e32c9"
-            />
-          </svg>
-           
-          <span
-            class="v-progress-circle-text"
-          >
-            
+            <svg
+              class="v-progress-circle-back"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+              />
+            </svg>
+             
+            <svg
+              class="v-progress-circle-over"
+              style="stroke-dasharray: 178, 188.4;"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke="#6e32c9"
+              />
+            </svg>
+             
+            <span
+              class="v-progress-circle-text"
+            >
+              
     95%
   
-          </span>
-        </div>
-      </td>
-    </tr>
+            </span>
+          </div>
+        </td>
+         
+        <td>
+          <div
+            class="field-atom v-progress-circle theme-default theme-default"
+          >
+            <svg
+              class="v-progress-circle-back"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+              />
+            </svg>
+             
+            <svg
+              class="v-progress-circle-over"
+              style="stroke-dasharray: 184, 188.4;"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke="#6e32c9"
+              />
+            </svg>
+             
+            <span
+              class="v-progress-circle-text"
+            >
+              
+    100%
+  
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
   </table>
 </div>
 `;
