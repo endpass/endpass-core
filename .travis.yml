@@ -11,6 +11,7 @@ install:
 - node ./run.js
 script:
 - lerna run test
+- lerna run build
 - ./packages/ui/scripts/build-storybook.sh
 notifications:
   slack:
