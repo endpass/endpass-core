@@ -79,4 +79,28 @@ storiesOf('VFileDropArea/desktop', module)
         </v-file-drop-area>
       </theme-provider>
     `,
+  }))
+  .add('v-model', () => ({
+    methods,
+    data: () => ({
+      file: null,
+    }),
+    watch: {
+      file(val) {
+        this.onChange(val);
+      },
+    },
+    components,
+    template: `
+      <theme-provider>
+        <v-file-drop-area
+          v-model="file"
+          label="Only .jpeg files"
+          accept=".jpeg"
+        >
+          <p>Custom Text</p>
+          <v-description disabled description="or drop files here"/>
+        </v-file-drop-area>
+      </theme-provider>
+    `,
   }));

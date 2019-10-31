@@ -3313,6 +3313,63 @@ exports[`Storyshots VFileDropArea/desktop only for jpeg 1`] = `
 </div>
 `;
 
+exports[`Storyshots VFileDropArea/desktop v-model 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div
+    accept=".jpeg"
+    class="field-atom theme-default"
+  >
+    <label
+      class="label-atom theme-default"
+    >
+      
+  Only .jpeg files
+
+    </label>
+     
+    <div
+      class="v-file-drop-area-content theme-default"
+    >
+      <button
+        class="v-file-drop-area-button"
+        type="button"
+      >
+        <label
+          class="v-file-drop-area-label"
+          for="v-file-drop-area-idx-5"
+        >
+          <div>
+            <p>
+              Custom Text
+            </p>
+             
+            <div
+              class="description-atom theme-default"
+              disabled="disabled"
+            >
+              
+  or drop files here
+  
+            </div>
+          </div>
+           
+          <input
+            accept=".jpeg"
+            class="file-drop-area-input"
+            id="v-file-drop-area-idx-5"
+            type="file"
+          />
+        </label>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots VFileSelectButton/desktop states 1`] = `
 <div>
   <div

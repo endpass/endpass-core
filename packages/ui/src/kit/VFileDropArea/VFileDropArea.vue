@@ -111,5 +111,10 @@ export default {
     FieldAtom,
     LabelAtom,
   },
+
+  model: {
+    event: 'change',
+    prop: 'file',
+  },
 };
 </script>
