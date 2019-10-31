@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { formateDate } from '@endpass/utils/date';
+import dayjs from 'dayjs';
 import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
@@ -20,13 +20,11 @@ export default {
 
   computed: {
     vDateBadgeCssClass() {
-      return Object.assign({}, this.themeCssClass, {
-        'v-date-badge': true,
-      });
+      return { ...this.themeCssClass, 'v-date-badge': true };
     },
 
     formattedDateString() {
-      return formateDate(this.date);
+      return dayjs(this.date).format('YYYY-MM-DD H:mm');
     },
   },
 

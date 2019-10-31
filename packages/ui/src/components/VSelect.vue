@@ -11,11 +11,11 @@
         :name="name"
       >
         <option
-          v-for="item in options"
+          v-for="item in normalizedOptions"
           :key="item.key || item.val || item"
-          :value="getOptionParameter(item, 'val')"
+          :value="item.val"
         >
-          {{ getOptionParameter(item, 'text') }}
+          {{ item.text }}
         </option>
       </select>
     </div>
@@ -29,8 +29,6 @@
 </template>
 
 <script>
-import getOptionParameter from '@endpass/utils/getOptionParameter';
-
 export default {
   name: 'VSelect',
   props: {
@@ -68,9 +66,20 @@ export default {
         this.$emit('input', newVal);
       },
     },
-  },
-  methods: {
-    getOptionParameter,
+
+    normalizedOptions() {
+      return this.options.reduce((acc, item) => {
+        if (item instanceof Object) {
+          return acc.concat(item);
+        }
+
+        return acc.concat({
+          val: item,
+          key: item,
+          text: item,
+        });
+      }, []);
+    },
   },
 };
 </script>

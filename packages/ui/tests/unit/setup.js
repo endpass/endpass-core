@@ -1,7 +1,7 @@
 import Vue from 'vue';
 
 // Mocks
-import './mocks/endpassUtils/date.mock';
+import './mocks/dayjs.mock';
 
 Vue.config.productionTip = false;
 
