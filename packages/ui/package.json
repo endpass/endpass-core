@@ -1,6 +1,6 @@
 {
   "name": "@endpass/ui",
-  "version": "0.15.62",
+  "version": "0.15.63",
   "description": "UI components",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -62,7 +62,7 @@
     ]
   },
   "dependencies": {
-    "@endpass/utils": "^1.8.6",
+    "dayjs": "^1.8.16",
     "vue": "^2.5.21"
   },
   "devDependencies": {

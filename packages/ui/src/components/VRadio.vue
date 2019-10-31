@@ -7,18 +7,18 @@
       {{ label }}
     </label>
     <div
-      v-for="option in options"
+      v-for="option in normalizedOptions"
       :key="'label' + getKeyString(option)"
       class="control"
     >
       <label
         :class="{
-          'is-info is-selected': getOptionParameter(option, 'val') === value,
+          'is-info is-selected': option.val === value,
         }"
         :for="id + getKeyString(option)"
         class="button is-multiline"
       >
-        {{ getOptionParameter(option, 'key') }}
+        {{ option.key }}
         <span
           v-if="option.help"
           class="help"
@@ -30,7 +30,7 @@
         :id="id + getKeyString(option)"
         v-model="selected"
         :name="name"
-        :value="getOptionParameter(option, 'val')"
+        :value="option.val"
         type="radio"
       >
     </div>
@@ -44,8 +44,6 @@
 </template>
 
 <script>
-import getOptionParameter from '@endpass/utils/getOptionParameter';
-
 export default {
   name: 'VRadio',
   props: {
@@ -83,9 +81,22 @@ export default {
         this.$emit('input', newVal);
       },
     },
+
+    normalizedOptions() {
+      return this.options.reduce((acc, item) => {
+        if (item instanceof Object) {
+          return acc.concat(item);
+        }
+
+        return acc.concat({
+          key: item,
+          val: item,
+        });
+      }, []);
+    },
   },
+
   methods: {
-    getOptionParameter,
     getKeyString: item => item.key || item.val || item,
   },
 };
