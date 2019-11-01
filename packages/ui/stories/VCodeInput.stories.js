@@ -25,6 +25,44 @@ storiesOf('VCodeInput/desktop', module)
       </theme-provider>
     `,
   }))
+  .add('custom length', () => ({
+    methods,
+    components: { VCodeInput },
+    template: `
+  <theme-provider>
+    <v-code-input :count="8" :interval="2" @input="onInput" />
+  </theme-provider>
+`,
+  }))
+  .add('splitting interval', () => ({
+    methods,
+    components: { VCodeInput },
+    template: `
+      <theme-provider>
+       <p>
+         <p>Each 1</p>
+         <v-code-input :interval="1" :count="10" @input="onInput" />
+       </p>
+       <p>
+         <p>Each 2</p>
+         <v-code-input :interval="2" :count="10" @input="onInput" />
+       </p>
+       <p>
+         <p>Each 3</p>
+         <v-code-input :interval="3" :count="10" @input="onInput" />
+       </p>
+       <p>
+         <p>Each 5</p>
+         <v-code-input :interval="5" :count="10" @input="onInput" />
+       </p>
+       <p>
+         <p>Each 10</p>
+         <v-code-input :interval="10" :count="10" @input="onInput" />
+       </p>
+     </p>
+  </theme-provider>
+`,
+  }))
   .add('v-model', () => ({
     methods,
     data: () => ({

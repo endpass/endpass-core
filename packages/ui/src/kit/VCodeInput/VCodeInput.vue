@@ -1,23 +1,27 @@
 <template>
   <ul :class="vCodeInputCssClass">
-    <li
-      v-for="(value, idx) in numbers"
-      :key="`code-input-${idx}`"
-      :style="{ order: idx <= 2 ? idx : idx + 1 }"
-      class="v-code-input-item"
-    >
-      <input-atom
-        :ref="idx"
-        class="v-code-input-number"
-        :value="value"
-        :disabled="disabled"
-        placeholder="0"
-        maxlength="1"
-        @keyup="onKeypress(idx, $event)"
-        @paste="onPasteNumber"
+    <template v-for="(value, idx) in numbers">
+      <li
+        :key="`input-${idx}`"
+        class="v-code-input-item"
+      >
+        <input-atom
+          :ref="idx"
+          class="v-code-input-number"
+          :value="value"
+          :disabled="disabled"
+          placeholder="0"
+          maxlength="1"
+          @keyup="onKeypress(idx, $event)"
+          @paste="onPasteNumber"
+        />
+      </li>
+      <li
+        v-if="isNeedSeparator(idx + 1)"
+        :key="`separator-${idx}`"
+        class="v-code-input-item is-delimeter"
       />
-    </li>
-    <li class="v-code-input-item is-delimeter" />
+    </template>
   </ul>
 </template>
 
@@ -38,10 +42,20 @@ export default {
       type: Boolean,
       default: false,
     },
+
+    count: {
+      type: Number,
+      default: 6,
+    },
+
+    interval: {
+      type: Number,
+      default: 3,
+    },
   },
 
   data: () => ({
-    numbers: new Array(6).fill(''),
+    numbers: [],
   }),
 
   computed: {
@@ -62,6 +76,11 @@ export default {
 
       return unfilledNumberIdx;
     },
+
+    separatorsCount() {
+      // eslint-disable-next-line
+      return ((this.count / this.interval) >> 0) - 1;
+    },
   },
 
   watch: {
@@ -80,11 +99,19 @@ export default {
   },
 
   methods: {
+    isNeedSeparator(idx) {
+      const { numbers, interval } = this;
+
+      if (idx === 0 || idx === numbers.length) return false;
+
+      return idx % interval === 0;
+    },
+
     fillNumbers(value) {
-      const splittedValue = value.split('').slice(0, 6);
-      const emptyNumbers = new Array(
-        this.numbers.length - splittedValue.length,
-      ).fill('');
+      const splittedValue = value.split('').slice(0, this.count);
+      const emptyNumbers = new Array(this.count - splittedValue.length).fill(
+        '',
+      );
 
       splittedValue.concat(emptyNumbers).forEach((value, idx) => {
         this.setNumberValueByIndex(idx, value);
@@ -146,8 +173,6 @@ export default {
   },
 
   mounted() {
-    if (!this.value) return;
-
     this.fillNumbers(this.value);
   },
 
