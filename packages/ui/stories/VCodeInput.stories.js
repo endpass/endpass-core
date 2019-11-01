@@ -30,7 +30,7 @@ storiesOf('VCodeInput/desktop', module)
     components: { VCodeInput },
     template: `
   <theme-provider>
-    <v-code-input :count="8" :interval="2" @input="onInput" />
+    <v-code-input :length="8" :interval="2" @input="onInput" />
   </theme-provider>
 `,
   }))
@@ -41,23 +41,23 @@ storiesOf('VCodeInput/desktop', module)
       <theme-provider>
        <p>
          <p>Each 1</p>
-         <v-code-input :interval="1" :count="10" @input="onInput" />
+         <v-code-input :interval="1" :length="10" @input="onInput" />
        </p>
        <p>
          <p>Each 2</p>
-         <v-code-input :interval="2" :count="10" @input="onInput" />
+         <v-code-input :interval="2" :length="10" @input="onInput" />
        </p>
        <p>
          <p>Each 3</p>
-         <v-code-input :interval="3" :count="10" @input="onInput" />
+         <v-code-input :interval="3" :length="10" @input="onInput" />
        </p>
        <p>
          <p>Each 5</p>
-         <v-code-input :interval="5" :count="10" @input="onInput" />
+         <v-code-input :interval="5" :length="10" @input="onInput" />
        </p>
        <p>
          <p>Each 10</p>
-         <v-code-input :interval="10" :count="10" @input="onInput" />
+         <v-code-input :interval="10" :length="10" @input="onInput" />
        </p>
      </p>
   </theme-provider>

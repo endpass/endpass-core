@@ -12,7 +12,7 @@
           :disabled="disabled"
           placeholder="0"
           maxlength="1"
-          @keyup="onKeypress(idx, $event)"
+          @keyup="onKeyUp(idx, $event)"
           @paste="onPasteNumber"
         />
       </li>
@@ -43,7 +43,7 @@ export default {
       default: false,
     },
 
-    count: {
+    length: {
       type: Number,
       default: 6,
     },
@@ -79,7 +79,7 @@ export default {
 
     separatorsCount() {
       // eslint-disable-next-line
-      return ((this.count / this.interval) >> 0) - 1;
+      return ((this.length / this.interval) >> 0) - 1;
     },
   },
 
@@ -108,8 +108,8 @@ export default {
     },
 
     fillNumbers(value) {
-      const splittedValue = value.split('').slice(0, this.count);
-      const emptyNumbers = new Array(this.count - splittedValue.length).fill(
+      const splittedValue = value.split('').slice(0, this.length);
+      const emptyNumbers = new Array(this.length - splittedValue.length).fill(
         '',
       );
 
@@ -155,7 +155,7 @@ export default {
       this.focusNumberByIdx(this.focusTargetIdx);
     },
 
-    onKeypress(idx, e) {
+    onKeyUp(idx, e) {
       switch (e.key) {
         case 'Tab':
           break;
