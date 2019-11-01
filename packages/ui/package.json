@@ -119,6 +119,7 @@
     "typescript": "^3.6.4",
     "vue-jest": "^3.0.4",
     "vue-loader": "^15.7.1",
+    "vue-runtime-helpers": "^1.1.2",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.41.2"
   },

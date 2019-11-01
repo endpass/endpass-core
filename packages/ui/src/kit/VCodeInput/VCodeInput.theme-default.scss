@@ -1,0 +1,25 @@
+.v-code-input.theme-default {
+  display: flex;
+  align-items: center;
+  margin: 0 -2px;
+  padding: 0;
+  list-style: none;
+}
+
+.v-code-input.theme-default .v-code-input-item {
+  flex: 0 0 40px;
+  margin: 0 2px;
+}
+
+.v-code-input.theme-default .v-code-input-item.is-delimeter {
+  flex: 0 0 6px;
+  order: 3;
+  height: 2px;
+  margin: 0 5px;
+  background-color: var(--endpass-ui-color-black);
+}
+
+.v-code-input.theme-default .v-code-input-number input {
+  padding: 0;
+  text-align: center;
+}
