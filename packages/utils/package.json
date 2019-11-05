@@ -1,6 +1,6 @@
 {
   "name": "@endpass/utils",
-  "version": "1.8.6",
+  "version": "1.8.7",
   "description": "Utils and helper functions",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -50,25 +50,25 @@
     "secp256k1": "^3.7.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.0",
-    "@babel/plugin-transform-runtime": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
-    "@babel/runtime": "^7.6.0",
-    "@endpass/eslint-plugin-endpass": "^0.2.5",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/runtime": "^7.6.3",
+    "@endpass/eslint-plugin-endpass": "^0.2.9",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.3.0",
-    "fast-glob": "^3.0.4",
-    "husky": "^3.0.5",
+    "eslint": "^6.6.0",
+    "fast-glob": "^3.1.0",
+    "husky": "^3.0.9",
     "jest": "^24.9.0",
-    "lint-staged": "^9.2.5",
+    "lint-staged": "^9.4.2",
     "prettier": "^1.18.2",
     "rimraf": "^3.0.0",
     "rollup": "^1.21.2",
     "rollup-plugin-alias": "^2.0.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-copy": "^3.1.0",
-    "typescript": "^3.6.3"
+    "typescript": "^3.6.4"
   },
   "publishConfig": {
     "access": "public"
