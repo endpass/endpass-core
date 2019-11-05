@@ -2831,6 +2831,124 @@ exports[`Storyshots VCheckbox/desktop true/false attr 1`] = `
 </div>
 `;
 
+exports[`Storyshots VCodeInput/desktop custom length 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <ul
+    class="theme-default v-code-input"
+  />
+</div>
+`;
+
+exports[`Storyshots VCodeInput/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <ul
+    class="theme-default v-code-input"
+  />
+</div>
+`;
+
+exports[`Storyshots VCodeInput/desktop disabled 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <ul
+    class="theme-default v-code-input"
+  />
+</div>
+`;
+
+exports[`Storyshots VCodeInput/desktop splitting interval 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <p />
+  <p>
+    Each 1
+  </p>
+   
+  <ul
+    class="theme-default v-code-input"
+  />
+   
+  <p />
+   
+  <p />
+  <p>
+    Each 2
+  </p>
+   
+  <ul
+    class="theme-default v-code-input"
+  />
+   
+  <p />
+   
+  <p />
+  <p>
+    Each 3
+  </p>
+   
+  <ul
+    class="theme-default v-code-input"
+  />
+   
+  <p />
+   
+  <p />
+  <p>
+    Each 5
+  </p>
+   
+  <ul
+    class="theme-default v-code-input"
+  />
+   
+  <p />
+   
+  <p />
+  <p>
+    Each 10
+  </p>
+   
+  <ul
+    class="theme-default v-code-input"
+  />
+   
+  <p />
+   
+  <p />
+</div>
+`;
+
+exports[`Storyshots VCodeInput/desktop v-model 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <p>
+    Current code: 
+    <input />
+  </p>
+   
+  <ul
+    class="theme-default v-code-input"
+  />
+</div>
+`;
+
 exports[`Storyshots VContentSwitcher/desktop array objects 1`] = `
 <div>
   <div
