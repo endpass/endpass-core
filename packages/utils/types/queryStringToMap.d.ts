@@ -1,3 +1,3 @@
 declare module '@endpass/utils/queryStringToMap' {
-  export function queryStringToMap(path?: string): {[key: string]: string};
+  export default function queryStringToMap(path?: string): {[key: string]: string};
 }

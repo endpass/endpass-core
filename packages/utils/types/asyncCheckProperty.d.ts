@@ -1,11 +1,11 @@
 declare module '@endpass/utils/asyncCheckProperty' {
-  export function(
+  export default function(
     object: object,
     path: string | string[],
 
     // Any value can be passed into lodash,
     // and any function may be used as predicate
     predicate: (value: any) => any,
-    timer: number
+    timer: number,
   ): Promise<any>;
 }
