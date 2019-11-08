@@ -6546,6 +6546,255 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
 </div>
 `;
 
+exports[`Storyshots VRadio/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <span>
+    State: foo
+  </span>
+   
+  <label
+    class="theme-default v-radio"
+    name="value"
+  >
+    <input
+      class="v-radio-input"
+      name="value"
+      type="radio"
+    />
+     
+    <span
+      class="v-radio-box"
+    />
+     
+    <span
+      class="v-radio-label"
+    >
+      
+        Foo
+      
+    </span>
+  </label>
+   
+  <label
+    class="theme-default v-radio"
+    name="value"
+  >
+    <input
+      class="v-radio-input"
+      name="value"
+      type="radio"
+    />
+     
+    <span
+      class="v-radio-box"
+    />
+     
+    <span
+      class="v-radio-label"
+    >
+      
+        Bar
+      
+    </span>
+  </label>
+   
+  <label
+    class="theme-default v-radio"
+    name="value"
+  >
+    <input
+      class="v-radio-input"
+      name="value"
+      type="radio"
+    />
+     
+    <span
+      class="v-radio-box"
+    />
+     
+    <span
+      class="v-radio-label"
+    >
+      
+        Baz
+      
+    </span>
+  </label>
+</div>
+`;
+
+exports[`Storyshots VRadio/desktop disabled 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <span>
+    State: foo
+  </span>
+   
+  <label
+    class="theme-default v-radio is-disabled"
+    disabled="disabled"
+    name="value"
+  >
+    <input
+      class="v-radio-input"
+      disabled="disabled"
+      name="value"
+      type="radio"
+    />
+     
+    <span
+      class="v-radio-box"
+    />
+     
+    <span
+      class="v-radio-label"
+    >
+      
+        Foo
+      
+    </span>
+  </label>
+   
+  <label
+    class="theme-default v-radio is-disabled"
+    disabled="disabled"
+    name="value"
+  >
+    <input
+      class="v-radio-input"
+      disabled="disabled"
+      name="value"
+      type="radio"
+    />
+     
+    <span
+      class="v-radio-box"
+    />
+     
+    <span
+      class="v-radio-label"
+    >
+      
+        Bar
+      
+    </span>
+  </label>
+   
+  <label
+    class="theme-default v-radio is-disabled"
+    disabled="disabled"
+    name="value"
+  >
+    <input
+      class="v-radio-input"
+      disabled="disabled"
+      name="value"
+      type="radio"
+    />
+     
+    <span
+      class="v-radio-box"
+    />
+     
+    <span
+      class="v-radio-label"
+    >
+      
+        Baz
+      
+    </span>
+  </label>
+</div>
+`;
+
+exports[`Storyshots VRadio/desktop error 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <span>
+    State: foo
+  </span>
+   
+  <label
+    class="theme-default v-radio is-error"
+    name="value"
+  >
+    <input
+      class="v-radio-input"
+      name="value"
+      type="radio"
+    />
+     
+    <span
+      class="v-radio-box"
+    />
+     
+    <span
+      class="v-radio-label"
+    >
+      
+        Foo
+      
+    </span>
+  </label>
+   
+  <label
+    class="theme-default v-radio is-error"
+    name="value"
+  >
+    <input
+      class="v-radio-input"
+      name="value"
+      type="radio"
+    />
+     
+    <span
+      class="v-radio-box"
+    />
+     
+    <span
+      class="v-radio-label"
+    >
+      
+        Bar
+      
+    </span>
+  </label>
+   
+  <label
+    class="theme-default v-radio is-error"
+    name="value"
+  >
+    <input
+      class="v-radio-input"
+      name="value"
+      type="radio"
+    />
+     
+    <span
+      class="v-radio-box"
+    />
+     
+    <span
+      class="v-radio-label"
+    >
+      
+        Baz
+      
+    </span>
+  </label>
+</div>
+`;
+
 exports[`Storyshots VSelect/desktop disabled 1`] = `
 <div>
   <div
