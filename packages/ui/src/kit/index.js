@@ -33,3 +33,4 @@ export { default as VModalCard } from '@/kit/VModal/VModalCard';
 export { default as VModalInfoCard } from '@/kit/VModal/VModalInfoCard';
 export { default as VProgressCircle } from '@/kit/VProgressCircle';
 export { default as VTag } from '@/kit/VTag';
+export { default as VAccordion } from '@/kit/VAccordion';
