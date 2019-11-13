@@ -3111,6 +3111,95 @@ exports[`Storyshots VDateBadge/desktop default 1`] = `
 </div>
 `;
 
+exports[`Storyshots VDateInput/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div
+    class="theme-default v-date-input"
+  >
+    <div
+      class="v-date-input-field"
+    >
+      <span
+        class="input-atom theme-default"
+      >
+        <input
+          class="input-atom-control"
+        />
+         
+      </span>
+       
+      <div
+        class="v-date-input-field-icon"
+      >
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-calendar"
+            y="0"
+          />
+        </svg>
+      </div>
+    </div>
+     
+    <!---->
+  </div>
+</div>
+`;
+
+exports[`Storyshots VDateInput/desktop disabled 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div
+    class="theme-default v-date-input"
+    disabled="disabled"
+  >
+    <div
+      class="v-date-input-field"
+    >
+      <span
+        class="input-atom theme-default"
+        disabled="disabled"
+      >
+        <input
+          class="input-atom-control"
+          disabled="disabled"
+        />
+         
+      </span>
+       
+      <div
+        class="v-date-input-field-icon"
+      >
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-calendar"
+            y="0"
+          />
+        </svg>
+      </div>
+    </div>
+     
+    <!---->
+  </div>
+</div>
+`;
+
 exports[`Storyshots VDescription/desktop default 1`] = `
 <div>
   <div
@@ -3804,58 +3893,60 @@ exports[`Storyshots VHeader/desktop default 1`] = `
       Item three
     </a>
      
-    <section
-      class="v-nav-sub-menu theme-default"
-    >
-      <a
-        class="theme-default navigation-control-atom"
-        role="button"
-      >
-        
-    Sub-menu
-    
-        <i
-          class="v-nav-sub-menu-icon"
-        >
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-chevron-down"
-              y="0"
-            />
-          </svg>
-        </i>
-      </a>
-       
+    <div>
       <section
-        class="v-nav-sub-menu-content"
+        class="v-nav-sub-menu theme-default"
       >
         <a
           class="theme-default navigation-control-atom"
           role="button"
         >
-          Item four
+          
+        Sub-menu
+        
+          <i
+            class="v-nav-sub-menu-icon"
+          >
+            <svg
+              class="svg-atom theme-default"
+              height="100%"
+              width="100%"
+            >
+              <use
+                x="0"
+                xlink:href="#endpass-ui-icon-chevron-down"
+                y="0"
+              />
+            </svg>
+          </i>
         </a>
          
-        <a
-          class="theme-default navigation-control-atom"
-          role="button"
+        <section
+          class="v-nav-sub-menu-content"
         >
-          Item five
-        </a>
-         
-        <a
-          class="theme-default navigation-control-atom"
-          role="button"
-        >
-          Item six
-        </a>
+          <a
+            class="theme-default navigation-control-atom"
+            role="button"
+          >
+            Item four
+          </a>
+           
+          <a
+            class="theme-default navigation-control-atom"
+            role="button"
+          >
+            Item five
+          </a>
+           
+          <a
+            class="theme-default navigation-control-atom"
+            role="button"
+          >
+            Item six
+          </a>
+        </section>
       </section>
-    </section>
+    </div>
   </header>
 </div>
 `;
@@ -5144,58 +5235,60 @@ exports[`Storyshots VNavSidebar/desktop default 1`] = `
         Item three
       </a>
        
-      <section
-        class="v-nav-sub-menu theme-default"
-      >
-        <a
-          class="theme-default navigation-control-atom"
-          role="button"
-        >
-          
-    Sub-menu
-    
-          <i
-            class="v-nav-sub-menu-icon"
-          >
-            <svg
-              class="svg-atom theme-default"
-              height="100%"
-              width="100%"
-            >
-              <use
-                x="0"
-                xlink:href="#endpass-ui-icon-chevron-down"
-                y="0"
-              />
-            </svg>
-          </i>
-        </a>
-         
+      <div>
         <section
-          class="v-nav-sub-menu-content"
+          class="v-nav-sub-menu theme-default"
         >
           <a
             class="theme-default navigation-control-atom"
             role="button"
           >
-            Item four
+            
+        Sub-menu
+        
+            <i
+              class="v-nav-sub-menu-icon"
+            >
+              <svg
+                class="svg-atom theme-default"
+                height="100%"
+                width="100%"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-chevron-down"
+                  y="0"
+                />
+              </svg>
+            </i>
           </a>
            
-          <a
-            class="theme-default navigation-control-atom"
-            role="button"
+          <section
+            class="v-nav-sub-menu-content"
           >
-            Item five
-          </a>
-           
-          <a
-            class="theme-default navigation-control-atom"
-            role="button"
-          >
-            Item six
-          </a>
+            <a
+              class="theme-default navigation-control-atom"
+              role="button"
+            >
+              Item four
+            </a>
+             
+            <a
+              class="theme-default navigation-control-atom"
+              role="button"
+            >
+              Item five
+            </a>
+             
+            <a
+              class="theme-default navigation-control-atom"
+              role="button"
+            >
+              Item six
+            </a>
+          </section>
         </section>
-      </section>
+      </div>
     </header>
      
     <div
@@ -5823,58 +5916,60 @@ exports[`Storyshots VNavSubMenu/desktop default 1`] = `
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
-  <section
-    class="v-nav-sub-menu theme-default"
-  >
-    <a
-      class="theme-default navigation-control-atom"
-      role="button"
-    >
-      
-    Submenu
-    
-      <i
-        class="v-nav-sub-menu-icon"
-      >
-        <svg
-          class="svg-atom theme-default"
-          height="100%"
-          width="100%"
-        >
-          <use
-            x="0"
-            xlink:href="#endpass-ui-icon-chevron-down"
-            y="0"
-          />
-        </svg>
-      </i>
-    </a>
-     
+  <div>
     <section
-      class="v-nav-sub-menu-content"
+      class="v-nav-sub-menu theme-default"
     >
       <a
         class="theme-default navigation-control-atom"
         role="button"
       >
-        Item one
+        
+        Submenu
+        
+        <i
+          class="v-nav-sub-menu-icon"
+        >
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-chevron-down"
+              y="0"
+            />
+          </svg>
+        </i>
       </a>
        
-      <a
-        class="theme-default navigation-control-atom"
-        role="button"
+      <section
+        class="v-nav-sub-menu-content"
       >
-        Item two
-      </a>
-       
-      <a
-        class="theme-default navigation-control-atom"
-        role="button"
-      >
-        Item three
-      </a>
+        <a
+          class="theme-default navigation-control-atom"
+          role="button"
+        >
+          Item one
+        </a>
+         
+        <a
+          class="theme-default navigation-control-atom"
+          role="button"
+        >
+          Item two
+        </a>
+         
+        <a
+          class="theme-default navigation-control-atom"
+          role="button"
+        >
+          Item three
+        </a>
+      </section>
     </section>
-  </section>
+  </div>
 </div>
 `;
 

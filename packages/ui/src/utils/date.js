@@ -7,7 +7,7 @@ import chunk from 'lodash.chunk';
  * @property {number|string} [params.month]
  * @returns {Array<CalendarDay[]>}
  */
-export const getMonthCalendar = (target) => {
+export const getFullCalendarMonth = (target) => {
   const days = [];
   const now = dayjs()
   const targetDate = target || dayjs();
@@ -37,5 +37,5 @@ export const getMonthCalendar = (target) => {
 };
 
 export default {
-  getMonthCalendar,
+  getFullCalendarMonth,
 }
