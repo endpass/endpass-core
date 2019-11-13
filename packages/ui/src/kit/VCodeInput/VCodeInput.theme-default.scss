@@ -22,3 +22,9 @@
   padding: 0;
   text-align: center;
 }
+
+.v-code-input.theme-default .v-code-input-number input[type=number]::-webkit-inner-spin-button,
+.v-code-input.theme-default .v-code-input-number input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
