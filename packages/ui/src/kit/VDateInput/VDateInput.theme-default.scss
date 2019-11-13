@@ -1,0 +1,128 @@
+.v-date-input.theme-default {
+  position: relative;
+}
+
+.v-date-input.theme-default .v-date-input-field {
+  position: relative;
+}
+
+.v-date-input.theme-default .v-date-input-field-icon {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.v-date-input.theme-default .v-date-input-calendar {
+  position: absolute;
+  padding: 8px 4px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.v-date-input.theme-default .v-date-input-control {
+  width: 40px;
+  height: 40px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fff;
+  background-color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.v-date-input.theme-default .v-date-input-control:hover {
+  background-color: var(--endpass-ui-color-grey-1);
+  border-color: var(--endpass-ui-color-grey-2);
+}
+
+.v-date-input.theme-default .v-date-input-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.v-date-input.theme-default .v-date-input-controls > * {
+  flex: 0 0 auto;
+}
+
+.v-date-input.theme-default .v-date-input-now {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.v-date-input.theme-default .v-date-input-now span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 3px;
+  margin-top: 3px;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.v-date-input.theme-default .v-date-input-now input {
+  flex: 0 0 auto;
+  width: 45px;
+  padding: 4px 7px 2px;
+  font-size: 14px;
+  line-height: 1.3;
+  border-radius: 4px;
+  border: none;
+  background-color: #fff;
+  transition: background-color 0.2s;
+}
+
+.v-date-input.theme-default .v-date-input-now input:focus {
+  background-color: var(--endpass-ui-color-grey-1);
+}
+
+.v-date-input.theme-default .v-date-input-dates {
+  table-layout: fixed;
+}
+
+.v-date-input.theme-default .v-date-input-day {
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.v-date-input.theme-default button.v-date-input-day.is-disabled {
+  cursor: default;
+  color: var(--endpass-ui-color-grey-5);
+}
+
+.v-date-input.theme-default button.v-date-input-day.is-today {
+  position: relative;
+  cursor: default;
+  color: var(--endpass-ui-color-primary-7);
+  font-weight: 700;
+}
+
+.v-date-input.theme-default button.v-date-input-day.is-today:after {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--endpass-ui-color-primary-7);
+}
+
+.v-date-input.theme-default button.v-date-input-day.is-selected {
+  cursor: default;
+  background-color: var(--endpass-ui-color-grey-1);
+  border-color: var(--endpass-ui-color-grey-2);
+  color: var(--endpass-ui-color-black);
+}
+
