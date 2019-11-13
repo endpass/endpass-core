@@ -1,18 +1,22 @@
 <template>
-  <ul :class="vCodeInputCssClass">
+  <ul
+    ref="root"
+    :class="vCodeInputCssClass"
+    @input="onInput"
+  >
     <template v-for="(value, idx) in numbers">
       <li
         :key="`input-${idx}`"
         class="v-code-input-item"
       >
         <input-atom
-          :ref="idx"
           class="v-code-input-number"
           :value="value"
           :disabled="disabled"
+          type="number"
           placeholder="0"
           maxlength="1"
-          @keyup="onKeyUp(idx, $event)"
+          :data-index="idx"
           @paste="onPasteNumber"
         />
       </li>
@@ -66,21 +70,6 @@ export default {
     inputValue() {
       return this.numbers.join('');
     },
-
-    focusTargetIdx() {
-      const unfilledNumberIdx = this.numbers.findIndex(number => number === '');
-
-      if (unfilledNumberIdx === -1) {
-        return this.numbers.length - 1;
-      }
-
-      return unfilledNumberIdx;
-    },
-
-    separatorsCount() {
-      // eslint-disable-next-line
-      return ((this.length / this.interval) >> 0) - 1;
-    },
   },
 
   watch: {
@@ -119,14 +108,15 @@ export default {
     },
 
     focusNumberByIdx(idx) {
-      const targetRef = this.$refs[idx];
+      if (!this.$refs.root) {
+        return;
+      }
 
-      if (!targetRef) return;
+      const input = this.$refs.root.querySelector(`[data-index="${idx}"]`);
 
-      const [targetInputWrapper] = targetRef;
-      const targetInput = targetInputWrapper.$el.querySelector('input');
-
-      targetInput.focus();
+      if (input) {
+        input.focus();
+      }
     },
 
     onPasteNumber(e) {
@@ -142,28 +132,32 @@ export default {
       this.focusNumberByIdx(pasteData.length);
     },
 
-    onPressBackspace(idx) {
-      this.setNumberValueByIndex(idx, '');
-
+    handleBackspace(idx) {
       if (idx === 0) return;
+      this.setNumberValueByIndex(idx, '');
 
       this.focusNumberByIdx(idx - 1);
     },
 
-    onPressKey(idx, e) {
-      this.setNumberValueByIndex(this.focusTargetIdx, e.target.value);
-      this.focusNumberByIdx(this.focusTargetIdx);
+    handleInsertText(idx, value) {
+      this.setNumberValueByIndex(idx, value);
+      this.focusNumberByIdx(idx + 1);
     },
 
-    onKeyUp(idx, e) {
-      switch (e.key) {
-        case 'Tab':
+    onInput(e) {
+      const idx = e.target.getAttribute('data-index') - 0;
+      const value = `${e.target.value}`.split('').pop();
+
+      switch (e.inputType) {
+        case 'insertText':
+        case 'insertCompositionText':
+          this.handleInsertText(idx, value);
           break;
-        case 'Backspace':
-          this.onPressBackspace(idx);
+        case 'deleteContentBackward':
+          this.handleBackspace(idx);
           break;
         default:
-          this.onPressKey(idx, e);
+          break;
       }
     },
 
