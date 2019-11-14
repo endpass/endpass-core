@@ -20,7 +20,11 @@
       <div v-if="isCalendarVisible" class="v-date-input-calendar">
         <close-by-key-atom @close="onCalendarCloseByESC">
           <section class="v-date-input-controls">
-            <button class="v-date-input-control" @click="onClickPreviousMonth">
+            <button
+              class="v-date-input-control"
+              type="button"
+              @click="onClickPreviousMonth"
+            >
               <v-svg-icon name="chevron-left" />
             </button>
             <div class="v-date-input-now">
@@ -34,7 +38,11 @@
                 type="number"
               />
             </div>
-            <button class="v-date-input-control" @click="onClickNextMonth">
+            <button
+              class="v-date-input-control"
+              type="button"
+              @click="onClickNextMonth"
+            >
               <v-svg-icon name="chevron-right" />
             </button>
           </section>
@@ -61,6 +69,7 @@
                   :disabled="
                     !day.inTargetMonth || day.isToday || isSelectedDay(day)
                   "
+                  type="button"
                   @click="onClickDay(day)"
                 >
                   {{ day.origin.date() }}
@@ -116,16 +125,14 @@ export default {
   },
 
   data: () => ({
-    innerMonth: new Date().getMonth(),
-    innerYear: new Date().getFullYear(),
+    innerMonth: null,
+    innerYear: null,
     isCalendarVisible: false,
   }),
 
   computed: {
     vDateInputCssClass() {
-      return Object.assign({}, this.themeCssClass, {
-        'v-date-input': true,
-      });
+      return { ...this.themeCssClass, 'v-date-input': true };
     },
 
     isError() {
@@ -145,6 +152,8 @@ export default {
     },
 
     currentCalendar() {
+      if (!this.isCalendarVisible) return [];
+
       const calendarNativeDate = new Date(this.innerYear, this.innerMonth);
       const calendarDate = dayjs(calendarNativeDate);
 
@@ -160,6 +169,11 @@ export default {
 
   watch: {
     value(val, oldVal) {
+      if (!val) {
+        this.setDefaultInnerDate();
+        return;
+      }
+
       const oldDate = dayjs(oldVal);
       const newDate = dayjs(val);
       const newDateMonth = newDate.month();
@@ -173,6 +187,13 @@ export default {
   },
 
   methods: {
+    setDefaultInnerDate() {
+      const now = new Date();
+
+      this.innerYear = now.getFullYear();
+      this.innerMonth = now.getMonth();
+    },
+
     isSelectedDay({ origin }) {
       if (!this.date) return false;
 
@@ -238,14 +259,12 @@ export default {
   },
 
   mounted() {
-    if (!this.date) return;
-
-    this.innerYear = this.date.year();
-    this.innerMonth = this.date.month();
-  },
-
-  model: {
-    event: 'change',
+    if (!this.date) {
+      this.setDefaultInnerDate();
+    } else {
+      this.innerYear = this.date.year();
+      this.innerMonth = this.date.month();
+    }
   },
 
   mixins: [ThemeMixin],
@@ -258,5 +277,10 @@ export default {
     CloseByKeyAtom,
     OutsideClickAtom,
   },
+
+  model: {
+    event: 'change',
+  },
 };
 </script>
+
