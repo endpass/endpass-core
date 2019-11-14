@@ -3,7 +3,7 @@
     :tabindex="0"
     :class="itemClassName"
 
-    @click="handleClick"
+    @click="onClick"
   >
     <slot>
       <div class="accordion-header">
@@ -58,7 +58,7 @@ export default {
   },
 
   methods: {
-    handleClick() {
+    onClick() {
       this.isOpened = !this.isOpened;
 
       this.$emit('click');
