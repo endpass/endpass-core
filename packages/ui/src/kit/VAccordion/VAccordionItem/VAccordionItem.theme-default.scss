@@ -8,13 +8,13 @@
   }
 
   &:hover {
-    background-color: opacity(var(--endpass-ui-color-grey-2), .25);
+    background-color: rgba(var(--endpass-ui-color-grey-2), .25);
   }
 
   &:focus {
-    background-color: opacity(var(--endpass-ui-color-primary-7), .15);
+    background-color: rgba(var(--endpass-ui-color-primary-7), .15);
     border-top: 1px solid var(--endpass-ui-color-primary-7);
-    box-shadow: 0px -1px 1px -1px opacity(var(--endpass-ui-color-black), .75);
+    box-shadow: 0px -1px 1px -1px rgba(var(--endpass-ui-color-black), .75);
 
     outline: none;
   }
