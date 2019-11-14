@@ -5,22 +5,24 @@
 
     @click="handleClick"
   >
-    <div class="accordion-header">
-      <div class="accordion-title">
-        <slot name="item"></slot>
+    <slot>
+      <div class="accordion-header">
+        <div class="accordion-title">
+          <slot name="title"></slot>
+        </div>
+
+        <v-icon-button
+          :icon="icon"
+          width="20"
+
+          class="accordion-item-icon"
+        ></v-icon-button>
       </div>
 
-      <v-icon-button
-        :icon="icon"
-        :width="20"
-
-        class="accordion-item-icon"
-      ></v-icon-button>
-    </div>
-
-    <div class="accordion-content" v-show="isOpened">
-      <slot name="content"></slot>
-    </div>
+      <div class="accordion-content" v-show="isOpened">
+        <slot name="content"></slot>
+      </div>
+    </slot>
   </div>
 </template>
 
@@ -56,7 +58,7 @@ export default {
 
     itemClassName() {
       return `v-accordion-item ${this.className || ''}`;
-    }
+    },
   },
 
   components: {
