@@ -42,4 +42,16 @@ storiesOf('VDateInput/desktop', module)
         <v-date-input v-model="model" placeholder="Select the date..." @change="onChange" />
       </theme-provider>
     `,
+  }))
+  .add('with label', () => ({
+    data: () => ({
+      model: new Date(),
+    }),
+    methods,
+    components: { VDateInput },
+    template: `
+      <theme-provider>
+        <v-date-input v-model="model" label="Input label" placeholder="select the date..." @change="onChange" />
+      </theme-provider>
+    `,
   }));
