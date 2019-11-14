@@ -8,7 +8,7 @@
     <slot>
       <div class="accordion-header">
         <div class="accordion-title">
-          <slot name="title"></slot>
+          <slot name="title" />
         </div>
 
         <v-icon-button
@@ -16,26 +16,25 @@
           width="20"
 
           class="accordion-item-icon"
-        ></v-icon-button>
+        />
       </div>
 
-      <div class="accordion-content" v-show="isOpened">
-        <slot name="content"></slot>
+      <div
+        v-show="isOpened"
+        class="accordion-content"
+      >
+        <slot name="content" />
       </div>
     </slot>
   </div>
 </template>
 
 <script>
-import ThemeMixin from '@/mixins/ThemeMixin';
 import VIconButton from '@endpass/ui/kit/VIconButton';
+import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
   name: 'VAccordionItem',
-
-  data: () => ({
-    isOpened: false,
-  }),
 
   props: {
     className: {
@@ -44,13 +43,9 @@ export default {
     },
   },
 
-  methods: {
-    handleClick() {
-      this.isOpened = !this.isOpened;
-
-      this.$emit('click');
-    },
-  },
+  data: () => ({
+    isOpened: false,
+  }),
 
   computed: {
     icon() {
@@ -59,6 +54,14 @@ export default {
 
     itemClassName() {
       return `v-accordion-item ${this.className || ''}`;
+    },
+  },
+
+  methods: {
+    handleClick() {
+      this.isOpened = !this.isOpened;
+
+      this.$emit('click');
     },
   },
 
