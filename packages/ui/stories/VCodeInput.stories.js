@@ -16,6 +16,15 @@ storiesOf('VCodeInput/desktop', module)
       </theme-provider>
     `,
   }))
+  .add('error', () => ({
+    methods,
+    components: { VCodeInput },
+    template: `
+      <theme-provider>
+        <v-code-input @input="onInput" error="Error message here" />
+      </theme-provider>
+    `,
+  }))
   .add('disabled', () => ({
     methods,
     components: { VCodeInput },

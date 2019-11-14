@@ -2837,9 +2837,15 @@ exports[`Storyshots VCodeInput/desktop custom length 1`] = `
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
-  <ul
+  <div
     class="theme-default v-code-input"
-  />
+  >
+    <ul
+      class="v-code-input-container"
+    />
+     
+    <!---->
+  </div>
 </div>
 `;
 
@@ -2849,9 +2855,15 @@ exports[`Storyshots VCodeInput/desktop default 1`] = `
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
-  <ul
+  <div
     class="theme-default v-code-input"
-  />
+  >
+    <ul
+      class="v-code-input-container"
+    />
+     
+    <!---->
+  </div>
 </div>
 `;
 
@@ -2861,9 +2873,39 @@ exports[`Storyshots VCodeInput/desktop disabled 1`] = `
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
-  <ul
+  <div
     class="theme-default v-code-input"
+  >
+    <ul
+      class="v-code-input-container"
+    />
+     
+    <!---->
+  </div>
+</div>
+`;
+
+exports[`Storyshots VCodeInput/desktop error 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
+   
+  <div
+    class="theme-default v-code-input"
+  >
+    <ul
+      class="v-code-input-container"
+    />
+     
+    <div
+      class="error-atom theme-default"
+    >
+      
+  Error message here
+
+    </div>
+  </div>
 </div>
 `;
 
@@ -2878,9 +2920,15 @@ exports[`Storyshots VCodeInput/desktop splitting interval 1`] = `
     Each 1
   </p>
    
-  <ul
+  <div
     class="theme-default v-code-input"
-  />
+  >
+    <ul
+      class="v-code-input-container"
+    />
+     
+    <!---->
+  </div>
    
   <p />
    
@@ -2889,9 +2937,15 @@ exports[`Storyshots VCodeInput/desktop splitting interval 1`] = `
     Each 2
   </p>
    
-  <ul
+  <div
     class="theme-default v-code-input"
-  />
+  >
+    <ul
+      class="v-code-input-container"
+    />
+     
+    <!---->
+  </div>
    
   <p />
    
@@ -2900,9 +2954,15 @@ exports[`Storyshots VCodeInput/desktop splitting interval 1`] = `
     Each 3
   </p>
    
-  <ul
+  <div
     class="theme-default v-code-input"
-  />
+  >
+    <ul
+      class="v-code-input-container"
+    />
+     
+    <!---->
+  </div>
    
   <p />
    
@@ -2911,9 +2971,15 @@ exports[`Storyshots VCodeInput/desktop splitting interval 1`] = `
     Each 5
   </p>
    
-  <ul
+  <div
     class="theme-default v-code-input"
-  />
+  >
+    <ul
+      class="v-code-input-container"
+    />
+     
+    <!---->
+  </div>
    
   <p />
    
@@ -2922,9 +2988,15 @@ exports[`Storyshots VCodeInput/desktop splitting interval 1`] = `
     Each 10
   </p>
    
-  <ul
+  <div
     class="theme-default v-code-input"
-  />
+  >
+    <ul
+      class="v-code-input-container"
+    />
+     
+    <!---->
+  </div>
    
   <p />
    
@@ -2943,9 +3015,15 @@ exports[`Storyshots VCodeInput/desktop v-model 1`] = `
     <input />
   </p>
    
-  <ul
+  <div
     class="theme-default v-code-input"
-  />
+  >
+    <ul
+      class="v-code-input-container"
+    />
+     
+    <!---->
+  </div>
 </div>
 `;
 

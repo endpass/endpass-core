@@ -1,37 +1,47 @@
 <template>
-  <ul
+  <div
     ref="root"
     :class="vCodeInputCssClass"
-    @input="onInput"
   >
-    <template v-for="(value, idx) in numbers">
-      <li
-        :key="`input-${idx}`"
-        class="v-code-input-item"
-      >
-        <input-atom
-          class="v-code-input-number"
-          :value="value"
-          :disabled="disabled"
-          type="number"
-          placeholder="0"
-          maxlength="1"
-          :data-index="idx"
-          @paste="onPasteNumber"
+    <ul
+      class="v-code-input-container"
+      @input="onInput"
+    >
+      <template v-for="(value, idx) in numbers">
+        <li
+          :key="`input-${idx}`"
+          class="v-code-input-item"
+        >
+          <input-atom
+            class="v-code-input-number"
+            :value="value"
+            :disabled="disabled"
+            type="number"
+            placeholder="0"
+            maxlength="1"
+            :data-index="idx"
+            :is-error="isError"
+            @paste="onPasteNumber"
+          />
+        </li>
+        <li
+          v-if="isNeedSeparator(idx + 1)"
+          :key="`separator-${idx}`"
+          class="v-code-input-item is-delimeter"
         />
-      </li>
-      <li
-        v-if="isNeedSeparator(idx + 1)"
-        :key="`separator-${idx}`"
-        class="v-code-input-item is-delimeter"
-      />
-    </template>
-  </ul>
+      </template>
+    </ul>
+    <error-atom
+      v-if="isError"
+      :error="error"
+    />
+  </div>
 </template>
 
 <script>
 import InputAtom from '@/atom/input-atom/input-atom';
 import ThemeMixin from '@/mixins/ThemeMixin';
+import ErrorAtom from '@/atom/error-atom/error-atom';
 
 export default {
   name: 'VCodeInput',
@@ -56,6 +66,11 @@ export default {
       type: Number,
       default: 3,
     },
+
+    error: {
+      type: String,
+      default: '',
+    },
   },
 
   data: () => ({
@@ -69,6 +84,10 @@ export default {
 
     inputValue() {
       return this.numbers.join('');
+    },
+
+    isError() {
+      return !!this.error;
     },
   },
 
@@ -173,6 +192,7 @@ export default {
   mixins: [ThemeMixin],
 
   components: {
+    ErrorAtom,
     InputAtom,
   },
 };

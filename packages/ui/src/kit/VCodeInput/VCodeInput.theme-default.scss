@@ -1,5 +1,10 @@
 .v-code-input.theme-default {
   display: flex;
+  flex-direction: column;
+}
+
+.v-code-input.theme-default .v-code-input-container {
+  display: flex;
   align-items: center;
   margin: 0 -2px;
   padding: 0;
