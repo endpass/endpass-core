@@ -14,7 +14,7 @@ export default {
   props: {
     className: {
       type: String,
-      default: '',
+      default: null,
     },
   },
   computed: {
