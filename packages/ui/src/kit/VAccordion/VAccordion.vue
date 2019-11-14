@@ -17,7 +17,7 @@ export default {
   },
   computed: {
     accordionClassName() {
-      return `accordion ${this.classNames.accordion || ''}`;
+      return `v-accordion ${this.classNames.accordion || ''}`;
     },
   },
   mixins: [ThemeMixin],

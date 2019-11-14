@@ -4,19 +4,19 @@
     :class="itemClassName"
     @click="onClick"
   >
-    <div class="accordion-header">
-      <div class="accordion-title">
+    <div class="v-accordion-header">
+      <div class="v-accordion-title">
         <slot name="title" />
       </div>
       <icon-button-atom
         :icon="icon"
         width="20"
-        class="accordion-item-icon"
+        class="v-accordion-item-icon"
       />
     </div>
     <div
       v-show="isOpened"
-      class="accordion-content"
+      class="v-accordion-content"
     >
       <slot />
     </div>
