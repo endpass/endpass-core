@@ -99,8 +99,8 @@ export default {
   },
 
   data: () => ({
-    innerMonth: 0,
-    innerYear: 2000,
+    innerMonth: new Date().getMonth(),
+    innerYear: new Date().getFullYear(),
     isCalendarVisible: false,
   }),
 
@@ -112,6 +112,8 @@ export default {
     },
 
     date() {
+      if (!this.value) return null
+
       return dayjs(this.value);
     },
 
@@ -129,6 +131,8 @@ export default {
     },
 
     formattedValue() {
+      if (!this.date) return ''
+
       return this.date.format('YYYY/MM/DD');
     },
   },
@@ -149,6 +153,8 @@ export default {
 
   methods: {
     isSelectedDay({ origin }) {
+      if (!this.date) return false
+
       return (
         this.date.date() === origin.date() &&
         this.date.month() === origin.month() &&
@@ -211,6 +217,8 @@ export default {
   },
 
   mounted() {
+    if (!this.date) return
+
     this.innerYear = this.date.year();
     this.innerMonth = this.date.month();
   },
