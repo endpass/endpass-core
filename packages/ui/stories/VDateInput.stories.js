@@ -30,4 +30,16 @@ storiesOf('VDateInput/desktop', module)
         <v-date-input v-model="model" :disabled="true" @change="onChange" />
       </theme-provider>
     `,
+  }))
+  .add('empty initial state', () => ({
+    data: () => ({
+      model: null,
+    }),
+    methods,
+    components: { VDateInput },
+    template: `
+      <theme-provider>
+        <v-date-input v-model="model" placeholder="Select the date..." @change="onChange" />
+      </theme-provider>
+    `,
   }));
