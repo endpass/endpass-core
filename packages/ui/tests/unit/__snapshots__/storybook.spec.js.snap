@@ -3201,30 +3201,38 @@ exports[`Storyshots VDateInput/desktop default 1`] = `
     <div
       class="v-date-input-field"
     >
-      <span
-        class="input-atom theme-default"
-      >
-        <input
-          class="input-atom-control"
-        />
-         
-      </span>
+      <!---->
        
       <div
-        class="v-date-input-field-icon"
+        class="v-date-input-field-inner"
       >
-        <svg
-          class="svg-atom theme-default"
-          height="100%"
-          width="100%"
+        <span
+          class="input-atom theme-default"
         >
-          <use
-            x="0"
-            xlink:href="#endpass-ui-icon-calendar"
-            y="0"
+          <input
+            class="input-atom-control"
           />
-        </svg>
+           
+        </span>
+         
+        <div
+          class="v-date-input-field-icon"
+        >
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-calendar"
+              y="0"
+            />
+          </svg>
+        </div>
       </div>
+       
+      <!---->
     </div>
      
     <!---->
@@ -3245,32 +3253,40 @@ exports[`Storyshots VDateInput/desktop disabled 1`] = `
     <div
       class="v-date-input-field"
     >
-      <span
-        class="input-atom theme-default"
-        disabled="disabled"
-      >
-        <input
-          class="input-atom-control"
-          disabled="disabled"
-        />
-         
-      </span>
+      <!---->
        
       <div
-        class="v-date-input-field-icon"
+        class="v-date-input-field-inner"
       >
-        <svg
-          class="svg-atom theme-default"
-          height="100%"
-          width="100%"
+        <span
+          class="input-atom theme-default"
+          disabled="disabled"
         >
-          <use
-            x="0"
-            xlink:href="#endpass-ui-icon-calendar"
-            y="0"
+          <input
+            class="input-atom-control"
+            disabled="disabled"
           />
-        </svg>
+           
+        </span>
+         
+        <div
+          class="v-date-input-field-icon"
+        >
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-calendar"
+              y="0"
+            />
+          </svg>
+        </div>
       </div>
+       
+      <!---->
     </div>
      
     <!---->
@@ -3291,31 +3307,164 @@ exports[`Storyshots VDateInput/desktop empty initial state 1`] = `
     <div
       class="v-date-input-field"
     >
-      <span
-        class="input-atom theme-default"
-      >
-        <input
-          class="input-atom-control"
-          placeholder="Select the date..."
-        />
-         
-      </span>
+      <!---->
        
       <div
-        class="v-date-input-field-icon"
+        class="v-date-input-field-inner"
       >
-        <svg
-          class="svg-atom theme-default"
-          height="100%"
-          width="100%"
+        <span
+          class="input-atom theme-default"
         >
-          <use
-            x="0"
-            xlink:href="#endpass-ui-icon-calendar"
-            y="0"
+          <input
+            class="input-atom-control"
+            placeholder="Select the date..."
           />
-        </svg>
+           
+        </span>
+         
+        <div
+          class="v-date-input-field-icon"
+        >
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-calendar"
+              y="0"
+            />
+          </svg>
+        </div>
       </div>
+       
+      <!---->
+    </div>
+     
+    <!---->
+  </div>
+</div>
+`;
+
+exports[`Storyshots VDateInput/desktop error 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div
+    class="theme-default v-date-input"
+    placeholder="Select the date..."
+  >
+    <div
+      class="v-date-input-field"
+    >
+      <label
+        class="label-atom theme-default"
+      >
+        
+  Input label
+
+      </label>
+       
+      <div
+        class="v-date-input-field-inner"
+      >
+        <span
+          class="input-atom theme-default is-error"
+        >
+          <input
+            class="input-atom-control"
+            is-error="true"
+            placeholder="Select the date..."
+          />
+           
+        </span>
+         
+        <div
+          class="v-date-input-field-icon"
+        >
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-calendar"
+              y="0"
+            />
+          </svg>
+        </div>
+      </div>
+       
+      <div
+        class="error-atom theme-default"
+      >
+        
+  Error
+
+      </div>
+    </div>
+     
+    <!---->
+  </div>
+</div>
+`;
+
+exports[`Storyshots VDateInput/desktop with label 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div
+    class="theme-default v-date-input"
+    placeholder="select the date..."
+  >
+    <div
+      class="v-date-input-field"
+    >
+      <label
+        class="label-atom theme-default"
+      >
+        
+  Input label
+
+      </label>
+       
+      <div
+        class="v-date-input-field-inner"
+      >
+        <span
+          class="input-atom theme-default"
+        >
+          <input
+            class="input-atom-control"
+            placeholder="select the date..."
+          />
+           
+        </span>
+         
+        <div
+          class="v-date-input-field-icon"
+        >
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-calendar"
+              y="0"
+            />
+          </svg>
+        </div>
+      </div>
+       
+      <!---->
     </div>
      
     <!---->

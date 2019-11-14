@@ -2,15 +2,20 @@
   <outside-click-atom @click="onClickOutside">
     <div :class="vDateInputCssClass">
       <div class="v-date-input-field">
-        <input-atom
-          v-bind="$attrs"
-          :value="formattedValue"
-          @focus="onFocusInput"
-          @blur="onBlurInput"
-        />
-        <div class="v-date-input-field-icon">
-          <v-svg-icon name="calendar" />
+        <label-atom v-if="label" :label="label" />
+        <div class="v-date-input-field-inner">
+          <input-atom
+            v-bind="$attrs"
+            :value="formattedValue"
+            :is-error="isError"
+            @focus="onFocusInput"
+            @blur="onBlurInput"
+          />
+          <div class="v-date-input-field-icon">
+            <v-svg-icon name="calendar" />
+          </div>
         </div>
+        <error-atom v-if="isError" :error="error" />
       </div>
       <div v-if="isCalendarVisible" class="v-date-input-calendar">
         <close-by-key-atom @close="onCalendarCloseByESC">
@@ -75,6 +80,8 @@ import { getFullCalendarMonth } from '@/utils/date';
 import ThemeMixin from '@/mixins/ThemeMixin';
 import VSvgIcon from '@/kit/VSvgIcon';
 import InputAtom from '@/atom/input-atom/input-atom';
+import LabelAtom from '@/atom/label-atom/label-atom';
+import ErrorAtom from '@/atom/error-atom/error-atom';
 import CloseByKeyAtom from '@/atom/close-by-key-atom/close-by-key-atom';
 import OutsideClickAtom from '@/atom/outside-click-atom/outside-click-atom';
 
@@ -96,6 +103,16 @@ export default {
       type: Number,
       default: 2100,
     },
+
+    label: {
+      type: String,
+      default: '',
+    },
+
+    error: {
+      type: String,
+      default: '',
+    },
   },
 
   data: () => ({
@@ -111,8 +128,12 @@ export default {
       });
     },
 
+    isError() {
+      return !!this.error;
+    },
+
     date() {
-      if (!this.value) return null
+      if (!this.value) return null;
 
       return dayjs(this.value);
     },
@@ -131,7 +152,7 @@ export default {
     },
 
     formattedValue() {
-      if (!this.date) return ''
+      if (!this.date) return '';
 
       return this.date.format('YYYY/MM/DD');
     },
@@ -153,7 +174,7 @@ export default {
 
   methods: {
     isSelectedDay({ origin }) {
-      if (!this.date) return false
+      if (!this.date) return false;
 
       return (
         this.date.date() === origin.date() &&
@@ -217,7 +238,7 @@ export default {
   },
 
   mounted() {
-    if (!this.date) return
+    if (!this.date) return;
 
     this.innerYear = this.date.year();
     this.innerMonth = this.date.month();
@@ -231,7 +252,9 @@ export default {
 
   components: {
     VSvgIcon,
+    LabelAtom,
     InputAtom,
+    ErrorAtom,
     CloseByKeyAtom,
     OutsideClickAtom,
   },
