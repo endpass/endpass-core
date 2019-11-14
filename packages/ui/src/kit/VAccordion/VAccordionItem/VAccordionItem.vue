@@ -5,27 +5,25 @@
 
     @click="onClick"
   >
-    <slot>
-      <div class="accordion-header">
-        <div class="accordion-title">
-          <slot name="title" />
-        </div>
-
-        <v-icon-button
-          :icon="icon"
-          width="20"
-
-          class="accordion-item-icon"
-        />
+    <div class="accordion-header">
+      <div class="accordion-title">
+        <slot name="title" />
       </div>
 
-      <div
-        v-show="isOpened"
-        class="accordion-content"
-      >
-        <slot name="content" />
-      </div>
-    </slot>
+      <v-icon-button
+        :icon="icon"
+        width="20"
+
+        class="accordion-item-icon"
+      />
+    </div>
+
+    <div
+      v-show="isOpened"
+      class="accordion-content"
+    >
+      <slot />
+    </div>
   </div>
 </template>
 
