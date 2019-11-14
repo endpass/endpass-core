@@ -8,7 +8,7 @@
       <div class="accordion-title">
         <slot name="title" />
       </div>
-      <v-icon-button
+      <icon-button-atom
         :icon="icon"
         width="20"
         class="accordion-item-icon"
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import VIconButton from '@endpass/ui/kit/VIconButton';
+import IconButtonAtom from '@/atom/icon-button-atom/icon-button-atom.vue';
 import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
@@ -55,7 +55,7 @@ export default {
   },
   mixins: [ThemeMixin],
   components: {
-    VIconButton,
+    IconButtonAtom,
   },
 };
 </script>
