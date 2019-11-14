@@ -1,6 +1,7 @@
 <template>
   <div
-    :class="vAccordionCssClass"
+    class="v-accordion"
+    :class="themeCssClass"
   >
     <slot />
   </div>
@@ -11,13 +12,6 @@ import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
   name: 'VAccordion',
-  computed: {
-    vAccordionCssClass() {
-      return Object.assign(this.themeCssClass, {
-        'v-accordion': true,
-      });
-    },
-  },
   mixins: [ThemeMixin],
 };
 </script>

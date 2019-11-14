@@ -1,7 +1,8 @@
 <template>
   <div
     :tabindex="0"
-    :class="vAccordionItemCssClass"
+    class="v-accordion-item"
+    :class="themeCssClass"
     @click="onClick"
   >
     <div class="v-accordion-header">
@@ -35,11 +36,6 @@ export default {
   computed: {
     icon() {
       return this.isOpened ? 'chevron-up' : 'chevron-down';
-    },
-    vAccordionItemCssClass() {
-      return Object.assign(this.themeCssClass, {
-        'v-accordion-item': true,
-      });
     },
   },
   methods: {
