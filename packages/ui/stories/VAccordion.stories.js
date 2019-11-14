@@ -7,12 +7,12 @@ storiesOf('VAccordion/desktop', module)
     components: { VAccordion, VAccordionItem },
     template: `
       <theme-provider>
-        <v-accordion :className="custom-accordion-class">
-          <v-accordion-item :className="custom-item-class">
+        <v-accordion class="custom-accordion-class">
+          <v-accordion-item class="custom-item-class">
             <template v-slot:title>Item #1</template>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           </v-accordion-item>
-          <v-accordion-item :className="custom-item-class">
+          <v-accordion-item class="custom-item-class">
             <template v-slot:title>Item #2</template>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -21,7 +21,7 @@ storiesOf('VAccordion/desktop', module)
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </v-accordion-item>
-          <v-accordion-item :className="custom-item-class">
+          <v-accordion-item class="custom-item-class">
             <template v-slot:title>Item #3</template>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </v-accordion-item>

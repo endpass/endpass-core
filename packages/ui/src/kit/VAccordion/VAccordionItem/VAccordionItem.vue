@@ -29,12 +29,6 @@ import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
   name: 'VAccordionItem',
-  props: {
-    className: {
-      type: String,
-      default: null,
-    },
-  },
   data: () => ({
     isOpened: false,
   }),
@@ -45,7 +39,6 @@ export default {
     vAccordionItemCssClass() {
       return Object.assign(this.themeCssClass, {
         'v-accordion-item': true,
-        [this.className]: this.className || false,
       });
     },
   },
