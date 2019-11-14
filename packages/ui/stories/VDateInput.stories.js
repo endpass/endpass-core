@@ -31,6 +31,18 @@ storiesOf('VDateInput/desktop', module)
       </theme-provider>
     `,
   }))
+  .add('error', () => ({
+    data: () => ({
+      model: new Date(),
+    }),
+    methods,
+    components: { VDateInput },
+    template: `
+      <theme-provider>
+        <v-date-input v-model="model" placeholder="Select the date..." label="Input label" error="Error" @change="onChange" />
+      </theme-provider>
+    `,
+  }))
   .add('empty initial state', () => ({
     data: () => ({
       model: null,

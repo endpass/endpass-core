@@ -3,15 +3,19 @@
     <div :class="vDateInputCssClass">
       <div class="v-date-input-field">
         <label-atom v-if="label" :label="label" />
-        <input-atom
-          v-bind="$attrs"
-          :value="formattedValue"
-          @focus="onFocusInput"
-          @blur="onBlurInput"
-        />
-        <div class="v-date-input-field-icon">
-          <v-svg-icon name="calendar" />
+        <div class="v-date-input-field-inner">
+          <input-atom
+            v-bind="$attrs"
+            :value="formattedValue"
+            :is-error="isError"
+            @focus="onFocusInput"
+            @blur="onBlurInput"
+          />
+          <div class="v-date-input-field-icon">
+            <v-svg-icon name="calendar" />
+          </div>
         </div>
+        <error-atom v-if="isError" :error="error" />
       </div>
       <div v-if="isCalendarVisible" class="v-date-input-calendar">
         <close-by-key-atom @close="onCalendarCloseByESC">
@@ -77,6 +81,7 @@ import ThemeMixin from '@/mixins/ThemeMixin';
 import VSvgIcon from '@/kit/VSvgIcon';
 import InputAtom from '@/atom/input-atom/input-atom';
 import LabelAtom from '@/atom/label-atom/label-atom';
+import ErrorAtom from '@/atom/error-atom/error-atom';
 import CloseByKeyAtom from '@/atom/close-by-key-atom/close-by-key-atom';
 import OutsideClickAtom from '@/atom/outside-click-atom/outside-click-atom';
 
@@ -101,8 +106,13 @@ export default {
 
     label: {
       type: String,
-      default: ''
-    }
+      default: '',
+    },
+
+    error: {
+      type: String,
+      default: '',
+    },
   },
 
   data: () => ({
@@ -116,6 +126,10 @@ export default {
       return Object.assign({}, this.themeCssClass, {
         'v-date-input': true,
       });
+    },
+
+    isError() {
+      return !!this.error;
     },
 
     date() {
@@ -240,6 +254,7 @@ export default {
     VSvgIcon,
     LabelAtom,
     InputAtom,
+    ErrorAtom,
     CloseByKeyAtom,
     OutsideClickAtom,
   },
