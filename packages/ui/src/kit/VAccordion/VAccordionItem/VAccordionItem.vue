@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import ThemeMixin from '@/mixins/ThemeMixin';
 import VIconButton from '@endpass/ui/kit/VIconButton';
 
 export default {
@@ -60,6 +61,8 @@ export default {
       return `v-accordion-item ${this.className || ''}`;
     },
   },
+
+  mixins: [ThemeMixin],
 
   components: {
     VIconButton,
