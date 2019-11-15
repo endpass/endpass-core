@@ -19,28 +19,33 @@
     outline: none;
   }
 
-  &-icon {
+  .v-accordion-item-icon {
     pointer-events: none;
-
     margin-top: 2px !important;
+
+    // Remove focus state of icon in favor of focus state of entire item
+    &:focus {
+      outline: 0;
+      box-shadow: none;
+    }
   }
-}
 
-.v-accordion-header.theme-default {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  .v-accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-  padding: 0 12px;
-  height: 40px;
-}
+    padding: 0 12px;
+    height: 40px;
+  }
 
-.v-accordion-title.theme-default {
-  color: var(--endpass-ui-color-black);
-  font-size: 1em;
-  font-weight: bolder;
-}
+  .v-accordion-title {
+    color: var(--endpass-ui-color-black);
+    font-size: 1em;
+    font-weight: bolder;
+  }
 
-.v-accordion-content.theme-default {
-  padding: 10px 12px 15px;
+  .v-accordion-content {
+    padding: 10px 12px 15px;
+  }
 }
