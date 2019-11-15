@@ -1,5 +1,5 @@
 import commonjs from 'rollup-plugin-commonjs';
-import alias from 'rollup-plugin-alias';
+import alias from '@rollup/plugin-alias';
 import babel from 'rollup-plugin-babel';
 import string from 'rollup-plugin-string';
 import vue from 'rollup-plugin-vue';
@@ -35,8 +35,10 @@ const commonConfig = {
   ],
   plugins: [
     alias({
-      '@': sourceDir,
-      resolve: ['.vue', '.js', '/index.js', '.svg', '.scss'],
+      entries: {
+        '@': sourceDir,
+      },
+      resolve: ['.vue', '.js', '.svg', '.scss'],
     }),
     babel({
       exclude: excludePaths,
