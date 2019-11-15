@@ -13,6 +13,7 @@
         :icon="icon"
         width="20"
         class="v-accordion-item-icon"
+        tabindex="-1"
       />
     </div>
     <div
