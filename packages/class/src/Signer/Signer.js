@@ -1,31 +1,16 @@
-// @ts-check
 import { isHexStrict, hexToBytes } from 'web3-utils';
 import { keccak256s } from 'eth-lib/lib/hash';
-import { sign, decodeSignature } from 'eth-lib/lib/account';
+import {
+  sign,
+  decodeSignature,
+  recover,
+  encodeSignature,
+} from 'eth-lib/lib/account';
 
 export default class Signer {
-  /**
-   * Sign data with private key
-   * @param {string} data Data for signing
-   * @param {string | Buffer} privateKey Private key
-   * @returns {{
-      message: string,
-      messageHash: string,
-      v: string,
-      r: string,
-      s: string,
-      signature: string,
-    }}
-   */
   static sign(data, privateKey) {
-    const message = isHexStrict(data) ? hexToBytes(data) : data;
+    const messageHash = Signer.hashMessage(data);
     const privateKeyString = Signer.privateKeyToStr(privateKey);
-    // @ts-ignore https://github.com/Microsoft/TypeScript/issues/23155
-    const messageBuffer = Buffer.from(message);
-    const preamble = `\u0019Ethereum Signed Message:\n${message.length}`;
-    const preambleBuffer = Buffer.from(preamble);
-    const ethMessage = Buffer.concat([preambleBuffer, messageBuffer]);
-    const messageHash = keccak256s(ethMessage);
     const signature = sign(messageHash, privateKeyString);
     const [v, r, s] = decodeSignature(signature);
 
@@ -39,11 +24,44 @@ export default class Signer {
     };
   }
 
-  /**
-   * Normalize private key to string with valid length
-   * @param {string | Buffer} privateKey
-   * @returns {string}
-   */
+  static hashMessage(data) {
+    const message = isHexStrict(data) ? hexToBytes(data) : data;
+    // @ts-ignore https://github.com/Microsoft/TypeScript/issues/23155
+    const messageBuffer = Buffer.from(message);
+    const preamble = `\u0019Ethereum Signed Message:\n${message.length}`;
+    const preambleBuffer = Buffer.from(preamble);
+    const ethMessage = Buffer.concat([preambleBuffer, messageBuffer]);
+    const messageHash = keccak256s(ethMessage);
+    return messageHash;
+  }
+
+  static recover(message, signature, preFixed) {
+    if (typeof message === 'object') {
+      return Signer.recover(
+        message.messageHash,
+        encodeSignature([message.v, message.r, message.s]),
+        true,
+      );
+    }
+
+    if (arguments.length >= 4) {
+      // arguments struct -> (message, v, r, s, preFixed)
+      // eslint-disable-next-line
+      const args = [].slice.apply(arguments);
+      const preFixedValue = args.slice(-1)[0];
+      const newPreFixed =
+        typeof preFixedValue === 'boolean' ? preFixedValue : false;
+      return Signer.recover(
+        message,
+        encodeSignature(args.slice(1, 4)),
+        newPreFixed,
+      );
+    }
+
+    const recoverMessage = preFixed ? message : Signer.hashMessage(message);
+    return recover(recoverMessage, signature);
+  }
+
   static privateKeyToStr(privateKey) {
     const privateKeyString =
       typeof privateKey === 'string'

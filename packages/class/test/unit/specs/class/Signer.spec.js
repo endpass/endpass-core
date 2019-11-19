@@ -1,4 +1,4 @@
-import { message, signResult } from 'fixtures/sign';
+import { message, signResult, signature, signAddress } from 'fixtures/sign';
 import { privateKeyImport } from 'fixtures/accounts';
 import Signer from '@/Signer';
 
@@ -42,6 +42,38 @@ describe('Signer', () => {
       const res = Signer.sign(message, privateKeyBadLengthForBuffer);
 
       expect(res).toEqual(signResult);
+    });
+  });
+
+  describe('recover', () => {
+    it('should recover message as object', () => {
+      const res = Signer.recover(signResult);
+
+      expect(res).toEqual(signAddress);
+    });
+
+    it('should recover message as [v,r,s] signature', () => {
+      const res = Signer.recover(
+        signResult.messageHash,
+        signResult.v,
+        signResult.r,
+        signResult.s,
+        true,
+      );
+
+      expect(res).toEqual(signAddress);
+    });
+
+    it('should recover message as default with prefixed', () => {
+      const res = Signer.recover(signResult.messageHash, signature, true);
+
+      expect(res).toEqual(signAddress);
+    });
+
+    it('should recover message as default without prefixed', () => {
+      const res = Signer.recover(signResult.message, signature);
+
+      expect(res).toEqual(signAddress);
     });
   });
 });
