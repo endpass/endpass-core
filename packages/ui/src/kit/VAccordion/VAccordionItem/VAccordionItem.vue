@@ -13,6 +13,7 @@
         <slot name="title" />
       </div>
       <icon-button-atom
+        v-if="!hideIcon"
         :icon="icon"
         width="20"
         class="v-accordion-item-icon"
@@ -23,7 +24,7 @@
       v-show="isOpened"
       class="v-accordion-content"
     >
-      <slot v-bind:instance="this" />
+      <slot v-bind:open="open" v-bind:close="close" />
     </div>
   </div>
 </template>
@@ -34,6 +35,12 @@ import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
   name: 'VAccordionItem',
+  props: {
+    hideIcon: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data: () => ({
     isOpened: false,
   }),

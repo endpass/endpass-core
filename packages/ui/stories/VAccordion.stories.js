@@ -50,11 +50,23 @@ storiesOf('VAccordion/desktop', module)
         <v-accordion>
           <v-accordion-item>
             <template v-slot:title>Item #1</template>
-            <template v-slot:default="{ instance }">
+            <template v-slot:default="{ open, close }">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
-              <button @click="instance.open">Open</button>
-              <button @click="instance.close">Close</button>
+              <button @click="open">Open</button>
+              <button @click="close">Close</button>
+            </template>
+          </v-accordion-item>
+        </v-accordion>
+
+        <v-accordion>
+          <v-accordion-item :hideIcon="true">
+            <template v-slot:title>Without icon</template>
+            <template v-slot:default="{ open, close }">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+              <button @click="open">Open</button>
+              <button @click="close">Close</button>
             </template>
           </v-accordion-item>
         </v-accordion>
