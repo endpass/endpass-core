@@ -17,6 +17,10 @@
   width: auto;
 }
 
+.v-button.theme-default.is-borderless {
+  border: 0 none;
+}
+
 .v-button.theme-default .v-button-label {
   text-transform: uppercase;
   font-size: 14px;
@@ -222,6 +226,12 @@
 .v-button.skin-quaternary-error {
   color: var(--endpass-ui-color-error);
   border-color: var(--endpass-ui-color-error);
+  box-shadow: none;
+}
+
+.v-button.skin-quaternary-primary {
+  color: var(--endpass-ui-color-primary-7);
+  border-color: var(--endpass-ui-color-primary-7);
   box-shadow: none;
 }
 

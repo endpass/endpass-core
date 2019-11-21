@@ -67,6 +67,7 @@ export default {
             'success',
             'error',
             'quaternary-error',
+            'quaternary-primary',
           ].indexOf(value) !== -1
         );
       },
@@ -76,6 +77,10 @@ export default {
       default: false,
     },
     isInline: {
+      type: Boolean,
+      default: false,
+    },
+    isBorderless: {
       type: Boolean,
       default: false,
     },
@@ -94,6 +99,7 @@ export default {
         [`skin-${this.skin}`]: true,
         [`size-${this.size}`]: true,
         'is-inline': this.isInline,
+        'is-borderless': this.isBorderless,
       };
     },
     isSocialIcon() {
