@@ -67,7 +67,7 @@
                     'is-selected': isSelectedDay(day),
                   }"
                   :disabled="
-                    !day.inTargetMonth || day.isToday || isSelectedDay(day)
+                    !day.inTargetMonth || isSelectedDay(day)
                   "
                   type="button"
                   @click="onClickDay(day)"
