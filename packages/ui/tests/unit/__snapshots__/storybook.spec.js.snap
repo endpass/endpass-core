@@ -520,6 +520,282 @@ exports[`Storyshots VAccordion/desktop default 1`] = `
 </div>
 `;
 
+exports[`Storyshots VButton/desktop borderless 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <table
+    width="100%"
+  >
+    <thead>
+      <tr>
+        <th />
+         
+        <th>
+          Primary
+        </th>
+         
+        <th>
+          Secondary
+        </th>
+         
+        <th>
+          Tertiary
+        </th>
+         
+        <th>
+          Quaternary
+        </th>
+         
+        <th>
+          Ghost
+        </th>
+      </tr>
+    </thead>
+     
+    <tbody>
+      <tr>
+        <th
+          scope="row"
+        >
+          Normal
+        </th>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-primary size-normal is-borderless"
+          >
+            <!---->
+             
+            <!---->
+             
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-secondary size-normal is-borderless"
+          >
+            <!---->
+             
+            <!---->
+             
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-tertiary size-normal is-borderless"
+          >
+            <!---->
+             
+            <!---->
+             
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-quaternary size-normal is-borderless"
+          >
+            <!---->
+             
+            <!---->
+             
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-ghost size-normal is-borderless"
+          >
+            <!---->
+             
+            <!---->
+             
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+      </tr>
+       
+      <tr>
+        <th
+          scope="row"
+        >
+          Big
+        </th>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-primary size-big is-borderless"
+          >
+            <!---->
+             
+            <!---->
+             
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-secondary size-big is-borderless"
+          >
+            <!---->
+             
+            <!---->
+             
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-tertiary size-big is-borderless"
+          >
+            <!---->
+             
+            <!---->
+             
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-quaternary size-big is-borderless"
+          >
+            <!---->
+             
+            <!---->
+             
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-ghost size-big is-borderless"
+          >
+            <!---->
+             
+            <!---->
+             
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
 exports[`Storyshots VButton/desktop change-skin 1`] = `
 <div>
   <div
@@ -641,6 +917,17 @@ exports[`Storyshots VButton/desktop change-skin 1`] = `
       class=""
     >
       quaternary-error
+    </span>
+             
+        
+  </span>
+  <span>
+    
+           
+    <span
+      class=""
+    >
+      text-primary
     </span>
              
         
@@ -966,6 +1253,10 @@ exports[`Storyshots VButton/desktop enabled 1`] = `
         <th>
           Ghost
         </th>
+         
+        <th>
+          Text Primary
+        </th>
       </tr>
     </thead>
      
@@ -1086,6 +1377,28 @@ exports[`Storyshots VButton/desktop enabled 1`] = `
             <!---->
           </button>
         </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-text-primary size-normal"
+          >
+            <!---->
+             
+            <!---->
+             
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
       </tr>
        
       <tr>
@@ -1186,6 +1499,28 @@ exports[`Storyshots VButton/desktop enabled 1`] = `
         <td>
           <button
             class="v-button theme-default skin-ghost size-big"
+          >
+            <!---->
+             
+            <!---->
+             
+            <span
+              class="v-button-label"
+            >
+              Button Label
+            </span>
+             
+            <!---->
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-text-primary size-big"
           >
             <!---->
              
@@ -11316,6 +11651,15 @@ exports[`Storyshots VTag/desktop default 1`] = `
        
       <td>
         <div
+          class="v-tag theme-default skin-white"
+        >
+          text tag 
+          <!---->
+        </div>
+      </td>
+       
+      <td>
+        <div
           class="v-tag theme-default skin-default"
           disabled="disabled"
         >
@@ -11540,6 +11884,29 @@ exports[`Storyshots VTag/desktop default 1`] = `
       <td>
         <div
           class="v-tag theme-default is-closable skin-light-gray"
+        >
+          text tag 
+          <i
+            class="icon-atom v-tag-close theme-default"
+          >
+            <svg
+              class="svg-atom theme-default"
+              height="100%"
+              width="100%"
+            >
+              <use
+                x="0"
+                xlink:href="#endpass-ui-icon-close"
+                y="0"
+              />
+            </svg>
+          </i>
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default is-closable skin-white"
         >
           text tag 
           <i

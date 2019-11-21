@@ -26,6 +26,7 @@ storiesOf('VButton/desktop', module)
               <th>Tertiary</th>
               <th>Quaternary</th>
               <th>Ghost</th>
+              <th>Text Primary</th>
             </tr>
           </thead>
           <tbody>
@@ -36,6 +37,7 @@ storiesOf('VButton/desktop', module)
               <td><v-button @focus="onFocus" skin="tertiary">Button Label</v-button></td>
               <td><v-button @blur="onBlur" skin="quaternary">Button Label</v-button></td>
               <td><v-button @mouseleave="onLeave" skin="ghost">Button Label</v-button></td>
+              <td><v-button @mouseleave="onLeave" skin="text-primary">Button Label</v-button></td>
             </tr>
             <tr>
               <th scope="row">Big</th>
@@ -44,6 +46,7 @@ storiesOf('VButton/desktop', module)
               <td><v-button @focus="onFocus" skin="tertiary" size="big">Button Label</v-button></td>
               <td><v-button @blur="onBlur" skin="quaternary" size="big">Button Label</v-button></td>
               <td><v-button @mouseleave="onLeave" skin="ghost" size="big">Button Label</v-button></td>
+              <td><v-button @mouseleave="onLeave" skin="text-primary" size="big">Button Label</v-button></td>
             </tr>
           </tbody>
         </table>
@@ -63,6 +66,7 @@ storiesOf('VButton/desktop', module)
           'success',
           'error',
           'quaternary-error',
+          'text-primary',
         ],
         skin: 'primary',
       };
@@ -308,6 +312,44 @@ storiesOf('VButton/desktop', module)
               <td><v-button disabled @focus="onFocus" skin="tertiary" size="big">Button Label</v-button></td>
               <td><v-button disabled @blur="onBlur" skin="quaternary" size="big">Button Label</v-button></td>
               <td><v-button disabled @mouseleave="onLeave" skin="ghost" size="big">Button Label</v-button></td>
+            </tr>
+          </tbody>
+        </table>
+      </theme-provider>
+    `,
+  }))
+  .add('borderless', () => ({
+    methods,
+    components: { VButton },
+    template: `
+      <theme-provider>
+        <table width="100%">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Primary</th>
+              <th>Secondary</th>
+              <th>Tertiary</th>
+              <th>Quaternary</th>
+              <th>Ghost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Normal</th>
+              <td><v-button :isBorderless="true" @click="onClick">Button Label</v-button></td>
+              <td><v-button :isBorderless="true" @mouseenter="onEnter" skin="secondary">Button Label</v-button></td>
+              <td><v-button :isBorderless="true" @focus="onFocus" skin="tertiary">Button Label</v-button></td>
+              <td><v-button :isBorderless="true" @blur="onBlur" skin="quaternary">Button Label</v-button></td>
+              <td><v-button :isBorderless="true" @mouseleave="onLeave" skin="ghost">Button Label</v-button></td>
+            </tr>
+            <tr>
+              <th scope="row">Big</th>
+              <td><v-button :isBorderless="true" @click="onClick" size="big">Button Label</v-button></td>
+              <td><v-button :isBorderless="true" @mouseenter="onEnter" skin="secondary" size="big">Button Label</v-button></td>
+              <td><v-button :isBorderless="true" @focus="onFocus" skin="tertiary" size="big">Button Label</v-button></td>
+              <td><v-button :isBorderless="true" @blur="onBlur" skin="quaternary" size="big">Button Label</v-button></td>
+              <td><v-button :isBorderless="true" @mouseleave="onLeave" skin="ghost" size="big">Button Label</v-button></td>
             </tr>
           </tbody>
         </table>
