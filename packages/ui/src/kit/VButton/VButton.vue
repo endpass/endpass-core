@@ -67,7 +67,7 @@ export default {
             'success',
             'error',
             'quaternary-error',
-            'quaternary-primary',
+            'text-primary',
           ].indexOf(value) !== -1
         );
       },
