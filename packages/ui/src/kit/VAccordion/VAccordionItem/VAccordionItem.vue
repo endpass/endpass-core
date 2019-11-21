@@ -24,7 +24,7 @@
       v-show="isOpened"
       class="v-accordion-content"
     >
-      <slot v-bind:instance="this" />
+      <slot v-bind:open="open" v-bind:close="close" />
     </div>
   </div>
 </template>
