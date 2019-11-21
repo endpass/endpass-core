@@ -44,6 +44,7 @@ export default {
             'green',
             'gray',
             'light-gray',
+            'white',
           ].indexOf(value) !== -1
         );
       },
