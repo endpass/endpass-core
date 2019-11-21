@@ -58,6 +58,18 @@ storiesOf('VAccordion/desktop', module)
             </template>
           </v-accordion-item>
         </v-accordion>
+
+        <v-accordion>
+          <v-accordion-item :hideIcon="true">
+            <template v-slot:title>Without icon</template>
+            <template v-slot:default="{ instance }">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+              <button @click="instance.open">Open</button>
+              <button @click="instance.close">Close</button>
+            </template>
+          </v-accordion-item>
+        </v-accordion>
       </theme-provider>
     `,
   }));
