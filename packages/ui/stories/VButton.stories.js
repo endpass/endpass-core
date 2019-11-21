@@ -63,6 +63,7 @@ storiesOf('VButton/desktop', module)
           'success',
           'error',
           'quaternary-error',
+          'ghost-error',
         ],
         skin: 'primary',
       };
@@ -330,6 +331,7 @@ storiesOf('VButton/desktop', module)
               <th>Tertiary</th>
               <th>Quaternary</th>
               <th>Ghost</th>
+              <th>Ghost Error</th>
               <th>Social</th>
             </tr>
           </thead>
@@ -343,6 +345,7 @@ storiesOf('VButton/desktop', module)
               <td><v-button :isLoading="true" @focus="onFocus" skin="tertiary">Button Label</v-button></td>
               <td><v-button :isLoading="true" @blur="onBlur" skin="quaternary">Button Label</v-button></td>
               <td><v-button :isLoading="true" @mouseleave="onLeave" skin="ghost">Button Label</v-button></td>
+              <td><v-button :isLoading="true" @mouseleave="onLeave" skin="ghost-error">Button Label</v-button></td>
               <td>
                 <v-button :isLoading="true" @mouseleave="onLeave" skin="social">
                   <v-svg-icon name="github" style="margin-right: 5px;" slot="iconBefore" />
@@ -359,6 +362,7 @@ storiesOf('VButton/desktop', module)
               <td><v-button :isLoading="true" @focus="onFocus" skin="tertiary" size="big">Button Label</v-button></td>
               <td><v-button :isLoading="true" @blur="onBlur" skin="quaternary" size="big">Button Label</v-button></td>
               <td><v-button :isLoading="true" @mouseleave="onLeave" skin="ghost" size="big">Button Label</v-button></td>
+              <td><v-button :isLoading="true" @mouseleave="onLeave" skin="ghost-error" size="big">Button Label</v-button></td>
               <td>
                 <v-button :isLoading="true" @mouseleave="onLeave" skin="social" size="big">
                 <v-svg-icon name="github" style="margin-right: 5px;" slot="iconBefore" />

@@ -645,6 +645,17 @@ exports[`Storyshots VButton/desktop change-skin 1`] = `
              
         
   </span>
+  <span>
+    
+           
+    <span
+      class=""
+    >
+      ghost-error
+    </span>
+             
+        
+  </span>
 </div>
 `;
 
@@ -1728,6 +1739,10 @@ exports[`Storyshots VButton/desktop loading 1`] = `
         </th>
          
         <th>
+          Ghost Error
+        </th>
+         
+        <th>
           Social
         </th>
       </tr>
@@ -2027,6 +2042,58 @@ exports[`Storyshots VButton/desktop loading 1`] = `
         <td>
           <button
             class="v-button theme-default skin-ghost size-normal"
+          >
+            <!---->
+             
+            <!---->
+             
+            <!---->
+             
+            <i
+              class="icon-atom v-button-icon theme-default"
+            >
+              <span
+                class="button-loader-atom theme-default"
+              >
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-empty"
+                    y="0"
+                  />
+                </svg>
+                 
+                <span
+                  class="button-loader-atom-spinner"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-loader"
+                      y="0"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </i>
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-ghost-error size-normal"
           >
             <!---->
              
@@ -2426,6 +2493,58 @@ exports[`Storyshots VButton/desktop loading 1`] = `
         <td>
           <button
             class="v-button theme-default skin-ghost size-big"
+          >
+            <!---->
+             
+            <!---->
+             
+            <!---->
+             
+            <i
+              class="icon-atom v-button-icon theme-default"
+            >
+              <span
+                class="button-loader-atom theme-default"
+              >
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-empty"
+                    y="0"
+                  />
+                </svg>
+                 
+                <span
+                  class="button-loader-atom-spinner"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-loader"
+                      y="0"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </i>
+             
+            <!---->
+             
+            <!---->
+          </button>
+        </td>
+         
+        <td>
+          <button
+            class="v-button theme-default skin-ghost-error size-big"
           >
             <!---->
              
@@ -11316,6 +11435,15 @@ exports[`Storyshots VTag/desktop default 1`] = `
        
       <td>
         <div
+          class="v-tag theme-default skin-white"
+        >
+          text tag 
+          <!---->
+        </div>
+      </td>
+       
+      <td>
+        <div
           class="v-tag theme-default skin-default"
           disabled="disabled"
         >
@@ -11540,6 +11668,29 @@ exports[`Storyshots VTag/desktop default 1`] = `
       <td>
         <div
           class="v-tag theme-default is-closable skin-light-gray"
+        >
+          text tag 
+          <i
+            class="icon-atom v-tag-close theme-default"
+          >
+            <svg
+              class="svg-atom theme-default"
+              height="100%"
+              width="100%"
+            >
+              <use
+                x="0"
+                xlink:href="#endpass-ui-icon-close"
+                y="0"
+              />
+            </svg>
+          </i>
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default is-closable skin-white"
         >
           text tag 
           <i

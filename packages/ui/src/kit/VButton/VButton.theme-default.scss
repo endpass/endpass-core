@@ -225,6 +225,45 @@
   box-shadow: none;
 }
 
+
+
+
+
+
+
+
+
+.v-button.skin-ghost-error {
+  box-shadow: none;
+  border-color: transparent;
+  color: var(--endpass-ui-color-error);
+}
+
+.v-button.theme-default.skin-ghost-error .v-button-label {
+  color: var(--endpass-ui-color-error);
+}
+
+.v-button.theme-default.skin-ghost-error:hover {
+  background: var(--endpass-ui-color-grey-2);
+}
+
+.v-button.theme-default.skin-ghost-error:focus {
+  border-color: var(--endpass-ui-color-error);
+}
+
+.v-button.theme-default.skin-ghost-error:active {
+  border-color: transparent;
+  background: var(--endpass-ui-color-grey-3);
+}
+
+.v-button.theme-default.skin-ghost:active .v-button-label {
+  color: var(--endpass-ui-color-white);
+}
+
+.v-button.theme-default.skin-ghost .svg-atom {
+  fill: var(--endpass-ui-color-error);
+}
+
 .v-button.theme-default.skin-social {
   box-shadow: none;
   border: 1px solid var(--endpass-ui-color-grey-8);

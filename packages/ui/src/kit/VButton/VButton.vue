@@ -67,6 +67,7 @@ export default {
             'success',
             'error',
             'quaternary-error',
+            'ghost-error',
           ].indexOf(value) !== -1
         );
       },
