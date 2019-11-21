@@ -3,9 +3,12 @@
     :tabindex="0"
     class="v-accordion-item"
     :class="themeCssClass"
-    @click="onClick"
+    :data-opened="isOpened"
   >
-    <div class="v-accordion-header">
+    <div
+      class="v-accordion-header"
+      @click="onClick"
+    >
       <div class="v-accordion-title">
         <slot name="title" />
       </div>
@@ -20,7 +23,7 @@
       v-show="isOpened"
       class="v-accordion-content"
     >
-      <slot />
+      <slot v-bind:instance="this" />
     </div>
   </div>
 </template>
@@ -44,6 +47,12 @@ export default {
       this.isOpened = !this.isOpened;
 
       this.$emit('click');
+    },
+    open() {
+      this.isOpened = true;
+    },
+    close() {
+      this.isOpened = false;
     },
   },
   mixins: [ThemeMixin],

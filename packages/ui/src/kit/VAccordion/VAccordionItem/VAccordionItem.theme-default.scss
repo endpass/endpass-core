@@ -1,22 +1,24 @@
 .v-accordion-item.theme-default {
-  cursor: pointer;
   border-top: 1px solid var(--endpass-ui-color-grey-2);
-  transition: all 150ms ease-in-out;
+
+  &:focus {
+    outline: none;
+
+    .v-accordion-header {
+      background-color: var(--endpass-ui-color-primary-1);
+      border-top: 1px solid var(--endpass-ui-color-primary-7);
+      box-shadow: 0px -1px 1px -1px var(--endpass-ui-color-grey-7);
+    }
+  }
+
+  &:not([data-opened]) {
+    .v-accordion-header:hover {
+      background-color: var(--endpass-ui-color-grey-1);
+    }
+  }
 
   &:last-child {
     border-bottom: 1px solid var(--endpass-ui-color-grey-2);
-  }
-
-  &:hover {
-    background-color: rgba(var(--endpass-ui-color-grey-2), .25);
-  }
-
-  &:focus {
-    background-color: rgba(var(--endpass-ui-color-primary-7), .15);
-    border-top: 1px solid var(--endpass-ui-color-primary-7);
-    box-shadow: 0px -1px 1px -1px rgba(var(--endpass-ui-color-black), .75);
-
-    outline: none;
   }
 
   .v-accordion-item-icon {
@@ -37,9 +39,13 @@
 
     padding: 0 12px;
     height: 40px;
+
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
   }
 
   .v-accordion-title {
+    width: 100%;
     color: var(--endpass-ui-color-black);
     font-size: 1em;
     font-weight: bolder;

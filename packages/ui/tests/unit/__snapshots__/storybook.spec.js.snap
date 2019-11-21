@@ -461,6 +461,62 @@ exports[`Storyshots VAccordion/desktop default 1`] = `
       </div>
     </div>
   </div>
+   
+  <div
+    class="v-accordion theme-default"
+  >
+    <div
+      class="v-accordion-item theme-default"
+      tabindex="0"
+    >
+      <div
+        class="v-accordion-header"
+      >
+        <div
+          class="v-accordion-title"
+        >
+          Item #1
+        </div>
+         
+        <button
+          class="v-accordion-item-icon theme-default icon-button-atom"
+          height="32px"
+          tabindex="-1"
+          width="20"
+        >
+           
+          <svg
+            class="svg-atom theme-default"
+            height="32px"
+            width="20"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-chevron-down"
+              y="0"
+            />
+          </svg>
+        </button>
+      </div>
+       
+      <div
+        class="v-accordion-content"
+        style="display: none;"
+      >
+        
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+              
+        <button>
+          Open
+        </button>
+         
+        <button>
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 

@@ -46,6 +46,18 @@ storiesOf('VAccordion/desktop', module)
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </v-accordion-item>
         </v-accordion>
+
+        <v-accordion>
+          <v-accordion-item>
+            <template v-slot:title>Item #1</template>
+            <template v-slot:default="{ instance }">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+              <button @click="instance.open">Open</button>
+              <button @click="instance.close">Close</button>
+            </template>
+          </v-accordion-item>
+        </v-accordion>
       </theme-provider>
     `,
   }));
