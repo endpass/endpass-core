@@ -38,7 +38,7 @@
     align-items: center;
 
     padding: 0 12px;
-    height: 40px;
+    min-height: 40px;
 
     cursor: pointer;
     transition: all 150ms ease-in-out;
@@ -49,6 +49,8 @@
     color: var(--endpass-ui-color-black);
     font-size: 1em;
     font-weight: bolder;
+    padding: 8px 0;
+    line-height: 1.2;
   }
 
   .v-accordion-content {
