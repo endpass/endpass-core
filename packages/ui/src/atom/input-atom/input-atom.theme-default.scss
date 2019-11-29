@@ -50,10 +50,13 @@
   border-color: var(--endpass-ui-color-error);
 }
 
-.input-atom.theme-default[disabled=disabled] {
+.input-atom.theme-default[disabled=disabled]{
   border-color: var(--endpass-ui-color-grey-1);
+}
 
-  .input-atom-control::placeholder {
+.input-atom.theme-default[disabled=disabled] .input-atom-control{
+  color: var(--endpass-ui-color-grey-4);
+  &::placeholder {
     color: var(--endpass-ui-color-grey-4);
   }
 }

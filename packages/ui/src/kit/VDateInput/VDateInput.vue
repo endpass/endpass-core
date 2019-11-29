@@ -1,8 +1,14 @@
 <template>
   <outside-click-atom @click="onClickOutside">
-    <div :class="vDateInputCssClass">
+    <div
+      ref="root"
+      :class="vDateInputCssClass"
+    >
       <div class="v-date-input-field">
-        <label-atom v-if="label" :label="label" />
+        <label-atom
+          v-if="label"
+          :label="label"
+        />
         <div class="v-date-input-field-inner">
           <input-atom
             v-bind="$attrs"
@@ -15,9 +21,15 @@
             <v-svg-icon name="calendar" />
           </div>
         </div>
-        <error-atom v-if="isError" :error="error" />
+        <error-atom
+          v-if="isError"
+          :error="error"
+        />
       </div>
-      <div v-if="isCalendarVisible" class="v-date-input-calendar">
+      <div
+        v-if="isCalendarVisible"
+        class="v-date-input-calendar"
+      >
         <close-by-key-atom @close="onCalendarCloseByESC">
           <section class="v-date-input-controls">
             <button
@@ -36,7 +48,7 @@
                 :min="minYear"
                 :max="maxYear"
                 type="number"
-              />
+              >
             </div>
             <button
               class="v-date-input-control"
@@ -48,16 +60,36 @@
           </section>
           <table class="v-date-input-dates">
             <tr>
-              <td class="v-date-input-day">S</td>
-              <td class="v-date-input-day">M</td>
-              <td class="v-date-input-day">T</td>
-              <td class="v-date-input-day">W</td>
-              <td class="v-date-input-day">T</td>
-              <td class="v-date-input-day">F</td>
-              <td class="v-date-input-day">S</td>
+              <td class="v-date-input-day">
+                S
+              </td>
+              <td class="v-date-input-day">
+                M
+              </td>
+              <td class="v-date-input-day">
+                T
+              </td>
+              <td class="v-date-input-day">
+                W
+              </td>
+              <td class="v-date-input-day">
+                T
+              </td>
+              <td class="v-date-input-day">
+                F
+              </td>
+              <td class="v-date-input-day">
+                S
+              </td>
             </tr>
-            <tr v-for="(week, i) in currentCalendar" :key="`${innerYear}-${i}`">
-              <td v-for="day in week" :key="day.date.toString()">
+            <tr
+              v-for="(week, i) in currentCalendar"
+              :key="`${innerYear}-${i}`"
+            >
+              <td
+                v-for="day in week"
+                :key="day.date.toString()"
+              >
                 <button
                   :class="{
                     'v-date-input-day': true,
@@ -66,9 +98,6 @@
                     'is-disabled': !day.inTargetMonth,
                     'is-selected': isSelectedDay(day),
                   }"
-                  :disabled="
-                    !day.inTargetMonth || isSelectedDay(day)
-                  "
                   type="button"
                   @click="onClickDay(day)"
                 >
@@ -204,11 +233,31 @@ export default {
       );
     },
 
+    isClickInside(target, currentNode) {
+      while (currentNode) {
+        // eslint-disable-next-line no-param-reassign
+        currentNode = currentNode.parentNode;
+
+        if (target === currentNode) {
+          return true;
+        }
+        if (!currentNode) {
+          break;
+        }
+      }
+      return false;
+    },
+
     onBlurInput(e) {
       const valueDate = dayjs(e.target.value);
 
+      if (this.isClickInside(this.$refs.root, e.relatedTarget)) {
+        return;
+      }
+
       if (valueDate.isValid()) {
-        this.$emit('change', valueDate.toDate());
+        this.handleChange(valueDate.toDate());
+        this.isCalendarVisible = false;
       }
     },
 
@@ -216,36 +265,37 @@ export default {
       this.isCalendarVisible = true;
     },
 
-    onChangeYearInput(e) {
-      this.innerYear = e.target.value;
-    },
-
     onClickPreviousMonth() {
       if (this.innerMonth === 0) {
         this.innerMonth = 11;
-        this.innerYear = this.innerYear - 1;
+        this.innerYear -= 1;
       } else {
-        this.innerMonth = this.innerMonth - 1;
+        this.innerMonth -= 1;
       }
     },
 
     onClickNextMonth() {
       if (this.innerMonth === 11) {
         this.innerMonth = 0;
-        this.innerYear = this.innerYear + 1;
+        this.innerYear += 1;
       } else {
-        this.innerMonth = this.innerMonth + 1;
+        this.innerMonth += 1;
+      }
+    },
+
+    handleChange(newValue) {
+      const oldTime = dayjs(this.value)
+        .toDate()
+        .getTime();
+      if (oldTime !== newValue.getTime()) {
+        this.$emit('change', newValue);
       }
     },
 
     onClickDay({ origin }) {
-      const { innerMonth, innerYear } = this;
-      const newDate = origin
-        .month(innerMonth)
-        .year(innerYear)
-        .toDate();
+      const newDate = origin.toDate();
 
-      this.$emit('change', newDate);
+      this.handleChange(newDate);
       this.isCalendarVisible = false;
     },
 
@@ -283,4 +333,3 @@ export default {
   },
 };
 </script>
-

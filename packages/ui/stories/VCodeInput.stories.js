@@ -39,7 +39,7 @@ storiesOf('VCodeInput/desktop', module)
     components: { VCodeInput },
     template: `
   <theme-provider>
-    <v-code-input :length="8" :interval="2" @input="onInput" />
+    <v-code-input :length="8" :interval="2" @input="onInput" :is-centered="false"/>
   </theme-provider>
 `,
   }))

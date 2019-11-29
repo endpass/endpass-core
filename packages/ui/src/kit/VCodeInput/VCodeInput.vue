@@ -33,6 +33,7 @@
     </ul>
     <error-atom
       v-if="isError"
+      :class="errorCss"
       :error="error"
     />
   </div>
@@ -57,6 +58,11 @@ export default {
       default: false,
     },
 
+    isCentered: {
+      type: Boolean,
+      default: true,
+    },
+
     length: {
       type: Number,
       default: 6,
@@ -79,7 +85,15 @@ export default {
 
   computed: {
     vCodeInputCssClass() {
-      return { ...this.themeCssClass, 'v-code-input': true };
+      return {
+        ...this.themeCssClass,
+        'v-code-input': true,
+        'is-centered': this.isCentered,
+      };
+    },
+
+    errorCss() {
+      return this.isCentered ? 'v-text-center' : '';
     },
 
     inputValue() {

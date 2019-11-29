@@ -16,6 +16,10 @@
   margin: 0 2px;
 }
 
+.v-code-input.is-centered .v-code-input-container {
+  justify-content: center;
+}
+
 .v-code-input.theme-default .v-code-input-item.is-delimeter {
   flex: 0 0 6px;
   height: 2px;

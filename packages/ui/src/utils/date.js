@@ -7,11 +7,10 @@ import chunk from 'lodash.chunk';
  * @property {number|string} [params.month]
  * @returns {Array<CalendarDay[]>}
  */
-export const getFullCalendarMonth = (target) => {
+export const getFullCalendarMonth = target => {
   const days = [];
-  const now = dayjs()
+  const now = dayjs();
   const targetDate = target || dayjs();
-  const targetYear = targetDate.year();
   const targetMonth = targetDate.month();
   const startDay = targetDate.startOf('week');
   const endDay = targetDate.endOf('month').endOf('week');
@@ -38,4 +37,4 @@ export const getFullCalendarMonth = (target) => {
 
 export default {
   getFullCalendarMonth,
-}
+};

@@ -9,75 +9,71 @@ const methods = {
   onBlur: action('onBlur'),
 };
 
-storiesOf('VInput/desktop', module)
-  .add('enabled', () => ({
-    methods,
-    components: { VInput },
-    data() {
-      return {
-        model: null,
-        label: 'Label',
-        description: 'Helper text goes here',
-      };
-    },
-    template: `
+storiesOf('VInput/desktop', module).add('default', () => ({
+  methods,
+  components: { VInput },
+  data() {
+    return {
+      error: 'Error message here',
+      model: null,
+      label: 'Label',
+      description: 'Helper text goes here',
+    };
+  },
+  template: `
       <theme-provider>
-        <v-input
-          style="width: 288px;"
-          v-model="model"
-          placeholder="Placeholder text"
-          @input="onInput"
-          :label="label"
-          :description="description"
-        />
+        <table>
+          <thead>
+            <tr>
+              <th>state</th>
+              <th>view</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>default</td>
+              <td>
+                <v-input
+                  style="width: 288px;"
+                  v-model="model"
+                  placeholder="Placeholder text"
+                  @input="onInput"
+                  :label="label"
+                  :description="description"
+                />
+              </td>
+            </tr>
+            <tr><td colspan="2"><hr/></td></tr>        
+            <tr>
+              <td>error</td>
+              <td>
+                <v-input
+                  v-model="model"
+                  :error="error"
+                  style="width: 288px;"
+                  placeholder="Placeholder text"
+                  :label="label"
+                  :description="description"
+                />
+              </td>
+            </tr>        
+            <tr><td colspan="2"><hr/></td></tr>        
+            <tr>
+              <td>disabled</td>
+              <td>
+                <v-input
+                  v-model="model"
+                  disabled="true"
+                  style="width: 288px;"
+                  placeholder="Placeholder text"
+                  :label="label"
+                  :description="description"
+                />
+              </td>
+            </tr>        
+          </tbody>
+        </table>
         {{ model }}
       </theme-provider>
     `,
-  }))
-  .add('error', () => ({
-    data() {
-      return {
-        error: 'Error message here',
-        model: 'User input text',
-        label: 'Label',
-        description: 'Helper text goes here',
-      };
-    },
-    methods,
-    components: { VInput },
-    template: `
-      <theme-provider>
-        <v-input
-          v-model="model"
-          :error="error"
-          style="width: 288px;"
-          placeholder="Placeholder text"
-          :label="label"
-          :description="description"
-        />
-      </theme-provider>
-    `,
-  }))
-  .add('disabled', () => ({
-    methods,
-    components: { VInput },
-    data() {
-      return {
-        model: null,
-        label: 'Label',
-        description: 'Helper text goes here',
-      };
-    },
-    template: `
-      <theme-provider>
-        <v-input
-          v-model="model"
-          disabled="true"
-          style="width: 288px;"
-          placeholder="Placeholder text"
-          :label="label"
-          :description="description"
-        />
-      </theme-provider>
-    `,
-  }));
+}));

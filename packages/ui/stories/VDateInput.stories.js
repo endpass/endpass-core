@@ -15,31 +15,37 @@ storiesOf('VDateInput/desktop', module)
     components: { VDateInput },
     template: `
       <theme-provider>
-        <v-date-input v-model="model" @change="onChange" />
-      </theme-provider>
-    `,
-  }))
-  .add('disabled', () => ({
-    data: () => ({
-      model: new Date(),
-    }),
-    methods,
-    components: { VDateInput },
-    template: `
-      <theme-provider>
-        <v-date-input v-model="model" :disabled="true" @change="onChange" />
-      </theme-provider>
-    `,
-  }))
-  .add('error', () => ({
-    data: () => ({
-      model: new Date(),
-    }),
-    methods,
-    components: { VDateInput },
-    template: `
-      <theme-provider>
-        <v-date-input v-model="model" placeholder="Select the date..." label="Input label" error="Error" @change="onChange" />
+              <table>
+          <thead>
+            <tr>
+              <th>State</th>
+              <th>View</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>default</td>
+              <td>
+                <v-date-input v-model="model" @change="onChange" />
+              </td>
+            </tr>
+            <tr><td colspan="2"><hr/></td></tr>        
+            <tr>
+              <td>error</td>
+              <td>
+                <v-date-input v-model="model" placeholder="Select the date..." label="Input label" error="Error" @change="onChange" />
+              </td>
+            </tr>        
+            <tr><td colspan="2"><hr/></td></tr>        
+            <tr>
+              <td>disabled</td>
+              <td>
+                <v-date-input v-model="model" label="Label here" :disabled="true" @change="onChange" />
+              </td>
+            </tr>        
+            <tr><td colspan="2"><hr/></td></tr>        
+          </tbody>
+        </table>        
       </theme-provider>
     `,
   }))
@@ -52,18 +58,6 @@ storiesOf('VDateInput/desktop', module)
     template: `
       <theme-provider>
         <v-date-input v-model="model" placeholder="Select the date..." @change="onChange" />
-      </theme-provider>
-    `,
-  }))
-  .add('with label', () => ({
-    data: () => ({
-      model: new Date(),
-    }),
-    methods,
-    components: { VDateInput },
-    template: `
-      <theme-provider>
-        <v-date-input v-model="model" label="Input label" placeholder="select the date..." @change="onChange" />
       </theme-provider>
     `,
   }));
