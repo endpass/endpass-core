@@ -126,4 +126,6 @@
   border-color: var(--endpass-ui-color-grey-2);
   color: var(--endpass-ui-color-black);
 }
-
+.v-date-input.theme-default[disabled=disabled] .v-date-input-field-icon {
+  color: var(--endpass-ui-color-grey-4);
+}

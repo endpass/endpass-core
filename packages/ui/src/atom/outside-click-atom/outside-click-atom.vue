@@ -3,9 +3,9 @@ export default {
   name: 'OutsideClickAtom',
   methods: {
     onClickAnything(e) {
-      const [target] = this.$slots.default
+      const [target] = this.$slots.default;
 
-      if (!target) return
+      if (!target) return;
 
       let currentNode = e.target;
 
@@ -14,7 +14,7 @@ export default {
 
         if (target.elm === currentNode.parentNode) break;
         if (!currentNode.parentNode) {
-          this.$emit('click')
+          this.$emit('click');
           break;
         }
       }
@@ -26,7 +26,7 @@ export default {
   beforeDestroy() {
     document.body.removeEventListener('click', this.onClickAnything);
   },
-  render(createElement) {
+  render() {
     return this.$slots.default;
   },
 };

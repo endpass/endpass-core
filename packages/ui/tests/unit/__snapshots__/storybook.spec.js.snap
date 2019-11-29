@@ -3418,7 +3418,7 @@ exports[`Storyshots VCodeInput/desktop default 1`] = `
   />
    
   <div
-    class="theme-default v-code-input"
+    class="theme-default v-code-input is-centered"
   >
     <ul
       class="v-code-input-container"
@@ -3436,7 +3436,7 @@ exports[`Storyshots VCodeInput/desktop disabled 1`] = `
   />
    
   <div
-    class="theme-default v-code-input"
+    class="theme-default v-code-input is-centered"
   >
     <ul
       class="v-code-input-container"
@@ -3454,14 +3454,14 @@ exports[`Storyshots VCodeInput/desktop error 1`] = `
   />
    
   <div
-    class="theme-default v-code-input"
+    class="theme-default v-code-input is-centered"
   >
     <ul
       class="v-code-input-container"
     />
      
     <div
-      class="error-atom theme-default"
+      class="error-atom theme-default v-text-center"
     >
       
   Error message here
@@ -3483,7 +3483,7 @@ exports[`Storyshots VCodeInput/desktop splitting interval 1`] = `
   </p>
    
   <div
-    class="theme-default v-code-input"
+    class="theme-default v-code-input is-centered"
   >
     <ul
       class="v-code-input-container"
@@ -3500,7 +3500,7 @@ exports[`Storyshots VCodeInput/desktop splitting interval 1`] = `
   </p>
    
   <div
-    class="theme-default v-code-input"
+    class="theme-default v-code-input is-centered"
   >
     <ul
       class="v-code-input-container"
@@ -3517,7 +3517,7 @@ exports[`Storyshots VCodeInput/desktop splitting interval 1`] = `
   </p>
    
   <div
-    class="theme-default v-code-input"
+    class="theme-default v-code-input is-centered"
   >
     <ul
       class="v-code-input-container"
@@ -3534,7 +3534,7 @@ exports[`Storyshots VCodeInput/desktop splitting interval 1`] = `
   </p>
    
   <div
-    class="theme-default v-code-input"
+    class="theme-default v-code-input is-centered"
   >
     <ul
       class="v-code-input-container"
@@ -3551,7 +3551,7 @@ exports[`Storyshots VCodeInput/desktop splitting interval 1`] = `
   </p>
    
   <div
-    class="theme-default v-code-input"
+    class="theme-default v-code-input is-centered"
   >
     <ul
       class="v-code-input-container"
@@ -3578,7 +3578,7 @@ exports[`Storyshots VCodeInput/desktop v-model 1`] = `
   </p>
    
   <div
-    class="theme-default v-code-input"
+    class="theme-default v-code-input is-centered"
   >
     <ul
       class="v-code-input-container"
@@ -3757,102 +3757,222 @@ exports[`Storyshots VDateInput/desktop default 1`] = `
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
-  <div
-    class="theme-default v-date-input"
-  >
-    <div
-      class="v-date-input-field"
-    >
-      <!---->
-       
-      <div
-        class="v-date-input-field-inner"
-      >
-        <span
-          class="input-atom theme-default"
-        >
-          <input
-            class="input-atom-control"
-          />
-           
-        </span>
+  <table>
+    <thead>
+      <tr>
+        <th>
+          State
+        </th>
          
-        <div
-          class="v-date-input-field-icon"
-        >
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-calendar"
-              y="0"
-            />
-          </svg>
-        </div>
-      </div>
-       
-      <!---->
-    </div>
+        <th>
+          View
+        </th>
+      </tr>
+    </thead>
      
-    <!---->
-  </div>
-</div>
-`;
+    <tbody>
+      <tr>
+        <td>
+          default
+        </td>
+         
+        <td>
+          <div
+            class="theme-default v-date-input"
+          >
+            <div
+              class="v-date-input-field"
+            >
+              <!---->
+               
+              <div
+                class="v-date-input-field-inner"
+              >
+                <span
+                  class="input-atom theme-default"
+                >
+                  <input
+                    class="input-atom-control"
+                  />
+                   
+                </span>
+                 
+                <div
+                  class="v-date-input-field-icon"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-calendar"
+                      y="0"
+                    />
+                  </svg>
+                </div>
+              </div>
+               
+              <!---->
+            </div>
+             
+            <!---->
+          </div>
+        </td>
+      </tr>
+       
+      <tr>
+        <td
+          colspan="2"
+        >
+          <hr />
+        </td>
+      </tr>
+       
+      <tr>
+        <td>
+          error
+        </td>
+         
+        <td>
+          <div
+            class="theme-default v-date-input"
+            placeholder="Select the date..."
+          >
+            <div
+              class="v-date-input-field"
+            >
+              <label
+                class="label-atom theme-default"
+              >
+                
+  Input label
 
-exports[`Storyshots VDateInput/desktop disabled 1`] = `
-<div>
-  <div
-    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  />
-   
-  <div
-    class="theme-default v-date-input"
-    disabled="disabled"
-  >
-    <div
-      class="v-date-input-field"
-    >
-      <!---->
+              </label>
+               
+              <div
+                class="v-date-input-field-inner"
+              >
+                <span
+                  class="input-atom theme-default is-error"
+                >
+                  <input
+                    class="input-atom-control"
+                    is-error="true"
+                    placeholder="Select the date..."
+                  />
+                   
+                </span>
+                 
+                <div
+                  class="v-date-input-field-icon"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-calendar"
+                      y="0"
+                    />
+                  </svg>
+                </div>
+              </div>
+               
+              <div
+                class="error-atom theme-default"
+              >
+                
+  Error
+
+              </div>
+            </div>
+             
+            <!---->
+          </div>
+        </td>
+      </tr>
        
-      <div
-        class="v-date-input-field-inner"
-      >
-        <span
-          class="input-atom theme-default"
-          disabled="disabled"
+      <tr>
+        <td
+          colspan="2"
         >
-          <input
-            class="input-atom-control"
-            disabled="disabled"
-          />
-           
-        </span>
+          <hr />
+        </td>
+      </tr>
+       
+      <tr>
+        <td>
+          disabled
+        </td>
          
-        <div
-          class="v-date-input-field-icon"
-        >
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
+        <td>
+          <div
+            class="theme-default v-date-input"
+            disabled="disabled"
           >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-calendar"
-              y="0"
-            />
-          </svg>
-        </div>
-      </div>
+            <div
+              class="v-date-input-field"
+            >
+              <label
+                class="label-atom theme-default"
+              >
+                
+  Label here
+
+              </label>
+               
+              <div
+                class="v-date-input-field-inner"
+              >
+                <span
+                  class="input-atom theme-default"
+                  disabled="disabled"
+                >
+                  <input
+                    class="input-atom-control"
+                    disabled="disabled"
+                  />
+                   
+                </span>
+                 
+                <div
+                  class="v-date-input-field-icon"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-calendar"
+                      y="0"
+                    />
+                  </svg>
+                </div>
+              </div>
+               
+              <!---->
+            </div>
+             
+            <!---->
+          </div>
+        </td>
+      </tr>
        
-      <!---->
-    </div>
-     
-    <!---->
-  </div>
+      <tr>
+        <td
+          colspan="2"
+        >
+          <hr />
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 `;
 
@@ -3880,131 +4000,6 @@ exports[`Storyshots VDateInput/desktop empty initial state 1`] = `
           <input
             class="input-atom-control"
             placeholder="Select the date..."
-          />
-           
-        </span>
-         
-        <div
-          class="v-date-input-field-icon"
-        >
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-calendar"
-              y="0"
-            />
-          </svg>
-        </div>
-      </div>
-       
-      <!---->
-    </div>
-     
-    <!---->
-  </div>
-</div>
-`;
-
-exports[`Storyshots VDateInput/desktop error 1`] = `
-<div>
-  <div
-    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  />
-   
-  <div
-    class="theme-default v-date-input"
-    placeholder="Select the date..."
-  >
-    <div
-      class="v-date-input-field"
-    >
-      <label
-        class="label-atom theme-default"
-      >
-        
-  Input label
-
-      </label>
-       
-      <div
-        class="v-date-input-field-inner"
-      >
-        <span
-          class="input-atom theme-default is-error"
-        >
-          <input
-            class="input-atom-control"
-            is-error="true"
-            placeholder="Select the date..."
-          />
-           
-        </span>
-         
-        <div
-          class="v-date-input-field-icon"
-        >
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-calendar"
-              y="0"
-            />
-          </svg>
-        </div>
-      </div>
-       
-      <div
-        class="error-atom theme-default"
-      >
-        
-  Error
-
-      </div>
-    </div>
-     
-    <!---->
-  </div>
-</div>
-`;
-
-exports[`Storyshots VDateInput/desktop with label 1`] = `
-<div>
-  <div
-    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  />
-   
-  <div
-    class="theme-default v-date-input"
-    placeholder="select the date..."
-  >
-    <div
-      class="v-date-input-field"
-    >
-      <label
-        class="label-atom theme-default"
-      >
-        
-  Input label
-
-      </label>
-       
-      <div
-        class="v-date-input-field-inner"
-      >
-        <span
-          class="input-atom theme-default"
-        >
-          <input
-            class="input-atom-control"
-            placeholder="select the date..."
           />
            
         </span>
@@ -4963,158 +4958,198 @@ exports[`Storyshots VIndicator/desktop default 1`] = `
 </div>
 `;
 
-exports[`Storyshots VInput/desktop disabled 1`] = `
+exports[`Storyshots VInput/desktop default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
-  <div
-    class="field-atom theme-default"
-    style="width: 288px;"
-  >
-    <label
-      class="label-atom theme-default"
-    >
-      
+  <table>
+    <thead>
+      <tr>
+        <th>
+          state
+        </th>
+         
+        <th>
+          view
+        </th>
+      </tr>
+    </thead>
+     
+    <tbody>
+      <tr>
+        <td>
+          default
+        </td>
+         
+        <td>
+          <div
+            class="field-atom theme-default"
+            style="width: 288px;"
+          >
+            <label
+              class="label-atom theme-default"
+            >
+              
   Label
 
-    </label>
-     
-    <div
-      class="description-atom theme-default"
-      disabled="disabled"
-      placeholder="Placeholder text"
-    >
-      
+            </label>
+             
+            <div
+              class="description-atom theme-default"
+              placeholder="Placeholder text"
+            >
+              
   Helper text goes here
   
-    </div>
-     
-    <span
-      class="input-atom theme-default"
-      disabled="disabled"
-    >
-      <input
-        class="input-atom-control"
-        disabled="disabled"
-        placeholder="Placeholder text"
-      />
+            </div>
+             
+            <span
+              class="input-atom theme-default"
+            >
+              <input
+                class="input-atom-control"
+                placeholder="Placeholder text"
+              />
+               
+            </span>
+             
+            <!---->
+          </div>
+        </td>
+      </tr>
        
-    </span>
-     
-    <!---->
-  </div>
-</div>
-`;
-
-exports[`Storyshots VInput/desktop enabled 1`] = `
-<div>
-  <div
-    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  />
-   
-  <div
-    class="field-atom theme-default"
-    style="width: 288px;"
-  >
-    <label
-      class="label-atom theme-default"
-    >
-      
+      <tr>
+        <td
+          colspan="2"
+        >
+          <hr />
+        </td>
+      </tr>
+       
+      <tr>
+        <td>
+          error
+        </td>
+         
+        <td>
+          <div
+            class="field-atom theme-default"
+            style="width: 288px;"
+          >
+            <label
+              class="label-atom theme-default"
+            >
+              
   Label
 
-    </label>
-     
-    <div
-      class="description-atom theme-default"
-      placeholder="Placeholder text"
-    >
-      
+            </label>
+             
+            <div
+              class="description-atom theme-default"
+              placeholder="Placeholder text"
+            >
+              
   Helper text goes here
   
-    </div>
-     
-    <span
-      class="input-atom theme-default"
-    >
-      <input
-        class="input-atom-control"
-        placeholder="Placeholder text"
-      />
+            </div>
+             
+            <span
+              class="input-atom theme-default is-error"
+            >
+              <input
+                class="input-atom-control"
+                is-error="true"
+                placeholder="Placeholder text"
+              />
+               
+              <i
+                class="icon-atom theme-default is-error"
+                is-error="true"
+              >
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-error"
+                    y="0"
+                  />
+                </svg>
+              </i>
+            </span>
+             
+            <div
+              class="error-atom theme-default"
+            >
+              
+  Error message here
+
+            </div>
+          </div>
+        </td>
+      </tr>
        
-    </span>
-     
-    <!---->
-  </div>
+      <tr>
+        <td
+          colspan="2"
+        >
+          <hr />
+        </td>
+      </tr>
+       
+      <tr>
+        <td>
+          disabled
+        </td>
+         
+        <td>
+          <div
+            class="field-atom theme-default"
+            style="width: 288px;"
+          >
+            <label
+              class="label-atom theme-default"
+            >
+              
+  Label
+
+            </label>
+             
+            <div
+              class="description-atom theme-default"
+              disabled="disabled"
+              placeholder="Placeholder text"
+            >
+              
+  Helper text goes here
+  
+            </div>
+             
+            <span
+              class="input-atom theme-default"
+              disabled="disabled"
+            >
+              <input
+                class="input-atom-control"
+                disabled="disabled"
+                placeholder="Placeholder text"
+              />
+               
+            </span>
+             
+            <!---->
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
   
         
       
-</div>
-`;
-
-exports[`Storyshots VInput/desktop error 1`] = `
-<div>
-  <div
-    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  />
-   
-  <div
-    class="field-atom theme-default"
-    style="width: 288px;"
-  >
-    <label
-      class="label-atom theme-default"
-    >
-      
-  Label
-
-    </label>
-     
-    <div
-      class="description-atom theme-default"
-      placeholder="Placeholder text"
-    >
-      
-  Helper text goes here
-  
-    </div>
-     
-    <span
-      class="input-atom theme-default is-error"
-    >
-      <input
-        class="input-atom-control"
-        is-error="true"
-        placeholder="Placeholder text"
-      />
-       
-      <i
-        class="icon-atom theme-default is-error"
-        is-error="true"
-      >
-        <svg
-          class="svg-atom theme-default"
-          height="100%"
-          width="100%"
-        >
-          <use
-            x="0"
-            xlink:href="#endpass-ui-icon-error"
-            y="0"
-          />
-        </svg>
-      </i>
-    </span>
-     
-    <div
-      class="error-atom theme-default"
-    >
-      
-  Error message here
-
-    </div>
-  </div>
 </div>
 `;
 
