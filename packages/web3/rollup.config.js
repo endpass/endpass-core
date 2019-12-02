@@ -6,67 +6,90 @@ import commonjs from 'rollup-plugin-commonjs';
 import alias from 'rollup-plugin-alias';
 import babel from 'rollup-plugin-babel';
 import copy from 'rollup-plugin-copy';
+import { terser } from 'rollup-plugin-terser';
+import visualizer from 'rollup-plugin-visualizer';
+import ts from 'rollup-plugin-typescript';
 import pkg from './package.json';
+import entryPoints from './entryPoints.json';
 
 function resolveDir(dir) {
   return path.join(__dirname, '', dir);
 }
 
-function resolveFile(file) {
-  return path.resolve(__dirname, file);
+function resolveFile(...args) {
+  args.splice(0, 0, __dirname);
+  // eslint-disable-next-line prefer-spread
+  return path.resolve.apply(path, args);
 }
 
 const withSourceMaps = process.env.NODE_ENV !== 'production';
 
-const inputFiles = pkg.separatedModules
-  .concat('index')
-  .map(item => resolveFile(`./src/${item}.js`));
+const outputConf = {
+  exports: 'named',
+  sourcemap: withSourceMaps,
+};
 
-export default {
-  input: inputFiles,
-  external: [
-    ...Object.keys(pkg.dependencies),
-    'websocket',
-    '@endpass/utils/keystoreKeyGen',
-    '@endpass/utils/crypto',
-    'ethereumjs-wallet/hdkey',
-    'eth-lib/lib/hash',
-    'eth-lib/lib/account',
-  ],
+const commonConfig = config => ({
+  external: [...Object.keys(pkg.dependencies), '@endpass/utils/generators'],
   plugins: [
-    json(),
     resolve({
       preferBuiltins: false,
     }),
     alias({
       '@': resolveDir('./src'),
-      resolve: ['.vue', '.js', '/index.js'],
+      resolve: ['.js', '/index.js'],
     }),
+    json(),
+    ts(),
     babel({
-      exclude: ['node_modules'],
       runtimeHelpers: true,
+      exclude: 'node_modules/**',
+      extensions: ['.js', '.ts'],
     }),
     commonjs(),
-    copy({
-      targets: [
-        {
-          src: ['src', 'package.json', 'README.md', 'yarn.lock'],
-          dest: 'dist',
-        },
-        {
-          src: 'types/**.d.ts',
-          dest: 'dist',
-        },
-      ],
-      verbose: true,
-    }),
+    !withSourceMaps && terser(),
+    config.withCopy &&
+      copy({
+        targets: [
+          {
+            src: config.withCopy,
+            dest: './dist',
+          },
+        ],
+      }),
+    visualizer(),
   ],
   watch: {
     exclude: ['node_modules/**'],
   },
-  output: {
-    dir: 'dist',
-    format: 'esm',
-    sourcemap: withSourceMaps,
-  },
+});
+
+const createConfig = childConfig => {
+  const { input, umd, module } = childConfig;
+  return {
+    input: resolveFile(input),
+    ...commonConfig(childConfig),
+    output: [
+      {
+        ...outputConf,
+        file: resolveFile('dist', umd),
+        name: pkg.name,
+        format: 'umd',
+      },
+      {
+        ...outputConf,
+        file: resolveFile('dist', module),
+        format: 'esm',
+      },
+    ],
+  };
 };
+
+export default [
+  createConfig({
+    input: './src/index.js',
+    umd: pkg.umd,
+    module: pkg.module,
+  }),
+  ...entryPoints.map(createConfig),
+];
