@@ -96,9 +96,14 @@
   text-align: center;
 }
 
-.v-date-input.theme-default button.v-date-input-day.is-disabled {
-  cursor: default;
+.v-date-input.theme-default button.v-date-input-day.is-not-mine-month {
   color: var(--endpass-ui-color-grey-5);
+}
+
+.v-date-input.theme-default button.v-date-input-day[disabled=disabled] {
+  cursor: default;
+  color: var(--endpass-ui-color-grey-4);
+  background-color: var(--endpass-ui-color-white);
 }
 
 .v-date-input.theme-default button.v-date-input-day.is-today {
