@@ -4029,6 +4029,112 @@ exports[`Storyshots VDateInput/desktop empty initial state 1`] = `
 </div>
 `;
 
+exports[`Storyshots VDateInput/desktop min/max dates 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <table>
+    <tr>
+      <td>
+        <div
+          class="theme-default v-date-input"
+          placeholder="Select the date..."
+        >
+          <div
+            class="v-date-input-field"
+          >
+            <!---->
+             
+            <div
+              class="v-date-input-field-inner"
+            >
+              <span
+                class="input-atom theme-default"
+              >
+                <input
+                  class="input-atom-control"
+                  placeholder="Select the date..."
+                />
+                 
+              </span>
+               
+              <div
+                class="v-date-input-field-icon"
+              >
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-calendar"
+                    y="0"
+                  />
+                </svg>
+              </div>
+            </div>
+             
+            <!---->
+          </div>
+           
+          <!---->
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="theme-default v-date-input"
+          placeholder="Select the date..."
+        >
+          <div
+            class="v-date-input-field"
+          >
+            <!---->
+             
+            <div
+              class="v-date-input-field-inner"
+            >
+              <span
+                class="input-atom theme-default"
+              >
+                <input
+                  class="input-atom-control"
+                  placeholder="Select the date..."
+                />
+                 
+              </span>
+               
+              <div
+                class="v-date-input-field-icon"
+              >
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-calendar"
+                    y="0"
+                  />
+                </svg>
+              </div>
+            </div>
+             
+            <!---->
+          </div>
+           
+          <!---->
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+`;
+
 exports[`Storyshots VDescription/desktop default 1`] = `
 <div>
   <div

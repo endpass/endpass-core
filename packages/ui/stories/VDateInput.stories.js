@@ -60,4 +60,26 @@ storiesOf('VDateInput/desktop', module)
         <v-date-input v-model="model" placeholder="Select the date..." @change="onChange" />
       </theme-provider>
     `,
+  }))
+  .add('min/max dates', () => ({
+    data: () => ({
+      left: '11.01.2001',
+      right: '11.02.2001',
+    }),
+    methods,
+    components: { VDateInput },
+    template: `
+      <theme-provider>
+        <table>
+          <tr>
+            <td>
+              <v-date-input v-model="left" :max-date="right" placeholder="Select the date..." @change="onChange" />          
+            </td>
+            <td>
+                <v-date-input v-model="right" :min-date="left" placeholder="Select the date..." @change="onChange" />
+            </td>
+          </tr>
+        </table>
+      </theme-provider>
+    `,
   }));

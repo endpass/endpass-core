@@ -16,6 +16,7 @@
             :is-error="isError"
             @focus="onFocusInput"
             @blur="onBlurInput"
+            @keyup.enter.native="handleSubmit"
           />
           <div class="v-date-input-field-icon">
             <v-svg-icon name="calendar" />
@@ -29,6 +30,7 @@
       <div
         v-if="isCalendarVisible"
         class="v-date-input-calendar"
+        tabindex="-1"
       >
         <close-by-key-atom @close="onCalendarCloseByESC">
           <section class="v-date-input-controls">
@@ -95,9 +97,10 @@
                     'v-date-input-day': true,
                     'v-date-input-control': true,
                     'is-today': day.isToday,
-                    'is-disabled': !day.inTargetMonth,
+                    'is-not-mine-month': !day.inTargetMonth,
                     'is-selected': isSelectedDay(day),
                   }"
+                  :disabled="!isDayInRange(day.origin)"
                   type="button"
                   @click="onClickDay(day)"
                 >
@@ -123,6 +126,9 @@ import ErrorAtom from '@/atom/error-atom/error-atom';
 import CloseByKeyAtom from '@/atom/close-by-key-atom/close-by-key-atom';
 import OutsideClickAtom from '@/atom/outside-click-atom/outside-click-atom';
 
+const MIN_DATE = '01.01.1940';
+const MAX_DATE = '01.01.2100';
+
 export default {
   name: 'VDateInput',
 
@@ -132,14 +138,14 @@ export default {
       default: '',
     },
 
-    minYear: {
-      type: Number,
-      default: 1940,
+    minDate: {
+      type: [String, Date],
+      default: '',
     },
 
-    maxYear: {
-      type: Number,
-      default: 2100,
+    maxDate: {
+      type: [String, Date],
+      default: '',
     },
 
     label: {
@@ -162,6 +168,22 @@ export default {
   computed: {
     vDateInputCssClass() {
       return { ...this.themeCssClass, 'v-date-input': true };
+    },
+
+    minDateValue() {
+      return dayjs(this.minDate || MIN_DATE);
+    },
+
+    maxDateValue() {
+      return dayjs(this.maxDate || MAX_DATE);
+    },
+
+    minYear() {
+      return this.minDateValue.year();
+    },
+
+    maxYear() {
+      return this.maxDateValue.year();
     },
 
     isError() {
@@ -223,6 +245,12 @@ export default {
       this.innerMonth = now.getMonth();
     },
 
+    isDayInRange(date) {
+      return (
+        this.minDateValue.isBefore(date) && this.maxDateValue.isAfter(date)
+      );
+    },
+
     isSelectedDay({ origin }) {
       if (!this.date) return false;
 
@@ -249,20 +277,28 @@ export default {
     },
 
     onBlurInput(e) {
-      const valueDate = dayjs(e.target.value);
-
       if (this.isClickInside(this.$refs.root, e.relatedTarget)) {
         return;
       }
 
+      this.handleSubmit(e);
+    },
+
+    handleSubmit(e) {
+      const valueDate = dayjs(e.target.value);
+
       if (valueDate.isValid()) {
         this.handleChange(valueDate.toDate());
-        this.isCalendarVisible = false;
+        this.hideCalendar();
       }
     },
 
     onFocusInput() {
       this.isCalendarVisible = true;
+    },
+
+    hideCalendar() {
+      this.isCalendarVisible = false;
     },
 
     onClickPreviousMonth() {
@@ -284,9 +320,14 @@ export default {
     },
 
     handleChange(newValue) {
+      if (!this.isDayInRange(dayjs(newValue))) {
+        return;
+      }
+
       const oldTime = dayjs(this.value)
         .toDate()
         .getTime();
+
       if (oldTime !== newValue.getTime()) {
         this.$emit('change', newValue);
       }
@@ -296,15 +337,15 @@ export default {
       const newDate = origin.toDate();
 
       this.handleChange(newDate);
-      this.isCalendarVisible = false;
+      this.hideCalendar();
     },
 
     onCalendarCloseByESC() {
-      this.isCalendarVisible = false;
+      this.hideCalendar();
     },
 
     onClickOutside() {
-      this.isCalendarVisible = false;
+      this.hideCalendar();
     },
   },
 
