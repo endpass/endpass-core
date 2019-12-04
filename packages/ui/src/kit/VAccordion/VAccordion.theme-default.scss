@@ -1,3 +1,21 @@
 .v-accordion.theme-default {
   position: relative;
 }
+
+.v-accordion.theme-default.size-small .v-accordion-header {
+  padding: 0 12px;
+  min-height: 40px;
+}
+
+.v-accordion.theme-default.size-small .v-accordion-title {
+  padding: 8px 0;
+}
+
+.v-accordion.theme-default.size-normal .v-accordion-header {
+  padding: 0 16px;
+  min-height: 52px;
+}
+
+.v-accordion.theme-default.size-normal .v-accordion-title {
+  padding: 15px 0;
+}
