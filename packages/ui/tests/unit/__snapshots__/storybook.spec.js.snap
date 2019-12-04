@@ -181,7 +181,7 @@ exports[`Storyshots VAccordion/desktop default 1`] = `
   />
    
   <div
-    class="v-accordion custom-accordion-class theme-default"
+    class="v-accordion custom-accordion-class theme-default size-normal"
   >
     <div
       class="v-accordion-item custom-item-class theme-default"
@@ -322,7 +322,7 @@ exports[`Storyshots VAccordion/desktop default 1`] = `
   </div>
    
   <div
-    class="v-accordion theme-default"
+    class="v-accordion theme-default size-normal"
   >
     <div
       class="v-accordion-item theme-default"
@@ -463,7 +463,7 @@ exports[`Storyshots VAccordion/desktop default 1`] = `
   </div>
    
   <div
-    class="v-accordion theme-default"
+    class="v-accordion theme-default size-normal"
   >
     <div
       class="v-accordion-item theme-default"
@@ -519,7 +519,7 @@ exports[`Storyshots VAccordion/desktop default 1`] = `
   </div>
    
   <div
-    class="v-accordion theme-default"
+    class="v-accordion theme-default size-normal"
   >
     <div
       class="v-accordion-item theme-default"
@@ -552,6 +552,190 @@ exports[`Storyshots VAccordion/desktop default 1`] = `
         <button>
           Close
         </button>
+      </div>
+    </div>
+  </div>
+   
+  <div
+    class="v-accordion theme-default size-small"
+  >
+    <div
+      class="v-accordion-item theme-default"
+      tabindex="0"
+    >
+      <div
+        class="v-accordion-header"
+      >
+        <div
+          class="v-accordion-title"
+        >
+          Small Accordion
+        </div>
+         
+        <button
+          class="v-accordion-item-icon theme-default icon-button-atom"
+          height="32px"
+          tabindex="-1"
+          width="20"
+        >
+           
+          <svg
+            class="svg-atom theme-default"
+            height="32px"
+            width="20"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-chevron-down"
+              y="0"
+            />
+          </svg>
+        </button>
+      </div>
+       
+      <div
+        class="v-accordion-content"
+        style="display: none;"
+      >
+        
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          
+      </div>
+    </div>
+     
+    <div
+      class="v-accordion-item theme-default"
+      tabindex="0"
+    >
+      <div
+        class="v-accordion-header"
+      >
+        <div
+          class="v-accordion-title"
+        >
+          Small Accordion
+        </div>
+         
+        <button
+          class="v-accordion-item-icon theme-default icon-button-atom"
+          height="32px"
+          tabindex="-1"
+          width="20"
+        >
+           
+          <svg
+            class="svg-atom theme-default"
+            height="32px"
+            width="20"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-chevron-down"
+              y="0"
+            />
+          </svg>
+        </button>
+      </div>
+       
+      <div
+        class="v-accordion-content"
+        style="display: none;"
+      >
+        
+            Lorem ipsum dolor sit amet.
+          
+      </div>
+    </div>
+  </div>
+   
+  <div
+    class="v-accordion theme-default size-normal"
+  >
+    <div
+      class="v-accordion-item theme-default"
+      tabindex="0"
+    >
+      <div
+        class="v-accordion-header"
+      >
+        <div
+          class="v-accordion-title"
+        >
+          Normal Accordion
+        </div>
+         
+        <button
+          class="v-accordion-item-icon theme-default icon-button-atom"
+          height="32px"
+          tabindex="-1"
+          width="20"
+        >
+           
+          <svg
+            class="svg-atom theme-default"
+            height="32px"
+            width="20"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-chevron-down"
+              y="0"
+            />
+          </svg>
+        </button>
+      </div>
+       
+      <div
+        class="v-accordion-content"
+        style="display: none;"
+      >
+        
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          
+      </div>
+    </div>
+     
+    <div
+      class="v-accordion-item theme-default"
+      tabindex="0"
+    >
+      <div
+        class="v-accordion-header"
+      >
+        <div
+          class="v-accordion-title"
+        >
+          Small Accordion
+        </div>
+         
+        <button
+          class="v-accordion-item-icon theme-default icon-button-atom"
+          height="32px"
+          tabindex="-1"
+          width="20"
+        >
+           
+          <svg
+            class="svg-atom theme-default"
+            height="32px"
+            width="20"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-chevron-down"
+              y="0"
+            />
+          </svg>
+        </button>
+      </div>
+       
+      <div
+        class="v-accordion-content"
+        style="display: none;"
+      >
+        
+            Lorem ipsum dolor sit amet.
+          
       </div>
     </div>
   </div>

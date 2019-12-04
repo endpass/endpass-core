@@ -1,7 +1,7 @@
 <template>
   <div
     class="v-accordion"
-    :class="themeCssClass"
+    :class="vAccordionCssClass"
   >
     <slot />
   </div>
@@ -12,6 +12,23 @@ import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
   name: 'VAccordion',
+  props: {
+    size: {
+      type: String,
+      default: 'normal',
+      validator(value) {
+        return ['small', 'normal'].indexOf(value) !== -1;
+      },
+    },
+  },
+  computed: {
+    vAccordionCssClass() {
+      return {
+        ...this.themeCssClass,
+        [`size-${this.size}`]: true,
+      };
+    },
+  },
   mixins: [ThemeMixin],
 };
 </script>

@@ -1,59 +1,54 @@
 .v-accordion-item.theme-default {
   border-top: 1px solid var(--endpass-ui-color-grey-2);
+}
 
-  &:focus {
-    outline: none;
+.v-accordion-item.theme-default:focus {
+  outline: none;
+}
 
-    .v-accordion-header {
-      background-color: var(--endpass-ui-color-primary-1);
-      border-top: 1px solid var(--endpass-ui-color-primary-7);
-      box-shadow: 0px -1px 1px -1px var(--endpass-ui-color-grey-7);
-    }
-  }
+.v-accordion-item.theme-default:focus .v-accordion-header {
+  background-color: var(--endpass-ui-color-primary-1);
+  border-top: 1px solid var(--endpass-ui-color-primary-7);
+  box-shadow: 0px -1px 1px -1px var(--endpass-ui-color-grey-7);
+}
 
-  &:not([data-opened]) {
-    .v-accordion-header:hover {
-      background-color: var(--endpass-ui-color-grey-1);
-    }
-  }
+.v-accordion-item.theme-default:not([data-opened]) .v-accordion-header:hover {
+  background-color: var(--endpass-ui-color-grey-1);
+}
 
-  &:last-child {
-    border-bottom: 1px solid var(--endpass-ui-color-grey-2);
-  }
+.v-accordion-item.theme-default:last-child {
+  border-bottom: 1px solid var(--endpass-ui-color-grey-2);
+}
 
-  .v-accordion-item-icon {
-    pointer-events: none;
-    margin-top: 2px !important;
+.v-accordion-item.theme-default .v-accordion-item-icon {
+  pointer-events: none;
+  margin-top: 2px !important;
+}
 
-    // Remove focus state of icon in favor of focus state of entire item
-    &:focus {
-      outline: 0;
-      box-shadow: none;
-    }
-  }
+.v-accordion-item.theme-default .v-accordion-item-icon:focus {
+  // Remove focus state of icon in favor of focus state of entire item
+  outline: 0;
+  box-shadow: none;
+}
 
-  .v-accordion-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.v-accordion-item.theme-default .v-accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    padding: 0 12px;
-    min-height: 40px;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
 
-    cursor: pointer;
-    transition: all 150ms ease-in-out;
-  }
+.v-accordion-item.theme-default .v-accordion-title {
+  width: 100%;
+  color: var(--endpass-ui-color-black);
+  font-size: 1em;
+  font-weight: bolder;
+  padding: 8px 0;
+  line-height: 1.2;
+}
 
-  .v-accordion-title {
-    width: 100%;
-    color: var(--endpass-ui-color-black);
-    font-size: 1em;
-    font-weight: bolder;
-    padding: 8px 0;
-    line-height: 1.2;
-  }
-
-  .v-accordion-content {
-    padding: 10px 12px 15px;
-  }
+.v-accordion-item.theme-default .v-accordion-content {
+  padding: 10px 12px 15px;
 }

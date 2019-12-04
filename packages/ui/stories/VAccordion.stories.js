@@ -70,6 +70,28 @@ storiesOf('VAccordion/desktop', module)
             </template>
           </v-accordion-item>
         </v-accordion>
+
+        <v-accordion size="small">
+          <v-accordion-item>
+            <template v-slot:title>Small Accordion</template>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          </v-accordion-item>
+          <v-accordion-item>
+            <template v-slot:title>Small Accordion</template>
+            Lorem ipsum dolor sit amet.
+          </v-accordion-item>
+        </v-accordion>
+
+        <v-accordion size="normal">
+          <v-accordion-item>
+            <template v-slot:title>Normal Accordion</template>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          </v-accordion-item>
+          <v-accordion-item>
+            <template v-slot:title>Small Accordion</template>
+            Lorem ipsum dolor sit amet.
+          </v-accordion-item>
+        </v-accordion>
       </theme-provider>
     `,
   }));
