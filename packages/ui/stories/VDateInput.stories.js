@@ -29,23 +29,23 @@ storiesOf('VDateInput/desktop', module)
                 <v-date-input v-model="model" @change="onChange" />
               </td>
             </tr>
-            <tr><td colspan="2"><hr/></td></tr>        
+            <tr><td colspan="2"><hr/></td></tr>
             <tr>
               <td>error</td>
               <td>
                 <v-date-input v-model="model" placeholder="Select the date..." label="Input label" error="Error" @change="onChange" />
               </td>
-            </tr>        
-            <tr><td colspan="2"><hr/></td></tr>        
+            </tr>
+            <tr><td colspan="2"><hr/></td></tr>
             <tr>
               <td>disabled</td>
               <td>
                 <v-date-input v-model="model" label="Label here" :disabled="true" @change="onChange" />
               </td>
-            </tr>        
-            <tr><td colspan="2"><hr/></td></tr>        
+            </tr>
+            <tr><td colspan="2"><hr/></td></tr>
           </tbody>
-        </table>        
+        </table>
       </theme-provider>
     `,
   }))
@@ -63,8 +63,8 @@ storiesOf('VDateInput/desktop', module)
   }))
   .add('min/max dates', () => ({
     data: () => ({
-      left: '11.01.2001',
-      right: '11.02.2001',
+      left: '2001-01-01',
+      right: '2001-06-01',
     }),
     methods,
     components: { VDateInput },
@@ -73,10 +73,10 @@ storiesOf('VDateInput/desktop', module)
         <table>
           <tr>
             <td>
-              <v-date-input v-model="left" :max-date="right" placeholder="Select the date..." @change="onChange" />          
+              <v-date-input v-model="left" :min-date="left" placeholder="Select the date..." @change="onChange" />
             </td>
             <td>
-                <v-date-input v-model="right" :min-date="left" placeholder="Select the date..." @change="onChange" />
+                <v-date-input v-model="right" :max-date="right" placeholder="Select the date..." @change="onChange" />
             </td>
           </tr>
         </table>

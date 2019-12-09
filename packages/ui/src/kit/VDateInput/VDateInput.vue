@@ -126,8 +126,8 @@ import ErrorAtom from '@/atom/error-atom/error-atom';
 import CloseByKeyAtom from '@/atom/close-by-key-atom/close-by-key-atom';
 import OutsideClickAtom from '@/atom/outside-click-atom/outside-click-atom';
 
-const MIN_DATE = '01.01.1940';
-const MAX_DATE = '01.01.2100';
+const MIN_DATE = '1940-01-01';
+const MAX_DATE = '2100-01-01';
 
 export default {
   name: 'VDateInput',
@@ -140,12 +140,12 @@ export default {
 
     minDate: {
       type: [String, Date],
-      default: '',
+      default: MIN_DATE,
     },
 
     maxDate: {
       type: [String, Date],
-      default: '',
+      default: MAX_DATE,
     },
 
     label: {
@@ -170,20 +170,12 @@ export default {
       return { ...this.themeCssClass, 'v-date-input': true };
     },
 
-    minDateValue() {
-      return dayjs(this.minDate || MIN_DATE);
-    },
-
-    maxDateValue() {
-      return dayjs(this.maxDate || MAX_DATE);
-    },
-
     minYear() {
-      return this.minDateValue.year();
+      return dayjs(this.minDate).year();
     },
 
     maxYear() {
-      return this.maxDateValue.year();
+      return dayjs(this.maxDate).year();
     },
 
     isError() {
@@ -246,8 +238,10 @@ export default {
     },
 
     isDayInRange(date) {
+      const currentDate = dayjs(date);
+
       return (
-        this.minDateValue.isBefore(date) && this.maxDateValue.isAfter(date)
+        currentDate.isAfter(this.minDate) && currentDate.isBefore(this.maxDate)
       );
     },
 
