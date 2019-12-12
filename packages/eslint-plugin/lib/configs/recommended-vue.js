@@ -1,4 +1,5 @@
 const recommended = require('./recommended');
+const overrideFilesRules = require('./overrideFilesRules');
 
 // need remove `parser` in root level for vue-parser allowing sets
 const { parser, ...vueConfig } = recommended;
@@ -71,6 +72,15 @@ module.exports = {
   settings,
   rules: vueRules,
   overrides: [
+    ...recommended.overrides,
+    overrideFilesRules.tests,
+    {
+      ...overrideFilesRules.typescript,
+      parser: "vue-eslint-parser",
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+      },
+    },
     {
       files: ['*.vue'],
       extends: [...recommended.extends, 'plugin:vue/recommended'],
