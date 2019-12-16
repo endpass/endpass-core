@@ -4409,16 +4409,11 @@ exports[`Storyshots VError/desktop default 1`] = `
   />
    
   <div
-    class="v-error theme-default"
-    error="Lorem ipsum dolor sit amet, consectetur adipisicing elit"
+    class="error-atom theme-default"
   >
-    <div
-      class="error-atom theme-default"
-    >
-      
+    
   Lorem ipsum dolor sit amet, consectetur adipisicing elit
 
-    </div>
   </div>
 </div>
 `;
