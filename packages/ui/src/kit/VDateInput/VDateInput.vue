@@ -365,6 +365,7 @@ export default {
 
   model: {
     event: 'change',
+    prop: 'value',
   },
 };
 </script>
