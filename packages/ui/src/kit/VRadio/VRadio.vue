@@ -2,13 +2,16 @@
   <label :class="vRadioCssClass">
     <input
       v-bind="$attrs"
-      :checked="value === modelValue"
+      :checked="checked || value === modelValue"
       type="radio"
       class="v-radio-input"
       @input="onInputChange"
-    />
-    <span class="v-radio-box"></span>
-    <span v-if="$slots.default" class="v-radio-label">
+    >
+    <span class="v-radio-box" />
+    <span
+      v-if="$slots.default"
+      class="v-radio-label"
+    >
       <slot />
     </span>
   </label>
@@ -23,7 +26,12 @@ export default {
   props: {
     value: {
       type: String,
-      required: true,
+      default: '',
+    },
+
+    checked: {
+      type: Boolean,
+      default: false,
     },
 
     modelValue: {
@@ -34,21 +42,22 @@ export default {
     isError: {
       type: Boolean,
       default: false,
-    }
+    },
   },
 
   computed: {
     vRadioCssClass() {
-      return Object.assign({}, this.themeCssClass, {
+      return {
+        ...this.themeCssClass,
         'v-radio': true,
         'is-error': this.isError,
         'is-disabled': this.$attrs.disabled,
-      });
+      };
     },
   },
 
   methods: {
-    onInputChange(e) {
+    onInputChange() {
       this.$emit('change', this.value);
     },
   },
@@ -57,7 +66,7 @@ export default {
 
   model: {
     prop: 'modelValue',
-    event: 'change'
+    event: 'change',
   },
 };
 </script>

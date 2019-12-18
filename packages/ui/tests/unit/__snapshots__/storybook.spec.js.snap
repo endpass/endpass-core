@@ -7816,6 +7816,35 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
 </div>
 `;
 
+exports[`Storyshots VRadio/desktop checked 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <label
+    class="theme-default v-radio"
+  >
+    <input
+      class="v-radio-input"
+      type="radio"
+    />
+     
+    <span
+      class="v-radio-box"
+    />
+     
+    <span
+      class="v-radio-label"
+    >
+      
+        Foo
+      
+    </span>
+  </label>
+</div>
+`;
+
 exports[`Storyshots VRadio/desktop default 1`] = `
 <div>
   <div

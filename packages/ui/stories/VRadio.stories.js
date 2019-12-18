@@ -117,4 +117,16 @@ storiesOf('VRadio/desktop', module)
       </v-radio>
     </theme-provider>
   `,
+  }))
+  .add('checked', () => ({
+    components: { VRadio },
+    template: `
+    <theme-provider>
+      <v-radio
+        :checked="true"
+      >
+        Foo
+      </v-radio>
+    </theme-provider>
+  `,
   }));
