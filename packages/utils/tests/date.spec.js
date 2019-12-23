@@ -1,4 +1,12 @@
-import { formateDate, fromNow, fromTo, addToDate } from '@/date';
+import { dateForUTC } from 'fixtures/date';
+import {
+  formateDate,
+  fromNow,
+  fromTo,
+  addToDate,
+  toEqualLocalTime,
+  toDayBeginInUTC,
+} from '@/date';
 
 describe('date utils', () => {
   describe('formateDate', () => {
@@ -12,9 +20,7 @@ describe('date utils', () => {
       expect(formateDate(new Date('16:05 06 12 2017'))).toBe(
         '2017-06-12 16:05',
       );
-      expect(formateDate(new Date('16:05 06 12 2017'), 'H:mm')).toBe(
-        '16:05',
-      );
+      expect(formateDate(new Date('16:05 06 12 2017'), 'H:mm')).toBe('16:05');
     });
   });
 
@@ -49,7 +55,6 @@ describe('date utils', () => {
       edgeDate.setMinutes(10),
     ];
 
-
     it('should returns date relative string', () => {
       const checkNow = Date.now();
       expect(fromTo(checkNow, testDates[0])).toBe('in a minute');
@@ -70,17 +75,68 @@ describe('date utils', () => {
     const day = hour * 24;
 
     const testDates = [
-      new Date(now + (sec * 10)),
-      new Date(now + (min * 4)),
-      new Date(now + (hour * 2)),
-      new Date(now + (day * 56)),
+      new Date(now + sec * 10),
+      new Date(now + min * 4),
+      new Date(now + hour * 2),
+      new Date(now + day * 56),
     ];
 
     it('should increment date', () => {
       expect(addToDate(now, 10)).toMatchObject(testDates[0]);
       expect(addToDate(now, 4, 'm')).toMatchObject(testDates[1]);
       expect(addToDate(now, 2, 'h')).toMatchObject(testDates[2]);
-      expect(addToDate(now,  56, 'd')).toMatchObject(testDates[3]);
+      expect(addToDate(now, 56, 'd')).toMatchObject(testDates[3]);
+    });
+  });
+
+  describe('timezone', () => {
+    let spy;
+
+    beforeEach(() => {
+      spy = jest.spyOn(Date.prototype, 'getTimezoneOffset');
+    });
+
+    afterEach(() => {
+      spy.mockRestore();
+    });
+
+    describe('toEqualLocalTime', () => {
+      it('should return correct Date object', () => {
+        const result = toEqualLocalTime(dateForUTC.timestamp);
+
+        expect(result).toEqual(dateForUTC.default);
+      });
+
+      describe('GMT', () => {
+        it('should adopt date with zero GMT', () => {
+          spy.mockImplementation(() => 0);
+          const result = toEqualLocalTime(dateForUTC.timestamp);
+
+          expect(result).toEqual(dateForUTC.zeroGMT);
+        });
+
+        it('should adopt date with positive GMT', () => {
+          spy.mockImplementation(() => -180);
+          const result = toEqualLocalTime(dateForUTC.timestamp);
+
+          expect(result).toEqual(dateForUTC.positiveGMT);
+        });
+
+        it('should adopt date with negative GMT', () => {
+          spy.mockImplementation(() => 180);
+          const result = toEqualLocalTime(dateForUTC.timestamp);
+
+          expect(result).toEqual(dateForUTC.negativeGMT);
+        });
+      });
+    });
+  });
+
+  describe('toDayBeginInUTC', () => {
+    it('should return correct timestamp', () => {
+      const result = toDayBeginInUTC(dateForUTC.default);
+
+      expect(result).toEqual(dateForUTC.timestamp);
     });
   });
 });
