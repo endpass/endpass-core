@@ -25,10 +25,34 @@ const addToDate = (date, value, unit = 's') =>
 
 const getWeek = date => dayjs(date).week();
 
+const toEqualLocalTime = value => {
+  const date = new Date(value);
+  const userTimezoneOffset = date.getTimezoneOffset() * 60000;
+  const normalizedDate = new Date(date.getTime() + userTimezoneOffset);
+  return normalizedDate;
+};
+
+const toDayBeginInUTC = value => {
+  const date = new Date(value);
+
+  const utcDate = Date.UTC(
+    date.getFullYear(),
+    date.getMonth(),
+    date.getDate(),
+    0,
+    0,
+    0,
+  );
+
+  return utcDate;
+};
+
 module.exports = {
   formateDate,
   fromNow,
   fromTo,
   addToDate,
   getWeek,
+  toEqualLocalTime,
+  toDayBeginInUTC,
 };

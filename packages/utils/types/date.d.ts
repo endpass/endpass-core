@@ -10,4 +10,8 @@ declare module '@endpass/utils/date' {
   export function addToDate(date: DayJsDate, value: number, unit: string): Date;
 
   export function getWeek(date: Date): number;
+
+  export function toEqualLocalTime(date: DayJsDate): Date;
+
+  export function toDayBeginInUTC(date: DayJsDate): number;
 }
