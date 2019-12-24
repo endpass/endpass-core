@@ -40,7 +40,9 @@ import SvgAtom from '@/atom/svg-atom/svg-atom';
 
 export default {
   name: 'VInput',
+
   inheritAttrs: false,
+
   props: {
     label: {
       type: String,
@@ -59,24 +61,28 @@ export default {
       default: null,
     },
   },
+
   data() {
     return {
       isFocus: false,
     };
   },
+
   computed: {
     listeners() {
       return {
         ...this.$listeners,
-        input: value => {
-          this.$emit('input', value);
+        input: e => {
+          this.$emit('input', e.target.value);
         },
       };
     },
+
     isError() {
       return !!this.error;
     },
   },
+
   components: {
     InputAtom,
     LabelAtom,
@@ -85,6 +91,11 @@ export default {
     DescriptionAtom,
     IconAtom,
     SvgAtom,
+  },
+
+  model: {
+    event: 'input',
+    prop: 'value',
   },
 };
 </script>

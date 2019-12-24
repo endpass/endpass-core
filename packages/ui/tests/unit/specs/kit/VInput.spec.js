@@ -43,7 +43,9 @@ describe('VInput', () => {
         },
       });
 
-      wrapper.find('input-atom-stub').vm.$emit('input', 'foo');
+      wrapper
+        .find('input-atom-stub')
+        .vm.$emit('input', { target: { value: 'foo' } });
 
       expect(wrapper.emitted().input).toEqual([['foo']]);
     });
