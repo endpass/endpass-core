@@ -13,7 +13,7 @@
       :value="value"
       :is-error="isError"
       v-bind="$attrs"
-      v-on="listeners"
+      v-on="$listeners"
     >
       <icon-atom
         v-if="isError"
@@ -69,15 +69,6 @@ export default {
   },
 
   computed: {
-    listeners() {
-      return {
-        ...this.$listeners,
-        input: e => {
-          this.$emit('input', e.target.value);
-        },
-      };
-    },
-
     isError() {
       return !!this.error;
     },

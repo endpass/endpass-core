@@ -37,17 +37,21 @@ describe('VInput', () => {
 
   describe('behavior', () => {
     it('should set default listener for input event', () => {
+      const handler = jest.fn();
+
       wrapper = shallowMount(VInput, {
         attrs: {
           value: '',
         },
+        listeners: {
+          input: handler,
+        },
       });
 
-      wrapper
-        .find('input-atom-stub')
-        .vm.$emit('input', { target: { value: 'foo' } });
+      wrapper.find('input-atom-stub').vm.$emit('input', 'foo');
 
-      expect(wrapper.emitted().input).toEqual([['foo']]);
+      expect(handler).toBeCalledTimes(1);
+      expect(handler).toBeCalledWith('foo');
     });
   });
 });

@@ -15,7 +15,7 @@
       :options="options"
       :skin="skin"
       v-bind="$attrs"
-      v-on="listeners"
+      v-on="$listeners"
     >
       <icon-atom
         v-if="isError"
@@ -73,15 +73,6 @@ export default {
   },
 
   computed: {
-    listeners() {
-      return {
-        ...this.$listeners,
-        input: value => {
-          this.$emit('input', value);
-        },
-      };
-    },
-
     isError() {
       return !!this.error;
     },

@@ -72,14 +72,6 @@ export default {
   },
 
   computed: {
-    listeners() {
-      return {
-        ...this.$listeners,
-        input: value => {
-          this.$emit('input', value);
-        },
-      };
-    },
     isError() {
       return !!this.error;
     },

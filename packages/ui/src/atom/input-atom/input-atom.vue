@@ -8,7 +8,7 @@
       class="input-atom-control"
       :value="value"
       v-bind="$attrs"
-      v-on="$listeners"
+      v-on="listeners"
     >
     <slot />
   </span>
@@ -27,6 +27,15 @@ export default {
     },
   },
   computed: {
+    listeners() {
+      return {
+        ...this.$listeners,
+        input: e => {
+          this.$emit('input', e.target.value);
+        },
+      };
+    },
+
     inputAtomCssClass() {
       return Object.assign(this.themeCssClass, {
         'is-error': this.$attrs['is-error'],
