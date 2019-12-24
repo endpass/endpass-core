@@ -15,7 +15,7 @@
       :is-error="isError"
       :class="skinCssClass"
       v-bind="$attrs"
-      v-on="listeners"
+      v-on="$listeners"
     >
       <icon-atom
         v-if="isError"
