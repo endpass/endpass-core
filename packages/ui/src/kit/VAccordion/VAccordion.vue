@@ -17,7 +17,7 @@ export default {
       type: String,
       default: 'normal',
       validator(value) {
-        return ['small', 'normal'].indexOf(value) !== -1;
+        return ['small', 'normal', 'large'].indexOf(value) !== -1;
       },
     },
   },
