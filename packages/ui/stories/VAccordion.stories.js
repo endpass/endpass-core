@@ -2,10 +2,9 @@ import { storiesOf } from '@storybook/vue';
 import VAccordion from '@/kit/VAccordion';
 import VAccordionItem from '@/kit/VAccordion/VAccordionItem';
 
-storiesOf('VAccordion/desktop', module)
-  .add('default', () => ({
-    components: { VAccordion, VAccordionItem },
-    template: `
+storiesOf('VAccordion/desktop', module).add('default', () => ({
+  components: { VAccordion, VAccordionItem },
+  template: `
       <theme-provider>
         <v-accordion class="custom-accordion-class">
           <v-accordion-item class="custom-item-class">
@@ -92,6 +91,17 @@ storiesOf('VAccordion/desktop', module)
             Lorem ipsum dolor sit amet.
           </v-accordion-item>
         </v-accordion>
+
+        <v-accordion size="large">
+          <v-accordion-item>
+            <template v-slot:title>Large Accordion</template>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          </v-accordion-item>
+          <v-accordion-item>
+            <template v-slot:title>Large Accordion</template>
+            Lorem ipsum dolor sit amet.
+          </v-accordion-item>
+        </v-accordion>
       </theme-provider>
     `,
-  }));
+}));
