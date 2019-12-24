@@ -13,7 +13,7 @@
       :value="value"
       :is-error="isError"
       v-bind="$attrs"
-      v-on="listeners"
+      v-on="$listeners"
     >
       <icon-atom
         v-if="isError"
@@ -40,7 +40,9 @@ import SvgAtom from '@/atom/svg-atom/svg-atom';
 
 export default {
   name: 'VInput',
+
   inheritAttrs: false,
+
   props: {
     label: {
       type: String,
@@ -59,24 +61,19 @@ export default {
       default: null,
     },
   },
+
   data() {
     return {
       isFocus: false,
     };
   },
+
   computed: {
-    listeners() {
-      return {
-        ...this.$listeners,
-        input: value => {
-          this.$emit('input', value);
-        },
-      };
-    },
     isError() {
       return !!this.error;
     },
   },
+
   components: {
     InputAtom,
     LabelAtom,
@@ -85,6 +82,11 @@ export default {
     DescriptionAtom,
     IconAtom,
     SvgAtom,
+  },
+
+  model: {
+    event: 'input',
+    prop: 'value',
   },
 };
 </script>

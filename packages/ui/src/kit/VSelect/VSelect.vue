@@ -15,7 +15,7 @@
       :options="options"
       :skin="skin"
       v-bind="$attrs"
-      v-on="listeners"
+      v-on="$listeners"
     >
       <icon-atom
         v-if="isError"
@@ -42,7 +42,9 @@ import SvgAtom from '@/atom/svg-atom/svg-atom';
 
 export default {
   name: 'VSelect',
+
   inheritAttrs: false,
+
   props: {
     label: {
       type: String,
@@ -69,14 +71,8 @@ export default {
       default: 'primary',
     },
   },
+
   computed: {
-    listeners() {
-      return Object.assign({}, this.$listeners, {
-        input: (value) => {
-          this.$emit('input', value);
-        },
-      });
-    },
     isError() {
       return !!this.error;
     },
@@ -90,6 +86,11 @@ export default {
     ErrorAtom,
     DescriptionAtom,
     SvgAtom,
+  },
+
+  model: {
+    event: 'input',
+    prop: 'value',
   },
 };
 </script>

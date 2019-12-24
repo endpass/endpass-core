@@ -15,7 +15,7 @@
       :is-error="isError"
       :class="skinCssClass"
       v-bind="$attrs"
-      v-on="listeners"
+      v-on="$listeners"
     >
       <icon-atom
         v-if="isError"
@@ -42,7 +42,9 @@ import SvgAtom from '@/atom/svg-atom/svg-atom';
 
 export default {
   name: 'VTextarea',
+
   inheritAttrs: false,
+
   props: {
     label: {
       type: String,
@@ -68,14 +70,8 @@ export default {
       },
     },
   },
+
   computed: {
-    listeners() {
-      return Object.assign({}, this.$listeners, {
-        input: (value) => {
-          this.$emit('input', value);
-        },
-      });
-    },
     isError() {
       return !!this.error;
     },
@@ -83,6 +79,7 @@ export default {
       return `skin-${this.skin}`;
     },
   },
+
   components: {
     TextareaAtom,
     LabelAtom,
@@ -91,6 +88,11 @@ export default {
     DescriptionAtom,
     IconAtom,
     SvgAtom,
+  },
+
+  model: {
+    event: 'input',
+    prop: 'value',
   },
 };
 </script>

@@ -7,14 +7,14 @@
       class="v-code-input-container"
       @input="onInput"
     >
-      <template v-for="(value, idx) in numbers">
+      <template v-for="(numberValue, idx) in numbers">
         <li
           :key="`input-${idx}`"
           class="v-code-input-item"
         >
           <input-atom
             class="v-code-input-number"
-            :value="value"
+            :value="numberValue"
             :disabled="disabled"
             type="number"
             placeholder="0"
@@ -22,6 +22,7 @@
             :data-index="idx"
             :is-error="isError"
             @paste="onPasteNumber"
+            @keydown.native="onKeyDown"
           />
         </li>
         <li
@@ -152,6 +153,16 @@ export default {
       }
     },
 
+    onKeyDown(e) {
+      if (e.key !== 'Backspace' || e.target.value) {
+        return;
+      }
+      e.preventDefault();
+      const idx = this.getIndex(e);
+      this.handleBackspace(idx);
+      this.setNumberValueByIndex(idx - 1, '');
+    },
+
     onPasteNumber(e) {
       e.preventDefault();
 
@@ -178,9 +189,8 @@ export default {
     },
 
     onInput(e) {
-      const idx = e.target.getAttribute('data-index') - 0;
+      const idx = this.getIndex(e);
       const value = `${e.target.value}`.split('').pop();
-
       switch (e.inputType) {
         case 'insertText':
         case 'insertCompositionText':
@@ -192,6 +202,11 @@ export default {
         default:
           break;
       }
+    },
+
+    getIndex(e) {
+      const idx = e.target.getAttribute('data-index') - 0;
+      return idx;
     },
 
     setNumberValueByIndex(idx, value) {
@@ -208,6 +223,10 @@ export default {
   components: {
     ErrorAtom,
     InputAtom,
+  },
+  model: {
+    event: 'input',
+    prop: 'value',
   },
 };
 </script>
