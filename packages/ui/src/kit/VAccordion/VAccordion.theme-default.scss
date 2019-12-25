@@ -17,6 +17,15 @@
 }
 
 .v-accordion.theme-default.size-large .v-accordion-header {
-  padding: 30px 36px;
+  padding: 27px 36px;
   min-height: 92px;
+}
+
+.v-accordion.theme-default.size-large .v-accordion-title {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.v-accordion.theme-default.size-large .v-accordion-content {
+  padding: 12px 37px 30px;
 }
