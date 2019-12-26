@@ -1,47 +1,47 @@
 <template>
   <div :class="vTabsCssClass">
-    <slot />
-    <section
-      v-if="isTabsExists"
-      class="v-tabs-controls-list"
-    >
+    <section class="v-tabs-controls-list">
       <button
-        v-for="(child, index) in tabsLabels"
+        v-for="(child, index) in $slots.default.filter($el => !!$el.tag)"
         :key="index"
         :class="{
           'v-tabs-control': true,
-          'is-active': activeTabIdx === index,
+          'is-active': activeTabId === getChildProps(child).id,
         }"
         v-bind="child.data.attrs"
         @click="onTabClick($event, index)"
       >
-        {{ getChildLabel(child) }}
+        {{ getChildProps(child).label }}
       </button>
     </section>
-    <section
-      v-if="activeContent"
-      class="v-tabs-content"
-    >
-      <v-tab-content v-bind="{ content: activeContent }" />
+    <section class="v-tabs-content">
+      <slot />
     </section>
   </div>
 </template>
+
 <script>
 import ThemeMixin from '@/mixins/ThemeMixin';
-import VTabContent from '@/kit/VTabs/VTabContent';
 
 export default {
   name: 'VTabs',
+
   provide() {
     return {
       addTab: this.addTab,
       removeTab: this.removeTab,
-      setActive: this.setActive,
     };
   },
 
+  props: {
+    initialTab: {
+      type: String,
+      default: null,
+    },
+  },
+
   data: () => ({
-    activeTabIdx: 0,
+    activeTabId: null,
     tabs: [],
   }),
 
@@ -49,58 +49,43 @@ export default {
     vTabsCssClass() {
       return { ...this.themeCssClass, 'v-tabs': true };
     },
-    tabsLabels() {
-      return this.$slots.default.filter($el => !!$el.tag);
-    },
-    isTabsExists() {
-      return this.$slots.default.length > 0;
-    },
-    activeContent() {
-      const child = this.tabs[this.activeTabIdx];
-      if (!child) {
-        return null;
-      }
-
-      return child.$slots.default;
-    },
   },
 
   methods: {
-    getChildLabel(child) {
-      const props = child.componentOptions.propsData || {};
-      return props.label;
+    getChildProps(child) {
+      return child.componentOptions.propsData || {};
     },
 
     addTab(tab) {
-      this.tabs = this.tabs.concat(tab);
-    },
-
-    setActive(tab) {
-      const tabIdx = this.tabs.indexOf(tab);
-      if (tabIdx === -1) return;
-
-      this.activeTabIdx = tabIdx;
+      this.tabs.push(tab);
     },
 
     removeTab(tab) {
       const tabIdx = this.tabs.indexOf(tab);
+
       if (tabIdx === -1) return;
 
       this.tabs.splice(tabIdx, 1);
     },
 
     onTabClick(ev, index) {
-      if (this.activeTabIdx === index) return;
+      const { id } = this.tabs[index].$options.propsData;
 
-      this.activeTabIdx = index;
-      const child = this.tabs[index];
-      if (child) {
-        child.$emit('click', ev);
-      }
+      this.activeTabId = id;
     },
   },
 
+  mounted() {
+    if (this.initialTab) {
+      this.activeTabId = this.initialTab;
+      return;
+    }
+
+    const [firstTab] = this.$slots.default.filter($el => !!$el.tag);
+
+    this.activeTabId = this.getChildProps(firstTab).id;
+  },
+
   mixins: [ThemeMixin],
-  components: { VTabContent },
 };
 </script>
