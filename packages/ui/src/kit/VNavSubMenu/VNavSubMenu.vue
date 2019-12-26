@@ -1,7 +1,10 @@
 <template>
   <outside-click-atom @click="onClickOutside">
     <close-by-key-atom @close="onESCPress">
-      <section :class="vNavSubMenuCssClass" class="v-nav-sub-menu">
+      <section
+        :class="vNavSubMenuCssClass"
+        class="v-nav-sub-menu"
+      >
         <navigation-control-atom @click="handleOpenContent">
           {{ label }}
           <i class="v-nav-sub-menu-icon">
@@ -80,7 +83,7 @@ export default {
 
       this.isExpanded = true;
 
-      setImmediate(this.addCloseHandlers);
+      setTimeout(this.addCloseHandlers, 50);
     },
   },
 
