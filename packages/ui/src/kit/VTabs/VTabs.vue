@@ -73,7 +73,7 @@ export default {
       const { id } = targetTab.$options.propsData;
 
       this.activeTabId = id;
-      targetTab.$emit('click');
+      targetTab.$emit('click', ev);
     },
   },
 
