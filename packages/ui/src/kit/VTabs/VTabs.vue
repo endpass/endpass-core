@@ -69,9 +69,11 @@ export default {
     },
 
     onTabClick(ev, index) {
-      const { id } = this.tabs[index].$options.propsData;
+      const targetTab = this.tabs[index];
+      const { id } = targetTab.$options.propsData;
 
       this.activeTabId = id;
+      targetTab.$emit('click');
     },
   },
 
