@@ -11966,6 +11966,12 @@ exports[`Storyshots VTag/desktop default 1`] = `
          
         <th>
           
+                dark-gray
+              
+        </th>
+         
+        <th>
+          
                 disabled
               
         </th>
@@ -12061,6 +12067,15 @@ exports[`Storyshots VTag/desktop default 1`] = `
       <td>
         <div
           class="v-tag theme-default skin-light-gray"
+        >
+          text tag 
+          <!---->
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default skin-dark-gray"
         >
           text tag 
           <!---->
@@ -12302,6 +12317,29 @@ exports[`Storyshots VTag/desktop default 1`] = `
       <td>
         <div
           class="v-tag theme-default is-closable skin-light-gray"
+        >
+          text tag 
+          <i
+            class="icon-atom v-tag-close theme-default"
+          >
+            <svg
+              class="svg-atom theme-default"
+              height="100%"
+              width="100%"
+            >
+              <use
+                x="0"
+                xlink:href="#endpass-ui-icon-close"
+                y="0"
+              />
+            </svg>
+          </i>
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default is-closable skin-dark-gray"
         >
           text tag 
           <i

@@ -49,6 +49,9 @@ storiesOf('VTag/desktop', module).add('default', () => ({
                 light-gray
               </th>
               <th>
+                dark-gray
+              </th>
+              <th>
                 disabled
               </th>
             </tr>
@@ -84,6 +87,9 @@ storiesOf('VTag/desktop', module).add('default', () => ({
             </td>
             <td>
               <v-tag skin="light-gray">text tag</v-tag>
+            </td>
+            <td>
+              <v-tag skin="dark-gray">text tag</v-tag>
             </td>
             <td>
               <v-tag skin="white">text tag</v-tag>
@@ -123,6 +129,9 @@ storiesOf('VTag/desktop', module).add('default', () => ({
             </td>
             <td>
               <v-tag @click="onClick" is-closable  skin="light-gray">text tag</v-tag>
+            </td>
+            <td>
+              <v-tag @click="onClick" is-closable  skin="dark-gray">text tag</v-tag>
             </td>
             <td>
               <v-tag @click="onClick" is-closable  skin="white">text tag</v-tag>
