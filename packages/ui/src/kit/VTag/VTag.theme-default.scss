@@ -83,6 +83,11 @@
   background-color: var(--endpass-ui-color-grey-1);
 }
 
+.v-tag.theme-default.skin-dark-gray {
+  color: var(--endpass-ui-color-white);
+  background-color: var(--endpass-ui-color-grey-8);
+}
+
 .v-tag.theme-default.skin-white {
   border-color: var(--endpass-ui-color-grey-3);
   color: var(--endpass-ui-color-grey-9);
