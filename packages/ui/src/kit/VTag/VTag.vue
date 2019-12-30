@@ -21,8 +21,10 @@ import IconAtom from '@/atom/icon-atom/icon-atom';
 import SvgAtom from '@/atom/svg-atom/svg-atom';
 
 export default {
-  name: 'VSelect',
+  name: 'VTag',
+
   inheritAttrs: false,
+
   props: {
     isClosable: {
       type: Boolean,
@@ -51,15 +53,19 @@ export default {
       },
     },
   },
+
   computed: {
     tagCssClass() {
-      return Object.assign({}, this.themeCssClass, {
+      return {
+        ...this.themeCssClass,
         'is-closable': this.isClosable,
         [`skin-${this.skin}`]: true,
-      });
+      };
     },
   },
+
   mixins: [ThemeMixin],
+
   components: {
     IconAtom,
     SvgAtom,

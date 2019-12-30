@@ -1,0 +1,86 @@
+.v-tooltip.theme-default {
+  position: relative;
+}
+
+.v-tooltip-fade-enter-active,
+.v-tooltip-fade-leave-active {
+  transition: opacity .2s;
+}
+.v-tooltip-fade-enter,
+.v-tooltip-fade-leave-to {
+  opacity: 0;
+}
+
+
+.v-tooltip.theme-default .v-tooltip-container {
+  position: absolute;
+  font-size: 14px;
+  padding: 9px 16px 12px;
+  background-color: var(--endpass-ui-color-black);
+  color: var(--endpass-ui-color-white);
+  border-radius: 2px;
+  min-width: 172px;
+}
+
+.v-tooltip.theme-default .v-tooltip-container:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.v-tooltip.position-top-left .v-tooltip-container:after {
+  top: -5px;
+  left: 12px;
+}
+.v-tooltip.position-top-left .v-tooltip-container {
+  left: 50%;
+  margin-left: -16px;
+  margin-top: 9px;
+}
+
+.v-tooltip.position-top-right .v-tooltip-container:after {
+  top: -5px;
+  right: 12px;
+}
+.v-tooltip.position-top-right .v-tooltip-container {
+  right: 50%;
+  margin-right: -16px;
+  margin-top: 9px;
+}
+
+.v-tooltip.position-bottom-left .v-tooltip-container:after {
+  bottom: -5px;
+  left: 12px;
+}
+.v-tooltip.position-bottom-left .v-tooltip-container {
+  left: 50%;
+  margin-left: -16px;
+  margin-bottom: 9px;
+  bottom: 0
+}
+
+.v-tooltip.position-bottom-right .v-tooltip-container:after {
+  bottom: -5px;
+  right: 12px;
+}
+.v-tooltip.position-bottom-right .v-tooltip-container {
+  right: 50%;
+  margin-right: -16px;
+  margin-bottom: 9px;
+  bottom: 0
+}
+
+.v-tooltip.theme-default.position-top-right .v-tooltip-container:after,
+.v-tooltip.theme-default.position-top-left .v-tooltip-container:after {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 5px solid var(--endpass-ui-color-black);
+}
+
+.v-tooltip.theme-default.position-bottom-right .v-tooltip-container:after,
+.v-tooltip.theme-default.position-bottom-left .v-tooltip-container:after {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 5px solid var(--endpass-ui-color-black);
+}
