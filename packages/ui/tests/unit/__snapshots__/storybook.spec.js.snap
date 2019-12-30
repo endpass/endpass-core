@@ -13013,3 +13013,165 @@ exports[`Storyshots VToggle/desktop true/false attr 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots VTooltip/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <table>
+    <tr>
+      <td>
+        <div>
+          <div>
+            top container
+          </div>
+           
+          <div
+            style="width: 120px;"
+          >
+            <div
+              style="padding: 20px; background: silver;"
+            >
+              
+      move mouse to this place
+    
+            </div>
+             
+            <div
+              class="v-tooltip theme-default position-top-left"
+              style="display: none;"
+            >
+              <div
+                class="v-tooltip-container"
+              >
+                
+                  position: top-left
+                
+              </div>
+            </div>
+          </div>
+           
+          <div>
+            bottom container
+          </div>
+        </div>
+      </td>
+       
+      <td>
+        <div>
+          <div>
+            top container
+          </div>
+           
+          <div
+            style="width: 120px;"
+          >
+            <div
+              style="padding: 20px; background: silver;"
+            >
+              
+      move mouse to this place
+    
+            </div>
+             
+            <div
+              class="v-tooltip theme-default position-top-right"
+              style="display: none;"
+            >
+              <div
+                class="v-tooltip-container"
+              >
+                
+                  position: top-right
+                
+              </div>
+            </div>
+          </div>
+           
+          <div>
+            bottom container
+          </div>
+        </div>
+      </td>
+    </tr>
+     
+    <tr>
+      <td>
+        <div>
+          <div>
+            top container
+          </div>
+           
+          <div
+            style="width: 120px;"
+          >
+            <div
+              class="v-tooltip theme-default position-bottom-left"
+              style="display: none;"
+            >
+              <div
+                class="v-tooltip-container"
+              >
+                
+                  position: bottom-left
+                
+              </div>
+            </div>
+             
+            <div
+              style="padding: 20px; background: silver;"
+            >
+              
+      move mouse to this place
+    
+            </div>
+          </div>
+           
+          <div>
+            bottom container
+          </div>
+        </div>
+      </td>
+       
+      <td>
+        <div>
+          <div>
+            top container
+          </div>
+           
+          <div
+            style="width: 120px;"
+          >
+            <div
+              class="v-tooltip theme-default position-bottom-right"
+              style="display: none;"
+            >
+              <div
+                class="v-tooltip-container"
+              >
+                
+                  position: bottom-right
+                
+              </div>
+            </div>
+             
+            <div
+              style="padding: 20px; background: silver;"
+            >
+              
+      move mouse to this place
+    
+            </div>
+          </div>
+           
+          <div>
+            bottom container
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+`;
