@@ -11852,6 +11852,47 @@ exports[`Storyshots VTabs/desktop default 1`] = `
 </div>
 `;
 
+exports[`Storyshots VTabs/desktop initial tab (child level) 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div
+    class="theme-default v-tabs"
+  >
+    <section
+      class="v-tabs-controls-list"
+    >
+      <button
+        class="v-tabs-control"
+        data-test="foo-tab"
+      >
+        
+      Foo
+    
+      </button>
+      <button
+        class="v-tabs-control"
+        data-test="bar-tab"
+      >
+        
+      Bar
+    
+      </button>
+    </section>
+     
+    <section
+      class="v-tabs-content"
+    >
+      <!---->
+       
+      <!---->
+    </section>
+  </div>
+</div>
+`;
+
 exports[`Storyshots VTabs/desktop initial tab 1`] = `
 <div>
   <div
