@@ -11799,13 +11799,27 @@ exports[`Storyshots VTabs/desktop conditional 1`] = `
         </button>
       </section>
        
-      <section
-        class="v-tabs-content"
+      <div
+        style="display: none;"
       >
-        <!---->
+        <div
+          data-test="foo-tab"
+        >
+          
+              Foo content 1
+            
+        </div>
          
-        <!---->
-      </section>
+        <div
+          data-test="bar-tab"
+        >
+          
+              Bar content 1
+            
+        </div>
+      </div>
+       
+      <!---->
     </div>
   </div>
 </div>
@@ -11841,54 +11855,27 @@ exports[`Storyshots VTabs/desktop default 1`] = `
       </button>
     </section>
      
-    <section
-      class="v-tabs-content"
+    <div
+      style="display: none;"
     >
-      <!---->
-       
-      <!---->
-    </section>
-  </div>
-</div>
-`;
-
-exports[`Storyshots VTabs/desktop initial tab (child level) 1`] = `
-<div>
-  <div
-    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  />
-   
-  <div
-    class="theme-default v-tabs"
-  >
-    <section
-      class="v-tabs-controls-list"
-    >
-      <button
-        class="v-tabs-control"
+      <div
         data-test="foo-tab"
       >
         
-      Foo
-    
-      </button>
-      <button
-        class="v-tabs-control"
+              Foo content
+            
+      </div>
+       
+      <div
         data-test="bar-tab"
       >
         
-      Bar
-    
-      </button>
-    </section>
+              Bar content
+            
+      </div>
+    </div>
      
-    <section
-      class="v-tabs-content"
-    >
-      <!---->
-       
-      <!---->
-    </section>
+    <!---->
   </div>
 </div>
 `;
@@ -11923,14 +11910,42 @@ exports[`Storyshots VTabs/desktop initial tab 1`] = `
       </button>
     </section>
      
-    <section
-      class="v-tabs-content"
+    <div
+      style="display: none;"
     >
-      <!---->
+      <div
+        data-test="foo-tab"
+      >
+        
+              Foo content
+            
+      </div>
        
-      <!---->
-    </section>
+      <div
+        data-test="bar-tab"
+      >
+        
+              Bar content
+            
+      </div>
+    </div>
+     
+    <!---->
   </div>
+</div>
+`;
+
+exports[`Storyshots VTabs/desktop interactive 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <button>
+    Add tab
+  </button>
+   
+  <!---->
 </div>
 `;
 

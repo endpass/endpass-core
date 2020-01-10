@@ -29,11 +29,11 @@ storiesOf('VTabs/desktop', module)
     components: { VTabs, VTab },
     template: `
         <theme-provider>
-          <v-tabs initial-tab="bar">
+          <v-tabs>
             <v-tab label="Foo" data-test="foo-tab" @click="onClick">
               Foo content
             </v-tab>
-            <v-tab label="Bar" data-test="bar-tab" @click="onClick">
+            <v-tab label="Bar" data-test="bar-tab" :is-active="true" @click="onClick">
               Bar content
             </v-tab>
           </v-tabs>
