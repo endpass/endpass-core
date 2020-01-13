@@ -1,27 +1,37 @@
 <template>
-  <div :class="vTabsCssClass">
+  <div
+    v-if="$slots.default"
+    :class="vTabsCssClass"
+  >
     <section class="v-tabs-controls-list">
       <button
-        v-for="(child, index) in $slots.default.filter($el => !!$el.tag)"
+        v-for="(tab, index) in $slots.default.filter($el => !!$el.tag)"
         :key="index"
         :class="{
           'v-tabs-control': true,
-          'is-active': activeTabId === getChildProps(child).id,
+          'is-active': activeTabIdx === index,
         }"
-        v-bind="child.data.attrs"
-        @click="onTabClick($event, index)"
+        v-bind="tab.data.attrs"
+        @click="onTabClick({ event: $event, index })"
       >
-        {{ getChildProps(child).label }}
+        {{ getTabLabel(tab) }}
       </button>
     </section>
-    <section class="v-tabs-content">
+    <div v-show="false">
       <slot />
-    </section>
+    </div>
+    <v-tabs-content
+      class="v-tabs-content"
+      :active-tab-idx="activeTabIdx"
+    >
+      <slot />
+    </v-tabs-content>
   </div>
 </template>
 
 <script>
 import ThemeMixin from '@/mixins/ThemeMixin';
+import VTabsContent from './VTabsContent.vue';
 
 export default {
   name: 'VTabs',
@@ -33,15 +43,8 @@ export default {
     };
   },
 
-  props: {
-    initialTab: {
-      type: String,
-      default: null,
-    },
-  },
-
   data: () => ({
-    activeTabId: null,
+    activeTabIdx: null,
     tabs: [],
   }),
 
@@ -52,42 +55,78 @@ export default {
   },
 
   methods: {
-    getChildProps(child) {
-      return child.componentOptions.propsData || {};
-    },
-
     addTab(tab) {
       this.tabs.push(tab);
     },
 
     removeTab(tab) {
-      const tabIdx = this.tabs.indexOf(tab);
-
-      if (tabIdx === -1) return;
-
-      this.tabs.splice(tabIdx, 1);
+      this.tabs.splice(
+        this.tabs.findIndex(el => el === tab),
+        1,
+      );
     },
 
-    onTabClick(ev, index) {
-      const targetTab = this.tabs[index];
-      const { id } = targetTab.$options.propsData;
+    handleTabsMount() {
+      if (!this.$slots.default) return;
 
-      this.activeTabId = id;
-      targetTab.$emit('click', ev);
+      const tabs = this.$slots.default.filter($el => !!$el.tag);
+      const activeTab = tabs.find(
+        tab => tab.componentOptions.propsData.isActive,
+      );
+
+      if (!activeTab) return;
+
+      const activeTabIdx = tabs.findIndex(tab => tab === activeTab);
+
+      this.activeTabIdx = activeTabIdx;
     },
+
+    handleTabsRender() {
+      if (!this.$slots.default) return;
+
+      const tabs = this.$slots.default.filter($el => !!$el.tag);
+
+      if (tabs.length === 0) return;
+
+      if (this.activeTabIdx !== null) return;
+
+      this.activeTabIdx = 0;
+    },
+
+    getTabLabel(tab) {
+      const { data, componentOptions } = tab;
+
+      if (componentOptions.propsData && componentOptions.propsData.label) {
+        return componentOptions.propsData.label;
+      }
+
+      return data.attrs.label;
+    },
+
+    onTabClick({ event, index }) {
+      const { $listeners = {} } = this.tabs[index];
+
+      this.activeTabIdx = index;
+
+      if (!$listeners.click) return;
+
+      $listeners.click(event);
+    },
+  },
+
+  updated() {
+    this.handleTabsRender();
   },
 
   mounted() {
-    if (this.initialTab) {
-      this.activeTabId = this.initialTab;
-      return;
-    }
-
-    const [firstTab] = this.$slots.default.filter($el => !!$el.tag);
-
-    this.activeTabId = this.getChildProps(firstTab).id;
+    this.handleTabsRender();
+    this.handleTabsMount();
   },
 
   mixins: [ThemeMixin],
+
+  components: {
+    VTabsContent,
+  },
 };
 </script>
