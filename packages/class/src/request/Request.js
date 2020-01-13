@@ -15,11 +15,14 @@ export default class Request {
   constructor({ config, http, createAnswer = createAnswerDefault }) {
     this.config = config;
     this.createAnswer = createAnswer;
-    this.uploadConfig = {
-      ...config,
-      headers: { ...config.headers, 'Content-Type': 'multipart/form-data' },
-    };
     this.http = http;
+  }
+
+  /**
+   * @param {AxiosRequestConfig} config
+   */
+  setConfig(config) {
+    this.config = config;
   }
 
   /**
@@ -74,7 +77,11 @@ export default class Request {
 
     return this.createAnswer(
       this.http.post(url, body, {
-        ...this.uploadConfig,
+        ...this.config,
+        headers: {
+          ...this.config.headers,
+          'Content-Type': 'multipart/form-data',
+        },
         ...config,
       }),
     );
