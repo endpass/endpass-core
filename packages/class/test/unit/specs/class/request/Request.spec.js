@@ -1,4 +1,4 @@
-import Request from '@/Request';
+import Request from '@/request';
 
 describe('Request class', () => {
   let request;
