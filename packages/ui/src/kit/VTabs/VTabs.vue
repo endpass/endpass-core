@@ -44,7 +44,7 @@ export default {
   },
 
   data: () => ({
-    activeTabIdx: null,
+    activeTabIdx: 0,
     tabs: [],
   }),
 
@@ -57,40 +57,20 @@ export default {
   methods: {
     addTab(tab) {
       this.tabs.push(tab);
+
+      if (!tab.$props.isActive) return;
+
+      this.activeTabIdx = this.tabs.findIndex(el => el === tab);
     },
 
     removeTab(tab) {
-      this.tabs.splice(
-        this.tabs.findIndex(el => el === tab),
-        1,
-      );
-    },
+      const tabIdx = this.tabs.findIndex(el => el === tab);
 
-    handleTabsMount() {
-      if (!this.$slots.default) return;
+      this.tabs.splice(tabIdx, 1);
 
-      const tabs = this.$slots.default.filter($el => !!$el.tag);
-      const activeTab = tabs.find(
-        tab => tab.componentOptions.propsData.isActive,
-      );
+      const newTabIdx = this.activeTabIdx - 1;
 
-      if (!activeTab) return;
-
-      const activeTabIdx = tabs.findIndex(tab => tab === activeTab);
-
-      this.activeTabIdx = activeTabIdx;
-    },
-
-    handleTabsRender() {
-      if (!this.$slots.default) return;
-
-      const tabs = this.$slots.default.filter($el => !!$el.tag);
-
-      if (tabs.length === 0) return;
-
-      if (this.activeTabIdx !== null) return;
-
-      this.activeTabIdx = 0;
+      this.activeTabIdx = newTabIdx >= 0 ? newTabIdx : 0;
     },
 
     getTabLabel(tab) {
@@ -112,15 +92,6 @@ export default {
 
       $listeners.click(event);
     },
-  },
-
-  updated() {
-    this.handleTabsRender();
-  },
-
-  mounted() {
-    this.handleTabsRender();
-    this.handleTabsMount();
   },
 
   mixins: [ThemeMixin],

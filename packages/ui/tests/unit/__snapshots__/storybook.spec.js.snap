@@ -11782,7 +11782,7 @@ exports[`Storyshots VTabs/desktop conditional 1`] = `
         class="v-tabs-controls-list"
       >
         <button
-          class="v-tabs-control"
+          class="v-tabs-control is-active"
           data-test="foo-tab"
         >
           
@@ -11819,7 +11819,13 @@ exports[`Storyshots VTabs/desktop conditional 1`] = `
         </div>
       </div>
        
-      <!---->
+      <section
+        class="v-tabs-content v-tabs-content"
+      >
+        
+              Foo content 1
+            
+      </section>
     </div>
   </div>
 </div>
@@ -11838,7 +11844,7 @@ exports[`Storyshots VTabs/desktop default 1`] = `
       class="v-tabs-controls-list"
     >
       <button
-        class="v-tabs-control"
+        class="v-tabs-control is-active"
         data-test="foo-tab"
       >
         
@@ -11875,7 +11881,13 @@ exports[`Storyshots VTabs/desktop default 1`] = `
       </div>
     </div>
      
-    <!---->
+    <section
+      class="v-tabs-content v-tabs-content"
+    >
+      
+              Foo content
+            
+    </section>
   </div>
 </div>
 `;
@@ -11893,7 +11905,7 @@ exports[`Storyshots VTabs/desktop initial tab 1`] = `
       class="v-tabs-controls-list"
     >
       <button
-        class="v-tabs-control"
+        class="v-tabs-control is-active"
         data-test="foo-tab"
       >
         
@@ -11930,7 +11942,13 @@ exports[`Storyshots VTabs/desktop initial tab 1`] = `
       </div>
     </div>
      
-    <!---->
+    <section
+      class="v-tabs-content v-tabs-content"
+    >
+      
+              Foo content
+            
+    </section>
   </div>
 </div>
 `;
