@@ -1,5 +1,5 @@
 import Base from './Base';
-import GetBlockPooling from '../Pooling/GetBlockPooling';
+import GetBlockPooling from '@/Connections/HttpConnection/EthSubscription/Pooling/GetBlockPooling';
 
 export default class NewHeads extends Base {
   static paramName = 'newHeads';

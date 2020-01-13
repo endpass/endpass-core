@@ -32,7 +32,7 @@ export default class BaseConnection {
   }
 
   /**
-   * @param {string} str
+   * @param {object} str
    * @return {void}
    */
   send = str => {

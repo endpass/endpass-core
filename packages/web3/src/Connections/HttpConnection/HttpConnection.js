@@ -1,10 +1,15 @@
+// @ts-check
+
 import BaseConnection from '../BaseConnection';
 import EthSubscription from './EthSubscription';
 import HttpRequester from './HttpRequester';
 
 export default class HttpConnection extends BaseConnection {
-  constructor(props) {
-    super(props);
+  /**
+   * @param {string} url
+   */
+  constructor(url) {
+    super(url);
     this.requester = new HttpRequester(this.url);
     this.ethSubscription = new EthSubscription({
       requester: this.requester,
@@ -14,18 +19,26 @@ export default class HttpConnection extends BaseConnection {
     this.ethSubscription.subscribe(this.handleObservers);
   }
 
+  /**
+   * @private
+   * @param {object} object
+   * @return {Promise<void>}
+   */
   async sendRequest(object) {
-    return this.requester.call(object);
-  }
-
-  async handleGetData(object) {
-    const response = await this.sendRequest(object);
+    const response = await this.requester.post(object);
     const data = await response.json();
 
     // send data to provider
     this.handleObservers(data);
   }
 
+  /**
+   * @private
+   * @param {object} params
+   * @param {string} params.id
+   * @param {string} params.jsonrpc
+   * @param {any=} result
+   */
   answerRpc({ id, jsonrpc }, result) {
     const res = {
       id,
@@ -35,7 +48,11 @@ export default class HttpConnection extends BaseConnection {
     this.handleObservers(res);
   }
 
-  async sendViaHttp(object) {
+  /**
+   * @private
+   * @param {object} object
+   */
+  sendViaHttp(object) {
     const { method, params } = object;
 
     switch (method) {
@@ -47,7 +64,7 @@ export default class HttpConnection extends BaseConnection {
         this.answerRpc(object);
         break;
       default:
-        this.handleGetData(object);
+        this.sendRequest(object);
         break;
     }
 
@@ -55,8 +72,11 @@ export default class HttpConnection extends BaseConnection {
     // // TODO: add get data blocks from eth ?
   }
 
-  send = object => {
-    this.sendViaHttp(object);
+  /**
+   * @param {object} data
+   */
+  send = data => {
+    this.sendViaHttp(data);
   };
 
   destroy() {

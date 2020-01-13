@@ -1,9 +1,18 @@
+// @ts-check
+
 export default class HttpRequester {
+  /**
+   * @param {string} url
+   */
   constructor(url) {
     this.url = url;
   }
 
-  call(object) {
+  /**
+   * @param {object} object
+   * @return {Promise<Response>}
+   */
+  post(object) {
     return fetch(this.url, {
       method: 'POST',
       headers: {

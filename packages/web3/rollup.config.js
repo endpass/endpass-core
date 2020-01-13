@@ -87,7 +87,7 @@ const createConfig = childConfig => {
 
 export default [
   createConfig({
-    input: './src/index.js',
+    input: './src/Web3Api.js',
     umd: pkg.umd,
     module: pkg.module,
   }),

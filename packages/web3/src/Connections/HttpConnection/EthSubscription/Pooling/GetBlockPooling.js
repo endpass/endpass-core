@@ -25,7 +25,7 @@ export default class GetBlockPooling {
       if (!this.isWorking) {
         break;
       }
-      const response = await this.requester.call({
+      const response = await this.requester.post({
         id: 'block-pooling',
         jsonrpc: '2.0',
         method: 'eth_getBlockByNumber',

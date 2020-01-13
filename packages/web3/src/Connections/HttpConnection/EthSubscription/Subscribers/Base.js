@@ -3,6 +3,10 @@ import NotifyHandler from '@/NotifyHandler';
 export default class Base {
   static paramName = 'notDefined';
 
+  /**
+   *
+   * @param {} requester
+   */
   constructor({ requester }) {
     this.requester = requester;
     this.notify = new NotifyHandler();
