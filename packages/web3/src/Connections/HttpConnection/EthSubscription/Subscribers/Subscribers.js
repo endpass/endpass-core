@@ -5,6 +5,12 @@ const subscribersMap = {
 };
 
 export default class Subscribers {
+  /**
+   * @param {string} subscriptionName
+   * @param {object} props
+   * @param {?} optional
+   * @return {NewHeads}
+   */
   static create(subscriptionName, props, optional) {
     if (!subscribersMap[subscriptionName]) {
       throw new Error(

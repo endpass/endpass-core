@@ -19,7 +19,7 @@ export default class BasePlugin {
    * @param {Function} cb
    */
   on(method, data, cb) {
-    this.context.events.on(method, data, cb);
+    return this.context.events.on(method, data, cb);
   }
 
   /**

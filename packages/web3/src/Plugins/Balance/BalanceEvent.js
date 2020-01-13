@@ -1,5 +1,5 @@
 import BaseEvent from '@/Events/BaseEvent';
-import { EVENT_PLUGINS } from '@/web3Constants';
+import { EVENT_PLUGINS } from '@/constants';
 
 const MINIMUM_TIMEOUT = 1000;
 

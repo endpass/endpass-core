@@ -1,34 +1,37 @@
-import generators from '@endpass/utils/generators';
-import BalancePlugin from './Plugins/Balance';
-import CompositePlugin from './Plugins/Composite';
-import Web3ResponseFabric from './Web3ResponseFabric';
+import CompositePlugin from '@/Plugins/Composite';
 
-const RECEIPT_STATUS_CONFIRM_TIMEOUT = 2000;
+import web3Response from '@/Extended/Web3Response';
+import {
+  promiseRepeater,
+  promiseToIterator,
+  sleep,
+} from '@/Extended/generators';
 
 export default class Web3Api {
-  constructor({ netUrl }) {
+  constructor({ netUrl, plugins }) {
     this.setNetworkResolver();
     this.setNetwork(netUrl);
     this.netUrl = netUrl;
+    this.plugins = plugins;
   }
 
   setNetwork(netUrl) {
     if (this.netUrl === netUrl) {
-      return this.web3;
+      return this.core;
     }
 
     this.netUrl = netUrl;
 
-    // create new instance of web3
+    // create new instance of core
     this.networkChangeResolve({ isNetworkChanged: true });
     this.setNetworkResolver();
-    // if (this.web3) this.web3.destroy();
-    this.web3 = new CompositePlugin({
+    // if (this.core) this.core.destroy();
+    this.core = new CompositePlugin({
       netUrl,
-      plugins: [BalancePlugin],
+      plugins: this.plugins,
     });
 
-    return this.web3;
+    return this.core;
   }
 
   setNetworkResolver() {
@@ -38,109 +41,45 @@ export default class Web3Api {
   }
 
   call(...args) {
-    return this.web3.call(...args);
-  }
-
-  async createRaceAnswer(promiseRequest) {
-    const checkNetwork = this.createNetworkChecker();
-    try {
-      const res = await Promise.race([promiseRequest, this.isNetworkChanged()]);
-      return Web3ResponseFabric.createSuccess(res, checkNetwork());
-    } catch (e) {
-      return Web3ResponseFabric.createError(e, checkNetwork());
-    }
-  }
-
-  createNetworkChecker() {
-    const oldWeb3 = this.web3;
-    return () => {
-      return oldWeb3 !== this.web3;
-    };
+    return this.core.call(...args);
   }
 
   async isNetworkChanged() {
+    // TODO: replace by callbag
     return this.networkChangePromise;
   }
 
-  async getBalance(addr, option = 'latest') {
-    return this.createRaceAnswer(
-      this.web3.call('eth_getBalance', addr, option),
-    );
+  async toRace(promiseRequest) {
+    // TODO: replace by callbag
+    try {
+      const res = await Promise.race([promiseRequest, this.isNetworkChanged()]);
+      return web3Response.createSuccess(res);
+    } catch (e) {
+      return web3Response.createError(e, false);
+    }
   }
 
-  async *iterateBalance(address) {
-    let checkNetwork = this.createNetworkChecker();
-    const self = this;
+  emitterToIterator(method, props) {
+    // TODO: replace by callbag
+    const repeater = promiseRepeater();
 
-    let promiseResolve;
-    let promiseResponse = new Promise(resolve => (promiseResolve = resolve));
+    const emitterHandler = (error, result) => {
+      repeater.resolve({ error, result, isNetworkChanged: false });
+    };
 
-    function handler(error, balance) {
-      const isNetworkChanged = checkNetwork();
-      const res = Web3ResponseFabric.createComplex(
-        balance,
-        error,
-        isNetworkChanged,
-      );
-      console.log('--- handler call, before promise', res);
+    const unsubscribe = this.core.on(method, props, emitterHandler);
 
-      promiseResolve(res);
-      promiseResponse = new Promise(resolve => (promiseResolve = resolve));
-
-      console.log('--- result after promise');
-      checkNetwork = self.createNetworkChecker();
-    }
-
-    this.web3.on('balance', { address }, handler);
-
-    console.log('hey hey');
-    while (true) {
-      const res = await promiseResponse;
-      console.log('-- before val', res);
-      const val = yield res;
-      console.log('-- after val', val);
-    }
-    console.log('--- finished yield');
+    return promiseToIterator({
+      promise: () =>
+        Promise.race([repeater.promise(), this.isNetworkChanged()]),
+      release: unsubscribe,
+    });
   }
 
-  async getTransactionConfirm(hash) {
-    let receipt;
-    const checkNetwork = this.createNetworkChecker();
-
-    // TODO: unplug from utils?
-    // eslint-disable-next-line no-unused-vars
-    for await (const index of generators.repeatWithInterval(
-      RECEIPT_STATUS_CONFIRM_TIMEOUT,
-    )) {
-      const { result, isNetworkChanged, error } = this.createRaceAnswer(
-        this.web3.call('eth_getTransactionReceipt', hash),
-      );
-      if (isNetworkChanged || checkNetwork()) {
-        return Web3ResponseFabric.createNetworkChanged();
-      }
-
-      if (!result) {
-        return Web3ResponseFabric.createError(new Error('Receipt not found'));
-      }
-
-      if (error) {
-        return Web3ResponseFabric.createError(error);
-      }
-
-      if (result.status) {
-        receipt = result;
-        break;
-      }
-    }
-
-    const status = Boolean(parseInt(receipt.status, 16));
-
-    if (!status) {
-      return Web3ResponseFabric.createError(new Error('Transaction failure'));
-    }
-
-    return Web3ResponseFabric.createSuccess(receipt);
+  timeoutToIterator(ms) {
+    // TODO: replace by callbag
+    return promiseToIterator({
+      promise: () => Promise.race([sleep(ms), this.isNetworkChanged()]),
+    });
   }
-
-  // TODO: rename Web3Api folder to Web3
 }

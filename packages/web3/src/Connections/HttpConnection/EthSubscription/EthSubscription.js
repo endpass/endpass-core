@@ -1,6 +1,10 @@
 import Subscribers from './Subscribers';
 import NotifyHandler from '@/NotifyHandler';
 
+/**
+ * generate unique string
+ * @return {string}
+ */
 const generateId = () => {
   return `d${(+new Date()).toString(16)}-r${(Math.random() * 1e8).toString(
     16,
@@ -8,26 +12,34 @@ const generateId = () => {
 };
 
 export default class EthSubscription {
+  /**
+   * @param {object} requester
+   */
   constructor({ requester }) {
     this.requester = requester;
-    this.paramsInstancesMap = {};
+    this.subscriptions = {};
     this.notify = new NotifyHandler();
   }
 
+  /**
+   * @param {Function} cb
+   */
   subscribe(cb) {
     this.notify.subscribe(cb);
   }
 
   /**
    * @private
+   * @param {string} subscriptionName
+   * @param {object} result
    */
   notifyObservers = (subscriptionName, result) => {
-    if (!this.paramsInstancesMap[subscriptionName]) {
+    if (!this.subscriptions[subscriptionName]) {
       return;
     }
 
     // TODO: create RPC response object and return data for each id
-    this.paramsInstancesMap[subscriptionName].ids.forEach(subscribeId => {
+    this.subscriptions[subscriptionName].ids.forEach(subscribeId => {
       const notifyData = {
         jsonrpc: '2.0',
         method: 'eth_subscription',
@@ -40,33 +52,39 @@ export default class EthSubscription {
     });
   };
 
+  /**
+   * @private
+   * @param {string} subscriptionName
+   * @param {?} optional
+   */
   createParamSubscription(subscriptionName, optional) {
     const props = {
       requester: this.requester,
     };
     const instance = Subscribers.create(subscriptionName, props, optional);
     instance.subscribe(this.notifyObservers);
+    return instance;
   }
 
   create(params) {
     const id = generateId();
     const [subscriptionName, optional] = params;
 
-    const subscriptionData = this.paramsInstancesMap[subscriptionName] || {
+    const subscriptionData = this.subscriptions[subscriptionName] || {
       instance: this.createParamSubscription(subscriptionName, optional),
       ids: [],
     };
     subscriptionData.ids.push(id);
 
-    this.paramsInstancesMap[subscriptionName] = subscriptionData;
+    this.subscriptions[subscriptionName] = subscriptionData;
 
     return id;
   }
 
   remove(params) {
     const [id] = params;
-    Object.keys(this.paramsInstancesMap).forEach(subscriptionName => {
-      const subscriptionData = this.paramsInstancesMap[subscriptionName];
+    Object.keys(this.subscriptions).forEach(subscriptionName => {
+      const subscriptionData = this.subscriptions[subscriptionName];
 
       subscriptionData.ids = subscriptionData.ids.filter(
         storedId => storedId !== id,
@@ -74,14 +92,14 @@ export default class EthSubscription {
 
       if (subscriptionData.ids.length === 0) {
         subscriptionData.instance.destroy();
-        delete this.paramsInstancesMap[subscriptionName];
+        delete this.subscriptions[subscriptionName];
       }
     });
   }
 
   destroy() {
-    Object.keys(this.paramsInstancesMap).forEach(id => {
-      this.paramsInstancesMap[id].destroy();
+    Object.keys(this.subscriptions).forEach(id => {
+      this.subscriptions[id].instance.destroy();
     });
     this.notify.destroy();
   }
