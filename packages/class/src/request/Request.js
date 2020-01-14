@@ -19,13 +19,6 @@ export default class Request {
   }
 
   /**
-   * @param {AxiosRequestConfig} config
-   */
-  setConfig(config) {
-    this.config = config;
-  }
-
-  /**
    * @param {string} url
    * @param {AxiosRequestConfig=} [config]
    * @return {Promise<any>}

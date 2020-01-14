@@ -54,7 +54,7 @@ describe('Request class', () => {
         optionChanged: 'optionChanged',
       };
 
-      request.setConfig(newConfig);
+      request.config = newConfig;
       const result = request.get('url');
 
       expect(result.config).toEqual(newConfig);
