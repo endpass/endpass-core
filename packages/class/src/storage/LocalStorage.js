@@ -10,11 +10,13 @@ class LocalStorage {
   static load(key) {
     const res = localStorage.getItem(key);
 
-    if (res) {
-      return JSON.parse(res);
-    }
+    if (!res) return null;
 
-    return null;
+    try {
+      return JSON.parse(res);
+    } catch (err) {
+      return res;
+    }
   }
 }
 
