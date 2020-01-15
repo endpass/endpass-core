@@ -1,7 +1,16 @@
-module.exports.uniq = arr =>
+/**
+ * @param {Array<string|number>} arr
+ * @returns {Array<string|number>}
+ */
+const uniq = arr =>
   arr.reduce((acc, item) => (acc.includes(item) ? acc : acc.concat(item)), []);
 
-module.exports.mapArrayByProp = (arr, prop) =>
+/**
+ * @param {Array<string|number>} arr
+ * @param {string|number} prop
+ * @returns {Array<string|number>}
+ */
+const mapArrayByProp = (arr, prop) =>
   arr.reduce((acc, item) => {
     const target = item[prop];
 
@@ -13,3 +22,8 @@ module.exports.mapArrayByProp = (arr, prop) =>
 
     return acc;
   }, {});
+
+module.exports = {
+  uniq,
+  mapArrayByProp,
+};

@@ -68,7 +68,7 @@
     "rollup-plugin-alias": "^2.0.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-copy": "^3.1.0",
-    "typescript": "^3.6.4"
+    "typescript": "^3.7.4"
   },
   "publishConfig": {
     "access": "public"

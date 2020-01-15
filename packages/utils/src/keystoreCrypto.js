@@ -12,56 +12,57 @@ keythereum.privateKeyToAddress = function(pk) {
   return '';
 };
 
-export default {
-  /**
-   * Encrypts a private key Buffer into a V3 keystore object
-   * The exported keystore does NOT include an address
-   *
-   * @param password Password
-   * @param privateKey Private key
-   * @param [options] KDF encrypt options
-   * @returns {object} v3Keystore
-   */
-  encrypt(password, privateKey, options = KDF_ENCRYPT_OPTIONS) {
-    const dk = keythereum.create();
+/**
+ * Encrypts a private key Buffer into a V3 keystore object
+ * The exported keystore does NOT include an address
+ * @param {string} Password
+ * @param {string|Buffer} Private key
+ * @param {KDFEncryptOptions} [options] KDF encrypt options
+ * @returns {V3KeystoreWithoutAddress}
+ */
+const encrypt = (password, privateKey, options = KDF_ENCRYPT_OPTIONS) => {
+  const dk = keythereum.create();
 
-    const dumpOptions = {
+  const dumpOptions = {
+    kdf: options.kdf,
+    kdfparams: {
       kdf: options.kdf,
-      kdfparams: {
-        kdf: options.kdf,
-        n: options.n,
-      },
-    };
+      n: options.n,
+    },
+  };
 
-    const encrypted = keythereum.dump(
-      password,
-      privateKey,
-      dk.salt,
-      dk.iv,
-      dumpOptions,
-    );
+  const encrypted = keythereum.dump(
+    password,
+    privateKey,
+    dk.salt,
+    dk.iv,
+    dumpOptions,
+  );
 
-    delete encrypted.address;
+  delete encrypted.address;
 
-    return encrypted;
-  },
+  return encrypted;
+};
 
-  /**
-   * Decrypts a V3 keystore object into a private key Buffer
-   *
-   * @param password
-   * @param {object} v3Keystore keystore
-   * @returns {*|buffer}
-   */
-  decrypt(password, v3Keystore) {
-    if (!password) {
-      throw new Error('Password is empty');
-    }
+/**
+ * Decrypts a V3 keystore object into a private key Buffer
+ * @param {string} password
+ * @param {V3Keystore} v3Keystore keystore
+ * @returns {Buffer}
+ */
+const decrypt = (password, v3Keystore) => {
+  if (!password) {
+    throw new Error('Password is empty');
+  }
 
-    if (!isV3(v3Keystore)) {
-      throw new Error('Wallet is not in keystore V3 format!');
-    }
+  if (!isV3(v3Keystore)) {
+    throw new Error('Wallet is not in keystore V3 format!');
+  }
 
-    return keythereum.recover(password, v3Keystore);
-  },
+  return keythereum.recover(password, v3Keystore);
+};
+
+module.exports = {
+  encrypt,
+  decrypt,
 };

@@ -1,23 +1,24 @@
-import { encrypt, decrypt } from 'eth-ecies';
+const ecies = require('eth-ecies');
 
-export default {
-  /**
-   * Encrypt data by public key
-   * @param data
-   * @param publicKey
-   * @returns {string}
-   */
-  encrypt(data, publicKey) {
-    return encrypt(publicKey, Buffer.from(data, 'utf8')).toString('hex');
-  },
+/**
+ * Encrypt data by public key
+ * @param {string|Buffer|ArrayBuffer|Array<number|string>,} data
+ * @param {string} publicKey
+ * @returns {string}
+ */
+const encrypt = (data, publicKey) =>
+  ecies.encrypt(publicKey, Buffer.from(data, 'utf8')).toString('hex');
 
-  /**
-   * Decrypt data by private key
-   * @param data
-   * @param privateKey
-   * @returns {string}
-   */
-  decrypt(data, privateKey) {
-    return decrypt(privateKey, Buffer.from(data, 'hex')).toString('utf8');
-  },
+/**
+ * Decrypt data by private key
+ * @param {string|Buffer|ArrayBuffer|Array<number|string>} data
+ * @param {string} privateKey
+ * @returns {string}
+ */
+const decrypt = (data, privateKey) =>
+  ecies.decrypt(privateKey, Buffer.from(data, 'hex')).toString('utf8');
+
+module.exports = {
+  encrypt,
+  decrypt,
 };

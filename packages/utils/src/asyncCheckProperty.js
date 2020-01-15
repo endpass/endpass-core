@@ -1,7 +1,13 @@
 const get = require('lodash/get');
 const identity = require('lodash/identity');
 
-module.exports = (object, path, predicate = identity, timer = 250) =>
+/**
+ * @param {object} object
+ * @param {Function} predicate
+ * @param {number} timer
+ * @returns {Promise<any>}
+ */
+const asyncCheckProperty = (object, path, predicate = identity, timer = 250) =>
   new Promise(resolve => {
     /* eslint-disable-next-line */
     const timerId = setInterval(() => {
@@ -14,3 +20,5 @@ module.exports = (object, path, predicate = identity, timer = 250) =>
       }
     }, timer);
   });
+
+module.exports = asyncCheckProperty;

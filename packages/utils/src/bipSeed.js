@@ -1,10 +1,17 @@
 const Bip39 = require('bip39');
 
-export default {
-  generateSeedKey() {
-    return Bip39.generateMnemonic();
-  },
-  mnemonicToSeedSync(seedPhrase) {
-    return Bip39.mnemonicToSeedSync(seedPhrase);
-  },
+/**
+ * @returns {string}
+ */
+const generateSeedKey = () => Bip39.generateMnemonic();
+
+/**
+ * @param {string} seedPhrase
+ * @returns {Buffer}
+ */
+const mnemonicToSeedSync = seedPhrase => Bip39.mnemonicToSeedSync(seedPhrase);
+
+module.exports = {
+  generateSeedKey,
+  mnemonicToSeedSync,
 };

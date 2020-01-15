@@ -4,9 +4,9 @@
  * @param {string} url Service worker script url
  * @returns {Promise<ServiceWorker|null>} Active service worker or null
  */
-export function getServiceWorkerWithActivation(url) {
+const getServiceWorkerWithActivation = url =>
   /* eslint-disable-next-line consistent-return */
-  return new Promise(async resolve => {
+  new Promise(async resolve => {
     if (!navigator.serviceWorker) return resolve();
 
     try {
@@ -35,8 +35,7 @@ export function getServiceWorkerWithActivation(url) {
       return resolve(null);
     }
   });
-}
 
-export default {
+module.exports = {
   getServiceWorkerWithActivation,
 };

@@ -1,11 +1,10 @@
 /**
  * Convert query string to map object
- * @param path
+ * @param {string} [path]
  * @return {object}
  */
 export default function(path = '') {
   const lines = path.replace(/^\?/, '').split('&');
-
   const mapResult = lines.reduce((map, line) => {
     const values = line.split('=');
     const key = values[0];
@@ -15,5 +14,6 @@ export default function(path = '') {
     }
     return map;
   }, {});
+
   return mapResult;
 }
