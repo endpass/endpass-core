@@ -5,12 +5,9 @@
   "author": "Endpass, Inc",
   "license": "MIT",
   "main": "./web3-api.min.js",
-  "module": "./web3-api.esm.js",
+  "module": "./web3-api.js",
   "umd": "./web3-api.umd.js",
   "repository": "https://github.com/endpass/endpass-core/tree/master/packages/web3",
-  "bugs": {
-    "url": "https://github.com/endpass/endpass-core/issues"
-  },
   "scripts": {
     "update": "yarn build && npm publish ./dist",
     "dev": "rollup -c -w",
@@ -25,52 +22,24 @@
     "test:unit:watch": "jest ./tests --watch",
     "format": "yarn format:prettier && yarn format:eslint",
     "format:prettier": "prettier --write '**/*.{js,json}'",
-    "format:eslint": "eslint --ext .json,.js,.ts src/ --fix",
-    "semantic-release": "semantic-release",
-    "commit": "git-cz",
-    "check-types": "tsc"
+    "format:eslint": "eslint --ext .json,.js,.ts src/ --fix"
   },
   "lint-staged": {
-    "./src/**/*.{js,json}": [
+    "*.{js,json}": [
       "eslint --fix",
       "prettier --write",
       "git add"
     ]
   },
-  "release": {
-    "branch": "release",
-    "prepare": [
-      {
-        "path": "@semantic-release/changelog"
-      },
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "CHANGELOG.md"
-          ]
-        }
-      ]
-    ]
-  },
-  "publishConfig": {
-    "access": "public",
-    "tag": "latest"
-  },
-  "config": {
-    "repo": "https://github.com/endpass/endpass-auth.git",
-    "commit": "HEAD",
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    }
-  },
   "husky": {
     "hooks": {
-      "pre-commit": "tsc && lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "pre-commit": "tsc && lint-staged"
     }
   },
   "typings": "./types",
+  "bugs": {
+    "url": "https://github.com/endpass/endpass-core/issues"
+  },
   "dependencies": {
     "@endpass/utils": "^1.9.2",
     "callbag-basics": "^3.2.0",
@@ -120,5 +89,8 @@
     "typescript": "^3.7.4",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
