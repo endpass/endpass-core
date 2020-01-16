@@ -1,5 +1,5 @@
 // @ts-check
-import NotifyHandler from '@/NotifyHandler';
+import NotifyHandler from '@/class/NotifyHandler';
 
 export default class BaseConnection {
   /**

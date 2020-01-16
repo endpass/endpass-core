@@ -1,6 +1,6 @@
 import JSONBird from 'jsonbird';
 import ConnectionFactory from '@/Connections/ConnectionFactory';
-import NotifyHandler from '@/NotifyHandler';
+import NotifyHandler from '@/class/NotifyHandler';
 
 export default class Provider {
   /**

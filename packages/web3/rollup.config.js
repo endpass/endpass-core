@@ -10,7 +10,7 @@ import { terser } from 'rollup-plugin-terser';
 import visualizer from 'rollup-plugin-visualizer';
 import ts from 'rollup-plugin-typescript';
 import pkg from './package.json';
-import entryPoints from './entryPoints.json';
+import outputList from './plugins.json';
 
 function resolveDir(dir) {
   return path.join(__dirname, '', dir);
@@ -18,8 +18,7 @@ function resolveDir(dir) {
 
 function resolveFile(...args) {
   args.splice(0, 0, __dirname);
-  // eslint-disable-next-line prefer-spread
-  return path.resolve.apply(path, args);
+  return path.resolve(...args);
 }
 
 const withSourceMaps = process.env.NODE_ENV !== 'production';
@@ -57,7 +56,9 @@ const commonConfig = config => ({
           },
         ],
       }),
-    visualizer(),
+    visualizer({
+      filename: resolveFile('./reports/', `${config.library}.html`),
+    }),
   ],
   watch: {
     exclude: ['node_modules/**'],
@@ -69,6 +70,9 @@ const createConfig = childConfig => {
   return {
     input: resolveFile(input),
     ...commonConfig(childConfig),
+    watch: {
+      clearScreen: false,
+    },
     output: [
       {
         ...outputConf,
@@ -85,11 +89,4 @@ const createConfig = childConfig => {
   };
 };
 
-export default [
-  createConfig({
-    input: './src/Web3Api.js',
-    umd: pkg.umd,
-    module: pkg.module,
-  }),
-  ...entryPoints.map(createConfig),
-];
+export default outputList.map(createConfig);

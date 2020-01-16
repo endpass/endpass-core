@@ -1,6 +1,6 @@
-import web3Response from '@/Extended/Web3Response';
+import Web3ResponseFabric from '@/class/Web3ResponseFabric';
 import Web3Api from '@/Web3Api';
-import BalancePlugin from '@/Plugins/Balance';
+import BalancePlugin from '@/plugins/Balance';
 
 const RECEIPT_STATUS_CONFIRM_TIMEOUT = 2000;
 
@@ -45,15 +45,15 @@ export default class PublicApi {
         this.web3.call('eth_getTransactionReceipt', hash),
       );
       if (isNetworkChanged) {
-        return web3Response.createNetworkChanged();
+        return Web3ResponseFabric.createNetworkChanged();
       }
 
       if (!result) {
-        return web3Response.createError(new Error('Receipt not found'));
+        return Web3ResponseFabric.createError(new Error('Receipt not found'));
       }
 
       if (error) {
-        return web3Response.createError(error);
+        return Web3ResponseFabric.createError(error);
       }
 
       if (result.status) {
@@ -65,9 +65,9 @@ export default class PublicApi {
     const status = Boolean(parseInt(receipt.status, 16));
 
     if (!status) {
-      return web3Response.createError(new Error('Transaction failure'));
+      return Web3ResponseFabric.createError(new Error('Transaction failure'));
     }
 
-    return web3Response.createSuccess(receipt);
+    return Web3ResponseFabric.createSuccess(receipt);
   }
 }

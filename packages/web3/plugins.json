@@ -1,0 +1,34 @@
+[
+  {
+    "library": "EndpassWeb3Api",
+    "input": "./src/Web3Api.js",
+    "main": "./web3-api.min.js",
+    "module": "./web3-api.js",
+    "umd": "./web3-api.umd.js",
+    "browser": "./web3-api.browser.js"
+  },
+  {
+    "library": "EndpassPublicApi",
+    "input": "./src/PublicApi.js",
+    "main": "./public-api.min.js",
+    "module": "./public-api.js",
+    "umd": "./public-api.umd.js",
+    "browser": "./public-api.browser.js"
+  },
+  {
+    "library": "EndpassWeb3BalancePlugin",
+    "input": "./src/plugins/Balance/index.js",
+    "main": "./balance-plugin.min.js",
+    "module": "./balance-plugin.js",
+    "umd": "./balance-plugin.umd.js",
+    "browser": "./balance-plugin.browser.js"
+  },
+  {
+    "library": "EndpassWeb3CompositePlugin",
+    "input": "./src/plugins/Composite.js",
+    "main": "./composite-plugin.min.js",
+    "module": "./composite-plugin.js",
+    "umd": "./composite-plugin.umd.js",
+    "browser": "./composite-plugin.browser.js"
+  }
+]

@@ -1,4 +1,4 @@
-export default class web3Response {
+export default class web3ResponseFabric {
   static createResponse(result, error = null, isNetworkChanged = false) {
     return {
       result,
@@ -8,16 +8,16 @@ export default class web3Response {
   }
 
   static createError(error = null, isNetworkChanged) {
-    return web3Response.createResponse(null, error, isNetworkChanged);
+    return web3ResponseFabric.createResponse(null, error, isNetworkChanged);
   }
 
   static createNetworkChanged() {
-    return web3Response.createResponse(null, null, true);
+    return web3ResponseFabric.createResponse(null, null, true);
   }
 
   static createSuccess(result) {
     const isNetworkChanged = result ? result.isNetworkChanged : false;
-    return web3Response.createResponse(
+    return web3ResponseFabric.createResponse(
       isNetworkChanged ? null : result,
       null,
       isNetworkChanged,
