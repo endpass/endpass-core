@@ -1,5 +1,5 @@
-import Web3ResponseFabric from '@/class/Web3ResponseFabric';
 import Web3Api from '@/Web3Api';
+import Web3ResponseFabric from '@/class/Web3ResponseFabric';
 import BalancePlugin from '@/plugins/Balance';
 
 const RECEIPT_STATUS_CONFIRM_TIMEOUT = 2000;
