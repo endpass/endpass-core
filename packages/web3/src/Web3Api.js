@@ -1,11 +1,7 @@
-import CompositePlugin from '@/Plugins/Composite';
+import CompositePlugin from '@/plugins/Composite';
 
-import web3Response from '@/Extended/Web3Response';
-import {
-  promiseRepeater,
-  promiseToIterator,
-  sleep,
-} from '@/Extended/generators';
+import Web3ResponseFabric from '@/class/Web3ResponseFabric';
+import { promiseRepeater, promiseToIterator, sleep } from '@/class/generators';
 
 export default class Web3Api {
   constructor({ netUrl, plugins }) {
@@ -53,9 +49,9 @@ export default class Web3Api {
     // TODO: replace by callbag
     try {
       const res = await Promise.race([promiseRequest, this.isNetworkChanged()]);
-      return web3Response.createSuccess(res);
+      return Web3ResponseFabric.createSuccess(res);
     } catch (e) {
-      return web3Response.createError(e, false);
+      return Web3ResponseFabric.createError(e, false);
     }
   }
 

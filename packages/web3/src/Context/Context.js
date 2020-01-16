@@ -1,4 +1,4 @@
-import Provider from '@/Provider';
+import Provider from '@/class/Provider';
 import Events from '@/Events';
 import PluginsFactory from './PluginsFactory';
 

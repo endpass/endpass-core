@@ -1,5 +1,5 @@
 import Subscribers from './Subscribers';
-import NotifyHandler from '@/NotifyHandler';
+import NotifyHandler from '@/class/NotifyHandler';
 
 /**
  * generate unique string

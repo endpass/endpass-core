@@ -1,5 +1,5 @@
 import generators from '@endpass/utils/generators';
-import NotifyHandler from '@/NotifyHandler';
+import NotifyHandler from '@/class/NotifyHandler';
 
 const DEFAULT_TIMEOUT = 5000;
 

@@ -1,4 +1,4 @@
-import BasePlugin from '@/Plugins/BasePlugin';
+import BasePlugin from '@/plugins/BasePlugin';
 import { PLUGINS } from '@/constants';
 import BalanceEvent from './BalanceEvent';
 

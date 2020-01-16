@@ -1,9 +1,7 @@
 const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
-const pkg = require('./package.json');
-// eslint-disable-next-line no-unused-vars
-const outputList = require('./entryPoints.json');
+const outputList = require('./plugins.json');
 
 const createConfig = ({ entry, filename, library }) => {
   return {
@@ -47,21 +45,14 @@ const createList = configs => {
 };
 
 module.exports = createList([
-  ...createConfigs({
-    entry: pkg.umd,
-    filename: pkg.main,
-    legacyFilename: 'Web3Api.browser.js',
-    library: 'Web3Api',
-  }),
-
   // plugins
-  // ...outputList.reduce((list, plugin) => {
-  //   const newConfigs = createConfigs({
-  //     entry: plugin.umd,
-  //     filename: plugin.main,
-  //     legacyFilename: plugin.browser,
-  //     library: plugin.library,
-  //   });
-  //   return list.concat(newConfigs);
-  // }, []),
+  ...outputList.reduce((list, plugin) => {
+    const newConfigs = createConfigs({
+      entry: plugin.umd,
+      filename: plugin.main,
+      legacyFilename: plugin.browser,
+      library: plugin.library,
+    });
+    return list.concat(newConfigs);
+  }, []),
 ]);
