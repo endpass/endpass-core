@@ -14,33 +14,30 @@ export const promiseRepeater = () => {
   };
 };
 
-export const promiseToIterator = ({ promise, release }) => {
-  return {
-    async next() {
-      const value = await promise();
-      return { value, done: false };
-    },
-    async throw(e) {
-      throw e;
-    },
-    async return() {
-      release();
-      // eslint-disable-next-line no-console
-      console.log('I have been released !!!');
-      return { done: true };
-    },
-    [Symbol.asyncIterator]() {
-      return this;
-    },
-    [Symbol.iterator]() {
-      return this;
-    },
-  };
-};
+export const promiseToIterator = ({ promise, release }) => ({
+  async next() {
+    const value = await promise();
+    return { value, done: false };
+  },
+  async throw(e) {
+    throw e;
+  },
+  async return() {
+    release();
+    // eslint-disable-next-line no-console
+    console.log('I have been released !!!');
+    return { done: true };
+  },
+  [Symbol.asyncIterator]() {
+    return this;
+  },
+  [Symbol.iterator]() {
+    return this;
+  },
+});
 
-export const sleep = ms => {
-  return new Promise(resolve => setTimeout(() => resolve(), ms));
-};
+export const sleep = ms =>
+  new Promise(resolve => setTimeout(() => resolve(), ms));
 
 export async function* promiseCount(promise) {
   let count = -1;

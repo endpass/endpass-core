@@ -14,7 +14,7 @@ export default class Subscribers {
   static create(subscriptionName, props, optional) {
     if (!subscribersMap[subscriptionName]) {
       throw new Error(
-        `Not defined emulator for 'eth_subscribe' with arguments '${subscriptionName}'`,
+        `Not defined emulator for 'eth_subscribe' by '${subscriptionName}'`,
       );
     }
     const SubscriptionClass = subscribersMap[subscriptionName];

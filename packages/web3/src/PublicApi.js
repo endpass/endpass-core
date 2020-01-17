@@ -4,9 +4,6 @@ import BalancePlugin from '@/plugins/Balance';
 
 const RECEIPT_STATUS_CONFIRM_TIMEOUT = 2000;
 
-// todo, create web3Api instance, and proxy some methods from web3Api
-// todo: make two entry points when build, PublicApi and Web3Api (maybe pass plugin to another point)
-
 export default class PublicApi {
   constructor({ netUrl }) {
     this.web3Api = new Web3Api({
@@ -15,12 +12,16 @@ export default class PublicApi {
     });
   }
 
+  get web3() {
+    return this.web3Api;
+  }
+
   setNetwork(url) {
     return this.web3.setNetwork(url);
   }
 
-  get web3() {
-    return this.web3Api;
+  call(...args) {
+    return this.web3.call(...args);
   }
 
   async getBalance(addr, option = 'latest') {
