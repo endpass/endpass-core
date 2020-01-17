@@ -1,15 +1,13 @@
 import Subscribers from './Subscribers';
 import NotifyHandler from '@/class/NotifyHandler';
+import RPCFabric from '@/class/RPCFabric';
 
 /**
  * generate unique string
  * @return {string}
  */
-const generateId = () => {
-  return `d${(+new Date()).toString(16)}-r${(Math.random() * 1e8).toString(
-    16,
-  )}`;
-};
+const generateId = () =>
+  `d${(+new Date()).toString(16)}-r${(Math.random() * 1e8).toString(16)}`;
 
 export default class EthSubscription {
   /**
@@ -38,16 +36,14 @@ export default class EthSubscription {
       return;
     }
 
-    // TODO: create RPC response object and return data for each id
     this.subscriptions[subscriptionName].ids.forEach(subscribeId => {
-      const notifyData = {
-        jsonrpc: '2.0',
+      const notifyData = RPCFabric.createResponse({
         method: 'eth_subscription',
         params: {
           result,
           subscription: subscribeId,
         },
-      };
+      });
       this.notify.handleObservers(notifyData);
     });
   };

@@ -1,5 +1,6 @@
 import generators from '@endpass/utils/generators';
 import NotifyHandler from '@/class/NotifyHandler';
+import RPCFabric from '@/class/RPCFabric';
 
 const DEFAULT_TIMEOUT = 5000;
 
@@ -25,12 +26,12 @@ export default class GetBlockPooling {
       if (!this.isWorking) {
         break;
       }
-      const response = await this.requester.post({
+      const body = RPCFabric.createRequest({
         id: 'block-pooling',
-        jsonrpc: '2.0',
         method: 'eth_getBlockByNumber',
         params: ['latest', false],
       });
+      const response = await this.requester.post(body);
       const data = await response.json();
       // TODO: if needed step by step block, add option in constructor
       if (data.result) {
