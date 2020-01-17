@@ -41,6 +41,7 @@ const commonConfig = config => ({
     json(),
     ts(),
     babel({
+      // TODO: disable runtimeHelpers for esm builds
       runtimeHelpers: true,
       exclude: 'node_modules/**',
       extensions: ['.js', '.ts'],
@@ -61,6 +62,7 @@ const commonConfig = config => ({
     }),
   ],
   watch: {
+    clearScreen: false,
     exclude: ['node_modules/**'],
   },
 });
@@ -68,11 +70,8 @@ const commonConfig = config => ({
 const createConfig = childConfig => {
   const { input, umd, module } = childConfig;
   return {
-    input: resolveFile(input),
     ...commonConfig(childConfig),
-    watch: {
-      clearScreen: false,
-    },
+    input: resolveFile(input),
     output: [
       {
         ...outputConf,

@@ -41,12 +41,12 @@ export default class Web3Api {
   }
 
   async isNetworkChanged() {
-    // TODO: replace by callbag
+    // TODO: replace to callbag
     return this.networkChangePromise;
   }
 
   async toRace(promiseRequest) {
-    // TODO: replace by callbag
+    // TODO: replace to callbag
     try {
       const res = await Promise.race([promiseRequest, this.isNetworkChanged()]);
       return Web3ResponseFabric.createSuccess(res);
@@ -56,7 +56,7 @@ export default class Web3Api {
   }
 
   emitterToIterator(method, props) {
-    // TODO: replace by callbag
+    // TODO: replace to callbag
     const repeater = promiseRepeater();
 
     const emitterHandler = (error, result) => {
@@ -73,7 +73,7 @@ export default class Web3Api {
   }
 
   timeoutToIterator(ms) {
-    // TODO: replace by callbag
+    // TODO: replace to callbag
     return promiseToIterator({
       promise: () => Promise.race([sleep(ms), this.isNetworkChanged()]),
     });
