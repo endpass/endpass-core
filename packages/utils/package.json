@@ -1,6 +1,6 @@
 {
   "name": "@endpass/utils",
-  "version": "1.9.2",
+  "version": "1.10.0",
   "description": "Utils and helper functions",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -12,7 +12,7 @@
   },
   "scripts": {
     "update": "yarn build && npm publish ./dist",
-    "build": "yarn clear && yarn build:dist",
+    "build": "yarn clear && yarn build:types && yarn build:dist",
     "build:dist": "rollup -c ./rollup.config.js",
     "build:types": "tsc -p ./tsconfig.declaration.json",
     "clear": "rimraf ./dist",

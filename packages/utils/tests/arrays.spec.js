@@ -1,16 +1,6 @@
-import { uniq, mapArrayByProp } from '@/arrays';
+import { mapArrayByProp } from '@/arrays';
 
 describe('arrays utils', () => {
-  describe('uniq', () => {
-    it('should returns unique array items', () => {
-      expect(uniq(['a', 'b', 'a', 'c', 'b', 'b', 'a', 'c'])).toEqual([
-        'a',
-        'b',
-        'c',
-      ]);
-    });
-  });
-
   describe('mapArrayByProp', () => {
     it('should returns object with mapped values by given prop', () => {
       expect(

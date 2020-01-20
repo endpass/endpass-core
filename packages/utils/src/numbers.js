@@ -5,7 +5,7 @@
  * @returns {boolean}
  */
 const isNumeric = num => {
-  const value = typeof num === 'string' ? parseFloat(num) : num;
+  const value = typeof num !== 'number' ? parseFloat(num) : num;
 
   // eslint-disable-next-line
   return !isNaN(value) && isFinite(value);

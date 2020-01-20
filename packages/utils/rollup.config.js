@@ -1,3 +1,4 @@
+// @ts-nocheck
 import path from 'path';
 import glob from 'fast-glob';
 import alias from 'rollup-plugin-alias';
@@ -25,15 +26,10 @@ const commonConfig = {
       exclude: IGNORE_PATHS,
       runtimeHelpers: true,
     }),
-    // commonjs(),
     copy({
       targets: [
         {
           src: ['package.json', 'README.md', 'yarn.lock'],
-          dest: 'dist',
-        },
-        {
-          src: 'types/**.d.ts',
           dest: 'dist',
         },
       ],
