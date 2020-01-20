@@ -1,3 +1,4 @@
+// @ts-check
 const bs58 = require('./bs58');
 
 /**

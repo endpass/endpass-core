@@ -1,7 +1,9 @@
+// @ts-check
+
 /**
  * @template T
  * @param {number} ms
- * @param {T} result
+ * @param {T} [result]
  * @return {Promise<T>}
  */
 const sleep = (ms, result) =>

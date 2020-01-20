@@ -1,3 +1,4 @@
+// @ts-check
 const HDKey = require('ethereumjs-wallet/hdkey');
 const bipSeed = require('./bipSeed');
 const keystoreCrypto = require('./keystoreCrypto');
@@ -27,9 +28,10 @@ const encryptHDWallet = (password, wallet, encryptOptions) => {
   const xPrv = bs58.decodeBase58(wallet.privateExtendedKey());
   const json = keystoreCrypto.encrypt(password, xPrv, encryptOptions);
 
-  json.address = wallet.publicExtendedKey();
-
-  return json;
+  return {
+    ...json,
+    address: wallet.publicExtendedKey(),
+  };
 };
 
 /**

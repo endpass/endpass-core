@@ -1,3 +1,4 @@
+// @ts-check
 const Bip39 = require('bip39');
 
 /**

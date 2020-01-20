@@ -1,3 +1,5 @@
+// @ts-check
+
 /**
  * @param {object|string|number} item
  * @param {string|number} value

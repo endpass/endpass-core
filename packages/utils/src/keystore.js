@@ -1,9 +1,9 @@
-import isV3 from './isV3';
-import bs58 from './bs58';
-import keystoreHDWallet from './keystoreHDWallet';
-import keystoreWallet from './keystoreWallet';
-import keystoreCrypto from './keystoreCrypto';
-import keystoreHDKeyVerify from './keystoreHDKeyVerify';
+const isV3 = require('./isV3');
+const bs58 = require('./bs58');
+const keystoreHDWallet = require('./keystoreHDWallet');
+const keystoreWallet = require('./keystoreWallet');
+const keystoreCrypto = require('./keystoreCrypto');
+const keystoreHDKeyVerify = require('./keystoreHDKeyVerify');
 
 module.exports = {
   // Encrypts a private key Buffer into a V3 keystore object

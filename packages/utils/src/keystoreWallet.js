@@ -28,9 +28,10 @@ const encryptWallet = (password, wallet, encryptOptions) => {
     encryptOptions,
   );
 
-  json.address = wallet.getChecksumAddressString();
-
-  return json;
+  return {
+    ...json,
+    address: wallet.getChecksumAddressString(),
+  };
 };
 
 /**

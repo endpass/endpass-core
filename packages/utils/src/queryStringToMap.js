@@ -1,19 +1,24 @@
+// @ts-check
+
 /**
  * Convert query string to map object
  * @param {string} [path]
- * @return {object}
+ * @returns {object}
  */
 export default function(path = '') {
   const lines = path.replace(/^\?/, '').split('&');
-  const mapResult = lines.reduce((map, line) => {
-    const values = line.split('=');
-    const key = values[0];
-    if (key) {
-      // eslint-disable-next-line
-      map[key] = values[1];
-    }
-    return map;
-  }, {});
+  /** @type {{ [x: string]: any }} */
+  const initialAcc = {};
 
-  return mapResult;
+  return lines.reduce((acc, line) => {
+    const [key, value] = line.split('=');
+
+    if (key) {
+      return Object.assign(acc, {
+        [key]: value,
+      });
+    }
+
+    return acc;
+  }, initialAcc);
 }

@@ -1,8 +1,10 @@
+// @ts-check
 const get = require('lodash/get');
 const identity = require('lodash/identity');
 
 /**
  * @param {object} object
+ * @param {string} path
  * @param {Function} predicate
  * @param {number} timer
  * @returns {Promise<any>}

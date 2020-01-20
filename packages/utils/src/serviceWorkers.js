@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 /**
  * Registers service worker from given url and resolves it
  * If worker can't be resolved – resolves with null
@@ -5,7 +7,7 @@
  * @returns {Promise<ServiceWorker|null>} Active service worker or null
  */
 const getServiceWorkerWithActivation = url =>
-  /* eslint-disable-next-line consistent-return */
+  /* eslint-disable-next-line */
   new Promise(async resolve => {
     if (!navigator.serviceWorker) return resolve();
 

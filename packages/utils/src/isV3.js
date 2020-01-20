@@ -1,3 +1,5 @@
+// @ts-check
+
 /**
  * Simple sanity check to ensure a valid V3 keystore
  * @param {object} json

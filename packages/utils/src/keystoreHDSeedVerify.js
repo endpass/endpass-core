@@ -1,3 +1,5 @@
+// @ts-check
+
 /**
  * Verify public key
  * @param {string} value

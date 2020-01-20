@@ -1,3 +1,4 @@
+// @ts-check
 const get = require('lodash/get');
 
 /**
@@ -5,6 +6,7 @@ const get = require('lodash/get');
  * @returns {object}
  */
 const merge = (...obj) =>
+  // @ts-ignore
   obj.reduce((acc, item) => Object.assign(acc, item), {});
 
 /**
@@ -23,21 +25,28 @@ const getFrom = (target, ...paths) => {
 };
 
 /**
- * @param {object} obj
+ * @param {{ [x: string]: any }} obj
  * @param {string} [prefix]
- * @returns {Array}
+ * @returns {object}
  */
-const parseObjectProperties = (obj, prefix) =>
-  Object.keys(obj)
+const parseObjectProperties = (obj, prefix) => {
+  /** @type {{ [x: string]: any }} */
+  const initialAcc = {};
+
+  return Object.keys(obj)
     .filter(key => (prefix ? key.indexOf(prefix) === 0 : true))
-    .reduce((parsedObj, key) => {
+    .reduce((acc, key) => {
       try {
-        parsedObj[key] = JSON.parse(obj[key]);
+        return Object.assign(acc, {
+          [key]: JSON.parse(obj[key]),
+        });
       } catch (e) {
-        parsedObj[key] = obj[key];
+        return Object.assign(acc, {
+          [key]: obj[key],
+        });
       }
-      return parsedObj;
-    }, {});
+    }, initialAcc);
+};
 
 module.exports = {
   merge,

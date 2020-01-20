@@ -1,12 +1,7 @@
-/**
- * @param {Array<string|number>} arr
- * @returns {Array<string|number>}
- */
-const uniq = arr =>
-  arr.reduce((acc, item) => (acc.includes(item) ? acc : acc.concat(item)), []);
+// @ts-check
 
 /**
- * @param {Array<string|number>} arr
+ * @param {Array<object>} arr
  * @param {string|number} prop
  * @returns {Array<string|number>}
  */
@@ -24,6 +19,5 @@ const mapArrayByProp = (arr, prop) =>
   }, {});
 
 module.exports = {
-  uniq,
   mapArrayByProp,
 };

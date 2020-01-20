@@ -1,6 +1,7 @@
-import keythereum from 'keythereum';
-import { KDF_ENCRYPT_OPTIONS } from './constants';
-import isV3 from './isV3';
+// @ts-check
+const keythereum = require('keythereum');
+const { KDF_ENCRYPT_OPTIONS } = require('./constants');
+const isV3 = require('./isV3');
 
 // Monkey patch keythereum to skip generating address for private keys
 // This allows us to encrypt private keys of arbitrary length, and
@@ -8,29 +9,24 @@ import isV3 from './isV3';
 // the address for privacy reasons.
 // See https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition#alterations-from-version-1
 // eslint-disable-next-line
-keythereum.privateKeyToAddress = function(pk) {
+keythereum.privateKeyToAddress = function() {
   return '';
 };
 
 /**
  * Encrypts a private key Buffer into a V3 keystore object
  * The exported keystore does NOT include an address
- * @param {string} Password
- * @param {string|Buffer} Private key
+ * @param {string} password
+ * @param {string|number[]|Buffer} privateKey
  * @param {KDFEncryptOptions} [options] KDF encrypt options
  * @returns {V3KeystoreWithoutAddress}
  */
 const encrypt = (password, privateKey, options = KDF_ENCRYPT_OPTIONS) => {
   const dk = keythereum.create();
-
   const dumpOptions = {
     kdf: options.kdf,
-    kdfparams: {
-      kdf: options.kdf,
-      n: options.n,
-    },
+    kdfparams: options,
   };
-
   const encrypted = keythereum.dump(
     password,
     privateKey,
