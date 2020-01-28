@@ -62,6 +62,8 @@ export default class BaseEvent {
       data,
     });
 
+    this.handleData(data);
+
     if (!haveCallbacks) {
       this.createCallbacks(data);
     }
@@ -95,6 +97,8 @@ export default class BaseEvent {
   getHash(data) {
     return data;
   }
+
+  handleData() {}
 
   createCallbacks() {}
 

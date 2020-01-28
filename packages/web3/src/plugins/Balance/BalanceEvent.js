@@ -18,55 +18,8 @@ export default class BalanceEvent extends BaseEvent {
     return address;
   }
 
-  setSkipping() {
-    this.isSkipping = true;
-    setTimeout(() => {
-      this.isSkipping = false;
-    }, MINIMUM_TIMEOUT);
-  }
-
-  onMessage = ({ params, method }) => {
-    if (
-      method !== 'eth_subscription' ||
-      params.subscription !== this.subscribeId ||
-      this.isSkipping
-    ) {
-      return;
-    }
-
-    this.setSkipping();
-
-    this.forEachHash(address => {
-      if (this.requestMap[address]) {
-        return;
-      }
-      this.requestMap[address] = true;
-      this.getBalance(address)
-        .then(balance => {
-          delete this.requestMap[address];
-          this.onReceiveSuccess(address, balance);
-        })
-        .catch(error => {
-          delete this.requestMap[address];
-          this.onReceiveError(address, error);
-        });
-    });
-  };
-
-  async getBalance(address) {
-    return this.context.provider.callMethod(
-      'eth_getBalance',
-      address,
-      'latest',
-    );
-  }
-
-  async createCallbacks(initialData) {
-    const { address } = initialData;
+  async createCallbacks() {
     this.isSubscribed = true;
-
-    const balance = await this.getBalance(address);
-    this.onReceiveSuccess(address, balance);
 
     const subscribeId = await this.context.provider.callMethod(
       'eth_subscribe',
@@ -91,5 +44,52 @@ export default class BalanceEvent extends BaseEvent {
     const { subscribeId } = this;
     this.subscribeId = null;
     await this.context.provider.callMethod('eth_unsubscribe', subscribeId);
+  }
+
+  handleData({ address }) {
+    if (this.requestMap[address]) {
+      return;
+    }
+    this.requestMap[address] = true;
+    this.getBalance(address)
+      .then(balance => {
+        delete this.requestMap[address];
+        this.onReceiveSuccess(address, balance);
+      })
+      .catch(error => {
+        delete this.requestMap[address];
+        this.onReceiveError(address, error);
+      });
+  }
+
+  setSkipping() {
+    this.isSkipping = true;
+    setTimeout(() => {
+      this.isSkipping = false;
+    }, MINIMUM_TIMEOUT);
+  }
+
+  onMessage = ({ params, method }) => {
+    if (
+      method !== 'eth_subscription' ||
+      params.subscription !== this.subscribeId ||
+      this.isSkipping
+    ) {
+      return;
+    }
+
+    this.setSkipping();
+
+    this.forEachHash(address => {
+      this.handleData({ address });
+    });
+  };
+
+  async getBalance(address) {
+    return this.context.provider.callMethod(
+      'eth_getBalance',
+      address,
+      'latest',
+    );
   }
 }
