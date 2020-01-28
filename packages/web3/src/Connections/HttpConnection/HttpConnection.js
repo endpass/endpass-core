@@ -25,8 +25,7 @@ export default class HttpConnection extends BaseConnection {
    * @return {Promise<void>}
    */
   async sendRequest(object) {
-    const response = await this.requester.post(object);
-    const data = await response.json();
+    const data = await this.requester.post(object);
 
     // send data to provider
     this.handleObservers(data);

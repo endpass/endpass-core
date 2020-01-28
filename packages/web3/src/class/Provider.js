@@ -1,3 +1,4 @@
+// @ts-check
 import JSONBird from 'jsonbird';
 import ConnectionFactory from '@/Connections/ConnectionFactory';
 import NotifyHandler from '@/class/NotifyHandler';
@@ -17,6 +18,9 @@ export default class Provider {
     this.subscribeTransport();
   }
 
+  /**
+   * @private
+   */
   subscribeTransport() {
     // incoming event data
     this.connection.subscribe(this.onMessage);
@@ -50,7 +54,7 @@ export default class Provider {
   }
 
   /**
-   * @param {Function} cb
+   * @param {Function=} cb
    */
   unsubscribe(cb) {
     this.notify.unsubscribe(cb);
@@ -58,16 +62,22 @@ export default class Provider {
 
   /**
    * @param {string} method
-   * @param {Array} args
+   * @param {[]} args
    * @return {Promise<any>}
    */
   async callMethod(method, ...args) {
-    const currentNetwork = this.net;
     await this.connection.create();
-    const res = await this.rpc.call(method, ...args);
-    if (currentNetwork !== this.net) {
-      return this.callMethod(method, ...args);
+
+    try {
+      const res = await this.rpc.call(method, ...args);
+      return res;
+    } catch (rpcError) {
+      throw new Error(rpcError.wrapped);
     }
-    return res;
+  }
+
+  destroy() {
+    this.unsubscribe();
+    this.connection.destroy();
   }
 }

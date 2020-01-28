@@ -19,6 +19,10 @@ export default class BalanceEvent extends BaseEvent {
   }
 
   async createCallbacks() {
+    if (this.isSubscribed) {
+      return;
+    }
+
     this.isSubscribed = true;
 
     const subscribeId = await this.context.provider.callMethod(
@@ -62,7 +66,7 @@ export default class BalanceEvent extends BaseEvent {
       });
   }
 
-  setSkipping() {
+  holdoutNext() {
     this.isSkipping = true;
     setTimeout(() => {
       this.isSkipping = false;
@@ -78,7 +82,7 @@ export default class BalanceEvent extends BaseEvent {
       return;
     }
 
-    this.setSkipping();
+    this.holdoutNext();
 
     this.forEachHash(address => {
       this.handleData({ address });

@@ -6,8 +6,7 @@ export default class BasePlugin {
   static Events = [];
 
   constructor(props) {
-    const { context, netUrl } = props;
-    this.netUrl = netUrl;
+    const { context } = props;
     this.context = context || new Context(props);
 
     this.context.events.addEvents(this.constructor.Events, props);
@@ -37,5 +36,9 @@ export default class BasePlugin {
    */
   call(method, ...args) {
     return this.context.provider.callMethod(method, ...args);
+  }
+
+  destroy() {
+    this.context.destroy();
   }
 }

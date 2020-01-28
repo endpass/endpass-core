@@ -44,4 +44,8 @@ export default class Events {
       this.eventPluginsMap[methodKey].off();
     });
   }
+
+  destroy() {
+    this.off();
+  }
 }
