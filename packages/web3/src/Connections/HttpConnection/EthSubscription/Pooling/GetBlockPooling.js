@@ -36,6 +36,11 @@ export default class GetBlockPooling {
       if (data.result) {
         this.notify.handleObservers(data.result);
       }
+
+      if (data.code) {
+        // catches some fault =(
+        break;
+      }
     }
   }
 

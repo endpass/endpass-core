@@ -24,7 +24,7 @@ export default class HttpConnection extends BaseConnection {
    * @param {object} object
    * @return {Promise<void>}
    */
-  async sendRequest(object) {
+  async doRequest(object) {
     const data = await this.requester.post(object);
 
     // send data to provider
@@ -52,7 +52,11 @@ export default class HttpConnection extends BaseConnection {
    * @param {object} object
    */
   sendViaHttp(object) {
-    const { method, params } = object;
+    const { method, params, error } = object;
+
+    if (error) {
+      // :TODO add processing errors from JSONbird?
+    }
 
     switch (method) {
       case 'eth_subscribe':
@@ -63,7 +67,7 @@ export default class HttpConnection extends BaseConnection {
         this.answerRpc(object);
         break;
       default:
-        this.sendRequest(object);
+        this.doRequest(object);
         break;
     }
 

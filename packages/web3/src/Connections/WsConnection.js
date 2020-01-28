@@ -107,11 +107,6 @@ export default class WsConnection extends BaseConnection {
   }
 
   destroy() {
-    super.destroy();
     this.isDestroyed = true;
-    if (this.ws) {
-      this.ws.close();
-      this.ws = null;
-    }
   }
 }
