@@ -10,17 +10,32 @@ export default class HttpRequester {
 
   /**
    * @param {object} object
-   * @return {Promise<Response>}
+   * @return {Promise<any>}
    */
   async post(object) {
-    const response = await fetch(this.url, {
+    const params = {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
       },
       body: JSON.stringify(object),
-    });
-    const data = await response.json();
-    return data;
+    };
+
+    const response = await fetch(this.url, params);
+    if (response.ok) {
+      const data = await response.json();
+      return data;
+    }
+
+    let message = 'Something wrong with request';
+    try {
+      message = await response.text();
+    } catch (e) {}
+    return {
+      id: object.id,
+      jsonrpc: '2.0',
+      code: response.status,
+      error: new Error(message),
+    };
   }
 }

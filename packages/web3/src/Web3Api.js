@@ -21,7 +21,7 @@ export default class Web3Api {
     // create new instance of core
     this.networkChangeResolve({ isNetworkChanged: true });
     this.setNetworkResolver();
-    // if (this.core) this.core.destroy();
+    if (this.core) this.core.destroy();
     this.core = new CompositePlugin({
       netUrl,
       plugins: this.plugins,
