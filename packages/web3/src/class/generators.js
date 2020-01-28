@@ -25,7 +25,7 @@ export const promiseToIterator = ({ promise, release }) => ({
   async return() {
     release();
     // eslint-disable-next-line no-console
-    console.log('I have been released !!!');
+    // console.log('I have been released !!!');
     return { done: true };
   },
   [Symbol.asyncIterator]() {

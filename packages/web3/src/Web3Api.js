@@ -5,10 +5,10 @@ import { promiseRepeater, promiseToIterator, sleep } from '@/class/generators';
 
 export default class Web3Api {
   constructor({ netUrl, plugins }) {
+    this.netUrl = '';
+    this.plugins = plugins;
     this.setNetworkResolver();
     this.setNetwork(netUrl);
-    this.netUrl = netUrl;
-    this.plugins = plugins;
   }
 
   setNetwork(netUrl) {

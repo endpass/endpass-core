@@ -13,10 +13,18 @@ export default class NewHeads extends Base {
   }
 
   onReceive = blockData => {
-    if (this.blockNumber !== blockData.number) {
+    const isFirstRequest = !!this.blockNumber;
+    const isNewValue = this.blockNumber !== blockData.number;
+
+    if (isNewValue) {
       this.blockNumber = blockData.number;
-      this.handleObservers(blockData);
     }
+
+    if (isFirstRequest || !isNewValue) {
+      return;
+    }
+
+    this.handleObservers(blockData);
   };
 
   destroy() {

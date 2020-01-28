@@ -31,8 +31,7 @@ export default class GetBlockPooling {
         method: 'eth_getBlockByNumber',
         params: ['latest', false],
       });
-      const response = await this.requester.post(body);
-      const data = await response.json();
+      const data = await this.requester.post(body);
       // TODO: if needed step by step block, add option in constructor
       if (data.result) {
         this.notify.handleObservers(data.result);

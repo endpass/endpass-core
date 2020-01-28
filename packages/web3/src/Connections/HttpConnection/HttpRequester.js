@@ -12,13 +12,15 @@ export default class HttpRequester {
    * @param {object} object
    * @return {Promise<Response>}
    */
-  post(object) {
-    return fetch(this.url, {
+  async post(object) {
+    const response = await fetch(this.url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
       },
       body: JSON.stringify(object),
     });
+    const data = await response.json();
+    return data;
   }
 }

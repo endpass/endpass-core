@@ -44,7 +44,7 @@ export default class BaseEvent {
     });
   }
 
-  on(data, cb) {
+  async on(data, cb) {
     if (typeof data === 'function') {
       // eslint-disable-next-line no-param-reassign
       cb = data;
@@ -62,11 +62,10 @@ export default class BaseEvent {
       data,
     });
 
-    this.handleData(data);
-
     if (!haveCallbacks) {
-      this.createCallbacks(data);
+      await this.createCallbacks(data);
     }
+    await this.handleData(data);
   }
 
   off(userCb) {
