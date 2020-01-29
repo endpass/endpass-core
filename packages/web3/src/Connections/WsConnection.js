@@ -61,7 +61,12 @@ export default class WsConnection extends BaseConnection {
     ws.onmessage = ({ data }) => {
       try {
         const object = JSON.parse(data);
-        this.handleObservers(object);
+        if (object.id) {
+          // :TODO rethink about detect event and request
+          this.handleRequest(object);
+        } else {
+          this.handleEvent(object);
+        }
         // console.log('-- e.data-parsed', object);
       } catch (e) {
         console.error(e);

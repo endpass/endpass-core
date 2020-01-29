@@ -7,28 +7,36 @@ export default class BaseConnection {
    */
   constructor(url) {
     this.url = url;
-    this.notify = new NotifyHandler();
+    this.eventNotify = new NotifyHandler();
+    this.requestNotify = new NotifyHandler();
   }
 
   /**
    * @param {any} data
    */
-  handleObservers = data => {
-    this.notify.handleObservers(data);
+  handleEvent = data => {
+    this.eventNotify.handleObservers(data);
+  };
+
+  /**
+   * @param {any} data
+   */
+  handleRequest = data => {
+    this.requestNotify.handleObservers(data);
   };
 
   /**
    * @param {Function} cb
    */
-  subscribe(cb) {
-    this.notify.subscribe(cb);
+  subscribeEvent(cb) {
+    this.eventNotify.subscribe(cb);
   }
 
   /**
-   * @param {Function=} cb
+   * @param {Function} cb
    */
-  unsubscribe(cb) {
-    this.notify.unsubscribe(cb);
+  subscribeRequest(cb) {
+    this.requestNotify.subscribe(cb);
   }
 
   /**
@@ -44,6 +52,7 @@ export default class BaseConnection {
   create() {}
 
   destroy() {
-    this.notify.destroy();
+    this.requestNotify.destroy();
+    this.eventNotify.destroy();
   }
 }

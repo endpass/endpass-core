@@ -16,7 +16,7 @@ export default class HttpConnection extends BaseConnection {
     });
 
     // event data to provider
-    this.ethSubscription.subscribe(this.handleObservers);
+    this.ethSubscription.subscribe(this.handleEvent);
   }
 
   /**
@@ -28,7 +28,7 @@ export default class HttpConnection extends BaseConnection {
     const data = await this.requester.post(object);
 
     // send data to provider
-    this.handleObservers(data);
+    this.handleRequest(data);
   }
 
   /**
@@ -44,7 +44,7 @@ export default class HttpConnection extends BaseConnection {
       jsonrpc,
       result,
     };
-    this.handleObservers(res);
+    this.handleRequest(res);
   }
 
   /**

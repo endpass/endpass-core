@@ -7,8 +7,8 @@ export default class web3ResponseFabric {
     };
   }
 
-  static createError(error = null, isNetworkChanged) {
-    return web3ResponseFabric.createResponse(null, error, isNetworkChanged);
+  static createError(error = null) {
+    return web3ResponseFabric.createResponse(null, error, false);
   }
 
   static createNetworkChanged() {

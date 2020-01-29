@@ -8,7 +8,7 @@ export default class RPCFabric {
     };
   }
 
-  static createResponse({ method, params }) {
+  static createEventAnswer({ method, params }) {
     // id field must not to be in response,
     // it shows that this is response, not request
     return {

@@ -37,7 +37,7 @@ export default class EthSubscription {
     }
 
     this.subscriptions[subscriptionName].ids.forEach(subscribeId => {
-      const notifyData = RPCFabric.createResponse({
+      const notifyData = RPCFabric.createEventAnswer({
         method: 'eth_subscription',
         params: {
           result,
