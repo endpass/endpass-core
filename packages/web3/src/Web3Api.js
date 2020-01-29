@@ -51,7 +51,7 @@ export default class Web3Api {
       const res = await Promise.race([promiseRequest, this.isNetworkChanged()]);
       return Web3ResponseFabric.createSuccess(res);
     } catch (e) {
-      return Web3ResponseFabric.createError(e, false);
+      return Web3ResponseFabric.createError(e);
     }
   }
 

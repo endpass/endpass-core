@@ -23,9 +23,10 @@ export default class Provider {
    */
   subscribeTransport() {
     // incoming event data
-    this.connection.subscribe(this.onMessage);
+    this.connection.subscribeEvent(this.onEvent);
 
     // send data
+    this.connection.subscribeRequest(this.onRequest);
     this.rpc.on('data', this.connection.send);
   }
 
@@ -33,17 +34,20 @@ export default class Provider {
    * @private
    * @param {object} data
    */
-  onMessage = data => {
-    // TODO: try to rethink about how to split for GET and EVENT flows
-    if (data.id) {
-      // GET/POST request
-      // receive data from .callMethod
-      this.rpc.write(data);
-    } else {
-      // EVENT from server
-      // subscription receive
-      this.notify.handleObservers(data);
-    }
+  onEvent = data => {
+    // EVENT from server
+    // subscription receive
+    this.notify.handleObservers(data);
+  };
+
+  /**
+   * @private
+   * @param {object} data
+   */
+  onRequest = data => {
+    // GET/POST request
+    // receive data from .callMethod
+    this.rpc.write(data);
   };
 
   /**
