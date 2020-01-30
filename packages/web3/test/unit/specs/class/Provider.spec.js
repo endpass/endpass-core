@@ -74,6 +74,15 @@ describe('Provider class', () => {
       });
     };
 
+    it('should use connection', async () => {
+      expect.assertions(2);
+
+      mockRequest();
+      await provider.callMethod('method');
+
+      expect(connection.send).toBeCalledTimes(1);
+    });
+
     it('should create connection', async () => {
       expect.assertions(1);
 

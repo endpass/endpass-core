@@ -37,4 +37,8 @@ export default class BasePlugin {
   call(method, ...args) {
     return this.context.provider.callMethod(method, ...args);
   }
+
+  destroy() {
+    this.context.destroy();
+  }
 }

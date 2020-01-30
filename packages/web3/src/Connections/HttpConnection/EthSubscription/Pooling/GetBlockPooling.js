@@ -35,9 +35,7 @@ export default class GetBlockPooling {
       // TODO: if needed step by step block, add option in constructor
       if (data.result) {
         this.notify.handleObservers(data.result);
-      }
-
-      if (data.code) {
+      } else {
         // catches some fault =(
         break;
       }

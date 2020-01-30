@@ -50,4 +50,6 @@ export default class BaseConnection {
   };
 
   create() {}
+
+  destroy() {}
 }

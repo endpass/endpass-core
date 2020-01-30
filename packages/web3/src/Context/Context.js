@@ -14,4 +14,9 @@ export default class Context {
       ...props,
     });
   }
+
+  destroy() {
+    this.events.off();
+    this.provider.destroy();
+  }
 }

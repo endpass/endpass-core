@@ -1,4 +1,13 @@
 export default class RPCFabric {
+  static createError({ id, error, code }) {
+    return {
+      jsonrpc: '2.0',
+      id,
+      code,
+      error,
+    };
+  }
+
   static createRequest({ id, method, params }) {
     return {
       jsonrpc: '2.0',
