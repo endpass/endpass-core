@@ -32,28 +32,34 @@ describe('Provider class', () => {
     expect(connection.subscribeEvent).toBeCalledTimes(1);
   });
 
-  it('should emit event handler', async () => {
-    expect.assertions(2);
-
-    const handler = jest.fn();
-    const result = 'result';
-    provider.subscribe(handler);
-    connection.send.mockImplementationOnce(data => {
-      const request = {
-        id: data.id,
-        jsonrpc: '2.0',
-        result,
-      };
-      handleRequest(request);
-    });
-
-    handleEvent({
+  describe('event handler', () => {
+    const data = {
       jsonrpc: '2.0',
-      result,
+      result: 'result',
+    };
+
+    it('should emit event handler', async () => {
+      expect.assertions(2);
+
+      const handler = jest.fn();
+      provider.subscribe(handler);
+
+      handleEvent(data);
+
+      expect(handler).toBeCalledTimes(1);
+      expect(handler).toBeCalledWith(data);
     });
 
-    expect(handler).toBeCalledTimes(1);
-    expect(handler).toBeCalledWith(1);
+    it('should not use connection', () => {
+      expect.assertions(1);
+
+      const handler = jest.fn();
+      provider.subscribe(handler);
+
+      handleEvent(data);
+
+      expect(connection.send).not.toBeCalled();
+    });
   });
 
   describe('callMethod', () => {

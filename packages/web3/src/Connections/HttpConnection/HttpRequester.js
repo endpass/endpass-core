@@ -9,6 +9,36 @@ export default class HttpRequester {
   }
 
   /**
+   *
+   * @param {Response} response
+   * @return {Promise<*>}
+   */
+  async resolve(response) {
+    const data = await response.json();
+    return data;
+  }
+
+  /**
+   *
+   * @param {object} data
+   * @param {Response} response
+   * @return {Promise<{code: *, id: *, jsonrpc: string, error: Error}>}
+   */
+  async reject(data, response) {
+    let message = 'Something wrong with request';
+    try {
+      message = await response.text();
+    } catch (e) {}
+
+    return {
+      id: data.id,
+      jsonrpc: '2.0',
+      code: response.status,
+      error: new Error(message),
+    };
+  }
+
+  /**
    * @param {object} object
    * @return {Promise<any>}
    */
@@ -23,19 +53,8 @@ export default class HttpRequester {
 
     const response = await fetch(this.url, params);
     if (response.ok) {
-      const data = await response.json();
-      return data;
+      return this.resolve(response);
     }
-
-    let message = 'Something wrong with request';
-    try {
-      message = await response.text();
-    } catch (e) {}
-    return {
-      id: object.id,
-      jsonrpc: '2.0',
-      code: response.status,
-      error: new Error(message),
-    };
+    return this.reject(object, response);
   }
 }

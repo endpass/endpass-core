@@ -25,7 +25,7 @@ export default class PublicApi {
   }
 
   async getBalance(addr, option = 'latest') {
-    return this.web3.toRace(this.web3.call('eth_getBalance', addr, option));
+    return this.web3.call('eth_getBalance', addr, option);
   }
 
   async getCode(address) {
@@ -37,6 +37,7 @@ export default class PublicApi {
   }
 
   async getTransactionConfirm(hash) {
+    // :TODO rewrite as getBalance, just return result or throw error
     let receipt;
     // eslint-disable-next-line no-unused-vars
     for await (const index of this.web3.timeoutToIterator(

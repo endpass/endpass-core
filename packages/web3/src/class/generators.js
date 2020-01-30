@@ -38,12 +38,3 @@ export const promiseToIterator = ({ promise, release }) => ({
 
 export const sleep = ms =>
   new Promise(resolve => setTimeout(() => resolve(), ms));
-
-export async function* promiseCount(promise) {
-  let count = -1;
-  yield (count += 1);
-  while (true) {
-    await promise;
-    yield (count += 1);
-  }
-}
