@@ -9,8 +9,8 @@ export default class RPCFabric {
   }
 
   static createEventAnswer({ method, params }) {
-    // id field must not to be in response,
-    // it shows that this is response, not request
+    // id field must NOT to be in response,
+    // it shows that this is event from server, not request
     return {
       jsonrpc: '2.0',
       method,

@@ -50,9 +50,4 @@ export default class BaseConnection {
   };
 
   create() {}
-
-  destroy() {
-    this.requestNotify.destroy();
-    this.eventNotify.destroy();
-  }
 }

@@ -4,18 +4,12 @@ export default class BaseEvent {
   constructor({ context }) {
     this.context = context;
 
-    this.callbacksMap = {
-      // hash: [
-      //   {
-      //     cb: [],
-      //     data: {},
-      //   },
-      // ],
-    };
+    /** @type {EventHashMap} */
+    this.hashMap = {};
   }
 
   forEachHash(cb) {
-    Object.keys(this.callbacksMap).forEach(hash => {
+    Object.keys(this.hashMap).forEach(hash => {
       cb(hash);
     });
   }
@@ -35,11 +29,11 @@ export default class BaseEvent {
    * @param {any} passData
    */
   onReceiveValue(hash, error = false, passData) {
-    const callbacks = this.callbacksMap[hash];
-    if (!callbacks) {
+    const eventHashList = this.hashMap[hash];
+    if (!eventHashList) {
       return;
     }
-    callbacks.forEach(({ cb }) => {
+    eventHashList.forEach(({ cb }) => {
       cb(error, passData);
     });
   }
@@ -51,44 +45,44 @@ export default class BaseEvent {
       // eslint-disable-next-line no-param-reassign
       data = 'shared-hash';
     }
-    const { callbacksMap } = this;
-    const haveCallbacks = Object.keys(callbacksMap).length !== 0;
+    const { hashMap } = this;
+    const isEmpty = Object.keys(hashMap).length === 0;
 
     const hash = this.getHash(data);
-    callbacksMap[hash] = callbacksMap[hash] || [];
+    hashMap[hash] = hashMap[hash] || [];
 
-    callbacksMap[hash].push({
+    hashMap[hash].push({
       cb,
       data,
     });
 
-    if (!haveCallbacks) {
+    if (isEmpty) {
       await this.createCallbacks(data);
     }
     await this.handleData(data);
   }
 
   off(userCb) {
-    const { callbacksMap } = this;
+    const { hashMap } = this;
     if (!userCb) {
-      this.callbacksMap = {};
+      this.hashMap = {};
       this.releaseCallbacks();
       return;
     }
 
-    Object.keys(callbacksMap).forEach(hashKey => {
-      const hashCallbacks = callbacksMap[hashKey];
-      const pos = hashCallbacks.findIndex(item => item.cb === userCb);
+    Object.keys(hashMap).forEach(hashKey => {
+      const eventHashList = hashMap[hashKey];
+      const pos = eventHashList.findIndex(item => item.cb === userCb);
       if (pos >= 0) {
-        hashCallbacks.splice(pos, 1);
+        eventHashList.splice(pos, 1);
       }
 
-      if (hashCallbacks.length === 0) {
-        delete callbacksMap[hashKey];
+      if (eventHashList.length === 0) {
+        delete hashMap[hashKey];
       }
     });
 
-    if (Object.keys(callbacksMap).length === 0) {
+    if (Object.keys(hashMap).length === 0) {
       this.releaseCallbacks();
     }
   }

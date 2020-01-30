@@ -21,7 +21,6 @@ export default class Web3Api {
     // create new instance of core
     this.networkChangeResolve({ isNetworkChanged: true });
     this.setNetworkResolver();
-    if (this.core) this.core.destroy();
     this.core = new CompositePlugin({
       netUrl,
       plugins: this.plugins,
@@ -56,6 +55,7 @@ export default class Web3Api {
   }
 
   emitterToIterator(method, props) {
+    // TODO: think about naming of this method
     // TODO: replace to callbag
     const repeater = promiseRepeater();
 
@@ -73,6 +73,7 @@ export default class Web3Api {
   }
 
   timeoutToIterator(ms) {
+    // TODO: think about naming of this method
     // TODO: replace to callbag
     return promiseToIterator({
       promise: () => Promise.race([sleep(ms), this.isNetworkChanged()]),

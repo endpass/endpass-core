@@ -81,9 +81,4 @@ export default class HttpConnection extends BaseConnection {
   send = data => {
     this.sendViaHttp(data);
   };
-
-  destroy() {
-    super.destroy();
-    this.ethSubscription.destroy();
-  }
 }

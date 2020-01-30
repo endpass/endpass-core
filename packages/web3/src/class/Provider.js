@@ -15,13 +15,13 @@ export default class Provider {
     });
 
     this.connection = ConnectionFactory.create(netUrl);
-    this.subscribeTransport();
+    this.initTransport();
   }
 
   /**
    * @private
    */
-  subscribeTransport() {
+  initTransport() {
     // incoming event data
     this.connection.subscribeEvent(this.onEvent);
 
@@ -73,15 +73,9 @@ export default class Provider {
     await this.connection.create();
 
     try {
-      const res = await this.rpc.call(method, ...args);
-      return res;
+      return await this.rpc.call(method, ...args);
     } catch (rpcError) {
       throw new Error(rpcError.wrapped);
     }
-  }
-
-  destroy() {
-    this.unsubscribe();
-    this.connection.destroy();
   }
 }
