@@ -110,4 +110,8 @@ export default class WsConnection extends BaseConnection {
 
     return this.initWebSocket();
   }
+
+  destroy() {
+    this.isDestroyed = true;
+  }
 }

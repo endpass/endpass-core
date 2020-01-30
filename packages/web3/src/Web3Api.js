@@ -4,10 +4,11 @@ import Web3ResponseFabric from '@/class/Web3ResponseFabric';
 import { promiseRepeater, promiseToIterator, sleep } from '@/class/generators';
 
 export default class Web3Api {
-  constructor({ netUrl, plugins }) {
+  constructor({ netUrl, plugins = [] }) {
     this.netUrl = '';
     this.plugins = plugins;
-    this.setNetworkResolver();
+
+    this.resolveNetworkChange();
     this.setNetwork(netUrl);
   }
 
@@ -18,9 +19,9 @@ export default class Web3Api {
 
     this.netUrl = netUrl;
 
-    // create new instance of core
     this.networkChangeResolve({ isNetworkChanged: true });
-    this.setNetworkResolver();
+    this.resolveNetworkChange();
+    if (this.core) this.core.destroy();
     this.core = new CompositePlugin({
       netUrl,
       plugins: this.plugins,
@@ -29,7 +30,10 @@ export default class Web3Api {
     return this.core;
   }
 
-  setNetworkResolver() {
+  /**
+   * @private
+   */
+  resolveNetworkChange() {
     this.networkChangePromise = new Promise(resolve => {
       this.networkChangeResolve = resolve;
     });

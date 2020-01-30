@@ -73,9 +73,14 @@ export default class Provider {
     await this.connection.create();
 
     try {
-      return await this.rpc.call(method, ...args);
+      const data = await this.rpc.call(method, ...args);
+      return data;
     } catch (rpcError) {
-      throw new Error(rpcError.wrapped);
+      throw rpcError.wrapped;
     }
+  }
+
+  destroy() {
+    this.connection.destroy();
   }
 }

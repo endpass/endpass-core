@@ -56,6 +56,9 @@ export default class HttpConnection extends BaseConnection {
 
     if (error) {
       // :TODO add processing errors from JSONbird?
+      // create Error object and return to rpc
+      // this.answerRpc(object);
+      // return;
     }
 
     switch (method) {
@@ -71,8 +74,8 @@ export default class HttpConnection extends BaseConnection {
         break;
     }
 
-    // // TODO: add realisation for newHeads as `eth_getBlockByNumber` with 'latest'
-    // // TODO: add get data blocks from eth ?
+    // TODO: add realisation for newHeads as `eth_getBlockByNumber` with 'latest'
+    // TODO: add get data blocks from eth ?
   }
 
   /**
@@ -81,4 +84,8 @@ export default class HttpConnection extends BaseConnection {
   send = data => {
     this.sendViaHttp(data);
   };
+
+  destroy() {
+    this.ethSubscription.destroy();
+  }
 }

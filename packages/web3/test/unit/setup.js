@@ -10,6 +10,9 @@
 // import 'mocks/class/wallet/proxy/hardware/LedgerProxy';
 // import 'mocks/class/wallet/proxy/hardware/TrezorProxy';
 // import 'mocks/class/proxyRequest/provider/database';
+import fetchMock from 'jest-fetch-mock';
+
+fetchMock.enableMocks();
 
 // console.error and console.warn throws errors and fails tests
 global.console.error = jest.fn(e => {
