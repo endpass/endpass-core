@@ -23,8 +23,9 @@ export const promiseToIterator = ({ promise, release }) => ({
     throw e;
   },
   async return() {
-    release();
-    // eslint-disable-next-line no-console
+    if (release) {
+      release();
+    }
     // console.log('I have been released !!!');
     return { done: true };
   },

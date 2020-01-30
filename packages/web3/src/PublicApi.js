@@ -1,5 +1,4 @@
 import Web3Api from '@/Web3Api';
-import Web3ResponseFabric from '@/class/Web3ResponseFabric';
 import BalancePlugin from '@/plugins/Balance';
 
 const RECEIPT_STATUS_CONFIRM_TIMEOUT = 2000;
@@ -36,26 +35,27 @@ export default class PublicApi {
     return this.web3.emitterToIterator('balance', { address });
   }
 
-  async getTransactionConfirm(hash) {
-    // :TODO rewrite as getBalance, just return result or throw error
+  async checkTransactionConfirmed(hash) {
     let receipt;
     // eslint-disable-next-line no-unused-vars
     for await (const index of this.web3.timeoutToIterator(
       RECEIPT_STATUS_CONFIRM_TIMEOUT,
     )) {
-      const { result, isNetworkChanged, error } = this.web3.toRace(
+      const data = await this.web3.toRace(
         this.web3.call('eth_getTransactionReceipt', hash),
       );
+      const { result, isNetworkChanged, error } = data;
+
       if (isNetworkChanged) {
-        return Web3ResponseFabric.createNetworkChanged();
+        throw new Error('Network was changed');
       }
 
       if (!result) {
-        return Web3ResponseFabric.createError(new Error('Receipt not found'));
+        throw new Error('Receipt not found');
       }
 
       if (error) {
-        return Web3ResponseFabric.createError(error);
+        throw new Error(error);
       }
 
       if (result.status) {
@@ -67,9 +67,8 @@ export default class PublicApi {
     const status = Boolean(parseInt(receipt.status, 16));
 
     if (!status) {
-      return Web3ResponseFabric.createError(new Error('Transaction failure'));
+      throw new Error('Transaction failure');
     }
-
-    return Web3ResponseFabric.createSuccess(receipt);
+    return receipt;
   }
 }
