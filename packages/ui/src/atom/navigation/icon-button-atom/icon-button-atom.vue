@@ -1,13 +1,7 @@
 <template>
-  <button
-    :class="iconButtonCssClass"
-    @click="emitClick"
-  >
+  <button :class="iconButtonCssClass" @click="emitClick">
     <slot />
-    <svg-atom
-      v-if="!isIconSlotFilled"
-      :name="icon"
-    />
+    <svg-atom v-if="!isIconSlotFilled" :name="icon" />
   </button>
 </template>
 
@@ -19,6 +13,14 @@ export default {
   name: 'NavigationIconButtonAtom',
 
   props: {
+    skin: {
+      type: String,
+      default: 'primary',
+      validator(value) {
+        return ['primary', 'secondary'].includes(value);
+      },
+    },
+
     icon: {
       type: String,
       default: null,
@@ -35,6 +37,7 @@ export default {
       return Object.assign(this.themeCssClass, {
         'navigation-icon-button-atom': true,
         'is-active': this.isActive,
+        [`skin-${this.skin}`]: !!this.skin,
       });
     },
 

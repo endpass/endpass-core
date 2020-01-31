@@ -1,11 +1,8 @@
 <template>
   <outside-click-atom @click="onClickOutside">
     <close-by-key-atom @close="onESCPress">
-      <section
-        :class="vNavSubMenuCssClass"
-        class="v-nav-sub-menu"
-      >
-        <navigation-control-atom @click="handleOpenContent">
+      <section :class="vNavSubMenuCssClass" class="v-nav-sub-menu">
+        <navigation-control-atom :skin="skin" @click="handleOpenContent">
           {{ label }}
           <i class="v-nav-sub-menu-icon">
             <svg-atom :name="currentIcon" />
@@ -30,6 +27,14 @@ export default {
   name: 'VNavSubMenu',
 
   props: {
+    skin: {
+      type: String,
+      default: 'primary',
+      validator(value) {
+        return ['primary', 'secondary'].includes(value);
+      },
+    },
+
     label: {
       type: String,
       required: true,
@@ -54,6 +59,7 @@ export default {
     vNavSubMenuCssClass() {
       return Object.assign(this.themeCssClass, {
         'is-expanded': this.isExpanded,
+        [`skin-${this.skin}`]: !!this.skin,
       });
     },
 
