@@ -14,11 +14,11 @@ export default class HttpRequester {
    * @param {*} data
    * @return {boolean}
    */
-  static isJSONRpcFormat(data) {
-    if (!data || !data.jsonrpc) {
-      return false;
+  static isSuccessFormat(data) {
+    if (data && data.jsonrpc && data.result) {
+      return true;
     }
-    return true;
+    return false;
   }
 
   /**
@@ -40,11 +40,11 @@ export default class HttpRequester {
    * @param {string} id
    * @return {*}
    */
-  serverFail(id) {
+  serverFail(id, message = 'Something wrong with server response structure') {
     return RPCFabric.createError({
       id,
       code: -100,
-      error: new Error('Something wrong with server response structure'),
+      error: new Error(message),
     });
   }
 
@@ -61,11 +61,12 @@ export default class HttpRequester {
       return this.serverFail(id);
     }
 
-    if (HttpRequester.isJSONRpcFormat(data)) {
+    if (HttpRequester.isSuccessFormat(data)) {
       return data;
     }
-
-    return this.serverFail(id);
+    const message =
+      data && data.error ? data.error : 'Something wrong with receive data';
+    return this.serverFail(id, message);
   }
 
   /**

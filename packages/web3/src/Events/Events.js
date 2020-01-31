@@ -28,7 +28,7 @@ export default class Events {
 
     eventPlugin.on(data, cb);
     return () => {
-      this.off(methodName, data, cb);
+      this.off(methodName, cb);
     };
   }
 

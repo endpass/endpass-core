@@ -71,4 +71,8 @@ export default class PublicApi {
     }
     return receipt;
   }
+
+  destroy() {
+    this.web3.destroy();
+  }
 }
