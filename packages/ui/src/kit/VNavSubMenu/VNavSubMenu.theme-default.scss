@@ -10,7 +10,6 @@
   margin-left: 8px;
   width: 16px;
   height: 16px;
-  color: var(--endpass-ui-color-primary-5);
 }
 
 .v-nav-sub-menu.theme-default .v-nav-sub-menu-content {
@@ -43,8 +42,27 @@
   width: 100%;
 }
 
-.v-nav-sub-menu.theme-default
+.v-nav-sub-menu.theme-default.skin-primary
   .v-nav-sub-menu-content
   .navigation-control-atom:hover {
   background: var(--endpass-ui-color-primary-8);
+}
+
+.v-nav-sub-menu.theme-default.skin-secondary
+  .v-nav-sub-menu-content
+  .navigation-control-atom:hover {
+  background: var(--endpass-ui-color-blue-2);
+}
+
+
+.v-nav-sub-menu.theme-default.skin-primary .v-nav-sub-menu-icon {
+  color: var(--endpass-ui-color-primary-5);
+}
+
+.v-nav-sub-menu.theme-default.skin-primary .v-nav-sub-menu-icon {
+  color: var(--endpass-ui-color-primary-5);
+}
+
+.v-nav-sub-menu.theme-default.skin-secondary .v-nav-sub-menu-icon {
+  color: var(--endpass-ui-color-white);
 }

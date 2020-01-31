@@ -16,6 +16,14 @@ export default {
   name: 'NavigationControlAtom',
 
   props: {
+    skin: {
+      type: String,
+      default: 'primary',
+      validator(value) {
+        return ['primary', 'secondary'].includes(value);
+      },
+    },
+
     href: {
       type: String,
       default: null,
@@ -32,6 +40,7 @@ export default {
       return Object.assign(this.themeCssClass, {
         'navigation-control-atom': true,
         'is-active': this.isActive,
+        [`skin-${this.skin}`]: !!this.skin,
       });
     },
 

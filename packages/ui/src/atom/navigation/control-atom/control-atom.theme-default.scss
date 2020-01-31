@@ -6,8 +6,6 @@
   padding: 16px 16px 13px;
   margin: 0;
   border: none;
-  border-bottom: 3px solid var(--endpass-ui-color-primary-7);
-  background: var(--endpass-ui-color-primary-7);
   transition: color 0.3s, background 0.3s, border-bottom 0.3s;
   color: rgba(255, 255, 255, 0.75);
   font-size: 14px;
@@ -21,7 +19,23 @@
   color: var(--endpass-ui-color-white);
 }
 
-.navigation-control-atom.theme-default.is-active {
+.navigation-control-atom.theme-default.skin-primary {
+  border-bottom: 3px solid var(--endpass-ui-color-primary-7);
+  background: var(--endpass-ui-color-primary-7);
+}
+
+.navigation-control-atom.theme-default.skin-primary.is-active {
   border-bottom: 3px solid var(--endpass-ui-color-primary-5);
   color: var(--endpass-ui-color-white);
 }
+
+.navigation-control-atom.theme-default.skin-secondary {
+  border-bottom: 3px solid var(--endpass-ui-color-blue-1);
+  background-color: var(--endpass-ui-color-blue-1);
+}
+
+.navigation-control-atom.theme-default.skin-secondary.is-active {
+  border-bottom: 3px solid var(--endpass-ui-color-blue-2);
+  color: var(--endpass-ui-color-white);
+}
+
