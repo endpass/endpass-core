@@ -17,7 +17,7 @@
     "build:browser:dev": "rollup -c & webpack --mode development",
     "build:browser": "webpack --mode production",
     "build:dev": "NODE_ENV=development rollup -c",
-    "test": "npm run test:unit && npm run test:e2e",
+    "test": "npm run test:unit",
     "test:unit": "jest --config test/unit/jest.conf.js",
     "test:unit:watch": "jest --config test/unit/jest.conf.js --watch",
     "format": "yarn format:prettier && yarn format:eslint",
