@@ -75,7 +75,7 @@ describe('Provider class', () => {
     };
 
     it('should use connection', async () => {
-      expect.assertions(2);
+      expect.assertions(1);
 
       mockRequest();
       await provider.callMethod('method');
