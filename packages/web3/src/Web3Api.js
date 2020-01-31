@@ -64,7 +64,7 @@ export default class Web3Api {
     const repeater = promiseRepeater();
 
     const emitterHandler = (error, result) => {
-      repeater.resolve({ error, result, isNetworkChanged: false });
+      repeater.resolve(Web3ResponseFabric.createResponse(result, error));
     };
 
     const unsubscribe = this.core.on(method, props, emitterHandler);
@@ -82,5 +82,10 @@ export default class Web3Api {
     return promiseToIterator({
       promise: () => Promise.race([sleep(ms), this.isNetworkChanged()]),
     });
+  }
+
+  destroy() {
+    // TODO: add stop iterators
+    if (this.core) this.core.destroy();
   }
 }
