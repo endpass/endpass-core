@@ -5044,10 +5044,10 @@ exports[`Storyshots VHeader/desktop default 1`] = `
   />
    
   <header
-    class="v-header theme-default"
+    class="v-header theme-default skin-primary"
   >
     <button
-      class="theme-default navigation-icon-button-atom"
+      class="theme-default navigation-icon-button-atom skin-primary"
     >
        
       <svg
@@ -5100,21 +5100,21 @@ exports[`Storyshots VHeader/desktop default 1`] = `
     />
      
     <a
-      class="theme-default navigation-control-atom"
+      class="theme-default navigation-control-atom skin-primary"
       role="button"
     >
       Item one
     </a>
      
     <a
-      class="theme-default navigation-control-atom"
+      class="theme-default navigation-control-atom skin-primary"
       role="button"
     >
       Item two
     </a>
      
     <a
-      class="theme-default navigation-control-atom"
+      class="theme-default navigation-control-atom skin-primary"
       role="button"
     >
       Item three
@@ -5122,10 +5122,10 @@ exports[`Storyshots VHeader/desktop default 1`] = `
      
     <div>
       <section
-        class="v-nav-sub-menu theme-default"
+        class="v-nav-sub-menu theme-default skin-primary"
       >
         <a
-          class="theme-default navigation-control-atom"
+          class="theme-default navigation-control-atom skin-primary"
           role="button"
         >
           
@@ -5152,21 +5152,162 @@ exports[`Storyshots VHeader/desktop default 1`] = `
           class="v-nav-sub-menu-content"
         >
           <a
-            class="theme-default navigation-control-atom"
+            class="theme-default navigation-control-atom skin-primary"
             role="button"
           >
             Item four
           </a>
            
           <a
-            class="theme-default navigation-control-atom"
+            class="theme-default navigation-control-atom skin-primary"
             role="button"
           >
             Item five
           </a>
            
           <a
-            class="theme-default navigation-control-atom"
+            class="theme-default navigation-control-atom skin-primary"
+            role="button"
+          >
+            Item six
+          </a>
+        </section>
+      </section>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Storyshots VHeader/desktop secondary 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <header
+    class="v-header theme-default skin-secondary"
+  >
+    <button
+      class="theme-default navigation-icon-button-atom skin-secondary"
+    >
+       
+      <svg
+        class="svg-atom theme-default"
+        height="100%"
+        width="100%"
+      >
+        <use
+          x="0"
+          xlink:href="#endpass-ui-icon-menu"
+          y="0"
+        />
+      </svg>
+    </button>
+     
+    <div
+      class="v-nav-divider theme-default"
+    />
+     
+    <div
+      class="theme-default v-logo is-white"
+    >
+      <div
+        class="v-logo-image"
+      >
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-endpass"
+            y="0"
+          />
+        </svg>
+      </div>
+       
+      <span
+        class="v-logo-label"
+      >
+        
+    Endpass
+  
+      </span>
+    </div>
+     
+    <div
+      class="v-nav-divider theme-default"
+    />
+     
+    <a
+      class="theme-default navigation-control-atom skin-secondary"
+      role="button"
+    >
+      Item one
+    </a>
+     
+    <a
+      class="theme-default navigation-control-atom skin-secondary"
+      role="button"
+    >
+      Item two
+    </a>
+     
+    <a
+      class="theme-default navigation-control-atom skin-secondary"
+      role="button"
+    >
+      Item three
+    </a>
+     
+    <div>
+      <section
+        class="v-nav-sub-menu theme-default skin-secondary"
+      >
+        <a
+          class="theme-default navigation-control-atom skin-secondary"
+          role="button"
+        >
+          
+        Sub-menu
+        
+          <i
+            class="v-nav-sub-menu-icon"
+          >
+            <svg
+              class="svg-atom theme-default"
+              height="100%"
+              width="100%"
+            >
+              <use
+                x="0"
+                xlink:href="#endpass-ui-icon-chevron-down"
+                y="0"
+              />
+            </svg>
+          </i>
+        </a>
+         
+        <section
+          class="v-nav-sub-menu-content"
+        >
+          <a
+            class="theme-default navigation-control-atom skin-secondary"
+            role="button"
+          >
+            Item four
+          </a>
+           
+          <a
+            class="theme-default navigation-control-atom skin-secondary"
+            role="button"
+          >
+            Item five
+          </a>
+           
+          <a
+            class="theme-default navigation-control-atom skin-secondary"
             role="button"
           >
             Item six
@@ -6293,7 +6434,7 @@ exports[`Storyshots VNavControl/desktop active 1`] = `
   />
    
   <a
-    class="theme-default navigation-control-atom is-active"
+    class="theme-default navigation-control-atom is-active skin-primary"
     href="#"
   >
     Active link
@@ -6308,7 +6449,7 @@ exports[`Storyshots VNavControl/desktop as button 1`] = `
   />
    
   <a
-    class="theme-default navigation-control-atom"
+    class="theme-default navigation-control-atom skin-primary"
     role="button"
   >
     Nav button
@@ -6323,7 +6464,7 @@ exports[`Storyshots VNavControl/desktop default 1`] = `
   />
    
   <a
-    class="theme-default navigation-control-atom"
+    class="theme-default navigation-control-atom skin-primary"
     href="#"
   >
     Link
@@ -6338,7 +6479,7 @@ exports[`Storyshots VNavDivider/desktop default 1`] = `
   />
    
   <header
-    class="v-header theme-default"
+    class="v-header theme-default skin-primary"
   >
     
           Some
@@ -6378,7 +6519,7 @@ exports[`Storyshots VNavIconButton/desktop active 1`] = `
   />
    
   <button
-    class="theme-default navigation-icon-button-atom is-active"
+    class="theme-default navigation-icon-button-atom is-active skin-primary"
   >
     <svg
       class="svg-atom theme-default"
@@ -6404,7 +6545,7 @@ exports[`Storyshots VNavIconButton/desktop default 1`] = `
   />
    
   <button
-    class="theme-default navigation-icon-button-atom"
+    class="theme-default navigation-icon-button-atom skin-primary"
   >
     <svg
       class="svg-atom theme-default"
@@ -6430,7 +6571,7 @@ exports[`Storyshots VNavIconButton/desktop with icon as prop 1`] = `
   />
    
   <button
-    class="theme-default navigation-icon-button-atom"
+    class="theme-default navigation-icon-button-atom skin-primary"
   >
      
     <svg
@@ -6458,10 +6599,10 @@ exports[`Storyshots VNavSidebar/desktop default 1`] = `
     style="position: relative; height: 100vh;"
   >
     <header
-      class="v-header theme-default"
+      class="v-header theme-default skin-primary"
     >
       <button
-        class="theme-default navigation-icon-button-atom"
+        class="theme-default navigation-icon-button-atom skin-primary"
       >
          
         <svg
@@ -6482,21 +6623,21 @@ exports[`Storyshots VNavSidebar/desktop default 1`] = `
       />
        
       <a
-        class="theme-default navigation-control-atom"
+        class="theme-default navigation-control-atom skin-primary"
         role="button"
       >
         Item one
       </a>
        
       <a
-        class="theme-default navigation-control-atom"
+        class="theme-default navigation-control-atom skin-primary"
         role="button"
       >
         Item two
       </a>
        
       <a
-        class="theme-default navigation-control-atom"
+        class="theme-default navigation-control-atom skin-primary"
         role="button"
       >
         Item three
@@ -6504,10 +6645,10 @@ exports[`Storyshots VNavSidebar/desktop default 1`] = `
        
       <div>
         <section
-          class="v-nav-sub-menu theme-default"
+          class="v-nav-sub-menu theme-default skin-primary"
         >
           <a
-            class="theme-default navigation-control-atom"
+            class="theme-default navigation-control-atom skin-primary"
             role="button"
           >
             
@@ -6534,21 +6675,21 @@ exports[`Storyshots VNavSidebar/desktop default 1`] = `
             class="v-nav-sub-menu-content"
           >
             <a
-              class="theme-default navigation-control-atom"
+              class="theme-default navigation-control-atom skin-primary"
               role="button"
             >
               Item four
             </a>
              
             <a
-              class="theme-default navigation-control-atom"
+              class="theme-default navigation-control-atom skin-primary"
               role="button"
             >
               Item five
             </a>
              
             <a
-              class="theme-default navigation-control-atom"
+              class="theme-default navigation-control-atom skin-primary"
               role="button"
             >
               Item six
@@ -7185,10 +7326,10 @@ exports[`Storyshots VNavSubMenu/desktop default 1`] = `
    
   <div>
     <section
-      class="v-nav-sub-menu theme-default"
+      class="v-nav-sub-menu theme-default skin-primary"
     >
       <a
-        class="theme-default navigation-control-atom"
+        class="theme-default navigation-control-atom skin-primary"
         role="button"
       >
         
@@ -7215,21 +7356,21 @@ exports[`Storyshots VNavSubMenu/desktop default 1`] = `
         class="v-nav-sub-menu-content"
       >
         <a
-          class="theme-default navigation-control-atom"
+          class="theme-default navigation-control-atom skin-primary"
           role="button"
         >
           Item one
         </a>
          
         <a
-          class="theme-default navigation-control-atom"
+          class="theme-default navigation-control-atom skin-primary"
           role="button"
         >
           Item two
         </a>
          
         <a
-          class="theme-default navigation-control-atom"
+          class="theme-default navigation-control-atom skin-primary"
           role="button"
         >
           Item three
@@ -8635,10 +8776,10 @@ exports[`Storyshots VSidebar/desktop left 1`] = `
     style="position: relative; height: 100vh;"
   >
     <header
-      class="v-header theme-default"
+      class="v-header theme-default skin-primary"
     >
       <button
-        class="theme-default navigation-icon-button-atom"
+        class="theme-default navigation-icon-button-atom skin-primary"
       >
          
         <svg
@@ -8754,10 +8895,10 @@ exports[`Storyshots VSidebar/desktop right 1`] = `
     style="position: relative; height: 100vh;"
   >
     <header
-      class="v-header theme-default"
+      class="v-header theme-default skin-primary"
     >
       <button
-        class="theme-default navigation-icon-button-atom"
+        class="theme-default navigation-icon-button-atom skin-primary"
       >
          
         <svg
