@@ -66,7 +66,7 @@ export default class Provider {
   }
 
   /**
-   * @param {Function=} cb
+   * @param {Function} cb
    */
   unsubscribe(cb) {
     this.notify.unsubscribe(cb);
