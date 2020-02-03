@@ -22,6 +22,8 @@ export default class Web3Api {
     this.networkChangeResolve({ isNetworkChanged: true });
     this.resolveNetworkChange();
     if (this.core) this.core.destroy();
+
+    // TODO: think about how to remove Context creation (cycle links detected)
     this.core = new CompositePlugin({
       netUrl,
       plugins: this.plugins,

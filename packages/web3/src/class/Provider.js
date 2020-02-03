@@ -27,7 +27,15 @@ export default class Provider {
 
     // send data
     this.connection.subscribeRequest(this.onRequest);
-    this.rpc.on('data', this.connection.send);
+    this.rpc.on(
+      'data',
+      /**
+       * @param {any} data
+       */
+      data => {
+        this.connection.send(data);
+      },
+    );
   }
 
   /**

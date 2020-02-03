@@ -1,6 +1,9 @@
 export default class Events {
-  constructor() {
+  constructor(plugins = [], props) {
     this.eventPluginsMap = {};
+    plugins.forEach(pluginClass => {
+      this.addEvents(pluginClass.Events, props);
+    });
   }
 
   addEvents(PluginEventsList, props) {

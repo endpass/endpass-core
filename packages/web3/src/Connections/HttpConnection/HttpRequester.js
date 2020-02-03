@@ -1,6 +1,6 @@
 // @ts-check
 
-import RPCFabric from '@/class/RPCFabric';
+import RPCFactory from '@/class/RPCFactory';
 
 export default class HttpRequester {
   /**
@@ -8,17 +8,6 @@ export default class HttpRequester {
    */
   constructor(url) {
     this.url = url;
-  }
-
-  /**
-   * @param {*} data
-   * @return {boolean}
-   */
-  static isSuccessFormat(data) {
-    if (data && data.jsonrpc && data.result) {
-      return true;
-    }
-    return false;
   }
 
   /**
@@ -40,8 +29,11 @@ export default class HttpRequester {
    * @param {string} id
    * @return {*}
    */
-  serverFail(id, message = 'Something wrong with server response structure') {
-    return RPCFabric.createError({
+  createServerError(
+    id,
+    message = 'Something wrong with server response structure',
+  ) {
+    return RPCFactory.createError({
       id,
       code: -100,
       error: new Error(message),
@@ -58,15 +50,17 @@ export default class HttpRequester {
     try {
       data = await response.json();
     } catch (e) {
-      return this.serverFail(id);
+      return this.createServerError(id);
     }
 
-    if (HttpRequester.isSuccessFormat(data)) {
-      return data;
+    const isValidRPC = data && data.jsonrpc && data.result && data.id;
+    if (!isValidRPC) {
+      const message =
+        data && data.error ? data.error : 'Something wrong with receive data';
+      return this.createServerError(id, message);
     }
-    const message =
-      data && data.error ? data.error : 'Something wrong with receive data';
-    return this.serverFail(id, message);
+
+    return data;
   }
 
   /**
@@ -80,9 +74,9 @@ export default class HttpRequester {
       message = await response.text();
     } catch (e) {}
 
-    return RPCFabric.createError({
+    return RPCFactory.createError({
       id,
-      code: response.status,
+      code: -32000,
       error: new Error(message),
     });
   }
@@ -91,7 +85,7 @@ export default class HttpRequester {
    * @param {object} sendData
    * @return {Promise<*>}
    */
-  async post(sendData) {
+  async send(sendData) {
     const response = await fetch(
       this.url,
       HttpRequester.createRequest(sendData),

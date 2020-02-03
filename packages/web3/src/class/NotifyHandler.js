@@ -21,21 +21,20 @@ export default class NotifyHandler {
   }
 
   /**
-   * @param {Function=} cb
+   * @param {Function} cb
    */
   unsubscribe(cb) {
-    if (!cb) {
-      this.callbacks = [];
-      return;
-    }
-
     const pos = this.callbacks.indexOf(cb);
     if (pos >= 0) {
       this.callbacks.splice(pos, 1);
     }
   }
 
-  destroy() {
+  unsubscribeAll() {
     this.callbacks = [];
+  }
+
+  destroy() {
+    this.unsubscribeAll();
   }
 }

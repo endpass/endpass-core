@@ -1,6 +1,5 @@
-import Subscribers from './Subscribers';
-import NotifyHandler from '@/class/NotifyHandler';
-import RPCFabric from '@/class/RPCFabric';
+import SubscriptionsFactory from './subscriptions';
+import RPCFactory from '@/class/RPCFactory';
 
 /**
  * generate unique string
@@ -13,17 +12,10 @@ export default class EthSubscription {
   /**
    * @param {object} requester
    */
-  constructor({ requester }) {
+  constructor({ requester, handleSubscriptionEvent }) {
     this.requester = requester;
     this.subscriptions = {};
-    this.notify = new NotifyHandler();
-  }
-
-  /**
-   * @param {Function} cb
-   */
-  subscribe(cb) {
-    this.notify.subscribe(cb);
+    this.handleSubscriptionEvent = handleSubscriptionEvent;
   }
 
   /**
@@ -37,37 +29,45 @@ export default class EthSubscription {
     }
 
     this.subscriptions[subscriptionName].ids.forEach(subscribeId => {
-      const notifyData = RPCFabric.createEventAnswer({
+      const notifyData = RPCFactory.createEventAnswer({
         method: 'eth_subscription',
         params: {
           result,
           subscription: subscribeId,
         },
       });
-      this.notify.handleObservers(notifyData);
+      this.handleSubscriptionEvent(notifyData);
     });
   };
 
   /**
    * @private
    * @param {string} subscriptionName
-   * @param {?} optional
+   * @param {?} options
    */
-  createParamSubscription(subscriptionName, optional) {
+  createSubscription(subscriptionName, options) {
     const props = {
       requester: this.requester,
     };
-    const instance = Subscribers.create(subscriptionName, props, optional);
+    const instance = SubscriptionsFactory.create(
+      subscriptionName,
+      props,
+      options,
+    );
     instance.subscribe(this.notifyObservers);
     return instance;
   }
 
+  /**
+   * @param {Array<string, any>} params
+   * @return {string}
+   */
   create(params) {
     const id = generateId();
-    const [subscriptionName, optional] = params;
+    const [subscriptionName, options] = params;
 
     const subscriptionData = this.subscriptions[subscriptionName] || {
-      instance: this.createParamSubscription(subscriptionName, optional),
+      instance: this.createSubscription(subscriptionName, options),
       ids: [],
     };
     subscriptionData.ids.push(id);
@@ -77,6 +77,9 @@ export default class EthSubscription {
     return id;
   }
 
+  /**
+   * @param {Array<string>} params
+   */
   remove(params) {
     const [id] = params;
     Object.keys(this.subscriptions).forEach(subscriptionName => {
@@ -97,6 +100,5 @@ export default class EthSubscription {
     Object.keys(this.subscriptions).forEach(id => {
       this.subscriptions[id].instance.destroy();
     });
-    this.notify.destroy();
   }
 }

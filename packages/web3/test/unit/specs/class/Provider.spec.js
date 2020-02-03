@@ -8,7 +8,7 @@ jest.mock('@/Connections/ConnectionFactory', () => ({
 describe('Provider class', () => {
   let provider;
   let connection;
-  let handleEvent = () => {};
+  let handleSubscriptionEvent = () => {};
   let handleRequest = () => {};
 
   beforeEach(() => {
@@ -17,7 +17,7 @@ describe('Provider class', () => {
         handleRequest = handler;
       }),
       subscribeEvent: jest.fn().mockImplementation(handler => {
-        handleEvent = handler;
+        handleSubscriptionEvent = handler;
       }),
       send: jest.fn(),
       create: jest.fn(),
@@ -44,7 +44,7 @@ describe('Provider class', () => {
       const handler = jest.fn();
       provider.subscribe(handler);
 
-      handleEvent(data);
+      handleSubscriptionEvent(data);
 
       expect(handler).toBeCalledTimes(1);
       expect(handler).toBeCalledWith(data);
@@ -56,7 +56,7 @@ describe('Provider class', () => {
       const handler = jest.fn();
       provider.subscribe(handler);
 
-      handleEvent(data);
+      handleSubscriptionEvent(data);
 
       expect(connection.send).not.toBeCalled();
     });

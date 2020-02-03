@@ -13,10 +13,13 @@ export default class HttpConnection extends BaseConnection {
     this.requester = new HttpRequester(this.url);
     this.ethSubscription = new EthSubscription({
       requester: this.requester,
+      /**
+       * @param {any} data
+       */
+      handleSubscriptionEvent: data => {
+        this.handleSubscriptionEvent(data);
+      },
     });
-
-    // event data to provider
-    this.ethSubscription.subscribe(this.handleEvent);
   }
 
   /**
@@ -25,7 +28,7 @@ export default class HttpConnection extends BaseConnection {
    * @return {Promise<void>}
    */
   async doRequest(object) {
-    const data = await this.requester.post(object);
+    const data = await this.requester.send(object);
 
     // send data to provider
     this.handleRequest(data);
@@ -48,17 +51,17 @@ export default class HttpConnection extends BaseConnection {
   }
 
   /**
-   * @private
    * @param {object} object
    */
-  sendViaHttp(object) {
+  async send(object) {
     const { method, params, error } = object;
 
     if (error) {
-      // :TODO add processing errors from JSONbird?
-      // create Error object and return to rpc
-      // this.answerRpc(object);
-      // return;
+      //   if HTTP error, all processed in HttpRequester
+      //   TODO: add processing for WS errors and check connection error of WS
+      //   create Error object and return to rpc
+      //   this.answerRpc(object);
+      //   return;
     }
 
     switch (method) {
@@ -74,16 +77,8 @@ export default class HttpConnection extends BaseConnection {
         break;
     }
 
-    // TODO: add realisation for newHeads as `eth_getBlockByNumber` with 'latest'
-    // TODO: add get data blocks from eth ?
+    // TODO: add handle other subscription methods from ETH
   }
-
-  /**
-   * @param {object} data
-   */
-  send = data => {
-    this.sendViaHttp(data);
-  };
 
   destroy() {
     this.ethSubscription.destroy();

@@ -23,6 +23,7 @@ export default class WsConnection extends BaseConnection {
   initWebSocket(timeout = 0) {
     this.isReady = false;
     window.clearTimeout(this.reconnectTimerId);
+    // TODO: change flow for calling `createPromise` and then `createTimeout`
     this.resolvePromise = new Promise((resolve, reject) => {
       this.reconnectTimerId = window.setTimeout(() => {
         if (!this.isDestroyed) {
@@ -44,16 +45,16 @@ export default class WsConnection extends BaseConnection {
 
   /**
    * @private
-   * @param {Function} onCreate
+   * @param {Function} handleCreate
    */
-  createNativeWS(onCreate) {
+  createNativeWS(handleCreate) {
     const ws = new window.WebSocket(this.url);
     this.ws = ws;
     ws.binaryType = 'arraybuffer';
 
     ws.onopen = () => {
       this.isReady = true;
-      onCreate();
+      handleCreate();
     };
     ws.onclose = () => {
       this.reconnect();
@@ -65,7 +66,7 @@ export default class WsConnection extends BaseConnection {
           // :TODO rethink about detect event and request
           this.handleRequest(object);
         } else {
-          this.handleEvent(object);
+          this.handleSubscriptionEvent(object);
         }
         // console.log('-- e.data-parsed', object);
       } catch (e) {
@@ -78,7 +79,7 @@ export default class WsConnection extends BaseConnection {
    * @param {object} data
    * @return {Promise<void>}
    */
-  async sendViaWs(data) {
+  async send(data) {
     if (!this.isReady) {
       await this.resolvePromise;
     }
@@ -93,14 +94,6 @@ export default class WsConnection extends BaseConnection {
   }
 
   /**
-   * @param {object} data
-   * @return {void}
-   */
-  send = data => {
-    this.sendViaWs(data);
-  };
-
-  /**
    * @return {Promise<void>}
    */
   async create() {
@@ -112,6 +105,7 @@ export default class WsConnection extends BaseConnection {
   }
 
   destroy() {
+    // TODO: add reject pending requests, that's why we can't destroy WS
     this.isDestroyed = true;
   }
 }
