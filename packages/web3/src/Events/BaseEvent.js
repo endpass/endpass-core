@@ -5,11 +5,11 @@ export default class BaseEvent {
     this.context = context;
 
     /** @type {EventHashMap} */
-    this.hashMap = {};
+    this.eventsHashMap = {};
   }
 
   forEachHash(cb) {
-    Object.keys(this.hashMap).forEach(hash => {
+    Object.keys(this.eventsHashMap).forEach(hash => {
       cb(hash);
     });
   }
@@ -29,7 +29,7 @@ export default class BaseEvent {
    * @param {any} passData
    */
   onReceiveValue(hash, error = false, passData) {
-    const eventHashList = this.hashMap[hash];
+    const eventHashList = this.eventsHashMap[hash];
     if (!eventHashList) {
       return;
     }
@@ -45,13 +45,13 @@ export default class BaseEvent {
       // eslint-disable-next-line no-param-reassign
       data = 'shared-hash';
     }
-    const { hashMap } = this;
-    const isEmpty = Object.keys(hashMap).length === 0;
+    const { eventsHashMap } = this;
+    const isEmpty = Object.keys(eventsHashMap).length === 0;
 
     const hash = this.getHash(data);
-    hashMap[hash] = hashMap[hash] || [];
+    eventsHashMap[hash] = eventsHashMap[hash] || [];
 
-    hashMap[hash].push({
+    eventsHashMap[hash].push({
       cb,
       data,
     });
@@ -63,26 +63,26 @@ export default class BaseEvent {
   }
 
   off(userCb) {
-    const { hashMap } = this;
+    const { eventsHashMap } = this;
     if (!userCb) {
-      this.hashMap = {};
+      this.eventsHashMap = {};
       this.releaseCallbacks();
       return;
     }
 
-    Object.keys(hashMap).forEach(hashKey => {
-      const eventHashList = hashMap[hashKey];
+    Object.keys(eventsHashMap).forEach(hashKey => {
+      const eventHashList = eventsHashMap[hashKey];
       const pos = eventHashList.findIndex(item => item.cb === userCb);
       if (pos >= 0) {
         eventHashList.splice(pos, 1);
       }
 
       if (eventHashList.length === 0) {
-        delete hashMap[hashKey];
+        delete eventsHashMap[hashKey];
       }
     });
 
-    if (Object.keys(hashMap).length === 0) {
+    if (Object.keys(eventsHashMap).length === 0) {
       this.releaseCallbacks();
     }
   }

@@ -1,5 +1,5 @@
 export default class PluginsFactory {
-  static create(context, props) {
+  static create(props) {
     const { plugins = [] } = props;
     plugins.reduce((pluginsMap, PluginClass) => {
       const { pluginName } = PluginClass;

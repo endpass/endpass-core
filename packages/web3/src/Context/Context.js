@@ -4,15 +4,16 @@ import PluginsFactory from './PluginsFactory';
 
 export default class Context {
   constructor(props) {
-    const { netUrl } = props;
+    const { netUrl, plugins } = props;
 
-    this.provider = new Provider(netUrl);
-    this.events = new Events();
-
-    this.plugins = PluginsFactory.create(this, {
+    const pluginProps = {
       context: this,
       ...props,
-    });
+    };
+
+    this.provider = new Provider(netUrl);
+    this.events = new Events(plugins, pluginProps);
+    this.plugins = PluginsFactory.create(pluginProps);
   }
 
   destroy() {

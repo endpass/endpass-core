@@ -14,16 +14,16 @@ export default class BaseConnection {
   /**
    * @param {any} data
    */
-  handleEvent = data => {
+  handleSubscriptionEvent(data) {
     this.eventNotify.handleObservers(data);
-  };
+  }
 
   /**
    * @param {any} data
    */
-  handleRequest = data => {
+  handleRequest(data) {
     this.requestNotify.handleObservers(data);
-  };
+  }
 
   /**
    * @param {Function} cb
@@ -43,11 +43,11 @@ export default class BaseConnection {
    * @param {object} str
    * @return {void}
    */
-  send = str => {
+  send(str) {
     throw new Error(
       `Send method is not implemented, data '${str}' will not be send`,
     );
-  };
+  }
 
   create() {}
 

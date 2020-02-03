@@ -8,8 +8,6 @@ export default class BasePlugin {
   constructor(props) {
     const { context } = props;
     this.context = context || new Context(props);
-
-    this.context.events.addEvents(this.constructor.Events, props);
   }
 
   /**

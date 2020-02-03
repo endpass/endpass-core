@@ -1,5 +1,5 @@
 import Base from './Base';
-import GetBlockPooling from '@/Connections/HttpConnection/EthSubscription/Pooling/GetBlockPooling';
+import GetBlockPooling from './pooling/GetBlockPooling';
 
 export default class NewHeads extends Base {
   static paramName = 'newHeads';
@@ -28,7 +28,7 @@ export default class NewHeads extends Base {
   };
 
   destroy() {
-    super.destroy();
     this.pooling.stopPooling();
+    super.destroy();
   }
 }

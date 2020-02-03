@@ -1,4 +1,4 @@
-export default class RPCFabric {
+export default class RPCFactory {
   static createError({ id, error, code }) {
     return {
       jsonrpc: '2.0',
