@@ -1,12 +1,12 @@
 {
   "name": "@endpass/web3",
-  "version": "0.0.1-beta",
+  "version": "0.0.2-beta",
   "description": "",
   "author": "Endpass, Inc",
   "license": "MIT",
-  "main": "./web3-api.min.js",
-  "module": "./web3-api.js",
-  "umd": "./web3-api.umd.js",
+  "main": "./public-api.min.js",
+  "module": "./public-api.js",
+  "umd": "./public-api.umd.js",
   "repository": "https://github.com/endpass/endpass-core/tree/master/packages/web3",
   "scripts": {
     "update": "yarn build && npm publish ./dist",
@@ -42,14 +42,6 @@
   },
   "dependencies": {
     "@endpass/utils": "^1.9.2",
-    "callbag-basics": "^3.2.0",
-    "callbag-concat-map": "^1.1.0",
-    "callbag-from-promise": "^1.3.0",
-    "callbag-map-promise": "^0.1.3",
-    "callbag-subscribe": "^1.5.1",
-    "callbag-switch-map": "^1.0.2",
-    "callbag-take-while": "^2.0.0",
-    "callbag-tap": "^1.3.0",
     "jsonbird": "^3.1.0"
   },
   "devDependencies": {
