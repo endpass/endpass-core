@@ -1,4 +1,4 @@
-import Web3Api from '@/Web3Api';
+import Web3Core from '@/Web3Core';
 import BalancePlugin from '@/plugins/Balance';
 
 const RECEIPT_STATUS_CONFIRM_TIMEOUT = 2000;
@@ -10,17 +10,17 @@ export default class PublicApi {
    * @param {string} params.netUrl
    */
   constructor({ netUrl }) {
-    this.web3Api = new Web3Api({
+    this.web3Core = new Web3Core({
       netUrl,
       plugins: [BalancePlugin],
     });
   }
 
   /**
-   * @return {Web3Api}
+   * @return {Web3Core}
    */
   get web3() {
-    return this.web3Api;
+    return this.web3Core;
   }
 
   /**
