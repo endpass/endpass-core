@@ -3,12 +3,12 @@ import CompositePlugin from '@/plugins/Composite';
 import Web3ResponseFabric from '@/class/Web3ResponseFabric';
 import { promiseRepeater, promiseToIterator, sleep } from '@/class/generators';
 
-export default class Web3Api {
+export default class Web3Core {
   constructor({ netUrl, plugins = [] }) {
     this.netUrl = '';
     this.plugins = plugins;
 
-    this.resolveNetworkChange();
+    this.initNetworkChange();
     this.setNetwork(netUrl);
   }
 
@@ -20,7 +20,7 @@ export default class Web3Api {
     this.netUrl = netUrl;
 
     this.networkChangeResolve({ isNetworkChanged: true });
-    this.resolveNetworkChange();
+    this.initNetworkChange();
     if (this.core) this.core.destroy();
 
     // TODO: think about how to remove Context creation (cycle links detected)
@@ -35,7 +35,7 @@ export default class Web3Api {
   /**
    * @private
    */
-  resolveNetworkChange() {
+  initNetworkChange() {
     this.networkChangePromise = new Promise(resolve => {
       this.networkChangeResolve = resolve;
     });
