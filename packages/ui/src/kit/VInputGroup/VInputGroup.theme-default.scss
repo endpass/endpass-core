@@ -1,0 +1,30 @@
+.v-input-group.theme-default {
+  display: flex;
+  justify-content: stretch;
+  width: 100%;
+}
+
+.v-input-group.theme-default .input-atom,
+.v-input-group.theme-default .select-atom {
+  flex-basis: 100%;
+}
+
+.v-input-group.theme-default .input-atom:first-child,
+.v-input-group.theme-default .select-atom:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.v-input-group.theme-default .input-atom:last-child,
+.v-input-group.theme-default .select-atom:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.v-input-group.theme-default .input-atom:not(:first-child):not(:last-child),
+.v-input-group.theme-default .select-atom:not(:first-child):not(:last-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}

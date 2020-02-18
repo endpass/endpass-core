@@ -22,6 +22,7 @@ export { default as VSidebarPanel } from '@/kit/VSidebar/VSidebarPanel';
 export { default as VSidebarContainer } from '@/kit/VSidebar/VSidebarContainer';
 export { default as VHeader } from '@/kit/VHeader';
 export { default as VInput } from '@/kit/VInput';
+export { default as VInputGroup } from '@/kit/VInputGroup';
 export { default as VModal } from '@/kit/VModal';
 export { default as VButton } from '@/kit/VButton';
 export { default as VFileSelectButton } from '@/kit/VFileSelectButton';
