@@ -1,0 +1,33 @@
+.v-input-group.theme-default {
+  display: flex;
+  justify-content: stretch;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.v-input-group.theme-default .field-atom {
+  flex: 0 1 auto;
+}
+
+.v-input-group.theme-default .field-atom:first-child .input-atom,
+.v-input-group.theme-default .field-atom:first-child .select-atom {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.v-input-group.theme-default .field-atom:last-child .input-atom,
+.v-input-group.theme-default .field-atom:last-child .select-atom {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.v-input-group.theme-default .field-atom:not(:first-child):not(:last-child) .input-atom,
+.v-input-group.theme-default .field-atom:not(:first-child):not(:last-child) .select-atom {
+  border-radius: 0;
+}
+.v-input-group.theme-default .field-atom:first-child .input-atom:not(:focus):not(:hover),
+.v-input-group.theme-default .field-atom:first-child .select-atom:not(:focus):not(:hover) {
+  border-right: 1px solid var(--endpass-ui-color-grey-2);
+}
+.v-input-group.theme-default .field-atom:not(:first-child):not(:last-child) .input-atom:not(:focus):not(:hover),
+.v-input-group.theme-default .field-atom:not(:first-child):not(:last-child) .select-atom:not(:focus):not(:hover) {
+  border-right: 1px solid var(--endpass-ui-color-grey-2);
+}
