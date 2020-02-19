@@ -5747,7 +5747,7 @@ exports[`Storyshots VInputGroup/desktop default 1`] = `
                     value="value"
                   >
                     
-      text option 1 with a long long long long long long long text
+      text option 1
     
                   </option>
                   <option

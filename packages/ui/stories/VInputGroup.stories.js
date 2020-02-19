@@ -16,7 +16,6 @@ storiesOf('VInputGroup/desktop', module).add('default', () => ({
   components: { VInputGroup, VInput, VSelect },
   data() {
     return {
-      error: 'Error message here',
       models: {
         input: null,
         select: 'value',
@@ -24,7 +23,7 @@ storiesOf('VInputGroup/desktop', module).add('default', () => ({
       options: [
         {
           val: 'value',
-          text: 'text option 1 with a long long long long long long long text',
+          text: 'text option 1',
         },
         { val: 'next value', text: 'next option' },
       ],
