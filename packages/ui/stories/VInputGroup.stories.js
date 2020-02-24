@@ -16,6 +16,7 @@ storiesOf('VInputGroup/desktop', module).add('default', () => ({
   components: { VInputGroup, VInput, VSelect },
   data() {
     return {
+      error: 'Some error',
       models: {
         input: null,
         select: 'value',
@@ -45,6 +46,27 @@ storiesOf('VInputGroup/desktop', module).add('default', () => ({
               <td>default</td>
               <td>
                 <v-input-group :label="label">
+                  <v-select
+                    v-model="models.select"
+                    placeholder="Placeholder text"
+                    @input="onInput"
+                    :options="options"
+                    :description="description"
+                  />
+                  <v-input
+                    style="width: 288px;"
+                    v-model="models.input"
+                    placeholder="Placeholder text"
+                    @input="onInput"
+                    :description="description"
+                  />
+                </v-input-group>
+              </td>
+            </tr>
+            <tr>
+              <td>error</td>
+              <td>
+                <v-input-group :label="label" :error="error">
                   <v-select
                     v-model="models.select"
                     placeholder="Placeholder text"
