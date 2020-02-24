@@ -3,6 +3,10 @@
   justify-content: stretch;
   align-items: flex-start;
   width: 100%;
+  border: 1px solid transparent;
+}
+.v-input-group.is-error.theme-default {
+  border: 1px solid var(--endpass-ui-color-error);
 }
 
 .v-input-group.theme-default .field-atom {
