@@ -23,10 +23,14 @@ jobs:
     - name: Install packages
       run: |
         npm install --global lerna
-        node ./run.js
+        node ${{ GITHUB_WORKSPACE }}/run.js
 
     - name: Tests
-      run: lerna run test
+      run: |
+        lerna run test
+        lerna run build
+        ${{ GITHUB_WORKSPACE }}/packages/ui/scripts/build-storybook.sh
+        ls -l ${{ GITHUB_WORKSPACE }}/packages/ui/storybook-static
 
     - name: Slack Notification
       uses: homoluctus/slatify@master
