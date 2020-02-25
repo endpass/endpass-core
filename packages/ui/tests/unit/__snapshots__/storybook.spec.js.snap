@@ -5719,77 +5719,176 @@ exports[`Storyshots VInputGroup/desktop default 1`] = `
          
         <td>
           <div
-            class="theme-default v-input-group"
             label="Label"
           >
             <div
-              class="field-atom v-select theme-default"
+              class="theme-default v-input-group"
             >
-              <!---->
-               
               <div
-                class="description-atom theme-default"
-                placeholder="Placeholder text"
+                class="field-atom v-select theme-default"
               >
-                
-  Helper text goes here
-  
-              </div>
-               
-              <span
-                class="select-atom theme-default skin-primary"
-              >
-                <select
-                  class="select-atom-control"
+                <!---->
+                 
+                <div
+                  class="description-atom theme-default"
                   placeholder="Placeholder text"
                 >
-                  <option
-                    value="value"
+                  
+  Helper text goes here
+  
+                </div>
+                 
+                <span
+                  class="select-atom theme-default skin-primary"
+                >
+                  <select
+                    class="select-atom-control"
+                    placeholder="Placeholder text"
                   >
-                    
+                    <option
+                      value="value"
+                    >
+                      
       text option 1
     
-                  </option>
-                  <option
-                    value="next value"
-                  >
-                    
+                    </option>
+                    <option
+                      value="next value"
+                    >
+                      
       next option
     
-                  </option>
-                </select>
+                    </option>
+                  </select>
+                   
+                </span>
                  
-              </span>
+                <!---->
+              </div>
                
-              <!---->
+              <div
+                class="field-atom theme-default"
+                style="width: 288px;"
+              >
+                <!---->
+                 
+                <div
+                  class="description-atom theme-default"
+                  placeholder="Placeholder text"
+                >
+                  
+  Helper text goes here
+  
+                </div>
+                 
+                <span
+                  class="input-atom theme-default"
+                >
+                  <input
+                    class="input-atom-control"
+                    placeholder="Placeholder text"
+                  />
+                   
+                </span>
+                 
+                <!---->
+              </div>
+            </div>
+             
+            <!---->
+          </div>
+        </td>
+      </tr>
+       
+      <tr>
+        <td>
+          error
+        </td>
+         
+        <td>
+          <div
+            label="Label"
+          >
+            <div
+              class="theme-default v-input-group is-error"
+            >
+              <div
+                class="field-atom v-select theme-default"
+              >
+                <!---->
+                 
+                <div
+                  class="description-atom theme-default"
+                  placeholder="Placeholder text"
+                >
+                  
+  Helper text goes here
+  
+                </div>
+                 
+                <span
+                  class="select-atom theme-default skin-primary"
+                >
+                  <select
+                    class="select-atom-control"
+                    placeholder="Placeholder text"
+                  >
+                    <option
+                      value="value"
+                    >
+                      
+      text option 1
+    
+                    </option>
+                    <option
+                      value="next value"
+                    >
+                      
+      next option
+    
+                    </option>
+                  </select>
+                   
+                </span>
+                 
+                <!---->
+              </div>
+               
+              <div
+                class="field-atom theme-default"
+                style="width: 288px;"
+              >
+                <!---->
+                 
+                <div
+                  class="description-atom theme-default"
+                  placeholder="Placeholder text"
+                >
+                  
+  Helper text goes here
+  
+                </div>
+                 
+                <span
+                  class="input-atom theme-default"
+                >
+                  <input
+                    class="input-atom-control"
+                    placeholder="Placeholder text"
+                  />
+                   
+                </span>
+                 
+                <!---->
+              </div>
             </div>
              
             <div
-              class="field-atom theme-default"
-              style="width: 288px;"
+              class="error-atom theme-default"
             >
-              <!---->
-               
-              <div
-                class="description-atom theme-default"
-                placeholder="Placeholder text"
-              >
-                
-  Helper text goes here
-  
-              </div>
-               
-              <span
-                class="input-atom theme-default"
-              >
-                <input
-                  class="input-atom-control"
-                  placeholder="Placeholder text"
-                />
-                 
-              </span>
-               
-              <!---->
+              
+  Some error
+
             </div>
           </div>
         </td>
