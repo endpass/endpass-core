@@ -1,6 +1,6 @@
-name: pull
+name: endpass-core push
 on:
-  pull_request:
+  push:
     branches:
       - master
     paths-ignore:
@@ -14,7 +14,7 @@ jobs:
     steps:
     - name: Checkout repo
       uses: actions/checkout@v1
- 
+
     - name: Setup node version
       uses: actions/setup-node@v1
       with:
@@ -25,12 +25,15 @@ jobs:
         npm install --global lerna
         node ${{ github.workspace }}/run.js
 
-    - name: Tests
+    - name: Build
       run: |
-        lerna run test
         lerna run build
         ${{ github.workspace }}/packages/ui/scripts/build-storybook.sh
-        ls -l ${{ github.workspace }}/packages/ui/storybook-static
+
+    - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ${{ github.workspace }}/packages/ui/storybook-static
 
     - name: Slack Notification
       uses: homoluctus/slatify@master
@@ -38,7 +41,7 @@ jobs:
       continue-on-error: true
       with:
         type: ${{ job.status }}
-        job_name: 'endpass-core tests'
+        job_name: 'endpass-core built and deployed '
         username: 'GitHub Actions'
         icon_emoji: ':github:'
         url: ${{ secrets.SLACK_WEBHOOK_URL }}
