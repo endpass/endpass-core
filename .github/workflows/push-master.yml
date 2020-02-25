@@ -31,9 +31,9 @@ jobs:
         ${{ github.workspace }}/packages/ui/scripts/build-storybook.sh
 
     - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          publish_dir: ${{ github.workspace }}/packages/ui/storybook-static
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        publish_dir: ${{ github.workspace }}/packages/ui/storybook-static
 
     - name: Slack Notification
       uses: homoluctus/slatify@master
