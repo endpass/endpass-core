@@ -1,0 +1,40 @@
+name: pull
+on:
+  pull_request:
+    branches:
+      - master
+    paths-ignore:
+      - '**.md'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-16.04
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v1
+ 
+    - name: Setup node version
+      uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+
+    - name: Install packages
+      run: |
+        npm install --global lerna
+        node ./run.js
+
+    - name: Tests
+      run: lerna run test
+
+    - name: Slack Notification
+      uses: homoluctus/slatify@master
+      if: always()
+      continue-on-error: true
+      with:
+        type: ${{ job.status }}
+        job_name: 'endpass-core tests'
+        username: 'GitHub Actions'
+        icon_emoji: ':github:'
+        url: ${{ secrets.SLACK_WEBHOOK_URL }}
