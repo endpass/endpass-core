@@ -28,7 +28,6 @@ jobs:
         lerna run test
         lerna run build
         ${{ github.workspace }}/packages/ui/scripts/build-storybook.sh
-        ls -l ${{ github.workspace }}/packages/ui/storybook-static
 
     - name: Slack Notification
       uses: homoluctus/slatify@master
