@@ -1,0 +1,42 @@
+name: pull
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  tests:
+
+    runs-on: ubuntu-18.04
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+ 
+    - name: Setup node version
+      uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+
+    - name: Install packages
+      run: |
+        npm install --global lerna
+        node ${{ github.workspace }}/run.js
+
+    - name: Tests
+      run: |
+        lerna run test
+        lerna run build
+        ${{ github.workspace }}/packages/ui/scripts/build-storybook.sh
+        ls -l ${{ github.workspace }}/packages/ui/storybook-static
+
+    - name: Slack Notification
+      uses: homoluctus/slatify@master
+      if: always()
+      continue-on-error: true
+      with:
+        type: ${{ job.status }}
+        job_name: 'endpass-core tests'
+        username: 'GitHub Actions'
+        icon_emoji: ':github:'
+        url: ${{ secrets.SLACK_WEBHOOK_URL }}
