@@ -34,7 +34,7 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ${{ github.workspace }}/packages/ui/storybook-static
+        publish_dir: ./packages/ui/storybook-static
 
     - name: Slack Notification
       uses: homoluctus/slatify@master
