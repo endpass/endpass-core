@@ -7770,6 +7770,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cx="41px"
                 cy="41px"
                 r="30px"
+                stroke-width="4"
               />
             </svg>
              
@@ -7782,6 +7783,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cy="41px"
                 r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -7800,6 +7802,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cx="41px"
                 cy="41px"
                 r="30px"
+                stroke-width="4"
               />
             </svg>
              
@@ -7812,6 +7815,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cy="41px"
                 r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -7830,6 +7834,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cx="41px"
                 cy="41px"
                 r="30px"
+                stroke-width="4"
               />
             </svg>
              
@@ -7842,6 +7847,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cy="41px"
                 r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -7860,6 +7866,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cx="41px"
                 cy="41px"
                 r="30px"
+                stroke-width="4"
               />
             </svg>
              
@@ -7872,6 +7879,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cy="41px"
                 r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -7890,6 +7898,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cx="41px"
                 cy="41px"
                 r="30px"
+                stroke-width="4"
               />
             </svg>
              
@@ -7902,6 +7911,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cy="41px"
                 r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -7920,6 +7930,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cx="41px"
                 cy="41px"
                 r="30px"
+                stroke-width="4"
               />
             </svg>
              
@@ -7932,6 +7943,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cy="41px"
                 r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -7952,6 +7964,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cx="41px"
                 cy="41px"
                 r="30px"
+                stroke-width="4"
               />
             </svg>
              
@@ -7964,6 +7977,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cy="41px"
                 r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -7982,6 +7996,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cx="41px"
                 cy="41px"
                 r="30px"
+                stroke-width="4"
               />
             </svg>
              
@@ -7994,6 +8009,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cy="41px"
                 r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -8018,6 +8034,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cx="41px"
                 cy="41px"
                 r="30px"
+                stroke-width="4"
               />
             </svg>
              
@@ -8030,6 +8047,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cy="41px"
                 r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -8054,6 +8072,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cx="41px"
                 cy="41px"
                 r="30px"
+                stroke-width="4"
               />
             </svg>
              
@@ -8066,6 +8085,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cy="41px"
                 r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -8090,6 +8110,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cx="41px"
                 cy="41px"
                 r="30px"
+                stroke-width="4"
               />
             </svg>
              
@@ -8102,6 +8123,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cy="41px"
                 r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -8126,6 +8148,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cx="41px"
                 cy="41px"
                 r="30px"
+                stroke-width="4"
               />
             </svg>
              
@@ -8138,6 +8161,7 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
                 cy="41px"
                 r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -8148,6 +8172,200 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
     100%
   
             </span>
+          </div>
+        </td>
+      </tr>
+       
+      <tr>
+        <td>
+          <div
+            class="field-atom v-progress-circle theme-default theme-default"
+          >
+            <svg
+              class="v-progress-circle-back"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke-width="1"
+              />
+            </svg>
+             
+            <svg
+              class="v-progress-circle-over"
+              style="stroke-dasharray: 3, 188.4;"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke="#6e32c9"
+                stroke-width="1"
+              />
+            </svg>
+             
+            <!---->
+          </div>
+        </td>
+         
+        <td>
+          <div
+            class="field-atom v-progress-circle theme-default theme-default"
+          >
+            <svg
+              class="v-progress-circle-back"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke-width="1"
+              />
+            </svg>
+             
+            <svg
+              class="v-progress-circle-over"
+              style="stroke-dasharray: 94, 188.4;"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke="#6e32c9"
+                stroke-width="1"
+              />
+            </svg>
+             
+            <!---->
+          </div>
+        </td>
+         
+        <td>
+          <div
+            class="field-atom v-progress-circle theme-default theme-default"
+          >
+            <svg
+              class="v-progress-circle-back"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke-width="1"
+              />
+            </svg>
+             
+            <svg
+              class="v-progress-circle-over"
+              style="stroke-dasharray: 141, 188.4;"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke="#6e32c9"
+                stroke-width="1"
+              />
+            </svg>
+             
+            <!---->
+          </div>
+        </td>
+         
+        <td>
+          <div
+            class="field-atom v-progress-circle theme-default theme-default"
+          >
+            <svg
+              class="v-progress-circle-back"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke-width="6"
+              />
+            </svg>
+             
+            <svg
+              class="v-progress-circle-over"
+              style="stroke-dasharray: 9, 188.4;"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke="#6e32c9"
+                stroke-width="6"
+              />
+            </svg>
+             
+            <!---->
+          </div>
+        </td>
+         
+        <td>
+          <div
+            class="field-atom v-progress-circle theme-default theme-default"
+          >
+            <svg
+              class="v-progress-circle-back"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke-width="6"
+              />
+            </svg>
+             
+            <svg
+              class="v-progress-circle-over"
+              style="stroke-dasharray: 178, 188.4;"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke="#6e32c9"
+                stroke-width="6"
+              />
+            </svg>
+             
+            <!---->
+          </div>
+        </td>
+         
+        <td>
+          <div
+            class="field-atom v-progress-circle theme-default theme-default"
+          >
+            <svg
+              class="v-progress-circle-back"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke-width="6"
+              />
+            </svg>
+             
+            <svg
+              class="v-progress-circle-over"
+              style="stroke-dasharray: 184, 188.4;"
+            >
+              <circle
+                cx="41px"
+                cy="41px"
+                r="30px"
+                stroke="#6e32c9"
+                stroke-width="6"
+              />
+            </svg>
+             
+            <!---->
           </div>
         </td>
       </tr>
