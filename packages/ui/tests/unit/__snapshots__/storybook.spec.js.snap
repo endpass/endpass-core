@@ -197,7 +197,7 @@ exports[`Storyshots VAccordion/desktop default 1`] = `
         </div>
          
         <button
-          class="v-accordion-item-icon theme-default icon-button-atom"
+          class="v-accordion-item-icon theme-default icon-button-molecule"
           height="32px"
           tabindex="-1"
           width="20"
@@ -241,7 +241,7 @@ exports[`Storyshots VAccordion/desktop default 1`] = `
         </div>
          
         <button
-          class="v-accordion-item-icon theme-default icon-button-atom"
+          class="v-accordion-item-icon theme-default icon-button-molecule"
           height="32px"
           tabindex="-1"
           width="20"
@@ -290,7 +290,7 @@ exports[`Storyshots VAccordion/desktop default 1`] = `
         </div>
          
         <button
-          class="v-accordion-item-icon theme-default icon-button-atom"
+          class="v-accordion-item-icon theme-default icon-button-molecule"
           height="32px"
           tabindex="-1"
           width="20"
@@ -338,7 +338,7 @@ exports[`Storyshots VAccordion/desktop default 1`] = `
         </div>
          
         <button
-          class="v-accordion-item-icon theme-default icon-button-atom"
+          class="v-accordion-item-icon theme-default icon-button-molecule"
           height="32px"
           tabindex="-1"
           width="20"
@@ -382,7 +382,7 @@ exports[`Storyshots VAccordion/desktop default 1`] = `
         </div>
          
         <button
-          class="v-accordion-item-icon theme-default icon-button-atom"
+          class="v-accordion-item-icon theme-default icon-button-molecule"
           height="32px"
           tabindex="-1"
           width="20"
@@ -431,7 +431,7 @@ exports[`Storyshots VAccordion/desktop default 1`] = `
         </div>
          
         <button
-          class="v-accordion-item-icon theme-default icon-button-atom"
+          class="v-accordion-item-icon theme-default icon-button-molecule"
           height="32px"
           tabindex="-1"
           width="20"
@@ -479,7 +479,7 @@ exports[`Storyshots VAccordion/desktop default 1`] = `
         </div>
          
         <button
-          class="v-accordion-item-icon theme-default icon-button-atom"
+          class="v-accordion-item-icon theme-default icon-button-molecule"
           height="32px"
           tabindex="-1"
           width="20"
@@ -573,7 +573,7 @@ exports[`Storyshots VAccordion/desktop default 1`] = `
         </div>
          
         <button
-          class="v-accordion-item-icon theme-default icon-button-atom"
+          class="v-accordion-item-icon theme-default icon-button-molecule"
           height="32px"
           tabindex="-1"
           width="20"
@@ -617,7 +617,7 @@ exports[`Storyshots VAccordion/desktop default 1`] = `
         </div>
          
         <button
-          class="v-accordion-item-icon theme-default icon-button-atom"
+          class="v-accordion-item-icon theme-default icon-button-molecule"
           height="32px"
           tabindex="-1"
           width="20"
@@ -665,7 +665,7 @@ exports[`Storyshots VAccordion/desktop default 1`] = `
         </div>
          
         <button
-          class="v-accordion-item-icon theme-default icon-button-atom"
+          class="v-accordion-item-icon theme-default icon-button-molecule"
           height="32px"
           tabindex="-1"
           width="20"
@@ -709,7 +709,7 @@ exports[`Storyshots VAccordion/desktop default 1`] = `
         </div>
          
         <button
-          class="v-accordion-item-icon theme-default icon-button-atom"
+          class="v-accordion-item-icon theme-default icon-button-molecule"
           height="32px"
           tabindex="-1"
           width="20"
@@ -757,7 +757,7 @@ exports[`Storyshots VAccordion/desktop default 1`] = `
         </div>
          
         <button
-          class="v-accordion-item-icon theme-default icon-button-atom"
+          class="v-accordion-item-icon theme-default icon-button-molecule"
           height="32px"
           tabindex="-1"
           width="20"
@@ -801,7 +801,7 @@ exports[`Storyshots VAccordion/desktop default 1`] = `
         </div>
          
         <button
-          class="v-accordion-item-icon theme-default icon-button-atom"
+          class="v-accordion-item-icon theme-default icon-button-molecule"
           height="32px"
           tabindex="-1"
           width="20"
@@ -871,7 +871,7 @@ exports[`Storyshots VAlert/desktop default 1`] = `
       class="v-alert-button"
     >
       <button
-        class="theme-default icon-button-atom"
+        class="theme-default icon-button-molecule"
         height="10px"
         width="10px"
       >
@@ -2144,7 +2144,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-atom theme-default"
+                class="button-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2159,7 +2159,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-atom-spinner"
+                  class="button-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2218,7 +2218,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-atom theme-default"
+                class="button-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2233,7 +2233,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-atom-spinner"
+                  class="button-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2270,7 +2270,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-atom theme-default"
+                class="button-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2285,7 +2285,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-atom-spinner"
+                  class="button-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2322,7 +2322,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-atom theme-default"
+                class="button-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2337,7 +2337,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-atom-spinner"
+                  class="button-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2374,7 +2374,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-atom theme-default"
+                class="button-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2389,7 +2389,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-atom-spinner"
+                  class="button-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2426,7 +2426,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-atom theme-default"
+                class="button-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2441,7 +2441,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-atom-spinner"
+                  class="button-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2478,7 +2478,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-atom theme-default"
+                class="button-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2493,7 +2493,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-atom-spinner"
+                  class="button-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2524,7 +2524,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon icon-before theme-default"
             >
               <span
-                class="button-loader-atom theme-default"
+                class="button-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2539,7 +2539,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-atom-spinner"
+                  class="button-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2595,7 +2595,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-atom theme-default"
+                class="button-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2610,7 +2610,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-atom-spinner"
+                  class="button-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2669,7 +2669,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-atom theme-default"
+                class="button-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2684,7 +2684,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-atom-spinner"
+                  class="button-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2721,7 +2721,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-atom theme-default"
+                class="button-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2736,7 +2736,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-atom-spinner"
+                  class="button-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2773,7 +2773,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-atom theme-default"
+                class="button-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2788,7 +2788,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-atom-spinner"
+                  class="button-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2825,7 +2825,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-atom theme-default"
+                class="button-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2840,7 +2840,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-atom-spinner"
+                  class="button-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2877,7 +2877,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-atom theme-default"
+                class="button-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2892,7 +2892,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-atom-spinner"
+                  class="button-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2929,7 +2929,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-atom theme-default"
+                class="button-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2944,7 +2944,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-atom-spinner"
+                  class="button-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2975,7 +2975,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon icon-before theme-default"
             >
               <span
-                class="button-loader-atom theme-default"
+                class="button-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2990,7 +2990,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-atom-spinner"
+                  class="button-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -4124,7 +4124,7 @@ exports[`Storyshots VDateInput/desktop default 1`] = `
               >
                 
   Input label
-
+  
               </label>
                
               <div
@@ -4198,7 +4198,7 @@ exports[`Storyshots VDateInput/desktop default 1`] = `
               >
                 
   Label here
-
+  
               </label>
                
               <div
@@ -4525,7 +4525,7 @@ exports[`Storyshots VFileDropArea/desktop custom text 1`] = `
     >
       
   Multiple files
-
+  
     </label>
      
     <div
@@ -4592,7 +4592,7 @@ exports[`Storyshots VFileDropArea/desktop disable 1`] = `
     >
       
   Disabled state
-
+  
     </label>
      
     <div
@@ -4649,7 +4649,7 @@ exports[`Storyshots VFileDropArea/desktop enabled 1`] = `
     >
       
   Single File
-
+  
     </label>
      
     <div
@@ -4705,7 +4705,7 @@ exports[`Storyshots VFileDropArea/desktop only for jpeg 1`] = `
     >
       
   Only .jpeg files
-
+  
     </label>
      
     <div
@@ -4762,7 +4762,7 @@ exports[`Storyshots VFileDropArea/desktop v-model 1`] = `
     >
       
   Only .jpeg files
-
+  
     </label>
      
     <div
@@ -4822,7 +4822,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
             >
               
   Single file
-
+  
             </label>
              
             <div
@@ -4872,7 +4872,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
             >
               
   Custom text
-
+  
             </label>
              
             <div
@@ -4929,7 +4929,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
             >
               
   Multiple files
-
+  
             </label>
              
             <div
@@ -4989,7 +4989,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
             >
               
   Disabled state
-
+  
             </label>
              
             <div
@@ -5047,7 +5047,7 @@ exports[`Storyshots VHeader/desktop default 1`] = `
     class="v-header theme-default skin-primary"
   >
     <button
-      class="theme-default navigation-icon-button-atom skin-primary"
+      class="theme-default navigation-icon-button-molecule skin-primary"
     >
        
       <svg
@@ -5188,7 +5188,7 @@ exports[`Storyshots VHeader/desktop secondary 1`] = `
     class="v-header theme-default skin-secondary"
   >
     <button
-      class="theme-default navigation-icon-button-atom skin-secondary"
+      class="theme-default navigation-icon-button-molecule skin-secondary"
     >
        
       <svg
@@ -5326,7 +5326,7 @@ exports[`Storyshots VIconButton/desktop default 1`] = `
   />
    
   <button
-    class="theme-default icon-button-atom"
+    class="theme-default icon-button-molecule"
     height="32px"
     width="32px"
   >
@@ -5354,7 +5354,7 @@ exports[`Storyshots VIconButton/desktop with icon as prop 1`] = `
   />
    
   <button
-    class="theme-default icon-button-atom"
+    class="theme-default icon-button-molecule"
     height="32px"
     width="32px"
   >
@@ -5381,11 +5381,11 @@ exports[`Storyshots VIconControl/desktop default 1`] = `
   />
    
   <a
-    class="theme-default icon-control-atom"
+    class="theme-default icon-control-molecule"
     role="button"
   >
     <span
-      class="icon-control-atom-icon"
+      class="icon-control-molecule-icon"
     >
       <!---->
        
@@ -5403,7 +5403,7 @@ exports[`Storyshots VIconControl/desktop default 1`] = `
     </span>
      
     <span
-      class="icon-control-atom-label"
+      class="icon-control-molecule-label"
     >
       
           Control text
@@ -5420,11 +5420,11 @@ exports[`Storyshots VIconControl/desktop with icon as prop 1`] = `
   />
    
   <a
-    class="theme-default icon-control-atom"
+    class="theme-default icon-control-molecule"
     role="button"
   >
     <span
-      class="icon-control-atom-icon"
+      class="icon-control-molecule-icon"
     >
       <svg
         class="svg-atom theme-default"
@@ -5441,7 +5441,7 @@ exports[`Storyshots VIconControl/desktop with icon as prop 1`] = `
     </span>
      
     <span
-      class="icon-control-atom-label"
+      class="icon-control-molecule-label"
     >
       
           Control text
@@ -5524,15 +5524,18 @@ exports[`Storyshots VInput/desktop default 1`] = `
          
         <td>
           <div
-            class="field-atom theme-default"
+            class="field-atom v-input theme-default"
             style="width: 288px;"
           >
             <label
               class="label-atom theme-default"
             >
               
-  Label
-
+  
+  
+    Label
+    
+              <!---->
             </label>
              
             <div
@@ -5574,15 +5577,49 @@ exports[`Storyshots VInput/desktop default 1`] = `
          
         <td>
           <div
-            class="field-atom theme-default"
+            class="field-atom v-input theme-default"
             style="width: 288px;"
           >
             <label
               class="label-atom theme-default"
             >
               
-  Label
-
+  
+  
+    Label
+    
+              <div
+                class="icon-tooltip-molecule v-input-icon-tooltip theme-default"
+              >
+                <div
+                  class="tooltip-atom theme-default position-bottom-left"
+                  style="display: none;"
+                >
+                  <div
+                    class="tooltip-atom-container"
+                  >
+                    
+      hello this is tooltip data
+    
+                  </div>
+                </div>
+                 
+                <i
+                  class="icon-atom icon-tooltip-molecule-icon theme-default"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-info"
+                      y="0"
+                    />
+                  </svg>
+                </i>
+              </div>
             </label>
              
             <div
@@ -5647,15 +5684,18 @@ exports[`Storyshots VInput/desktop default 1`] = `
          
         <td>
           <div
-            class="field-atom theme-default"
+            class="field-atom v-input theme-default"
             style="width: 288px;"
           >
             <label
               class="label-atom theme-default"
             >
               
-  Label
-
+  
+  
+    Label
+    
+              <!---->
             </label>
              
             <div
@@ -5765,7 +5805,7 @@ exports[`Storyshots VInputGroup/desktop default 1`] = `
             </div>
              
             <div
-              class="field-atom theme-default"
+              class="field-atom v-input theme-default"
               style="width: 288px;"
             >
               <!---->
@@ -5810,7 +5850,7 @@ exports[`Storyshots VLabel/desktop default 1`] = `
   >
     
   Label text
-
+  
   </label>
   
         Following content
@@ -5824,7 +5864,7 @@ exports[`Storyshots VLabel/desktop default 1`] = `
   >
     
   Disabled label
-
+  
   </label>
   
         Following content
@@ -6626,7 +6666,7 @@ exports[`Storyshots VNavIconButton/desktop active 1`] = `
   />
    
   <button
-    class="theme-default navigation-icon-button-atom is-active skin-primary"
+    class="theme-default navigation-icon-button-molecule is-active skin-primary"
   >
     <svg
       class="svg-atom theme-default"
@@ -6652,7 +6692,7 @@ exports[`Storyshots VNavIconButton/desktop default 1`] = `
   />
    
   <button
-    class="theme-default navigation-icon-button-atom skin-primary"
+    class="theme-default navigation-icon-button-molecule skin-primary"
   >
     <svg
       class="svg-atom theme-default"
@@ -6678,7 +6718,7 @@ exports[`Storyshots VNavIconButton/desktop with icon as prop 1`] = `
   />
    
   <button
-    class="theme-default navigation-icon-button-atom skin-primary"
+    class="theme-default navigation-icon-button-molecule skin-primary"
   >
      
     <svg
@@ -6709,7 +6749,7 @@ exports[`Storyshots VNavSidebar/desktop default 1`] = `
       class="v-header theme-default skin-primary"
     >
       <button
-        class="theme-default navigation-icon-button-atom skin-primary"
+        class="theme-default navigation-icon-button-molecule skin-primary"
       >
          
         <svg
@@ -8638,7 +8678,7 @@ exports[`Storyshots VSelect/desktop disabled 1`] = `
     >
       
   Label
-
+  
     </label>
      
     <div
@@ -8697,7 +8737,7 @@ exports[`Storyshots VSelect/desktop enabled 1`] = `
     >
       
   Label
-
+  
     </label>
      
     <div
@@ -8771,7 +8811,7 @@ exports[`Storyshots VSelect/desktop error 1`] = `
     >
       
   Label
-
+  
     </label>
      
     <div
@@ -8851,7 +8891,7 @@ exports[`Storyshots VSelect/desktop flat array 1`] = `
     >
       
   Label
-
+  
     </label>
      
     <div
@@ -8939,7 +8979,7 @@ exports[`Storyshots VSelect/desktop skins 1`] = `
             >
               
   Label
-
+  
             </label>
              
             <div
@@ -8992,7 +9032,7 @@ exports[`Storyshots VSelect/desktop skins 1`] = `
             >
               
   Label
-
+  
             </label>
              
             <div
@@ -9043,7 +9083,7 @@ exports[`Storyshots VSelect/desktop skins 1`] = `
             >
               
   Label
-
+  
             </label>
              
             <div
@@ -9104,7 +9144,7 @@ exports[`Storyshots VSidebar/desktop left 1`] = `
       class="v-header theme-default skin-primary"
     >
       <button
-        class="theme-default navigation-icon-button-atom skin-primary"
+        class="theme-default navigation-icon-button-molecule skin-primary"
       >
          
         <svg
@@ -9223,7 +9263,7 @@ exports[`Storyshots VSidebar/desktop right 1`] = `
       class="v-header theme-default skin-primary"
     >
       <button
-        class="theme-default navigation-icon-button-atom skin-primary"
+        class="theme-default navigation-icon-button-molecule skin-primary"
       >
          
         <svg
@@ -12968,7 +13008,7 @@ exports[`Storyshots VTextarea/desktop disabled 1`] = `
     >
       
   Label
-
+  
     </label>
      
     <div
@@ -13014,7 +13054,7 @@ exports[`Storyshots VTextarea/desktop enabled 1`] = `
     >
       
   Label
-
+  
     </label>
      
     <div
@@ -13060,7 +13100,7 @@ exports[`Storyshots VTextarea/desktop error 1`] = `
     >
       
   Label
-
+  
     </label>
      
     <div
@@ -13126,7 +13166,7 @@ exports[`Storyshots VTextarea/desktop skin white 1`] = `
     >
       
   Label
-
+  
     </label>
      
     <div
@@ -13580,11 +13620,11 @@ exports[`Storyshots VTooltip/desktop default 1`] = `
             </div>
              
             <div
-              class="v-tooltip theme-default position-top-left"
+              class="tooltip-atom theme-default position-top-left"
               style="display: none;"
             >
               <div
-                class="v-tooltip-container"
+                class="tooltip-atom-container"
               >
                 
                   position: top-left
@@ -13617,11 +13657,11 @@ exports[`Storyshots VTooltip/desktop default 1`] = `
             </div>
              
             <div
-              class="v-tooltip theme-default position-top-right"
+              class="tooltip-atom theme-default position-top-right"
               style="display: none;"
             >
               <div
-                class="v-tooltip-container"
+                class="tooltip-atom-container"
               >
                 
                   position: top-right
@@ -13648,11 +13688,11 @@ exports[`Storyshots VTooltip/desktop default 1`] = `
             style="width: 120px;"
           >
             <div
-              class="v-tooltip theme-default position-bottom-left"
+              class="tooltip-atom theme-default position-bottom-left"
               style="display: none;"
             >
               <div
-                class="v-tooltip-container"
+                class="tooltip-atom-container"
               >
                 
                   position: bottom-left
@@ -13685,11 +13725,11 @@ exports[`Storyshots VTooltip/desktop default 1`] = `
             style="width: 120px;"
           >
             <div
-              class="v-tooltip theme-default position-bottom-right"
+              class="tooltip-atom theme-default position-bottom-right"
               style="display: none;"
             >
               <div
-                class="v-tooltip-container"
+                class="tooltip-atom-container"
               >
                 
                   position: bottom-right

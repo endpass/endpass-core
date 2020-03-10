@@ -1,0 +1,86 @@
+.tooltip-atom.theme-default {
+  position: relative;
+}
+
+.tooltip-atom-fade-enter-active,
+.tooltip-atom-fade-leave-active {
+  transition: opacity .2s;
+}
+.tooltip-atom-fade-enter,
+.tooltip-atom-fade-leave-to {
+  opacity: 0;
+}
+
+
+.tooltip-atom.theme-default .tooltip-atom-container {
+  position: absolute;
+  font-size: 14px;
+  padding: 9px 16px 12px;
+  background-color: var(--endpass-ui-color-black);
+  color: var(--endpass-ui-color-white);
+  border-radius: 2px;
+  min-width: 172px;
+}
+
+.tooltip-atom.theme-default .tooltip-atom-container:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.tooltip-atom.theme-default.position-top-left .tooltip-atom-container:after {
+  top: -5px;
+  left: 12px;
+}
+.tooltip-atom.theme-default.position-top-left .tooltip-atom-container {
+  left: 50%;
+  margin-left: -18px;
+  margin-top: 9px;
+}
+
+.tooltip-atom.theme-default.position-top-right .tooltip-atom-container:after {
+  top: -5px;
+  right: 12px;
+}
+.tooltip-atom.theme-default.position-top-right .tooltip-atom-container {
+  right: 50%;
+  margin-right: -18px;
+  margin-top: 9px;
+}
+
+.tooltip-atom.theme-default.position-bottom-left .tooltip-atom-container:after {
+  bottom: -5px;
+  left: 12px;
+}
+.tooltip-atom.theme-default.position-bottom-left .tooltip-atom-container {
+  left: 50%;
+  margin-left: -18px;
+  margin-bottom: 9px;
+  bottom: 0
+}
+
+.tooltip-atom.theme-default.position-bottom-right .tooltip-atom-container:after {
+  bottom: -5px;
+  right: 12px;
+}
+.tooltip-atom.theme-default.position-bottom-right .tooltip-atom-container {
+  right: 50%;
+  margin-right: -18px;
+  margin-bottom: 9px;
+  bottom: 0
+}
+
+.tooltip-atom.theme-default.position-top-right .tooltip-atom-container:after,
+.tooltip-atom.theme-default.position-top-left .tooltip-atom-container:after {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 5px solid var(--endpass-ui-color-black);
+}
+
+.tooltip-atom.theme-default.position-bottom-right .tooltip-atom-container:after,
+.tooltip-atom.theme-default.position-bottom-left .tooltip-atom-container:after {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 5px solid var(--endpass-ui-color-black);
+}

@@ -24,9 +24,10 @@ export default {
   },
   computed: {
     toggleAtomCssClass() {
-      return Object.assign({}, this.themeCssClass, {
+      return {
+        ...this.themeCssClass,
         [`size-${this.size}`]: true,
-      });
+      };
     },
   },
   mixins: [ThemeMixin],

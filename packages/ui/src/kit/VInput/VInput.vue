@@ -1,9 +1,14 @@
 <template>
-  <field-atom>
-    <label-atom
-      v-if="label"
-      :label="label"
-    />
+  <field-atom class="v-input">
+    <label-atom v-if="label || tooltipLabel">
+      {{ label }}
+      <icon-tooltip-molecule
+        v-if="tooltipLabel"
+        class="v-input-icon-tooltip"
+      >
+        {{ tooltipLabel }}
+      </icon-tooltip-molecule>
+    </label-atom>
     <description-atom
       v-if="description"
       v-bind="$attrs"
@@ -37,6 +42,7 @@ import ErrorAtom from '@/atom/error-atom/error-atom';
 import DescriptionAtom from '@/atom/description-atom/description-atom';
 import IconAtom from '@/atom/icon-atom/icon-atom';
 import SvgAtom from '@/atom/svg-atom/svg-atom';
+import IconTooltipMolecule from '@/molecule/icon-tooltip-molecule/icon-tooltip-molecule';
 
 export default {
   name: 'VInput',
@@ -46,26 +52,28 @@ export default {
   props: {
     label: {
       type: String,
-      default: null,
+      default: '',
     },
+
+    tooltipLabel: {
+      type: String,
+      default: '',
+    },
+
     value: {
       type: [String, Number],
       default: null,
     },
+
     error: {
       type: String,
-      default: null,
+      default: '',
     },
+
     description: {
       type: String,
-      default: null,
+      default: '',
     },
-  },
-
-  data() {
-    return {
-      isFocus: false,
-    };
   },
 
   computed: {
@@ -75,6 +83,7 @@ export default {
   },
 
   components: {
+    IconTooltipMolecule,
     InputAtom,
     LabelAtom,
     FieldAtom,

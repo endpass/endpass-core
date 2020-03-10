@@ -1,4 +1,4 @@
-.navigation-icon-button-atom.theme-default {
+.navigation-icon-button-molecule.theme-default {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,35 +11,35 @@
   color: var(--endpass-ui-color-white);
 }
 
-.navigation-icon-button-atom.theme-default.skin-primary {
+.navigation-icon-button-molecule.theme-default.skin-primary {
   border-bottom: 3px solid var(--endpass-ui-color-primary-7);
   background: var(--endpass-ui-color-primary-7);
 }
 
-.navigation-icon-button-atom.theme-default.skin-primary:focus {
+.navigation-icon-button-molecule.theme-default.skin-primary:focus {
     background: var(--endpass-ui-color-primary-8);
     border-bottom: 3px var(--endpass-ui-color-primary-8);
   }
 
-.navigation-icon-button-atom.theme-default.skin-primary:active,
-.navigation-icon-button-atom.theme-default.skin-primary.is-active {
+.navigation-icon-button-molecule.theme-default.skin-primary:active,
+.navigation-icon-button-molecule.theme-default.skin-primary.is-active {
   background: var(--endpass-ui-color-primary-7);
   border-bottom: 3px solid #d0b0ff;
 }
 
-.navigation-icon-button-atom.theme-default.skin-secondary {
+.navigation-icon-button-molecule.theme-default.skin-secondary {
   border-bottom: 3px solid var(--endpass-ui-color-blue-1);
   background: var(--endpass-ui-color-blue-1);
 }
 
-.navigation-icon-button-atom.theme-default.skin-primary:active,
-.navigation-icon-button-atom.theme-default.skin-primary.is-active,
-.navigation-icon-button-atom.theme-default.skin-secondary:focus {
+.navigation-icon-button-molecule.theme-default.skin-primary:active,
+.navigation-icon-button-molecule.theme-default.skin-primary.is-active,
+.navigation-icon-button-molecule.theme-default.skin-secondary:focus {
   border-bottom: 3px solid var(--endpass-ui-color-blue-1);
   background: var(--endpass-ui-color-blue-2);
 }
 
-.navigation-icon-button-atom.theme-default .svg-atom {
+.navigation-icon-button-molecule.theme-default .svg-atom {
   flex: 0 0 auto;
   width: 16px;
   height: 16px;

@@ -19,7 +19,7 @@
 
 <script>
 import SvgAtom from '@/atom/svg-atom/svg-atom.vue';
-import IconButtonAtom from '@/atom/icon-button-atom/icon-button-atom.vue';
+import IconButtonAtom from '@/molecule/icon-button-molecule/icon-button-molecule.vue';
 import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {

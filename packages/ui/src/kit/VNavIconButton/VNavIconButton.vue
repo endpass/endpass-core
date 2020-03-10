@@ -1,5 +1,5 @@
 <script>
-import IconButtonAtom from '@/atom/navigation/icon-button-atom/icon-button-atom.vue';
+import IconButtonAtom from '@/molecule/navigation/icon-button-molecule/icon-button-molecule.vue';
 
 export default {
   name: 'VNavIconButton',

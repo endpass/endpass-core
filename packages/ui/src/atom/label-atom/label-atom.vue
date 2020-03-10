@@ -4,6 +4,7 @@
     :class="themeCssClass"
   >
     {{ label }}
+    <slot />
   </label>
 </template>
 
@@ -12,12 +13,14 @@ import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
   name: 'LabelAtom',
+
   props: {
     label: {
       type: String,
-      required: true,
+      default: '',
     },
   },
+
   mixins: [ThemeMixin],
 };
 </script>
