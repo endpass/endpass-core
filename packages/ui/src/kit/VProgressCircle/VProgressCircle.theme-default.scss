@@ -30,13 +30,10 @@
   height: 82px;
 }
 
-.v-progress-circle.theme-default .v-progress-circle-back circle {
-  stroke: var(--endpass-ui-color-grey-3);
-  stroke-width: 4;
+.v-progress-circle.theme-default circle {
   fill: none;
 }
 
-.v-progress-circle.theme-default .v-progress-circle-over circle {
-  stroke-width: 4;
-  fill: none;
+.v-progress-circle.theme-default .v-progress-circle-back circle {
+  stroke: var(--endpass-ui-color-grey-3);
 }

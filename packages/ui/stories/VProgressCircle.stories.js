@@ -57,6 +57,26 @@ storiesOf('VProgressCircle/desktop', module).add('default', () => ({
                 <v-progress-circle progress="100" :is-label-visible="true" />
               </td>
             </tr>
+            <tr>
+              <td>
+                <v-progress-circle progress="0" lineThickness="1"/>
+              </td>
+              <td>
+                <v-progress-circle progress="50" lineThickness="1"/>
+              </td>
+              <td>
+                <v-progress-circle progress="75" lineThickness="1"/>
+              </td>
+              <td>
+                <v-progress-circle progress="5" lineThickness="6"/>
+              </td>
+              <td>
+                <v-progress-circle progress="95" lineThickness="6"/>
+              </td>
+              <td>
+                <v-progress-circle progress="100" lineThickness="6"/>
+              </td>
+            </tr>
           </tbody>
         </table>
       </theme-provider>
