@@ -28,9 +28,9 @@ describe('VInput', () => {
     });
 
     it('should render component with label', () => {
-      wrapper.setProps({ label: 'Label' });
+      wrapper.setProps({ label: 'LabelText' });
 
-      expect(wrapper.find('label-atom-stub').props().label).toBe('Label');
+      expect(wrapper.find('label-atom-stub').text()).toContain('LabelText');
       expect(wrapper.find('label-atom-stub').exists()).toBe(true);
     });
   });

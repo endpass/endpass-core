@@ -5,14 +5,14 @@
     :role="controlRole"
     @click="emitClick"
   >
-    <span class="icon-control-atom-icon">
+    <span class="icon-control-molecule-icon">
       <svg-atom
         v-if="!isIconSlotFilled"
         :name="icon"
       />
       <slot name="icon" />
     </span>
-    <span class="icon-control-atom-label">
+    <span class="icon-control-molecule-label">
       <slot />
     </span>
   </a>
@@ -45,7 +45,7 @@ export default {
   computed: {
     controlCssClass() {
       return Object.assign(this.themeCssClass, {
-        'icon-control-atom': true,
+        'icon-control-molecule': true,
         'is-active': this.isActive,
       });
     },

@@ -1,7 +1,13 @@
 <template>
-  <button :class="iconButtonCssClass" @click="emitClick">
+  <button
+    :class="iconButtonCssClass"
+    @click="emitClick"
+  >
     <slot />
-    <svg-atom v-if="!isIconSlotFilled" :name="icon" />
+    <svg-atom
+      v-if="!isIconSlotFilled"
+      :name="icon"
+    />
   </button>
 </template>
 
@@ -35,7 +41,7 @@ export default {
   computed: {
     iconButtonCssClass() {
       return Object.assign(this.themeCssClass, {
-        'navigation-icon-button-atom': true,
+        'navigation-icon-button-molecule': true,
         'is-active': this.isActive,
         [`skin-${this.skin}`]: !!this.skin,
       });

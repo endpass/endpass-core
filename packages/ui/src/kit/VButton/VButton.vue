@@ -47,7 +47,7 @@
 <script>
 import IconAtom from '@/atom/icon-atom/icon-atom';
 import ThemeMixin from '@/mixins/ThemeMixin';
-import ButtonLoaderAtom from '@/atom/button-loader-atom/button-loader-atom';
+import ButtonLoaderAtom from '@/molecule/button-loader-molecule/button-loader-molecule';
 
 export default {
   name: 'VButton',

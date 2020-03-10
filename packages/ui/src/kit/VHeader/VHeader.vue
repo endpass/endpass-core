@@ -1,5 +1,8 @@
 <template>
-  <header :class="vHeaderCssClass" class="v-header">
+  <header
+    :class="vHeaderCssClass"
+    class="v-header"
+  >
     <slot />
   </header>
 </template>

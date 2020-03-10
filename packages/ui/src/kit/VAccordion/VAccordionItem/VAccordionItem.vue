@@ -24,13 +24,16 @@
       v-show="isOpened"
       class="v-accordion-content"
     >
-      <slot v-bind:open="open" v-bind:close="close" />
+      <slot
+        :open="open"
+        :close="close"
+      />
     </div>
   </div>
 </template>
 
 <script>
-import IconButtonAtom from '@/atom/icon-button-atom/icon-button-atom.vue';
+import IconButtonAtom from '@/molecule/icon-button-molecule/icon-button-molecule.vue';
 import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {

@@ -1,5 +1,5 @@
 <script>
-import IconControlAtom from '@/atom/icon-control-atom/icon-control-atom.vue';
+import IconControlAtom from '@/molecule/icon-control-molecule/icon-control-molecule.vue';
 
 export default {
   name: 'VIconControl',

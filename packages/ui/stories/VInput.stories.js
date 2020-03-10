@@ -43,7 +43,7 @@ storiesOf('VInput/desktop', module).add('default', () => ({
                 />
               </td>
             </tr>
-            <tr><td colspan="2"><hr/></td></tr>        
+            <tr><td colspan="2"><hr/></td></tr>
             <tr>
               <td>error</td>
               <td>
@@ -51,13 +51,14 @@ storiesOf('VInput/desktop', module).add('default', () => ({
                   v-model="model"
                   :error="error"
                   style="width: 288px;"
+                  tooltip-label="hello this is tooltip data"
                   placeholder="Placeholder text"
                   :label="label"
                   :description="description"
                 />
               </td>
-            </tr>        
-            <tr><td colspan="2"><hr/></td></tr>        
+            </tr>
+            <tr><td colspan="2"><hr/></td></tr>
             <tr>
               <td>disabled</td>
               <td>
@@ -70,7 +71,7 @@ storiesOf('VInput/desktop', module).add('default', () => ({
                   :description="description"
                 />
               </td>
-            </tr>        
+            </tr>
           </tbody>
         </table>
         {{ model }}

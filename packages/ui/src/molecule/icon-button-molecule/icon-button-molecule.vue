@@ -20,7 +20,7 @@ import SvgAtom from '@/atom/svg-atom/svg-atom';
 import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
-  name: 'NavigationIconButtonAtom',
+  name: 'NavigationIconButtonMolecule',
 
   props: {
     icon: {
@@ -42,7 +42,7 @@ export default {
   computed: {
     iconButtonCssClass() {
       return Object.assign(this.themeCssClass, {
-        'icon-button-atom': true,
+        'icon-button-molecule': true,
       });
     },
 
