@@ -8,7 +8,7 @@
 export default {
   name: 'VTab',
 
-  inject: ['addTab', 'removeTab'],
+  inject: ['addTab', 'removeTab', 'setTabAsActive'],
 
   props: {
     label: {
@@ -19,6 +19,14 @@ export default {
     isActive: {
       type: Boolean,
       default: false,
+    },
+  },
+
+  watch: {
+    isActive(val, prevVal) {
+      if (val && val !== prevVal) {
+        this.setTabAsActive(this);
+      }
     },
   },
 

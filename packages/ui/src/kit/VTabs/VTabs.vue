@@ -40,6 +40,7 @@ export default {
     return {
       addTab: this.addTab,
       removeTab: this.removeTab,
+      setTabAsActive: this.setTabAsActive,
     };
   },
 
@@ -71,6 +72,14 @@ export default {
       const newTabIdx = this.activeTabIdx - 1;
 
       this.activeTabIdx = newTabIdx >= 0 ? newTabIdx : 0;
+    },
+
+    setTabAsActive(tab) {
+      const tabIdx = this.tabs.findIndex(el => el === tab);
+
+      if (this.activeTabIdx === tabIdx) return;
+
+      this.activeTabIdx = tabIdx;
     },
 
     getTabLabel(tab) {
