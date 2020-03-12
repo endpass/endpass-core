@@ -1,8 +1,10 @@
 <template>
   <field-atom class="v-select">
-    <label-atom
+    <label-molecule
       v-if="label"
       :label="label"
+      :tooltip-label="tooltipLabel"
+      v-bind="$attrs"
     />
     <description-atom
       v-if="description"
@@ -20,6 +22,7 @@
       <icon-atom
         v-if="isError"
         :is-error="isError"
+        class="v-select-icon-error"
       >
         <svg-atom name="error" />
       </icon-atom>
@@ -32,13 +35,13 @@
 </template>
 
 <script>
-import LabelAtom from '@/atom/label-atom/label-atom';
 import IconAtom from '@/atom/icon-atom/icon-atom';
 import SelectAtom from '@/atom/select-atom/select-atom';
 import FieldAtom from '@/atom/field-atom/field-atom';
 import ErrorAtom from '@/atom/error-atom/error-atom';
 import DescriptionAtom from '@/atom/description-atom/description-atom';
 import SvgAtom from '@/atom/svg-atom/svg-atom';
+import LabelMolecule from '@/molecule/label-molecule/label-molecule';
 
 export default {
   name: 'VSelect',
@@ -50,22 +53,32 @@ export default {
       type: String,
       default: null,
     },
+
+    tooltipLabel: {
+      type: String,
+      default: '',
+    },
+
     value: {
       type: [String, Number],
       default: null,
     },
+
     error: {
       type: String,
       default: null,
     },
+
     description: {
       type: String,
       default: null,
     },
+
     options: {
       type: Array,
       default: () => [],
     },
+
     skin: {
       type: String,
       default: 'primary',
@@ -79,8 +92,8 @@ export default {
   },
 
   components: {
+    LabelMolecule,
     IconAtom,
-    LabelAtom,
     SelectAtom,
     FieldAtom,
     ErrorAtom,

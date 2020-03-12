@@ -3,11 +3,11 @@
     class="v-file-select-button"
     :class="themeCssClass"
   >
-    <label-atom
+    <label-molecule
       v-if="label"
-      v-bind="$attrs"
       :label="label"
-      class="v-file-select-label"
+      :tooltip-label="tooltipLabel"
+      v-bind="$attrs"
     />
     <description-atom
       v-if="description"
@@ -29,8 +29,8 @@
 import ThemeMixin from '@/mixins/ThemeMixin';
 import FileSelectAtom from '@/atom/file-select-atom/file-select-atom';
 import FieldAtom from '@/atom/field-atom/field-atom';
-import LabelAtom from '@/atom/label-atom/label-atom';
 import DescriptionAtom from '@/atom/description-atom/description-atom';
+import LabelMolecule from '@/molecule/label-molecule/label-molecule';
 
 export default {
   name: 'VFileSelectButton',
@@ -39,6 +39,12 @@ export default {
       type: String,
       default: null,
     },
+
+    tooltipLabel: {
+      type: String,
+      default: null,
+    },
+
     description: {
       type: String,
       default: null,
@@ -56,8 +62,8 @@ export default {
   },
   mixins: [ThemeMixin],
   components: {
+    LabelMolecule,
     DescriptionAtom,
-    LabelAtom,
     FieldAtom,
     FileSelectAtom,
   },

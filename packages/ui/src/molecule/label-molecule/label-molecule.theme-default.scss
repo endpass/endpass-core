@@ -1,9 +1,11 @@
-.icon-tooltip-molecule.theme-default {
+.label-molecule.theme-default .label-molecule-tooltip {
+  display: inline-block;
+  vertical-align: baseline;
   width: 14px;
   height: 14px;
 }
 
-.icon-tooltip-molecule.theme-default .icon-tooltip-molecule-icon {
+.label-molecule.theme-default .label-molecule-icon {
   display: inline-block;
   vertical-align: sub;
   font-size: 14px;

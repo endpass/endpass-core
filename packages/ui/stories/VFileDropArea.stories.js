@@ -47,6 +47,26 @@ storiesOf('VFileDropArea/desktop', module)
       </theme-provider>
     `,
   }))
+  .add('tooltip', () => ({
+    methods,
+    components,
+    template: `
+      <theme-provider>
+        <div style="padding-top: 40px">
+          <v-file-drop-area
+            label="Multiple files"
+            tooltip-label="some text in tooltip"
+            @change="onChange"
+            accept="image/*"
+          >
+            <p>Custom Text</p>
+            <v-description disabled description="or drop files here"/>
+          </v-file-drop-area>
+          <v-description disabled description="images only, multiple"/>
+        </div>
+      </theme-provider>
+    `,
+  }))
   .add('disable', () => ({
     methods,
     components,

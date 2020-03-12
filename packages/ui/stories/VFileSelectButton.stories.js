@@ -11,35 +11,45 @@ storiesOf('VFileSelectButton/desktop', module).add('states', () => ({
   components: { VFileSelectButton },
   template: `
       <theme-provider>
-        <table>
+        <table style="padding-top: 40px;">
           <tr>
             <td>
               <div>
-                <v-file-select-button 
-                  @change="onChange" 
-                  label="Single file" 
+                <v-file-select-button
+                  @change="onChange"
+                  label="Single file"
                   description="any file type"
-                />      
+                />
               </div>
             </td>
             <td>
               <div>
-                <v-file-select-button 
-                  @change="onChange" 
-                  label="Custom text" 
-                  description="only .png and .jpg files" 
+                <v-file-select-button
+                  @change="onChange"
+                  tooltip-label="some text in tooltip"
+                  label="Single file"
+                  description="any file type"
+                />
+              </div>
+            </td>
+            <td>
+              <div>
+                <v-file-select-button
+                  @change="onChange"
+                  label="Custom text"
+                  description="only .png and .jpg files"
                   accept="image/x-png,image/jpeg"
                 >
                   text
-                </v-file-select-button>      
+                </v-file-select-button>
               </div>
             </td>
             <td>
               <div>
-                <v-file-select-button 
+                <v-file-select-button
                   @change="onChange"
-                  label="Multiple files" 
-                  description="images only, multiple" 
+                  label="Multiple files"
+                  description="images only, multiple"
                   accept="image/*"
                   multiple
                 >
@@ -49,13 +59,13 @@ storiesOf('VFileSelectButton/desktop', module).add('states', () => ({
             </td>
             <td>
               <div>
-                <v-file-select-button 
+                <v-file-select-button
                   @change="onChange"
-                  label="Disabled state" 
-                  description="images only" 
+                  label="Disabled state"
+                  description="images only"
                   accept="image/*"
                   disabled
-                />      
+                />
               </div>
             </td>
           </tr>

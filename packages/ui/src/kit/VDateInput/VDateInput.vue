@@ -5,9 +5,11 @@
       :class="vDateInputCssClass"
     >
       <div class="v-date-input-field">
-        <label-atom
+        <label-molecule
           v-if="label"
           :label="label"
+          :tooltip-label="tooltipLabel"
+          v-bind="$attrs"
         />
         <div class="v-date-input-field-inner">
           <input-atom
@@ -121,10 +123,10 @@ import { getFullCalendarMonth } from '@/utils/date';
 import ThemeMixin from '@/mixins/ThemeMixin';
 import VSvgIcon from '@/kit/VSvgIcon';
 import InputAtom from '@/atom/input-atom/input-atom';
-import LabelAtom from '@/atom/label-atom/label-atom';
 import ErrorAtom from '@/atom/error-atom/error-atom';
 import CloseByKeyAtom from '@/atom/close-by-key-atom/close-by-key-atom';
 import OutsideClickAtom from '@/atom/outside-click-atom/outside-click-atom';
+import LabelMolecule from '@/molecule/label-molecule/label-molecule';
 
 const MIN_DATE = '1940-01-01';
 const MAX_DATE = '2100-01-01';
@@ -149,6 +151,11 @@ export default {
     },
 
     label: {
+      type: String,
+      default: '',
+    },
+
+    tooltipLabel: {
       type: String,
       default: '',
     },
@@ -355,8 +362,8 @@ export default {
   mixins: [ThemeMixin],
 
   components: {
+    LabelMolecule,
     VSvgIcon,
-    LabelAtom,
     InputAtom,
     ErrorAtom,
     CloseByKeyAtom,

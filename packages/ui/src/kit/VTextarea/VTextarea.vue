@@ -1,9 +1,10 @@
 <template>
   <field-atom>
-    <label-atom
+    <label-molecule
       v-if="label"
-      v-bind="$attrs"
       :label="label"
+      :tooltip-label="tooltipLabel"
+      v-bind="$attrs"
     />
     <description-atom
       v-if="description"
@@ -33,12 +34,12 @@
 
 <script>
 import TextareaAtom from '@/atom/textarea-atom/textarea-atom';
-import LabelAtom from '@/atom/label-atom/label-atom';
 import FieldAtom from '@/atom/field-atom/field-atom';
 import ErrorAtom from '@/atom/error-atom/error-atom';
 import DescriptionAtom from '@/atom/description-atom/description-atom';
 import IconAtom from '@/atom/icon-atom/icon-atom';
 import SvgAtom from '@/atom/svg-atom/svg-atom';
+import LabelMolecule from '@/molecule/label-molecule/label-molecule';
 
 export default {
   name: 'VTextarea',
@@ -50,18 +51,27 @@ export default {
       type: String,
       default: null,
     },
+
+    tooltipLabel: {
+      type: String,
+      default: null,
+    },
+
     value: {
       type: [String, Number],
       default: null,
     },
+
     error: {
       type: String,
       default: null,
     },
+
     description: {
       type: String,
       default: null,
     },
+
     skin: {
       type: String,
       default: 'default',
@@ -75,14 +85,15 @@ export default {
     isError() {
       return !!this.error;
     },
+
     skinCssClass() {
       return `skin-${this.skin}`;
     },
   },
 
   components: {
+    LabelMolecule,
     TextareaAtom,
-    LabelAtom,
     FieldAtom,
     ErrorAtom,
     DescriptionAtom,
