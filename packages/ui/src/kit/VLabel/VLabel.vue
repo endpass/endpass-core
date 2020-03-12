@@ -1,9 +1,9 @@
 <script>
-import LabelAtom from '@/atom/label-atom/label-atom.vue';
+import LabelMolecule from '@/molecule/label-molecule/label-molecule';
 
 export default {
   name: 'VLabel',
 
-  extends: LabelAtom,
+  extends: LabelMolecule,
 };
 </script>

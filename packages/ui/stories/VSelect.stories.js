@@ -40,7 +40,82 @@ storiesOf('VSelect/desktop', module)
           :description="description"
         />
         <p>model: {{ model }}</p>
-        <p>options: {{ options }}</p>        
+        <p>options: {{ options }}</p>
+      </theme-provider>
+    `,
+  }))
+  .add('tooltip', () => ({
+    methods,
+    components: { VSelect },
+    data() {
+      return {
+        model: 'value',
+        options: [
+          {
+            val: 'value',
+            text:
+              'text option 1 with a long long long long long long long text',
+          },
+          { val: 'next value', text: 'next option' },
+        ],
+        label: 'Label',
+        description: 'Helper text goes here',
+      };
+    },
+    template: `
+      <theme-provider>
+        <div style="padding-top: 40px;">
+          <table>
+            <thead>
+            <tr>
+              <th>NO tooltip</th>
+              <th>With tooltip</th>
+              <th>Disabled</th>
+            </tr>
+            </thead>
+            <tr>
+              <td>
+                <v-select
+                  style="width: 288px;"
+                  v-model="model"
+                  placeholder="Placeholder text"
+                  @input="onInput"
+                  skin="primary"
+                  :options="options"
+                  :label="label"
+                  :description="description"
+                />
+              </td>
+              <td>
+                <v-select
+                  style="width: 288px;"
+                  v-model="model"
+                  placeholder="Placeholder text"
+                  @input="onInput"
+                  skin="secondary"
+                  :options="options"
+                  :label="label"
+                  tooltip-label="some text for tooltip"
+                  :description="description"
+                />
+              </td>
+              <td>
+                <v-select
+                  style="width: 288px;"
+                  v-model="model"
+                  placeholder="Placeholder text"
+                  @input="onInput"
+                  skin="secondary"
+                  tooltip-label="some text for tooltip"
+                  disabled
+                  :options="options"
+                  :label="label"
+                  :description="description"
+                />
+              </td>
+            </tr>
+          </table>
+        </div>
       </theme-provider>
     `,
   }))
@@ -60,14 +135,14 @@ storiesOf('VSelect/desktop', module)
     },
     template: `
       <theme-provider>
-        <div>      
+        <div>
           <table>
             <thead>
               <tr>
                 <th>Primary</th>
                 <th>Secondary</th>
-                <th>Disabled</th>            
-              </tr>          
+                <th>Disabled</th>
+              </tr>
             </thead>
             <tr>
               <td>
@@ -81,7 +156,7 @@ storiesOf('VSelect/desktop', module)
                   :label="label"
                   :description="description"
                 />
-              </td>          
+              </td>
               <td style="background-color: var(--endpass-ui-color-grey-1); padding: 20px;">
                 <v-select
                   style="width: 288px;"
@@ -93,7 +168,7 @@ storiesOf('VSelect/desktop', module)
                   :label="label"
                   :description="description"
                 />
-              </td>          
+              </td>
               <td>
                 <v-select
                   style="width: 288px;"
@@ -106,8 +181,8 @@ storiesOf('VSelect/desktop', module)
                   :label="label"
                   :description="description"
                 />
-              </td>          
-            </tr>        
+              </td>
+            </tr>
           </table>
         </div>
       </theme-provider>
@@ -138,7 +213,7 @@ storiesOf('VSelect/desktop', module)
           @input="onInput"
         />
         <p>model: {{ model }}</p>
-        <p>options: {{ options }}</p>        
+        <p>options: {{ options }}</p>
       </theme-provider>
     `,
   }))

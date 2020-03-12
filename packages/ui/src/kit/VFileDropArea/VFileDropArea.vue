@@ -1,8 +1,10 @@
 <template>
   <field-atom>
-    <label-atom
+    <label-molecule
       v-if="label"
       :label="label"
+      :tooltip-label="tooltipLabel"
+      v-bind="$attrs"
     />
     <div
       class="v-file-drop-area-content"
@@ -36,7 +38,7 @@
 import IsDisabledMixin from '@/mixins/IsDisabledMixin';
 import ThemeMixin from '@/mixins/ThemeMixin';
 import FieldAtom from '@/atom/field-atom/field-atom';
-import LabelAtom from '@/atom/label-atom/label-atom';
+import LabelMolecule from '@/molecule/label-molecule/label-molecule';
 
 let inputId = 1;
 
@@ -44,6 +46,11 @@ export default {
   name: 'VFileDropArea',
   props: {
     label: {
+      type: String,
+      default: null,
+    },
+
+    tooltipLabel: {
       type: String,
       default: null,
     },
@@ -108,8 +115,8 @@ export default {
   },
   mixins: [ThemeMixin, IsDisabledMixin],
   components: {
+    LabelMolecule,
     FieldAtom,
-    LabelAtom,
   },
 
   model: {

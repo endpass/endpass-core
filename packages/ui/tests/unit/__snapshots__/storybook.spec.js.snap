@@ -4120,7 +4120,8 @@ exports[`Storyshots VDateInput/desktop default 1`] = `
               class="v-date-input-field"
             >
               <label
-                class="label-atom theme-default"
+                class="label-atom label-molecule theme-default"
+                placeholder="Select the date..."
               >
                 
   Input label
@@ -4182,6 +4183,103 @@ exports[`Storyshots VDateInput/desktop default 1`] = `
        
       <tr>
         <td>
+          tooltip
+        </td>
+         
+        <td>
+          <div
+            class="theme-default v-date-input"
+          >
+            <div
+              class="v-date-input-field"
+            >
+              <label
+                class="label-atom label-molecule theme-default"
+              >
+                
+  label of date
+  
+                <div
+                  class="label-molecule-tooltip theme-default"
+                >
+                  <div
+                    class="tooltip-atom theme-default position-bottom-left"
+                    style="display: none;"
+                  >
+                    <div
+                      class="tooltip-atom-container"
+                    >
+                      
+      some text in tooltip
+    
+                    </div>
+                  </div>
+                   
+                  <i
+                    class="icon-atom label-molecule-icon theme-default"
+                  >
+                    <svg
+                      class="svg-atom theme-default"
+                      height="100%"
+                      width="100%"
+                    >
+                      <use
+                        x="0"
+                        xlink:href="#endpass-ui-icon-info"
+                        y="0"
+                      />
+                    </svg>
+                  </i>
+                </div>
+              </label>
+               
+              <div
+                class="v-date-input-field-inner"
+              >
+                <span
+                  class="input-atom theme-default"
+                >
+                  <input
+                    class="input-atom-control"
+                  />
+                   
+                </span>
+                 
+                <div
+                  class="v-date-input-field-icon"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-calendar"
+                      y="0"
+                    />
+                  </svg>
+                </div>
+              </div>
+               
+              <!---->
+            </div>
+             
+            <!---->
+          </div>
+        </td>
+      </tr>
+       
+      <tr>
+        <td
+          colspan="2"
+        >
+          <hr />
+        </td>
+      </tr>
+       
+      <tr>
+        <td>
           disabled
         </td>
          
@@ -4194,7 +4292,8 @@ exports[`Storyshots VDateInput/desktop default 1`] = `
               class="v-date-input-field"
             >
               <label
-                class="label-atom theme-default"
+                class="label-atom label-molecule theme-default"
+                disabled="disabled"
               >
                 
   Label here
@@ -4521,7 +4620,8 @@ exports[`Storyshots VFileDropArea/desktop custom text 1`] = `
     class="field-atom theme-default"
   >
     <label
-      class="label-atom theme-default"
+      accept="image/*"
+      class="label-atom label-molecule theme-default"
     >
       
   Multiple files
@@ -4588,7 +4688,9 @@ exports[`Storyshots VFileDropArea/desktop disable 1`] = `
     disabled="disabled"
   >
     <label
-      class="label-atom theme-default"
+      accept="image/*"
+      class="label-atom label-molecule theme-default"
+      disabled="disabled"
     >
       
   Disabled state
@@ -4604,7 +4706,7 @@ exports[`Storyshots VFileDropArea/desktop disable 1`] = `
       >
         <label
           class="v-file-drop-area-label"
-          for="v-file-drop-area-idx-3"
+          for="v-file-drop-area-idx-4"
         >
           <div>
             <p>
@@ -4625,7 +4727,7 @@ exports[`Storyshots VFileDropArea/desktop disable 1`] = `
             accept="image/*"
             class="file-drop-area-input"
             disabled="disabled"
-            id="v-file-drop-area-idx-3"
+            id="v-file-drop-area-idx-4"
             type="file"
           />
         </label>
@@ -4645,7 +4747,7 @@ exports[`Storyshots VFileDropArea/desktop enabled 1`] = `
     class="field-atom theme-default"
   >
     <label
-      class="label-atom theme-default"
+      class="label-atom label-molecule theme-default"
     >
       
   Single File
@@ -4701,64 +4803,8 @@ exports[`Storyshots VFileDropArea/desktop only for jpeg 1`] = `
     class="field-atom theme-default"
   >
     <label
-      class="label-atom theme-default"
-    >
-      
-  Only .jpeg files
-  
-    </label>
-     
-    <div
-      class="v-file-drop-area-content theme-default"
-    >
-      <button
-        class="v-file-drop-area-button"
-        type="button"
-      >
-        <label
-          class="v-file-drop-area-label"
-          for="v-file-drop-area-idx-4"
-        >
-          <div>
-            <p>
-              Custom Text
-            </p>
-             
-            <div
-              class="description-atom theme-default"
-              disabled="disabled"
-            >
-              
-  or drop files here
-  
-            </div>
-          </div>
-           
-          <input
-            accept=".jpeg"
-            class="file-drop-area-input"
-            id="v-file-drop-area-idx-4"
-            type="file"
-          />
-        </label>
-      </button>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots VFileDropArea/desktop v-model 1`] = `
-<div>
-  <div
-    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  />
-   
-  <div
-    accept=".jpeg"
-    class="field-atom theme-default"
-  >
-    <label
-      class="label-atom theme-default"
+      accept=".jpeg"
+      class="label-atom label-molecule theme-default"
     >
       
   Only .jpeg files
@@ -4804,13 +4850,176 @@ exports[`Storyshots VFileDropArea/desktop v-model 1`] = `
 </div>
 `;
 
+exports[`Storyshots VFileDropArea/desktop tooltip 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div
+    style="padding-top: 40px;"
+  >
+    <div
+      accept="image/*"
+      class="field-atom theme-default"
+    >
+      <label
+        accept="image/*"
+        class="label-atom label-molecule theme-default"
+      >
+        
+  Multiple files
+  
+        <div
+          class="label-molecule-tooltip theme-default"
+        >
+          <div
+            class="tooltip-atom theme-default position-bottom-left"
+            style="display: none;"
+          >
+            <div
+              class="tooltip-atom-container"
+            >
+              
+      some text in tooltip
+    
+            </div>
+          </div>
+           
+          <i
+            class="icon-atom label-molecule-icon theme-default"
+          >
+            <svg
+              class="svg-atom theme-default"
+              height="100%"
+              width="100%"
+            >
+              <use
+                x="0"
+                xlink:href="#endpass-ui-icon-info"
+                y="0"
+              />
+            </svg>
+          </i>
+        </div>
+      </label>
+       
+      <div
+        class="v-file-drop-area-content theme-default"
+      >
+        <button
+          class="v-file-drop-area-button"
+          type="button"
+        >
+          <label
+            class="v-file-drop-area-label"
+            for="v-file-drop-area-idx-3"
+          >
+            <div>
+              <p>
+                Custom Text
+              </p>
+               
+              <div
+                class="description-atom theme-default"
+                disabled="disabled"
+              >
+                
+  or drop files here
+  
+              </div>
+            </div>
+             
+            <input
+              accept="image/*"
+              class="file-drop-area-input"
+              id="v-file-drop-area-idx-3"
+              type="file"
+            />
+          </label>
+        </button>
+      </div>
+    </div>
+     
+    <div
+      class="description-atom theme-default"
+      disabled="disabled"
+    >
+      
+  images only, multiple
+  
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VFileDropArea/desktop v-model 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div
+    accept=".jpeg"
+    class="field-atom theme-default"
+  >
+    <label
+      accept=".jpeg"
+      class="label-atom label-molecule theme-default"
+    >
+      
+  Only .jpeg files
+  
+    </label>
+     
+    <div
+      class="v-file-drop-area-content theme-default"
+    >
+      <button
+        class="v-file-drop-area-button"
+        type="button"
+      >
+        <label
+          class="v-file-drop-area-label"
+          for="v-file-drop-area-idx-6"
+        >
+          <div>
+            <p>
+              Custom Text
+            </p>
+             
+            <div
+              class="description-atom theme-default"
+              disabled="disabled"
+            >
+              
+  or drop files here
+  
+            </div>
+          </div>
+           
+          <input
+            accept=".jpeg"
+            class="file-drop-area-input"
+            id="v-file-drop-area-idx-6"
+            type="file"
+          />
+        </label>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots VFileSelectButton/desktop states 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
-  <table>
+  <table
+    style="padding-top: 40px;"
+  >
     <tr>
       <td>
         <div>
@@ -4818,7 +5027,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
             class="field-atom v-file-select-button theme-default theme-default"
           >
             <label
-              class="label-atom v-file-select-label theme-default"
+              class="label-atom label-molecule theme-default"
             >
               
   Single file
@@ -4863,12 +5072,92 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
       <td>
         <div>
           <div
+            class="field-atom v-file-select-button theme-default theme-default"
+          >
+            <label
+              class="label-atom label-molecule theme-default"
+            >
+              
+  Single file
+  
+              <div
+                class="label-molecule-tooltip theme-default"
+              >
+                <div
+                  class="tooltip-atom theme-default position-bottom-left"
+                  style="display: none;"
+                >
+                  <div
+                    class="tooltip-atom-container"
+                  >
+                    
+      some text in tooltip
+    
+                  </div>
+                </div>
+                 
+                <i
+                  class="icon-atom label-molecule-icon theme-default"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-info"
+                      y="0"
+                    />
+                  </svg>
+                </i>
+              </div>
+            </label>
+             
+            <div
+              class="description-atom v-file-select-button-desc theme-default"
+            >
+              
+  any file type
+  
+            </div>
+             
+            <button
+              class="file-select-atom theme-default size-normal skin-primary"
+              type="button"
+            >
+              <label
+                class="file-select-atom-label"
+                for="file-select-atom-idx-2"
+              >
+                <span
+                  class="file-select-atom-slot"
+                >
+                  
+    Add File
+  
+                </span>
+                 
+                <input
+                  class="file-select-atom-input"
+                  id="file-select-atom-idx-2"
+                  type="file"
+                />
+              </label>
+            </button>
+          </div>
+        </div>
+      </td>
+       
+      <td>
+        <div>
+          <div
             accept="image/x-png,image/jpeg"
             class="field-atom v-file-select-button theme-default theme-default"
           >
             <label
               accept="image/x-png,image/jpeg"
-              class="label-atom v-file-select-label theme-default"
+              class="label-atom label-molecule theme-default"
             >
               
   Custom text
@@ -4891,7 +5180,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
             >
               <label
                 class="file-select-atom-label"
-                for="file-select-atom-idx-2"
+                for="file-select-atom-idx-3"
               >
                 <span
                   class="file-select-atom-slot"
@@ -4906,7 +5195,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
                 <input
                   accept="image/x-png,image/jpeg"
                   class="file-select-atom-input"
-                  id="file-select-atom-idx-2"
+                  id="file-select-atom-idx-3"
                   type="file"
                 />
               </label>
@@ -4924,7 +5213,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
           >
             <label
               accept="image/*"
-              class="label-atom v-file-select-label theme-default"
+              class="label-atom label-molecule theme-default"
               multiple="multiple"
             >
               
@@ -4950,7 +5239,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
             >
               <label
                 class="file-select-atom-label"
-                for="file-select-atom-idx-3"
+                for="file-select-atom-idx-4"
               >
                 <span
                   class="file-select-atom-slot"
@@ -4965,7 +5254,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
                 <input
                   accept="image/*"
                   class="file-select-atom-input"
-                  id="file-select-atom-idx-3"
+                  id="file-select-atom-idx-4"
                   multiple="multiple"
                   type="file"
                 />
@@ -4984,7 +5273,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
           >
             <label
               accept="image/*"
-              class="label-atom v-file-select-label theme-default"
+              class="label-atom label-molecule theme-default"
               disabled="disabled"
             >
               
@@ -5010,7 +5299,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
             >
               <label
                 class="file-select-atom-label"
-                for="file-select-atom-idx-4"
+                for="file-select-atom-idx-5"
               >
                 <span
                   class="file-select-atom-slot"
@@ -5024,7 +5313,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
                   accept="image/*"
                   class="file-select-atom-input"
                   disabled="disabled"
-                  id="file-select-atom-idx-4"
+                  id="file-select-atom-idx-5"
                   type="file"
                 />
               </label>
@@ -5524,18 +5813,16 @@ exports[`Storyshots VInput/desktop default 1`] = `
          
         <td>
           <div
-            class="field-atom v-input theme-default"
+            class="field-atom theme-default"
             style="width: 288px;"
           >
             <label
-              class="label-atom theme-default"
+              class="label-atom label-molecule theme-default"
+              placeholder="Placeholder text"
             >
               
+  Label
   
-  
-    Label
-    
-              <!---->
             </label>
              
             <div
@@ -5577,19 +5864,18 @@ exports[`Storyshots VInput/desktop default 1`] = `
          
         <td>
           <div
-            class="field-atom v-input theme-default"
+            class="field-atom theme-default"
             style="width: 288px;"
           >
             <label
-              class="label-atom theme-default"
+              class="label-atom label-molecule theme-default"
+              placeholder="Placeholder text"
             >
               
+  Label
   
-  
-    Label
-    
               <div
-                class="icon-tooltip-molecule v-input-icon-tooltip theme-default"
+                class="label-molecule-tooltip theme-default"
               >
                 <div
                   class="tooltip-atom theme-default position-bottom-left"
@@ -5605,7 +5891,7 @@ exports[`Storyshots VInput/desktop default 1`] = `
                 </div>
                  
                 <i
-                  class="icon-atom icon-tooltip-molecule-icon theme-default"
+                  class="icon-atom label-molecule-icon theme-default"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -5684,18 +5970,17 @@ exports[`Storyshots VInput/desktop default 1`] = `
          
         <td>
           <div
-            class="field-atom v-input theme-default"
+            class="field-atom theme-default"
             style="width: 288px;"
           >
             <label
-              class="label-atom theme-default"
+              class="label-atom label-molecule theme-default"
+              disabled="disabled"
+              placeholder="Placeholder text"
             >
               
+  Label
   
-  
-    Label
-    
-              <!---->
             </label>
              
             <div
@@ -5805,7 +6090,7 @@ exports[`Storyshots VInputGroup/desktop default 1`] = `
             </div>
              
             <div
-              class="field-atom v-input theme-default"
+              class="field-atom theme-default"
               style="width: 288px;"
             >
               <!---->
@@ -5845,30 +6130,161 @@ exports[`Storyshots VLabel/desktop default 1`] = `
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
-  <label
-    class="label-atom theme-default"
+  <table
+    style="padding-top: 40px;"
   >
-    
+    <thead>
+      <tr>
+        <th>
+          State
+        </th>
+         
+        <th>
+          View
+        </th>
+      </tr>
+    </thead>
+     
+    <tbody>
+      <tr>
+        <td>
+          No tooltip
+        </td>
+         
+        <td>
+          <label
+            class="label-atom label-molecule theme-default"
+          >
+            
   Label text
   
-  </label>
+          </label>
+          
+              Following content
+            
+        </td>
+      </tr>
+       
+      <tr>
+        <td
+          colspan="2"
+        >
+          <hr />
+        </td>
+      </tr>
+       
+      <tr>
+        <td>
+          With tooltip
+        </td>
+         
+        <td>
+          <label
+            class="label-atom label-molecule theme-default"
+          >
+            
+  Label text
   
-        Following content
-        
-  <br />
-  <br />
-   
-  <label
-    class="label-atom theme-default"
-    disabled="disabled"
-  >
+            <div
+              class="label-molecule-tooltip theme-default"
+            >
+              <div
+                class="tooltip-atom theme-default position-bottom-left"
+                style="display: none;"
+              >
+                <div
+                  class="tooltip-atom-container"
+                >
+                  
+      tooltip some text here
     
+                </div>
+              </div>
+               
+              <i
+                class="icon-atom label-molecule-icon theme-default"
+              >
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-info"
+                    y="0"
+                  />
+                </svg>
+              </i>
+            </div>
+          </label>
+          
+              Following content
+            
+        </td>
+      </tr>
+       
+      <tr>
+        <td
+          colspan="2"
+        >
+          <hr />
+        </td>
+      </tr>
+       
+      <tr>
+        <td>
+          disabled
+        </td>
+         
+        <td>
+          <label
+            class="label-atom label-molecule theme-default"
+            disabled="disabled"
+          >
+            
   Disabled label
   
-  </label>
-  
-        Following content
-      
+            <div
+              class="label-molecule-tooltip theme-default"
+            >
+              <div
+                class="tooltip-atom theme-default position-bottom-left"
+                style="display: none;"
+              >
+                <div
+                  class="tooltip-atom-container"
+                >
+                  
+      tooltip some text here
+    
+                </div>
+              </div>
+               
+              <i
+                class="icon-atom label-molecule-icon theme-default"
+              >
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-info"
+                    y="0"
+                  />
+                </svg>
+              </i>
+            </div>
+          </label>
+          
+              Following content
+            
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 `;
 
@@ -8674,7 +9090,9 @@ exports[`Storyshots VSelect/desktop disabled 1`] = `
     style="width: 288px;"
   >
     <label
-      class="label-atom theme-default"
+      class="label-atom label-molecule theme-default"
+      disabled="disabled"
+      placeholder="Placeholder text"
     >
       
   Label
@@ -8733,7 +9151,8 @@ exports[`Storyshots VSelect/desktop enabled 1`] = `
     style="width: 288px;"
   >
     <label
-      class="label-atom theme-default"
+      class="label-atom label-molecule theme-default"
+      placeholder="Placeholder text"
     >
       
   Label
@@ -8807,7 +9226,8 @@ exports[`Storyshots VSelect/desktop error 1`] = `
     style="width: 288px;"
   >
     <label
-      class="label-atom theme-default"
+      class="label-atom label-molecule theme-default"
+      placeholder="Placeholder text"
     >
       
   Label
@@ -8848,7 +9268,7 @@ exports[`Storyshots VSelect/desktop error 1`] = `
       </select>
        
       <i
-        class="icon-atom theme-default is-error"
+        class="icon-atom v-select-icon-error theme-default is-error"
         is-error="true"
       >
         <svg
@@ -8887,7 +9307,8 @@ exports[`Storyshots VSelect/desktop flat array 1`] = `
     style="width: 288px;"
   >
     <label
-      class="label-atom theme-default"
+      class="label-atom label-molecule theme-default"
+      placeholder="Placeholder text"
     >
       
   Label
@@ -8975,7 +9396,8 @@ exports[`Storyshots VSelect/desktop skins 1`] = `
             style="width: 288px;"
           >
             <label
-              class="label-atom theme-default"
+              class="label-atom label-molecule theme-default"
+              placeholder="Placeholder text"
             >
               
   Label
@@ -9028,7 +9450,8 @@ exports[`Storyshots VSelect/desktop skins 1`] = `
             style="width: 288px;"
           >
             <label
-              class="label-atom theme-default"
+              class="label-atom label-molecule theme-default"
+              placeholder="Placeholder text"
             >
               
   Label
@@ -9079,7 +9502,9 @@ exports[`Storyshots VSelect/desktop skins 1`] = `
             style="width: 288px;"
           >
             <label
-              class="label-atom theme-default"
+              class="label-atom label-molecule theme-default"
+              disabled="disabled"
+              placeholder="Placeholder text"
             >
               
   Label
@@ -9109,6 +9534,261 @@ exports[`Storyshots VSelect/desktop skins 1`] = `
                 >
                   
       text option 1 with a text
+    
+                </option>
+                <option
+                  value="next value"
+                >
+                  
+      next option
+    
+                </option>
+              </select>
+               
+            </span>
+             
+            <!---->
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VSelect/desktop tooltip 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div
+    style="padding-top: 40px;"
+  >
+    <table>
+      <thead>
+        <tr>
+          <th>
+            NO tooltip
+          </th>
+           
+          <th>
+            With tooltip
+          </th>
+           
+          <th>
+            Disabled
+          </th>
+        </tr>
+      </thead>
+       
+      <tr>
+        <td>
+          <div
+            class="field-atom v-select theme-default"
+            style="width: 288px;"
+          >
+            <label
+              class="label-atom label-molecule theme-default"
+              placeholder="Placeholder text"
+            >
+              
+  Label
+  
+            </label>
+             
+            <div
+              class="description-atom theme-default"
+              placeholder="Placeholder text"
+            >
+              
+  Helper text goes here
+  
+            </div>
+             
+            <span
+              class="select-atom theme-default skin-primary"
+            >
+              <select
+                class="select-atom-control"
+                placeholder="Placeholder text"
+              >
+                <option
+                  value="value"
+                >
+                  
+      text option 1 with a long long long long long long long text
+    
+                </option>
+                <option
+                  value="next value"
+                >
+                  
+      next option
+    
+                </option>
+              </select>
+               
+            </span>
+             
+            <!---->
+          </div>
+        </td>
+         
+        <td>
+          <div
+            class="field-atom v-select theme-default"
+            style="width: 288px;"
+          >
+            <label
+              class="label-atom label-molecule theme-default"
+              placeholder="Placeholder text"
+            >
+              
+  Label
+  
+              <div
+                class="label-molecule-tooltip theme-default"
+              >
+                <div
+                  class="tooltip-atom theme-default position-bottom-left"
+                  style="display: none;"
+                >
+                  <div
+                    class="tooltip-atom-container"
+                  >
+                    
+      some text for tooltip
+    
+                  </div>
+                </div>
+                 
+                <i
+                  class="icon-atom label-molecule-icon theme-default"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-info"
+                      y="0"
+                    />
+                  </svg>
+                </i>
+              </div>
+            </label>
+             
+            <div
+              class="description-atom theme-default"
+              placeholder="Placeholder text"
+            >
+              
+  Helper text goes here
+  
+            </div>
+             
+            <span
+              class="select-atom theme-default skin-secondary"
+            >
+              <select
+                class="select-atom-control"
+                placeholder="Placeholder text"
+              >
+                <option
+                  value="value"
+                >
+                  
+      text option 1 with a long long long long long long long text
+    
+                </option>
+                <option
+                  value="next value"
+                >
+                  
+      next option
+    
+                </option>
+              </select>
+               
+            </span>
+             
+            <!---->
+          </div>
+        </td>
+         
+        <td>
+          <div
+            class="field-atom v-select theme-default"
+            style="width: 288px;"
+          >
+            <label
+              class="label-atom label-molecule theme-default"
+              disabled="disabled"
+              placeholder="Placeholder text"
+            >
+              
+  Label
+  
+              <div
+                class="label-molecule-tooltip theme-default"
+              >
+                <div
+                  class="tooltip-atom theme-default position-bottom-left"
+                  style="display: none;"
+                >
+                  <div
+                    class="tooltip-atom-container"
+                  >
+                    
+      some text for tooltip
+    
+                  </div>
+                </div>
+                 
+                <i
+                  class="icon-atom label-molecule-icon theme-default"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-info"
+                      y="0"
+                    />
+                  </svg>
+                </i>
+              </div>
+            </label>
+             
+            <div
+              class="description-atom theme-default"
+              disabled="disabled"
+              placeholder="Placeholder text"
+            >
+              
+  Helper text goes here
+  
+            </div>
+             
+            <span
+              class="select-atom theme-default skin-secondary"
+            >
+              <select
+                class="select-atom-control"
+                disabled="disabled"
+                placeholder="Placeholder text"
+              >
+                <option
+                  value="value"
+                >
+                  
+      text option 1 with a long long long long long long long text
     
                 </option>
                 <option
@@ -12991,205 +13671,287 @@ exports[`Storyshots VTag/desktop default 1`] = `
 </div>
 `;
 
-exports[`Storyshots VTextarea/desktop disabled 1`] = `
+exports[`Storyshots VTextarea/desktop default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
-  <div
-    class="field-atom theme-default"
-    style="width: 288px; height: 80px;"
+  <table
+    style="padding-top: 40px;"
   >
-    <label
-      class="label-atom theme-default"
-      disabled="disabled"
-      placeholder="Placeholder text"
-    >
-      
+    <thead>
+      <tr>
+        <th>
+          Enable
+        </th>
+         
+        <th>
+          Tooltip
+        </th>
+         
+        <th>
+          Error
+        </th>
+         
+        <th>
+          Disabled
+        </th>
+         
+        <th>
+          Skin White
+        </th>
+      </tr>
+    </thead>
+     
+    <tbody>
+      <tr>
+        <td>
+          <div
+            class="field-atom theme-default"
+            style="width: 288px; height: 80px;"
+          >
+            <label
+              class="label-atom label-molecule theme-default"
+              placeholder="Placeholder text"
+            >
+              
   Label
   
-    </label>
-     
-    <div
-      class="description-atom theme-default"
-      disabled="disabled"
-      placeholder="Placeholder text"
-    >
-      
+            </label>
+             
+            <div
+              class="description-atom theme-default"
+              placeholder="Placeholder text"
+            >
+              
   Helper text goes here
   
-    </div>
-     
-    <span
-      class="textarea-atom theme-default skin-default"
-      disabled="disabled"
-    >
-      <textarea
-        class="textarea-atom-control"
-        disabled="disabled"
-        placeholder="Placeholder text"
-      />
-       
-    </span>
-     
-    <!---->
-  </div>
-</div>
-`;
-
-exports[`Storyshots VTextarea/desktop enabled 1`] = `
-<div>
-  <div
-    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  />
-   
-  <div
-    class="field-atom theme-default"
-    style="width: 288px; height: 80px;"
-  >
-    <label
-      class="label-atom theme-default"
-      placeholder="Placeholder text"
-    >
-      
+            </div>
+             
+            <span
+              class="textarea-atom theme-default skin-default"
+            >
+              <textarea
+                class="textarea-atom-control"
+                placeholder="Placeholder text"
+              />
+               
+            </span>
+             
+            <!---->
+          </div>
+        </td>
+         
+        <td>
+          <div
+            class="field-atom theme-default"
+            style="width: 288px; height: 80px;"
+          >
+            <label
+              class="label-atom label-molecule theme-default"
+              placeholder="Placeholder text"
+            >
+              
   Label
   
-    </label>
-     
-    <div
-      class="description-atom theme-default"
-      placeholder="Placeholder text"
-    >
-      
+              <div
+                class="label-molecule-tooltip theme-default"
+              >
+                <div
+                  class="tooltip-atom theme-default position-bottom-left"
+                  style="display: none;"
+                >
+                  <div
+                    class="tooltip-atom-container"
+                  >
+                    
+      some text in tooltip
+    
+                  </div>
+                </div>
+                 
+                <i
+                  class="icon-atom label-molecule-icon theme-default"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-info"
+                      y="0"
+                    />
+                  </svg>
+                </i>
+              </div>
+            </label>
+             
+            <div
+              class="description-atom theme-default"
+              placeholder="Placeholder text"
+            >
+              
   Helper text goes here
   
-    </div>
-     
-    <span
-      class="textarea-atom theme-default skin-default"
-    >
-      <textarea
-        class="textarea-atom-control"
-        placeholder="Placeholder text"
-      />
-       
-    </span>
-     
-    <!---->
-  </div>
-  
-        
-      
-</div>
-`;
-
-exports[`Storyshots VTextarea/desktop error 1`] = `
-<div>
-  <div
-    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  />
-   
-  <div
-    class="field-atom theme-default"
-    style="width: 288px; height: 80px;"
-  >
-    <label
-      class="label-atom theme-default"
-      placeholder="Placeholder text"
-    >
-      
+            </div>
+             
+            <span
+              class="textarea-atom theme-default skin-default"
+            >
+              <textarea
+                class="textarea-atom-control"
+                placeholder="Placeholder text"
+              />
+               
+            </span>
+             
+            <!---->
+          </div>
+        </td>
+         
+        <td>
+          <div
+            class="field-atom theme-default"
+            style="width: 288px; height: 80px;"
+          >
+            <label
+              class="label-atom label-molecule theme-default"
+              placeholder="Placeholder text"
+            >
+              
   Label
   
-    </label>
-     
-    <div
-      class="description-atom theme-default"
-      placeholder="Placeholder text"
-    >
-      
+            </label>
+             
+            <div
+              class="description-atom theme-default"
+              placeholder="Placeholder text"
+            >
+              
   Helper text goes here
   
-    </div>
-     
-    <span
-      class="textarea-atom theme-default is-error skin-default"
-    >
-      <textarea
-        class="textarea-atom-control"
-        is-error="true"
-        placeholder="Placeholder text"
-      />
-       
-      <i
-        class="icon-atom theme-default is-error"
-        is-error="true"
-      >
-        <svg
-          class="svg-atom theme-default"
-          height="100%"
-          width="100%"
-        >
-          <use
-            x="0"
-            xlink:href="#endpass-ui-icon-error"
-            y="0"
-          />
-        </svg>
-      </i>
-    </span>
-     
-    <div
-      class="error-atom theme-default"
-    >
-      
+            </div>
+             
+            <span
+              class="textarea-atom theme-default is-error skin-default"
+            >
+              <textarea
+                class="textarea-atom-control"
+                is-error="true"
+                placeholder="Placeholder text"
+              />
+               
+              <i
+                class="icon-atom theme-default is-error"
+                is-error="true"
+              >
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-error"
+                    y="0"
+                  />
+                </svg>
+              </i>
+            </span>
+             
+            <div
+              class="error-atom theme-default"
+            >
+              
   Error message here
 
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots VTextarea/desktop skin white 1`] = `
-<div>
-  <div
-    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  />
-   
-  <div
-    class="field-atom theme-default"
-    style="width: 288px; height: 80px;"
-  >
-    <label
-      class="label-atom theme-default"
-      placeholder="Placeholder text"
-    >
-      
+            </div>
+          </div>
+        </td>
+         
+        <td>
+          <div
+            class="field-atom theme-default"
+            style="width: 288px; height: 80px;"
+          >
+            <label
+              class="label-atom label-molecule theme-default"
+              disabled="disabled"
+              placeholder="Placeholder text"
+            >
+              
   Label
   
-    </label>
-     
-    <div
-      class="description-atom theme-default"
-      placeholder="Placeholder text"
-    >
-      
+            </label>
+             
+            <div
+              class="description-atom theme-default"
+              disabled="disabled"
+              placeholder="Placeholder text"
+            >
+              
   Helper text goes here
   
-    </div>
-     
-    <span
-      class="textarea-atom theme-default skin-white"
-    >
-      <textarea
-        class="textarea-atom-control"
-        placeholder="Placeholder text"
-      />
-       
-    </span>
-     
-    <!---->
-  </div>
+            </div>
+             
+            <span
+              class="textarea-atom theme-default skin-default"
+              disabled="disabled"
+            >
+              <textarea
+                class="textarea-atom-control"
+                disabled="disabled"
+                placeholder="Placeholder text"
+              />
+               
+            </span>
+             
+            <!---->
+          </div>
+        </td>
+         
+        <td>
+          <div
+            class="field-atom theme-default"
+            style="width: 288px; height: 80px;"
+          >
+            <label
+              class="label-atom label-molecule theme-default"
+              placeholder="Placeholder text"
+            >
+              
+  Label
+  
+            </label>
+             
+            <div
+              class="description-atom theme-default"
+              placeholder="Placeholder text"
+            >
+              
+  Helper text goes here
+  
+            </div>
+             
+            <span
+              class="textarea-atom theme-default skin-white"
+            >
+              <textarea
+                class="textarea-atom-control"
+                placeholder="Placeholder text"
+              />
+               
+            </span>
+             
+            <!---->
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
   
         
       

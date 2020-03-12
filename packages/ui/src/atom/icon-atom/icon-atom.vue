@@ -12,6 +12,7 @@ import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
   name: 'IconAtom',
+
   computed: {
     iconAtomCssClass() {
       return Object.assign(this.themeCssClass, {
@@ -19,6 +20,7 @@ export default {
       });
     },
   },
+
   mixins: [ThemeMixin],
 };
 </script>

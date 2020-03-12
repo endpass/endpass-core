@@ -27,12 +27,11 @@
 // molecule
 @import '@/molecule/icon-button-molecule/icon-button-molecule.theme-default.scss';
 @import '@/molecule/icon-control-molecule/icon-control-molecule.theme-default.scss';
-@import '@/molecule/icon-tooltip-molecule/icon-tooltip-molecule.theme-default.scss';
+@import '@/molecule/label-molecule/label-molecule.theme-default.scss';
 @import '@/molecule/button-loader-molecule/button-loader-molecule.scss';
 @import '@/molecule/navigation/icon-button-molecule/icon-button-molecule.theme-default.scss';
 
 // kit
-@import '@/kit/VInput/VInput.theme-default.scss';
 @import '@/kit/VAlert/VAlert.theme-default.scss';
 @import '@/kit/VDateInput/VDateInput.theme-default.scss';
 @import '@/kit/VRadio/VRadio.theme-default.scss';

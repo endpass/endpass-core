@@ -38,6 +38,18 @@ storiesOf('VDateInput/desktop', module)
             </tr>
             <tr><td colspan="2"><hr/></td></tr>
             <tr>
+              <td>tooltip</td>
+              <td>
+                <v-date-input
+                  v-model="model"
+                  @change="onChange"
+                  label="label of date"
+                  tooltip-label="some text in tooltip"
+                />
+              </td>
+            </tr>
+            <tr><td colspan="2"><hr/></td></tr>
+            <tr>
               <td>disabled</td>
               <td>
                 <v-date-input v-model="model" label="Label here" :disabled="true" @change="onChange" />

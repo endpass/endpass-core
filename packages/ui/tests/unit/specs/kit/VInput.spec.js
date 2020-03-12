@@ -30,8 +30,10 @@ describe('VInput', () => {
     it('should render component with label', () => {
       wrapper.setProps({ label: 'LabelText' });
 
-      expect(wrapper.find('label-atom-stub').text()).toContain('LabelText');
-      expect(wrapper.find('label-atom-stub').exists()).toBe(true);
+      expect(wrapper.find('label-molecule-stub').attributes().label).toBe(
+        'LabelText',
+      );
+      expect(wrapper.find('label-molecule-stub').exists()).toBe(true);
     });
   });
 
