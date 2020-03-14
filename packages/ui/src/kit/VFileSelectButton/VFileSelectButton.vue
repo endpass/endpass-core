@@ -7,7 +7,7 @@
       v-if="label"
       :label="label"
       :tooltip-label="tooltipLabel"
-      v-bind="$attrs"
+      :disabled="disabled"
     />
     <description-atom
       v-if="description"
@@ -16,6 +16,7 @@
       :description="description"
     />
     <file-select-atom
+      :disabled="disabled"
       v-bind="$attrs"
       @change="onChange"
     >
@@ -48,6 +49,11 @@ export default {
     description: {
       type: String,
       default: null,
+    },
+
+    disabled: {
+      type: Boolean,
+      default: false,
     },
   },
   computed: {

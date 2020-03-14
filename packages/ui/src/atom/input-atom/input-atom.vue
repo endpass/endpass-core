@@ -2,11 +2,12 @@
   <span
     class="input-atom"
     :class="inputAtomCssClass"
-    :disabled="$attrs.disabled"
+    :disabled="disabled"
   >
     <input
       class="input-atom-control"
       :value="value"
+      :disabled="disabled"
       v-bind="$attrs"
       v-on="listeners"
     >
@@ -24,6 +25,11 @@ export default {
     value: {
       type: [String, Number],
       default: null,
+    },
+
+    disabled: {
+      type: Boolean,
+      default: false,
     },
   },
   computed: {

@@ -4,7 +4,7 @@
       v-if="label"
       :label="label"
       :tooltip-label="tooltipLabel"
-      v-bind="$attrs"
+      :disabled="disabled"
     />
     <description-atom
       v-if="description"
@@ -16,6 +16,7 @@
       :is-error="isError"
       :options="options"
       :skin="skin"
+      :disabled="disabled"
       v-bind="$attrs"
       v-on="$listeners"
     >
@@ -82,6 +83,11 @@ export default {
     skin: {
       type: String,
       default: 'primary',
+    },
+
+    disabled: {
+      type: Boolean,
+      default: false,
     },
   },
 

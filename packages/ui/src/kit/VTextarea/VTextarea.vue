@@ -4,7 +4,7 @@
       v-if="label"
       :label="label"
       :tooltip-label="tooltipLabel"
-      v-bind="$attrs"
+      :disabled="disabled"
     />
     <description-atom
       v-if="description"
@@ -15,6 +15,7 @@
       :value="value"
       :is-error="isError"
       :class="skinCssClass"
+      :disabled="disabled"
       v-bind="$attrs"
       v-on="$listeners"
     >
@@ -78,6 +79,11 @@ export default {
       validator(value) {
         return ['default', 'white'].indexOf(value) !== -1;
       },
+    },
+
+    disabled: {
+      type: Boolean,
+      default: false,
     },
   },
 

@@ -2,7 +2,7 @@
   <label-atom
     class="label-molecule"
     :label="label"
-    v-bind="$attrs"
+    :disabled="disabled"
   >
     <hover-atom
       v-if="tooltipLabel"
@@ -38,6 +38,11 @@ export default {
     label: {
       type: String,
       default: '',
+    },
+
+    disabled: {
+      type: Boolean,
+      default: false,
     },
 
     tooltipLabel: {
