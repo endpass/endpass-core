@@ -12953,32 +12953,29 @@ exports[`Storyshots VTabs/desktop conditional 1`] = `
         </button>
       </section>
        
-      <div
-        style="display: none;"
-      >
-        <div
-          data-test="foo-tab"
-        >
-          
-              Foo content 1
-            
-        </div>
-         
-        <div
-          data-test="bar-tab"
-        >
-          
-              Bar content 1
-            
-        </div>
-      </div>
-       
       <section
         class="v-tabs-content v-tabs-content"
       >
-        
+        <div>
+          <div
+            data-test="foo-tab"
+          >
+            
               Foo content 1
             
+          </div>
+        </div>
+        <div
+          style="display: none;"
+        >
+          <div
+            data-test="bar-tab"
+          >
+            
+              Bar content 1
+            
+          </div>
+        </div>
       </section>
     </div>
   </div>
@@ -13015,32 +13012,29 @@ exports[`Storyshots VTabs/desktop default 1`] = `
       </button>
     </section>
      
-    <div
-      style="display: none;"
-    >
-      <div
-        data-test="foo-tab"
-      >
-        
-              Foo content
-            
-      </div>
-       
-      <div
-        data-test="bar-tab"
-      >
-        
-              Bar content
-            
-      </div>
-    </div>
-     
     <section
       class="v-tabs-content v-tabs-content"
     >
-      
+      <div>
+        <div
+          data-test="foo-tab"
+        >
+          
               Foo content
             
+        </div>
+      </div>
+      <div
+        style="display: none;"
+      >
+        <div
+          data-test="bar-tab"
+        >
+          
+              Bar content
+            
+        </div>
+      </div>
     </section>
   </div>
 </div>
@@ -13076,32 +13070,29 @@ exports[`Storyshots VTabs/desktop initial tab 1`] = `
       </button>
     </section>
      
-    <div
-      style="display: none;"
-    >
-      <div
-        data-test="foo-tab"
-      >
-        
-              Foo content
-            
-      </div>
-       
-      <div
-        data-test="bar-tab"
-      >
-        
-              Bar content
-            
-      </div>
-    </div>
-     
     <section
       class="v-tabs-content v-tabs-content"
     >
-      
+      <div>
+        <div
+          data-test="foo-tab"
+        >
+          
               Foo content
             
+        </div>
+      </div>
+      <div
+        style="display: none;"
+      >
+        <div
+          data-test="bar-tab"
+        >
+          
+              Bar content
+            
+        </div>
+      </div>
     </section>
   </div>
 </div>
