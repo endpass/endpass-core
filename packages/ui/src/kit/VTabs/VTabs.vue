@@ -17,9 +17,6 @@
         {{ getTabLabel(tab) }}
       </button>
     </section>
-    <div v-show="false">
-      <slot />
-    </div>
     <v-tabs-content
       class="v-tabs-content"
       :active-tab-idx="activeTabIdx"
