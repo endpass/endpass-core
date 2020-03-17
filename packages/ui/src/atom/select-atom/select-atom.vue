@@ -6,6 +6,7 @@
     <select
       class="select-atom-control"
       :value="value"
+      :disabled="disabled"
       v-bind="$attrs"
       v-on="listeners"
     >
@@ -26,16 +27,20 @@ import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
   name: 'SelectAtom',
+
   inheritAttrs: false,
+
   props: {
     value: {
       type: [String, Number],
       default: null,
     },
+
     options: {
       type: Array,
       default: () => [],
     },
+
     skin: {
       type: String,
       default: 'primary',
@@ -43,7 +48,13 @@ export default {
         return ['primary', 'secondary'].indexOf(value) !== -1;
       },
     },
+
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
+
   computed: {
     normalizedOptions() {
       return this.options.reduce((acc, item) => {

@@ -13,6 +13,7 @@
       </span>
       <input
         :id="inputId"
+        :disabled="disabled"
         type="file"
         class="file-select-atom-input"
         v-bind="$attrs"
@@ -29,6 +30,7 @@ let inputId = 1;
 
 export default {
   name: 'FileSelectAtom',
+
   props: {
     skin: {
       type: String,
@@ -37,6 +39,7 @@ export default {
         return ['primary', 'ghost'].indexOf(value) !== -1;
       },
     },
+
     size: {
       type: String,
       default: 'normal',
@@ -44,13 +47,20 @@ export default {
         return ['normal', 'big', 'area'].indexOf(value) !== -1;
       },
     },
+
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
+
   data() {
     return {
       // eslint-disable-next-line no-plusplus
       inputId: `file-select-atom-idx-${inputId++}`,
     };
   },
+
   computed: {
     buttonCssClass() {
       return {
@@ -60,6 +70,7 @@ export default {
       };
     },
   },
+
   methods: {
     onChange(e) {
       this.$emit('change', e);
@@ -69,6 +80,7 @@ export default {
       e.target.value = '';
     },
   },
+
   mixins: [ThemeMixin],
 };
 </script>

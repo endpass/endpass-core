@@ -3,7 +3,7 @@
     <label-molecule
       v-if="label"
       :label="label"
-      v-bind="$attrs"
+      :disabled="disabled"
       :tooltip-label="tooltipLabel"
     />
     <description-atom
@@ -14,6 +14,7 @@
     <input-atom
       :value="value"
       :is-error="isError"
+      :disabled="disabled"
       v-bind="$attrs"
       v-on="$listeners"
     >
@@ -69,6 +70,11 @@ export default {
     description: {
       type: String,
       default: '',
+    },
+
+    disabled: {
+      type: Boolean,
+      default: false,
     },
   },
 
