@@ -9,10 +9,11 @@
           v-if="label"
           :label="label"
           :tooltip-label="tooltipLabel"
-          v-bind="$attrs"
+          :disabled="disabled"
         />
         <div class="v-date-input-field-inner">
           <input-atom
+            :disabled="disabled"
             v-bind="$attrs"
             :value="formattedValue"
             :is-error="isError"
@@ -163,6 +164,11 @@ export default {
     error: {
       type: String,
       default: '',
+    },
+
+    disabled: {
+      type: Boolean,
+      default: false,
     },
   },
 

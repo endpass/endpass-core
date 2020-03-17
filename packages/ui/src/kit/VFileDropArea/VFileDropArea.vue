@@ -4,7 +4,7 @@
       v-if="label"
       :label="label"
       :tooltip-label="tooltipLabel"
-      v-bind="$attrs"
+      :disabled="disabled"
     />
     <div
       class="v-file-drop-area-content"
@@ -23,6 +23,7 @@
           </div>
           <input
             :id="inputId"
+            :disabled="disabled"
             type="file"
             class="file-drop-area-input"
             v-bind="$attrs"
@@ -53,6 +54,11 @@ export default {
     tooltipLabel: {
       type: String,
       default: null,
+    },
+
+    disabled: {
+      type: Boolean,
+      default: false,
     },
   },
 

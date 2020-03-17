@@ -64,7 +64,7 @@ storiesOf('VInput/desktop', module).add('default', () => ({
               <td>
                 <v-input
                   v-model="model"
-                  disabled="true"
+                  :disabled="true"
                   style="width: 288px;"
                   placeholder="Placeholder text"
                   :label="label"

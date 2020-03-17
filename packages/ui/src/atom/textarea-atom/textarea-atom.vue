@@ -2,14 +2,15 @@
   <span
     class="textarea-atom"
     :class="textareaAtomCssClass"
-    :disabled="$attrs.disabled"
+    :disabled="disabled"
   >
     <textarea
       class="textarea-atom-control"
       :value="value"
+      :disabled="disabled"
       v-bind="$attrs"
       v-on="listeners"
-    ></textarea>
+    />
     <slot />
   </span>
 </template>
@@ -25,16 +26,19 @@ export default {
       type: [String, Number],
       default: null,
     },
+
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
+
   computed: {
     listeners() {
-      return Object.assign({},
-        this.$listeners,
-        {
-          input: (e) => {
-            this.$emit('input', e.target.value);
-          },
-        });
+      return { ...this.$listeners,
+        input: e => {
+          this.$emit('input', e.target.value);
+        } };
     },
 
     textareaAtomCssClass() {
@@ -43,6 +47,7 @@ export default {
       });
     },
   },
+
   mixins: [ThemeMixin],
 };
 </script>

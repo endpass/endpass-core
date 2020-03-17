@@ -2,6 +2,7 @@
   <label
     class="label-atom"
     :class="themeCssClass"
+    :disabled="disabled"
   >
     {{ label }}
     <slot />
@@ -18,6 +19,11 @@ export default {
     label: {
       type: String,
       default: '',
+    },
+
+    disabled: {
+      type: Boolean,
+      default: false,
     },
   },
 

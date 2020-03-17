@@ -65,7 +65,7 @@ storiesOf('VTextarea/desktop', module).add('default', () => ({
               <td>
                 <v-textarea
                   v-model="model"
-                  disabled="true"
+                  :disabled="true"
                   style="width: 288px; height: 80px;"
                   placeholder="Placeholder text"
                   :label="label"

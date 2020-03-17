@@ -4121,7 +4121,6 @@ exports[`Storyshots VDateInput/desktop default 1`] = `
             >
               <label
                 class="label-atom label-molecule theme-default"
-                placeholder="Select the date..."
               >
                 
   Input label
@@ -4286,7 +4285,6 @@ exports[`Storyshots VDateInput/desktop default 1`] = `
         <td>
           <div
             class="theme-default v-date-input"
-            disabled="disabled"
           >
             <div
               class="v-date-input-field"
@@ -4620,7 +4618,6 @@ exports[`Storyshots VFileDropArea/desktop custom text 1`] = `
     class="field-atom theme-default"
   >
     <label
-      accept="image/*"
       class="label-atom label-molecule theme-default"
     >
       
@@ -4685,10 +4682,8 @@ exports[`Storyshots VFileDropArea/desktop disable 1`] = `
   <div
     accept="image/*"
     class="field-atom theme-default"
-    disabled="disabled"
   >
     <label
-      accept="image/*"
       class="label-atom label-molecule theme-default"
       disabled="disabled"
     >
@@ -4803,7 +4798,6 @@ exports[`Storyshots VFileDropArea/desktop only for jpeg 1`] = `
     class="field-atom theme-default"
   >
     <label
-      accept=".jpeg"
       class="label-atom label-molecule theme-default"
     >
       
@@ -4864,7 +4858,6 @@ exports[`Storyshots VFileDropArea/desktop tooltip 1`] = `
       class="field-atom theme-default"
     >
       <label
-        accept="image/*"
         class="label-atom label-molecule theme-default"
       >
         
@@ -4964,7 +4957,6 @@ exports[`Storyshots VFileDropArea/desktop v-model 1`] = `
     class="field-atom theme-default"
   >
     <label
-      accept=".jpeg"
       class="label-atom label-molecule theme-default"
     >
       
@@ -5156,7 +5148,6 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
             class="field-atom v-file-select-button theme-default theme-default"
           >
             <label
-              accept="image/x-png,image/jpeg"
               class="label-atom label-molecule theme-default"
             >
               
@@ -5212,9 +5203,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
             multiple="multiple"
           >
             <label
-              accept="image/*"
               class="label-atom label-molecule theme-default"
-              multiple="multiple"
             >
               
   Multiple files
@@ -5269,10 +5258,8 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
           <div
             accept="image/*"
             class="field-atom v-file-select-button theme-default theme-default"
-            disabled="disabled"
           >
             <label
-              accept="image/*"
               class="label-atom label-molecule theme-default"
               disabled="disabled"
             >
@@ -5284,7 +5271,6 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
             <div
               accept="image/*"
               class="description-atom v-file-select-button-desc theme-default"
-              disabled="disabled"
             >
               
   images only
@@ -5294,7 +5280,6 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
             <button
               accept="image/*"
               class="file-select-atom theme-default size-normal skin-primary"
-              disabled="disabled"
               type="button"
             >
               <label
@@ -5818,7 +5803,6 @@ exports[`Storyshots VInput/desktop default 1`] = `
           >
             <label
               class="label-atom label-molecule theme-default"
-              placeholder="Placeholder text"
             >
               
   Label
@@ -5869,7 +5853,6 @@ exports[`Storyshots VInput/desktop default 1`] = `
           >
             <label
               class="label-atom label-molecule theme-default"
-              placeholder="Placeholder text"
             >
               
   Label
@@ -5976,7 +5959,6 @@ exports[`Storyshots VInput/desktop default 1`] = `
             <label
               class="label-atom label-molecule theme-default"
               disabled="disabled"
-              placeholder="Placeholder text"
             >
               
   Label
@@ -5985,7 +5967,6 @@ exports[`Storyshots VInput/desktop default 1`] = `
              
             <div
               class="description-atom theme-default"
-              disabled="disabled"
               placeholder="Placeholder text"
             >
               
@@ -9092,7 +9073,6 @@ exports[`Storyshots VSelect/desktop disabled 1`] = `
     <label
       class="label-atom label-molecule theme-default"
       disabled="disabled"
-      placeholder="Placeholder text"
     >
       
   Label
@@ -9101,7 +9081,6 @@ exports[`Storyshots VSelect/desktop disabled 1`] = `
      
     <div
       class="description-atom theme-default"
-      disabled="disabled"
       placeholder="Placeholder text"
     >
       
@@ -9152,7 +9131,6 @@ exports[`Storyshots VSelect/desktop enabled 1`] = `
   >
     <label
       class="label-atom label-molecule theme-default"
-      placeholder="Placeholder text"
     >
       
   Label
@@ -9227,7 +9205,6 @@ exports[`Storyshots VSelect/desktop error 1`] = `
   >
     <label
       class="label-atom label-molecule theme-default"
-      placeholder="Placeholder text"
     >
       
   Label
@@ -9308,7 +9285,6 @@ exports[`Storyshots VSelect/desktop flat array 1`] = `
   >
     <label
       class="label-atom label-molecule theme-default"
-      placeholder="Placeholder text"
     >
       
   Label
@@ -9397,7 +9373,6 @@ exports[`Storyshots VSelect/desktop skins 1`] = `
           >
             <label
               class="label-atom label-molecule theme-default"
-              placeholder="Placeholder text"
             >
               
   Label
@@ -9451,7 +9426,6 @@ exports[`Storyshots VSelect/desktop skins 1`] = `
           >
             <label
               class="label-atom label-molecule theme-default"
-              placeholder="Placeholder text"
             >
               
   Label
@@ -9504,7 +9478,6 @@ exports[`Storyshots VSelect/desktop skins 1`] = `
             <label
               class="label-atom label-molecule theme-default"
               disabled="disabled"
-              placeholder="Placeholder text"
             >
               
   Label
@@ -9513,7 +9486,6 @@ exports[`Storyshots VSelect/desktop skins 1`] = `
              
             <div
               class="description-atom theme-default"
-              disabled="disabled"
               placeholder="Placeholder text"
             >
               
@@ -9590,7 +9562,6 @@ exports[`Storyshots VSelect/desktop tooltip 1`] = `
           >
             <label
               class="label-atom label-molecule theme-default"
-              placeholder="Placeholder text"
             >
               
   Label
@@ -9642,7 +9613,6 @@ exports[`Storyshots VSelect/desktop tooltip 1`] = `
           >
             <label
               class="label-atom label-molecule theme-default"
-              placeholder="Placeholder text"
             >
               
   Label
@@ -9727,7 +9697,6 @@ exports[`Storyshots VSelect/desktop tooltip 1`] = `
             <label
               class="label-atom label-molecule theme-default"
               disabled="disabled"
-              placeholder="Placeholder text"
             >
               
   Label
@@ -9768,7 +9737,6 @@ exports[`Storyshots VSelect/desktop tooltip 1`] = `
              
             <div
               class="description-atom theme-default"
-              disabled="disabled"
               placeholder="Placeholder text"
             >
               
@@ -13713,7 +13681,6 @@ exports[`Storyshots VTextarea/desktop default 1`] = `
           >
             <label
               class="label-atom label-molecule theme-default"
-              placeholder="Placeholder text"
             >
               
   Label
@@ -13750,7 +13717,6 @@ exports[`Storyshots VTextarea/desktop default 1`] = `
           >
             <label
               class="label-atom label-molecule theme-default"
-              placeholder="Placeholder text"
             >
               
   Label
@@ -13819,7 +13785,6 @@ exports[`Storyshots VTextarea/desktop default 1`] = `
           >
             <label
               class="label-atom label-molecule theme-default"
-              placeholder="Placeholder text"
             >
               
   Label
@@ -13880,7 +13845,6 @@ exports[`Storyshots VTextarea/desktop default 1`] = `
             <label
               class="label-atom label-molecule theme-default"
               disabled="disabled"
-              placeholder="Placeholder text"
             >
               
   Label
@@ -13889,7 +13853,6 @@ exports[`Storyshots VTextarea/desktop default 1`] = `
              
             <div
               class="description-atom theme-default"
-              disabled="disabled"
               placeholder="Placeholder text"
             >
               
@@ -13920,7 +13883,6 @@ exports[`Storyshots VTextarea/desktop default 1`] = `
           >
             <label
               class="label-atom label-molecule theme-default"
-              placeholder="Placeholder text"
             >
               
   Label
