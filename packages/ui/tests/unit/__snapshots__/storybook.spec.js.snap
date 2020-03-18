@@ -4065,7 +4065,7 @@ exports[`Storyshots VDateInput/desktop default 1`] = `
                 class="v-date-input-field-inner"
               >
                 <span
-                  class="input-atom theme-default"
+                  class="input-atom theme-default primary"
                 >
                   <input
                     class="input-atom-control"
@@ -4131,7 +4131,7 @@ exports[`Storyshots VDateInput/desktop default 1`] = `
                 class="v-date-input-field-inner"
               >
                 <span
-                  class="input-atom theme-default is-error"
+                  class="input-atom theme-default primary is-error"
                 >
                   <input
                     class="input-atom-control"
@@ -4236,7 +4236,7 @@ exports[`Storyshots VDateInput/desktop default 1`] = `
                 class="v-date-input-field-inner"
               >
                 <span
-                  class="input-atom theme-default"
+                  class="input-atom theme-default primary"
                 >
                   <input
                     class="input-atom-control"
@@ -4302,7 +4302,7 @@ exports[`Storyshots VDateInput/desktop default 1`] = `
                 class="v-date-input-field-inner"
               >
                 <span
-                  class="input-atom theme-default"
+                  class="input-atom theme-default primary"
                   disabled="disabled"
                 >
                   <input
@@ -4368,7 +4368,7 @@ exports[`Storyshots VDateInput/desktop empty initial state 1`] = `
         class="v-date-input-field-inner"
       >
         <span
-          class="input-atom theme-default"
+          class="input-atom theme-default primary"
         >
           <input
             class="input-atom-control"
@@ -4424,7 +4424,7 @@ exports[`Storyshots VDateInput/desktop min/max dates 1`] = `
               class="v-date-input-field-inner"
             >
               <span
-                class="input-atom theme-default"
+                class="input-atom theme-default primary"
               >
                 <input
                   class="input-atom-control"
@@ -4471,7 +4471,7 @@ exports[`Storyshots VDateInput/desktop min/max dates 1`] = `
               class="v-date-input-field-inner"
             >
               <span
-                class="input-atom theme-default"
+                class="input-atom theme-default primary"
               >
                 <input
                   class="input-atom-control"
@@ -5771,7 +5771,7 @@ exports[`Storyshots VIndicator/desktop default 1`] = `
 </div>
 `;
 
-exports[`Storyshots VInput/desktop default 1`] = `
+exports[`Storyshots VInput/desktop primary 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
@@ -5819,7 +5819,7 @@ exports[`Storyshots VInput/desktop default 1`] = `
             </div>
              
             <span
-              class="input-atom theme-default"
+              class="input-atom theme-default primary"
             >
               <input
                 class="input-atom-control"
@@ -5901,7 +5901,7 @@ exports[`Storyshots VInput/desktop default 1`] = `
             </div>
              
             <span
-              class="input-atom theme-default is-error"
+              class="input-atom theme-default primary is-error"
             >
               <input
                 class="input-atom-control"
@@ -5975,7 +5975,234 @@ exports[`Storyshots VInput/desktop default 1`] = `
             </div>
              
             <span
-              class="input-atom theme-default"
+              class="input-atom theme-default primary"
+              disabled="disabled"
+            >
+              <input
+                class="input-atom-control"
+                disabled="disabled"
+                placeholder="Placeholder text"
+              />
+               
+            </span>
+             
+            <!---->
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+        
+      
+</div>
+`;
+
+exports[`Storyshots VInput/desktop secondary 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <table>
+    <thead>
+      <tr>
+        <th>
+          state
+        </th>
+         
+        <th>
+          view
+        </th>
+      </tr>
+    </thead>
+     
+    <tbody>
+      <tr>
+        <td>
+          default
+        </td>
+         
+        <td>
+          <div
+            class="field-atom theme-default"
+            style="width: 288px;"
+          >
+            <label
+              class="label-atom label-molecule theme-default"
+            >
+              
+  Label
+  
+            </label>
+             
+            <div
+              class="description-atom theme-default"
+              placeholder="Placeholder text"
+            >
+              
+  Helper text goes here
+  
+            </div>
+             
+            <span
+              class="input-atom theme-default secondary"
+            >
+              <input
+                class="input-atom-control"
+                placeholder="Placeholder text"
+              />
+               
+            </span>
+             
+            <!---->
+          </div>
+        </td>
+      </tr>
+       
+      <tr>
+        <td
+          colspan="2"
+        >
+          <hr />
+        </td>
+      </tr>
+       
+      <tr>
+        <td>
+          error
+        </td>
+         
+        <td>
+          <div
+            class="field-atom theme-default"
+            style="width: 288px;"
+          >
+            <label
+              class="label-atom label-molecule theme-default"
+            >
+              
+  Label
+  
+              <div
+                class="label-molecule-tooltip theme-default"
+              >
+                <div
+                  class="tooltip-atom theme-default position-bottom-left"
+                  style="display: none;"
+                >
+                  <div
+                    class="tooltip-atom-container"
+                  >
+                    
+      hello this is tooltip data
+    
+                  </div>
+                </div>
+                 
+                <i
+                  class="icon-atom label-molecule-icon theme-default"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-info"
+                      y="0"
+                    />
+                  </svg>
+                </i>
+              </div>
+            </label>
+             
+            <div
+              class="description-atom theme-default"
+              placeholder="Placeholder text"
+            >
+              
+  Helper text goes here
+  
+            </div>
+             
+            <span
+              class="input-atom theme-default secondary is-error"
+            >
+              <input
+                class="input-atom-control"
+                is-error="true"
+                placeholder="Placeholder text"
+              />
+               
+              <i
+                class="icon-atom theme-default is-error"
+                is-error="true"
+              >
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-error"
+                    y="0"
+                  />
+                </svg>
+              </i>
+            </span>
+             
+            <div
+              class="error-atom theme-default"
+            >
+              
+  Error message here
+
+            </div>
+          </div>
+        </td>
+      </tr>
+       
+      <tr>
+        <td
+          colspan="2"
+        >
+          <hr />
+        </td>
+      </tr>
+       
+      <tr>
+        <td>
+          disabled
+        </td>
+         
+        <td>
+          <div
+            class="field-atom theme-default"
+            style="width: 288px;"
+          >
+            <label
+              class="label-atom label-molecule theme-default"
+              disabled="disabled"
+            >
+              
+  Label
+  
+            </label>
+             
+            <div
+              class="description-atom theme-default"
+              placeholder="Placeholder text"
+            >
+              
+  Helper text goes here
+  
+            </div>
+             
+            <span
+              class="input-atom theme-default secondary"
               disabled="disabled"
             >
               <input
@@ -6086,7 +6313,7 @@ exports[`Storyshots VInputGroup/desktop default 1`] = `
               </div>
                
               <span
-                class="input-atom theme-default"
+                class="input-atom theme-default primary"
               >
                 <input
                   class="input-atom-control"

@@ -20,8 +20,18 @@ import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
   name: 'InputAtom',
+
   inheritAttrs: false,
+
   props: {
+    skin: {
+      type: String,
+      default: 'primary',
+      validator(value) {
+        return ['primary', 'secondary'].indexOf(value) !== -1;
+      },
+    },
+
     value: {
       type: [String, Number],
       default: null,
@@ -32,6 +42,7 @@ export default {
       default: false,
     },
   },
+
   computed: {
     listeners() {
       return {
@@ -44,10 +55,12 @@ export default {
 
     inputAtomCssClass() {
       return Object.assign(this.themeCssClass, {
+        [this.skin]: !!this.skin,
         'is-error': this.$attrs['is-error'],
       });
     },
   },
+
   mixins: [ThemeMixin],
 };
 </script>
