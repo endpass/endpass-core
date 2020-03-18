@@ -10,6 +10,7 @@ exports[`VInput render should correctly render component 1`] = `
     disabled="true"
     id="id"
     placeholder="placeholder"
+    skin="primary"
   >
     <!---->
   </input-atom-stub>

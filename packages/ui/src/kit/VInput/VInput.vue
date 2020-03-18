@@ -15,6 +15,7 @@
       :value="value"
       :is-error="isError"
       :disabled="disabled"
+      :skin="skin"
       v-bind="$attrs"
       v-on="$listeners"
     >
@@ -75,6 +76,14 @@ export default {
     disabled: {
       type: Boolean,
       default: false,
+    },
+
+    skin: {
+      type: String,
+      default: 'primary',
+      validator(value) {
+        return ['primary', 'secondary'].indexOf(value) !== -1;
+      },
     },
   },
 
