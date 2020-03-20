@@ -11,27 +11,28 @@ const methods = {
   onBlur: action('onBlur'),
 };
 
-storiesOf('VInputGroup/desktop', module).add('default', () => ({
-  methods,
-  components: { VInputGroup, VInput, VSelect },
-  data() {
-    return {
-      models: {
-        input: null,
-        select: 'value',
-      },
-      options: [
-        {
-          val: 'value',
-          text: 'text option 1',
+storiesOf('VInputGroup/desktop', module)
+  .add('primary', () => ({
+    methods,
+    components: { VInputGroup, VInput, VSelect },
+    data() {
+      return {
+        models: {
+          input: null,
+          select: 'value',
         },
-        { val: 'next value', text: 'next option' },
-      ],
-      label: 'Label',
-      description: 'Helper text goes here',
-    };
-  },
-  template: `
+        options: [
+          {
+            val: 'value',
+            text: 'text option 1',
+          },
+          { val: 'next value', text: 'next option' },
+        ],
+        label: 'Label',
+        description: 'Helper text goes here',
+      };
+    },
+    template: `
       <theme-provider>
         <table>
           <thead>
@@ -66,4 +67,62 @@ storiesOf('VInputGroup/desktop', module).add('default', () => ({
         </table>
       </theme-provider>
     `,
-}));
+  }))
+  .add('secondary', () => ({
+    methods,
+    components: { VInputGroup, VInput, VSelect },
+    data() {
+      return {
+        models: {
+          input: null,
+          select: 'value',
+        },
+        options: [
+          {
+            val: 'value',
+            text: 'text option 1',
+          },
+          { val: 'next value', text: 'next option' },
+        ],
+        label: 'Label',
+        description: 'Helper text goes here',
+      };
+    },
+    template: `
+      <theme-provider>
+        <table>
+          <thead>
+            <tr>
+              <th>state</th>
+              <th>view</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>default</td>
+              <td>
+                <v-input-group :label="label" skin="secondary">
+                  <v-select
+                    v-model="models.select"
+                    placeholder="Placeholder text"
+                    skin="secondary"
+                    @input="onInput"
+                    :options="options"
+                    :description="description"
+                  />
+                  <v-input
+                    style="width: 288px;"
+                    v-model="models.input"
+                    skin="secondary"
+                    placeholder="Placeholder text"
+                    @input="onInput"
+                    :description="description"
+                  />
+                </v-input-group>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </theme-provider>
+    `,
+  }));
