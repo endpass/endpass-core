@@ -6225,7 +6225,7 @@ exports[`Storyshots VInput/desktop secondary 1`] = `
 </div>
 `;
 
-exports[`Storyshots VInputGroup/desktop default 1`] = `
+exports[`Storyshots VInputGroup/desktop primary 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
@@ -6252,7 +6252,7 @@ exports[`Storyshots VInputGroup/desktop default 1`] = `
          
         <td>
           <div
-            class="theme-default v-input-group"
+            class="theme-default v-input-group primary"
             label="Label"
           >
             <div
@@ -6314,6 +6314,113 @@ exports[`Storyshots VInputGroup/desktop default 1`] = `
                
               <span
                 class="input-atom theme-default primary"
+              >
+                <input
+                  class="input-atom-control"
+                  placeholder="Placeholder text"
+                />
+                 
+              </span>
+               
+              <!---->
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Storyshots VInputGroup/desktop secondary 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <table>
+    <thead>
+      <tr>
+        <th>
+          state
+        </th>
+         
+        <th>
+          view
+        </th>
+      </tr>
+    </thead>
+     
+    <tbody>
+      <tr>
+        <td>
+          default
+        </td>
+         
+        <td>
+          <div
+            class="theme-default v-input-group secondary"
+            label="Label"
+          >
+            <div
+              class="field-atom v-select theme-default"
+            >
+              <!---->
+               
+              <div
+                class="description-atom theme-default"
+                placeholder="Placeholder text"
+              >
+                
+  Helper text goes here
+  
+              </div>
+               
+              <span
+                class="select-atom theme-default skin-secondary"
+              >
+                <select
+                  class="select-atom-control"
+                  placeholder="Placeholder text"
+                >
+                  <option
+                    value="value"
+                  >
+                    
+      text option 1
+    
+                  </option>
+                  <option
+                    value="next value"
+                  >
+                    
+      next option
+    
+                  </option>
+                </select>
+                 
+              </span>
+               
+              <!---->
+            </div>
+             
+            <div
+              class="field-atom theme-default"
+              style="width: 288px;"
+            >
+              <!---->
+               
+              <div
+                class="description-atom theme-default"
+                placeholder="Placeholder text"
+              >
+                
+  Helper text goes here
+  
+              </div>
+               
+              <span
+                class="input-atom theme-default secondary"
               >
                 <input
                   class="input-atom-control"
@@ -9316,7 +9423,58 @@ exports[`Storyshots VSelect/desktop disabled 1`] = `
     </div>
      
     <span
-      class="select-atom theme-default skin-primary"
+      class="select-atom theme-default is-disabled skin-primary"
+    >
+      <select
+        class="select-atom-control"
+        disabled="disabled"
+        placeholder="Placeholder text"
+      >
+        <option
+          value="value"
+        >
+          
+      text option 1
+    
+        </option>
+        <option
+          value="next value"
+        >
+          
+      next option
+    
+        </option>
+      </select>
+       
+    </span>
+     
+    <!---->
+  </div>
+   
+  <div
+    class="field-atom v-select theme-default"
+    style="width: 288px;"
+  >
+    <label
+      class="label-atom label-molecule theme-default"
+      disabled="disabled"
+    >
+      
+  Label
+  
+    </label>
+     
+    <div
+      class="description-atom theme-default"
+      placeholder="Placeholder text"
+    >
+      
+  Helper text goes here
+  
+    </div>
+     
+    <span
+      class="select-atom theme-default is-disabled skin-primary"
     >
       <select
         class="select-atom-control"
@@ -9568,7 +9726,7 @@ exports[`Storyshots VSelect/desktop flat array 1`] = `
 </div>
 `;
 
-exports[`Storyshots VSelect/desktop skins 1`] = `
+exports[`Storyshots VSelect/desktop primary 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
@@ -9579,11 +9737,7 @@ exports[`Storyshots VSelect/desktop skins 1`] = `
       <thead>
         <tr>
           <th>
-            Primary
-          </th>
-           
-          <th>
-            Secondary
+            Enabled
           </th>
            
           <th>
@@ -9644,9 +9798,86 @@ exports[`Storyshots VSelect/desktop skins 1`] = `
           </div>
         </td>
          
-        <td
-          style="padding: 20px;"
-        >
+        <td>
+          <div
+            class="field-atom v-select theme-default"
+            style="width: 288px;"
+          >
+            <label
+              class="label-atom label-molecule theme-default"
+              disabled="disabled"
+            >
+              
+  Label
+  
+            </label>
+             
+            <div
+              class="description-atom theme-default"
+              placeholder="Placeholder text"
+            >
+              
+  Helper text goes here
+  
+            </div>
+             
+            <span
+              class="select-atom theme-default is-disabled skin-primary"
+            >
+              <select
+                class="select-atom-control"
+                disabled="disabled"
+                placeholder="Placeholder text"
+              >
+                <option
+                  value="value"
+                >
+                  
+      text option 1 with a text
+    
+                </option>
+                <option
+                  value="next value"
+                >
+                  
+      next option
+    
+                </option>
+              </select>
+               
+            </span>
+             
+            <!---->
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VSelect/desktop secondary 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            Enabled
+          </th>
+           
+          <th>
+            Disabled
+          </th>
+        </tr>
+      </thead>
+       
+      <tr>
+        <td>
           <div
             class="field-atom v-select theme-default"
             style="width: 288px;"
@@ -9721,7 +9952,7 @@ exports[`Storyshots VSelect/desktop skins 1`] = `
             </div>
              
             <span
-              class="select-atom theme-default skin-secondary"
+              class="select-atom theme-default is-disabled skin-secondary"
             >
               <select
                 class="select-atom-control"
@@ -9972,7 +10203,7 @@ exports[`Storyshots VSelect/desktop tooltip 1`] = `
             </div>
              
             <span
-              class="select-atom theme-default skin-secondary"
+              class="select-atom theme-default is-disabled skin-secondary"
             >
               <select
                 class="select-atom-control"

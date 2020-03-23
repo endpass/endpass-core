@@ -119,7 +119,7 @@ storiesOf('VSelect/desktop', module)
       </theme-provider>
     `,
   }))
-  .add('skins', () => ({
+  .add('primary', () => ({
     methods,
     components: { VSelect },
     data() {
@@ -139,8 +139,7 @@ storiesOf('VSelect/desktop', module)
           <table>
             <thead>
               <tr>
-                <th>Primary</th>
-                <th>Secondary</th>
+                <th>Enabled</th>
                 <th>Disabled</th>
               </tr>
             </thead>
@@ -157,7 +156,51 @@ storiesOf('VSelect/desktop', module)
                   :description="description"
                 />
               </td>
-              <td style="background-color: var(--endpass-ui-color-grey-1); padding: 20px;">
+              <td>
+                <v-select
+                  style="width: 288px;"
+                  v-model="model"
+                  placeholder="Placeholder text"
+                  @input="onInput"
+                  skin="primary"
+                  disabled
+                  :options="options"
+                  :label="label"
+                  :description="description"
+                />
+              </td>
+            </tr>
+          </table>
+        </div>
+      </theme-provider>
+    `,
+  }))
+  .add('secondary', () => ({
+    methods,
+    components: { VSelect },
+    data() {
+      return {
+        model: 'value',
+        options: [
+          { val: 'value', text: 'text option 1 with a text' },
+          { val: 'next value', text: 'next option' },
+        ],
+        label: 'Label',
+        description: 'Helper text goes here',
+      };
+    },
+    template: `
+      <theme-provider>
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>Enabled</th>
+                <th>Disabled</th>
+              </tr>
+            </thead>
+            <tr>
+              <td>
                 <v-select
                   style="width: 288px;"
                   v-model="model"
@@ -251,7 +294,7 @@ storiesOf('VSelect/desktop', module)
     components: { VSelect },
     data() {
       return {
-        model: null,
+        model: 'value',
         label: 'Label',
         options: [
           { val: 'value', text: 'text option 1' },
@@ -262,6 +305,14 @@ storiesOf('VSelect/desktop', module)
     },
     template: `
       <theme-provider>
+        <v-select
+          :disabled="true"
+          style="width: 288px;"
+          placeholder="Placeholder text"
+          :options="options"
+          :label="label"
+          :description="description"
+        />
         <v-select
           v-model="model"
           :disabled="true"

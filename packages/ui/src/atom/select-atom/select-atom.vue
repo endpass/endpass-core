@@ -82,6 +82,7 @@ export default {
       return {
         ...this.themeCssClass,
         'is-error': this.$attrs['is-error'],
+        'is-disabled': this.disabled,
         [`skin-${this.skin}`]: true,
       };
     },
