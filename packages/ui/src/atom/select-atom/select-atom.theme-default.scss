@@ -53,25 +53,30 @@
 
 .select-atom.theme-default:hover {
   border-color: var(--endpass-ui-color-grey-2);
+}
 
-  .select-atom-control::placeholder {
-    color: var(--endpass-ui-color-grey-6);
-  }
+.select-atom.theme-default:hover .select-atom-control::placeholder {
+  color: var(--endpass-ui-color-grey-6);
 }
 
 .select-atom.theme-default:focus {
   border-color: var(--endpass-ui-color-primary-7);
   background-color: var(--endpass-ui-color-white);
+}
 
-  .select-atom-control::placeholder {
+.select-atom.theme-default:focus .select-atom-control::placeholder {
     opacity: 0;
-  }
 }
 
-.select-atom.theme-default[disabled=disabled] {
+.select-atom.theme-default.is-disabled {
   border-color: var(--endpass-ui-color-grey-1);
-
-  .select-atom-control::placeholder {
-    color: var(--endpass-ui-color-grey-4);
-  }
 }
+
+.select-atom.theme-default.is-disabled .select-atom-control {
+  color: var(--endpass-ui-color-grey-4);
+}
+
+.select-atom.theme-default.is-disabled .select-atom-control::placeholder {
+  color: var(--endpass-ui-color-grey-4);
+}
+
