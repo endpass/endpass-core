@@ -1,12 +1,9 @@
 :root {
   --endpass-ui-font-family-primary: 'Akkurat Pro', Helvetica, Arial, sans-serif;
 
-  --endpass-ui-color-warning-primary: #fc7b1e;
-  --endpass-ui-color-warning-secondary: #fdd13a;
-  --endpass-ui-color-error: #d91d28;
-  --endpass-ui-color-success: #24a148;
   --endpass-ui-color-white: #ffffff;
   --endpass-ui-color-black: #13171a;
+  --endpass-ui-color-black-1: #242a2e;
   --endpass-ui-color-grey-1: #f2f4f8;
   --endpass-ui-color-grey-2: #d5d9e0;
   --endpass-ui-color-grey-3: #b9bfc7;
@@ -18,6 +15,16 @@
   --endpass-ui-color-grey-9: #242a2e;
   --endpass-ui-color-blue-1: #0030d3;
   --endpass-ui-color-blue-2: #032AAD;
+  --endpass-ui-color-red-1: #da1a29;
+  --endpass-ui-color-orange-1: #fc7b1e;
+  --endpass-ui-color-yellow-1: #fdd13a;
+  --endpass-ui-color-green-1: #22a143;
+
+
+  --endpass-ui-color-warning-primary: var(--endpass-ui-color-orange-1);
+  --endpass-ui-color-warning-secondary: var(--endpass-ui-color-yellow-1);
+  --endpass-ui-color-error: var(--endpass-ui-color-red-1);
+  --endpass-ui-color-success: var(--endpass-ui-color-green-1);
 }
 
 // breakpoints
