@@ -1,0 +1,13 @@
+.v-snackbar-link.theme-default {
+  text-transform: uppercase;
+  color: var(--endpass-ui-color-primary-3);
+  letter-spacing: 1.25px;
+
+  &:active {
+    color: var(--endpass-ui-color-white);
+  }
+  &:visited {
+    color: var(--endpass-ui-color-primary-3);
+  }
+
+}

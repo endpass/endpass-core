@@ -1,4 +1,4 @@
-.v-link.theme-default {
+.link-atom.theme-default {
   text-decoration: none;
   color: var(--endpass-ui-color-primary-6);
   cursor: pointer;
@@ -15,7 +15,7 @@
   }
 }
 
-.v-link.theme-default.is-underline {
+.link-atom.theme-default.is-underline {
   text-decoration: underline;
   &:focus,
   &:hover {
@@ -23,7 +23,7 @@
   }
 }
 
-.v-link.theme-default[disabled] {
+.link-atom.theme-default[disabled] {
   color: var(--endpass-ui-color-grey-6);
   text-decoration: none;
 }

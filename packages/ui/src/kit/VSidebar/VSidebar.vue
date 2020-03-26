@@ -20,6 +20,7 @@ import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
   name: 'VSidebar',
+
   props: {
     direction: {
       type: String,
@@ -28,25 +29,31 @@ export default {
         return ['right', 'left'].indexOf(value) !== -1;
       },
     },
+
     isOpen: {
       type: Boolean,
       default: false,
     },
   },
+
   computed: {
     sideBarCssClass() {
-      return Object.assign({}, this.themeCssClass, {
+      return {
+        ...this.themeCssClass,
         'is-open': this.isOpen,
         'is-closed': this.isOpen === false,
-      });
+      };
     },
+
     containerCssClass() {
-      return Object.assign({}, this.themeCssClass, {
+      return {
+        ...this.themeCssClass,
         'is-right': this.direction === 'right',
         'is-left': this.direction === 'left',
-      });
+      };
     },
   },
+
   mixins: [ThemeMixin],
 };
 </script>

@@ -1,0 +1,88 @@
+.v-snackbar.theme-default {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--endpass-ui-color-black-1);
+  color: var(--endpass-ui-color-white);
+  box-shadow: 0 3px 4px rgba(17, 22, 26, 0.2), 0 1px 5px rgba(17, 22, 26, 0.12), 0 6px 6px rgba(17, 22, 26, 0.14);
+  padding: 16px 16px;
+  border-radius: 4px;
+}
+
+.v-snackbar.theme-default .v-snackbar-left-side {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  margin-bottom: auto;
+}
+
+.v-snackbar.theme-default.skin-warning .v-snackbar-left-side {
+  color: var(--endpass-ui-color-warning-secondary);
+}
+
+.v-snackbar.theme-default.skin-error .v-snackbar-left-side {
+  color: var(--endpass-ui-color-error);
+}
+
+.v-snackbar.theme-default.skin-success .v-snackbar-left-side {
+  color: var(--endpass-ui-color-success);
+}
+
+.v-snackbar.theme-default.skin-time .v-snackbar-left-side {
+  color: var(--endpass-ui-color-primary-3);
+}
+
+
+.v-snackbar.theme-default .v-snackbar-container {
+  display: flex;
+  align-items: center;
+}
+
+.v-snackbar.theme-default .v-snackbar-content {
+  margin-right: 23px;
+}
+
+.v-snackbar.theme-default .v-snackbar-right-side {
+  margin-left: 26px;
+  margin-bottom: auto;
+  position: relative;
+}
+
+.v-snackbar.theme-default .v-snackbar-close-button {
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: -6px;
+  right: -10px;
+}
+
+.v-snackbar.theme-default .v-snackbar-right-side .svg-atom {
+  width: 10px;
+  height: 10px;
+}
+
+.v-snackbar.theme-default .v-snackbar-controls {
+  margin-left: auto;
+  display: flex;
+}
+
+.v-snackbar.theme-default.is-multiline .v-snackbar-controls {
+  display: flex;
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: 10px;
+}
+.v-snackbar.theme-default.is-multiline .v-snackbar-right-side {
+  margin-left: auto;
+}
+
+.v-snackbar.theme-default .v-snackbar-controls > * {
+  margin-right: 16px;
+}
+
+.v-snackbar.theme-default .v-snackbar-controls > *:last-child {
+  margin-right: 0;
+}
