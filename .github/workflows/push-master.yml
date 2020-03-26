@@ -1,4 +1,5 @@
-name: endpass-core push
+---
+name: build-and-deploy
 on:
   push:
     branches:
@@ -7,10 +8,8 @@ on:
       - '**.md'
 
 jobs:
-  build:
-
+  build-and-deploy:
     runs-on: ubuntu-18.04
-
     steps:
     - name: Checkout repo
       uses: actions/checkout@v2
