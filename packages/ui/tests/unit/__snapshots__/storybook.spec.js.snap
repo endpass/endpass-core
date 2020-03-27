@@ -10493,13 +10493,13 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
     <tr>
       <td>
         <div
-          class="theme-default v-snackbar is-multiline skin-warning"
+          class="v-snackbar theme-default is-multiline skin-warning"
         >
           <div
             class="v-snackbar-container"
           >
             <svg
-              class="svg-atom v-snackbar-left-side theme-default"
+              class="svg-atom v-snackbar-icon theme-default"
               height="100%"
               width="100%"
             >
@@ -10525,13 +10525,13 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
             <div
               class="v-snackbar-right-side"
             >
-              <div
+              <button
                 class="v-snackbar-close-button"
               >
                 <svg
                   class="svg-atom theme-default"
-                  height="100%"
-                  width="100%"
+                  height="10px"
+                  width="10px"
                 >
                   <use
                     x="0"
@@ -10539,7 +10539,7 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
                     y="0"
                   />
                 </svg>
-              </div>
+              </button>
             </div>
           </div>
            
@@ -10561,13 +10561,13 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
     <tr>
       <td>
         <div
-          class="theme-default v-snackbar skin-warning"
+          class="v-snackbar theme-default skin-warning"
         >
           <div
             class="v-snackbar-container"
           >
             <svg
-              class="svg-atom v-snackbar-left-side theme-default"
+              class="svg-atom v-snackbar-icon theme-default"
               height="100%"
               width="100%"
             >
@@ -10608,13 +10608,13 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
             <div
               class="v-snackbar-right-side"
             >
-              <div
+              <button
                 class="v-snackbar-close-button"
               >
                 <svg
                   class="svg-atom theme-default"
-                  height="100%"
-                  width="100%"
+                  height="10px"
+                  width="10px"
                 >
                   <use
                     x="0"
@@ -10622,7 +10622,7 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
                     y="0"
                   />
                 </svg>
-              </div>
+              </button>
             </div>
           </div>
            
@@ -10634,13 +10634,13 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
     <tr>
       <td>
         <div
-          class="theme-default v-snackbar skin-warning"
+          class="v-snackbar theme-default skin-warning"
         >
           <div
             class="v-snackbar-container"
           >
             <svg
-              class="svg-atom v-snackbar-left-side theme-default"
+              class="svg-atom v-snackbar-icon theme-default"
               height="100%"
               width="100%"
             >
@@ -10673,13 +10673,13 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
             <div
               class="v-snackbar-right-side"
             >
-              <div
+              <button
                 class="v-snackbar-close-button"
               >
                 <svg
                   class="svg-atom theme-default"
-                  height="100%"
-                  width="100%"
+                  height="10px"
+                  width="10px"
                 >
                   <use
                     x="0"
@@ -10687,7 +10687,7 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
                     y="0"
                   />
                 </svg>
-              </div>
+              </button>
             </div>
           </div>
            
@@ -10699,13 +10699,13 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
     <tr>
       <td>
         <div
-          class="theme-default v-snackbar skin-time"
+          class="v-snackbar theme-default skin-time"
         >
           <div
             class="v-snackbar-container"
           >
             <svg
-              class="svg-atom v-snackbar-left-side theme-default"
+              class="svg-atom v-snackbar-icon theme-default"
               height="100%"
               width="100%"
             >
@@ -10738,13 +10738,13 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
             <div
               class="v-snackbar-right-side"
             >
-              <div
+              <button
                 class="v-snackbar-close-button"
               >
                 <svg
                   class="svg-atom theme-default"
-                  height="100%"
-                  width="100%"
+                  height="10px"
+                  width="10px"
                 >
                   <use
                     x="0"
@@ -10752,7 +10752,7 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
                     y="0"
                   />
                 </svg>
-              </div>
+              </button>
             </div>
           </div>
            
@@ -10764,13 +10764,13 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
     <tr>
       <td>
         <div
-          class="theme-default v-snackbar skin-error"
+          class="v-snackbar theme-default skin-error"
         >
           <div
             class="v-snackbar-container"
           >
             <svg
-              class="svg-atom v-snackbar-left-side theme-default"
+              class="svg-atom v-snackbar-icon theme-default"
               height="100%"
               width="100%"
             >
@@ -10803,13 +10803,13 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
             <div
               class="v-snackbar-right-side"
             >
-              <div
+              <button
                 class="v-snackbar-close-button"
               >
                 <svg
                   class="svg-atom theme-default"
-                  height="100%"
-                  width="100%"
+                  height="10px"
+                  width="10px"
                 >
                   <use
                     x="0"
@@ -10817,7 +10817,7 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
                     y="0"
                   />
                 </svg>
-              </div>
+              </button>
             </div>
           </div>
            
@@ -10829,13 +10829,13 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
     <tr>
       <td>
         <div
-          class="theme-default v-snackbar skin-success"
+          class="v-snackbar theme-default skin-success"
         >
           <div
             class="v-snackbar-container"
           >
             <svg
-              class="svg-atom v-snackbar-left-side theme-default"
+              class="svg-atom v-snackbar-icon theme-default"
               height="100%"
               width="100%"
             >
@@ -10870,13 +10870,13 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
             <div
               class="v-snackbar-right-side"
             >
-              <div
+              <button
                 class="v-snackbar-close-button"
               >
                 <svg
                   class="svg-atom theme-default"
-                  height="100%"
-                  width="100%"
+                  height="10px"
+                  width="10px"
                 >
                   <use
                     x="0"
@@ -10884,7 +10884,7 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
                     y="0"
                   />
                 </svg>
-              </div>
+              </button>
             </div>
           </div>
            
@@ -10896,7 +10896,7 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
     <tr>
       <td>
         <div
-          class="theme-default v-snackbar skin-none"
+          class="v-snackbar theme-default skin-none"
         >
           <div
             class="v-snackbar-container"
@@ -10918,13 +10918,13 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
             <div
               class="v-snackbar-right-side"
             >
-              <div
+              <button
                 class="v-snackbar-close-button"
               >
                 <svg
                   class="svg-atom theme-default"
-                  height="100%"
-                  width="100%"
+                  height="10px"
+                  width="10px"
                 >
                   <use
                     x="0"
@@ -10932,7 +10932,7 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
                     y="0"
                   />
                 </svg>
-              </div>
+              </button>
             </div>
           </div>
            

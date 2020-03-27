@@ -1,9 +1,12 @@
 <template>
-  <div :class="cssClasses">
+  <div
+    class="v-snackbar"
+    :class="cssClasses"
+  >
     <div class="v-snackbar-container">
       <svg-atom
         v-if="icon"
-        class="v-snackbar-left-side"
+        class="v-snackbar-icon"
         :name="icon"
       />
       <div class="v-snackbar-content">
@@ -15,16 +18,17 @@
       >
         <slot name="control" />
       </div>
-      <div
-        class="v-snackbar-right-side"
-        @click="onClose"
-      >
-        <div
+      <div class="v-snackbar-right-side">
+        <button
           class="v-snackbar-close-button"
           @click="onClose"
         >
-          <svg-atom name="close" />
-        </div>
+          <svg-atom
+            name="close"
+            width="10px"
+            height="10px"
+          />
+        </button>
       </div>
     </div>
     <div
@@ -40,7 +44,7 @@
 import ThemeMixin from '@/mixins/ThemeMixin';
 import SvgAtom from '@/atom/svg-atom/svg-atom';
 
-const SKIN_TO_ICON = {
+const ICONS_BY_SKIN = {
   warning: 'circle-warning',
   error: 'circle-minus',
   success: 'circle-mark',
@@ -67,16 +71,15 @@ export default {
 
   computed: {
     icon() {
-      return SKIN_TO_ICON[this.skin];
+      return ICONS_BY_SKIN[this.skin];
     },
 
     cssClasses() {
-      return [
-        this.themeCssClass,
-        'v-snackbar',
-        { 'is-multiline': this.isMultiLine },
-        `skin-${this.skin}`,
-      ];
+      return {
+        ...this.themeCssClass,
+        'is-multiline': this.isMultiLine,
+        [`skin-${this.skin}`]: true,
+      };
     },
   },
 

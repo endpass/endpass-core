@@ -8,7 +8,7 @@
   border-radius: 4px;
 }
 
-.v-snackbar.theme-default .v-snackbar-left-side {
+.v-snackbar.theme-default .v-snackbar-icon {
   width: 16px;
   height: 16px;
   margin-right: 10px;
@@ -16,19 +16,19 @@
   margin-top: 2px;
 }
 
-.v-snackbar.theme-default.skin-warning .v-snackbar-left-side {
+.v-snackbar.theme-default.skin-warning .v-snackbar-icon {
   color: var(--endpass-ui-color-warning-secondary);
 }
 
-.v-snackbar.theme-default.skin-error .v-snackbar-left-side {
+.v-snackbar.theme-default.skin-error .v-snackbar-icon {
   color: var(--endpass-ui-color-error);
 }
 
-.v-snackbar.theme-default.skin-success .v-snackbar-left-side {
+.v-snackbar.theme-default.skin-success .v-snackbar-icon {
   color: var(--endpass-ui-color-success);
 }
 
-.v-snackbar.theme-default.skin-time .v-snackbar-left-side {
+.v-snackbar.theme-default.skin-time .v-snackbar-icon {
   color: var(--endpass-ui-color-primary-3);
 }
 
@@ -50,19 +50,14 @@
 
 .v-snackbar.theme-default .v-snackbar-close-button {
   cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  display: flex;
+  border: none;
+  background-color: transparent;
   position: absolute;
   width: 32px;
   height: 32px;
   top: -6px;
   right: -10px;
-}
-
-.v-snackbar.theme-default .v-snackbar-right-side .svg-atom {
-  width: 10px;
-  height: 10px;
+  color: var(--endpass-ui-color-white);
 }
 
 .v-snackbar.theme-default .v-snackbar-controls {
