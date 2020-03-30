@@ -10481,7 +10481,9 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
-  <table>
+  <table
+    style="max-width: 400px;"
+  >
     <tr>
       <td>
         
@@ -10498,17 +10500,21 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
           <div
             class="v-snackbar-container"
           >
-            <svg
-              class="svg-atom v-snackbar-icon theme-default"
-              height="100%"
-              width="100%"
+            <div
+              class="v-snackbar-icon"
             >
-              <use
-                x="0"
-                xlink:href="#endpass-ui-icon-circle-warning"
-                y="0"
-              />
-            </svg>
+              <svg
+                class="svg-atom theme-default"
+                height="16px"
+                width="16px"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-circle-warning"
+                  y="0"
+                />
+              </svg>
+            </div>
              
             <div
               class="v-snackbar-content"
@@ -10566,17 +10572,21 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
           <div
             class="v-snackbar-container"
           >
-            <svg
-              class="svg-atom v-snackbar-icon theme-default"
-              height="100%"
-              width="100%"
+            <div
+              class="v-snackbar-icon"
             >
-              <use
-                x="0"
-                xlink:href="#endpass-ui-icon-circle-warning"
-                y="0"
-              />
-            </svg>
+              <svg
+                class="svg-atom theme-default"
+                height="16px"
+                width="16px"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-circle-warning"
+                  y="0"
+                />
+              </svg>
+            </div>
              
             <div
               class="v-snackbar-content"
@@ -10639,23 +10649,27 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
           <div
             class="v-snackbar-container"
           >
-            <svg
-              class="svg-atom v-snackbar-icon theme-default"
-              height="100%"
-              width="100%"
+            <div
+              class="v-snackbar-icon"
             >
-              <use
-                x="0"
-                xlink:href="#endpass-ui-icon-circle-warning"
-                y="0"
-              />
-            </svg>
+              <svg
+                class="svg-atom theme-default"
+                height="16px"
+                width="16px"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-circle-warning"
+                  y="0"
+                />
+              </svg>
+            </div>
              
             <div
               class="v-snackbar-content"
             >
               
-              One line text with one actions
+              One line text with one action line text one action text with one action
               
             </div>
              
@@ -10704,17 +10718,21 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
           <div
             class="v-snackbar-container"
           >
-            <svg
-              class="svg-atom v-snackbar-icon theme-default"
-              height="100%"
-              width="100%"
+            <div
+              class="v-snackbar-icon"
             >
-              <use
-                x="0"
-                xlink:href="#endpass-ui-icon-circle-time"
-                y="0"
-              />
-            </svg>
+              <svg
+                class="svg-atom theme-default"
+                height="16px"
+                width="16px"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-circle-time"
+                  y="0"
+                />
+              </svg>
+            </div>
              
             <div
               class="v-snackbar-content"
@@ -10769,17 +10787,21 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
           <div
             class="v-snackbar-container"
           >
-            <svg
-              class="svg-atom v-snackbar-icon theme-default"
-              height="100%"
-              width="100%"
+            <div
+              class="v-snackbar-icon"
             >
-              <use
-                x="0"
-                xlink:href="#endpass-ui-icon-circle-minus"
-                y="0"
-              />
-            </svg>
+              <svg
+                class="svg-atom theme-default"
+                height="16px"
+                width="16px"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-circle-minus"
+                  y="0"
+                />
+              </svg>
+            </div>
              
             <div
               class="v-snackbar-content"
@@ -10834,17 +10856,21 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
           <div
             class="v-snackbar-container"
           >
-            <svg
-              class="svg-atom v-snackbar-icon theme-default"
-              height="100%"
-              width="100%"
+            <div
+              class="v-snackbar-icon"
             >
-              <use
-                x="0"
-                xlink:href="#endpass-ui-icon-circle-mark"
-                y="0"
-              />
-            </svg>
+              <svg
+                class="svg-atom theme-default"
+                height="16px"
+                width="16px"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-circle-mark"
+                  y="0"
+                />
+              </svg>
+            </div>
              
             <div
               class="v-snackbar-content"

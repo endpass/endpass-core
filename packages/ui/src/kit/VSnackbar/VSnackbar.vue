@@ -4,11 +4,16 @@
     :class="cssClasses"
   >
     <div class="v-snackbar-container">
-      <svg-atom
+      <div
         v-if="icon"
         class="v-snackbar-icon"
-        :name="icon"
-      />
+      >
+        <svg-atom
+          width="16px"
+          height="16px"
+          :name="icon"
+        />
+      </div>
       <div class="v-snackbar-content">
         <slot />
       </div>

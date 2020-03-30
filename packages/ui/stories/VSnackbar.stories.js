@@ -18,7 +18,7 @@ storiesOf('VSnackbar/desktop', module).add('default', () => ({
   },
   template: `
     <theme-provider>
-      <table>
+      <table style="max-width: 400px;">
         <tr>
           <td>
             Links
@@ -69,7 +69,7 @@ storiesOf('VSnackbar/desktop', module).add('default', () => ({
               skin="warning"
               @close="onClose"
             >
-              One line text with one actions
+              One line text with one action line text one action text with one action
               <v-snackbar-link
                 slot="control"
                 @click="onAction"
