@@ -10523,7 +10523,7 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
             <!---->
              
             <div
-              class="v-snackbar-right-side"
+              class="v-snackbar-close"
             >
               <button
                 class="v-snackbar-close-button"
@@ -10606,7 +10606,7 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
             </div>
              
             <div
-              class="v-snackbar-right-side"
+              class="v-snackbar-close"
             >
               <button
                 class="v-snackbar-close-button"
@@ -10671,7 +10671,7 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
             </div>
              
             <div
-              class="v-snackbar-right-side"
+              class="v-snackbar-close"
             >
               <button
                 class="v-snackbar-close-button"
@@ -10736,7 +10736,7 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
             </div>
              
             <div
-              class="v-snackbar-right-side"
+              class="v-snackbar-close"
             >
               <button
                 class="v-snackbar-close-button"
@@ -10801,7 +10801,7 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
             </div>
              
             <div
-              class="v-snackbar-right-side"
+              class="v-snackbar-close"
             >
               <button
                 class="v-snackbar-close-button"
@@ -10868,7 +10868,7 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
             </div>
              
             <div
-              class="v-snackbar-right-side"
+              class="v-snackbar-close"
             >
               <button
                 class="v-snackbar-close-button"
@@ -10916,7 +10916,7 @@ exports[`Storyshots VSnackbar/desktop default 1`] = `
             />
              
             <div
-              class="v-snackbar-right-side"
+              class="v-snackbar-close"
             >
               <button
                 class="v-snackbar-close-button"

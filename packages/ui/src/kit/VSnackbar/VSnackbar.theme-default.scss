@@ -1,6 +1,4 @@
 .v-snackbar.theme-default {
-  display: flex;
-  flex-direction: column;
   background-color: var(--endpass-ui-color-black-1);
   color: var(--endpass-ui-color-white);
   box-shadow: 0 3px 4px rgba(17, 22, 26, 0.2), 0 1px 5px rgba(17, 22, 26, 0.12), 0 6px 6px rgba(17, 22, 26, 0.14);
@@ -42,7 +40,7 @@
   margin-right: 23px;
 }
 
-.v-snackbar.theme-default .v-snackbar-right-side {
+.v-snackbar.theme-default .v-snackbar-close {
   margin-left: 26px;
   margin-bottom: auto;
   position: relative;
@@ -67,18 +65,13 @@
 
 .v-snackbar.theme-default.is-multiline .v-snackbar-controls {
   display: flex;
-  margin-left: auto;
-  margin-right: 0;
+  justify-content: flex-end;
   margin-top: 10px;
 }
-.v-snackbar.theme-default.is-multiline .v-snackbar-right-side {
+.v-snackbar.theme-default.is-multiline .v-snackbar-close {
   margin-left: auto;
 }
 
-.v-snackbar.theme-default .v-snackbar-controls > * {
+.v-snackbar.theme-default .v-snackbar-controls > *:not(:last-child) {
   margin-right: 16px;
-}
-
-.v-snackbar.theme-default .v-snackbar-controls > *:last-child {
-  margin-right: 0;
 }

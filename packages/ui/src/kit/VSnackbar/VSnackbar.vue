@@ -18,7 +18,7 @@
       >
         <slot name="control" />
       </div>
-      <div class="v-snackbar-right-side">
+      <div class="v-snackbar-close">
         <button
           class="v-snackbar-close-button"
           @click="onClose"
