@@ -1,8 +1,14 @@
 <template>
   <outside-click-atom @click="onClickOutside">
     <close-by-key-atom @close="onESCPress">
-      <section :class="vNavSubMenuCssClass" class="v-nav-sub-menu">
-        <navigation-control-atom :skin="skin" @click="handleOpenContent">
+      <section
+        :class="vNavSubMenuCssClass"
+        class="v-nav-sub-menu"
+      >
+        <navigation-control-atom
+          :skin="skin"
+          @click="handleOpenContent"
+        >
           {{ label }}
           <i class="v-nav-sub-menu-icon">
             <svg-atom :name="currentIcon" />
