@@ -1,11 +1,11 @@
-.v-radio.theme-default.is-disabled {
-  cursor: default;
-}
-
-.v-radio-wrapper.theme-default {
+.v-radio.theme-default {
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+
+.v-radio.theme-default.is-disabled {
+  cursor: default;
 }
 
 .v-radio.theme-default .v-radio-input {
@@ -62,4 +62,7 @@
   border-color: var(--endpass-ui-color-error);
 }
 
-
+.v-radio.theme-default .tooltip-molecule-icon {
+  vertical-align: top;
+  margin-top: 2px;
+}

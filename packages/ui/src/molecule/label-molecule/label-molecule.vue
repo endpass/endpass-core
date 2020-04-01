@@ -4,7 +4,6 @@
     :label="label"
     :disabled="disabled"
   >
-    <slot />
     <hover-atom
       v-if="tooltipLabel"
       v-slot:default="{ isHover }"

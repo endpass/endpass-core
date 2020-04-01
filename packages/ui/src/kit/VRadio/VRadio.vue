@@ -1,29 +1,29 @@
 <template>
-  <div :class="vRadioCssClass">
-    <label-molecule
-      class="v-radio-wrapper"
-      :tooltip-label="tooltipLabel"
+  <label :class="vRadioCssClass">
+    <input
+      v-bind="$attrs"
+      :checked="value === modelValue"
+      type="radio"
+      class="v-radio-input"
+      @input="onInputChange"
     >
-      <input
-        v-bind="$attrs"
-        :checked="value === modelValue"
-        type="radio"
-        class="v-radio-input"
-        @input="onInputChange"
-      >
-      <span class="v-radio-box" />
-      <span
-        v-if="$slots.default"
-        class="v-radio-label"
-      >
-        <slot />
-      </span>
-    </label-molecule>
-  </div>
+    <span class="v-radio-box" />
+    <span
+      v-if="$slots.default"
+      class="v-radio-label"
+    >
+      <slot />
+    </span>
+    <tooltip-molecule
+      :label="tooltipLabel"
+      :disabled="true"
+      v-bind="$attrs"
+    />
+  </label>
 </template>
 
 <script>
-import LabelMolecule from '@/molecule/label-molecule/label-molecule';
+import TooltipMolecule from '@/molecule/tooltip-molecule/tooltip-molecule';
 import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
@@ -71,7 +71,7 @@ export default {
   mixins: [ThemeMixin],
 
   components: {
-    LabelMolecule,
+    TooltipMolecule,
   },
 
   model: {

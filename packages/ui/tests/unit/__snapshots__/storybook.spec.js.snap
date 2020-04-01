@@ -4197,7 +4197,7 @@ exports[`Storyshots VDateInput/desktop default 1`] = `
               >
                 
   label of date
-   
+  
                 <div
                   class="label-molecule-tooltip theme-default"
                 >
@@ -4862,7 +4862,7 @@ exports[`Storyshots VFileDropArea/desktop tooltip 1`] = `
       >
         
   Multiple files
-   
+  
         <div
           class="label-molecule-tooltip theme-default"
         >
@@ -5071,7 +5071,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
             >
               
   Single file
-   
+  
               <div
                 class="label-molecule-tooltip theme-default"
               >
@@ -5856,7 +5856,7 @@ exports[`Storyshots VInput/desktop primary 1`] = `
             >
               
   Label
-   
+  
               <div
                 class="label-molecule-tooltip theme-default"
               >
@@ -6083,7 +6083,7 @@ exports[`Storyshots VInput/desktop secondary 1`] = `
             >
               
   Label
-   
+  
               <div
                 class="label-molecule-tooltip theme-default"
               >
@@ -6499,7 +6499,7 @@ exports[`Storyshots VLabel/desktop default 1`] = `
           >
             
   Label text
-   
+  
             <div
               class="label-molecule-tooltip theme-default"
             >
@@ -6559,7 +6559,7 @@ exports[`Storyshots VLabel/desktop default 1`] = `
           >
             
   Disabled label
-   
+  
             <div
               class="label-molecule-tooltip theme-default"
             >
@@ -9155,101 +9155,112 @@ exports[`Storyshots VRadio/desktop default 1`] = `
     State: foo
   </span>
    
-  <div
+  <label
     class="theme-default v-radio"
     name="value"
   >
-    <label
-      class="label-atom label-molecule v-radio-wrapper theme-default"
+    <input
+      class="v-radio-input"
+      name="value"
+      type="radio"
+    />
+     
+    <span
+      class="v-radio-box"
+    />
+     
+    <span
+      class="v-radio-label"
     >
       
-  
-  
-      <input
-        class="v-radio-input"
-        name="value"
-        type="radio"
-      />
-       
-      <span
-        class="v-radio-box"
-      />
-       
-      <span
-        class="v-radio-label"
-      >
-        
         Foo
       
-      </span>
-       
-      <!---->
-    </label>
-  </div>
+    </span>
+     
+    <!---->
+  </label>
    
-  <div
+  <label
     class="theme-default v-radio"
     name="value"
   >
-    <label
-      class="label-atom label-molecule v-radio-wrapper theme-default"
+    <input
+      class="v-radio-input"
+      name="value"
+      type="radio"
+    />
+     
+    <span
+      class="v-radio-box"
+    />
+     
+    <span
+      class="v-radio-label"
     >
       
-  
-  
-      <input
-        class="v-radio-input"
-        name="value"
-        type="radio"
-      />
-       
-      <span
-        class="v-radio-box"
-      />
-       
-      <span
-        class="v-radio-label"
-      >
-        
         Bar
       
-      </span>
-       
-      <!---->
-    </label>
-  </div>
+    </span>
+     
+    <!---->
+  </label>
    
-  <div
+  <label
     class="theme-default v-radio"
     name="value"
   >
-    <label
-      class="label-atom label-molecule v-radio-wrapper theme-default"
+    <input
+      class="v-radio-input"
+      name="value"
+      type="radio"
+    />
+     
+    <span
+      class="v-radio-box"
+    />
+     
+    <span
+      class="v-radio-label"
     >
       
-  
-  
-      <input
-        class="v-radio-input"
-        name="value"
-        type="radio"
-      />
-       
-      <span
-        class="v-radio-box"
-      />
-       
-      <span
-        class="v-radio-label"
-      >
-        
         Baz
       
-      </span>
+    </span>
+     
+    <div
+      class="tooltip-molecule theme-default"
+      name="value"
+    >
+      <div
+        class="tooltip-atom theme-default position-bottom-left"
+        style="display: none;"
+      >
+        <div
+          class="tooltip-atom-container"
+        >
+          
+    with tooltip
+  
+        </div>
+      </div>
        
-      <!---->
-    </label>
-  </div>
+      <i
+        class="icon-atom tooltip-molecule-icon theme-default"
+      >
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-info"
+            y="0"
+          />
+        </svg>
+      </i>
+    </div>
+  </label>
 </div>
 `;
 
@@ -9263,107 +9274,118 @@ exports[`Storyshots VRadio/desktop disabled 1`] = `
     State: foo
   </span>
    
-  <div
+  <label
     class="theme-default v-radio is-disabled"
     disabled="disabled"
     name="value"
   >
-    <label
-      class="label-atom label-molecule v-radio-wrapper theme-default"
+    <input
+      class="v-radio-input"
+      disabled="disabled"
+      name="value"
+      type="radio"
+    />
+     
+    <span
+      class="v-radio-box"
+    />
+     
+    <span
+      class="v-radio-label"
     >
       
-  
-  
-      <input
-        class="v-radio-input"
-        disabled="disabled"
-        name="value"
-        type="radio"
-      />
-       
-      <span
-        class="v-radio-box"
-      />
-       
-      <span
-        class="v-radio-label"
-      >
-        
         Foo
       
-      </span>
-       
-      <!---->
-    </label>
-  </div>
+    </span>
+     
+    <!---->
+  </label>
    
-  <div
+  <label
     class="theme-default v-radio is-disabled"
     disabled="disabled"
     name="value"
   >
-    <label
-      class="label-atom label-molecule v-radio-wrapper theme-default"
+    <input
+      class="v-radio-input"
+      disabled="disabled"
+      name="value"
+      type="radio"
+    />
+     
+    <span
+      class="v-radio-box"
+    />
+     
+    <span
+      class="v-radio-label"
     >
       
-  
-  
-      <input
-        class="v-radio-input"
-        disabled="disabled"
-        name="value"
-        type="radio"
-      />
-       
-      <span
-        class="v-radio-box"
-      />
-       
-      <span
-        class="v-radio-label"
-      >
-        
         Bar
       
-      </span>
-       
-      <!---->
-    </label>
-  </div>
+    </span>
+     
+    <!---->
+  </label>
    
-  <div
+  <label
     class="theme-default v-radio is-disabled"
     disabled="disabled"
     name="value"
   >
-    <label
-      class="label-atom label-molecule v-radio-wrapper theme-default"
+    <input
+      class="v-radio-input"
+      disabled="disabled"
+      name="value"
+      type="radio"
+    />
+     
+    <span
+      class="v-radio-box"
+    />
+     
+    <span
+      class="v-radio-label"
     >
       
-  
-  
-      <input
-        class="v-radio-input"
-        disabled="disabled"
-        name="value"
-        type="radio"
-      />
-       
-      <span
-        class="v-radio-box"
-      />
-       
-      <span
-        class="v-radio-label"
-      >
-        
         Baz
       
-      </span>
+    </span>
+     
+    <div
+      class="tooltip-molecule theme-default"
+      name="value"
+    >
+      <div
+        class="tooltip-atom theme-default position-bottom-left"
+        style="display: none;"
+      >
+        <div
+          class="tooltip-atom-container"
+        >
+          
+    with tooltip
+  
+        </div>
+      </div>
        
-      <!---->
-    </label>
-  </div>
+      <i
+        class="icon-atom tooltip-molecule-icon theme-default"
+      >
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-info"
+            y="0"
+          />
+        </svg>
+      </i>
+    </div>
+  </label>
 </div>
 `;
 
@@ -9377,304 +9399,112 @@ exports[`Storyshots VRadio/desktop error 1`] = `
     State: foo
   </span>
    
-  <div
+  <label
     class="theme-default v-radio is-error"
     name="value"
   >
-    <label
-      class="label-atom label-molecule v-radio-wrapper theme-default"
+    <input
+      class="v-radio-input"
+      name="value"
+      type="radio"
+    />
+     
+    <span
+      class="v-radio-box"
+    />
+     
+    <span
+      class="v-radio-label"
     >
       
-  
-  
-      <input
-        class="v-radio-input"
-        name="value"
-        type="radio"
-      />
-       
-      <span
-        class="v-radio-box"
-      />
-       
-      <span
-        class="v-radio-label"
-      >
-        
         Foo
       
-      </span>
-       
-      <!---->
-    </label>
-  </div>
+    </span>
+     
+    <!---->
+  </label>
    
-  <div
+  <label
     class="theme-default v-radio is-error"
     name="value"
   >
-    <label
-      class="label-atom label-molecule v-radio-wrapper theme-default"
+    <input
+      class="v-radio-input"
+      name="value"
+      type="radio"
+    />
+     
+    <span
+      class="v-radio-box"
+    />
+     
+    <span
+      class="v-radio-label"
     >
       
-  
-  
-      <input
-        class="v-radio-input"
-        name="value"
-        type="radio"
-      />
-       
-      <span
-        class="v-radio-box"
-      />
-       
-      <span
-        class="v-radio-label"
-      >
-        
         Bar
       
-      </span>
-       
-      <!---->
-    </label>
-  </div>
+    </span>
+     
+    <!---->
+  </label>
    
-  <div
+  <label
     class="theme-default v-radio is-error"
     name="value"
   >
-    <label
-      class="label-atom label-molecule v-radio-wrapper theme-default"
+    <input
+      class="v-radio-input"
+      name="value"
+      type="radio"
+    />
+     
+    <span
+      class="v-radio-box"
+    />
+     
+    <span
+      class="v-radio-label"
     >
       
-  
-  
-      <input
-        class="v-radio-input"
-        name="value"
-        type="radio"
-      />
-       
-      <span
-        class="v-radio-box"
-      />
-       
-      <span
-        class="v-radio-label"
-      >
-        
         Baz
       
-      </span>
-       
-      <!---->
-    </label>
-  </div>
-</div>
-`;
-
-exports[`Storyshots VRadio/desktop tooltip 1`] = `
-<div>
-  <div
-    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  />
-   
-  <span>
-    State: foo
-  </span>
-   
-  <div
-    class="theme-default v-radio"
-    name="value"
-  >
-    <label
-      class="label-atom label-molecule v-radio-wrapper theme-default"
+    </span>
+     
+    <div
+      class="tooltip-molecule theme-default"
+      name="value"
     >
-      
-  
-  
-      <input
-        class="v-radio-input"
-        name="value"
-        type="radio"
-      />
-       
-      <span
-        class="v-radio-box"
-      />
-       
-      <span
-        class="v-radio-label"
-      >
-        
-        Common
-      
-      </span>
-       
       <div
-        class="label-molecule-tooltip theme-default"
+        class="tooltip-atom theme-default position-bottom-left"
+        style="display: none;"
       >
         <div
-          class="tooltip-atom theme-default position-bottom-left"
-          style="display: none;"
+          class="tooltip-atom-container"
         >
-          <div
-            class="tooltip-atom-container"
-          >
-            
-      lorem ipsum dolor sit amet
-    
-          </div>
+          
+    with tooltip
+  
         </div>
-         
-        <i
-          class="icon-atom label-molecule-icon theme-default"
-        >
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-info"
-              y="0"
-            />
-          </svg>
-        </i>
       </div>
-    </label>
-  </div>
-   
-  <div
-    class="theme-default v-radio is-disabled"
-    disabled="disabled"
-    name="value"
-  >
-    <label
-      class="label-atom label-molecule v-radio-wrapper theme-default"
-    >
-      
-  
-  
-      <input
-        class="v-radio-input"
-        disabled="disabled"
-        name="value"
-        type="radio"
-      />
        
-      <span
-        class="v-radio-box"
-      />
-       
-      <span
-        class="v-radio-label"
+      <i
+        class="icon-atom tooltip-molecule-icon theme-default"
       >
-        
-        Disabled with tooltip
-      
-      </span>
-       
-      <div
-        class="label-molecule-tooltip theme-default"
-      >
-        <div
-          class="tooltip-atom theme-default position-bottom-left"
-          style="display: none;"
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
         >
-          <div
-            class="tooltip-atom-container"
-          >
-            
-      lorem ipsum dolor sit amet
-    
-          </div>
-        </div>
-         
-        <i
-          class="icon-atom label-molecule-icon theme-default"
-        >
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-info"
-              y="0"
-            />
-          </svg>
-        </i>
-      </div>
-    </label>
-  </div>
-   
-  <div
-    class="theme-default v-radio is-error"
-    name="value"
-  >
-    <label
-      class="label-atom label-molecule v-radio-wrapper theme-default"
-    >
-      
-  
-  
-      <input
-        class="v-radio-input"
-        name="value"
-        type="radio"
-      />
-       
-      <span
-        class="v-radio-box"
-      />
-       
-      <span
-        class="v-radio-label"
-      >
-        
-        Errored with tooltip
-      
-      </span>
-       
-      <div
-        class="label-molecule-tooltip theme-default"
-      >
-        <div
-          class="tooltip-atom theme-default position-bottom-left"
-          style="display: none;"
-        >
-          <div
-            class="tooltip-atom-container"
-          >
-            
-      lorem ipsum dolor sit amet
-    
-          </div>
-        </div>
-         
-        <i
-          class="icon-atom label-molecule-icon theme-default"
-        >
-          <svg
-            class="svg-atom theme-default"
-            height="100%"
-            width="100%"
-          >
-            <use
-              x="0"
-              xlink:href="#endpass-ui-icon-info"
-              y="0"
-            />
-          </svg>
-        </i>
-      </div>
-    </label>
-  </div>
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-info"
+            y="0"
+          />
+        </svg>
+      </i>
+    </div>
+  </label>
 </div>
 `;
 
@@ -10358,7 +10188,7 @@ exports[`Storyshots VSelect/desktop tooltip 1`] = `
             >
               
   Label
-   
+  
               <div
                 class="label-molecule-tooltip theme-default"
               >
@@ -10442,7 +10272,7 @@ exports[`Storyshots VSelect/desktop tooltip 1`] = `
             >
               
   Label
-   
+  
               <div
                 class="label-molecule-tooltip theme-default"
               >
@@ -14948,7 +14778,7 @@ exports[`Storyshots VTextarea/desktop default 1`] = `
             >
               
   Label
-   
+  
               <div
                 class="label-molecule-tooltip theme-default"
               >
