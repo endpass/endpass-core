@@ -117,4 +117,45 @@ storiesOf('VRadio/desktop', module)
       </v-radio>
     </theme-provider>
   `,
+  }))
+  .add('tooltip', () => ({
+    methods,
+    components: { VRadio },
+    data() {
+      return {
+        state: 'foo',
+        tooltip: 'lorem ipsum dolor sit amet',
+      };
+    },
+    template: `
+    <theme-provider>
+      <span>State: {{state}}</span>
+      <v-radio
+        v-model="state"
+        name="value"
+        value="foo"
+        :tooltip-label="tooltip"
+      >
+        Common
+      </v-radio>
+      <v-radio
+        v-model="state"
+        name="value"
+        value="bar"
+        :disabled="true"
+        :tooltip-label="tooltip"
+      >
+        Disabled with tooltip
+      </v-radio>
+      <v-radio
+        v-model="state"
+        name="value"
+        value="baz"
+        :is-error="true"
+        :tooltip-label="tooltip"
+      >
+        Errored with tooltip
+      </v-radio>
+    </theme-provider>
+  `,
   }));

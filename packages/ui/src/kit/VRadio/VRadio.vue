@@ -1,23 +1,25 @@
 <template>
-  <label-molecule
-    :class="vRadioCssClass"
-    :tooltip-label="tooltipLabel"
-  >
-    <input
-      v-bind="$attrs"
-      :checked="value === modelValue"
-      type="radio"
-      class="v-radio-input"
-      @input="onInputChange"
+  <div :class="vRadioCssClass">
+    <label-molecule
+      class="v-radio-wrapper"
+      :tooltip-label="tooltipLabel"
     >
-    <span class="v-radio-box" />
-    <span
-      v-if="$slots.default"
-      class="v-radio-label"
-    >
-      <slot />
-    </span>
-  </label-molecule>
+      <input
+        v-bind="$attrs"
+        :checked="value === modelValue"
+        type="radio"
+        class="v-radio-input"
+        @input="onInputChange"
+      >
+      <span class="v-radio-box" />
+      <span
+        v-if="$slots.default"
+        class="v-radio-label"
+      >
+        <slot />
+      </span>
+    </label-molecule>
+  </div>
 </template>
 
 <script>

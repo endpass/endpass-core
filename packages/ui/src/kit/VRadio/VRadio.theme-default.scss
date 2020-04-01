@@ -1,11 +1,11 @@
-.v-radio.theme-default {
+.v-radio.theme-default.is-disabled {
+  cursor: default;
+}
+
+.v-radio-wrapper.theme-default {
   display: flex;
   align-items: center;
   cursor: pointer;
-}
-
-.v-radio.theme-default.is-disabled {
-  cursor: default;
 }
 
 .v-radio.theme-default .v-radio-input {
@@ -13,7 +13,7 @@
 }
 
 .v-radio.theme-default .v-radio-label {
-  flex: 1 1 auto;
+  flex-basis: auto;
   font-size: 14px;
   line-height: 1.4;
   margin-top: 2px;
