@@ -1,5 +1,8 @@
 <template>
-  <label :class="vRadioCssClass">
+  <label-molecule
+    :class="vRadioCssClass"
+    :tooltip-label="tooltipLabel"
+  >
     <input
       v-bind="$attrs"
       :checked="value === modelValue"
@@ -14,10 +17,11 @@
     >
       <slot />
     </span>
-  </label>
+  </label-molecule>
 </template>
 
 <script>
+import LabelMolecule from '@/molecule/label-molecule/label-molecule';
 import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
@@ -30,6 +34,11 @@ export default {
     },
 
     modelValue: {
+      type: String,
+      default: null,
+    },
+
+    tooltipLabel: {
       type: String,
       default: null,
     },
@@ -58,6 +67,10 @@ export default {
   },
 
   mixins: [ThemeMixin],
+
+  components: {
+    LabelMolecule,
+  },
 
   model: {
     prop: 'modelValue',

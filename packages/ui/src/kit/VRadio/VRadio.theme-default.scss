@@ -18,6 +18,9 @@
   line-height: 1.4;
   margin-top: 2px;
 }
+.v-radio.theme-default .v-radio-label:not(:last-child) {
+  margin-right: 3px;
+}
 
 .v-radio.theme-default .v-radio-box {
   flex: 0 0 18px;
@@ -35,8 +38,8 @@
   content: '';
   display: block;
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 4px;
+  left: 4px;
   width: 8px;
   height: 8px;
   background-color: var(--endpass-ui-color-black);
