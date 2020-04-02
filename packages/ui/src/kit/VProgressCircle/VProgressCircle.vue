@@ -1,14 +1,16 @@
 <template>
   <field-atom
     class="v-progress-circle"
-    :class="themeCssClass"
+    :class="progressCircleCssClass"
   >
     <svg class="v-progress-circle-back">
       <circle
-        :r="$options.CIRCLE_PROPS.r"
-        :cx="$options.CIRCLE_PROPS.cx"
-        :cy="$options.CIRCLE_PROPS.cy"
-        :stroke-width="lineThickness"
+        :r="circleProps.r"
+        :cx="circleProps.cx"
+        :cy="circleProps.cy"
+        :stroke-width="circleProps.thickness"
+        :width="circleProps.size"
+        :height="circleProps.size"
       />
     </svg>
     <svg
@@ -16,10 +18,10 @@
       :style="{ strokeDasharray: strokeDasharray }"
     >
       <circle
-        :r="$options.CIRCLE_PROPS.r"
-        :cx="$options.CIRCLE_PROPS.cx"
-        :cy="$options.CIRCLE_PROPS.cy"
-        :stroke="$options.CIRCLE_PROPS.stroke"
+        :r="circleProps.r"
+        :cx="circleProps.cx"
+        :cy="circleProps.cy"
+        :stroke="$options.STROKE_COLOR"
         :stroke-width="lineThickness"
       />
     </svg>
@@ -46,17 +48,25 @@ const MIN_PROGRESS_VALUE = 1;
 const DEFAULT_VIEW_VALUE = 2;
 const MAX_VALUE = 100;
 
-const CIRCLE_PROPS = {
-  r: '30px',
-  cx: '41px',
-  cy: '41px',
-  stroke: '#6e32c9',
+const CIRCLE_PROPS_NORMAL = {
+  r: 30,
+  cx: 41,
+  cy: 41,
+  thickness: 4,
 };
+const CIRCLE_PROPS_SMALL = {
+  r: 6,
+  cx: 8.15,
+  cy: 8.15,
+  thickness: 2,
+};
+
+const STROKE_COLOR = '#6e32c9';
 
 export default {
   name: 'VProgressCircle',
 
-  CIRCLE_PROPS,
+  STROKE_COLOR,
 
   props: {
     progress: {
@@ -69,13 +79,34 @@ export default {
       default: false,
     },
 
-    lineThickness: {
-      type: [Number, String],
-      default: 4,
+    size: {
+      type: String,
+      default: 'normal',
+      validator(value) {
+        return ['normal', 'small'].indexOf(value) !== -1;
+      },
     },
   },
 
   computed: {
+    progressCircleCssClass() {
+      return {
+        ...this.themeCssClass,
+        [`size-${this.size}`]: true,
+      };
+    },
+
+    circleProps() {
+      switch (this.size) {
+        case 'small':
+          return CIRCLE_PROPS_SMALL;
+
+        case 'normal':
+        default:
+          return CIRCLE_PROPS_NORMAL;
+      }
+    },
+
     strokeDasharray() {
       const toStroke = Math.floor(
         (this.progressValue - 0) * (SIZE_DEFAULT_STROKE / 100),
@@ -101,7 +132,11 @@ export default {
     },
 
     isShowProgress() {
-      return this.isLabelVisible && this.progress >= MIN_PROGRESS_VALUE;
+      return (
+        this.size !== 'small' &&
+        this.isLabelVisible &&
+        this.progress >= MIN_PROGRESS_VALUE
+      );
     },
   },
 

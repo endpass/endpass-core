@@ -1,9 +1,9 @@
 <script>
-import IconButtonAtom from '@/molecule/icon-button-molecule/icon-button-molecule.vue';
+import IconButtonMolecule from '@/molecule/icon-button-molecule/icon-button-molecule';
 
 export default {
   name: 'VIconButton',
 
-  extends: IconButtonAtom,
+  extends: IconButtonMolecule,
 };
 </script>

@@ -1,7 +1,5 @@
 .v-progress-circle.theme-default {
   position: relative;
-  width: 82px;
-  height: 82px;
 }
 
 .v-progress-circle.theme-default .v-progress-circle-text {
@@ -20,14 +18,10 @@
   stroke-dasharray: 0, 188.4;
   position: relative;
   transform: rotate(-90deg);
-  width: 82px;
-  height: 82px;
 }
 
 .v-progress-circle.theme-default .v-progress-circle-back {
   position: absolute;
-  width: 82px;
-  height: 82px;
 }
 
 .v-progress-circle.theme-default circle {
@@ -36,4 +30,18 @@
 
 .v-progress-circle.theme-default .v-progress-circle-back circle {
   stroke: var(--endpass-ui-color-grey-3);
+}
+
+.v-progress-circle.theme-default.size-normal,
+.v-progress-circle.theme-default.size-normal .v-progress-circle-over,
+.v-progress-circle.theme-default.size-normal .v-progress-circle-back {
+  width: 82px;
+  height: 82px;
+}
+
+.v-progress-circle.theme-default.size-small,
+.v-progress-circle.theme-default.size-small .v-progress-circle-over,
+.v-progress-circle.theme-default.size-small .v-progress-circle-back {
+  width: 16px;
+  height: 16px;
 }

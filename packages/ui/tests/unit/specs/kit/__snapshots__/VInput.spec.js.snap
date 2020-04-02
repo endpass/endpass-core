@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`VInput render should correctly render component 1`] = `
-<field-atom-stub>
+<field-atom-stub
+  class="v-input"
+>
   <!---->
    
   <!---->
@@ -12,6 +14,10 @@ exports[`VInput render should correctly render component 1`] = `
     placeholder="placeholder"
     skin="primary"
   >
+    <!---->
+     
+    <!---->
+     
     <!---->
   </input-atom-stub>
    

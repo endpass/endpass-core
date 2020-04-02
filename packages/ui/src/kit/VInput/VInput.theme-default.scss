@@ -1,0 +1,29 @@
+.v-input.theme-default .v-input-reset-button {
+  line-height: 0;
+}
+.v-input.theme-default .v-input-reset-button svg {
+  vertical-align: sub;
+  color: var(--endpass-ui-color-grey-5);
+  transition: color 0.3s;
+}
+.v-input.theme-default .v-input-reset-button:hover svg {
+  color: var(--endpass-ui-color-grey-6);
+}
+
+.v-input.theme-default .v-input-reset-button,
+.v-input.theme-default .v-input-loader {
+  margin-right: 5px;
+}
+
+.v-input.theme-default .v-input-error-icon {
+  margin-right: 5px !important;
+}
+
+.v-input.theme-default .v-input-reset-button:last-child,
+.v-input.theme-default .v-input-loader:last-child {
+  margin-right: 16px;
+}
+
+.v-input.theme-default .v-input-error-icon:last-child {
+  margin-right: 16px !important;
+}

@@ -61,12 +61,58 @@ storiesOf('VInput/desktop', module)
             </tr>
             <tr><td colspan="2"><hr/></td></tr>
             <tr>
+              <td>loading</td>
+              <td>
+                <v-input
+                  v-model="model"
+                  :is-loading="true"
+                  style="width: 288px;"
+                  tooltip-label="hello this is tooltip data"
+                  placeholder="Placeholder text"
+                  :label="label"
+                  :description="description"
+                />
+              </td>
+            </tr>
+            <tr><td colspan="2"><hr/></td></tr>
+            <tr>
+              <td>resetable</td>
+              <td>
+                <v-input
+                  v-model="model"
+                  :is-resetable="true"
+                  style="width: 288px;"
+                  tooltip-label="hello this is tooltip data"
+                  placeholder="Placeholder text"
+                  :label="label"
+                  :description="description"
+                />
+              </td>
+            </tr>
+            <tr><td colspan="2"><hr/></td></tr>
+            <tr>
               <td>disabled</td>
               <td>
                 <v-input
                   v-model="model"
                   :disabled="true"
                   style="width: 288px;"
+                  placeholder="Placeholder text"
+                  :label="label"
+                  :description="description"
+                />
+              </td>
+            </tr>
+            <tr><td colspan="2"><hr/></td></tr>
+            <tr>
+              <td>disabled with resetable</td>
+              <td>
+                <v-input
+                  v-model="model"
+                  :disabled="true"
+                  :is-resetable="true"
+                  style="width: 288px;"
+                  tooltip-label="hello this is tooltip data"
                   placeholder="Placeholder text"
                   :label="label"
                   :description="description"
@@ -132,6 +178,38 @@ storiesOf('VInput/desktop', module)
             </tr>
             <tr><td colspan="2"><hr/></td></tr>
             <tr>
+              <td>loading</td>
+              <td>
+                <v-input
+                  v-model="model"
+                  :is-loading="true"
+                  skin="secondary"
+                  style="width: 288px;"
+                  tooltip-label="hello this is tooltip data"
+                  placeholder="Placeholder text"
+                  :label="label"
+                  :description="description"
+                />
+              </td>
+            </tr>
+            <tr><td colspan="2"><hr/></td></tr>
+            <tr>
+              <td>resetable</td>
+              <td>
+                <v-input
+                  v-model="model"
+                  :is-resetable="true"
+                  skin="secondary"
+                  style="width: 288px;"
+                  tooltip-label="hello this is tooltip data"
+                  placeholder="Placeholder text"
+                  :label="label"
+                  :description="description"
+                />
+              </td>
+            </tr>
+            <tr><td colspan="2"><hr/></td></tr>
+            <tr>
               <td>disabled</td>
               <td>
                 <v-input
@@ -139,6 +217,23 @@ storiesOf('VInput/desktop', module)
                   skin="secondary"
                   :disabled="true"
                   style="width: 288px;"
+                  placeholder="Placeholder text"
+                  :label="label"
+                  :description="description"
+                />
+              </td>
+            </tr>
+            <tr><td colspan="2"><hr/></td></tr>
+            <tr>
+              <td>disabled with resetable</td>
+              <td>
+                <v-input
+                  v-model="model"
+                  :disabled="true"
+                  :is-resetable="true"
+                  skin="secondary"
+                  style="width: 288px;"
+                  tooltip-label="hello this is tooltip data"
                   placeholder="Placeholder text"
                   :label="label"
                   :description="description"

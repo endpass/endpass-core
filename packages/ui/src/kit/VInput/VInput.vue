@@ -1,5 +1,8 @@
 <template>
-  <field-atom>
+  <field-atom
+    class="v-input"
+    :class="themeCssClass"
+  >
     <label-molecule
       v-if="label"
       :label="label"
@@ -19,12 +22,27 @@
       v-bind="$attrs"
       v-on="$listeners"
     >
+      <v-progress-circle
+        v-if="isLoading"
+        progress="10"
+        size="small"
+        class="v-input-loader"
+      />
       <icon-atom
         v-if="isError"
         :is-error="isError"
+        class="v-input-error-icon"
       >
         <svg-atom name="error" />
       </icon-atom>
+      <icon-button-molecule
+        v-if="isResetable"
+        class="v-input-reset-button"
+        icon="close-circle-filled"
+        height="14"
+        width="14"
+        @click="onResetClick"
+      />
     </input-atom>
     <error-atom
       v-if="isError"
@@ -34,6 +52,8 @@
 </template>
 
 <script>
+import VProgressCircle from '@/kit/VProgressCircle';
+import IconButtonMolecule from '@/molecule/icon-button-molecule/icon-button-molecule';
 import InputAtom from '@/atom/input-atom/input-atom';
 import FieldAtom from '@/atom/field-atom/field-atom';
 import ErrorAtom from '@/atom/error-atom/error-atom';
@@ -78,6 +98,16 @@ export default {
       default: false,
     },
 
+    isLoading: {
+      type: Boolean,
+      default: false,
+    },
+
+    isResetable: {
+      type: Boolean,
+      default: false,
+    },
+
     skin: {
       type: String,
       default: 'primary',
@@ -93,6 +123,12 @@ export default {
     },
   },
 
+  methods: {
+    onResetClick() {
+      this.$emit('reset');
+    },
+  },
+
   components: {
     LabelMolecule,
     InputAtom,
@@ -101,6 +137,8 @@ export default {
     DescriptionAtom,
     IconAtom,
     SvgAtom,
+    VProgressCircle,
+    IconButtonMolecule,
   },
 
   model: {
