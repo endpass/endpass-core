@@ -6027,7 +6027,7 @@ exports[`Storyshots VInput/desktop primary 1`] = `
                     cx="8.15"
                     cy="8.15"
                     r="6"
-                    stroke-width="2"
+                    stroke-width="1"
                   />
                 </svg>
                  
@@ -6583,7 +6583,7 @@ exports[`Storyshots VInput/desktop secondary 1`] = `
                     cx="8.15"
                     cy="8.15"
                     r="6"
-                    stroke-width="2"
+                    stroke-width="1"
                   />
                 </svg>
                  
@@ -9207,7 +9207,7 @@ exports[`Storyshots VProgressCircle/desktop inline 1`] = `
                 cx="8.15"
                 cy="8.15"
                 r="6"
-                stroke-width="2"
+                stroke-width="1"
               />
             </svg>
              
@@ -9238,7 +9238,7 @@ exports[`Storyshots VProgressCircle/desktop inline 1`] = `
                 cx="8.15"
                 cy="8.15"
                 r="6"
-                stroke-width="2"
+                stroke-width="1"
               />
             </svg>
              
@@ -9269,7 +9269,7 @@ exports[`Storyshots VProgressCircle/desktop inline 1`] = `
                 cx="8.15"
                 cy="8.15"
                 r="6"
-                stroke-width="2"
+                stroke-width="1"
               />
             </svg>
              
@@ -9300,7 +9300,7 @@ exports[`Storyshots VProgressCircle/desktop inline 1`] = `
                 cx="8.15"
                 cy="8.15"
                 r="6"
-                stroke-width="2"
+                stroke-width="1"
               />
             </svg>
              
@@ -9331,7 +9331,7 @@ exports[`Storyshots VProgressCircle/desktop inline 1`] = `
                 cx="8.15"
                 cy="8.15"
                 r="6"
-                stroke-width="2"
+                stroke-width="1"
               />
             </svg>
              
@@ -9362,7 +9362,7 @@ exports[`Storyshots VProgressCircle/desktop inline 1`] = `
                 cx="8.15"
                 cy="8.15"
                 r="6"
-                stroke-width="2"
+                stroke-width="1"
               />
             </svg>
              

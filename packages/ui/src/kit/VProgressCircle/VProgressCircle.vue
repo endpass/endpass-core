@@ -58,7 +58,7 @@ const CIRCLE_PROPS_INLINE = {
   r: 6,
   cx: 8.15,
   cy: 8.15,
-  thickness: 2,
+  thickness: 1,
 };
 
 const STROKE_COLOR = '#6e32c9';
