@@ -9229,6 +9229,7 @@ exports[`Storyshots VRadio/desktop default 1`] = `
      
     <div
       class="tooltip-molecule theme-default"
+      disabled="disabled"
       name="value"
     >
       <div
@@ -9354,6 +9355,7 @@ exports[`Storyshots VRadio/desktop disabled 1`] = `
      
     <div
       class="tooltip-molecule theme-default"
+      disabled="disabled"
       name="value"
     >
       <div
@@ -9473,6 +9475,7 @@ exports[`Storyshots VRadio/desktop error 1`] = `
      
     <div
       class="tooltip-molecule theme-default"
+      disabled="disabled"
       name="value"
     >
       <div

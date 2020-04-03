@@ -15,7 +15,6 @@
       <slot />
     </span>
     <tooltip-molecule
-      class="v-radio-tooltip"
       :label="tooltipLabel"
       :disabled="true"
       v-bind="$attrs"
