@@ -14,11 +14,7 @@
     >
       <slot />
     </span>
-    <tooltip-molecule
-      :label="tooltipLabel"
-      :disabled="true"
-      v-bind="$attrs"
-    />
+    <tooltip-molecule :label="tooltipLabel" />
   </label>
 </template>
 
