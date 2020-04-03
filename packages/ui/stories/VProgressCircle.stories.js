@@ -66,14 +66,14 @@ storiesOf('VProgressCircle/desktop', module)
       </theme-provider>
     `,
   }))
-  .add('small', () => ({
+  .add('inline', () => ({
     components: { VProgressCircle },
     template: `
       <theme-provider>
         <table class="storybook-table">
           <thead>
             <tr>
-              <td colspan="6">small size</td>
+              <td colspan="6">inline size</td>
             </tr>
             <tr>
               <th>0</th>
@@ -87,22 +87,22 @@ storiesOf('VProgressCircle/desktop', module)
           <tbody>
             <tr>
               <td>
-                <v-progress-circle progress="0" size="small" />
+                <v-progress-circle progress="0" size="inline" />
               </td>
               <td>
-                <v-progress-circle progress="50" size="small" />
+                <v-progress-circle progress="50" size="inline" />
               </td>
               <td>
-                <v-progress-circle progress="75" size="small" />
+                <v-progress-circle progress="75" size="inline" />
               </td>
               <td>
-                <v-progress-circle progress="5" size="small" />
+                <v-progress-circle progress="5" size="inline" />
               </td>
               <td>
-                <v-progress-circle progress="95" size="small" />
+                <v-progress-circle progress="95" size="inline" />
               </td>
               <td>
-                <v-progress-circle progress="100" size="small" />
+                <v-progress-circle progress="100" size="inline" />
               </td>
             </tr>
           </tbody>

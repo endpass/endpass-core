@@ -25,7 +25,7 @@
       <v-progress-circle
         v-if="isLoading"
         progress="10"
-        size="small"
+        size="inline"
         class="v-input-loader"
       />
       <icon-atom

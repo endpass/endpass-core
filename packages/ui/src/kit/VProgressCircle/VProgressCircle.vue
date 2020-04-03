@@ -54,7 +54,7 @@ const CIRCLE_PROPS_NORMAL = {
   cy: 41,
   thickness: 4,
 };
-const CIRCLE_PROPS_SMALL = {
+const CIRCLE_PROPS_INLINE = {
   r: 6,
   cx: 8.15,
   cy: 8.15,
@@ -83,7 +83,7 @@ export default {
       type: String,
       default: 'normal',
       validator(value) {
-        return ['normal', 'small'].indexOf(value) !== -1;
+        return ['normal', 'inline'].indexOf(value) !== -1;
       },
     },
   },
@@ -98,8 +98,8 @@ export default {
 
     circleProps() {
       switch (this.size) {
-        case 'small':
-          return CIRCLE_PROPS_SMALL;
+        case 'inline':
+          return CIRCLE_PROPS_INLINE;
 
         case 'normal':
         default:
@@ -133,7 +133,7 @@ export default {
 
     isShowProgress() {
       return (
-        this.size !== 'small' &&
+        this.size !== 'inline' &&
         this.isLabelVisible &&
         this.progress >= MIN_PROGRESS_VALUE
       );
