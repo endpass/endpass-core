@@ -28,11 +28,6 @@ export default {
   name: 'TooltipMolecule',
 
   props: {
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-
     label: {
       type: String,
       default: '',
