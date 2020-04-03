@@ -22,12 +22,12 @@
       v-bind="$attrs"
       v-on="$listeners"
     >
-      <v-progress-circle
+      <icon-atom
         v-if="isLoading"
-        progress="10"
-        size="inline"
         class="v-input-loader"
-      />
+      >
+        <inline-loader-molecule />
+      </icon-atom>
       <icon-atom
         v-if="isError"
         :is-error="isError"
@@ -36,7 +36,7 @@
         <svg-atom name="error" />
       </icon-atom>
       <icon-button-molecule
-        v-if="isResetable"
+        v-if="isResetAllowed"
         class="v-input-reset-button"
         icon="close-circle-filled"
         height="14"
@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import VProgressCircle from '@/kit/VProgressCircle';
+import InlineLoaderMolecule from '@/molecule/inline-loader-molecule/inline-loader-molecule';
 import IconButtonMolecule from '@/molecule/icon-button-molecule/icon-button-molecule';
 import InputAtom from '@/atom/input-atom/input-atom';
 import FieldAtom from '@/atom/field-atom/field-atom';
@@ -121,6 +121,10 @@ export default {
     isError() {
       return !!this.error;
     },
+
+    isResetAllowed() {
+      return this.isResetable && !this.disabled;
+    },
   },
 
   methods: {
@@ -137,7 +141,7 @@ export default {
     DescriptionAtom,
     IconAtom,
     SvgAtom,
-    VProgressCircle,
+    InlineLoaderMolecule,
     IconButtonMolecule,
   },
 

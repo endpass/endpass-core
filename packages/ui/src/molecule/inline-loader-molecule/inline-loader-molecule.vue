@@ -1,10 +1,10 @@
 <template>
   <span
-    class="button-loader-molecule"
+    class="inline-loader-molecule"
     :class="themeCssClass"
   >
     <svg-atom name="empty" />
-    <span class="button-loader-molecule-spinner">
+    <span class="inline-loader-molecule-spinner">
       <svg-atom name="loader" />
     </span>
   </span>
@@ -15,8 +15,12 @@ import SvgAtom from '@/atom/svg-atom/svg-atom';
 import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
-  name: 'ButtonLoaderMolecule',
+  name: 'InlineLoaderMolecule',
+
   mixins: [ThemeMixin],
-  components: { SvgAtom },
+
+  components: {
+    SvgAtom,
+  },
 };
 </script>

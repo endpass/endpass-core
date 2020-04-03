@@ -1,8 +1,9 @@
-.button-loader-molecule.theme-default {
+.inline-loader-molecule.theme-default {
   position: relative;
   display: flex;
 }
-.button-loader-molecule-spinner {
+
+.inline-loader-molecule.theme-default .inline-loader-molecule-spinner {
   display: flex;
   animation: v-spin 1.5s linear infinite;
   position: absolute;

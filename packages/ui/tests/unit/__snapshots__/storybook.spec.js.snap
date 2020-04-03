@@ -2144,7 +2144,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-molecule theme-default"
+                class="inline-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2159,7 +2159,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-molecule-spinner"
+                  class="inline-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2218,7 +2218,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-molecule theme-default"
+                class="inline-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2233,7 +2233,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-molecule-spinner"
+                  class="inline-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2270,7 +2270,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-molecule theme-default"
+                class="inline-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2285,7 +2285,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-molecule-spinner"
+                  class="inline-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2322,7 +2322,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-molecule theme-default"
+                class="inline-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2337,7 +2337,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-molecule-spinner"
+                  class="inline-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2374,7 +2374,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-molecule theme-default"
+                class="inline-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2389,7 +2389,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-molecule-spinner"
+                  class="inline-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2426,7 +2426,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-molecule theme-default"
+                class="inline-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2441,7 +2441,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-molecule-spinner"
+                  class="inline-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2478,7 +2478,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-molecule theme-default"
+                class="inline-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2493,7 +2493,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-molecule-spinner"
+                  class="inline-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2524,7 +2524,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon icon-before theme-default"
             >
               <span
-                class="button-loader-molecule theme-default"
+                class="inline-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2539,7 +2539,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-molecule-spinner"
+                  class="inline-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2595,7 +2595,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-molecule theme-default"
+                class="inline-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2610,7 +2610,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-molecule-spinner"
+                  class="inline-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2669,7 +2669,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-molecule theme-default"
+                class="inline-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2684,7 +2684,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-molecule-spinner"
+                  class="inline-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2721,7 +2721,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-molecule theme-default"
+                class="inline-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2736,7 +2736,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-molecule-spinner"
+                  class="inline-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2773,7 +2773,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-molecule theme-default"
+                class="inline-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2788,7 +2788,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-molecule-spinner"
+                  class="inline-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2825,7 +2825,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-molecule theme-default"
+                class="inline-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2840,7 +2840,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-molecule-spinner"
+                  class="inline-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2877,7 +2877,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-molecule theme-default"
+                class="inline-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2892,7 +2892,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-molecule-spinner"
+                  class="inline-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2929,7 +2929,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon theme-default"
             >
               <span
-                class="button-loader-molecule theme-default"
+                class="inline-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2944,7 +2944,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-molecule-spinner"
+                  class="inline-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -2975,7 +2975,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
               class="icon-atom v-button-icon icon-before theme-default"
             >
               <span
-                class="button-loader-molecule theme-default"
+                class="inline-loader-molecule theme-default"
               >
                 <svg
                   class="svg-atom theme-default"
@@ -2990,7 +2990,7 @@ exports[`Storyshots VButton/desktop loading 1`] = `
                 </svg>
                  
                 <span
-                  class="button-loader-molecule-spinner"
+                  class="inline-loader-molecule-spinner"
                 >
                   <svg
                     class="svg-atom theme-default"
@@ -6017,34 +6017,41 @@ exports[`Storyshots VInput/desktop primary 1`] = `
                 placeholder="Placeholder text"
               />
                
-              <div
-                class="field-atom v-progress-circle v-input-loader theme-default theme-default size-inline"
+              <i
+                class="icon-atom v-input-loader theme-default"
               >
-                <svg
-                  class="v-progress-circle-back"
+                <span
+                  class="inline-loader-molecule theme-default"
                 >
-                  <circle
-                    cx="8.15"
-                    cy="8.15"
-                    r="6"
-                    stroke-width="1"
-                  />
-                </svg>
-                 
-                <svg
-                  class="v-progress-circle-over"
-                  style="stroke-dasharray: 18, 188.4;"
-                >
-                  <circle
-                    cx="8.15"
-                    cy="8.15"
-                    r="6"
-                    stroke="#6e32c9"
-                  />
-                </svg>
-                 
-                <!---->
-              </div>
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-empty"
+                      y="0"
+                    />
+                  </svg>
+                   
+                  <span
+                    class="inline-loader-molecule-spinner"
+                  >
+                    <svg
+                      class="svg-atom theme-default"
+                      height="100%"
+                      width="100%"
+                    >
+                      <use
+                        x="0"
+                        xlink:href="#endpass-ui-icon-loader"
+                        y="0"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </i>
                
               <!---->
                
@@ -6291,28 +6298,6 @@ exports[`Storyshots VInput/desktop primary 1`] = `
                 placeholder="Placeholder text"
               />
                
-              <!---->
-               
-              <!---->
-               
-              <button
-                class="v-input-reset-button theme-default icon-button-molecule"
-                height="14"
-                width="14"
-              >
-                 
-                <svg
-                  class="svg-atom theme-default"
-                  height="14"
-                  width="14"
-                >
-                  <use
-                    x="0"
-                    xlink:href="#endpass-ui-icon-close-circle-filled"
-                    y="0"
-                  />
-                </svg>
-              </button>
             </span>
              
             <!---->
@@ -6573,34 +6558,41 @@ exports[`Storyshots VInput/desktop secondary 1`] = `
                 placeholder="Placeholder text"
               />
                
-              <div
-                class="field-atom v-progress-circle v-input-loader theme-default theme-default size-inline"
+              <i
+                class="icon-atom v-input-loader theme-default"
               >
-                <svg
-                  class="v-progress-circle-back"
+                <span
+                  class="inline-loader-molecule theme-default"
                 >
-                  <circle
-                    cx="8.15"
-                    cy="8.15"
-                    r="6"
-                    stroke-width="1"
-                  />
-                </svg>
-                 
-                <svg
-                  class="v-progress-circle-over"
-                  style="stroke-dasharray: 18, 188.4;"
-                >
-                  <circle
-                    cx="8.15"
-                    cy="8.15"
-                    r="6"
-                    stroke="#6e32c9"
-                  />
-                </svg>
-                 
-                <!---->
-              </div>
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-empty"
+                      y="0"
+                    />
+                  </svg>
+                   
+                  <span
+                    class="inline-loader-molecule-spinner"
+                  >
+                    <svg
+                      class="svg-atom theme-default"
+                      height="100%"
+                      width="100%"
+                    >
+                      <use
+                        x="0"
+                        xlink:href="#endpass-ui-icon-loader"
+                        y="0"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </i>
                
               <!---->
                
@@ -6847,28 +6839,6 @@ exports[`Storyshots VInput/desktop secondary 1`] = `
                 placeholder="Placeholder text"
               />
                
-              <!---->
-               
-              <!---->
-               
-              <button
-                class="v-input-reset-button theme-default icon-button-molecule"
-                height="14"
-                width="14"
-              >
-                 
-                <svg
-                  class="svg-atom theme-default"
-                  height="14"
-                  width="14"
-                >
-                  <use
-                    x="0"
-                    xlink:href="#endpass-ui-icon-close-circle-filled"
-                    y="0"
-                  />
-                </svg>
-              </button>
             </span>
              
             <!---->
@@ -9149,7 +9119,7 @@ exports[`Storyshots VPagination/desktop withoutTotal 1`] = `
 </div>
 `;
 
-exports[`Storyshots VProgressCircle/desktop inline 1`] = `
+exports[`Storyshots VProgressCircle/desktop default 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
@@ -9159,14 +9129,6 @@ exports[`Storyshots VProgressCircle/desktop inline 1`] = `
     class="storybook-table"
   >
     <thead>
-      <tr>
-        <td
-          colspan="6"
-        >
-          inline size
-        </td>
-      </tr>
-       
       <tr>
         <th>
           0
@@ -9198,253 +9160,15 @@ exports[`Storyshots VProgressCircle/desktop inline 1`] = `
       <tr>
         <td>
           <div
-            class="field-atom v-progress-circle theme-default theme-default size-inline"
+            class="field-atom v-progress-circle theme-default theme-default"
           >
             <svg
               class="v-progress-circle-back"
             >
               <circle
-                cx="8.15"
-                cy="8.15"
-                r="6"
-                stroke-width="1"
-              />
-            </svg>
-             
-            <svg
-              class="v-progress-circle-over"
-              style="stroke-dasharray: 3, 188.4;"
-            >
-              <circle
-                cx="8.15"
-                cy="8.15"
-                r="6"
-                stroke="#6e32c9"
-              />
-            </svg>
-             
-            <!---->
-          </div>
-        </td>
-         
-        <td>
-          <div
-            class="field-atom v-progress-circle theme-default theme-default size-inline"
-          >
-            <svg
-              class="v-progress-circle-back"
-            >
-              <circle
-                cx="8.15"
-                cy="8.15"
-                r="6"
-                stroke-width="1"
-              />
-            </svg>
-             
-            <svg
-              class="v-progress-circle-over"
-              style="stroke-dasharray: 94, 188.4;"
-            >
-              <circle
-                cx="8.15"
-                cy="8.15"
-                r="6"
-                stroke="#6e32c9"
-              />
-            </svg>
-             
-            <!---->
-          </div>
-        </td>
-         
-        <td>
-          <div
-            class="field-atom v-progress-circle theme-default theme-default size-inline"
-          >
-            <svg
-              class="v-progress-circle-back"
-            >
-              <circle
-                cx="8.15"
-                cy="8.15"
-                r="6"
-                stroke-width="1"
-              />
-            </svg>
-             
-            <svg
-              class="v-progress-circle-over"
-              style="stroke-dasharray: 141, 188.4;"
-            >
-              <circle
-                cx="8.15"
-                cy="8.15"
-                r="6"
-                stroke="#6e32c9"
-              />
-            </svg>
-             
-            <!---->
-          </div>
-        </td>
-         
-        <td>
-          <div
-            class="field-atom v-progress-circle theme-default theme-default size-inline"
-          >
-            <svg
-              class="v-progress-circle-back"
-            >
-              <circle
-                cx="8.15"
-                cy="8.15"
-                r="6"
-                stroke-width="1"
-              />
-            </svg>
-             
-            <svg
-              class="v-progress-circle-over"
-              style="stroke-dasharray: 9, 188.4;"
-            >
-              <circle
-                cx="8.15"
-                cy="8.15"
-                r="6"
-                stroke="#6e32c9"
-              />
-            </svg>
-             
-            <!---->
-          </div>
-        </td>
-         
-        <td>
-          <div
-            class="field-atom v-progress-circle theme-default theme-default size-inline"
-          >
-            <svg
-              class="v-progress-circle-back"
-            >
-              <circle
-                cx="8.15"
-                cy="8.15"
-                r="6"
-                stroke-width="1"
-              />
-            </svg>
-             
-            <svg
-              class="v-progress-circle-over"
-              style="stroke-dasharray: 178, 188.4;"
-            >
-              <circle
-                cx="8.15"
-                cy="8.15"
-                r="6"
-                stroke="#6e32c9"
-              />
-            </svg>
-             
-            <!---->
-          </div>
-        </td>
-         
-        <td>
-          <div
-            class="field-atom v-progress-circle theme-default theme-default size-inline"
-          >
-            <svg
-              class="v-progress-circle-back"
-            >
-              <circle
-                cx="8.15"
-                cy="8.15"
-                r="6"
-                stroke-width="1"
-              />
-            </svg>
-             
-            <svg
-              class="v-progress-circle-over"
-              style="stroke-dasharray: 184, 188.4;"
-            >
-              <circle
-                cx="8.15"
-                cy="8.15"
-                r="6"
-                stroke="#6e32c9"
-              />
-            </svg>
-             
-            <!---->
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-`;
-
-exports[`Storyshots VProgressCircle/desktop normal 1`] = `
-<div>
-  <div
-    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
-  />
-   
-  <table
-    class="storybook-table"
-  >
-    <thead>
-      <tr>
-        <td
-          colspan="6"
-        >
-          normal size
-        </td>
-      </tr>
-       
-      <tr>
-        <th>
-          0
-        </th>
-         
-        <th>
-          50
-        </th>
-         
-        <th>
-          75
-        </th>
-         
-        <th>
-          5
-        </th>
-         
-        <th>
-          95
-        </th>
-         
-        <th>
-          100
-        </th>
-      </tr>
-    </thead>
-     
-    <tbody>
-      <tr>
-        <td>
-          <div
-            class="field-atom v-progress-circle theme-default theme-default size-normal"
-          >
-            <svg
-              class="v-progress-circle-back"
-            >
-              <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke-width="4"
               />
             </svg>
@@ -9454,10 +9178,11 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
               style="stroke-dasharray: 3, 188.4;"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -9467,15 +9192,15 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
          
         <td>
           <div
-            class="field-atom v-progress-circle theme-default theme-default size-normal"
+            class="field-atom v-progress-circle theme-default theme-default"
           >
             <svg
               class="v-progress-circle-back"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke-width="4"
               />
             </svg>
@@ -9485,10 +9210,11 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
               style="stroke-dasharray: 94, 188.4;"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -9498,15 +9224,15 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
          
         <td>
           <div
-            class="field-atom v-progress-circle theme-default theme-default size-normal"
+            class="field-atom v-progress-circle theme-default theme-default"
           >
             <svg
               class="v-progress-circle-back"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke-width="4"
               />
             </svg>
@@ -9516,10 +9242,11 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
               style="stroke-dasharray: 141, 188.4;"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -9529,15 +9256,15 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
          
         <td>
           <div
-            class="field-atom v-progress-circle theme-default theme-default size-normal"
+            class="field-atom v-progress-circle theme-default theme-default"
           >
             <svg
               class="v-progress-circle-back"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke-width="4"
               />
             </svg>
@@ -9547,10 +9274,11 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
               style="stroke-dasharray: 9, 188.4;"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -9560,15 +9288,15 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
          
         <td>
           <div
-            class="field-atom v-progress-circle theme-default theme-default size-normal"
+            class="field-atom v-progress-circle theme-default theme-default"
           >
             <svg
               class="v-progress-circle-back"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke-width="4"
               />
             </svg>
@@ -9578,10 +9306,11 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
               style="stroke-dasharray: 178, 188.4;"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -9591,15 +9320,15 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
          
         <td>
           <div
-            class="field-atom v-progress-circle theme-default theme-default size-normal"
+            class="field-atom v-progress-circle theme-default theme-default"
           >
             <svg
               class="v-progress-circle-back"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke-width="4"
               />
             </svg>
@@ -9609,10 +9338,11 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
               style="stroke-dasharray: 184, 188.4;"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -9624,15 +9354,15 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
       <tr>
         <td>
           <div
-            class="field-atom v-progress-circle theme-default theme-default size-normal"
+            class="field-atom v-progress-circle theme-default theme-default"
           >
             <svg
               class="v-progress-circle-back"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke-width="4"
               />
             </svg>
@@ -9642,10 +9372,11 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
               style="stroke-dasharray: 3, 188.4;"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -9655,15 +9386,15 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
          
         <td>
           <div
-            class="field-atom v-progress-circle theme-default theme-default size-normal"
+            class="field-atom v-progress-circle theme-default theme-default"
           >
             <svg
               class="v-progress-circle-back"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke-width="4"
               />
             </svg>
@@ -9673,10 +9404,11 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
               style="stroke-dasharray: 94, 188.4;"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -9692,15 +9424,15 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
          
         <td>
           <div
-            class="field-atom v-progress-circle theme-default theme-default size-normal"
+            class="field-atom v-progress-circle theme-default theme-default"
           >
             <svg
               class="v-progress-circle-back"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke-width="4"
               />
             </svg>
@@ -9710,10 +9442,11 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
               style="stroke-dasharray: 141, 188.4;"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -9729,15 +9462,15 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
          
         <td>
           <div
-            class="field-atom v-progress-circle theme-default theme-default size-normal"
+            class="field-atom v-progress-circle theme-default theme-default"
           >
             <svg
               class="v-progress-circle-back"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke-width="4"
               />
             </svg>
@@ -9747,10 +9480,11 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
               style="stroke-dasharray: 9, 188.4;"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -9766,15 +9500,15 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
          
         <td>
           <div
-            class="field-atom v-progress-circle theme-default theme-default size-normal"
+            class="field-atom v-progress-circle theme-default theme-default"
           >
             <svg
               class="v-progress-circle-back"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke-width="4"
               />
             </svg>
@@ -9784,10 +9518,11 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
               style="stroke-dasharray: 178, 188.4;"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              
@@ -9803,15 +9538,15 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
          
         <td>
           <div
-            class="field-atom v-progress-circle theme-default theme-default size-normal"
+            class="field-atom v-progress-circle theme-default theme-default"
           >
             <svg
               class="v-progress-circle-back"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke-width="4"
               />
             </svg>
@@ -9821,10 +9556,11 @@ exports[`Storyshots VProgressCircle/desktop normal 1`] = `
               style="stroke-dasharray: 184, 188.4;"
             >
               <circle
-                cx="41"
-                cy="41"
-                r="30"
+                cx="41px"
+                cy="41px"
+                r="30px"
                 stroke="#6e32c9"
+                stroke-width="4"
               />
             </svg>
              

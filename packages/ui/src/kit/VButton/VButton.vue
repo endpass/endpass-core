@@ -8,7 +8,7 @@
       v-if="$slots.iconBefore && isSocialIcon && isLoading"
       class="v-button-icon icon-before"
     >
-      <button-loader-atom />
+      <inline-loader-molecule />
     </icon-atom>
     <icon-atom
       v-if="$slots.iconBefore && !isLoading"
@@ -22,18 +22,17 @@
     >
       <slot />
     </span>
-
     <icon-atom
       v-if="!isSocialIcon && isLoading"
       class="v-button-icon"
     >
-      <button-loader-atom />
+      <inline-loader-molecule />
     </icon-atom>
     <icon-atom
       v-if="$slots.iconAfter && isSocialIcon && isLoading"
       class="v-button-icon icon-after"
     >
-      <button-loader-atom />
+      <inline-loader-molecule />
     </icon-atom>
     <icon-atom
       v-if="$slots.iconAfter && !isLoading"
@@ -47,10 +46,11 @@
 <script>
 import IconAtom from '@/atom/icon-atom/icon-atom';
 import ThemeMixin from '@/mixins/ThemeMixin';
-import ButtonLoaderAtom from '@/molecule/button-loader-molecule/button-loader-molecule';
+import InlineLoaderMolecule from '@/molecule/inline-loader-molecule/inline-loader-molecule';
 
 export default {
   name: 'VButton',
+
   props: {
     skin: {
       type: String,
@@ -72,14 +72,17 @@ export default {
         );
       },
     },
+
     isLoading: {
       type: Boolean,
       default: false,
     },
+
     isInline: {
       type: Boolean,
       default: false,
     },
+
     size: {
       type: String,
       default: 'normal',
@@ -88,6 +91,7 @@ export default {
       },
     },
   },
+
   computed: {
     vButtonCssClass() {
       return {
@@ -97,6 +101,7 @@ export default {
         'is-inline': this.isInline,
       };
     },
+
     isSocialIcon() {
       return (
         this.skin === 'social' &&
@@ -104,7 +109,12 @@ export default {
       );
     },
   },
+
   mixins: [ThemeMixin],
-  components: { ButtonLoaderAtom, IconAtom },
+
+  components: {
+    InlineLoaderMolecule,
+    IconAtom,
+  },
 };
 </script>

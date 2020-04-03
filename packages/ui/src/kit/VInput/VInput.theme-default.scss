@@ -1,13 +1,22 @@
 .v-input.theme-default .v-input-reset-button {
   line-height: 0;
 }
-.v-input.theme-default .v-input-reset-button svg {
+.v-input.theme-default .v-input-reset-button .svg-atom {
   vertical-align: sub;
   color: var(--endpass-ui-color-grey-5);
   transition: color 0.3s;
 }
-.v-input.theme-default .v-input-reset-button:hover svg {
+.v-input.theme-default .v-input-reset-button:hover .svg-atom {
   color: var(--endpass-ui-color-grey-6);
+}
+
+.v-input.theme-default .v-input-loader {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 16px;
+  width: 16px;
+  color: var(--endpass-ui-color-primary-7);
 }
 
 .v-input.theme-default .v-input-reset-button,
