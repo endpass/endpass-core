@@ -6240,7 +6240,6 @@ exports[`Storyshots VInput/desktop primary 1`] = `
           >
             <label
               class="label-atom label-molecule theme-default"
-              disabled="disabled"
             >
               
   Label
@@ -6289,18 +6288,94 @@ exports[`Storyshots VInput/desktop primary 1`] = `
             </div>
              
             <span
-              class="input-atom theme-default primary"
-              disabled="disabled"
+              class="input-atom theme-default primary is-error"
             >
               <input
                 class="input-atom-control"
-                disabled="disabled"
+                is-error="true"
                 placeholder="Placeholder text"
               />
                
+              <i
+                class="icon-atom v-input-loader theme-default"
+              >
+                <span
+                  class="inline-loader-molecule theme-default"
+                >
+                  <svg
+                    class="svg-atom theme-default"
+                    height="100%"
+                    width="100%"
+                  >
+                    <use
+                      x="0"
+                      xlink:href="#endpass-ui-icon-empty"
+                      y="0"
+                    />
+                  </svg>
+                   
+                  <span
+                    class="inline-loader-molecule-spinner"
+                  >
+                    <svg
+                      class="svg-atom theme-default"
+                      height="100%"
+                      width="100%"
+                    >
+                      <use
+                        x="0"
+                        xlink:href="#endpass-ui-icon-loader"
+                        y="0"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </i>
+               
+              <i
+                class="icon-atom v-input-error-icon theme-default is-error"
+                is-error="true"
+              >
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-error"
+                    y="0"
+                  />
+                </svg>
+              </i>
+               
+              <button
+                class="v-input-reset-button theme-default icon-button-molecule"
+                height="14"
+                width="14"
+              >
+                 
+                <svg
+                  class="svg-atom theme-default"
+                  height="14"
+                  width="14"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-close-circle-filled"
+                    y="0"
+                  />
+                </svg>
+              </button>
             </span>
              
-            <!---->
+            <div
+              class="error-atom theme-default"
+            >
+              
+  asdasd
+
+            </div>
           </div>
         </td>
       </tr>

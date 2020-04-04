@@ -129,7 +129,7 @@ export default {
 
   methods: {
     onResetClick() {
-      this.$emit('reset');
+      this.$emit('input', '');
     },
   },
 

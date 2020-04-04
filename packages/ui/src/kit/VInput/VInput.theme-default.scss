@@ -1,31 +1,26 @@
 .v-input.theme-default .v-input-reset-button {
-  line-height: 0;
-}
-.v-input.theme-default .v-input-reset-button .svg-atom {
-  vertical-align: sub;
+  display: flex;
   color: var(--endpass-ui-color-grey-5);
   transition: color 0.3s;
-}
-.v-input.theme-default .v-input-reset-button:hover .svg-atom {
-  color: var(--endpass-ui-color-grey-6);
+  margin-right: 5px;
 }
 
 .v-input.theme-default .v-input-loader {
   display: flex;
   align-items: center;
   position: relative;
-  height: 16px;
-  width: 16px;
+  margin-right: 6px;
+  height: 18px;
+  width: 18px;
   color: var(--endpass-ui-color-primary-7);
-}
-
-.v-input.theme-default .v-input-reset-button,
-.v-input.theme-default .v-input-loader {
-  margin-right: 5px;
 }
 
 .v-input.theme-default .v-input-error-icon {
   margin-right: 5px !important;
+}
+
+.v-input.theme-default .v-input-reset-button:hover {
+  color: var(--endpass-ui-color-grey-6);
 }
 
 .v-input.theme-default .v-input-reset-button:last-child,

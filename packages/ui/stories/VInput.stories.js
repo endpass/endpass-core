@@ -109,8 +109,9 @@ storiesOf('VInput/desktop', module)
               <td>
                 <v-input
                   v-model="model"
-                  :disabled="true"
+                  error="asdasd"
                   :is-resetable="true"
+                  :is-loading="true"
                   style="width: 288px;"
                   tooltip-label="hello this is tooltip data"
                   placeholder="Placeholder text"
