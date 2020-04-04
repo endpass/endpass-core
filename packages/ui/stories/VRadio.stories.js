@@ -36,6 +36,7 @@ storiesOf('VRadio/desktop', module)
         v-model="state"
         name="value"
         value="baz"
+        tooltip-label="with tooltip"
       >
         Baz
       </v-radio>
@@ -74,6 +75,7 @@ storiesOf('VRadio/desktop', module)
         name="value"
         value="baz"
         :is-error="true"
+        tooltip-label="with tooltip"
       >
         Baz
       </v-radio>
@@ -112,6 +114,7 @@ storiesOf('VRadio/desktop', module)
         name="value"
         value="baz"
         :disabled="true"
+        tooltip-label="with tooltip"
       >
         Baz
       </v-radio>

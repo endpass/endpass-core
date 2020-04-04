@@ -9176,6 +9176,8 @@ exports[`Storyshots VRadio/desktop default 1`] = `
         Foo
       
     </span>
+     
+    <!---->
   </label>
    
   <label
@@ -9199,6 +9201,8 @@ exports[`Storyshots VRadio/desktop default 1`] = `
         Bar
       
     </span>
+     
+    <!---->
   </label>
    
   <label
@@ -9222,6 +9226,39 @@ exports[`Storyshots VRadio/desktop default 1`] = `
         Baz
       
     </span>
+     
+    <div
+      class="tooltip-molecule theme-default"
+    >
+      <div
+        class="tooltip-atom theme-default position-bottom-left"
+        style="display: none;"
+      >
+        <div
+          class="tooltip-atom-container"
+        >
+          
+    with tooltip
+  
+        </div>
+      </div>
+       
+      <i
+        class="icon-atom tooltip-molecule-icon theme-default"
+      >
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-info"
+            y="0"
+          />
+        </svg>
+      </i>
+    </div>
   </label>
 </div>
 `;
@@ -9259,6 +9296,8 @@ exports[`Storyshots VRadio/desktop disabled 1`] = `
         Foo
       
     </span>
+     
+    <!---->
   </label>
    
   <label
@@ -9284,6 +9323,8 @@ exports[`Storyshots VRadio/desktop disabled 1`] = `
         Bar
       
     </span>
+     
+    <!---->
   </label>
    
   <label
@@ -9309,6 +9350,39 @@ exports[`Storyshots VRadio/desktop disabled 1`] = `
         Baz
       
     </span>
+     
+    <div
+      class="tooltip-molecule theme-default"
+    >
+      <div
+        class="tooltip-atom theme-default position-bottom-left"
+        style="display: none;"
+      >
+        <div
+          class="tooltip-atom-container"
+        >
+          
+    with tooltip
+  
+        </div>
+      </div>
+       
+      <i
+        class="icon-atom tooltip-molecule-icon theme-default"
+      >
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-info"
+            y="0"
+          />
+        </svg>
+      </i>
+    </div>
   </label>
 </div>
 `;
@@ -9344,6 +9418,8 @@ exports[`Storyshots VRadio/desktop error 1`] = `
         Foo
       
     </span>
+     
+    <!---->
   </label>
    
   <label
@@ -9367,6 +9443,8 @@ exports[`Storyshots VRadio/desktop error 1`] = `
         Bar
       
     </span>
+     
+    <!---->
   </label>
    
   <label
@@ -9390,6 +9468,39 @@ exports[`Storyshots VRadio/desktop error 1`] = `
         Baz
       
     </span>
+     
+    <div
+      class="tooltip-molecule theme-default"
+    >
+      <div
+        class="tooltip-atom theme-default position-bottom-left"
+        style="display: none;"
+      >
+        <div
+          class="tooltip-atom-container"
+        >
+          
+    with tooltip
+  
+        </div>
+      </div>
+       
+      <i
+        class="icon-atom tooltip-molecule-icon theme-default"
+      >
+        <svg
+          class="svg-atom theme-default"
+          height="100%"
+          width="100%"
+        >
+          <use
+            x="0"
+            xlink:href="#endpass-ui-icon-info"
+            y="0"
+          />
+        </svg>
+      </i>
+    </div>
   </label>
 </div>
 `;

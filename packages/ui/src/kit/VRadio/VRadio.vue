@@ -14,10 +14,12 @@
     >
       <slot />
     </span>
+    <tooltip-molecule :label="tooltipLabel" />
   </label>
 </template>
 
 <script>
+import TooltipMolecule from '@/molecule/tooltip-molecule/tooltip-molecule';
 import ThemeMixin from '@/mixins/ThemeMixin';
 
 export default {
@@ -30,6 +32,11 @@ export default {
     },
 
     modelValue: {
+      type: String,
+      default: null,
+    },
+
+    tooltipLabel: {
       type: String,
       default: null,
     },
@@ -58,6 +65,10 @@ export default {
   },
 
   mixins: [ThemeMixin],
+
+  components: {
+    TooltipMolecule,
+  },
 
   model: {
     prop: 'modelValue',
