@@ -10,6 +10,11 @@
       class="v-file-drop-area-content"
       :class="themeCssClass"
     >
+      <file-paste-atom
+        v-if="isUseClipboard"
+        :disabled="disabled"
+        @change="onPasteFiles"
+      />
       <button
         class="v-file-drop-area-button"
         type="button"
@@ -40,6 +45,7 @@ import IsDisabledMixin from '@/mixins/IsDisabledMixin';
 import ThemeMixin from '@/mixins/ThemeMixin';
 import FieldAtom from '@/atom/field-atom/field-atom';
 import LabelMolecule from '@/molecule/label-molecule/label-molecule';
+import FilePasteAtom from '@/atom/file-paste-atom';
 
 let inputId = 1;
 
@@ -60,6 +66,11 @@ export default {
       type: Boolean,
       default: false,
     },
+
+    isUseClipboard: {
+      type: Boolean,
+      default: true,
+    },
   },
 
   data() {
@@ -69,6 +80,10 @@ export default {
     };
   },
   methods: {
+    onPasteFiles(files) {
+      this.$emit('change', files);
+    },
+
     onChange(e) {
       this.$emit('change', e.target.files);
 
@@ -76,11 +91,13 @@ export default {
       // eslint-disable-next-line no-param-reassign
       e.target.value = '';
     },
+
     preventDrop(e) {
       e.preventDefault();
       e.stopPropagation();
       return false;
     },
+
     handleDrop(e) {
       if (this.isDisabled) {
         return this.preventDrop(e);
@@ -89,6 +106,7 @@ export default {
       this.$emit('change', files);
       return this.preventDrop(e);
     },
+
     getTransferFiles(e) {
       let fileList = [];
       if (e.dataTransfer) {
@@ -107,21 +125,26 @@ export default {
       return fileList;
     },
   },
+
   beforeMount() {
     window.addEventListener('dragenter', this.preventDrop, false);
     window.addEventListener('dragleave', this.preventDrop, false);
     window.addEventListener('dragover', this.preventDrop, false);
     window.addEventListener('drop', this.handleDrop, false);
   },
+
   beforeDestroy() {
     window.removeEventListener('dragenter', this.preventDrop, false);
     window.removeEventListener('dragleave', this.preventDrop, false);
     window.removeEventListener('dragover', this.preventDrop, false);
     window.removeEventListener('drop', this.handleDrop, false);
   },
+
   mixins: [ThemeMixin, IsDisabledMixin],
+
   components: {
     LabelMolecule,
+    FilePasteAtom,
     FieldAtom,
   },
 

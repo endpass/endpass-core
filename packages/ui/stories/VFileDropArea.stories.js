@@ -123,4 +123,43 @@ storiesOf('VFileDropArea/desktop', module)
         </v-file-drop-area>
       </theme-provider>
     `,
+  }))
+  .add('paste file', () => ({
+    methods,
+    data: () => ({
+      file: null,
+      imageContent: '',
+    }),
+    watch: {
+      file(val) {
+        this.onChange(val);
+
+        if (!(val && val[0])) {
+          return;
+        }
+        const reader = new FileReader();
+        reader.addEventListener('load', e => {
+          this.imageContent = e.target.result;
+        });
+
+        reader.readAsDataURL(val[0]);
+      },
+    },
+    components,
+    template: `
+      <theme-provider>
+        <v-file-drop-area
+          v-model="file"
+          label="Only image files"
+          accept="image/*"
+        >
+          <p>Custom Text</p>
+          <v-description disabled description="or drop files here"/>
+        </v-file-drop-area>
+        <img
+          :src="imageContent"
+          style="max-width: 500px; max-height: 500px;"
+        />
+      </theme-provider>
+    `,
   }));
