@@ -2,17 +2,10 @@
 export default {
   name: 'FilePasteAtom',
 
-  props: {
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-  },
-
   methods: {
     handlePaste(e) {
       const { files } = e.clipboardData;
-      if (this.disabled || !files || !files.length) {
+      if (!files || !files.length) {
         return;
       }
       this.$emit('change', files);

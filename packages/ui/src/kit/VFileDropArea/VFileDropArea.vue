@@ -11,8 +11,7 @@
       :class="themeCssClass"
     >
       <file-paste-atom
-        v-if="isUseClipboard"
-        :disabled="disabled"
+        v-if="isUseClipboard || !disabled"
         @change="onPasteFiles"
       />
       <button
@@ -45,7 +44,7 @@ import IsDisabledMixin from '@/mixins/IsDisabledMixin';
 import ThemeMixin from '@/mixins/ThemeMixin';
 import FieldAtom from '@/atom/field-atom/field-atom';
 import LabelMolecule from '@/molecule/label-molecule/label-molecule';
-import FilePasteAtom from '@/atom/file-paste-atom';
+import FilePasteAtom from '@/atom/file-paste-atom/file-paste-atom';
 
 let inputId = 1;
 
