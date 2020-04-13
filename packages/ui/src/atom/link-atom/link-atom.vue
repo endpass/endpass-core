@@ -2,7 +2,10 @@
   <a
     class="link-atom"
     :class="classNames"
-    v-bind="$attrs"
+    :href="href"
+    :disabled="disabled"
+    :target="target"
+    :role="role"
     v-on="$listeners"
   >
     <slot />
@@ -16,6 +19,26 @@ export default {
   name: 'LinkAtom',
 
   props: {
+    href: {
+      type: String,
+      default: null,
+    },
+
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+
+    target: {
+      type: String,
+      default: null,
+    },
+
+    role: {
+      type: String,
+      default: null,
+    },
+
     isUnderline: {
       type: Boolean,
       default: false,

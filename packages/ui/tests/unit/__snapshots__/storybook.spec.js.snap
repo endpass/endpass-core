@@ -6708,6 +6708,15 @@ exports[`Storyshots VLink/desktop default 1`] = `
    
   <div>
     <a
+      class="link-atom theme-default"
+      role="button"
+    >
+      role button
+    </a>
+  </div>
+   
+  <div>
+    <a
       class="link-atom theme-default is-underline"
     >
       with underline
