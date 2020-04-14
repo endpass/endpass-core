@@ -14,7 +14,10 @@
     >
       <slot />
     </span>
-    <tooltip-molecule :label="tooltipLabel" />
+    <tooltip-molecule
+      class="v-radio-tooltip"
+      :label="tooltipLabel"
+    />
   </label>
 </template>
 
