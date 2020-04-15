@@ -9262,7 +9262,9 @@ exports[`Storyshots VRadio/desktop default 1`] = `
       
     </span>
      
-    <!---->
+    <div>
+      <!---->
+    </div>
   </label>
    
   <label
@@ -9287,7 +9289,9 @@ exports[`Storyshots VRadio/desktop default 1`] = `
       
     </span>
      
-    <!---->
+    <div>
+      <!---->
+    </div>
   </label>
    
   <label
@@ -9312,37 +9316,39 @@ exports[`Storyshots VRadio/desktop default 1`] = `
       
     </span>
      
-    <div
-      class="tooltip-molecule theme-default"
-    >
+    <div>
       <div
-        class="tooltip-atom theme-default position-bottom-left"
-        style="display: none;"
+        class="tooltip-molecule theme-default"
       >
         <div
-          class="tooltip-atom-container"
+          class="tooltip-atom theme-default position-bottom-left"
+          style="display: none;"
         >
-          
+          <div
+            class="tooltip-atom-container"
+          >
+            
     with tooltip
   
+          </div>
         </div>
-      </div>
-       
-      <i
-        class="icon-atom tooltip-molecule-icon theme-default"
-      >
-        <svg
-          class="svg-atom theme-default"
-          height="100%"
-          width="100%"
+         
+        <i
+          class="icon-atom tooltip-molecule-icon theme-default"
         >
-          <use
-            x="0"
-            xlink:href="#endpass-ui-icon-info"
-            y="0"
-          />
-        </svg>
-      </i>
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-info"
+              y="0"
+            />
+          </svg>
+        </i>
+      </div>
     </div>
   </label>
 </div>
@@ -9382,7 +9388,9 @@ exports[`Storyshots VRadio/desktop disabled 1`] = `
       
     </span>
      
-    <!---->
+    <div>
+      <!---->
+    </div>
   </label>
    
   <label
@@ -9409,7 +9417,9 @@ exports[`Storyshots VRadio/desktop disabled 1`] = `
       
     </span>
      
-    <!---->
+    <div>
+      <!---->
+    </div>
   </label>
    
   <label
@@ -9436,37 +9446,39 @@ exports[`Storyshots VRadio/desktop disabled 1`] = `
       
     </span>
      
-    <div
-      class="tooltip-molecule theme-default"
-    >
+    <div>
       <div
-        class="tooltip-atom theme-default position-bottom-left"
-        style="display: none;"
+        class="tooltip-molecule theme-default"
       >
         <div
-          class="tooltip-atom-container"
+          class="tooltip-atom theme-default position-bottom-left"
+          style="display: none;"
         >
-          
+          <div
+            class="tooltip-atom-container"
+          >
+            
     with tooltip
   
+          </div>
         </div>
-      </div>
-       
-      <i
-        class="icon-atom tooltip-molecule-icon theme-default"
-      >
-        <svg
-          class="svg-atom theme-default"
-          height="100%"
-          width="100%"
+         
+        <i
+          class="icon-atom tooltip-molecule-icon theme-default"
         >
-          <use
-            x="0"
-            xlink:href="#endpass-ui-icon-info"
-            y="0"
-          />
-        </svg>
-      </i>
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-info"
+              y="0"
+            />
+          </svg>
+        </i>
+      </div>
     </div>
   </label>
 </div>
@@ -9504,7 +9516,9 @@ exports[`Storyshots VRadio/desktop error 1`] = `
       
     </span>
      
-    <!---->
+    <div>
+      <!---->
+    </div>
   </label>
    
   <label
@@ -9529,7 +9543,9 @@ exports[`Storyshots VRadio/desktop error 1`] = `
       
     </span>
      
-    <!---->
+    <div>
+      <!---->
+    </div>
   </label>
    
   <label
@@ -9554,37 +9570,39 @@ exports[`Storyshots VRadio/desktop error 1`] = `
       
     </span>
      
-    <div
-      class="tooltip-molecule theme-default"
-    >
+    <div>
       <div
-        class="tooltip-atom theme-default position-bottom-left"
-        style="display: none;"
+        class="tooltip-molecule theme-default"
       >
         <div
-          class="tooltip-atom-container"
+          class="tooltip-atom theme-default position-bottom-left"
+          style="display: none;"
         >
-          
+          <div
+            class="tooltip-atom-container"
+          >
+            
     with tooltip
   
+          </div>
         </div>
-      </div>
-       
-      <i
-        class="icon-atom tooltip-molecule-icon theme-default"
-      >
-        <svg
-          class="svg-atom theme-default"
-          height="100%"
-          width="100%"
+         
+        <i
+          class="icon-atom tooltip-molecule-icon theme-default"
         >
-          <use
-            x="0"
-            xlink:href="#endpass-ui-icon-info"
-            y="0"
-          />
-        </svg>
-      </i>
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-info"
+              y="0"
+            />
+          </svg>
+        </i>
+      </div>
     </div>
   </label>
 </div>

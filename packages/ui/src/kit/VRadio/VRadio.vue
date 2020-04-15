@@ -14,7 +14,9 @@
     >
       <slot />
     </span>
-    <tooltip-molecule :label="tooltipLabel" />
+    <div>
+      <tooltip-molecule :label="tooltipLabel" />
+    </div>
   </label>
 </template>
 
