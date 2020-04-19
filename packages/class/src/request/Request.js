@@ -58,7 +58,7 @@ export default class Request {
 
   /**
    * @param {string} url
-   * @param {object} fields
+   * @param {{[key: string]: any}} fields
    * @param {AxiosRequestConfig=} [config]
    * @return {Promise<any>}
    */

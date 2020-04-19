@@ -8,6 +8,10 @@ export type RequestCreateParams = {
   createAnswer?: RequestAnswerFactory;
 };
 
+export type UploadField = {
+  [key: string]: any;
+};
+
 declare class Request {
   constructor(params: RequestCreateParams);
 
@@ -21,7 +25,7 @@ declare class Request {
 
   upload(
     url: string,
-    fields: object,
+    fields: UploadField,
     config?: AxiosRequestConfig,
   ): Promise<any>;
 }
