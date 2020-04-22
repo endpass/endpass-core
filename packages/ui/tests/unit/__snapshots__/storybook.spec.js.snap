@@ -3669,6 +3669,37 @@ exports[`Storyshots VCheckbox/desktop true/false attr 1`] = `
 </div>
 `;
 
+exports[`Storyshots VCheckbox/desktop value without v-model 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <label
+    class="v-checkbox theme-default"
+  >
+    <i
+      class="icon-atom v-checkbox-frame theme-default"
+    />
+     
+    <input
+      class="v-checkbox-control"
+      name="Name"
+      type="checkbox"
+      value="false"
+    />
+     
+    <span
+      class="v-checkbox-label"
+    >
+      
+          state: false
+        
+    </span>
+  </label>
+</div>
+`;
+
 exports[`Storyshots VCodeInput/desktop custom length 1`] = `
 <div>
   <div
