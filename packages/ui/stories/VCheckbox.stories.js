@@ -160,4 +160,29 @@ storiesOf('VCheckbox/desktop', module)
         </v-checkbox>
       </theme-provider>
     `,
+  }))
+  .add('value without v-model', () => ({
+    methods: {
+      onChange(val) {
+        this.value = val;
+        methods.onInput(val);
+      },
+    },
+    components: { VCheckbox },
+    data() {
+      return {
+        value: false,
+      };
+    },
+    template: `
+      <theme-provider>
+        <v-checkbox
+          :value="value"
+          name="Name"
+          @change="onChange"
+        >
+          state: {{ value }}
+        </v-checkbox>
+      </theme-provider>
+    `,
   }));

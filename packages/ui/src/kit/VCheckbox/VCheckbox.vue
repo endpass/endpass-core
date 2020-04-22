@@ -86,7 +86,7 @@ export default {
         return this.modelValue.includes(this.value);
       }
 
-      return this.modelValue === this.trueValue;
+      return this.modelValue === this.trueValue || this.value === this.trueValue;
     },
 
     checkboxCssClass() {
