@@ -40,6 +40,14 @@ export default {
       type: Boolean,
       default: false,
     },
+
+    skin: {
+      type: String,
+      default: 'primary',
+      validator(value) {
+        return ['primary', 'secondary'].indexOf(value) !== -1;
+      },
+    },
   },
 
   computed: {
@@ -47,6 +55,7 @@ export default {
       return Object.assign(this.themeCssClass, {
         'icon-control-molecule': true,
         'is-active': this.isActive,
+        [this.skin]: !!this.skin,
       });
     },
 
