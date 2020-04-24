@@ -5762,7 +5762,7 @@ exports[`Storyshots VIconControl/desktop default 1`] = `
   />
    
   <a
-    class="theme-default icon-control-molecule"
+    class="theme-default icon-control-molecule primary"
     role="button"
   >
     <span
@@ -5801,7 +5801,7 @@ exports[`Storyshots VIconControl/desktop with icon as prop 1`] = `
   />
    
   <a
-    class="theme-default icon-control-molecule"
+    class="theme-default icon-control-molecule primary"
     role="button"
   >
     <span
