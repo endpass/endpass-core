@@ -16,11 +16,23 @@ export default {
       type: [String, Date, Number],
       required: true,
     },
+
+    skin: {
+      type: String,
+      default: 'primary',
+      validator(value) {
+        return ['primary', 'secondary'].indexOf(value) !== -1;
+      },
+    },
   },
 
   computed: {
     vDateBadgeCssClass() {
-      return { ...this.themeCssClass, 'v-date-badge': true };
+      return {
+        ...this.themeCssClass,
+        'v-date-badge': true,
+        [this.skin]: !!this.skin,
+      };
     },
 
     formattedDateString() {

@@ -7,8 +7,19 @@ storiesOf('VDateBadge/desktop', module).add('default', () => ({
   }),
   components: { VDateBadge },
   template: `
-      <theme-provider>
-        <v-date-badge :date="date" />
-      </theme-provider>
-    `,
+    <theme-provider>
+      <table width="100%">
+        <tbody>
+          <tr>
+            <th scope="row">Primary</th>
+            <td><v-date-badge :date="date" skin="primary" /></td>
+          </tr>
+          <tr>
+            <th scope="row">Secondary</th>
+            <td><v-date-badge :date="date" skin="secondary" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </theme-provider>
+  `,
 }));

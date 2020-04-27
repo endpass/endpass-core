@@ -3,9 +3,19 @@
   display: inline-block;
   vertical-align: middle;
   height: 24px;
-  padding: 6px 20px;
+  padding: 0 20px;
   border-radius: 18px;
-  border: 1px solid var(--endpass-ui-color-grey-3);
   font-size: 12px;
-  line-height: 1.3;
+  line-height: 24px;
+}
+
+.v-date-badge.theme-default.primary {
+  border: 1px solid var(--endpass-ui-color-primary-6);
+  background-color: transparent;
+}
+
+.v-date-badge.theme-default.secondary {
+  color: var(--endpass-ui-color-white);
+  border: 1px solid var(--endpass-ui-color-primary-6);
+  background-color: var(--endpass-ui-color-primary-6);
 }

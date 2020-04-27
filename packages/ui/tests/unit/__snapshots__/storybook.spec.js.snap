@@ -4048,13 +4048,47 @@ exports[`Storyshots VDateBadge/desktop default 1`] = `
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
   />
    
-  <time
-    class="theme-default v-date-badge"
+  <table
+    width="100%"
   >
-    
+    <tbody>
+      <tr>
+        <th
+          scope="row"
+        >
+          Primary
+        </th>
+         
+        <td>
+          <time
+            class="theme-default v-date-badge primary"
+          >
+            
   2010-10-10 4:00
 
-  </time>
+          </time>
+        </td>
+      </tr>
+       
+      <tr>
+        <th
+          scope="row"
+        >
+          Secondary
+        </th>
+         
+        <td>
+          <time
+            class="theme-default v-date-badge secondary"
+          >
+            
+  2010-10-10 4:00
+
+          </time>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 `;
 
