@@ -22,10 +22,17 @@
     <span class="v-checkbox-label">
       <slot />
     </span>
+    <div
+      v-if="tooltipLabel"
+      class="v-checkbox-tooltip"
+    >
+      <tooltip-molecule :label="tooltipLabel" />
+    </div>
   </label>
 </template>
 
 <script>
+import TooltipMolecule from '@/molecule/tooltip-molecule/tooltip-molecule';
 import ThemeMixin from '@/mixins/ThemeMixin';
 import IsDisabledMixin from '@/mixins/IsDisabledMixin';
 import IconAtom from '@/atom/icon-atom/icon-atom';
@@ -69,6 +76,11 @@ export default {
       type: String,
       default: null,
     },
+
+    tooltipLabel: {
+      type: String,
+      default: null,
+    },
   },
 
   data() {
@@ -86,7 +98,9 @@ export default {
         return this.modelValue.includes(this.value);
       }
 
-      return this.modelValue === this.trueValue || this.value === this.trueValue;
+      return (
+        this.modelValue === this.trueValue || this.value === this.trueValue
+      );
     },
 
     checkboxCssClass() {
@@ -123,7 +137,10 @@ export default {
 
   mixins: [ThemeMixin, IsDisabledMixin],
 
-  components: { IconAtom },
+  components: {
+    IconAtom,
+    TooltipMolecule,
+  },
 
   model: {
     prop: 'modelValue',

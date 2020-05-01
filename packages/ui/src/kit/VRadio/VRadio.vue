@@ -14,7 +14,7 @@
     >
       <slot />
     </span>
-    <div>
+    <div v-if="tooltipLabel">
       <tooltip-molecule :label="tooltipLabel" />
     </div>
   </label>

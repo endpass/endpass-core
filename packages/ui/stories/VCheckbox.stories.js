@@ -161,6 +161,26 @@ storiesOf('VCheckbox/desktop', module)
       </theme-provider>
     `,
   }))
+  .add('tooltip', () => ({
+    methods,
+    components: { VCheckbox },
+    data() {
+      return {
+        model: null,
+      };
+    },
+    template: `
+      <theme-provider>
+        <v-checkbox
+          v-model="model"
+          tooltip="I am tooltip"
+          @input="onInput"
+        >
+          tooltip
+        </v-checkbox>
+      </theme-provider>
+    `,
+  }))
   .add('value without v-model', () => ({
     methods: {
       onChange(val) {
