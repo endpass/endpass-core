@@ -173,7 +173,7 @@ storiesOf('VCheckbox/desktop', module)
       <theme-provider>
         <v-checkbox
           v-model="model"
-          tooltip="I am tooltip"
+          tooltip-label="I am tooltip"
           @input="onInput"
         >
           tooltip
