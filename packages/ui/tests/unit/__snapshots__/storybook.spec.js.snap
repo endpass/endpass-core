@@ -3660,7 +3660,6 @@ exports[`Storyshots VCheckbox/desktop tooltip 1`] = `
    
   <label
     class="v-checkbox theme-default"
-    tooltip="I am tooltip"
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
@@ -3681,7 +3680,42 @@ exports[`Storyshots VCheckbox/desktop tooltip 1`] = `
         
     </span>
      
-    <!---->
+    <div
+      class="v-checkbox-tooltip"
+    >
+      <div
+        class="tooltip-molecule theme-default"
+      >
+        <div
+          class="tooltip-atom theme-default position-bottom-left"
+          style="display: none;"
+        >
+          <div
+            class="tooltip-atom-container"
+          >
+            
+    I am tooltip
+  
+          </div>
+        </div>
+         
+        <i
+          class="icon-atom tooltip-molecule-icon theme-default"
+        >
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-info"
+              y="0"
+            />
+          </svg>
+        </i>
+      </div>
+    </div>
   </label>
 </div>
 `;
