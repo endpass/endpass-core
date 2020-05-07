@@ -22,6 +22,11 @@
   margin-left: 10px;
 }
 
+.v-checkbox.theme-default .v-checkbox-tooltip {
+  display: inline-flex;
+  margin-left: 3px;
+}
+
 .v-checkbox.theme-default .v-checkbox-frame {
   width: 13px;
   height: 13px;

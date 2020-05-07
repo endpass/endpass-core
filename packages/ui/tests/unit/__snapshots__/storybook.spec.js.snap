@@ -3447,6 +3447,8 @@ exports[`Storyshots VCheckbox/desktop array 1`] = `
           with Crypto!
         
     </span>
+     
+    <!---->
   </label>
    
   <br />
@@ -3483,6 +3485,8 @@ exports[`Storyshots VCheckbox/desktop default state 1`] = `
           state: false
         
     </span>
+     
+    <!---->
   </label>
 </div>
 `;
@@ -3514,6 +3518,8 @@ exports[`Storyshots VCheckbox/desktop default state false 1`] = `
           state: false
         
     </span>
+     
+    <!---->
   </label>
 </div>
 `;
@@ -3545,6 +3551,8 @@ exports[`Storyshots VCheckbox/desktop default state true 1`] = `
           state: true
         
     </span>
+     
+    <!---->
   </label>
 </div>
 `;
@@ -3577,6 +3585,8 @@ exports[`Storyshots VCheckbox/desktop disabled 1`] = `
           disabled
         
     </span>
+     
+    <!---->
   </label>
    
   <br />
@@ -3603,6 +3613,8 @@ exports[`Storyshots VCheckbox/desktop disabled 1`] = `
           disabled
         
     </span>
+     
+    <!---->
   </label>
 </div>
 `;
@@ -3634,6 +3646,76 @@ exports[`Storyshots VCheckbox/desktop error 1`] = `
           is-error
         
     </span>
+     
+    <!---->
+  </label>
+</div>
+`;
+
+exports[`Storyshots VCheckbox/desktop tooltip 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <label
+    class="v-checkbox theme-default"
+  >
+    <i
+      class="icon-atom v-checkbox-frame theme-default"
+    />
+     
+    <input
+      class="v-checkbox-control"
+      name="checkbox"
+      type="checkbox"
+      value="false"
+    />
+     
+    <span
+      class="v-checkbox-label"
+    >
+      
+          tooltip
+        
+    </span>
+     
+    <div
+      class="v-checkbox-tooltip"
+    >
+      <div
+        class="tooltip-molecule theme-default"
+      >
+        <div
+          class="tooltip-atom theme-default position-bottom-left"
+          style="display: none;"
+        >
+          <div
+            class="tooltip-atom-container"
+          >
+            
+    I am tooltip
+  
+          </div>
+        </div>
+         
+        <i
+          class="icon-atom tooltip-molecule-icon theme-default"
+        >
+          <svg
+            class="svg-atom theme-default"
+            height="100%"
+            width="100%"
+          >
+            <use
+              x="0"
+              xlink:href="#endpass-ui-icon-info"
+              y="0"
+            />
+          </svg>
+        </i>
+      </div>
+    </div>
   </label>
 </div>
 `;
@@ -3665,6 +3747,8 @@ exports[`Storyshots VCheckbox/desktop true/false attr 1`] = `
           state: no
         
     </span>
+     
+    <!---->
   </label>
 </div>
 `;
@@ -3696,6 +3780,8 @@ exports[`Storyshots VCheckbox/desktop value without v-model 1`] = `
           state: false
         
     </span>
+     
+    <!---->
   </label>
 </div>
 `;
@@ -9327,9 +9413,7 @@ exports[`Storyshots VRadio/desktop default 1`] = `
       
     </span>
      
-    <div>
-      <!---->
-    </div>
+    <!---->
   </label>
    
   <label
@@ -9354,9 +9438,7 @@ exports[`Storyshots VRadio/desktop default 1`] = `
       
     </span>
      
-    <div>
-      <!---->
-    </div>
+    <!---->
   </label>
    
   <label
@@ -9453,9 +9535,7 @@ exports[`Storyshots VRadio/desktop disabled 1`] = `
       
     </span>
      
-    <div>
-      <!---->
-    </div>
+    <!---->
   </label>
    
   <label
@@ -9482,9 +9562,7 @@ exports[`Storyshots VRadio/desktop disabled 1`] = `
       
     </span>
      
-    <div>
-      <!---->
-    </div>
+    <!---->
   </label>
    
   <label
@@ -9581,9 +9659,7 @@ exports[`Storyshots VRadio/desktop error 1`] = `
       
     </span>
      
-    <div>
-      <!---->
-    </div>
+    <!---->
   </label>
    
   <label
@@ -9608,9 +9684,7 @@ exports[`Storyshots VRadio/desktop error 1`] = `
       
     </span>
      
-    <div>
-      <!---->
-    </div>
+    <!---->
   </label>
    
   <label
