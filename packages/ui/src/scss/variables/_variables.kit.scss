@@ -16,15 +16,17 @@
   --endpass-ui-color-blue-1: #0030d3;
   --endpass-ui-color-blue-2: #032AAD;
   --endpass-ui-color-red-1: #da1a29;
+  --endpass-ui-color-red-2: #D91D28;
   --endpass-ui-color-orange-1: #fc7b1e;
   --endpass-ui-color-yellow-1: #fdd13a;
   --endpass-ui-color-green-1: #22a143;
+  --endpass-ui-color-green-2: #24A148;
 
 
   --endpass-ui-color-warning-primary: var(--endpass-ui-color-orange-1);
   --endpass-ui-color-warning-secondary: var(--endpass-ui-color-yellow-1);
-  --endpass-ui-color-error: var(--endpass-ui-color-red-1);
-  --endpass-ui-color-success: var(--endpass-ui-color-green-1);
+  --endpass-ui-color-error: var(--endpass-ui-color-red-2);
+  --endpass-ui-color-success: var(--endpass-ui-color-green-2);
 }
 
 // breakpoints
