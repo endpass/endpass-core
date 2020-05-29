@@ -3,20 +3,16 @@
 /**
  * @returns {{
  *   timezone: string,
- *   gmt: number|string,
+ *   timezoneOffset: number,
  * }}
  */
 const getTimezone = () => {
-  const dateParts = new Date().toString().split(' ');
-  const timezoneType = dateParts[dateParts.length - 2];
-  const timezoneOffset = dateParts[dateParts.length - 1];
-
+  const timezoneOffset = new Date().getTimezoneOffset();
   const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  const gmt = `${timezoneType} ${timezoneOffset}`;
 
   return {
     timezone,
-    gmt,
+    timezoneOffset,
   };
 };
 
