@@ -1,6 +1,6 @@
 {
   "name": "@endpass/utils",
-  "version": "1.10.0",
+  "version": "1.10.1",
   "description": "Utils and helper functions",
   "author": "Endpass, Inc",
   "homepage": "http://endpass.com/",
@@ -44,7 +44,7 @@
     "eth-ecies": "^1.0.3",
     "ethereumjs-wallet": "^0.6.3",
     "export-files": "^2.1.1",
-    "fingerprintjs2": "^2.1.0",
+    "fingerprintjs2": "1.8.6",
     "keythereum": "^1.0.4",
     "lodash": "^4.17.15",
     "node-notifier": "^5.4.3",
