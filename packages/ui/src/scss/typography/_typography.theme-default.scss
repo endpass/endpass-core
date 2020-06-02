@@ -6,6 +6,10 @@
 .theme-default,
 .v-body {
   font-family: var(--endpass-ui-font-family-primary);
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .v-body {
