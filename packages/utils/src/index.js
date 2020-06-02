@@ -9,4 +9,6 @@ module.exports.numbers = require('./numbers');
 module.exports.objects = require('./objects');
 module.exports.strings = require('./strings');
 module.exports.serviceWorkers = require('./serviceWorkers');
-// module.exports.build = require('./build'); // noo need in client, only for build
+module.exports.metrics = require('./metrics');
+// not need in client, only for build
+// module.exports.build = require('./build');

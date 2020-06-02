@@ -1033,6 +1033,11 @@
   resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
   integrity sha512-EaObqwIvayI5a8dCzhFrjKzVwKLxjoG9T6Ppd5CEo07LRKfQ8Yokw54r5+Wq7FaBQ+yXRvQAYPrHwya1/UFt9g==
 
+"@types/fingerprintjs2@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@types/fingerprintjs2/-/fingerprintjs2-2.0.0.tgz#3af76e165416fa75261bbce4393f5445fca4cadd"
+  integrity sha512-isSTwNnW5I6zGZnpkinmVcV9pJqr7cLELns+tXDYzskIOAb2J+iCQ0mQJ9bRjHJhZfdlTFXZoCYK9ZgT3oMWXQ==
+
 "@types/fs-extra@^8.0.0":
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-8.0.0.tgz#d3e2c313ca29f95059f198dd60d1f774642d4b25"
@@ -2870,6 +2875,11 @@ find-up@^4.0.0:
   dependencies:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
+
+fingerprintjs2@1.8.6:
+  version "1.8.6"
+  resolved "https://registry.yarnpkg.com/fingerprintjs2/-/fingerprintjs2-1.8.6.tgz#ac92bd3f9965b51f5bf1b2d2d6f4bcc44ac89aab"
+  integrity sha512-uarmLgW2QXzu1Ljw3PDcQLJ69w8uT42odab//KOZ+NZsAyAudq5ZvlImEXYd/5sJbtBa5TSQ5OKZX1rkpK/t5w==
 
 flat-cache@^2.0.1:
   version "2.0.1"
