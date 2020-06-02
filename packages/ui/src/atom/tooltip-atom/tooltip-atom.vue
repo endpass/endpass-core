@@ -3,10 +3,13 @@
     <div
       v-show="show"
       class="tooltip-atom"
-      :class="tagCssClass"
+      :class="tooltipCssClass"
       v-bind="$attrs"
     >
-      <div class="tooltip-atom-container">
+      <div
+        class="tooltip-atom-container"
+        :style="tooltipContainerStyles"
+      >
         <slot />
       </div>
     </div>
@@ -39,13 +42,24 @@ export default {
         ].includes(value);
       },
     },
+
+    width: {
+      type: Number,
+      default: 172,
+    },
   },
 
   computed: {
-    tagCssClass() {
+    tooltipCssClass() {
       return {
         ...this.themeCssClass,
         [`position-${this.position}`]: true,
+      };
+    },
+
+    tooltipContainerStyles() {
+      return {
+        'min-width': `${this.width}px`,
       };
     },
   },

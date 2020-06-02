@@ -3692,6 +3692,7 @@ exports[`Storyshots VCheckbox/desktop tooltip 1`] = `
         >
           <div
             class="tooltip-atom-container"
+            style="min-width: 172px;"
           >
             
     I am tooltip
@@ -4358,6 +4359,7 @@ exports[`Storyshots VDateInput/desktop default 1`] = `
                   >
                     <div
                       class="tooltip-atom-container"
+                      style="min-width: 172px;"
                     >
                       
       some text in tooltip
@@ -5095,6 +5097,7 @@ exports[`Storyshots VFileDropArea/desktop tooltip 1`] = `
           >
             <div
               class="tooltip-atom-container"
+              style="min-width: 172px;"
             >
               
       some text in tooltip
@@ -5308,6 +5311,7 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
                 >
                   <div
                     class="tooltip-atom-container"
+                    style="min-width: 172px;"
                   >
                     
       some text in tooltip
@@ -6093,6 +6097,7 @@ exports[`Storyshots VInput/desktop primary 1`] = `
                 >
                   <div
                     class="tooltip-atom-container"
+                    style="min-width: 172px;"
                   >
                     
       hello this is tooltip data
@@ -6320,6 +6325,7 @@ exports[`Storyshots VInput/desktop secondary 1`] = `
                 >
                   <div
                     class="tooltip-atom-container"
+                    style="min-width: 172px;"
                   >
                     
       hello this is tooltip data
@@ -6736,6 +6742,7 @@ exports[`Storyshots VLabel/desktop default 1`] = `
               >
                 <div
                   class="tooltip-atom-container"
+                  style="min-width: 172px;"
                 >
                   
       tooltip some text here
@@ -6796,6 +6803,7 @@ exports[`Storyshots VLabel/desktop default 1`] = `
               >
                 <div
                   class="tooltip-atom-container"
+                  style="min-width: 172px;"
                 >
                   
       tooltip some text here
@@ -9473,6 +9481,7 @@ exports[`Storyshots VRadio/desktop default 1`] = `
         >
           <div
             class="tooltip-atom-container"
+            style="min-width: 172px;"
           >
             
     with tooltip
@@ -9599,6 +9608,7 @@ exports[`Storyshots VRadio/desktop disabled 1`] = `
         >
           <div
             class="tooltip-atom-container"
+            style="min-width: 172px;"
           >
             
     with tooltip
@@ -9719,6 +9729,7 @@ exports[`Storyshots VRadio/desktop error 1`] = `
         >
           <div
             class="tooltip-atom-container"
+            style="min-width: 172px;"
           >
             
     with tooltip
@@ -10437,6 +10448,7 @@ exports[`Storyshots VSelect/desktop tooltip 1`] = `
                 >
                   <div
                     class="tooltip-atom-container"
+                    style="min-width: 172px;"
                   >
                     
       some text for tooltip
@@ -10521,6 +10533,7 @@ exports[`Storyshots VSelect/desktop tooltip 1`] = `
                 >
                   <div
                     class="tooltip-atom-container"
+                    style="min-width: 172px;"
                   >
                     
       some text for tooltip
@@ -15027,6 +15040,7 @@ exports[`Storyshots VTextarea/desktop default 1`] = `
                 >
                   <div
                     class="tooltip-atom-container"
+                    style="min-width: 172px;"
                   >
                     
       some text in tooltip
@@ -15615,7 +15629,7 @@ exports[`Storyshots VToggle/desktop true/false attr 1`] = `
 </div>
 `;
 
-exports[`Storyshots VTooltip/desktop default 1`] = `
+exports[`Storyshots VTooltip/desktop custom width 1`] = `
 <div>
   <div
     style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
@@ -15646,6 +15660,7 @@ exports[`Storyshots VTooltip/desktop default 1`] = `
             >
               <div
                 class="tooltip-atom-container"
+                style="min-width: 360px;"
               >
                 
                   position: top-left
@@ -15683,6 +15698,7 @@ exports[`Storyshots VTooltip/desktop default 1`] = `
             >
               <div
                 class="tooltip-atom-container"
+                style="min-width: 360px;"
               >
                 
                   position: top-right
@@ -15714,6 +15730,7 @@ exports[`Storyshots VTooltip/desktop default 1`] = `
             >
               <div
                 class="tooltip-atom-container"
+                style="min-width: 360px;"
               >
                 
                   position: bottom-left
@@ -15751,6 +15768,173 @@ exports[`Storyshots VTooltip/desktop default 1`] = `
             >
               <div
                 class="tooltip-atom-container"
+                style="min-width: 360px;"
+              >
+                
+                  position: bottom-right
+                
+              </div>
+            </div>
+             
+            <div
+              style="padding: 20px; background: silver;"
+            >
+              
+      move mouse to this place
+    
+            </div>
+          </div>
+           
+          <div>
+            bottom container
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+`;
+
+exports[`Storyshots VTooltip/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <table>
+    <tr>
+      <td>
+        <div>
+          <div>
+            top container
+          </div>
+           
+          <div
+            style="width: 120px;"
+          >
+            <div
+              style="padding: 20px; background: silver;"
+            >
+              
+      move mouse to this place
+    
+            </div>
+             
+            <div
+              class="tooltip-atom theme-default position-top-left"
+              style="display: none;"
+            >
+              <div
+                class="tooltip-atom-container"
+                style="min-width: 172px;"
+              >
+                
+                  position: top-left
+                
+              </div>
+            </div>
+          </div>
+           
+          <div>
+            bottom container
+          </div>
+        </div>
+      </td>
+       
+      <td>
+        <div>
+          <div>
+            top container
+          </div>
+           
+          <div
+            style="width: 120px;"
+          >
+            <div
+              style="padding: 20px; background: silver;"
+            >
+              
+      move mouse to this place
+    
+            </div>
+             
+            <div
+              class="tooltip-atom theme-default position-top-right"
+              style="display: none;"
+            >
+              <div
+                class="tooltip-atom-container"
+                style="min-width: 172px;"
+              >
+                
+                  position: top-right
+                
+              </div>
+            </div>
+          </div>
+           
+          <div>
+            bottom container
+          </div>
+        </div>
+      </td>
+    </tr>
+     
+    <tr>
+      <td>
+        <div>
+          <div>
+            top container
+          </div>
+           
+          <div
+            style="width: 120px;"
+          >
+            <div
+              class="tooltip-atom theme-default position-bottom-left"
+              style="display: none;"
+            >
+              <div
+                class="tooltip-atom-container"
+                style="min-width: 172px;"
+              >
+                
+                  position: bottom-left
+                
+              </div>
+            </div>
+             
+            <div
+              style="padding: 20px; background: silver;"
+            >
+              
+      move mouse to this place
+    
+            </div>
+          </div>
+           
+          <div>
+            bottom container
+          </div>
+        </div>
+      </td>
+       
+      <td>
+        <div>
+          <div>
+            top container
+          </div>
+           
+          <div
+            style="width: 120px;"
+          >
+            <div
+              class="tooltip-atom theme-default position-bottom-right"
+              style="display: none;"
+            >
+              <div
+                class="tooltip-atom-container"
+                style="min-width: 172px;"
               >
                 
                   position: bottom-right

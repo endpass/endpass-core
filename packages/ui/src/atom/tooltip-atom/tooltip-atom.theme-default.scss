@@ -5,13 +5,12 @@
 
 .tooltip-atom-fade-enter-active,
 .tooltip-atom-fade-leave-active {
-  transition: opacity .2s;
+  transition: opacity 0.2s;
 }
 .tooltip-atom-fade-enter,
 .tooltip-atom-fade-leave-to {
   opacity: 0;
 }
-
 
 .tooltip-atom.theme-default .tooltip-atom-container {
   position: absolute;
@@ -20,7 +19,6 @@
   background-color: var(--endpass-ui-color-black);
   color: var(--endpass-ui-color-white);
   border-radius: 2px;
-  min-width: 172px;
 }
 
 .tooltip-atom.theme-default .tooltip-atom-container:after {
@@ -58,10 +56,11 @@
   left: 50%;
   margin-left: -18px;
   margin-bottom: 9px;
-  bottom: 0
+  bottom: 0;
 }
 
-.tooltip-atom.theme-default.position-bottom-right .tooltip-atom-container:after {
+.tooltip-atom.theme-default.position-bottom-right
+  .tooltip-atom-container:after {
   bottom: -5px;
   right: 12px;
 }
@@ -69,7 +68,7 @@
   right: 50%;
   margin-right: -18px;
   margin-bottom: 9px;
-  bottom: 0
+  bottom: 0;
 }
 
 .tooltip-atom.theme-default.position-top-right .tooltip-atom-container:after,
