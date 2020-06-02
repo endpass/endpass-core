@@ -29,9 +29,10 @@ const Container = {
   `,
 };
 
-storiesOf('VTooltip/desktop', module).add('default', () => ({
-  components: { VTooltip, Container, Child },
-  template: `
+storiesOf('VTooltip/desktop', module)
+  .add('default', () => ({
+    components: { VTooltip, Container, Child },
+    template: `
     <theme-provider>
       <table>
         <tr>
@@ -90,4 +91,69 @@ storiesOf('VTooltip/desktop', module).add('default', () => ({
       </table>
     </theme-provider>
   `,
-}));
+  }))
+  .add('custom width', () => ({
+    components: { VTooltip, Container, Child },
+    template: `
+    <theme-provider>
+      <table>
+        <tr>
+          <td>
+            <Container>
+              <template v-slot:default="{ showTooltip }">
+                <Child/>
+                <VTooltip :show="showTooltip" :width="360">
+                  position: top-left
+                </VTooltip>
+              </template>
+            </Container>
+          </td>
+          <td>
+            <Container>
+              <template v-slot:default="{ showTooltip }">
+                <Child/>
+                <VTooltip
+                  position="top-right"
+                  :show="showTooltip"
+                  :width="360"
+                >
+                  position: top-right
+                </VTooltip>
+              </template>
+            </Container>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <Container>
+              <template v-slot:default="{ showTooltip }">
+                <VTooltip
+                  position="bottom-left"
+                  :show="showTooltip"
+                  :width="360"
+                >
+                  position: bottom-left
+                </VTooltip>
+                <Child/>
+              </template>
+            </Container>
+          </td>
+          <td>
+            <Container>
+              <template v-slot:default="{ showTooltip }">
+                <VTooltip
+                  position="bottom-right"
+                  :show="showTooltip"
+                  :width="360"
+                >
+                  position: bottom-right
+                </VTooltip>
+                <Child/>
+              </template>
+            </Container>
+          </td>
+        </tr>
+      </table>
+    </theme-provider>
+  `,
+  }));
