@@ -3431,7 +3431,19 @@ exports[`Storyshots VCheckbox/desktop array 1`] = `
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    />
+    >
+      <svg
+        class="svg-atom v-checkbox-mark theme-default"
+        height="100%"
+        width="100%"
+      >
+        <use
+          x="0"
+          xlink:href="#endpass-ui-icon-check"
+          y="0"
+        />
+      </svg>
+    </i>
      
     <input
       class="v-checkbox-control"
@@ -3469,7 +3481,19 @@ exports[`Storyshots VCheckbox/desktop default state 1`] = `
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    />
+    >
+      <svg
+        class="svg-atom v-checkbox-mark theme-default"
+        height="100%"
+        width="100%"
+      >
+        <use
+          x="0"
+          xlink:href="#endpass-ui-icon-check"
+          y="0"
+        />
+      </svg>
+    </i>
      
     <input
       class="v-checkbox-control"
@@ -3502,7 +3526,19 @@ exports[`Storyshots VCheckbox/desktop default state false 1`] = `
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    />
+    >
+      <svg
+        class="svg-atom v-checkbox-mark theme-default"
+        height="100%"
+        width="100%"
+      >
+        <use
+          x="0"
+          xlink:href="#endpass-ui-icon-check"
+          y="0"
+        />
+      </svg>
+    </i>
      
     <input
       class="v-checkbox-control"
@@ -3535,7 +3571,19 @@ exports[`Storyshots VCheckbox/desktop default state true 1`] = `
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    />
+    >
+      <svg
+        class="svg-atom v-checkbox-mark theme-default"
+        height="100%"
+        width="100%"
+      >
+        <use
+          x="0"
+          xlink:href="#endpass-ui-icon-check"
+          y="0"
+        />
+      </svg>
+    </i>
      
     <input
       class="v-checkbox-control"
@@ -3568,7 +3616,19 @@ exports[`Storyshots VCheckbox/desktop disabled 1`] = `
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    />
+    >
+      <svg
+        class="svg-atom v-checkbox-mark theme-default"
+        height="100%"
+        width="100%"
+      >
+        <use
+          x="0"
+          xlink:href="#endpass-ui-icon-check"
+          y="0"
+        />
+      </svg>
+    </i>
      
     <input
       class="v-checkbox-control"
@@ -3596,7 +3656,19 @@ exports[`Storyshots VCheckbox/desktop disabled 1`] = `
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    />
+    >
+      <svg
+        class="svg-atom v-checkbox-mark theme-default"
+        height="100%"
+        width="100%"
+      >
+        <use
+          x="0"
+          xlink:href="#endpass-ui-icon-check"
+          y="0"
+        />
+      </svg>
+    </i>
      
     <input
       class="v-checkbox-control"
@@ -3630,7 +3702,19 @@ exports[`Storyshots VCheckbox/desktop error 1`] = `
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    />
+    >
+      <svg
+        class="svg-atom v-checkbox-mark theme-default"
+        height="100%"
+        width="100%"
+      >
+        <use
+          x="0"
+          xlink:href="#endpass-ui-icon-check"
+          y="0"
+        />
+      </svg>
+    </i>
      
     <input
       class="v-checkbox-control is-danger"
@@ -3663,7 +3747,19 @@ exports[`Storyshots VCheckbox/desktop tooltip 1`] = `
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    />
+    >
+      <svg
+        class="svg-atom v-checkbox-mark theme-default"
+        height="100%"
+        width="100%"
+      >
+        <use
+          x="0"
+          xlink:href="#endpass-ui-icon-check"
+          y="0"
+        />
+      </svg>
+    </i>
      
     <input
       class="v-checkbox-control"
@@ -3732,7 +3828,19 @@ exports[`Storyshots VCheckbox/desktop true/false attr 1`] = `
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    />
+    >
+      <svg
+        class="svg-atom v-checkbox-mark theme-default"
+        height="100%"
+        width="100%"
+      >
+        <use
+          x="0"
+          xlink:href="#endpass-ui-icon-check"
+          y="0"
+        />
+      </svg>
+    </i>
      
     <input
       class="v-checkbox-control"
@@ -3765,7 +3873,19 @@ exports[`Storyshots VCheckbox/desktop value without v-model 1`] = `
   >
     <i
       class="icon-atom v-checkbox-frame theme-default"
-    />
+    >
+      <svg
+        class="svg-atom v-checkbox-mark theme-default"
+        height="100%"
+        width="100%"
+      >
+        <use
+          x="0"
+          xlink:href="#endpass-ui-icon-check"
+          y="0"
+        />
+      </svg>
+    </i>
      
     <input
       class="v-checkbox-control"
@@ -6951,12 +7071,36 @@ exports[`Storyshots VModal/VModalCard both 1`] = `
             <button
               class="v-modal-card-back"
               data-test="modal-card-button-back"
-            />
+            >
+              <svg
+                class="svg-atom theme-default"
+                height="17px"
+                width="23px"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-arrow-left"
+                  y="0"
+                />
+              </svg>
+            </button>
              
             <button
               class="v-modal-card-close"
               data-test="modal-card-button-close"
-            />
+            >
+              <svg
+                class="svg-atom theme-default"
+                height="17px"
+                width="17px"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-close"
+                  y="0"
+                />
+              </svg>
+            </button>
           </div>
            
           <header
@@ -7011,7 +7155,19 @@ exports[`Storyshots VModal/VModalCard closable 1`] = `
             <button
               class="v-modal-card-close"
               data-test="modal-card-button-close"
-            />
+            >
+              <svg
+                class="svg-atom theme-default"
+                height="17px"
+                width="17px"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-close"
+                  y="0"
+                />
+              </svg>
+            </button>
           </div>
            
           <header
@@ -7116,12 +7272,36 @@ exports[`Storyshots VModal/VModalCard description 1`] = `
             <button
               class="v-modal-card-back"
               data-test="modal-card-button-back"
-            />
+            >
+              <svg
+                class="svg-atom theme-default"
+                height="17px"
+                width="23px"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-arrow-left"
+                  y="0"
+                />
+              </svg>
+            </button>
              
             <button
               class="v-modal-card-close"
               data-test="modal-card-button-close"
-            />
+            >
+              <svg
+                class="svg-atom theme-default"
+                height="17px"
+                width="17px"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-close"
+                  y="0"
+                />
+              </svg>
+            </button>
           </div>
            
           <header
@@ -7156,6 +7336,93 @@ exports[`Storyshots VModal/VModalCard description 1`] = `
 </div>
 `;
 
+exports[`Storyshots VModal/VModalCard esc press 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div>
+    <div
+      class="mask-atom theme-default"
+    >
+      <div
+        class="mask-atom-centered"
+      >
+        <div
+          class="v-modal-card theme-default"
+        >
+          <div
+            class="v-modal-card-controls"
+          >
+            <button
+              class="v-modal-card-back"
+              data-test="modal-card-button-back"
+            >
+              <svg
+                class="svg-atom theme-default"
+                height="17px"
+                width="23px"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-arrow-left"
+                  y="0"
+                />
+              </svg>
+            </button>
+             
+            <button
+              class="v-modal-card-close"
+              data-test="modal-card-button-close"
+            >
+              <svg
+                class="svg-atom theme-default"
+                height="17px"
+                width="17px"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-close"
+                  y="0"
+                />
+              </svg>
+            </button>
+          </div>
+           
+          <header
+            class="v-modal-card-header"
+          >
+            <!---->
+             
+            <h3
+              class="v-modal-card-title"
+            >
+              Click to file select, then ESC
+            </h3>
+             
+            <div
+              class="v-modal-card-description"
+            >
+              click to file select and then press ESC button
+            </div>
+          </header>
+           
+          <div
+            class="v-modal-card-body"
+          >
+              
+            <input
+              type="file"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots VModal/VModalCard icon 1`] = `
 <div>
   <div
@@ -7178,12 +7445,36 @@ exports[`Storyshots VModal/VModalCard icon 1`] = `
             <button
               class="v-modal-card-back"
               data-test="modal-card-button-back"
-            />
+            >
+              <svg
+                class="svg-atom theme-default"
+                height="17px"
+                width="23px"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-arrow-left"
+                  y="0"
+                />
+              </svg>
+            </button>
              
             <button
               class="v-modal-card-close"
               data-test="modal-card-button-close"
-            />
+            >
+              <svg
+                class="svg-atom theme-default"
+                height="17px"
+                width="17px"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-close"
+                  y="0"
+                />
+              </svg>
+            </button>
           </div>
            
           <header
@@ -7244,7 +7535,19 @@ exports[`Storyshots VModal/VModalCard returnable 1`] = `
             <button
               class="v-modal-card-back"
               data-test="modal-card-button-back"
-            />
+            >
+              <svg
+                class="svg-atom theme-default"
+                height="17px"
+                width="23px"
+              >
+                <use
+                  x="0"
+                  xlink:href="#endpass-ui-icon-arrow-left"
+                  y="0"
+                />
+              </svg>
+            </button>
              
             <!---->
           </div>
@@ -7311,12 +7614,36 @@ exports[`Storyshots VModal/VModalInfoCard both 1`] = `
               <button
                 class="v-modal-card-back"
                 data-test="modal-card-button-back"
-              />
+              >
+                <svg
+                  class="svg-atom theme-default"
+                  height="17px"
+                  width="23px"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-arrow-left"
+                    y="0"
+                  />
+                </svg>
+              </button>
                
               <button
                 class="v-modal-card-close"
                 data-test="modal-card-button-close"
-              />
+              >
+                <svg
+                  class="svg-atom theme-default"
+                  height="17px"
+                  width="17px"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-close"
+                    y="0"
+                  />
+                </svg>
+              </button>
             </div>
              
             <header
@@ -7384,7 +7711,19 @@ exports[`Storyshots VModal/VModalInfoCard closable 1`] = `
               <button
                 class="v-modal-card-close"
                 data-test="modal-card-button-close"
-              />
+              >
+                <svg
+                  class="svg-atom theme-default"
+                  height="17px"
+                  width="17px"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-close"
+                    y="0"
+                  />
+                </svg>
+              </button>
             </div>
              
             <header
@@ -7515,7 +7854,19 @@ exports[`Storyshots VModal/VModalInfoCard returnable 1`] = `
               <button
                 class="v-modal-card-back"
                 data-test="modal-card-button-back"
-              />
+              >
+                <svg
+                  class="svg-atom theme-default"
+                  height="17px"
+                  width="23px"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-arrow-left"
+                    y="0"
+                  />
+                </svg>
+              </button>
                
               <!---->
             </div>

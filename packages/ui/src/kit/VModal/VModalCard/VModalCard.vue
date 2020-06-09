@@ -1,5 +1,6 @@
 <template>
   <close-by-key-atom
+    :stop-propagation-elements="['input', 'textarea']"
     class="v-modal-card"
     :class="themeCssClass"
     @close="onClose"
@@ -10,15 +11,25 @@
         class="v-modal-card-back"
         data-test="modal-card-button-back"
         @click="$emit('return', $event)"
-        v-html="backSvgIcon"
-      />
+      >
+        <svg-atom
+          name="arrow-left"
+          width="23px"
+          height="17px"
+        />
+      </button>
       <button
         v-if="isClosable"
         class="v-modal-card-close"
         data-test="modal-card-button-close"
         @click="onClose"
-        v-html="closeSvgIcon"
-      />
+      >
+        <svg-atom
+          name="close"
+          width="17px"
+          height="17px"
+        />
+      </button>
     </div>
     <header
       v-if="$slots.title || $slots.icon || $slots.description"
@@ -51,34 +62,35 @@
 
 <script>
 import ThemeMixin from '@/mixins/ThemeMixin';
-import closeSvgIcon from '@/img/close.svg';
-import backSvgIcon from '@/img/arrowLeft.svg';
 import CloseByKeyAtom from '@/atom/close-by-key-atom/close-by-key-atom';
+import SvgAtom from '@/atom/svg-atom/svg-atom';
 
 export default {
   name: 'VModalCard',
+
   props: {
     isClosable: {
       type: Boolean,
       default: false,
     },
+
     isReturnable: {
       type: Boolean,
       default: false,
     },
   },
-  data() {
-    return {
-      closeSvgIcon,
-      backSvgIcon,
-    };
-  },
+
   methods: {
     onClose($event) {
       this.$emit('close', $event);
     },
   },
+
   mixins: [ThemeMixin],
-  components: { CloseByKeyAtom },
+
+  components: {
+    SvgAtom,
+    CloseByKeyAtom,
+  },
 };
 </script>

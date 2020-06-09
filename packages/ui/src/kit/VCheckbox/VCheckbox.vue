@@ -3,10 +3,12 @@
     class="v-checkbox"
     :class="checkboxCssClass"
   >
-    <icon-atom
-      class="v-checkbox-frame"
-      v-html="checkSvgIcon"
-    />
+    <icon-atom class="v-checkbox-frame">
+      <svg-atom
+        class="v-checkbox-mark"
+        name="check"
+      />
+    </icon-atom>
     <input
       :disabled="disabled"
       :name="name"
@@ -36,7 +38,7 @@ import TooltipMolecule from '@/molecule/tooltip-molecule/tooltip-molecule';
 import ThemeMixin from '@/mixins/ThemeMixin';
 import IsDisabledMixin from '@/mixins/IsDisabledMixin';
 import IconAtom from '@/atom/icon-atom/icon-atom';
-import checkSvgIcon from '@/img/check.svg';
+import SvgAtom from '@/atom/svg-atom/svg-atom';
 
 export default {
   name: 'VCheckbox',
@@ -86,7 +88,6 @@ export default {
   data() {
     return {
       isFocused: false,
-      checkSvgIcon,
     };
   },
 
@@ -138,6 +139,7 @@ export default {
   mixins: [ThemeMixin, IsDisabledMixin],
 
   components: {
+    SvgAtom,
     IconAtom,
     TooltipMolecule,
   },
