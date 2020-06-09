@@ -43,8 +43,7 @@
   padding: 1px;
 }
 
-.v-checkbox.theme-default:hover .v-checkbox-frame,
-.v-checkbox.theme-default.is-focused .v-checkbox-frame {
+.v-checkbox.theme-default:hover .v-checkbox-frame {
   border-color: var(--endpass-ui-color-primary-7);
 }
 
@@ -66,4 +65,8 @@
 
 .v-checkbox.theme-default.is-checked.is-disabled .v-checkbox-frame {
   background-color: var(--endpass-ui-color-grey-4);
+}
+
+.v-checkbox.theme-default .v-checkbox-control:focus + .v-checkbox-frame {
+  border-color: var(--endpass-ui-color-primary-7);
 }

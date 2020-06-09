@@ -3429,6 +3429,13 @@ exports[`Storyshots VCheckbox/desktop array 1`] = `
   <label
     class="v-checkbox theme-default"
   >
+    <input
+      class="v-checkbox-control"
+      name="Name"
+      type="checkbox"
+      value="Crypto!"
+    />
+     
     <i
       class="icon-atom v-checkbox-frame theme-default"
     >
@@ -3444,13 +3451,6 @@ exports[`Storyshots VCheckbox/desktop array 1`] = `
         />
       </svg>
     </i>
-     
-    <input
-      class="v-checkbox-control"
-      name="Name"
-      type="checkbox"
-      value="Crypto!"
-    />
      
     <span
       class="v-checkbox-label"
@@ -3479,6 +3479,13 @@ exports[`Storyshots VCheckbox/desktop default state 1`] = `
   <label
     class="v-checkbox theme-default"
   >
+    <input
+      class="v-checkbox-control"
+      name="Name"
+      type="checkbox"
+      value="false"
+    />
+     
     <i
       class="icon-atom v-checkbox-frame theme-default"
     >
@@ -3494,13 +3501,6 @@ exports[`Storyshots VCheckbox/desktop default state 1`] = `
         />
       </svg>
     </i>
-     
-    <input
-      class="v-checkbox-control"
-      name="Name"
-      type="checkbox"
-      value="false"
-    />
      
     <span
       class="v-checkbox-label"
@@ -3524,6 +3524,13 @@ exports[`Storyshots VCheckbox/desktop default state false 1`] = `
   <label
     class="v-checkbox theme-default"
   >
+    <input
+      class="v-checkbox-control"
+      name="checkbox"
+      type="checkbox"
+      value="false"
+    />
+     
     <i
       class="icon-atom v-checkbox-frame theme-default"
     >
@@ -3539,13 +3546,6 @@ exports[`Storyshots VCheckbox/desktop default state false 1`] = `
         />
       </svg>
     </i>
-     
-    <input
-      class="v-checkbox-control"
-      name="checkbox"
-      type="checkbox"
-      value="false"
-    />
      
     <span
       class="v-checkbox-label"
@@ -3569,6 +3569,13 @@ exports[`Storyshots VCheckbox/desktop default state true 1`] = `
   <label
     class="v-checkbox theme-default is-checked"
   >
+    <input
+      class="v-checkbox-control"
+      name="checkbox"
+      type="checkbox"
+      value="false"
+    />
+     
     <i
       class="icon-atom v-checkbox-frame theme-default"
     >
@@ -3584,13 +3591,6 @@ exports[`Storyshots VCheckbox/desktop default state true 1`] = `
         />
       </svg>
     </i>
-     
-    <input
-      class="v-checkbox-control"
-      name="checkbox"
-      type="checkbox"
-      value="false"
-    />
      
     <span
       class="v-checkbox-label"
@@ -3614,6 +3614,14 @@ exports[`Storyshots VCheckbox/desktop disabled 1`] = `
   <label
     class="v-checkbox theme-default is-disabled"
   >
+    <input
+      class="v-checkbox-control"
+      disabled="disabled"
+      name="checkbox"
+      type="checkbox"
+      value="false"
+    />
+     
     <i
       class="icon-atom v-checkbox-frame theme-default"
     >
@@ -3629,14 +3637,6 @@ exports[`Storyshots VCheckbox/desktop disabled 1`] = `
         />
       </svg>
     </i>
-     
-    <input
-      class="v-checkbox-control"
-      disabled="disabled"
-      name="checkbox"
-      type="checkbox"
-      value="false"
-    />
      
     <span
       class="v-checkbox-label"
@@ -3654,6 +3654,14 @@ exports[`Storyshots VCheckbox/desktop disabled 1`] = `
   <label
     class="v-checkbox theme-default is-checked is-disabled"
   >
+    <input
+      class="v-checkbox-control"
+      disabled="disabled"
+      name="checkbox"
+      type="checkbox"
+      value="false"
+    />
+     
     <i
       class="icon-atom v-checkbox-frame theme-default"
     >
@@ -3669,14 +3677,6 @@ exports[`Storyshots VCheckbox/desktop disabled 1`] = `
         />
       </svg>
     </i>
-     
-    <input
-      class="v-checkbox-control"
-      disabled="disabled"
-      name="checkbox"
-      type="checkbox"
-      value="false"
-    />
      
     <span
       class="v-checkbox-label"
@@ -3700,6 +3700,13 @@ exports[`Storyshots VCheckbox/desktop error 1`] = `
   <label
     class="v-checkbox theme-default is-error"
   >
+    <input
+      class="v-checkbox-control"
+      name="checkbox"
+      type="checkbox"
+      value="false"
+    />
+     
     <i
       class="icon-atom v-checkbox-frame theme-default"
     >
@@ -3715,13 +3722,6 @@ exports[`Storyshots VCheckbox/desktop error 1`] = `
         />
       </svg>
     </i>
-     
-    <input
-      class="v-checkbox-control is-danger"
-      name="checkbox"
-      type="checkbox"
-      value="false"
-    />
      
     <span
       class="v-checkbox-label"
@@ -3745,6 +3745,13 @@ exports[`Storyshots VCheckbox/desktop tooltip 1`] = `
   <label
     class="v-checkbox theme-default"
   >
+    <input
+      class="v-checkbox-control"
+      name="checkbox"
+      type="checkbox"
+      value="false"
+    />
+     
     <i
       class="icon-atom v-checkbox-frame theme-default"
     >
@@ -3760,13 +3767,6 @@ exports[`Storyshots VCheckbox/desktop tooltip 1`] = `
         />
       </svg>
     </i>
-     
-    <input
-      class="v-checkbox-control"
-      name="checkbox"
-      type="checkbox"
-      value="false"
-    />
      
     <span
       class="v-checkbox-label"
@@ -3826,6 +3826,13 @@ exports[`Storyshots VCheckbox/desktop true/false attr 1`] = `
   <label
     class="v-checkbox theme-default"
   >
+    <input
+      class="v-checkbox-control"
+      name="Name"
+      type="checkbox"
+      value="false"
+    />
+     
     <i
       class="icon-atom v-checkbox-frame theme-default"
     >
@@ -3841,13 +3848,6 @@ exports[`Storyshots VCheckbox/desktop true/false attr 1`] = `
         />
       </svg>
     </i>
-     
-    <input
-      class="v-checkbox-control"
-      name="Name"
-      type="checkbox"
-      value="false"
-    />
      
     <span
       class="v-checkbox-label"
@@ -3871,6 +3871,13 @@ exports[`Storyshots VCheckbox/desktop value without v-model 1`] = `
   <label
     class="v-checkbox theme-default"
   >
+    <input
+      class="v-checkbox-control"
+      name="Name"
+      type="checkbox"
+      value="false"
+    />
+     
     <i
       class="icon-atom v-checkbox-frame theme-default"
     >
@@ -3886,13 +3893,6 @@ exports[`Storyshots VCheckbox/desktop value without v-model 1`] = `
         />
       </svg>
     </i>
-     
-    <input
-      class="v-checkbox-control"
-      name="Name"
-      type="checkbox"
-      value="false"
-    />
      
     <span
       class="v-checkbox-label"

@@ -3,24 +3,21 @@
     class="v-checkbox"
     :class="checkboxCssClass"
   >
+    <input
+      :disabled="disabled"
+      :name="name"
+      :checked="isChecked"
+      :value="value"
+      class="v-checkbox-control"
+      type="checkbox"
+      @change="handleChange"
+    >
     <icon-atom class="v-checkbox-frame">
       <svg-atom
         class="v-checkbox-mark"
         name="check"
       />
     </icon-atom>
-    <input
-      :disabled="disabled"
-      :name="name"
-      :class="{ 'is-danger': error }"
-      :checked="isChecked"
-      :value="value"
-      class="v-checkbox-control"
-      type="checkbox"
-      @change="handleChange"
-      @focus="isFocused = true"
-      @blur="isFocused = false"
-    >
     <span class="v-checkbox-label">
       <slot />
     </span>
@@ -85,12 +82,6 @@ export default {
     },
   },
 
-  data() {
-    return {
-      isFocused: false,
-    };
-  },
-
   computed: {
     isChecked() {
       const isListHandling = this.modelValue instanceof Array;
@@ -107,7 +98,6 @@ export default {
     checkboxCssClass() {
       return Object.assign(this.themeCssClass, {
         'is-checked': this.isChecked,
-        'is-focused': this.isFocused,
         'is-disabled': this.disabled || this.isDisabled,
         'is-error': this.error,
       });
