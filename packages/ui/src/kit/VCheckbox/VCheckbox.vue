@@ -3,22 +3,21 @@
     class="v-checkbox"
     :class="checkboxCssClass"
   >
-    <icon-atom
-      class="v-checkbox-frame"
-      v-html="checkSvgIcon"
-    />
     <input
       :disabled="disabled"
       :name="name"
-      :class="{ 'is-danger': error }"
       :checked="isChecked"
       :value="value"
       class="v-checkbox-control"
       type="checkbox"
       @change="handleChange"
-      @focus="isFocused = true"
-      @blur="isFocused = false"
     >
+    <icon-atom class="v-checkbox-frame">
+      <svg-atom
+        class="v-checkbox-mark"
+        name="check"
+      />
+    </icon-atom>
     <span class="v-checkbox-label">
       <slot />
     </span>
@@ -36,7 +35,7 @@ import TooltipMolecule from '@/molecule/tooltip-molecule/tooltip-molecule';
 import ThemeMixin from '@/mixins/ThemeMixin';
 import IsDisabledMixin from '@/mixins/IsDisabledMixin';
 import IconAtom from '@/atom/icon-atom/icon-atom';
-import checkSvgIcon from '@/img/check.svg';
+import SvgAtom from '@/atom/svg-atom/svg-atom';
 
 export default {
   name: 'VCheckbox',
@@ -83,13 +82,6 @@ export default {
     },
   },
 
-  data() {
-    return {
-      isFocused: false,
-      checkSvgIcon,
-    };
-  },
-
   computed: {
     isChecked() {
       const isListHandling = this.modelValue instanceof Array;
@@ -106,7 +98,6 @@ export default {
     checkboxCssClass() {
       return Object.assign(this.themeCssClass, {
         'is-checked': this.isChecked,
-        'is-focused': this.isFocused,
         'is-disabled': this.disabled || this.isDisabled,
         'is-error': this.error,
       });
@@ -138,6 +129,7 @@ export default {
   mixins: [ThemeMixin, IsDisabledMixin],
 
   components: {
+    SvgAtom,
     IconAtom,
     TooltipMolecule,
   },

@@ -108,7 +108,7 @@ storiesOf('VModal/VModalCard', module)
       return {
         title: 'Modal title',
         body: 'Modal body',
-        description: 'some description text'
+        description: 'some description text',
       };
     },
     template: `
@@ -128,6 +128,33 @@ storiesOf('VModal/VModalCard', module)
         </theme-provider>
       `,
   }))
+  .add('esc press', () => ({
+    methods,
+    components: { VModal, VModalCard },
+    data() {
+      return {
+        title: 'Click to file select, then ESC',
+        body: 'click to file select and then press ESC button',
+        description: 'click to file select and then press ESC button',
+      };
+    },
+    template: `
+      <theme-provider>
+        <v-modal @click="onMaskClick">
+          <v-modal-card
+            :is-closable="true"
+            @close="onClose"
+            :is-returnable="true"
+            @return="onReturn"
+          >
+            <template slot="description">{{ description }}</template>
+            <template slot="title">{{ title }}</template>
+            <input type="file">
+          </v-modal-card>
+        </v-modal>
+      </theme-provider>
+    `,
+  }))
   .add('icon', () => ({
     methods,
     components: { VModal, VModalCard },
@@ -136,7 +163,7 @@ storiesOf('VModal/VModalCard', module)
         title: 'Modal title',
         body: 'Modal body',
         icon: 'icon',
-        description: 'some description text'
+        description: 'some description text',
       };
     },
     template: `

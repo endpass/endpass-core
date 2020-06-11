@@ -38,12 +38,12 @@
 
 .v-modal-card.theme-default .v-modal-card-controls {
   display: flex;
-  min-height: 17px;
-  padding-bottom: 2px;
+  min-height: 20px;
 }
 
 .v-modal-card.theme-default .v-modal-card-back,
 .v-modal-card.theme-default .v-modal-card-close {
+  color: var(--endpass-ui-color-grey-5);
   background: none;
   border: 0;
   cursor: pointer;
