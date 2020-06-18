@@ -37,3 +37,4 @@ export { default as VTag } from '@/kit/VTag';
 export { default as VAccordion } from '@/kit/VAccordion';
 export { default as VAccordionItem } from '@/kit/VAccordion/VAccordionItem';
 export { default as VError } from '@/kit/VError/VError';
+export { default as VCircularLoader } from '@/kit/VCircularLoader/VCircularLoader';

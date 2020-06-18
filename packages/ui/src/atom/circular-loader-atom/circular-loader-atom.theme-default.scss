@@ -1,0 +1,25 @@
+.circular-loader-atom.theme-default {
+  position: relative;
+}
+
+.circular-loader-atom.theme-default .circular-loader-atom-over {
+  transform: rotate(-90deg);
+  position: relative;
+}
+
+.circular-loader-atom.theme-default.animated .circular-loader-atom-over {
+  animation: v-spin 1.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.circular-loader-atom.theme-default .circular-loader-atom-back {
+  position: absolute;
+}
+
+.circular-loader-atom.theme-default circle {
+  fill: none;
+}
+
+.circular-loader-atom.theme-default .circular-loader-atom-back circle {
+  stroke: var(--endpass-ui-color-grey-3);
+}
