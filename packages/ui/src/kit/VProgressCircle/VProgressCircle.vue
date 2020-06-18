@@ -1,25 +1,28 @@
 <template>
   <field-atom
-    class="v-progress-circle"
     :class="themeCssClass"
+    :style="sizeStyle"
   >
-    <svg class="v-progress-circle-back">
+    <svg
+      class="v-progress-circle-back"
+      :style="sizeStyle"
+    >
       <circle
-        :r="$options.CIRCLE_PROPS.r"
-        :cx="$options.CIRCLE_PROPS.cx"
-        :cy="$options.CIRCLE_PROPS.cy"
+        :r="circleAttrs.r"
+        :cx="circleAttrs.cx"
+        :cy="circleAttrs.cy"
         :stroke-width="lineThickness"
       />
     </svg>
     <svg
       class="v-progress-circle-over"
-      :style="{ strokeDasharray: strokeDasharray }"
+      :style="{ ...sizeStyle, strokeDasharray }"
     >
       <circle
-        :r="$options.CIRCLE_PROPS.r"
-        :cx="$options.CIRCLE_PROPS.cx"
-        :cy="$options.CIRCLE_PROPS.cy"
-        :stroke="$options.CIRCLE_PROPS.stroke"
+        :r="circleAttrs.r"
+        :cx="circleAttrs.cx"
+        :cy="circleAttrs.cy"
+        :stroke="circleAttrs.stroke"
         :stroke-width="lineThickness"
       />
     </svg>
@@ -36,8 +39,6 @@
 import ThemeMixin from '@/mixins/ThemeMixin';
 import FieldAtom from '@/atom/field-atom/field-atom';
 
-const SIZE_DEFAULT_STROKE = 188.4;
-
 // For initial state progress must show `action` like something is processing.
 // But if progress have `0` value, circle will be static and '0%' title.
 // Soo default behavior is always show animated circle without label
@@ -46,17 +47,8 @@ const MIN_PROGRESS_VALUE = 1;
 const DEFAULT_VIEW_VALUE = 2;
 const MAX_VALUE = 100;
 
-const CIRCLE_PROPS = {
-  r: '30px',
-  cx: '41px',
-  cy: '41px',
-  stroke: '#6e32c9',
-};
-
 export default {
   name: 'VProgressCircle',
-
-  CIRCLE_PROPS,
 
   props: {
     progress: {
@@ -64,24 +56,67 @@ export default {
       default: 0,
     },
 
-    isLabelVisible: {
+    animated: {
       type: Boolean,
-      default: false,
+      default: true,
+    },
+
+    size: {
+      type: [Number, String],
+      default: 82,
+    },
+
+    stroke: {
+      type: String,
+      default: '#6e32c9',
     },
 
     lineThickness: {
       type: [Number, String],
       default: 4,
     },
+
+    isLabelVisible: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
-    strokeDasharray() {
-      const toStroke = Math.floor(
-        (this.progressValue - 0) * (SIZE_DEFAULT_STROKE / 100),
-      );
+    themeCssClass() {
+      return {
+        'v-progress-circle': true,
+        animated: this.animated,
+      };
+    },
 
-      return `${toStroke}, ${SIZE_DEFAULT_STROKE}`;
+    sizeStyle() {
+      return {
+        width: `${this.size}px`,
+        height: `${this.size}px`,
+      };
+    },
+
+    radius() {
+      return this.size / 2 - this.lineThickness / 2;
+    },
+
+    circleAttrs() {
+      const { size, radius, stroke } = this;
+
+      return {
+        r: radius,
+        cx: `${size / 2}px`,
+        cy: `${size / 2}px`,
+        stroke,
+      };
+    },
+
+    strokeDasharray() {
+      const { radius, progressValue } = this;
+      const circmference = radius * 2 * Math.PI;
+
+      return `${(circmference / 100) * progressValue} ${circmference}`;
     },
 
     progressText() {
