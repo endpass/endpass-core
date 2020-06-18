@@ -1,9 +1,10 @@
 import { storiesOf } from '@storybook/vue';
 import VProgressCircle from '@/kit/VProgressCircle';
 
-storiesOf('VProgressCircle/desktop', module).add('default', () => ({
-  components: { VProgressCircle },
-  template: `
+storiesOf('VProgressCircle/desktop', module)
+  .add('default', () => ({
+    components: { VProgressCircle },
+    template: `
       <theme-provider>
         <table class="storybook-table">
           <thead>
@@ -81,4 +82,85 @@ storiesOf('VProgressCircle/desktop', module).add('default', () => ({
         </table>
       </theme-provider>
     `,
-}));
+  }))
+  .add('static', () => ({
+    components: { VProgressCircle },
+    template: `
+      <theme-provider>
+        <table class="storybook-table">
+          <thead>
+            <tr>
+              <th>0</th>
+              <th>50</th>
+              <th>75</th>
+              <th>5</th>
+              <th>95</th>
+              <th>100</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <v-progress-circle progress="0" :size="41" :animated="false" />
+              </td>
+              <td>
+                <v-progress-circle progress="50" :size="41" :animated="false" />
+              </td>
+              <td>
+                <v-progress-circle progress="75" :size="41"  :animated="false" />
+              </td>
+              <td>
+                <v-progress-circle progress="5" :size="41"  :animated="false" />
+              </td>
+              <td>
+                <v-progress-circle progress="95" :size="41"  :animated="false" />
+              </td>
+              <td>
+                <v-progress-circle progress="100" :size="41"  :animated="false" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <v-progress-circle progress="0" :is-label-visible="true" :animated="false" />
+              </td>
+              <td>
+                <v-progress-circle progress="50" :is-label-visible="true" :animated="false" />
+              </td>
+              <td>
+                <v-progress-circle progress="75" :is-label-visible="true" :animated="false"  />
+              </td>
+              <td>
+                <v-progress-circle progress="5" :is-label-visible="true" :animated="false"  />
+              </td>
+              <td>
+                <v-progress-circle progress="95" :is-label-visible="true" :animated="false"  />
+              </td>
+              <td>
+                <v-progress-circle progress="100" :is-label-visible="true" :animated="false"  />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <v-progress-circle progress="0" :size="128"  lineThickness="1" :animated="false" />
+              </td>
+              <td>
+                <v-progress-circle progress="50" :size="128"   lineThickness="1" :animated="false" />
+              </td>
+              <td>
+                <v-progress-circle progress="75" :size="128"   lineThickness="1" :animated="false" />
+              </td>
+              <td>
+                <v-progress-circle progress="5" :size="128"   lineThickness="6" :animated="false" />
+              </td>
+              <td>
+                <v-progress-circle progress="95" :size="128"   lineThickness="6" :animated="false" />
+              </td>
+              <td>
+                <v-progress-circle progress="100" :size="128"   lineThickness="6" :animated="false" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </theme-provider>
+    `,
+  }));
