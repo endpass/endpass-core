@@ -12,25 +12,3 @@
   letter-spacing: -0.3px;
   color: var(--endpass-ui-color-grey-3);
 }
-
-.v-progress-circle.theme-default.animated .v-progress-circle-over {
-  animation: v-spin 1.5s ease-in-out infinite;
-  transform-origin: center;
-}
-
-.v-progress-circle.theme-default .v-progress-circle-over {
-  transform: rotate(-90deg);
-  position: relative;
-}
-
-.v-progress-circle.theme-default .v-progress-circle-back {
-  position: absolute;
-}
-
-.v-progress-circle.theme-default circle {
-  fill: none;
-}
-
-.v-progress-circle.theme-default .v-progress-circle-back circle {
-  stroke: var(--endpass-ui-color-grey-3);
-}
