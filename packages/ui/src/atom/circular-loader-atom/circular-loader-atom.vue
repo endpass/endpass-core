@@ -16,13 +16,12 @@
     </svg>
     <svg
       class="circular-loader-atom-over"
-      :style="{ ...sizeStyle, strokeDasharray }"
+      :style="{ ...sizeStyle, strokeDasharray, stroke: circleAttrs.stroke }"
     >
       <circle
         :r="circleAttrs.r"
         :cx="circleAttrs.cx"
         :cy="circleAttrs.cy"
-        :stroke="circleAttrs.stroke"
         :stroke-width="lineThickness"
       />
     </svg>
