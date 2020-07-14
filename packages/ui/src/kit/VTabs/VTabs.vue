@@ -4,7 +4,8 @@
     :class="vTabsCssClass"
   >
     <section class="v-tabs-controls-list">
-      <button
+      <a
+        href="#"
         v-for="(tab, index) in $slots.default.filter($el => !!$el.tag)"
         :key="index"
         :class="{
@@ -12,10 +13,10 @@
           'is-active': activeTabIdx === index,
         }"
         v-bind="tab.data.attrs"
-        @click="onTabClick({ event: $event, index })"
+        @click.prevent="onTabClick({ event: $event, index })"
       >
         {{ getTabLabel(tab) }}
-      </button>
+      </a>
     </section>
     <v-tabs-content
       class="v-tabs-content"
