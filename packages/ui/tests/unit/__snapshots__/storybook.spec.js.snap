@@ -15234,22 +15234,24 @@ exports[`Storyshots VTabs/desktop conditional 1`] = `
       <section
         class="v-tabs-controls-list"
       >
-        <button
+        <a
           class="v-tabs-control is-active"
           data-test="foo-tab"
+          href="#"
         >
           
       Foo 1
     
-        </button>
-        <button
+        </a>
+        <a
           class="v-tabs-control"
           data-test="bar-tab"
+          href="#"
         >
           
       Bar 1
     
-        </button>
+        </a>
       </section>
        
       <section
@@ -15293,22 +15295,24 @@ exports[`Storyshots VTabs/desktop default 1`] = `
     <section
       class="v-tabs-controls-list"
     >
-      <button
+      <a
         class="v-tabs-control is-active"
         data-test="foo-tab"
+        href="#"
       >
         
       Foo
     
-      </button>
-      <button
+      </a>
+      <a
         class="v-tabs-control"
         data-test="bar-tab"
+        href="#"
       >
         
       Bar
     
-      </button>
+      </a>
     </section>
      
     <section
@@ -15351,22 +15355,24 @@ exports[`Storyshots VTabs/desktop initial tab 1`] = `
     <section
       class="v-tabs-controls-list"
     >
-      <button
+      <a
         class="v-tabs-control is-active"
         data-test="foo-tab"
+        href="#"
       >
         
       Foo
     
-      </button>
-      <button
+      </a>
+      <a
         class="v-tabs-control"
         data-test="bar-tab"
+        href="#"
       >
         
       Bar
     
-      </button>
+      </a>
     </section>
      
     <section
