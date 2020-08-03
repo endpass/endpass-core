@@ -9,12 +9,19 @@
 .v-table-head-cell.theme-default .v-table-head-cell-sort-icon {
   display: inline-block;
   color: var(--endpass-ui-color-primary-7);
-  margin-left: 4px;
-  margin-right: -10px;
+  position: absolute;
+  right: 0;
+  transform: translateY(50%);
 }
 
 .v-table-head-cell.theme-default .v-table-head-cell-sort-wrapper {
   text-decoration: none;
   color: inherit;
-  padding-right: 10px;
+  padding-right: 14px;
+  cursor: default;
+  position: relative;
+}
+
+.v-table-head-cell.is-sortable.theme-default .v-table-head-cell-sort-wrapper {
+  cursor: pointer;
 }

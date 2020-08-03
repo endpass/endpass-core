@@ -30,7 +30,7 @@ export default {
   name: 'VTableHeadCell',
 
   props: {
-    sortingOn: {
+    sortingBy: {
       type: String,
       default: null,
     },
@@ -38,7 +38,7 @@ export default {
     sortingValue: {
       type: Object,
       default: () => ({
-        name: null,
+        by: null,
         direction: SORTING_DIRECTIONS.DESC,
       }),
     },
@@ -48,7 +48,7 @@ export default {
     vTableHeadCellCssClass() {
       return Object.assign(this.themeCssClass, {
         'v-table-head-cell': true,
-        'is-sortable': !!this.sortingOn,
+        'is-sortable': !!this.sortingBy,
       });
     },
 
@@ -61,13 +61,13 @@ export default {
     },
 
     isSortable() {
-      return !!this.sortingOn && this.sortingOn === this.sortingValue.name;
+      return !!this.sortingBy && this.sortingBy === this.sortingValue.by;
     },
 
     newDirection() {
-      const { name, direction } = this.sortingValue;
+      const { by, direction } = this.sortingValue;
 
-      if (name === this.sortingOn && direction === SORTING_DIRECTIONS.DESC) {
+      if (by === this.sortingBy && direction === SORTING_DIRECTIONS.DESC) {
         return SORTING_DIRECTIONS.ASC;
       }
 
@@ -77,12 +77,12 @@ export default {
 
   methods: {
     onClick() {
-      if (!this.sortingOn) {
+      if (!this.sortingBy) {
         return;
       }
 
       this.$emit('sorting', {
-        name: this.sortingOn,
+        by: this.sortingBy,
         direction: this.newDirection,
       });
     },

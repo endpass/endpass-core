@@ -12594,37 +12594,73 @@ exports[`Storyshots VTable/desktop skin-grey(default) 1`] = `
         <th
           class="theme-default v-table-head-cell"
         >
-          Column header
+          <a
+            class="v-table-head-cell-sort-wrapper"
+            href="#"
+          >
+            Column header 
+            <!---->
+          </a>
         </th>
          
         <th
           class="theme-default v-table-head-cell"
         >
-          Column header
+          <a
+            class="v-table-head-cell-sort-wrapper"
+            href="#"
+          >
+            Column header 
+            <!---->
+          </a>
         </th>
          
         <th
           class="theme-default v-table-head-cell"
         >
-          Column header
+          <a
+            class="v-table-head-cell-sort-wrapper"
+            href="#"
+          >
+            Column header 
+            <!---->
+          </a>
         </th>
          
         <th
           class="theme-default v-table-head-cell"
         >
-          Column header
+          <a
+            class="v-table-head-cell-sort-wrapper"
+            href="#"
+          >
+            Column header 
+            <!---->
+          </a>
         </th>
          
         <th
           class="theme-default v-table-head-cell"
         >
-          Column header
+          <a
+            class="v-table-head-cell-sort-wrapper"
+            href="#"
+          >
+            Column header 
+            <!---->
+          </a>
         </th>
          
         <th
           class="theme-default v-table-head-cell"
         >
-          Column header
+          <a
+            class="v-table-head-cell-sort-wrapper"
+            href="#"
+          >
+            Column header 
+            <!---->
+          </a>
         </th>
       </tr>
     </thead>
@@ -13045,37 +13081,73 @@ exports[`Storyshots VTable/desktop skin-light 1`] = `
         <th
           class="theme-default v-table-head-cell"
         >
-          Column header
+          <a
+            class="v-table-head-cell-sort-wrapper"
+            href="#"
+          >
+            Column header 
+            <!---->
+          </a>
         </th>
          
         <th
           class="theme-default v-table-head-cell"
         >
-          Column header
+          <a
+            class="v-table-head-cell-sort-wrapper"
+            href="#"
+          >
+            Column header 
+            <!---->
+          </a>
         </th>
          
         <th
           class="theme-default v-table-head-cell"
         >
-          Column header
+          <a
+            class="v-table-head-cell-sort-wrapper"
+            href="#"
+          >
+            Column header 
+            <!---->
+          </a>
         </th>
          
         <th
           class="theme-default v-table-head-cell"
         >
-          Column header
+          <a
+            class="v-table-head-cell-sort-wrapper"
+            href="#"
+          >
+            Column header 
+            <!---->
+          </a>
         </th>
          
         <th
           class="theme-default v-table-head-cell"
         >
-          Column header
+          <a
+            class="v-table-head-cell-sort-wrapper"
+            href="#"
+          >
+            Column header 
+            <!---->
+          </a>
         </th>
          
         <th
           class="theme-default v-table-head-cell"
         >
-          Column header
+          <a
+            class="v-table-head-cell-sort-wrapper"
+            href="#"
+          >
+            Column header 
+            <!---->
+          </a>
         </th>
       </tr>
     </thead>
@@ -13496,37 +13568,73 @@ exports[`Storyshots VTable/desktop skin-none 1`] = `
         <th
           class="theme-default v-table-head-cell"
         >
-          Column header
+          <a
+            class="v-table-head-cell-sort-wrapper"
+            href="#"
+          >
+            Column header 
+            <!---->
+          </a>
         </th>
          
         <th
           class="theme-default v-table-head-cell"
         >
-          Column header
+          <a
+            class="v-table-head-cell-sort-wrapper"
+            href="#"
+          >
+            Column header 
+            <!---->
+          </a>
         </th>
          
         <th
           class="theme-default v-table-head-cell"
         >
-          Column header
+          <a
+            class="v-table-head-cell-sort-wrapper"
+            href="#"
+          >
+            Column header 
+            <!---->
+          </a>
         </th>
          
         <th
           class="theme-default v-table-head-cell"
         >
-          Column header
+          <a
+            class="v-table-head-cell-sort-wrapper"
+            href="#"
+          >
+            Column header 
+            <!---->
+          </a>
         </th>
          
         <th
           class="theme-default v-table-head-cell"
         >
-          Column header
+          <a
+            class="v-table-head-cell-sort-wrapper"
+            href="#"
+          >
+            Column header 
+            <!---->
+          </a>
         </th>
          
         <th
           class="theme-default v-table-head-cell"
         >
-          Column header
+          <a
+            class="v-table-head-cell-sort-wrapper"
+            href="#"
+          >
+            Column header 
+            <!---->
+          </a>
         </th>
       </tr>
     </thead>
@@ -13929,6 +14037,511 @@ exports[`Storyshots VTable/desktop skin-none 1`] = `
 </div>
 `;
 
+exports[`Storyshots VTable/desktop sortable 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <div
+    style="padding: 10px; background: white;"
+  >
+    <div
+      class="v-table-container theme-default"
+    >
+      <table
+        class="theme-default v-table"
+      >
+        <thead
+          class="theme-default v-table-head skin-grey"
+        >
+          <tr
+            class="v-table-row theme-default"
+          >
+            <th
+              class="theme-default v-table-head-cell is-sortable"
+            >
+              <a
+                class="v-table-head-cell-sort-wrapper"
+                href="#"
+              >
+                Column header 
+                <svg
+                  class="svg-atom v-table-head-cell-sort-icon theme-default"
+                  height="8"
+                  width="8"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-caret-down"
+                    y="0"
+                  />
+                </svg>
+              </a>
+            </th>
+             
+            <th
+              class="theme-default v-table-head-cell is-sortable"
+            >
+              <a
+                class="v-table-head-cell-sort-wrapper"
+                href="#"
+              >
+                Column header 
+                <!---->
+              </a>
+            </th>
+             
+            <th
+              class="theme-default v-table-head-cell is-sortable"
+            >
+              <a
+                class="v-table-head-cell-sort-wrapper"
+                href="#"
+              >
+                Column header 
+                <!---->
+              </a>
+            </th>
+             
+            <th
+              class="theme-default v-table-head-cell is-sortable"
+            >
+              <a
+                class="v-table-head-cell-sort-wrapper"
+                href="#"
+              >
+                Column header 
+                <!---->
+              </a>
+            </th>
+             
+            <th
+              class="theme-default v-table-head-cell is-sortable"
+            >
+              <a
+                class="v-table-head-cell-sort-wrapper"
+                href="#"
+              >
+                Column header 
+                <!---->
+              </a>
+            </th>
+             
+            <th
+              class="theme-default v-table-head-cell"
+            >
+              <a
+                class="v-table-head-cell-sort-wrapper"
+                href="#"
+              >
+                No sorting 
+                <!---->
+              </a>
+            </th>
+          </tr>
+        </thead>
+         
+        <tbody
+          class="theme-default v-table-body"
+        >
+          <tr
+            class="v-table-row theme-default"
+          >
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+          </tr>
+          <tr
+            class="v-table-row theme-default"
+          >
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+          </tr>
+          <tr
+            class="v-table-row theme-default"
+          >
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+          </tr>
+          <tr
+            class="v-table-row theme-default"
+          >
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+          </tr>
+          <tr
+            class="v-table-row theme-default"
+          >
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+          </tr>
+          <tr
+            class="v-table-row theme-default"
+          >
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+          </tr>
+          <tr
+            class="v-table-row theme-default"
+          >
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+          </tr>
+          <tr
+            class="v-table-row theme-default"
+          >
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+          </tr>
+          <tr
+            class="v-table-row theme-default"
+          >
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+          </tr>
+          <tr
+            class="v-table-row theme-default"
+          >
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+             
+            <td
+              class="theme-default v-table-cell"
+            >
+              cell text
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots VTable/desktop with-container 1`] = `
 <div>
   <div
@@ -13953,37 +14566,73 @@ exports[`Storyshots VTable/desktop with-container 1`] = `
             <th
               class="theme-default v-table-head-cell"
             >
-              Column header
+              <a
+                class="v-table-head-cell-sort-wrapper"
+                href="#"
+              >
+                Column header 
+                <!---->
+              </a>
             </th>
              
             <th
               class="theme-default v-table-head-cell"
             >
-              Column header
+              <a
+                class="v-table-head-cell-sort-wrapper"
+                href="#"
+              >
+                Column header 
+                <!---->
+              </a>
             </th>
              
             <th
               class="theme-default v-table-head-cell"
             >
-              Column header
+              <a
+                class="v-table-head-cell-sort-wrapper"
+                href="#"
+              >
+                Column header 
+                <!---->
+              </a>
             </th>
              
             <th
               class="theme-default v-table-head-cell"
             >
-              Column header
+              <a
+                class="v-table-head-cell-sort-wrapper"
+                href="#"
+              >
+                Column header 
+                <!---->
+              </a>
             </th>
              
             <th
               class="theme-default v-table-head-cell"
             >
-              Column header
+              <a
+                class="v-table-head-cell-sort-wrapper"
+                href="#"
+              >
+                Column header 
+                <!---->
+              </a>
             </th>
              
             <th
               class="theme-default v-table-head-cell"
             >
-              Column header
+              <a
+                class="v-table-head-cell-sort-wrapper"
+                href="#"
+              >
+                Column header 
+                <!---->
+              </a>
             </th>
           </tr>
         </thead>

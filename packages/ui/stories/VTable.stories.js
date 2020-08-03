@@ -262,4 +262,62 @@ storiesOf('VTable/desktop', module)
         </div>
       </theme-provider>
     `,
+  }))
+  .add('sortable', () => ({
+    methods: {
+      onSorting({ by, direction }) {
+        this.currentSorting = { by, direction };
+      },
+    },
+    components: {
+      VTable,
+      VTableRow,
+      VTableCell,
+      VTableHead,
+      VTableBody,
+      VTableHeadCell,
+      VTableContainer,
+    },
+    data() {
+      return {
+        rows: new Array(10),
+        currentSorting: {
+          by: 'param1',
+          direction: 'desc',
+        },
+      };
+    },
+    template: `
+      <theme-provider>
+        <div style="padding: 10px; background: white;">
+          <v-table-container>
+            <v-table>
+              <v-table-head>
+                <v-table-row>
+                  <v-table-head-cell sorting-by="param1" :sorting-value="currentSorting" @sorting="onSorting">Column header</v-table-head-cell>
+                  <v-table-head-cell sorting-by="param2" :sorting-value="currentSorting" @sorting="onSorting">Column header</v-table-head-cell>
+                  <v-table-head-cell sorting-by="param3" :sorting-value="currentSorting" @sorting="onSorting">Column header</v-table-head-cell>
+                  <v-table-head-cell sorting-by="param4" :sorting-value="currentSorting" @sorting="onSorting">Column header</v-table-head-cell>
+                  <v-table-head-cell sorting-by="param5" :sorting-value="currentSorting" @sorting="onSorting">Column header</v-table-head-cell>
+                  <v-table-head-cell>No sorting</v-table-head-cell>
+                </v-table-row>
+              </v-table-head>
+              <v-table-body>
+                <v-table-row
+                  v-for="(row, index) in rows"
+                  :key="index"
+                >
+                  <v-table-cell>cell text</v-table-cell>
+                  <v-table-cell>cell text</v-table-cell>
+                  <v-table-cell>cell text</v-table-cell>
+                  <v-table-cell>cell text</v-table-cell>
+                  <v-table-cell>cell text</v-table-cell>
+                  <v-table-cell>cell text</v-table-cell>
+                </v-table-row>
+              </v-table-body>
+            </v-table>
+          </v-table-container>
+        </div>
+      </theme-provider>
+    `,
   }));
