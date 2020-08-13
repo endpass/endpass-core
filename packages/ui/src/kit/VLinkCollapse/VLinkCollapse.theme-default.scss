@@ -1,0 +1,18 @@
+.v-link-collapse.theme-default {
+  display: flex;
+  font-size: 14px;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  color: var(--endpass-ui-color-primary-7);
+  cursor: pointer;
+}
+
+.v-link-collapse.theme-default .v-link-collapse-chevron {
+  margin-left: 10px;
+  transition: transform .3s;
+}
+
+.v-link-collapse.theme-default.is-collapsed .v-link-collapse-chevron {
+  transform: rotate(180deg);
+}

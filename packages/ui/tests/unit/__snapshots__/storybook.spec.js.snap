@@ -7637,6 +7637,44 @@ exports[`Storyshots VLink/desktop default 1`] = `
 </div>
 `;
 
+exports[`Storyshots VLinkCollapse/desktop default 1`] = `
+<div>
+  <div
+    style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"
+  />
+   
+  <table
+    class="storybook-table"
+  >
+    <tr>
+      <td>
+        <div>
+          <a
+            class="v-link-collapse theme-default is-collapsed"
+            role="button"
+          >
+            
+                  Show more
+                 
+            <svg
+              class="svg-atom v-link-collapse-chevron theme-default"
+              height="17px"
+              width="17px"
+            >
+              <use
+                x="0"
+                xlink:href="#endpass-ui-icon-chevron-up"
+                y="0"
+              />
+            </svg>
+          </a>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+`;
+
 exports[`Storyshots VLogo/desktop default 1`] = `
 <div>
   <div
