@@ -25,9 +25,7 @@ export default {
 
   computed: {
     vIndicatorCssClass() {
-      return Object.assign({}, this.themeCssClass, {
-        [`status-${this.status}`]: true,
-      });
+      return { ...this.themeCssClass, [`status-${this.status}`]: true };
     },
   },
 
