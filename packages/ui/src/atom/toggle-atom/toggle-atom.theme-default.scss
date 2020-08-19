@@ -23,9 +23,14 @@
   border-color: var(--endpass-ui-color-grey-3);
 }
 
-.toggle-atom.theme-default.is-checked {
+.toggle-atom.theme-default.is-checked.skin-primary {
   background-color: var(--endpass-ui-color-success);
   border-color: var(--endpass-ui-color-success);
+}
+
+.toggle-atom.theme-default.is-checked.skin-secondary {
+  background-color: var(--endpass-ui-color-primary-7);
+  border-color: var(--endpass-ui-color-primary-7);
 }
 
 .toggle-atom.theme-default:focus-within {

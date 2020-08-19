@@ -33,6 +33,21 @@ storiesOf('VLabel/desktop', module).add('default', () => ({
           </tr>
           <tr><td colspan="2"><hr/></td></tr>
           <tr>
+            <td>With tooltip as slot</td>
+            <td>
+              <v-label
+                label="Label text"
+              >
+                <div slot="tooltip">
+                  <p >tooltip some</p>
+                  <p>  text here</p>
+                </div>
+              </v-label>
+              Following content
+            </td>
+          </tr>
+          <tr><td colspan="2"><hr/></td></tr>
+          <tr>
             <td>disabled</td>
             <td>
               <v-label

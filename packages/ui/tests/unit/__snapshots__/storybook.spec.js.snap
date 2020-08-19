@@ -5106,8 +5106,8 @@ exports[`Storyshots VDateInput/desktop default 1`] = `
                       style="min-width: 172px;"
                     >
                       
-      some text in tooltip
-    
+        some text in tooltip
+      
                     </div>
                   </div>
                    
@@ -5844,8 +5844,8 @@ exports[`Storyshots VFileDropArea/desktop tooltip 1`] = `
               style="min-width: 172px;"
             >
               
-      some text in tooltip
-    
+        some text in tooltip
+      
             </div>
           </div>
            
@@ -6058,8 +6058,8 @@ exports[`Storyshots VFileSelectButton/desktop states 1`] = `
                     style="min-width: 172px;"
                   >
                     
-      some text in tooltip
-    
+        some text in tooltip
+      
                   </div>
                 </div>
                  
@@ -6844,8 +6844,8 @@ exports[`Storyshots VInput/desktop primary 1`] = `
                     style="min-width: 172px;"
                   >
                     
-      hello this is tooltip data
-    
+        hello this is tooltip data
+      
                   </div>
                 </div>
                  
@@ -7072,8 +7072,8 @@ exports[`Storyshots VInput/desktop secondary 1`] = `
                     style="min-width: 172px;"
                   >
                     
-      hello this is tooltip data
-    
+        hello this is tooltip data
+      
                   </div>
                 </div>
                  
@@ -7489,8 +7489,74 @@ exports[`Storyshots VLabel/desktop default 1`] = `
                   style="min-width: 172px;"
                 >
                   
-      tooltip some text here
-    
+        tooltip some text here
+      
+                </div>
+              </div>
+               
+              <i
+                class="icon-atom label-molecule-icon theme-default"
+              >
+                <svg
+                  class="svg-atom theme-default"
+                  height="100%"
+                  width="100%"
+                >
+                  <use
+                    x="0"
+                    xlink:href="#endpass-ui-icon-info"
+                    y="0"
+                  />
+                </svg>
+              </i>
+            </div>
+          </label>
+          
+              Following content
+            
+        </td>
+      </tr>
+       
+      <tr>
+        <td
+          colspan="2"
+        >
+          <hr />
+        </td>
+      </tr>
+       
+      <tr>
+        <td>
+          With tooltip as slot
+        </td>
+         
+        <td>
+          <label
+            class="label-atom label-molecule theme-default"
+          >
+            
+  Label text
+  
+            <div
+              class="label-molecule-tooltip theme-default"
+            >
+              <div
+                class="tooltip-atom theme-default position-bottom-left"
+                style="display: none;"
+              >
+                <div
+                  class="tooltip-atom-container"
+                  style="min-width: 172px;"
+                >
+                  <div>
+                    <p>
+                      tooltip some
+                    </p>
+                     
+                    <p>
+                        text here
+                    </p>
+                  </div>
                 </div>
               </div>
                
@@ -7550,8 +7616,8 @@ exports[`Storyshots VLabel/desktop default 1`] = `
                   style="min-width: 172px;"
                 >
                   
-      tooltip some text here
-    
+        tooltip some text here
+      
                 </div>
               </div>
                
@@ -11469,8 +11535,8 @@ exports[`Storyshots VSelect/desktop tooltip 1`] = `
                     style="min-width: 172px;"
                   >
                     
-      some text for tooltip
-    
+        some text for tooltip
+      
                   </div>
                 </div>
                  
@@ -11554,8 +11620,8 @@ exports[`Storyshots VSelect/desktop tooltip 1`] = `
                     style="min-width: 172px;"
                   >
                     
-      some text for tooltip
-    
+        some text for tooltip
+      
                   </div>
                 </div>
                  
@@ -16716,8 +16782,8 @@ exports[`Storyshots VTextarea/desktop default 1`] = `
                     style="min-width: 172px;"
                   >
                     
-      some text in tooltip
-    
+        some text in tooltip
+      
                   </div>
                 </div>
                  
@@ -16914,7 +16980,7 @@ exports[`Storyshots VToggle/desktop array 1`] = `
     class="v-toggle theme-default"
   >
     <label
-      class="toggle-atom theme-default size-normal size-normal"
+      class="toggle-atom theme-default skin-primary size-normal size-normal"
     >
       <input
         class="v-toggle-control"
@@ -16946,7 +17012,7 @@ exports[`Storyshots VToggle/desktop array 1`] = `
     class="v-toggle theme-default"
   >
     <label
-      class="toggle-atom theme-default size-mini size-mini"
+      class="toggle-atom theme-default skin-primary size-mini size-mini"
     >
       <input
         class="v-toggle-control"
@@ -16986,7 +17052,7 @@ exports[`Storyshots VToggle/desktop default state 1`] = `
     class="v-toggle theme-default"
   >
     <label
-      class="toggle-atom theme-default size-normal size-normal"
+      class="toggle-atom theme-default skin-primary size-normal size-normal"
     >
       <input
         class="v-toggle-control"
@@ -17016,7 +17082,7 @@ exports[`Storyshots VToggle/desktop default state 1`] = `
     class="v-toggle theme-default"
   >
     <label
-      class="toggle-atom theme-default size-mini size-mini"
+      class="toggle-atom theme-default skin-primary size-mini size-mini"
     >
       <input
         class="v-toggle-control"
@@ -17052,7 +17118,7 @@ exports[`Storyshots VToggle/desktop default state false 1`] = `
     class="v-toggle theme-default"
   >
     <label
-      class="toggle-atom theme-default size-normal size-normal"
+      class="toggle-atom theme-default skin-primary size-normal size-normal"
     >
       <input
         class="v-toggle-control"
@@ -17081,7 +17147,65 @@ exports[`Storyshots VToggle/desktop default state false 1`] = `
     class="v-toggle theme-default"
   >
     <label
-      class="toggle-atom theme-default size-mini size-mini"
+      class="toggle-atom theme-default skin-primary size-mini size-mini"
+    >
+      <input
+        class="v-toggle-control"
+        title=""
+        type="checkbox"
+        value="false"
+      />
+       
+      <span
+        class="toggle-atom-handle"
+      />
+    </label>
+     
+    <span
+      class="v-toggle-label"
+    >
+      
+          state: false
+        
+    </span>
+  </div>
+   
+  <br />
+   
+  <div
+    class="v-toggle theme-default"
+  >
+    <label
+      class="toggle-atom theme-default skin-secondary size-normal size-normal"
+    >
+      <input
+        class="v-toggle-control"
+        title=""
+        type="checkbox"
+        value="false"
+      />
+       
+      <span
+        class="toggle-atom-handle"
+      />
+    </label>
+     
+    <span
+      class="v-toggle-label"
+    >
+      
+          state: false
+        
+    </span>
+  </div>
+   
+  <br />
+   
+  <div
+    class="v-toggle theme-default"
+  >
+    <label
+      class="toggle-atom theme-default skin-secondary size-mini size-mini"
     >
       <input
         class="v-toggle-control"
@@ -17116,7 +17240,7 @@ exports[`Storyshots VToggle/desktop default state true 1`] = `
     class="v-toggle theme-default"
   >
     <label
-      class="toggle-atom theme-default size-normal is-checked size-normal"
+      class="toggle-atom theme-default skin-primary size-normal is-checked size-normal"
     >
       <input
         class="v-toggle-control"
@@ -17145,7 +17269,7 @@ exports[`Storyshots VToggle/desktop default state true 1`] = `
     class="v-toggle theme-default"
   >
     <label
-      class="toggle-atom theme-default size-mini is-checked size-mini"
+      class="toggle-atom theme-default skin-primary size-mini is-checked size-mini"
     >
       <input
         class="v-toggle-control"
@@ -17180,7 +17304,7 @@ exports[`Storyshots VToggle/desktop disabled 1`] = `
     class="v-toggle theme-default"
   >
     <label
-      class="toggle-atom theme-default size-normal is-disabled size-normal"
+      class="toggle-atom theme-default skin-primary size-normal is-disabled size-normal"
     >
       <input
         class="v-toggle-control"
@@ -17210,7 +17334,7 @@ exports[`Storyshots VToggle/desktop disabled 1`] = `
     class="v-toggle theme-default"
   >
     <label
-      class="toggle-atom theme-default size-mini is-checked is-disabled size-mini"
+      class="toggle-atom theme-default skin-primary size-mini is-checked is-disabled size-mini"
     >
       <input
         class="v-toggle-control"
@@ -17246,7 +17370,7 @@ exports[`Storyshots VToggle/desktop true/false attr 1`] = `
     class="v-toggle theme-default"
   >
     <label
-      class="toggle-atom theme-default size-normal size-normal"
+      class="toggle-atom theme-default skin-primary size-normal size-normal"
     >
       <input
         class="v-toggle-control"
@@ -17276,7 +17400,7 @@ exports[`Storyshots VToggle/desktop true/false attr 1`] = `
     class="v-toggle theme-default"
   >
     <label
-      class="toggle-atom theme-default size-mini size-mini"
+      class="toggle-atom theme-default skin-primary size-mini size-mini"
     >
       <input
         class="v-toggle-control"

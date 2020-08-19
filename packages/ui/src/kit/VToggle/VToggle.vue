@@ -5,6 +5,7 @@
   >
     <toggle-atom
       :size="size"
+      :skin="skin"
       :class="toggleCssClass"
     >
       <input
@@ -33,29 +34,41 @@ import IsDisabledMixin from '@/mixins/IsDisabledMixin';
 
 export default {
   name: 'VToggle',
+
   inheritAttrs: false,
+
   props: {
     value: {
       type: [String, Boolean],
       default: false,
     },
+
     modelValue: {
       type: null,
       default: false,
     },
+
     trueValue: {
       type: null,
       default: true,
     },
+
     falseValue: {
       type: null,
       default: false,
     },
+
+    skin: {
+      type: String,
+      default: 'primary',
+    },
+
     size: {
       type: String,
       default: 'normal',
     },
   },
+
   computed: {
     isChecked() {
       const isListHandling = this.modelValue instanceof Array;
@@ -66,6 +79,7 @@ export default {
 
       return this.modelValue === this.trueValue;
     },
+
     toggleCssClass() {
       return {
         'is-checked': this.isChecked,
@@ -74,6 +88,7 @@ export default {
       };
     },
   },
+
   methods: {
     handleChange(event) {
       const { checked } = event.target;
@@ -94,8 +109,11 @@ export default {
       this.$emit('change', newValue);
     },
   },
+
   mixins: [ThemeMixin, IsDisabledMixin],
+
   components: { ToggleAtom },
+
   model: {
     prop: 'modelValue',
     event: 'change',

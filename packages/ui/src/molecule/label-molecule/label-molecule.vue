@@ -5,7 +5,7 @@
     :disabled="disabled"
   >
     <hover-atom
-      v-if="tooltipLabel"
+      v-if="tooltipLabel || $slots.tooltip"
       v-slot:default="{ isHover }"
       class="label-molecule-tooltip"
       :class="themeCssClass"
@@ -14,7 +14,13 @@
         :show="isHover"
         position="bottom-left"
       >
-        {{ tooltipLabel }}
+        <template v-if="tooltipLabel">
+          {{ tooltipLabel }}
+        </template>
+        <slot
+          v-else
+          name="tooltip"
+        />
       </tooltip-atom>
       <icon-atom class="label-molecule-icon">
         <svg-atom :name="icon" />
