@@ -32,6 +32,23 @@ storiesOf('VToggle/desktop', module)
         >
           state: {{ valueMini }}
         </v-toggle>
+        <br/>
+        <v-toggle
+          skin="secondary"
+          v-model="value"
+          @change="onChange"
+        >
+          state: {{ value }}
+        </v-toggle>
+        <br/>
+        <v-toggle
+          size="mini"
+          skin="secondary"
+          v-model="valueMini"
+          @change="onChange"
+        >
+          state: {{ valueMini }}
+        </v-toggle>
       </theme-provider>
     `,
   }))
