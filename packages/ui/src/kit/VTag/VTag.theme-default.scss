@@ -54,7 +54,7 @@
 }
 
 .v-tag.theme-default.skin-purple {
-  color: #6e32c9;
+  color: var(--endpass-ui-color-white);
   background-color: var(--endpass-ui-color-primary-7);
 }
 
@@ -92,6 +92,16 @@
   border-color: var(--endpass-ui-color-grey-3);
   color: var(--endpass-ui-color-grey-9);
   background-color: transparent;
+}
+
+.v-tag.theme-default.skin-success {
+  color: var(--endpass-ui-color-white);
+  background-color: var(--endpass-ui-color-green-2);
+}
+
+.v-tag.theme-default.skin-error {
+  color: var(--endpass-ui-color-white);
+  background-color: var(--endpass-ui-color-red-2);
 }
 
 .v-tag.theme-default[disabled] {

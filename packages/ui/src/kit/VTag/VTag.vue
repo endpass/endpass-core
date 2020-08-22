@@ -48,6 +48,8 @@ export default {
             'light-gray',
             'dark-gray',
             'white',
+            'success',
+            'error',
           ].indexOf(value) !== -1
         );
       },

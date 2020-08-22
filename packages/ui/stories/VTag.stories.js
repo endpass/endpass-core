@@ -52,6 +52,15 @@ storiesOf('VTag/desktop', module).add('default', () => ({
                 dark-gray
               </th>
               <th>
+                white
+              </th>
+              <th>
+                success
+              </th>
+              <th>
+                error
+              </th>
+              <th>
                 disabled
               </th>
             </tr>
@@ -59,85 +68,97 @@ storiesOf('VTag/desktop', module).add('default', () => ({
           <tr>
             <td>default</td>
             <td>
-              <v-tag >text tag</v-tag>
+              <v-tag >lorem</v-tag>
             </td>
             <td>
-              <v-tag skin="cyan">text tag</v-tag>
+              <v-tag skin="cyan">lorem</v-tag>
             </td>
             <td>
-              <v-tag skin="red">text tag</v-tag>
+              <v-tag skin="red">lorem</v-tag>
             </td>
             <td>
-              <v-tag skin="magenta">text tag</v-tag>
+              <v-tag skin="magenta">lorem</v-tag>
             </td>
             <td>
-              <v-tag skin="purple">text tag</v-tag>
+              <v-tag skin="purple">lorem</v-tag>
             </td>
             <td>
-              <v-tag skin="blue">text tag</v-tag>
+              <v-tag skin="blue">lorem</v-tag>
             </td>
             <td>
-              <v-tag skin="teal">text tag</v-tag>
+              <v-tag skin="teal">lorem</v-tag>
             </td>
             <td>
-              <v-tag skin="green">text tag</v-tag>
+              <v-tag skin="green">lorem</v-tag>
             </td>
             <td>
-              <v-tag skin="gray">text tag</v-tag>
+              <v-tag skin="gray">lorem</v-tag>
             </td>
             <td>
-              <v-tag skin="light-gray">text tag</v-tag>
+              <v-tag skin="light-gray">lorem</v-tag>
             </td>
             <td>
-              <v-tag skin="dark-gray">text tag</v-tag>
+              <v-tag skin="dark-gray">lorem</v-tag>
             </td>
             <td>
-              <v-tag skin="white">text tag</v-tag>
+              <v-tag skin="white">lorem</v-tag>
             </td>
             <td>
-              <v-tag disabled>text tag</v-tag>
+              <v-tag skin="success">lorem</v-tag>
+            </td>
+            <td>
+              <v-tag skin="error">lorem</v-tag>
+            </td>
+            <td>
+              <v-tag disabled>lorem</v-tag>
             </td>
           </tr>
           <tr>
             <td>is-closable</td>
             <td>
-              <v-tag @click="onClick" is-closable >text tag</v-tag>
+              <v-tag @click="onClick" is-closable >lorem</v-tag>
             </td>
             <td>
-              <v-tag @click="onClick" is-closable  skin="cyan">text tag</v-tag>
+              <v-tag @click="onClick" is-closable  skin="cyan">lorem</v-tag>
             </td>
             <td>
-              <v-tag @click="onClick" is-closable  skin="red">text tag</v-tag>
+              <v-tag @click="onClick" is-closable  skin="red">lorem</v-tag>
             </td>
             <td>
-              <v-tag @click="onClick" is-closable  skin="magenta">text tag</v-tag>
+              <v-tag @click="onClick" is-closable  skin="magenta">lorem</v-tag>
             </td>
             <td>
-              <v-tag @click="onClick" is-closable  skin="purple">text tag</v-tag>
+              <v-tag @click="onClick" is-closable  skin="purple">lorem</v-tag>
             </td>
             <td>
-              <v-tag @click="onClick" is-closable  skin="blue">text tag</v-tag>
+              <v-tag @click="onClick" is-closable  skin="blue">lorem</v-tag>
             </td>
             <td>
-              <v-tag @click="onClick" is-closable  skin="teal">text tag</v-tag>
+              <v-tag @click="onClick" is-closable  skin="teal">lorem</v-tag>
             </td>
             <td>
-              <v-tag @click="onClick" is-closable  skin="green">text tag</v-tag>
+              <v-tag @click="onClick" is-closable  skin="green">lorem</v-tag>
             </td>
             <td>
-              <v-tag @click="onClick" is-closable  skin="gray">text tag</v-tag>
+              <v-tag @click="onClick" is-closable  skin="gray">lorem</v-tag>
             </td>
             <td>
-              <v-tag @click="onClick" is-closable  skin="light-gray">text tag</v-tag>
+              <v-tag @click="onClick" is-closable  skin="light-gray">lorem</v-tag>
             </td>
             <td>
-              <v-tag @click="onClick" is-closable  skin="dark-gray">text tag</v-tag>
+              <v-tag @click="onClick" is-closable  skin="dark-gray">lorem</v-tag>
             </td>
             <td>
-              <v-tag @click="onClick" is-closable  skin="white">text tag</v-tag>
+              <v-tag @click="onClick" is-closable  skin="white">lorem</v-tag>
             </td>
             <td>
-              <v-tag @click="onClick" is-closable  disabled>text tag</v-tag>
+              <v-tag @click="onClick" is-closable  skin="success">lorem</v-tag>
+            </td>
+            <td>
+              <v-tag @click="onClick" is-closable  skin="error">lorem</v-tag>
+            </td>
+            <td>
+              <v-tag @click="onClick" is-closable  disabled>lorem</v-tag>
             </td>
           </tr>        </table>
       </theme-provider>
