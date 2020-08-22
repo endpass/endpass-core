@@ -16249,6 +16249,24 @@ exports[`Storyshots VTag/desktop default 1`] = `
          
         <th>
           
+                white
+              
+        </th>
+         
+        <th>
+          
+                success
+              
+        </th>
+         
+        <th>
+          
+                error
+              
+        </th>
+         
+        <th>
+          
                 disabled
               
         </th>
@@ -16264,7 +16282,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default skin-default"
         >
-          text tag 
+          lorem 
           <!---->
         </div>
       </td>
@@ -16273,7 +16291,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default skin-cyan"
         >
-          text tag 
+          lorem 
           <!---->
         </div>
       </td>
@@ -16282,7 +16300,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default skin-red"
         >
-          text tag 
+          lorem 
           <!---->
         </div>
       </td>
@@ -16291,7 +16309,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default skin-magenta"
         >
-          text tag 
+          lorem 
           <!---->
         </div>
       </td>
@@ -16300,7 +16318,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default skin-purple"
         >
-          text tag 
+          lorem 
           <!---->
         </div>
       </td>
@@ -16309,7 +16327,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default skin-blue"
         >
-          text tag 
+          lorem 
           <!---->
         </div>
       </td>
@@ -16318,7 +16336,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default skin-teal"
         >
-          text tag 
+          lorem 
           <!---->
         </div>
       </td>
@@ -16327,7 +16345,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default skin-green"
         >
-          text tag 
+          lorem 
           <!---->
         </div>
       </td>
@@ -16336,7 +16354,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default skin-gray"
         >
-          text tag 
+          lorem 
           <!---->
         </div>
       </td>
@@ -16345,7 +16363,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default skin-light-gray"
         >
-          text tag 
+          lorem 
           <!---->
         </div>
       </td>
@@ -16354,7 +16372,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default skin-dark-gray"
         >
-          text tag 
+          lorem 
           <!---->
         </div>
       </td>
@@ -16363,7 +16381,25 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default skin-white"
         >
-          text tag 
+          lorem 
+          <!---->
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default skin-success"
+        >
+          lorem 
+          <!---->
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default skin-error"
+        >
+          lorem 
           <!---->
         </div>
       </td>
@@ -16373,7 +16409,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
           class="v-tag theme-default skin-default"
           disabled="disabled"
         >
-          text tag 
+          lorem 
           <!---->
         </div>
       </td>
@@ -16388,7 +16424,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default is-closable skin-default"
         >
-          text tag 
+          lorem 
           <i
             class="icon-atom v-tag-close theme-default"
           >
@@ -16411,7 +16447,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default is-closable skin-cyan"
         >
-          text tag 
+          lorem 
           <i
             class="icon-atom v-tag-close theme-default"
           >
@@ -16434,7 +16470,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default is-closable skin-red"
         >
-          text tag 
+          lorem 
           <i
             class="icon-atom v-tag-close theme-default"
           >
@@ -16457,7 +16493,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default is-closable skin-magenta"
         >
-          text tag 
+          lorem 
           <i
             class="icon-atom v-tag-close theme-default"
           >
@@ -16480,7 +16516,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default is-closable skin-purple"
         >
-          text tag 
+          lorem 
           <i
             class="icon-atom v-tag-close theme-default"
           >
@@ -16503,7 +16539,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default is-closable skin-blue"
         >
-          text tag 
+          lorem 
           <i
             class="icon-atom v-tag-close theme-default"
           >
@@ -16526,7 +16562,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default is-closable skin-teal"
         >
-          text tag 
+          lorem 
           <i
             class="icon-atom v-tag-close theme-default"
           >
@@ -16549,7 +16585,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default is-closable skin-green"
         >
-          text tag 
+          lorem 
           <i
             class="icon-atom v-tag-close theme-default"
           >
@@ -16572,7 +16608,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default is-closable skin-gray"
         >
-          text tag 
+          lorem 
           <i
             class="icon-atom v-tag-close theme-default"
           >
@@ -16595,7 +16631,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default is-closable skin-light-gray"
         >
-          text tag 
+          lorem 
           <i
             class="icon-atom v-tag-close theme-default"
           >
@@ -16618,7 +16654,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default is-closable skin-dark-gray"
         >
-          text tag 
+          lorem 
           <i
             class="icon-atom v-tag-close theme-default"
           >
@@ -16641,7 +16677,53 @@ exports[`Storyshots VTag/desktop default 1`] = `
         <div
           class="v-tag theme-default is-closable skin-white"
         >
-          text tag 
+          lorem 
+          <i
+            class="icon-atom v-tag-close theme-default"
+          >
+            <svg
+              class="svg-atom theme-default"
+              height="100%"
+              width="100%"
+            >
+              <use
+                x="0"
+                xlink:href="#endpass-ui-icon-close"
+                y="0"
+              />
+            </svg>
+          </i>
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default is-closable skin-success"
+        >
+          lorem 
+          <i
+            class="icon-atom v-tag-close theme-default"
+          >
+            <svg
+              class="svg-atom theme-default"
+              height="100%"
+              width="100%"
+            >
+              <use
+                x="0"
+                xlink:href="#endpass-ui-icon-close"
+                y="0"
+              />
+            </svg>
+          </i>
+        </div>
+      </td>
+       
+      <td>
+        <div
+          class="v-tag theme-default is-closable skin-error"
+        >
+          lorem 
           <i
             class="icon-atom v-tag-close theme-default"
           >
@@ -16665,7 +16747,7 @@ exports[`Storyshots VTag/desktop default 1`] = `
           class="v-tag theme-default is-closable skin-default"
           disabled="disabled"
         >
-          text tag 
+          lorem 
           <i
             class="icon-atom v-tag-close theme-default"
           >
