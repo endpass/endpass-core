@@ -4,6 +4,10 @@ import VToggle from '@/kit/VToggle';
 
 const methods = {
   onChange: action('onChange'),
+  onChangeValue(value) {
+    this.value = value;
+    methods.onChange(value);
+  },
 };
 
 storiesOf('VToggle/desktop', module)
@@ -18,6 +22,13 @@ storiesOf('VToggle/desktop', module)
     },
     template: `
       <theme-provider>
+        <v-toggle
+          :value="value"
+          @change="onChangeValue"
+        >
+          state: {{ value }}
+        </v-toggle>
+        <br/>
         <v-toggle
           v-model="value"
           @change="onChange"
