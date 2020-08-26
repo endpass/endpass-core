@@ -17229,6 +17229,35 @@ exports[`Storyshots VToggle/desktop default state false 1`] = `
     class="v-toggle theme-default"
   >
     <label
+      class="toggle-atom theme-default skin-primary size-normal size-normal"
+    >
+      <input
+        class="v-toggle-control"
+        title=""
+        type="checkbox"
+        value="false"
+      />
+       
+      <span
+        class="toggle-atom-handle"
+      />
+    </label>
+     
+    <span
+      class="v-toggle-label"
+    >
+      
+          state: false
+        
+    </span>
+  </div>
+   
+  <br />
+   
+  <div
+    class="v-toggle theme-default"
+  >
+    <label
       class="toggle-atom theme-default skin-primary size-mini size-mini"
     >
       <input
