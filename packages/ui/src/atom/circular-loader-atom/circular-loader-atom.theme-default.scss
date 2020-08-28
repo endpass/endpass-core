@@ -3,7 +3,6 @@
 }
 
 .circular-loader-atom.theme-default .circular-loader-atom-over {
-  transform: rotate(-90deg);
   position: relative;
 }
 
@@ -20,6 +19,6 @@
   fill: none;
 }
 
-.circular-loader-atom.theme-default .circular-loader-atom-back circle {
+.circular-loader-atom.theme-default .circular-loader-atom-back path {
   stroke: var(--endpass-ui-color-grey-3);
 }
