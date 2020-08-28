@@ -99,7 +99,11 @@ export default {
 
   computed: {
     progressAngle() {
-      return (Number(this.progress) * this.endAngle) / 100 - 0.1;
+      return (
+        this.startAngle +
+        (Number(this.progress) * (this.endAngle - this.startAngle)) / 100 -
+        0.1
+      );
     },
 
     themeCssClass() {
