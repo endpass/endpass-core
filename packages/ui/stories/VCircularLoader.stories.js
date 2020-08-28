@@ -19,22 +19,22 @@ storiesOf('VCircularLoader/desktop', module).add('default', () => ({
           <tbody>
             <tr>
               <td>
-                <v-circular-loader progress="0" :size="41" :is-animated="false" />
+                <v-circular-loader progress="0" :size="41" :is-animated="false" :end-angle="180"/>
               </td>
               <td>
-                <v-circular-loader progress="50" :size="41" :is-animated="false" />
+                <v-circular-loader progress="50" :size="41" :is-animated="false" :end-angle="180"/>
               </td>
               <td>
-                <v-circular-loader progress="75" :size="41"  :is-animated="false" />
+                <v-circular-loader progress="75" :size="41"  :is-animated="false" :end-angle="180"/>
               </td>
               <td>
-                <v-circular-loader progress="5" :size="41"  :is-animated="false" />
+                <v-circular-loader progress="5" :size="41"  :is-animated="false" :end-angle="180"/>
               </td>
               <td>
-                <v-circular-loader progress="95" :size="41"  :is-animated="false" />
+                <v-circular-loader progress="95" :size="41"  :is-animated="false" :end-angle="180"/>
               </td>
               <td>
-                <v-circular-loader progress="100" :size="41"  :is-animated="false" />
+                <v-circular-loader progress="100" :size="41"  :is-animated="false" :end-angle="180"/>
               </td>
             </tr>
             <tr>

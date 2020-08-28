@@ -3953,25 +3953,19 @@ exports[`Storyshots VCircularLoader/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 41px; height: 41px;"
+              style="width: 41px; height: 41px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="20.5px"
-                cy="20.5px"
-                r="18.5"
-                stroke-width="4"
+              <path
+                d="M 20.5 39 A 18.5 18.5 0 0 0 20.5 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 41px; height: 41px; stroke-dasharray: 0 116.23892818282235; stroke: #6e32c9;"
+              style="width: 41px; height: 41px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="20.5px"
-                cy="20.5px"
-                r="18.5"
-                stroke-width="4"
+              <path
+                d="M 20.467711425230885 2.000028177104177 A 18.5 18.5 0 0 0 20.5 2"
               />
             </svg>
              
@@ -3985,25 +3979,19 @@ exports[`Storyshots VCircularLoader/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 41px; height: 41px;"
+              style="width: 41px; height: 41px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="20.5px"
-                cy="20.5px"
-                r="18.5"
-                stroke-width="4"
+              <path
+                d="M 20.5 39 A 18.5 18.5 0 0 0 20.5 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 41px; height: 41px; stroke-dasharray: 58.119464091411174 116.23892818282235; stroke: #6e32c9;"
+              style="width: 41px; height: 41px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="20.5px"
-                cy="20.5px"
-                r="18.5"
-                stroke-width="4"
+              <path
+                d="M 38.99997182289582 20.467711425230885 A 18.5 18.5 0 0 0 20.5 2"
               />
             </svg>
              
@@ -4017,25 +4005,19 @@ exports[`Storyshots VCircularLoader/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 41px; height: 41px;"
+              style="width: 41px; height: 41px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="20.5px"
-                cy="20.5px"
-                r="18.5"
-                stroke-width="4"
+              <path
+                d="M 20.5 39 A 18.5 18.5 0 0 0 20.5 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 41px; height: 41px; stroke-dasharray: 87.17919613711676 116.23892818282235; stroke: #6e32c9;"
+              style="width: 41px; height: 41px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="20.5px"
-                cy="20.5px"
-                r="18.5"
-                stroke-width="4"
+              <path
+                d="M 33.604286997903785 33.5586240575556 A 18.5 18.5 0 0 0 20.5 2"
               />
             </svg>
              
@@ -4049,25 +4031,19 @@ exports[`Storyshots VCircularLoader/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 41px; height: 41px;"
+              style="width: 41px; height: 41px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="20.5px"
-                cy="20.5px"
-                r="18.5"
-                stroke-width="4"
+              <path
+                d="M 20.5 39 A 18.5 18.5 0 0 0 20.5 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 41px; height: 41px; stroke-dasharray: 5.811946409141118 116.23892818282235; stroke: #6e32c9;"
+              style="width: 41px; height: 41px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="20.5px"
-                cy="20.5px"
-                r="18.5"
-                stroke-width="4"
+              <path
+                d="M 23.36214214654016 2.222742483266302 A 18.5 18.5 0 0 0 20.5 2"
               />
             </svg>
              
@@ -4081,25 +4057,19 @@ exports[`Storyshots VCircularLoader/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 41px; height: 41px;"
+              style="width: 41px; height: 41px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="20.5px"
-                cy="20.5px"
-                r="18.5"
-                stroke-width="4"
+              <path
+                d="M 20.5 39 A 18.5 18.5 0 0 0 20.5 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 41px; height: 41px; stroke-dasharray: 110.42698177368123 116.23892818282235; stroke: #6e32c9;"
+              style="width: 41px; height: 41px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="20.5px"
-                cy="20.5px"
-                r="18.5"
-                stroke-width="4"
+              <path
+                d="M 23.425924244207945 38.76715542489186 A 18.5 18.5 0 0 0 20.5 2"
               />
             </svg>
              
@@ -4113,25 +4083,19 @@ exports[`Storyshots VCircularLoader/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 41px; height: 41px;"
+              style="width: 41px; height: 41px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="20.5px"
-                cy="20.5px"
-                r="18.5"
-                stroke-width="4"
+              <path
+                d="M 20.5 39 A 18.5 18.5 0 0 0 20.5 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 41px; height: 41px; stroke-dasharray: 116.23892818282235 116.23892818282235; stroke: #6e32c9;"
+              style="width: 41px; height: 41px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="20.5px"
-                cy="20.5px"
-                r="18.5"
-                stroke-width="4"
+              <path
+                d="M 20.53228857476912 38.99997182289582 A 18.5 18.5 0 0 0 20.5 2"
               />
             </svg>
              
@@ -4147,25 +4111,19 @@ exports[`Storyshots VCircularLoader/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.93193219372996 2.0000594003817795 A 39 39 0 1 0 41 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 0 245.04422698000386; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.93193219372997 2.0000594003817795 A 39 39 0 0 0 41 2"
               />
             </svg>
              
@@ -4179,25 +4137,19 @@ exports[`Storyshots VCircularLoader/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.93193219372996 2.0000594003817795 A 39 39 0 1 0 41 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 122.52211349000193 245.04422698000386; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 41.10210164460931 79.9998663491834 A 39 39 0 0 0 41 2"
               />
             </svg>
              
@@ -4211,25 +4163,19 @@ exports[`Storyshots VCircularLoader/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.93193219372996 2.0000594003817795 A 39 39 0 1 0 41 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 183.7831702350029 245.04422698000386; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 2.000181913573961 41.11911853624077 A 39 39 0 1 0 41 2"
               />
             </svg>
              
@@ -4243,25 +4189,19 @@ exports[`Storyshots VCircularLoader/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.93193219372996 2.0000594003817795 A 39 39 0 1 0 41 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 12.252211349000193 245.04422698000386; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 52.98366939973303 3.8867723349490646 A 39 39 0 0 0 41 2"
               />
             </svg>
              
@@ -4275,25 +4215,19 @@ exports[`Storyshots VCircularLoader/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.93193219372996 2.0000594003817795 A 39 39 0 1 0 41 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 232.79201563100366 245.04422698000386; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 28.822171351720527 3.950027133435796 A 39 39 0 1 0 41 2"
               />
             </svg>
              
@@ -4307,25 +4241,19 @@ exports[`Storyshots VCircularLoader/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.93193219372996 2.0000594003817795 A 39 39 0 1 0 41 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 245.04422698000386 245.04422698000386; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.863864594806245 2.0002376013461713 A 39 39 0 1 0 41 2"
               />
             </svg>
              
@@ -4341,25 +4269,19 @@ exports[`Storyshots VCircularLoader/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 128px; height: 128px;"
+              style="width: 128px; height: 128px; fill: none; stroke-width: 1;"
             >
-              <circle
-                cx="64px"
-                cy="64px"
-                r="63.5"
-                stroke-width="1"
+              <path
+                d="M 63.889171648765455 0.5000967160062331 A 63.5 63.5 0 1 0 64 0.5"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 128px; height: 128px; stroke-dasharray: 0 398.98226700590374; stroke: #6e32c9;"
+              style="width: 128px; height: 128px; stroke: #6e32c9; fill: none; stroke-width: 1;"
             >
-              <circle
-                cx="64px"
-                cy="64px"
-                r="63.5"
-                stroke-width="1"
+              <path
+                d="M 63.88917164876547 0.5000967160062331 A 63.5 63.5 0 0 0 64 0.5"
               />
             </svg>
              
@@ -4373,25 +4295,19 @@ exports[`Storyshots VCircularLoader/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 128px; height: 128px;"
+              style="width: 128px; height: 128px; fill: none; stroke-width: 1;"
             >
-              <circle
-                cx="64px"
-                cy="64px"
-                r="63.5"
-                stroke-width="1"
+              <path
+                d="M 63.889171648765455 0.5000967160062331 A 63.5 63.5 0 1 0 64 0.5"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 128px; height: 128px; stroke-dasharray: 199.49113350295187 398.98226700590374; stroke: #6e32c9;"
+              style="width: 128px; height: 128px; stroke: #6e32c9; fill: none; stroke-width: 1;"
             >
-              <circle
-                cx="64px"
-                cy="64px"
-                r="63.5"
-                stroke-width="1"
+              <path
+                d="M 64.16624242135106 127.49978238905504 A 63.5 63.5 0 0 0 64 0.5"
               />
             </svg>
              
@@ -4405,25 +4321,19 @@ exports[`Storyshots VCircularLoader/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 128px; height: 128px;"
+              style="width: 128px; height: 128px; fill: none; stroke-width: 1;"
             >
-              <circle
-                cx="64px"
-                cy="64px"
-                r="63.5"
-                stroke-width="1"
+              <path
+                d="M 63.889171648765455 0.5000967160062331 A 63.5 63.5 0 1 0 64 0.5"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 128px; height: 128px; stroke-dasharray: 299.2367002544278 398.98226700590374; stroke: #6e32c9;"
+              style="width: 128px; height: 128px; stroke: #6e32c9; fill: none; stroke-width: 1;"
             >
-              <circle
-                cx="64px"
-                cy="64px"
-                r="63.5"
-                stroke-width="1"
+              <path
+                d="M 0.5002961926140088 64.19394941157151 A 63.5 63.5 0 1 0 64 0.5"
               />
             </svg>
              
@@ -4437,25 +4347,19 @@ exports[`Storyshots VCircularLoader/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 128px; height: 128px;"
+              style="width: 128px; height: 128px; fill: none; stroke-width: 6;"
             >
-              <circle
-                cx="64px"
-                cy="64px"
-                r="61"
-                stroke-width="6"
+              <path
+                d="M 63.893534969680196 3.000092908289453 A 61 61 0 1 0 64 3"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 128px; height: 128px; stroke-dasharray: 19.16371518689774 383.27430373795477; stroke: #6e32c9;"
+              style="width: 128px; height: 128px; stroke: #6e32c9; fill: none; stroke-width: 6;"
             >
-              <circle
-                cx="64px"
-                cy="64px"
-                r="61"
-                stroke-width="6"
+              <path
+                d="M 82.74368803547986 5.95110544697161 A 61 61 0 0 0 64 3"
               />
             </svg>
              
@@ -4469,25 +4373,19 @@ exports[`Storyshots VCircularLoader/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 128px; height: 128px;"
+              style="width: 128px; height: 128px; fill: none; stroke-width: 6;"
             >
-              <circle
-                cx="64px"
-                cy="64px"
-                r="61"
-                stroke-width="6"
+              <path
+                d="M 63.893534969680196 3.000092908289453 A 61 61 0 1 0 64 3"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 128px; height: 128px; stroke-dasharray: 364.11058855105705 383.27430373795477; stroke: #6e32c9;"
+              style="width: 128px; height: 128px; stroke: #6e32c9; fill: none; stroke-width: 6;"
             >
-              <circle
-                cx="64px"
-                cy="64px"
-                r="61"
-                stroke-width="6"
+              <path
+                d="M 44.95262698602441 6.050042439476506 A 61 61 0 1 0 64 3"
               />
             </svg>
              
@@ -4501,25 +4399,19 @@ exports[`Storyshots VCircularLoader/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 128px; height: 128px;"
+              style="width: 128px; height: 128px; fill: none; stroke-width: 6;"
             >
-              <circle
-                cx="64px"
-                cy="64px"
-                r="61"
-                stroke-width="6"
+              <path
+                d="M 63.893534969680196 3.000092908289453 A 61 61 0 1 0 64 3"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 128px; height: 128px; stroke-dasharray: 383.27430373795477 383.27430373795477; stroke: #6e32c9;"
+              style="width: 128px; height: 128px; stroke: #6e32c9; fill: none; stroke-width: 6;"
             >
-              <circle
-                cx="64px"
-                cy="64px"
-                r="61"
-                stroke-width="6"
+              <path
+                d="M 63.7870702636713 3.0003716328747885 A 61 61 0 1 0 64 3"
               />
             </svg>
              
@@ -9860,25 +9752,19 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.93193219372996 2.0000594003817795 A 39 39 0 1 0 41 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 0 245.04422698000386; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.93193219372997 2.0000594003817795 A 39 39 0 0 0 41 2"
               />
             </svg>
              
@@ -9892,25 +9778,19 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.93193219372996 2.0000594003817795 A 39 39 0 1 0 41 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 122.52211349000193 245.04422698000386; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 41.10210164460931 79.9998663491834 A 39 39 0 0 0 41 2"
               />
             </svg>
              
@@ -9924,25 +9804,19 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.93193219372996 2.0000594003817795 A 39 39 0 1 0 41 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 183.7831702350029 245.04422698000386; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 2.000181913573961 41.11911853624077 A 39 39 0 1 0 41 2"
               />
             </svg>
              
@@ -9956,25 +9830,19 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.93193219372996 2.0000594003817795 A 39 39 0 1 0 41 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 12.252211349000193 245.04422698000386; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 52.98366939973303 3.8867723349490646 A 39 39 0 0 0 41 2"
               />
             </svg>
              
@@ -9988,25 +9856,19 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.93193219372996 2.0000594003817795 A 39 39 0 1 0 41 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 232.79201563100366 245.04422698000386; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 28.822171351720527 3.950027133435796 A 39 39 0 1 0 41 2"
               />
             </svg>
              
@@ -10020,25 +9882,19 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.93193219372996 2.0000594003817795 A 39 39 0 1 0 41 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 245.04422698000386 245.04422698000386; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.863864594806245 2.0002376013461713 A 39 39 0 1 0 41 2"
               />
             </svg>
              
@@ -10054,25 +9910,19 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.93193219372996 2.0000594003817795 A 39 39 0 1 0 41 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 0 245.04422698000386; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.93193219372997 2.0000594003817795 A 39 39 0 0 0 41 2"
               />
             </svg>
              
@@ -10086,25 +9936,19 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.93193219372996 2.0000594003817795 A 39 39 0 1 0 41 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 122.52211349000193 245.04422698000386; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 41.10210164460931 79.9998663491834 A 39 39 0 0 0 41 2"
               />
             </svg>
              
@@ -10125,25 +9969,19 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.93193219372996 2.0000594003817795 A 39 39 0 1 0 41 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 183.7831702350029 245.04422698000386; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 2.000181913573961 41.11911853624077 A 39 39 0 1 0 41 2"
               />
             </svg>
              
@@ -10164,25 +10002,19 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.93193219372996 2.0000594003817795 A 39 39 0 1 0 41 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 12.252211349000193 245.04422698000386; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 52.98366939973303 3.8867723349490646 A 39 39 0 0 0 41 2"
               />
             </svg>
              
@@ -10203,25 +10035,19 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.93193219372996 2.0000594003817795 A 39 39 0 1 0 41 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 232.79201563100366 245.04422698000386; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 28.822171351720527 3.950027133435796 A 39 39 0 1 0 41 2"
               />
             </svg>
              
@@ -10242,25 +10068,19 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.93193219372996 2.0000594003817795 A 39 39 0 1 0 41 2"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 245.04422698000386 245.04422698000386; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 4;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="39"
-                stroke-width="4"
+              <path
+                d="M 40.863864594806245 2.0002376013461713 A 39 39 0 1 0 41 2"
               />
             </svg>
              
@@ -10283,25 +10103,19 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 1;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="40.5"
-                stroke-width="1"
+              <path
+                d="M 40.929314201181114 0.5000616850118504 A 40.5 40.5 0 1 0 41 0.5"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 0 254.46900494077323; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 1;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="40.5"
-                stroke-width="1"
+              <path
+                d="M 40.92931420118113 0.5000616850118504 A 40.5 40.5 0 0 0 41 0.5"
               />
             </svg>
              
@@ -10315,25 +10129,19 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 1;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="40.5"
-                stroke-width="1"
+              <path
+                d="M 40.929314201181114 0.5000616850118504 A 40.5 40.5 0 1 0 41 0.5"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 127.23450247038662 254.46900494077323; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 1;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="40.5"
-                stroke-width="1"
+              <path
+                d="M 41.10602863094044 81.49986120876738 A 40.5 40.5 0 0 0 41 0.5"
               />
             </svg>
              
@@ -10347,25 +10155,19 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 1;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="40.5"
-                stroke-width="1"
+              <path
+                d="M 40.929314201181114 0.5000616850118504 A 40.5 40.5 0 1 0 41 0.5"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 190.8517537055799 254.46900494077323; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 1;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="40.5"
-                stroke-width="1"
+              <path
+                d="M 0.5001889102498822 41.12370001840388 A 40.5 40.5 0 1 0 41 0.5"
               />
             </svg>
              
@@ -10379,25 +10181,19 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 6;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="38"
-                stroke-width="6"
+              <path
+                d="M 40.93367752209586 3.0000578772950703 A 38 38 0 1 0 41 3"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 11.938052083641214 238.76104167282426; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 6;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="38"
-                stroke-width="6"
+              <path
+                d="M 52.6763958253809 4.838393557129855 A 38 38 0 0 0 41 3"
               />
             </svg>
              
@@ -10411,25 +10207,19 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 6;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="38"
-                stroke-width="6"
+              <path
+                d="M 40.93367752209586 3.0000578772950703 A 38 38 0 1 0 41 3"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 226.82298958918304 238.76104167282426; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 6;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="38"
-                stroke-width="6"
+              <path
+                d="M 29.134423368343075 4.900026437706671 A 38 38 0 1 0 41 3"
               />
             </svg>
              
@@ -10443,25 +10233,19 @@ exports[`Storyshots VProgressCircle/desktop default 1`] = `
           >
             <svg
               class="circular-loader-atom-back"
-              style="width: 82px; height: 82px;"
+              style="width: 82px; height: 82px; fill: none; stroke-width: 6;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="38"
-                stroke-width="6"
+              <path
+                d="M 40.93367752209586 3.0000578772950703 A 38 38 0 1 0 41 3"
               />
             </svg>
              
             <svg
               class="circular-loader-atom-over"
-              style="width: 82px; height: 82px; stroke-dasharray: 238.76104167282426 238.76104167282426; stroke: #6e32c9;"
+              style="width: 82px; height: 82px; stroke: #6e32c9; fill: none; stroke-width: 6;"
             >
-              <circle
-                cx="41px"
-                cy="41px"
-                r="38"
-                stroke-width="6"
+              <path
+                d="M 40.867355246221464 3.0002315090039673 A 38 38 0 1 0 41 3"
               />
             </svg>
              
