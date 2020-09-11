@@ -4,6 +4,8 @@ import {
   fromNow,
   fromTo,
   addToDate,
+  getStartDay,
+  getEndDay,
   toEqualLocalTime,
   toDayBeginInUTC,
 } from '@/date';
@@ -11,6 +13,8 @@ import {
 describe('date utils', () => {
   describe('formateDate', () => {
     it('should formate date by YYYY-MM-DD H:mm pattern', () => {
+      expect.assertions(4);
+
       expect(formateDate(new Date('2016 06 12 12:40'))).toBe(
         '2016-06-12 12:40',
       );
@@ -35,6 +39,8 @@ describe('date utils', () => {
     ];
 
     it('should returns date relative string', () => {
+      expect.assertions(5);
+
       expect(fromNow(testDates[0])).toBe('a minute ago');
       expect(fromNow(testDates[1])).toBe('an hour ago');
       expect(fromNow(testDates[2])).toBe('a day ago');
@@ -56,6 +62,8 @@ describe('date utils', () => {
     ];
 
     it('should returns date relative string', () => {
+      expect.assertions(6);
+
       const checkNow = Date.now();
       expect(fromTo(checkNow, testDates[0])).toBe('in a minute');
       expect(fromTo(checkNow, testDates[1])).toBe('in an hour');
@@ -63,6 +71,38 @@ describe('date utils', () => {
       expect(fromTo(checkNow, testDates[3])).toBe('in a month');
       expect(fromTo(checkNow, testDates[4])).toBe('in a year');
       expect(fromTo(new Date(0), testDates[5])).toBe('in 10 minutes');
+    });
+  });
+
+  describe('getStartDay', () => {
+    const testDate = new Date();
+    testDate.setHours(15, 19, 23, 948);
+
+    const testTimestamp = testDate.getTime();
+
+    it('should return start day of provided date', () => {
+      expect.assertions(4);
+
+      expect(getStartDay(testTimestamp).getHours()).toBe(0);
+      expect(getStartDay(testTimestamp).getMinutes()).toBe(0);
+      expect(getStartDay(testTimestamp).getSeconds()).toBe(0);
+      expect(getStartDay(testTimestamp).getMilliseconds()).toBe(0);
+    });
+  });
+
+  describe('getEndDay', () => {
+    const testDate = new Date();
+    testDate.setHours(15, 19, 23, 948);
+
+    const testTimestamp = testDate.getTime();
+
+    it('should return start day of provided date', () => {
+      expect.assertions(4);
+
+      expect(getEndDay(testTimestamp).getHours()).toBe(23);
+      expect(getEndDay(testTimestamp).getMinutes()).toBe(59);
+      expect(getEndDay(testTimestamp).getSeconds()).toBe(59);
+      expect(getEndDay(testTimestamp).getMilliseconds()).toBe(999);
     });
   });
 
@@ -82,6 +122,8 @@ describe('date utils', () => {
     ];
 
     it('should increment date', () => {
+      expect.assertions(4);
+
       expect(addToDate(now, 10)).toMatchObject(testDates[0]);
       expect(addToDate(now, 4, 'm')).toMatchObject(testDates[1]);
       expect(addToDate(now, 2, 'h')).toMatchObject(testDates[2]);
@@ -102,6 +144,8 @@ describe('date utils', () => {
 
     describe('toEqualLocalTime', () => {
       it('should return correct Date object', () => {
+        expect.assertions(1);
+
         const result = toEqualLocalTime(dateForUTC.timestamp);
 
         expect(result).toEqual(dateForUTC.default);
@@ -109,6 +153,8 @@ describe('date utils', () => {
 
       describe('GMT', () => {
         it('should adopt date with zero GMT', () => {
+          expect.assertions(1);
+
           spy.mockImplementation(() => 0);
           const result = toEqualLocalTime(dateForUTC.timestamp);
 
@@ -116,6 +162,8 @@ describe('date utils', () => {
         });
 
         it('should adopt date with positive GMT', () => {
+          expect.assertions(1);
+
           spy.mockImplementation(() => -180);
           const result = toEqualLocalTime(dateForUTC.timestamp);
 
@@ -123,6 +171,8 @@ describe('date utils', () => {
         });
 
         it('should adopt date with negative GMT', () => {
+          expect.assertions(1);
+
           spy.mockImplementation(() => 180);
           const result = toEqualLocalTime(dateForUTC.timestamp);
 
@@ -134,6 +184,8 @@ describe('date utils', () => {
 
   describe('toDayBeginInUTC', () => {
     it('should return correct timestamp', () => {
+      expect.assertions(1);
+
       const result = toDayBeginInUTC(dateForUTC.default);
 
       expect(result).toEqual(dateForUTC.timestamp);
