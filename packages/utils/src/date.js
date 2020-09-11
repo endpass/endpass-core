@@ -47,12 +47,26 @@ const toDayBeginInUTC = value => {
   return utcDate;
 };
 
+const getStartDay = day => {
+  const startDay = new Date(day);
+  startDay.setHours(0, 0, 0, 0);
+  return startDay;
+};
+
+const getEndDay = (day = Date.now()) => {
+  const endDay = new Date(day);
+  endDay.setHours(23, 59, 59, 999);
+  return endDay;
+};
+
 module.exports = {
   formateDate,
   fromNow,
   fromTo,
   addToDate,
   getWeek,
+  getStartDay,
+  getEndDay,
   toEqualLocalTime,
   toDayBeginInUTC,
 };
