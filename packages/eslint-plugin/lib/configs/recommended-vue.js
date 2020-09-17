@@ -6,6 +6,14 @@ const { parser, ...vueConfig } = recommended;
 
 const vueRules = {
   ...recommended.rules,
+  'vue/camelcase': ['error'],
+  'vue/attribute-hyphenation': ['error'],
+  'vue/component-name-in-template-casing': ['error', 'kebab-case'],
+  'import/extensions': ['error', 'ignorePackages', {
+    'js': 'never',
+    'jsx': 'never',
+    'vue': 'never',
+  }],
   'vue/max-attributes-per-line': [
     'error',
     {
