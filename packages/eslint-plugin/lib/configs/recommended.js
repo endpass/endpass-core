@@ -11,6 +11,10 @@ module.exports = {
   },
   rules: {
     ...essential.rules,
+    'import/extensions': ['error', 'ignorePackages', {
+      'js': 'never',
+      'jsx': 'never'
+    }],
     'max-len': [
       'warn',
       80,

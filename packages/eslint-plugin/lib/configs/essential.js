@@ -17,6 +17,7 @@ module.exports = {
         allowEmptyCatch: true,
       },
     ],
+    'import/prefer-default-export': 'off',
     'no-underscore-dangle': 'off',
     'no-param-reassign': [
       'error',
